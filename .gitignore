@@ -1,4 +1,26 @@
-venv
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables and secrets
+.env
 *.env
-__pycache__/
-*.pyc
+
+# Python cache files
+**pycache**/
+*.py[cod]
+
+# Generated package metadata
+*.egg-info/
+
+# Build artifacts
+build/
+dist/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE settings
+.vscode/
