@@ -2,7 +2,7 @@
 import os
 import sys
 import json
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 from openai import OpenAI
 
 from kg_audit.entity.config_entity import LLMInterceptorConfig
