@@ -133,8 +133,10 @@ if os.path.exists(fidelity_state_path):
         if shared_list:
             st.markdown(f"**🔗 Entities Linked Across Multiple PDFs:** `{', '.join(shared_list[:20])}`")
 
-        # Render Interactive PyVis Graph if available
+        # Render Interactive PyVis Graph automatically across restarts
+        html_path = os.path.join("Artifacts", "pyvis_kg.html")
         latest_kg_path = st.session_state.get("latest_kg_json_path")
+
         if latest_kg_path and os.path.exists(latest_kg_path):
             with open(latest_kg_path, "r", encoding="utf-8") as f:
                 kg_data = json.load(f)
@@ -156,9 +158,10 @@ if os.path.exists(fidelity_state_path):
                 if u and v:
                     net.add_edge(u, v, label=rel, title=f"[{edge.get('source_name')}] {quote}", color="#64748b")
 
-            html_path = os.path.join("Artifacts", "pyvis_kg.html")
             os.makedirs("Artifacts", exist_ok=True)
             net.save_graph(html_path)
+
+        if os.path.exists(html_path):
             with open(html_path, "r", encoding="utf-8") as f:
                 components.html(f.read(), height=440)
             st.caption("🟠 **Orange Nodes** = Shared concepts found across multiple PDFs | 🔵 **Blue Nodes** = Single-PDF entities (Hover over edges to read verbatim PDF evidence quotes)")
@@ -233,7 +236,7 @@ if verify_btn and user_query.strip():
         k2.metric("Query Subgraph Belief (S_Query)", f"{eval_art.query_belief_score * 100:.2f}%")
         k3.metric("Phase 1 KG Fidelity (S_KG)", f"{eval_art.phase1_kg_fidelity_score * 100:.2f}%")
 
-        st.markdown("#### 📐 CASSE Non-Euclidean & Provenance Feature Vector ($\mathbf{X}$)")
+        st.markdown(r"#### 📐 CASSE Non-Euclidean & Provenance Feature Vector ($\mathbf{X}$)")
         f1, f2, f3, f4 = st.columns(4)
         f1.metric("Sheaf Energy (E_sheaf)", f"{eval_art.semantic_entailment_score:.4f}")
         f2.metric("Ricci Distortion (ΔK)", f"{eval_art.triple_match_score:.4f}")
@@ -251,3 +254,40 @@ if verify_btn and user_query.strip():
                 "matched_nodes": retriever_art.extracted_nodes,
                 "matched_edges": retriever_art.extracted_edges
             })
+
+st.divider()
+with st.expander("🧠 Phase 4: Autonomous MLOps Self-Improving Model Leaderboard (7 ML & Deep Learning Models)", expanded=False):
+    prod_metrics_path = os.path.join("final_model", "production_model_metrics.json")
+    telemetry_path = os.path.join("data", "live_telemetry_claims.csv")
+
+    col_m1, col_m2 = st.columns([3, 1])
+    with col_m2:
+        if st.button("🔄 Trigger Self-Retraining Now", use_container_width=True):
+            with st.spinner("Training 7 ML & Deep Neural Network models (GridSearchCV + Platt Calibration)..."):
+                from kg_audit.entity.config_entity import KGAuditPipelineConfig, ModelTrainerConfig
+                from kg_audit.components.model_trainer import ModelTrainer
+                t_art = ModelTrainer(ModelTrainerConfig(KGAuditPipelineConfig())).initiate_model_trainer()
+            st.success(f"Winner: {t_art.best_model_name} (ROC-AUC: {t_art.roc_auc_score:.4f})")
+
+    if os.path.exists(prod_metrics_path):
+        with open(prod_metrics_path, "r", encoding="utf-8") as f:
+            m_data = json.load(f)
+        with col_m1:
+            st.markdown(
+                f"**Current Production Brain (`final_model/model.pkl`):** `{m_data['winning_model']}` | "
+                f"**Composite Score:** `{m_data['champion_composite_score']:.4f}` | "
+                f"**Training Samples:** `{m_data.get('total_training_samples', 800)}`"
+            )
+        import pandas as pd
+        lb_rows = []
+        for m_name, stats in m_data.get("leaderboard", {}).items():
+            lb_rows.append({
+                "Algorithm / Architecture": m_name,
+                "ROC-AUC (↑)": round(stats["roc_auc"], 4),
+                "F1-Score (↑)": round(stats["f1_score"], 4),
+                "Brier Calibration Loss (↓)": round(stats["brier_score"], 4),
+                "Expected Calibration Error (↓)": round(stats["ece"], 4),
+                "Composite Score (↑)": round(stats["composite_score"], 4)
+            })
+        df_lb = pd.DataFrame(lb_rows).sort_values(by="Composite Score (↑)", ascending=False)
+        st.dataframe(df_lb, use_container_width=True, hide_index=True)

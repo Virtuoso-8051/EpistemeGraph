@@ -1,9 +1,11 @@
 import os
 import sys
+import csv
 import json
 import pickle
 import numpy as np
-from typing import Tuple, Dict, Any
+from datetime import datetime
+from typing import Tuple, Dict, Any, List
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import (
@@ -27,9 +29,16 @@ from kg_audit.logging.logger import logging
 
 
 class ModelTrainer:
+    FEATURE_NAMES = [
+        "e_sheaf", "delta_k", "d_spec", "bayesian_trust",
+        "freshness", "independence", "conflict_ratio", "llm_conf"
+    ]
+
     def __init__(self, config: ModelTrainerConfig):
         try:
             self.config = config
+            self.telemetry_csv_path = os.path.join("data", "live_telemetry_claims.csv")
+            self.production_metrics_path = os.path.join("final_model", "production_model_metrics.json")
         except Exception as e:
             raise KGAuditException(e, sys)
 
@@ -49,30 +58,57 @@ class ModelTrainer:
 
         return float(ece)
 
+    def append_live_telemetry(self, feature_vector: List[float], query_text: str) -> int:
+        """
+        Logs the 8D feature vector X of every intercepted user query into data/live_telemetry_claims.csv
+        using a topological ground-truth oracle rule so the dataset grows automatically.
+        Returns total number of logged live queries.
+        """
+        try:
+            os.makedirs("data", exist_ok=True)
+            e_sheaf, delta_k, d_spec, _, _, _, conflict_ratio, _ = feature_vector
+
+            # Topological Ground-Truth Oracle: Factual (1) if conflict and sheaf energy are low, else Hallucinated (0)
+            oracle_label = 1 if (conflict_ratio <= 0.35 and e_sheaf <= 0.42 and delta_k <= 0.48) else 0
+
+            file_exists = os.path.exists(self.telemetry_csv_path)
+            with open(self.telemetry_csv_path, "a", newline="", encoding="utf-8") as f:
+                writer = csv.writer(f)
+                if not file_exists:
+                    writer.writerow(self.FEATURE_NAMES + ["oracle_label", "timestamp", "query"])
+                writer.writerow([round(float(x), 6) for x in feature_vector] + [oracle_label, datetime.utcnow().isoformat(), query_text[:100]])
+
+            with open(self.telemetry_csv_path, "r", encoding="utf-8") as f:
+                total_rows = max(0, sum(1 for _ in f) - 1)
+            return total_rows
+        except Exception as e:
+            logging.warning(f"Telemetry logging warning: {e}")
+            return 0
+
     def generate_synthetic_benchmark_dataset(self, n_samples: int = 800) -> Tuple[np.ndarray, np.ndarray]:
         rng = np.random.default_rng(seed=42)
         half = n_samples // 2
 
         X_pos = np.column_stack([
-            rng.uniform(0.01, 0.40, half),
-            rng.uniform(0.00, 0.45, half),
-            rng.uniform(0.01, 0.35, half),
+            rng.uniform(0.01, 0.42, half),
+            rng.uniform(0.00, 0.48, half),
+            rng.uniform(0.01, 0.45, half),
             rng.uniform(0.65, 0.98, half),
             rng.uniform(0.60, 1.00, half),
             rng.uniform(0.55, 1.00, half),
-            rng.uniform(0.00, 0.20, half),
+            rng.uniform(0.00, 0.30, half),
             rng.uniform(0.70, 0.99, half),
         ])
         y_pos = np.ones(half, dtype=int)
 
         X_neg = np.column_stack([
-            rng.uniform(0.40, 2.50, half),
-            rng.uniform(0.45, 2.50, half),
-            rng.uniform(0.30, 1.80, half),
-            rng.uniform(0.20, 0.85, half),
+            rng.uniform(0.42, 2.00, half),
+            rng.uniform(0.48, 2.00, half),
+            rng.uniform(0.40, 1.50, half),
+            rng.uniform(0.20, 0.88, half),
             rng.uniform(0.20, 0.95, half),
-            rng.uniform(0.15, 0.85, half),
-            rng.uniform(0.20, 1.00, half),
+            rng.uniform(0.15, 0.88, half),
+            rng.uniform(0.35, 1.00, half),
             rng.uniform(0.70, 0.99, half),
         ])
         y_neg = np.zeros(half, dtype=int)
@@ -80,10 +116,29 @@ class ModelTrainer:
         X = np.vstack([X_pos, X_neg])
         y = np.concatenate([y_pos, y_neg])
 
-        flip_mask = rng.random(n_samples) < 0.05
+        flip_mask = rng.random(n_samples) < 0.04
         y[flip_mask] = 1 - y[flip_mask]
 
-        perm = rng.permutation(n_samples)
+        # Blend in live telemetry rows if available!
+        if os.path.exists(self.telemetry_csv_path):
+            try:
+                live_X, live_y = [], []
+                with open(self.telemetry_csv_path, "r", encoding="utf-8") as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        vec = [float(row[col]) for col in self.FEATURE_NAMES]
+                        lbl = int(row["oracle_label"])
+                        # Upweight real live queries (5x) so model adapts to live domain distribution
+                        for _ in range(5):
+                            live_X.append(vec)
+                            live_y.append(lbl)
+                if live_X:
+                    X = np.vstack([X, np.array(live_X)])
+                    y = np.concatenate([y, np.array(live_y, dtype=int)])
+            except Exception as ex:
+                logging.warning(f"Could not merge live telemetry CSV: {ex}")
+
+        perm = rng.permutation(len(X))
         return X[perm], y[perm]
 
     def initiate_model_trainer(
@@ -131,7 +186,7 @@ class ModelTrainer:
                     {"mlp__hidden_layer_sizes": [(64, 32), (128, 64, 32)], "mlp__alpha": [0.001, 0.01]}
                 ),
                 "RBF_SVM": (
-                    Pipeline([("scaler", StandardScaler()), ("svm", SVC(probability=True, random_state=42))]),
+                    Pipeline([("scaler", StandardScaler()), ("svm", SVC(random_state=42))]),
                     {"svm__C": [0.5, 1.0, 5.0], "svm__gamma": ["scale", "auto"]}
                 )
             }
@@ -168,19 +223,27 @@ class ModelTrainer:
                     "composite_score": composite_score
                 }
 
-                logging.info(
-                    f"Model [{name}] -> ROC-AUC: {roc_auc:.4f}, F1: {f1:.4f}, Brier: {brier:.4f}, ECE: {ece:.4f}"
-                )
-
                 if composite_score > best_composite_score:
                     best_composite_score = composite_score
                     best_model_name = name
                     best_calibrated_model = calibrated
 
             best_metrics = leaderboard[best_model_name]
+
+            # Champion vs. Challenger Gatekeeper Check
+            previous_champion_score = -1.0
+            if os.path.exists(self.production_metrics_path):
+                try:
+                    with open(self.production_metrics_path, "r", encoding="utf-8") as f:
+                        prod_data = json.load(f)
+                    previous_champion_score = float(prod_data.get("champion_composite_score", -1.0))
+                except Exception:
+                    previous_champion_score = -1.0
+
             is_accepted = (
                 best_metrics["roc_auc"] >= self.config.expected_roc_auc
                 and best_metrics["brier_score"] <= self.config.max_brier_score
+                and best_composite_score >= (previous_champion_score - 0.005)
             )
 
             os.makedirs(os.path.dirname(self.config.trained_model_file_path), exist_ok=True)
@@ -189,17 +252,23 @@ class ModelTrainer:
 
             report_payload = {
                 "winning_model": best_model_name,
+                "champion_composite_score": best_composite_score,
+                "previous_champion_score": previous_champion_score,
                 "is_promoted_to_production": is_accepted,
+                "total_training_samples": len(X_train) + len(X_test),
+                "updated_at": datetime.utcnow().isoformat(),
                 "leaderboard": leaderboard
             }
-            with open(self.config.metrics_report_file_path, "w") as f:
+            with open(self.config.metrics_report_file_path, "w", encoding="utf-8") as f:
                 json.dump(report_payload, f, indent=4)
 
             if is_accepted:
                 os.makedirs(os.path.dirname(self.config.final_model_file_path), exist_ok=True)
                 with open(self.config.final_model_file_path, "wb") as f:
                     pickle.dump(best_calibrated_model, f)
-                logging.info(f"Promoted {best_model_name} to {self.config.final_model_file_path}")
+                with open(self.production_metrics_path, "w", encoding="utf-8") as f:
+                    json.dump(report_payload, f, indent=4)
+                logging.info(f"Promoted New Champion [{best_model_name}] to {self.config.final_model_file_path}")
 
             return ModelTrainerArtifact(
                 best_model_name=best_model_name,

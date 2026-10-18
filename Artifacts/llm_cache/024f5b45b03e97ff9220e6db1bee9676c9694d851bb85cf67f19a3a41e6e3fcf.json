@@ -1,0 +1,98 @@
+[
+  {
+    "subject": "LINE",
+    "subject_alias": "LINE models",
+    "subject_type": "MODEL",
+    "relation": "OPTIMIZED_WITH",
+    "is_functional": false,
+    "object": "Stochastic Gradient Descent",
+    "object_alias": "SGD",
+    "object_type": "ALGORITHM",
+    "evidence_quote": "ormance by the LINE models directly optimized with SGD is much worse, because the weights of the edges in the language network diverge, which range from a single digit to tens of thousands, making the learning process suf- fer.",
+    "extraction_confidence": 0.89
+  },
+  {
+    "subject": "LINE",
+    "subject_alias": "LINE",
+    "subject_type": "MODEL",
+    "relation": "ADDRESSES",
+    "is_functional": false,
+    "object": "diverging edge weights problem",
+    "object_alias": "weights of the edges in the language network diverge",
+    "object_type": "CONCEPT",
+    "evidence_quote": "The LINE optimized by the edge-sampling treatment e\ufb00ectively addresses this problem, and performs very well using either \ufb01rst-order or second-order proximity.",
+    "extraction_confidence": 0.92
+  },
+  {
+    "subject": "LINE",
+    "subject_alias": "LINE",
+    "subject_type": "MODEL",
+    "relation": "USES",
+    "is_functional": false,
+    "object": "first-order proximity",
+    "object_alias": "\ufb01rst-order proximity",
+    "object_type": "CONCEPT",
+    "evidence_quote": "The LINE optimized by the edge-sampling treatment e\ufb00ectively addresses this problem, and performs very well using either \ufb01rst-order or second-order proximity.",
+    "extraction_confidence": 0.93
+  },
+  {
+    "subject": "LINE",
+    "subject_alias": "LINE",
+    "subject_type": "MODEL",
+    "relation": "USES",
+    "is_functional": false,
+    "object": "second-order proximity",
+    "object_alias": "second-order proximity",
+    "object_type": "CONCEPT",
+    "evidence_quote": "The LINE optimized by the edge-sampling treatment e\ufb00ectively addresses this problem, and performs very well using either \ufb01rst-order or second-order proximity.",
+    "extraction_confidence": 0.93
+  },
+  {
+    "subject": "LINE(1st)",
+    "subject_alias": "LINE(1st)",
+    "subject_type": "MODEL",
+    "relation": "IS_EFFICIENT",
+    "is_functional": false,
+    "object": "efficiency",
+    "object_alias": "quite efficient",
+    "object_type": "CONCEPT",
+    "evidence_quote": "Both the LINE(1st) and the LINE(2nd) are quite e\ufb03cient, which take less than 3 hours to process such a network with 2 million nodes and a billion edges.",
+    "extraction_confidence": 0.9
+  },
+  {
+    "subject": "LINE(2nd)",
+    "subject_alias": "LINE(2nd)",
+    "subject_type": "MODEL",
+    "relation": "IS_EFFICIENT",
+    "is_functional": false,
+    "object": "efficiency",
+    "object_alias": "quite efficient",
+    "object_type": "CONCEPT",
+    "evidence_quote": "Both the LINE(1st) and the LINE(2nd) are quite e\ufb03cient, which take less than 3 hours to process such a network with 2 million nodes and a billion edges.",
+    "extraction_confidence": 0.9
+  },
+  {
+    "subject": "LINE(1st)",
+    "subject_alias": "LINE(1st)",
+    "subject_type": "MODEL",
+    "relation": "OUTPERFORMS",
+    "is_functional": false,
+    "object": "graph factorization",
+    "object_alias": "graph factorization",
+    "object_type": "MODEL",
+    "evidence_quote": "Both are at least 10% faster than graph factorization, and much more e\ufb03cient than DeepWalk (\ufb01ve times slower).",
+    "extraction_confidence": 0.91
+  },
+  {
+    "subject": "LINE(1st)",
+    "subject_alias": "LINE(1st)",
+    "subject_type": "MODEL",
+    "relation": "OUTPERFORMS",
+    "is_functional": false,
+    "object": "DeepWalk",
+    "object_alias": "DeepWalk",
+    "object_type": "MODEL",
+    "evidence_quote": "Both are at least 10% faster than graph factorization, and much more e\ufb03cient than DeepWalk (\ufb01ve times slower).",
+    "extraction_confidence": 0.91
+  }
+]

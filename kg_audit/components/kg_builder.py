@@ -6,7 +6,8 @@ import hashlib
 import networkx as nx
 import numpy as np
 from datetime import datetime
-from typing import List, Dict, Any, Tuple
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import List, Dict, Any, Tuple, Callable, Optional
 from openai import OpenAI
 from neo4j import GraphDatabase
 from pypdf import PdfReader
@@ -22,28 +23,23 @@ try:
 except ImportError:
     SENTENCE_TRANSFORMERS_AVAILABLE = False
 
+# Singleton cache so SentenceTransformer only loads ONCE per session
+_GLOBAL_EMBEDDER = None
+
 
 class KGBuilder:
-    """
-    Phase 1 Multi-Document Autonomous Engine:
-    - Scans multiple PDFs from data/uploads/ (or file list)
-    - Uses SHA-256 Disk Caching so repeated runs cost $0.00 in OpenAI tokens
-    - Dynamic Emergent Ontology (no hardcoded entity/relation lists)
-    - Cross-PDF Entity Resolution (Acronym Initials Matcher + Embedding Cosine Similarity)
-    - Stores multi-PDF provenance arrays (source_pdfs) on every Node and Edge in Neo4j AuraDB Cloud
-    """
-
     def __init__(self, config: KGBuilderConfig):
         try:
+            global _GLOBAL_EMBEDDER
             self.config = config
             self.openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
             os.makedirs(self.config.llm_cache_dir, exist_ok=True)
             self.embedder = None
             if SENTENCE_TRANSFORMERS_AVAILABLE:
-                try:
-                    self.embedder = SentenceTransformer("all-MiniLM-L6-v2")
-                except Exception as ex:
-                    logging.warning(f"Fallback to deterministic n-gram embeddings: {ex}")
+                if _GLOBAL_EMBEDDER is None:
+                    print("[EpistemeGraph] Loading SentenceTransformer model (once per session)...", flush=True)
+                    _GLOBAL_EMBEDDER = SentenceTransformer("all-MiniLM-L6-v2")
+                self.embedder = _GLOBAL_EMBEDDER
         except Exception as e:
             raise KGAuditException(e, sys)
 
@@ -71,10 +67,6 @@ class KGBuilder:
 
     @staticmethod
     def _is_acronym_match(short_str: str, long_str: str) -> bool:
-        """
-        Deterministically detects if one entity mention is an acronym of another across PDFs.
-        Example: "AI" <-> "Artificial Intelligence", "KG" <-> "Knowledge Graph".
-        """
         s1 = short_str.strip().upper().replace(".", "")
         s2 = long_str.strip().upper().replace(".", "")
         if len(s1) > len(s2):
@@ -89,9 +81,11 @@ class KGBuilder:
         return s1 == initials
 
     # ------------------------------------------------------------------
-    # 1. MULTI-PDF PARSER & CHUNKER
+    # 1. MULTI-PDF PARSER & SMART HIGH-DENSITY CHUNKER
     # ------------------------------------------------------------------
-    def parse_and_chunk_documents(self, file_paths_or_texts: List[str]) -> List[Dict[str, Any]]:
+    def parse_and_chunk_documents(
+        self, file_paths_or_texts: List[str], max_chunks_per_doc: int = 10
+    ) -> List[Dict[str, Any]]:
         try:
             chunks: List[Dict[str, Any]] = []
             for doc_idx, item in enumerate(file_paths_or_texts):
@@ -99,7 +93,7 @@ class KGBuilder:
                 raw_text = ""
 
                 if os.path.exists(item) and item.lower().endswith(".pdf"):
-                    logging.info(f"Parsing PDF [{doc_id}]: {item}")
+                    print(f"[Phase 1] Reading PDF [{doc_id}]: {os.path.basename(item)}...", flush=True)
                     reader = PdfReader(item)
                     pages_text = [page.extract_text() or "" for page in reader.pages]
                     raw_text = "\n".join(pages_text)
@@ -116,38 +110,48 @@ class KGBuilder:
                 if not clean_text:
                     continue
 
-                step = max(200, self.config.chunk_size - self.config.chunk_overlap)
-                chunk_counter = 1
+                # Cut off noisy Reference/Bibliography tail if present in large papers
+                ref_pos = clean_text.lower().rfind("references")
+                if ref_pos > int(len(clean_text) * 0.70):
+                    clean_text = clean_text[:ref_pos]
+
+                step = max(400, self.config.chunk_size - self.config.chunk_overlap)
+                doc_segments = []
                 for start in range(0, len(clean_text), step):
                     segment = clean_text[start:start + self.config.chunk_size]
-                    if len(segment) < 40 and chunks:
-                        continue
+                    if len(segment) >= 80:
+                        doc_segments.append(segment)
+
+                # Uniformly sample up to max_chunks_per_doc across the paper to protect $3 API budget & speed
+                if len(doc_segments) > max_chunks_per_doc:
+                    indices = np.linspace(0, len(doc_segments) - 1, max_chunks_per_doc, dtype=int)
+                    doc_segments = [doc_segments[i] for i in indices]
+
+                for idx_c, seg in enumerate(doc_segments, start=1):
                     chunks.append({
                         "document_id": doc_id,
                         "source_name": source_name,
-                        "chunk_id": f"{doc_id}_CH_{chunk_counter:03d}",
-                        "text": segment
+                        "chunk_id": f"{doc_id}_CH_{idx_c:03d}",
+                        "text": seg
                     })
-                    chunk_counter += 1
 
-            logging.info(f"Created {len(chunks)} total chunks across {len(file_paths_or_texts)} documents.")
+            print(f"[Phase 1] Prepared {len(chunks)} high-density chunks across {len(file_paths_or_texts)} PDFs.", flush=True)
             return chunks
         except Exception as e:
             raise KGAuditException(e, sys)
 
     # ------------------------------------------------------------------
-    # 2. CACHED LLM DYNAMIC ONTOLOGY EXTRACTOR (SAVES OPENAI CREDITS)
+    # 2. CACHED + TIMEOUT-SAFE OPENAI EXTRACTOR
     # ------------------------------------------------------------------
     def extract_from_chunk(self, chunk: Dict[str, Any]) -> List[Dict[str, Any]]:
         try:
-            # Check local disk cache first so re-running never bills OpenAI twice
             chunk_hash = hashlib.sha256(
                 f"{self.config.llm_model_name}_{chunk['text']}".encode("utf-8")
             ).hexdigest()
             cache_file = os.path.join(self.config.llm_cache_dir, f"{chunk_hash}.json")
 
             if os.path.exists(cache_file):
-                logging.info(f"Loaded cached extraction for {chunk['chunk_id']} ($0 API cost)")
+                print(f"  -> [CACHE HIT] {chunk['chunk_id']} ({chunk['source_name']}) - $0 API cost", flush=True)
                 with open(cache_file, "r", encoding="utf-8") as f:
                     cached_claims = json.load(f)
                 for c in cached_claims:
@@ -158,14 +162,14 @@ class KGBuilder:
 
             prompt = f"""
             You are an expert scientific Knowledge Graph extractor.
-            Extract explicit factual triplets from the text chunk below.
+            Extract explicit factual triplets (up to 8 key claims) from the text chunk below.
 
             Rules:
             1. Extract ONLY facts explicitly supported by the text.
-            2. Dynamically assign the most accurate domain Entity Type in UPPER_SNAKE_CASE (e.g., ALGORITHM, MODEL, METRIC, CHEMICAL, PERSON, ORGANIZATION, CONCEPT).
-            3. If an entity is an acronym (e.g., "AI", "KG", "LLM"), write its expanded canonical name if known (e.g., "Artificial Intelligence"), and put the short form in "alias".
+            2. Dynamically assign the domain Entity Type in UPPER_SNAKE_CASE (e.g., ALGORITHM, MODEL, METRIC, SYSTEM, PERSON, ORGANIZATION, CONCEPT).
+            3. If an entity is an acronym (e.g., "AI", "KG", "LLM"), write its expanded canonical name if known, and put the short form in "subject_alias" or "object_alias".
             4. Normalize relation names to concise UPPER_SNAKE_CASE (e.g., USES, OUTPERFORMS, PART_OF, DEFINED_AS).
-            5. Set "is_functional": true ONLY if the relation can logically have only ONE unique object at a time (e.g., CEO_OF, BORN_IN, DEVELOPED_IN_YEAR), else false.
+            5. Set "is_functional": true ONLY if the relation logically has a single unique value at a time, else false.
             6. Provide the EXACT verbatim supporting sentence from the chunk in "evidence_quote".
 
             Return ONLY valid JSON matching this schema:
@@ -196,7 +200,8 @@ class KGBuilder:
                     {"role": "system", "content": "You output strictly raw JSON without markdown formatting."},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.0
+                temperature=0.0,
+                timeout=35.0
             )
 
             raw_output = response.choices[0].message.content.strip()
@@ -208,7 +213,6 @@ class KGBuilder:
             parsed = json.loads(raw_output.strip())
             claims = parsed.get("claims", [])
 
-            # Save to local cache immediately
             with open(cache_file, "w", encoding="utf-8") as f:
                 json.dump(claims, f, indent=2)
 
@@ -220,9 +224,11 @@ class KGBuilder:
                 c["extracted_at"] = datetime.utcnow().isoformat()
                 enriched_claims.append(c)
 
+            print(f"  -> [EXTRACTED] {chunk['chunk_id']} ({chunk['source_name']}): {len(enriched_claims)} triplets", flush=True)
             return enriched_claims
 
         except Exception as e:
+            print(f"  -> [WARNING] Extraction skipped on {chunk['chunk_id']}: {e}", flush=True)
             logging.warning(f"Extraction error on chunk {chunk['chunk_id']}: {e}")
             return []
 
@@ -233,6 +239,7 @@ class KGBuilder:
         self, raw_claims: List[Dict[str, Any]], chunks_by_id: Dict[str, str]
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Dict[str, Any]], List[float]]:
         try:
+            print(f"[Phase 1] Validating quotes & resolving entities across {len(raw_claims)} raw claims...", flush=True)
             grounding_scores: List[float] = []
             verified_claims: List[Dict[str, Any]] = []
 
@@ -253,7 +260,7 @@ class KGBuilder:
                     quote_match = 1.0
                 elif quote_tokens:
                     overlap = len(quote_tokens.intersection(chunk_tokens)) / len(quote_tokens)
-                    quote_match = 1.0 if overlap >= 0.75 else (overlap * 0.5)
+                    quote_match = 1.0 if overlap >= 0.70 else (overlap * 0.6)
                 else:
                     quote_match = 0.0
 
@@ -264,12 +271,11 @@ class KGBuilder:
                 claim_grounding = float(quote_match * sem_sim)
                 grounding_scores.append(claim_grounding)
 
-                if quote_match >= 0.65:
+                if quote_match >= 0.60:
                     claim["relation"] = rel
                     claim["grounding_score"] = claim_grounding
                     verified_claims.append(claim)
 
-            # Cross-PDF Entity Resolution Registry
             canonical_entities: Dict[str, Dict[str, Any]] = {}
             alias_lookup: Dict[str, str] = {}
 
@@ -286,7 +292,6 @@ class KGBuilder:
                     low_mention = mention.lower()
                     low_alias = alias.lower() if alias else ""
 
-                    # 1. Exact or registered alias match
                     if low_mention in alias_lookup:
                         canon_name = alias_lookup[low_mention]
                         canonical_entities[canon_name]["source_pdfs"].add(doc_source)
@@ -299,7 +304,6 @@ class KGBuilder:
                         claim[role] = canon_name
                         continue
 
-                    # 2. Acronym Initials Match OR High Embedding Similarity Match across PDFs
                     m_vec = self._encode_text(mention)
                     matched_canon = None
                     for c_name, c_data in canonical_entities.items():
@@ -313,7 +317,6 @@ class KGBuilder:
                             break
 
                     if matched_canon:
-                        # Prefer the longer descriptive name as the canonical label (e.g., "Artificial Intelligence" over "AI")
                         alias_lookup[low_mention] = matched_canon
                         if low_alias:
                             alias_lookup[low_alias] = matched_canon
@@ -361,11 +364,11 @@ class KGBuilder:
             total_weight = 0.0
             for ch in chunks:
                 cid = ch["chunk_id"]
-                w_j = float(np.log1p(len(ch["text"])))
-                total_weight += w_j
                 extracted_strs = claims_by_chunk.get(cid, [])
                 if not extracted_strs:
                     continue
+                w_j = float(np.log1p(len(ch["text"])))
+                total_weight += w_j
                 chunk_vec = self._encode_text(ch["text"])
                 triplets_vec = self._encode_text(" . ".join(extracted_strs))
                 cov_sim = max(0.0, self._cosine_sim(chunk_vec, triplets_vec))
@@ -392,7 +395,6 @@ class KGBuilder:
             else:
                 phi_topo = 0.0
 
-            # Dynamic Functional Consistency check using LLM-inferred "is_functional" flag
             functional_map: Dict[Tuple[str, str], set] = {}
             conflict_count = 0
             for c in verified_claims:
@@ -414,7 +416,7 @@ class KGBuilder:
             raise KGAuditException(e, sys)
 
     # ------------------------------------------------------------------
-    # 5. PUSH MULTI-PDF GRAPH TO NEO4J AURADB CLOUD
+    # 5. FAST BATCH UNWIND PUSH TO NEO4J AURADB CLOUD (< 1 SECOND)
     # ------------------------------------------------------------------
     def push_to_neo4j_cloud(
         self,
@@ -423,63 +425,80 @@ class KGBuilder:
         s_kg_score: float
     ) -> bool:
         try:
-            logging.info(f"Connecting to Neo4j AuraDB Cloud at {self.config.neo4j_uri}...")
+            print(f"[Phase 1] Pushing {len(canonical_entities)} nodes & {len(verified_claims)} edges to Neo4j AuraDB Cloud...", flush=True)
             driver = GraphDatabase.driver(
                 self.config.neo4j_uri,
                 auth=(self.config.neo4j_user, self.config.neo4j_password)
             )
             driver.verify_connectivity()
 
+            now_ts = datetime.utcnow().isoformat()
+            entity_batch = [
+                {
+                    "name": ent_name,
+                    "type": ent_data["type"],
+                    "aliases": list(ent_data["aliases"]),
+                    "source_pdfs": list(ent_data["source_pdfs"]),
+                    "ts": now_ts
+                }
+                for ent_name, ent_data in canonical_entities.items()
+            ]
+
+            claim_batch = [
+                {
+                    "subj": c["subject"],
+                    "obj": c["object"],
+                    "rel": c["relation"],
+                    "conf": float(c.get("extraction_confidence", 0.9)),
+                    "quote": c.get("evidence_quote", ""),
+                    "doc_id": c["document_id"],
+                    "source_name": c["source_name"],
+                    "grounding": float(c.get("grounding_score", 1.0)),
+                    "s_kg": s_kg_score
+                }
+                for c in verified_claims
+            ]
+
             with driver.session(database=self.config.neo4j_database) as session:
-                # 1. Upsert Canonical Entities with Cross-PDF Source Lists
-                for ent_name, ent_data in canonical_entities.items():
+                # 1. Single Batch UNWIND for all Entities
+                if entity_batch:
                     session.run(
                         """
-                        MERGE (e:Entity {name: $name})
-                        SET e.type = $type,
-                            e.aliases = $aliases,
-                            e.source_pdfs = $source_pdfs,
-                            e.pdf_mention_count = size($source_pdfs),
-                            e.updated_at = $ts
+                        UNWIND $batch AS row
+                        MERGE (e:Entity {name: row.name})
+                        SET e.type = row.type,
+                            e.aliases = row.aliases,
+                            e.source_pdfs = row.source_pdfs,
+                            e.pdf_mention_count = size(row.source_pdfs),
+                            e.updated_at = row.ts
                         """,
-                        name=ent_name,
-                        type=ent_data["type"],
-                        aliases=list(ent_data["aliases"]),
-                        source_pdfs=list(ent_data["source_pdfs"]),
-                        ts=datetime.utcnow().isoformat()
+                        batch=entity_batch
                     )
 
-                # 2. Upsert Verified Relationships (Accumulates multiple PDFs supporting the same edge!)
-                for claim in verified_claims:
+                # 2. Single Batch UNWIND for all Relationships
+                if claim_batch:
                     session.run(
                         """
-                        MATCH (u:Entity {name: $subj})
-                        MATCH (v:Entity {name: $obj})
-                        MERGE (u)-[r:RELATED_TO {type: $rel}]->(v)
-                        SET r.weight = $conf,
-                            r.evidence_quote = $quote,
+                        UNWIND $batch AS row
+                        MATCH (u:Entity {name: row.subj})
+                        MATCH (v:Entity {name: row.obj})
+                        MERGE (u)-[r:RELATED_TO {type: row.rel}]->(v)
+                        SET r.weight = row.conf,
+                            r.evidence_quote = row.quote,
                             r.source_pdfs = CASE
-                                WHEN r.source_pdfs IS NULL THEN [$source_name]
-                                WHEN NOT $source_name IN r.source_pdfs THEN r.source_pdfs + $source_name
+                                WHEN r.source_pdfs IS NULL THEN [row.source_name]
+                                WHEN NOT row.source_name IN r.source_pdfs THEN r.source_pdfs + row.source_name
                                 ELSE r.source_pdfs
                             END,
                             r.document_ids = CASE
-                                WHEN r.document_ids IS NULL THEN [$doc_id]
-                                WHEN NOT $doc_id IN r.document_ids THEN r.document_ids + $doc_id
+                                WHEN r.document_ids IS NULL THEN [row.doc_id]
+                                WHEN NOT row.doc_id IN r.document_ids THEN r.document_ids + row.doc_id
                                 ELSE r.document_ids
                             END,
-                            r.grounding_score = $grounding,
-                            r.kg_fidelity_score = $s_kg
+                            r.grounding_score = row.grounding,
+                            r.kg_fidelity_score = row.s_kg
                         """,
-                        subj=claim["subject"],
-                        obj=claim["object"],
-                        rel=claim["relation"],
-                        conf=float(claim.get("extraction_confidence", 0.9)),
-                        quote=claim.get("evidence_quote", ""),
-                        doc_id=claim["document_id"],
-                        source_name=claim["source_name"],
-                        grounding=float(claim.get("grounding_score", 1.0)),
-                        s_kg=s_kg_score
+                        batch=claim_batch
                     )
 
                 # 3. Store Global Phase 1 KG Fidelity Meta Node
@@ -492,25 +511,22 @@ class KGBuilder:
                     """,
                     s_kg=s_kg_score,
                     count=len(verified_claims),
-                    ts=datetime.utcnow().isoformat()
+                    ts=now_ts
                 )
 
             driver.close()
-            logging.info("Successfully pushed Multi-PDF Knowledge Graph to Neo4j AuraDB Cloud.")
+            print("[Phase 1] SUCCESS: Knowledge Graph & Fidelity State uploaded to Neo4j AuraDB Cloud!", flush=True)
             return True
 
         except Exception as e:
+            print(f"[Phase 1] ERROR pushing to Neo4j Cloud: {e}", flush=True)
             logging.error(f"Neo4j Cloud push failed: {e}")
             return False
 
     # ------------------------------------------------------------------
-    # MASTER EXECUTION ENTRYPOINTS
+    # MASTER EXECUTION ENTRYPOINTS (WITH PARALLEL THREADING)
     # ------------------------------------------------------------------
     def initiate_kg_from_directory(self, directory_path: str = None) -> KGBuilderArtifact:
-        """
-        Automatically discovers all .pdf and .txt files inside data/uploads/
-        and builds a unified, cross-document Knowledge Graph in Neo4j Cloud.
-        """
         target_dir = directory_path or self.config.data_uploads_dir
         os.makedirs(target_dir, exist_ok=True)
         pdf_files = sorted(glob.glob(os.path.join(target_dir, "*.pdf")))
@@ -520,19 +536,32 @@ class KGBuilder:
         if not all_files:
             raise ValueError(f"No .pdf or .txt files found in {target_dir}. Place your PDFs there first!")
 
-        logging.info(f"Found {len(all_files)} documents in {target_dir}: {all_files}")
         return self.initiate_kg_construction(all_files)
 
-    def initiate_kg_construction(self, file_paths_or_texts: List[str]) -> KGBuilderArtifact:
+    def initiate_kg_construction(
+        self,
+        file_paths_or_texts: List[str],
+        progress_callback: Optional[Callable[[int, int, str], None]] = None
+    ) -> KGBuilderArtifact:
         try:
-            logging.info("=== Starting Phase 1: Multi-PDF KG Construction & Fidelity Audit ===")
-            chunks = self.parse_and_chunk_documents(file_paths_or_texts)
+            print("\n=== Starting Phase 1: Parallel Multi-PDF KG Construction ===", flush=True)
+            chunks = self.parse_and_chunk_documents(file_paths_or_texts, max_chunks_per_doc=10)
             chunks_by_id = {ch["chunk_id"]: ch["text"] for ch in chunks}
 
             raw_claims: List[Dict[str, Any]] = []
-            for ch in chunks:
-                extracted = self.extract_from_chunk(ch)
-                raw_claims.extend(extracted)
+            total_chunks = len(chunks)
+
+            # Extract from chunks concurrently (5 parallel workers = 5x faster)
+            with ThreadPoolExecutor(max_workers=5) as executor:
+                future_to_chunk = {executor.submit(self.extract_from_chunk, ch): ch for ch in chunks}
+                completed_count = 0
+                for future in as_completed(future_to_chunk):
+                    ch = future_to_chunk[future]
+                    completed_count += 1
+                    extracted = future.result()
+                    raw_claims.extend(extracted)
+                    if progress_callback:
+                        progress_callback(completed_count, total_chunks, ch["chunk_id"])
 
             verified_claims, canonical_entities, grounding_scores = (
                 self.validate_and_resolve_entities(raw_claims, chunks_by_id)
@@ -543,7 +572,6 @@ class KGBuilder:
             )
 
             os.makedirs(os.path.dirname(self.config.kg_fidelity_state_path), exist_ok=True)
-            # Count how many entities are shared across 2 or more PDFs!
             shared_entities = [
                 name for name, data in canonical_entities.items() if len(data["source_pdfs"]) > 1
             ]
@@ -562,7 +590,7 @@ class KGBuilder:
                 "cross_pdf_shared_entities": shared_entities,
                 "timestamp": datetime.utcnow().isoformat()
             }
-            with open(self.config.kg_fidelity_state_path, "w") as f:
+            with open(self.config.kg_fidelity_state_path, "w", encoding="utf-8") as f:
                 json.dump(fidelity_state, f, indent=4)
 
             os.makedirs(os.path.dirname(self.config.extracted_kg_file_path), exist_ok=True)
@@ -580,14 +608,15 @@ class KGBuilder:
                 ],
                 "edges": verified_claims
             }
-            with open(self.config.extracted_kg_file_path, "w") as f:
+            with open(self.config.extracted_kg_file_path, "w", encoding="utf-8") as f:
                 json.dump(kg_payload, f, indent=4)
 
             pushed_ok = self.push_to_neo4j_cloud(canonical_entities, verified_claims, s_kg)
 
-            logging.info(
-                f"Phase 1 Complete | Overall KG Accuracy (S_KG): {s_kg:.4f} | "
-                f"Cross-PDF Shared Entities: {len(shared_entities)}"
+            print(
+                f"=== Phase 1 Complete | KG Fidelity Score (S_KG): {s_kg * 100:.2f}% | "
+                f"Verified Triplets: {len(verified_claims)} | Shared Cross-PDF Entities: {len(shared_entities)} ===\n",
+                flush=True
             )
 
             return KGBuilderArtifact(

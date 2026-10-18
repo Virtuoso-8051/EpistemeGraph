@@ -43,7 +43,8 @@ class EvaluationPipeline:
             if os.getenv("DAGSHUB_TOKEN"):
                 dagshub.init(repo_owner=repo_owner, repo_name=repo_name, mlflow=True)
             else:
-                mlflow.set_tracking_uri(f"file:///{os.path.abspath('mlruns')}")
+                os.environ["MLFLOW_ALLOW_FILE_STORE"] = "true"
+                mlflow.set_tracking_uri("sqlite:///mlflow.db")
 
             mlflow.set_experiment("EpistemeGraph_CASSE_Verification")
 
@@ -119,6 +120,18 @@ class EvaluationPipeline:
                     response_edges=response_graph_payload.get("edges", []),
                     metadata=metadata
                 )
+
+                # Phase 4: MLOps Continuous Telemetry Logging & Self-Improvement Loop
+                trainer = ModelTrainer(self.trainer_config)
+                live_count = trainer.append_live_telemetry(
+                    feature_vector=evaluator_artifact.feature_vector,
+                    query_text=user_query
+                )
+                # Automatically retrain & evaluate Challenger vs. Champion every 3 live queries (or if metrics file missing)
+                if live_count % 3 == 0 or not os.path.exists(trainer.production_metrics_path):
+                    trainer_art = trainer.initiate_model_trainer()
+                    mlflow.log_metric("champion_model_roc_auc", trainer_art.roc_auc_score)
+                    mlflow.log_metric("champion_model_brier_loss", trainer_art.brier_score)
 
                 # Log Metrics to MLflow
                 mlflow.log_metric("llm_self_reported_accuracy", interceptor_artifact.llm_self_reported_accuracy)

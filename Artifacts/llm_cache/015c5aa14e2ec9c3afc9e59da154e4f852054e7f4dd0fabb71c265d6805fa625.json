@@ -1,0 +1,87 @@
+[
+  {
+    "subject": "LINE",
+    "subject_alias": "LINE(2nd)",
+    "subject_type": "ALGORITHM",
+    "relation": "OUTPERFORMS",
+    "is_functional": false,
+    "object": "DeepWalk",
+    "object_type": "ALGORITHM",
+    "evidence_quote": "Signi\ufb01cantly outperforms DeepWalk at the: ** 0.01 and * 0.05 level, paired t-test.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "LINE",
+    "subject_alias": "LINE(2nd)",
+    "subject_type": "ALGORITHM",
+    "relation": "ACHIEVES_MICRO_F1",
+    "is_functional": false,
+    "object": "62.93",
+    "object_type": "METRIC",
+    "evidence_quote": "2.87 62.93 63.05 63.07 63.13 62.95 (63.49*) (64.42**) (64.84**) (65.05**) (65.19**) (65.26**) (65.29**) (65.14**) (65.14**) Signi\ufb01cantly outperforms DeepWalk at the: ** 0.01 and * 0.05 level, paired t-test.",
+    "extraction_confidence": 0.74
+  },
+  {
+    "subject": "LINE",
+    "subject_alias": "LINE(2nd)",
+    "subject_type": "ALGORITHM",
+    "relation": "ACHIEVES_MICRO_F1",
+    "is_functional": false,
+    "object": "58.42",
+    "object_type": "METRIC",
+    "evidence_quote": "Metric Algorithm 10% 20% 30% 40% 50% 60% 70% 80% 90% Micro-F1 DeepWalk 52.83 53.80 54.24 54.75 55.07 55.13 55.48 55.42 55.90LINE(2nd) 58.42 59.58 60.29 60.78 60.94 61.20 61.39 61.39 61.79 (60.10**) (61.06**) (61.46**) (61.73**) (61.85**) (62.10**) (62.21**) (62.25**) (62.80**)",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "LINE",
+    "subject_alias": "LINE(2nd)",
+    "subject_type": "ALGORITHM",
+    "relation": "ACHIEVES_MACRO_F1",
+    "is_functional": false,
+    "object": "48.74",
+    "object_type": "METRIC",
+    "evidence_quote": "Metric Algorithm 10% 20% 30% 40% 50% 60% 70% 80% 90% Macro-F1 DeepWalk 43.74 44.85 45.34 45.85 46.20 46.25 46.51 46.36 46.73LINE(2nd) 48.74 50.10 50.84 51.31 51.61 51.77 51.94 51.89 52.16 (50.22**) (51.41**) (51.92**) (52.20**) (52.40**) (52.59**) (52.78**) (52.70**) (53.02**)",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "DBLP",
+    "subject_alias": "DBLP(PaperCitation)",
+    "subject_type": "DATASET",
+    "relation": "USED_FOR",
+    "is_functional": false,
+    "object": "multi-label classification",
+    "object_type": "TASK",
+    "evidence_quote": "Table 8: Results of multi-label classi\ufb01cation on DBLP(PaperCitation)network.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "co-author network",
+    "subject_type": "NETWORK",
+    "relation": "EXTRACTED_FROM",
+    "is_functional": false,
+    "object": "DBLP data",
+    "object_type": "DATASET",
+    "evidence_quote": "We visualize a co-author network extracted from the DBLP data.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "co-author network",
+    "subject_type": "NETWORK",
+    "relation": "CONTAINS",
+    "is_functional": false,
+    "object": "18,561 authors",
+    "object_type": "ENTITY",
+    "evidence_quote": "Authors with degree less than 3 are \ufb01ltered out, and \ufb01nally the network contains 18,561 authors and 207,074 edges.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "co-author network",
+    "subject_type": "NETWORK",
+    "relation": "CONTAINS",
+    "is_functional": false,
+    "object": "207,074 edges",
+    "object_type": "ENTITY",
+    "evidence_quote": "Authors with degree less than 3 are \ufb01ltered out, and \ufb01nally the network contains 18,561 authors and 207,074 edges.",
+    "extraction_confidence": 0.98
+  }
+]

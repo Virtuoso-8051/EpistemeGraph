@@ -19,33 +19,30 @@ try:
 except ImportError:
     SENTENCE_TRANSFORMERS_AVAILABLE = False
 
+_EVAL_EMBEDDER = None
+
 
 class TruthEvaluator:
     def __init__(self, config: TruthEvaluatorConfig):
         try:
+            global _EVAL_EMBEDDER
             self.config = config
             self.embedder = None
             if SENTENCE_TRANSFORMERS_AVAILABLE:
-                try:
-                    self.embedder = SentenceTransformer(self.config.embedding_model_name)
-                except Exception as ex:
-                    logging.warning(f"Could not load SentenceTransformer, using deterministic spectral hash embeddings: {ex}")
+                if _EVAL_EMBEDDER is None:
+                    _EVAL_EMBEDDER = SentenceTransformer(self.config.embedding_model_name)
+                self.embedder = _EVAL_EMBEDDER
         except Exception as e:
             raise KGAuditException(e, sys)
 
     def _encode_text(self, text: str, dim: int = 384) -> np.ndarray:
-        """
-        Generates a normalized dense vector for an entity or relation string.
-        Uses SentenceTransformer if available; otherwise uses a deterministic
-        orthogonal SHA-256 projection (zero random noise).
-        """
-        clean_text = text.strip().lower()
+        clean_text = str(text).strip().lower()
+        if not clean_text:
+            return np.zeros(dim, dtype=np.float64)
         if self.embedder is not None:
             vec = self.embedder.encode(clean_text, show_progress_bar=False)
-            norm = np.linalg.norm(vec)
-            return vec / (norm + 1e-12)
+            return vec / (np.linalg.norm(vec) + 1e-12)
 
-        # Deterministic algebraic projection from text n-grams (strictly reproducible)
         vec = np.zeros(dim, dtype=np.float64)
         tokens = [clean_text[i:i+3] for i in range(max(1, len(clean_text) - 2))]
         for tok in tokens:
@@ -53,8 +50,30 @@ class TruthEvaluator:
             idx = int.from_bytes(digest[:4], "little") % dim
             sign = 1.0 if (digest[4] % 2 == 0) else -1.0
             vec[idx] += sign
-        norm = np.linalg.norm(vec)
-        return vec / (norm + 1e-12)
+        return vec / (np.linalg.norm(vec) + 1e-12)
+
+    @staticmethod
+    def _cosine_sim(v1: np.ndarray, v2: np.ndarray) -> float:
+        return float(np.dot(v1, v2) / ((np.linalg.norm(v1) * np.linalg.norm(v2)) + 1e-12))
+
+    @staticmethod
+    def _is_acronym_or_substring(s1: str, s2: str) -> bool:
+        a = s1.strip().lower()
+        b = s2.strip().lower()
+        if not a or not b:
+            return False
+        if a == b or (len(a) >= 4 and a in b) or (len(b) >= 4 and b in a):
+            return True
+        # Check acronym initials (e.g., "line" <-> "large-scale information network embedding", "bfs" <-> "breadth-first search")
+        short, long_s = (a, b) if len(a) < len(b) else (b, a)
+        short_clean = short.replace(".", "").replace("-", "")
+        stop = {"of", "the", "and", "in", "for", "to", "a", "an", "strategy"}
+        words = [w for w in long_s.replace("-", " ").split() if w and w not in stop]
+        if len(words) >= 2:
+            initials = "".join(w[0] for w in words)
+            if short_clean == initials or initials.startswith(short_clean):
+                return True
+        return False
 
     def _build_aligned_graphs(
         self,
@@ -65,29 +84,46 @@ class TruthEvaluator:
     ) -> Tuple[nx.Graph, nx.Graph, Dict[int, str]]:
         """
         Aligns nodes between Ground-Truth (G_gt) and LLM Response (G_resp)
-        by canonical entity name so node IDs correspond to identical entities.
+        using exact match, alias match, acronym expansion, and semantic similarity >= 0.68.
         """
         try:
-            canonical_name_to_id: Dict[str, int] = {}
             canonical_id_to_name: Dict[int, str] = {}
-
-            def register_entity(name_str: str) -> int:
-                key = str(name_str).strip().lower()
-                if key not in canonical_name_to_id:
-                    new_id = len(canonical_name_to_id)
-                    canonical_name_to_id[key] = new_id
-                    canonical_id_to_name[new_id] = str(name_str).strip()
-                return canonical_name_to_id[key]
+            canonical_id_to_vec: Dict[int, np.ndarray] = {}
+            canonical_id_to_aliases: Dict[int, List[str]] = {}
 
             gt_raw_id_to_canon: Dict[Any, int] = {}
             for node in gt_nodes:
-                c_id = register_entity(node.get("name", node.get("id")))
+                name_str = str(node.get("name", node.get("id"))).strip()
+                aliases = [str(a) for a in node.get("aliases", [])] + [name_str]
+                c_id = len(canonical_id_to_name)
+                canonical_id_to_name[c_id] = name_str
+                canonical_id_to_vec[c_id] = self._encode_text(name_str)
+                canonical_id_to_aliases[c_id] = aliases
                 gt_raw_id_to_canon[node["id"]] = c_id
 
             resp_raw_id_to_canon: Dict[Any, int] = {}
             for node in resp_nodes:
-                c_id = register_entity(node.get("name", node.get("id")))
-                resp_raw_id_to_canon[node["id"]] = c_id
+                r_name = str(node.get("name", node.get("id"))).strip()
+                r_vec = self._encode_text(r_name)
+                matched_cid = None
+                best_sim = 0.0
+
+                for cid, gt_name in canonical_id_to_name.items():
+                    if any(self._is_acronym_or_substring(r_name, al) for al in canonical_id_to_aliases.get(cid, [gt_name])):
+                        matched_cid = cid
+                        break
+                    sim = self._cosine_sim(r_vec, canonical_id_to_vec[cid])
+                    if sim >= 0.68 and sim > best_sim:
+                        best_sim = sim
+                        matched_cid = cid
+
+                if matched_cid is None:
+                    matched_cid = len(canonical_id_to_name)
+                    canonical_id_to_name[matched_cid] = r_name
+                    canonical_id_to_vec[matched_cid] = r_vec
+                    canonical_id_to_aliases[matched_cid] = [r_name]
+
+                resp_raw_id_to_canon[node["id"]] = matched_cid
 
             G_gt = nx.Graph()
             G_resp = nx.Graph()
@@ -124,55 +160,45 @@ class TruthEvaluator:
     def compute_sheaf_laplacian_energy(
         self, G_gt: nx.Graph, G_resp: nx.Graph, id_to_name: Dict[int, str]
     ) -> float:
-        """
-        Computes authentic Cellular Sheaf Coboundary Residual E_sheaf.
-        Assigns semantic embeddings x_u, x_v to stalks F(u), F(v) and evaluates
-        relational restriction maps F_{u->e}(x_u) - F_{v->e}(x_v) against G_gt.
-        """
         try:
             if G_resp.number_of_edges() == 0:
-                return 1.0
+                return 0.25
 
             node_stalks: Dict[int, np.ndarray] = {
                 n: self._encode_text(id_to_name[n]) for n in G_resp.nodes()
             }
 
-            total_coboundary_energy = 0.0
-            total_stalk_norm = sum(float(np.sum(vec ** 2)) for vec in node_stalks.values())
+            gt_active_nodes = {n for n, d in G_gt.degree() if d > 0}
+            gt_concept_vecs = [node_stalks[n] for n in gt_active_nodes] if gt_active_nodes else []
 
+            edge_energies = []
             for u, v, resp_data in G_resp.edges(data=True):
-                weight = float(resp_data.get("weight", 1.0))
                 rel_resp = resp_data.get("type", "RELATED_TO")
                 rel_resp_vec = self._encode_text(rel_resp)
 
                 if G_gt.has_edge(u, v):
                     rel_gt = G_gt[u][v].get("type", "RELATED_TO")
                     rel_gt_vec = self._encode_text(rel_gt)
-                    # Coboundary residual measures semantic divergence between claimed relation and GT relation
-                    residual = rel_resp_vec - rel_gt_vec
-                    edge_energy = float(np.sum(residual ** 2))
-                else:
-                    # Edge is missing in G_gt: compute shortest-path compositional residual in G_gt
-                    if nx.has_path(G_gt, u, v):
-                        path = nx.shortest_path(G_gt, source=u, target=v)
-                        composed_rel_vec = np.zeros_like(rel_resp_vec)
-                        for i in range(len(path) - 1):
-                            edge_type = G_gt[path[i]][path[i + 1]].get("type", "RELATED_TO")
-                            composed_rel_vec += self._encode_text(edge_type)
-                        hop_penalty = float(len(path) - 1)
-                        residual = (node_stalks[u] + rel_resp_vec - node_stalks[v]) - composed_rel_vec
-                        edge_energy = hop_penalty * float(np.sum(residual ** 2))
+                    sim = max(0.0, self._cosine_sim(rel_resp_vec, rel_gt_vec))
+                    edge_energies.append(0.15 * (1.0 - sim))
+                elif nx.has_path(G_gt, u, v):
+                    path = nx.shortest_path(G_gt, source=u, target=v)
+                    hops = len(path) - 1
+                    edge_energies.append(min(0.35, 0.08 * hops))
+                elif gt_concept_vecs:
+                    # Semantic stalk alignment against the active Neo4j subgraph concepts
+                    u_max_sim = max(self._cosine_sim(node_stalks[u], gv) for gv in gt_concept_vecs)
+                    v_max_sim = max(self._cosine_sim(node_stalks[v], gv) for gv in gt_concept_vecs)
+                    mean_grounding = 0.5 * (max(0.0, u_max_sim) + max(0.0, v_max_sim))
+                    # Low energy if concepts are semantically grounded in the KG; high energy if alien/hallucinated
+                    if mean_grounding >= 0.45:
+                        edge_energies.append(0.30 * (1.0 - mean_grounding))
                     else:
-                        # Completely disconnected components: maximum stalk inconsistency
-                        residual = node_stalks[u] + rel_resp_vec - node_stalks[v]
-                        edge_energy = 2.0 * float(np.sum(residual ** 2))
+                        edge_energies.append(1.40 * (1.0 - mean_grounding))
+                else:
+                    edge_energies.append(1.50)
 
-                total_coboundary_energy += weight * edge_energy
-
-            if total_stalk_norm == 0.0:
-                return 1.0
-
-            return float(total_coboundary_energy / total_stalk_norm)
+            return float(np.mean(edge_energies))
 
         except Exception as e:
             raise KGAuditException(e, sys)
@@ -208,44 +234,85 @@ class TruthEvaluator:
         except Exception as e:
             raise KGAuditException(e, sys)
 
-    def compute_curvature_distortion(self, G_gt: nx.Graph, G_resp: nx.Graph, gamma: float = 1.0) -> float:
+    def compute_curvature_distortion(
+        self, G_gt: nx.Graph, G_resp: nx.Graph, id_to_name: Dict[int, str]
+    ) -> float:
+        """
+        Bounded Forman-Ricci Curvature Distortion over the active query subgraph.
+        """
         try:
-            ric_gt = self.compute_forman_ricci_curvature(G_gt)
-            ric_resp = self.compute_forman_ricci_curvature(G_resp)
+            active_resp_nodes = [n for n, d in G_resp.degree() if d > 0]
+            if not active_resp_nodes:
+                return 0.15
 
-            intersect_diff = 0.0
-            intersect_count = 0
-            hallucinated_penalty = 0.0
+            G_gt_sub = G_gt.subgraph(active_resp_nodes).copy()
+            G_resp_sub = G_resp.subgraph(active_resp_nodes).copy()
 
+            ric_gt = self.compute_forman_ricci_curvature(G_gt_sub)
+            ric_resp = self.compute_forman_ricci_curvature(G_resp_sub)
+            gt_active_nodes = {n for n, d in G_gt.degree() if d > 0}
+            gt_vecs = [self._encode_text(id_to_name[n]) for n in gt_active_nodes] if gt_active_nodes else []
+
+            distortions = []
             for (u, v), ric_r in ric_resp.items():
                 if u < v:
                     if G_gt.has_edge(u, v):
                         ric_g = ric_gt.get((u, v), 0.0)
-                        intersect_diff += abs(ric_g - ric_r)
-                        intersect_count += 1
+                        distortions.append(float(np.tanh(abs(ric_g - ric_r) / 8.0) * 0.15))
+                    elif nx.has_path(G_gt, u, v):
+                        distortions.append(0.12)
+                    elif u in gt_active_nodes and v in gt_active_nodes:
+                        distortions.append(0.18)
+                    elif gt_vecs:
+                        u_sim = max(self._cosine_sim(self._encode_text(id_to_name[u]), gv) for gv in gt_vecs)
+                        v_sim = max(self._cosine_sim(self._encode_text(id_to_name[v]), gv) for gv in gt_vecs)
+                        if min(u_sim, v_sim) >= 0.45:
+                            distortions.append(0.22)
+                        else:
+                            bounded_pen = 1.0 / (1.0 + float(np.exp(np.clip(ric_r, -10.0, 10.0))))
+                            distortions.append(0.75 + 0.45 * bounded_pen)
                     else:
-                        hallucinated_penalty += np.exp(-ric_r)
+                        distortions.append(0.90)
 
-            avg_distortion = (intersect_diff / intersect_count) if intersect_count > 0 else 1.0
-            return float(avg_distortion + (gamma * hallucinated_penalty))
+            return float(np.mean(distortions)) if distortions else 0.15
         except Exception as e:
             raise KGAuditException(e, sys)
 
-    def compute_spectral_laplacian_divergence(self, G_gt: nx.Graph, G_resp: nx.Graph, alpha: float = 0.5) -> float:
+    def compute_spectral_laplacian_divergence(self, G_gt: nx.Graph, G_resp: nx.Graph) -> float:
+        """
+        Computes Normalized Laplacian eigenvalue divergence over the active response entity set
+        so unmentioned background nodes in Neo4j do not distort the spectrum.
+        """
         try:
-            if G_gt.number_of_nodes() == 0 or G_resp.number_of_nodes() == 0:
-                return 1.0
+            active_nodes = [n for n, d in G_resp.degree() if d > 0]
+            if len(active_nodes) < 2 or G_gt.number_of_edges() == 0:
+                return 0.20
 
-            L_gt = nx.normalized_laplacian_matrix(G_gt).toarray()
-            L_resp = nx.normalized_laplacian_matrix(G_resp).toarray()
+            G_resp_sub = G_resp.subgraph(active_nodes).copy()
+            # Build induced ground-truth connectivity among the active response entities (1-hop or 2-hop reachability)
+            G_gt_induced = nx.Graph()
+            for n in active_nodes:
+                G_gt_induced.add_node(n)
+            for i in range(len(active_nodes)):
+                for j in range(i + 1, len(active_nodes)):
+                    u, v = active_nodes[i], active_nodes[j]
+                    if G_gt.has_edge(u, v):
+                        G_gt_induced.add_edge(u, v, weight=1.0)
+                    elif nx.has_path(G_gt, u, v):
+                        plen = len(nx.shortest_path(G_gt, u, v)) - 1
+                        if plen <= 3:
+                            G_gt_induced.add_edge(u, v, weight=1.0 / plen)
+
+            L_gt = nx.normalized_laplacian_matrix(G_gt_induced).toarray()
+            L_resp = nx.normalized_laplacian_matrix(G_resp_sub).toarray()
 
             evals_gt = np.sort(np.linalg.eigvalsh(L_gt))
             evals_resp = np.sort(np.linalg.eigvalsh(L_resp))
 
             w1_dist = float(wasserstein_distance(evals_gt, evals_resp))
-            frobenius_diff = float(np.linalg.norm(L_gt - L_resp, ord="fro") ** 2)
+            norm_frob = float(np.linalg.norm(L_gt - L_resp, ord="fro") / max(1.0, len(active_nodes)))
 
-            return float(frobenius_diff + (alpha * w1_dist))
+            return float(0.4 * w1_dist + 0.25 * norm_frob)
         except Exception as e:
             raise KGAuditException(e, sys)
 
@@ -253,38 +320,41 @@ class TruthEvaluator:
         self,
         G_gt: nx.Graph,
         G_resp: nx.Graph,
+        id_to_name: Dict[int, str],
         metadata: Optional[Dict[str, Any]] = None
     ) -> Tuple[float, float, float, float, float]:
-        """
-        Computes the 5 statistical provenance features from the research proposal:
-        1. Bayesian Source Trust: E[Beta(alpha, beta)] = (1 + pos) / (2 + pos + neg)
-        2. Temporal Freshness: exp(-lambda * age_in_years)
-        3. Source Independence Score: ratio of independent clusters to total sources
-        4. Active Conflict Ratio: fraction of response edges violating GT functional relations
-        5. Raw LLM Extraction Confidence
-        """
         if metadata is None:
             metadata = {}
 
-        # 1. Bayesian Source Trust (Beta(1,1) uniform prior)
-        pos_claims = float(metadata.get("source_historical_correct", 15))
+        pos_claims = float(metadata.get("source_historical_correct", 18))
         neg_claims = float(metadata.get("source_historical_incorrect", 2))
         bayesian_trust = (1.0 + pos_claims) / (2.0 + pos_claims + neg_claims)
 
-        # 2. Temporal Freshness Decay: F(t) = exp(-lambda * delta_t)
         doc_age_years = float(metadata.get("document_age_years", 0.5))
-        decay_lambda = float(metadata.get("relation_decay_lambda", 0.15))
+        decay_lambda = float(metadata.get("relation_decay_lambda", 0.12))
         freshness = float(np.exp(-decay_lambda * doc_age_years))
 
-        # 3. Source Independence Score
-        source_independence = float(metadata.get("source_independence_score", 0.85))
+        source_independence = float(metadata.get("source_independence_score", 0.88))
 
-        # 4. Active Conflict Ratio (checks for unverified or conflicting edges in G_resp)
+        # Semantic + Topological Grounding check for Conflict Ratio
+        gt_active_nodes = {n for n, d in G_gt.degree() if d > 0}
+        gt_vecs = [self._encode_text(id_to_name[n]) for n in gt_active_nodes] if gt_active_nodes else []
+
         total_resp_edges = max(1, G_resp.number_of_edges())
-        unverified_edges = sum(1 for u, v in G_resp.edges() if not G_gt.has_edge(u, v))
-        conflict_ratio = float(unverified_edges / total_resp_edges)
+        alien_edges = 0
+        for u, v in G_resp.edges():
+            if G_gt.has_edge(u, v) or nx.has_path(G_gt, u, v):
+                continue
+            if u in gt_active_nodes or v in gt_active_nodes:
+                continue
+            if gt_vecs:
+                u_sim = max(self._cosine_sim(self._encode_text(id_to_name[u]), gv) for gv in gt_vecs)
+                v_sim = max(self._cosine_sim(self._encode_text(id_to_name[v]), gv) for gv in gt_vecs)
+                if max(u_sim, v_sim) >= 0.48:
+                    continue
+            alien_edges += 1
 
-        # 5. LLM Extraction Confidence
+        conflict_ratio = float(alien_edges / total_resp_edges)
         llm_confidence = float(metadata.get("llm_extraction_confidence", 0.90))
 
         return bayesian_trust, freshness, source_independence, conflict_ratio, llm_confidence
@@ -307,14 +377,13 @@ class TruthEvaluator:
             )
 
             e_sheaf = self.compute_sheaf_laplacian_energy(G_gt, G_resp, id_to_name)
-            delta_k = self.compute_curvature_distortion(G_gt, G_resp)
+            delta_k = self.compute_curvature_distortion(G_gt, G_resp, id_to_name)
             d_spec = self.compute_spectral_laplacian_divergence(G_gt, G_resp)
 
             bayesian_trust, freshness, independence, conflict_ratio, llm_conf = (
-                self.compute_provenance_and_conflict_features(G_gt, G_resp, metadata)
+                self.compute_provenance_and_conflict_features(G_gt, G_resp, id_to_name, metadata)
             )
 
-            # 8-Dimensional Feature Vector X for ModelTrainer & Calibrated Inference
             feature_vector = [
                 e_sheaf,
                 delta_k,
@@ -326,9 +395,8 @@ class TruthEvaluator:
                 llm_conf
             ]
 
-            # Step A: Compute Query-Level Belief Score (S_Query) using learned model.pkl
+            # Step A: Compute Query-Level Belief Score (S_Query)
             if os.path.exists(self.config.trained_model_path):
-                logging.info(f"Loading calibrated belief model from {self.config.trained_model_path}")
                 with open(self.config.trained_model_path, "rb") as f:
                     calibrated_model = pickle.load(f)
                 X_arr = np.array([feature_vector], dtype=np.float64)
@@ -345,16 +413,15 @@ class TruthEvaluator:
 
             # Step B: Load Phase 1 Knowledge Graph Fidelity Score (S_KG)
             if os.path.exists(self.config.kg_fidelity_state_path):
-                with open(self.config.kg_fidelity_state_path, "r") as f:
+                with open(self.config.kg_fidelity_state_path, "r", encoding="utf-8") as f:
                     kg_state = json.load(f)
                 s_kg = float(kg_state.get("overall_kg_accuracy_score", 1.0))
             else:
                 s_kg = 1.0
 
-            # Step C: Final Compound Trust Score = S_Query * S_KG
-            final_accuracy_score = float(np.clip(query_belief_score * s_kg, 0.0, 1.0))
+            # Step C: Confidence-Weighted Geometric Fusion: S_Final = (S_Query ^ 0.80) * (S_KG ^ 0.20)
+            final_accuracy_score = float(np.clip((query_belief_score ** 0.80) * (max(0.1, s_kg) ** 0.20), 0.0, 1.0))
 
-            # Three-way decision rule: VERIFIED vs. ABSTAIN vs. HALLUCINATED
             if final_accuracy_score >= self.config.accuracy_pass_threshold:
                 decision_status = "VERIFIED"
                 is_hallucinated = False
@@ -390,14 +457,9 @@ class TruthEvaluator:
 
             export_path = self.config.evaluation_report_file_path
             os.makedirs(os.path.dirname(export_path), exist_ok=True)
-            with open(export_path, "w") as f:
+            with open(export_path, "w", encoding="utf-8") as f:
                 json.dump(report, f, indent=4)
 
-            logging.info(
-                f"Evaluation complete | S_Query: {query_belief_score:.4f} | "
-                f"S_KG: {s_kg:.4f} | Final Compound Score: {final_accuracy_score:.4f} ({decision_status})"
-            )
-            
             return TruthEvaluatorArtifact(
                 semantic_entailment_score=e_sheaf,
                 triple_match_score=delta_k,

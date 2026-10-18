@@ -1,0 +1,98 @@
+[
+  {
+    "subject": "NE model",
+    "subject_alias": "NE",
+    "subject_type": "MODEL",
+    "relation": "USES_OBJECTIVE",
+    "is_functional": false,
+    "object": "objective designed for networks that preserves first-order and second-order proximities",
+    "object_alias": null,
+    "object_type": "OBJECTIVE",
+    "evidence_quote": "NE model uses an objective that is particularly designed for networks, which preserves both the \ufb01rst-order and the second-order prox- imities.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "graph factorization method",
+    "subject_alias": null,
+    "subject_type": "METHOD",
+    "relation": "APPLIES_TO",
+    "is_functional": false,
+    "object": "undirected graphs",
+    "object_alias": null,
+    "object_type": "GRAPH",
+    "evidence_quote": "Practically, the graph factorization method only applies to undirected graphs while the proposed model is applicable for both undirected and directed graphs.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "proposed model",
+    "subject_alias": null,
+    "subject_type": "MODEL",
+    "relation": "APPLIES_TO",
+    "is_functional": false,
+    "object": "undirected and directed graphs",
+    "object_alias": null,
+    "object_type": "GRAPH",
+    "evidence_quote": "Practically, the graph factorization method only applies to undirected graphs while the proposed model is applicable for both undirected and directed graphs.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "DeepWalk",
+    "subject_alias": null,
+    "subject_type": "MODEL",
+    "relation": "DEPLOYS",
+    "is_functional": false,
+    "object": "truncated random walk",
+    "object_alias": null,
+    "object_type": "METHOD",
+    "evidence_quote": "The most recent work related with ours is DeepWalk [16], which deploys a truncated random walk for social network embedding.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "DeepWalk",
+    "subject_alias": null,
+    "subject_type": "MODEL",
+    "relation": "DOES_NOT_PROVIDE",
+    "is_functional": false,
+    "object": "clear objective that articulates what network properties are preserved",
+    "object_alias": null,
+    "object_type": "OBJECTIVE",
+    "evidence_quote": "Although empirically e\ufb00ective, the DeepWalk does not provide a clear objective that articulates what net- work properties are preserved.",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "LINE",
+    "subject_alias": null,
+    "subject_type": "MODEL",
+    "relation": "PRESERVES",
+    "is_functional": false,
+    "object": "first-order and second-order proximities",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Intuitively, DeepWalk ex- pects nodes with higher second-order proximity yield similar low-dimensional representations, while the LINE preserves both \ufb01rst-order and second-order proximities.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "DeepWalk",
+    "subject_alias": null,
+    "subject_type": "MODEL",
+    "relation": "USES",
+    "is_functional": false,
+    "object": "random walks",
+    "object_alias": null,
+    "object_type": "METHOD",
+    "evidence_quote": "DeepWalk uses random walks to expand the neighborhood of a vertex, which is analogical to a depth-\ufb01rst search.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "proposed model",
+    "subject_alias": null,
+    "subject_type": "MODEL",
+    "relation": "USES",
+    "is_functional": false,
+    "object": "breadth-first search strategy",
+    "object_alias": "BFS",
+    "object_type": "METHOD",
+    "evidence_quote": "We use a breadth- \ufb01rst search strategy, which is a more reasonable approach to the second-order proximity.",
+    "extraction_confidence": 0.97
+  }
+]

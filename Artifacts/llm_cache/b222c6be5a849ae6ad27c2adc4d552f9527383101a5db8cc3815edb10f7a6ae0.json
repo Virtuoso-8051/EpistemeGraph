@@ -1,0 +1,98 @@
+[
+  {
+    "subject": "Neighborhood",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "DEFINED_AS",
+    "is_functional": false,
+    "object": "a notion that can be naturally defined using a sliding window over consecutive words",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Given the linear nature of text, the notion of a neighborhood can be naturally de\ufb01ned using a sliding window over consecutive words.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Networks",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "ARE_NOT",
+    "is_functional": false,
+    "object": "linear",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Networks, however, are not linear, and thus a richer notion of a neighborhood is needed.",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "Randomized procedure",
+    "subject_alias": null,
+    "subject_type": "METHOD",
+    "relation": "SAMPLES",
+    "is_functional": false,
+    "object": "many different neighborhoods of a given source node",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "To resolve this issue, we propose a ran- domized procedure that samples many different neighborhoods of a given source nodeu.",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "Neighborhoods NS(u)",
+    "subject_alias": "NS(u)",
+    "subject_type": "CONCEPT",
+    "relation": "ARE_NOT_RESTRICTED_TO",
+    "is_functional": false,
+    "object": "just immediate neighbors",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "The neighborhoods NS(u) are not restricted to just immediate neighbors but can have vastly different structures depending on the sampling strategyS.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "Breadth-first Sampling",
+    "subject_alias": "BFS",
+    "subject_type": "ALGORITHM",
+    "relation": "RESTRICTS_NEIGHBORHOOD_TO",
+    "is_functional": false,
+    "object": "nodes which are immediate neighbors of the source",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "The neighborhoodNS is re- stricted to nodes which are immediate neighbors of the source.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Depth-first Sampling",
+    "subject_alias": "DFS",
+    "subject_type": "ALGORITHM",
+    "relation": "SAMPLES",
+    "is_functional": false,
+    "object": "nodes sequentially sampled at increasing distances from the source node",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "The neighborhood consists of nodes sequentially sampled at increasing distances from the source node.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Homophily hypothesis",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "IMPLIES",
+    "is_functional": false,
+    "object": "nodes that are highly interconnected and belong to similar network clusters or communities should be embedded closely together",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Under the homophily hypothesis [7, 36] nodes that are highly interconnected and belong to similar network clusters or communities should be embedded closely together ( e.g., nodes s1 and u in Figure 1 belong to the same network commu- nity).",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "Structural equivalence hypothesis",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "IMPLIES",
+    "is_functional": false,
+    "object": "nodes that have similar structural roles in networks should be embedded closely together",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "In contrast, under the structural equivalence hypothesis [10] nodes that have similar structural roles in networks should be em- bedded closely together ( e.g., nodes u and s6 in Figure 1 act as hubs of their corresponding communities).",
+    "extraction_confidence": 0.95
+  }
+]
