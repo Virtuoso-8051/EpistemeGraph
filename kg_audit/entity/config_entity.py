@@ -4,7 +4,7 @@ from datetime import datetime
 class KGAuditPipelineConfig:
     def __init__(self, timestamp=datetime.now()):
         timestamp_str = timestamp.strftime("%m_%d_%Y_%H_%M_%S")
-        self.pipeline_name: str = "KGAudit_Research_Pipeline"
+        self.pipeline_name: str = "EpistemeGraph_Research_Pipeline"
         self.artifact_dir: str = os.path.join("Artifacts", timestamp_str)
         self.model_dir: str = os.path.join("final_model")
         self.timestamp: str = timestamp_str
@@ -42,7 +42,29 @@ class TruthEvaluatorConfig:
         self.evaluation_report_file_path: str = os.path.join(
             self.evaluator_dir, "accuracy_report.json"
         )
+        self.trained_model_path: str = os.path.join(
+            pipeline_config.model_dir, "model.pkl"
+        )
+        self.embedding_model_name: str = "all-MiniLM-L6-v2"
         self.entailment_weight: float = 0.4
         self.triple_match_weight: float = 0.4
         self.topological_weight: float = 0.2
         self.accuracy_pass_threshold: float = 0.75
+        self.abstention_threshold: float = 0.55
+
+class ModelTrainerConfig:
+    def __init__(self, pipeline_config: KGAuditPipelineConfig):
+        self.model_trainer_dir: str = os.path.join(
+            pipeline_config.artifact_dir, "model_trainer"
+        )
+        self.trained_model_file_path: str = os.path.join(
+            self.model_trainer_dir, "model.pkl"
+        )
+        self.final_model_file_path: str = os.path.join(
+            pipeline_config.model_dir, "model.pkl"
+        )
+        self.metrics_report_file_path: str = os.path.join(
+            self.model_trainer_dir, "calibration_metrics.json"
+        )
+        self.expected_roc_auc: float = 0.75
+        self.max_brier_score: float = 0.20

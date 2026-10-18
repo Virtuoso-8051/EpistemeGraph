@@ -21,6 +21,22 @@ class TruthEvaluatorArtifact:
     semantic_entailment_score: float
     triple_match_score: float
     topological_similarity_score: float
+    bayesian_source_trust: float
+    temporal_freshness: float
+    source_independence: float
+    conflict_ratio: float
+    feature_vector: List[float]
     final_accuracy_score: float
+    decision_status: str  # "VERIFIED", "ABSTAIN", or "HALLUCINATED"
     is_hallucinated: bool
     evaluation_report_path: str
+
+@dataclass
+class ModelTrainerArtifact:
+    best_model_name: str
+    trained_model_file_path: str
+    roc_auc_score: float
+    f1_score: float
+    brier_score: float
+    expected_calibration_error: float
+    is_model_accepted: bool
