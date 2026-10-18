@@ -6,7 +6,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dual_View_UI-FF4B4B.svg)](https://streamlit.io/)
 [![MLflow](https://img.shields.io/badge/MLflow-SQLite_Tracking-0194E2.svg)](https://mlflow.org/)
 
-**Lead Researcher & Principal MLOps Architect:** Anurag Raj ([`@Virtuoso-8051`](https://github.com/Virtuoso-8051))  
+<!-- **Lead Researcher & Principal MLOps Architect:** Anurag Raj ([`@Virtuoso-8051`](https://github.com/Virtuoso-8051))   -->
 **Core Stack:** Python 3.12 | Neo4j AuraDB Cloud | OpenAI (`gpt-5.4-mini` / `gpt-4o`) | FastAPI & Uvicorn | Streamlit & PyVis | Scikit-Learn & PyTorch (`SentenceTransformers`) | MLflow (`mlflow.db`)
 
 ---
@@ -290,8 +290,8 @@ uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 Developed by **Anurag Raj** ([`@Virtuoso-8051`](https://github.com/Virtuoso-8051)). If referencing this architecture or the **Curvature-Aware Sheaf Spectral Energy (CASSE)** verification framework in academic work, please cite:
 
 ```bibtex
-@software{raj2026epistemegraph,
-  author       = {Raj, Anurag},
+@software{epistemegraph,
+  author       = {Anurag},
   title        = {EpistemeGraph: A Non-Euclidean Sheaf-Spectral and Calibrated MLOps Architecture for LLM Hallucination Detection over Cloud Knowledge Graphs},
   year         = {2026},
   url          = {[https://github.com/Virtuoso-8051/EpistemeGraph](https://github.com/Virtuoso-8051/EpistemeGraph)}
