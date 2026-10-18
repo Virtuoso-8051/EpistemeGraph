@@ -1,0 +1,34 @@
+{
+    "winning_model": "RandomForest",
+    "is_promoted_to_production": true,
+    "leaderboard": {
+        "LogisticRegression": {
+            "roc_auc": 0.93691389599318,
+            "f1_score": 0.9496402877697842,
+            "brier_score": 0.05830618209173733,
+            "ece": 0.026799091396259033,
+            "composite_score": 0.8518086225051836
+        },
+        "RandomForest": {
+            "roc_auc": 0.9690252912759307,
+            "f1_score": 0.9496402877697842,
+            "brier_score": 0.052024335724338754,
+            "ece": 0.027891085675298126,
+            "composite_score": 0.8891098698762939
+        },
+        "GradientBoosting": {
+            "roc_auc": 0.9589371980676329,
+            "f1_score": 0.9496402877697842,
+            "brier_score": 0.05443340261993069,
+            "ece": 0.05360095659022478,
+            "composite_score": 0.8509028388574774
+        },
+        "AdaBoost": {
+            "roc_auc": 0.9538221085535663,
+            "f1_score": 0.9496402877697842,
+            "brier_score": 0.054159867138970155,
+            "ece": 0.023023078059694897,
+            "composite_score": 0.8766391633549012
+        }
+    }
+}
