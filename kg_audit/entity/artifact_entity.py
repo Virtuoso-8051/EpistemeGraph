@@ -2,9 +2,26 @@ from dataclasses import dataclass
 from typing import List, Dict, Any
 
 @dataclass
+class KGBuilderArtifact:
+    total_chunks_processed: int
+    raw_triplets_extracted: int
+    verified_triplets_pushed: int
+    resolved_entity_count: int
+    provenance_grounding_score: float
+    semantic_coverage_score: float
+    topological_coherence_score: float
+    internal_consistency_score: float
+    overall_kg_accuracy_score: float
+    kg_fidelity_state_path: str
+    extracted_kg_file_path: str
+    neo4j_cloud_pushed: bool
+
+@dataclass
 class LLMInterceptorArtifact:
     user_query: str
     llm_response: str
+    llm_self_reported_accuracy: float
+    llm_confidence_reasoning: str
     source_documents: List[str]
     captured_payload_path: str
 
@@ -25,9 +42,12 @@ class TruthEvaluatorArtifact:
     temporal_freshness: float
     source_independence: float
     conflict_ratio: float
+    llm_self_reported_accuracy: float
+    query_belief_score: float
+    phase1_kg_fidelity_score: float
     feature_vector: List[float]
     final_accuracy_score: float
-    decision_status: str  # "VERIFIED", "ABSTAIN", or "HALLUCINATED"
+    decision_status: str
     is_hallucinated: bool
     evaluation_report_path: str
 

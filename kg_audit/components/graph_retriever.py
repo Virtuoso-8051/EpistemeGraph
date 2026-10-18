@@ -73,20 +73,47 @@ class GraphRetriever:
 
     def _fallback_match(self, entities: List[str]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
         try:
+            lower_ents = [str(e).strip().lower() for e in entities if str(e).strip()]
             cypher_fallback = """
-            MATCH (u)-[r]-(v)
-            WHERE u.name IN $entities OR v.name IN $entities
+            MATCH (u:Entity)-[r:RELATED_TO]-(v:Entity)
+            WHERE any(term IN $lower_ents WHERE toLower(u.name) CONTAINS term OR term CONTAINS toLower(u.name))
+               OR any(term IN $lower_ents WHERE toLower(v.name) CONTAINS term OR term CONTAINS toLower(v.name))
             RETURN 
-                collect(DISTINCT {id: id(u), name: coalesce(u.name, toString(id(u))), labels: labels(u)}) +
-                collect(DISTINCT {id: id(v), name: coalesce(v.name, toString(id(v))), labels: labels(v)}) AS nodes,
-                collect(DISTINCT {source: id(startNode(r)), target: id(endNode(r)), type: type(r), weight: coalesce(r.weight, 1.0)}) AS edges
+                collect(DISTINCT {id: elementId(u), name: u.name, labels: labels(u)}) +
+                collect(DISTINCT {id: elementId(v), name: v.name, labels: labels(v)}) AS nodes,
+                collect(DISTINCT {
+                    source: elementId(startNode(r)),
+                    target: elementId(endNode(r)),
+                    type: coalesce(r.type, type(r)),
+                    weight: coalesce(r.weight, 1.0)
+                }) AS edges
             """
-            with self.driver.session() as session:
-                result = session.run(cypher_fallback, entities=entities)
+            with self.driver.session(database=self.config.neo4j_database) as session:
+                result = session.run(cypher_fallback, lower_ents=lower_ents)
                 record = result.single()
-                if record:
+                if record and record["nodes"]:
                     unique_nodes = {n["id"]: n for n in record["nodes"]}.values()
                     unique_edges = {f"{e['source']}_{e['target']}_{e['type']}": e for e in record["edges"]}.values()
+                    return list(unique_nodes), list(unique_edges)
+
+                # If specific entity match is empty, pull the top 25 edges of the KG for structural grounding
+                broad_query = """
+                MATCH (u:Entity)-[r:RELATED_TO]->(v:Entity)
+                LIMIT 25
+                RETURN 
+                    collect(DISTINCT {id: elementId(u), name: u.name, labels: labels(u)}) +
+                    collect(DISTINCT {id: elementId(v), name: v.name, labels: labels(v)}) AS nodes,
+                    collect(DISTINCT {
+                        source: elementId(startNode(r)),
+                        target: elementId(endNode(r)),
+                        type: coalesce(r.type, type(r)),
+                        weight: coalesce(r.weight, 1.0)
+                    }) AS edges
+                """
+                res_broad = session.run(broad_query).single()
+                if res_broad:
+                    unique_nodes = {n["id"]: n for n in res_broad["nodes"]}.values()
+                    unique_edges = {f"{e['source']}_{e['target']}_{e['type']}": e for e in res_broad["edges"]}.values()
                     return list(unique_nodes), list(unique_edges)
                 return [], []
         except Exception as e:

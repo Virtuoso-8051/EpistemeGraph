@@ -326,15 +326,14 @@ class TruthEvaluator:
                 llm_conf
             ]
 
-            # If a trained & calibrated ML model exists in final_model/model.pkl, use it!
+            # Step A: Compute Query-Level Belief Score (S_Query) using learned model.pkl
             if os.path.exists(self.config.trained_model_path):
                 logging.info(f"Loading calibrated belief model from {self.config.trained_model_path}")
                 with open(self.config.trained_model_path, "rb") as f:
                     calibrated_model = pickle.load(f)
                 X_arr = np.array([feature_vector], dtype=np.float64)
-                final_accuracy_score = float(calibrated_model.predict_proba(X_arr)[0, 1])
+                query_belief_score = float(calibrated_model.predict_proba(X_arr)[0, 1])
             else:
-                # Analytical CASSE exponential baseline before model training
                 exponent = (
                     (self.config.entailment_weight * e_sheaf)
                     + (self.config.triple_match_weight * delta_k)
@@ -342,7 +341,18 @@ class TruthEvaluator:
                     + (0.5 * conflict_ratio)
                 )
                 trust_multiplier = 0.5 * (bayesian_trust + freshness * independence)
-                final_accuracy_score = float(np.clip(trust_multiplier * np.exp(-exponent), 0.0, 1.0))
+                query_belief_score = float(np.clip(trust_multiplier * np.exp(-exponent), 0.0, 1.0))
+
+            # Step B: Load Phase 1 Knowledge Graph Fidelity Score (S_KG)
+            if os.path.exists(self.config.kg_fidelity_state_path):
+                with open(self.config.kg_fidelity_state_path, "r") as f:
+                    kg_state = json.load(f)
+                s_kg = float(kg_state.get("overall_kg_accuracy_score", 1.0))
+            else:
+                s_kg = 1.0
+
+            # Step C: Final Compound Trust Score = S_Query * S_KG
+            final_accuracy_score = float(np.clip(query_belief_score * s_kg, 0.0, 1.0))
 
             # Three-way decision rule: VERIFIED vs. ABSTAIN vs. HALLUCINATED
             if final_accuracy_score >= self.config.accuracy_pass_threshold:
@@ -365,7 +375,9 @@ class TruthEvaluator:
                     "source_independence": independence,
                     "conflict_ratio": conflict_ratio,
                     "llm_extraction_confidence": llm_conf,
-                    "final_accuracy_score": final_accuracy_score
+                    "query_belief_score_S_Query": query_belief_score,
+                    "phase1_kg_fidelity_score_S_KG": s_kg,
+                    "final_compound_accuracy_score": final_accuracy_score
                 },
                 "feature_vector_X": feature_vector,
                 "verdict": {
@@ -382,9 +394,10 @@ class TruthEvaluator:
                 json.dump(report, f, indent=4)
 
             logging.info(
-                f"Evaluation complete. Score: {final_accuracy_score:.4f} | Status: {decision_status}"
+                f"Evaluation complete | S_Query: {query_belief_score:.4f} | "
+                f"S_KG: {s_kg:.4f} | Final Compound Score: {final_accuracy_score:.4f} ({decision_status})"
             )
-
+            
             return TruthEvaluatorArtifact(
                 semantic_entailment_score=e_sheaf,
                 triple_match_score=delta_k,
@@ -393,6 +406,9 @@ class TruthEvaluator:
                 temporal_freshness=freshness,
                 source_independence=independence,
                 conflict_ratio=conflict_ratio,
+                llm_self_reported_accuracy=llm_conf,
+                query_belief_score=query_belief_score,
+                phase1_kg_fidelity_score=s_kg,
                 feature_vector=feature_vector,
                 final_accuracy_score=final_accuracy_score,
                 decision_status=decision_status,
