@@ -89,19 +89,23 @@ Large Language Models (LLMs) frequently generate fluent, high-confidence asserti
 
 ### 3.1 Phase 1: Unsupervised 4-Pillar Knowledge Graph Fidelity ($S_{\text{KG}}$)
 
-Before using a Knowledge Graph to audit an LLM, `kg_builder.py` quantifies the structural and semantic fidelity of the extracted graph $\mathcal{G} = (V, E)$ against the raw source chunks $\{c_1, c_2, \dots, c_m\}$ without requiring manual ground-truth labels:
+Before using a Knowledge Graph to audit an LLM, `kg_builder.py` quantifies the structural and semantic fidelity of the extracted graph $G = (V, E)$ against the raw source chunks $\{c_1, c_2, \dots, c_m\}$ without requiring manual ground-truth labels:
 
-1. **Provenance Grounding Precision ($\Phi_{\text{prov}}$):** Evaluates whether the verbatim supporting quote $q_i$ for each extracted triplet $e_i = (u_i, r_i, v_i)$ physically exists in chunk $c_i$ ($\mathbb{I}_{\text{quote}} \in [0, 1]$) weighted by the dense cosine similarity between the triplet embedding and quote embedding:
-   $$\Phi_{\text{prov}} = \frac{1}{\vert{}E_{\text{raw}}\vert{}} \sum_{i=1}^{\vert{}E_{\text{raw}}\vert{}} \mathbb{I}_{\text{quote}}(q_i, c_i) \cdot \max\left(0, \cos\left(\mathbf{e}_{(u_i, r_i, v_i)}, \mathbf{e}_{q_i}\right)\right)$$
+1. **Provenance Grounding Precision ($\Phi_{\text{prov}}$):** Evaluates whether the verbatim supporting quote $q_i$ for each extracted triplet $e_i = (u_i, r_i, v_i)$ physically exists in chunk $c_i$ (indicator $I_{\text{quote}} \in [0, 1]$), weighted by the dense cosine similarity between the triplet embedding and quote embedding:
 
-2. **Information-Theoretic Chunk Coverage Recall ($\Phi_{\text{cov}}$):** Measures how thoroughly the extracted triplets capture the semantic content of each chunk $c_j$, weighted by logarithmic chunk length $w_j = \log(1 + \vert{}c_j\vert{})$:
-   $$\Phi_{\text{cov}} = \frac{\sum_{j=1}^{m} w_j \cdot \max\left(0, \cos\left(\mathbf{e}_{c_j}, \mathbf{e}_{\mathcal{G}(c_j)}\right)\right)}{\sum_{j=1}^{m} w_j}$$
+$$\Phi_{\text{prov}} = \frac{1}{|E_{\text{raw}}|} \sum_{i=1}^{|E_{\text{raw}}|} I_{\text{quote}}(q_i, c_i) \cdot \max\left(0, \cos\left(\mathbf{e}_{(u_i, r_i, v_i)}, \mathbf{e}_{q_i}\right)\right)$$
+
+2. **Information-Theoretic Chunk Coverage Recall ($\Phi_{\text{cov}}$):** Measures how thoroughly the extracted triplets capture the semantic content of each chunk $c_j$, weighted by logarithmic chunk length $w_j = \log(1 + |c_j|)$:
+
+$$\Phi_{\text{cov}} = \frac{\sum_{j=1}^{m} w_j \cdot \max\left(0, \cos\left(\mathbf{e}_{c_j}, \mathbf{e}_{G(c_j)}\right)\right)}{\sum_{j=1}^{m} w_j}$$
 
 3. **Entity-Resolved Topological Coherence ($\Phi_{\text{topo}}$):** After merging cross-document synonyms and acronyms (e.g., matching initials of `"LINE"` to `"Large-scale Information Network Embedding"` and `"BFS"` to `"breadth-first search"`), measures the fraction of entities residing in the Largest Connected Component ($V_{\text{LCC}}$) penalized by self-loops:
-   $$\Phi_{\text{topo}} = \left(0.5 + 0.5 \frac{\vert{}V_{\text{LCC}}\vert{}}{\vert{}V\vert{}}\right) \cdot \left(1 - \frac{\vert{}E_{\text{self-loop}}\vert{}}{\vert{}E\vert{}}\right)$$
+
+$$\Phi_{\text{topo}} = \left(0.5 + 0.5 \frac{|V_{\text{LCC}}|}{|V|}\right) \cdot \left(1 - \frac{|E_{\text{self-loop}}|}{|E|}\right)$$
 
 4. **Intra-Document Functional Consistency ($\Phi_{\text{cons}}$):** Penalizes unresolved contradictions across single-valued functional relations ($E_{\text{conflict}}$):
-   $$\Phi_{\text{cons}} = 1 - \frac{\vert{}E_{\text{conflict}}\vert{}}{\vert{}E\vert{}}$$
+
+$$\Phi_{\text{cons}} = 1 - \frac{|E_{\text{conflict}}|}{|E|}$$
 
 The unified **Phase 1 KG Fidelity Score ($S_{\text{KG}} \in [0, 1]$)** combines Precision and Recall via their harmonic mean, regularized by topology and consistency:
 
@@ -111,22 +115,34 @@ $$S_{\text{KG}} = \left( \frac{2 \cdot \Phi_{\text{prov}} \cdot \Phi_{\text{cov}
 
 ### 3.2 Phase 3: Curvature-Aware Sheaf Spectral Energy (CASSE) & 8D Feature Vector ($\mathbf{X}$)
 
-Given the canonical entity alignment between the active Neo4j ground-truth subgraph $\mathcal{G}_{\text{GT}}$ and the LLM's induced response graph $\mathcal{G}_{\text{resp}}$, `truth_evaluator.py` extracts an 8-dimensional feature vector $\mathbf{X}$:
+Given the canonical entity alignment between the active Neo4j ground-truth subgraph $G_{\text{GT}}$ and the LLM's induced response graph $G_{\text{resp}}$, `truth_evaluator.py` extracts an 8-dimensional feature vector $\mathbf{X}$:
 
-$$\mathbf{X} = \begin{bmatrix} \mathcal{E}_{\text{sheaf}}, & \Delta \mathbf{K}, & D_{\text{spec}}, & T_{\text{source}}, & F(\Delta t), & I_{\text{indep}}, & C_{\text{conflict}}, & P_{\text{LLM}} \end{bmatrix}^T$$
+$$\mathbf{X} = \begin{bmatrix} E_{\text{sheaf}}, & \Delta K, & D_{\text{spec}}, & T_{\text{source}}, & F(\Delta t), & I_{\text{indep}}, & C_{\text{conflict}}, & P_{\text{LLM}} \end{bmatrix}^T$$
 
-1. **Cellular Sheaf Coboundary Residual ($\mathcal{E}_{\text{sheaf}}$):** Assigns 384-dimensional dense semantic embeddings (`all-MiniLM-L6-v2`) to vertex stalks $\mathcal{F}(u)$ and evaluates restriction map residuals over response edges $e = (u, v) \in E_{\text{resp}}$:
-   $$\mathcal{E}_{\text{sheaf}}(\mathcal{G}_{\text{resp}} \mid \mathcal{G}_{\text{GT}}) = \frac{1}{\vert{}E_{\text{resp}}\vert{}} \sum_{(u,v) \in E_{\text{resp}}} \Vert{}\mathbf{\mathcal{F}}_{u \to e}(x_u) - \mathbf{\mathcal{F}}_{v \to e}(x_v)\Vert{}_2^2$$
-2. **Bounded Forman-Ricci Curvature Distortion ($\Delta \mathbf{K}$):** Computes discrete edge curvature on the active subgraph to detect hallucinated shortcut edges ("topological holes"):
-   $$\text{Ric}(e) = w_e \left( \frac{w_u}{w_e} + \frac{w_v}{w_e} - \sum_{e_u \sim e} \frac{w_u}{\sqrt{w_e w_{e_u}}} - \sum_{e_v \sim e} \frac{w_v}{\sqrt{w_e w_{e_v}}} \right)$$
-   Unverified shortcut edges receive a bounded sigmoid manifold distortion penalty $\sigma(-\text{Ric}(e))$.
+1. **Cellular Sheaf Coboundary Residual ($E_{\text{sheaf}}$):** Assigns 384-dimensional dense semantic embeddings (`all-MiniLM-L6-v2`) to vertex stalks $\mathcal{F}(u)$ and evaluates restriction map residuals over response edges $e = (u, v) \in E_{\text{resp}}$:
+
+$$E_{\text{sheaf}}\left(G_{\text{resp}} \mid G_{\text{GT}}\right) = \frac{1}{|E_{\text{resp}}|} \sum_{(u,v) \in E_{\text{resp}}} \left\| \mathcal{F}_{u \to e}(x_u) - \mathcal{F}_{v \to e}(x_v) \right\|_2^2$$
+
+2. **Bounded Forman-Ricci Curvature Distortion ($\Delta K$):** Computes discrete edge curvature on the active subgraph to detect hallucinated shortcut edges ("topological holes"):
+
+$$\text{Ric}(e) = w_e \left( \frac{w_u}{w_e} + \frac{w_v}{w_e} - \sum_{e_u \sim e} \frac{w_u}{\sqrt{w_e w_{e_u}}} - \sum_{e_v \sim e} \frac{w_v}{\sqrt{w_e w_{e_v}}} \right)$$
+
+Unverified shortcut edges receive a bounded sigmoid manifold distortion penalty $\sigma(-\text{Ric}(e))$.
+
 3. **Induced Spectral Laplacian Divergence ($D_{\text{spec}}$):** Computes the 1D Wasserstein Earth Mover's Distance ($W_1$) and normalized Frobenius norm between the eigenvalue spectra of the Symmetric Normalized Graph Laplacians $\mathbf{L}_{\text{norm}} = \mathbf{I} - \mathbf{D}^{-1/2}\mathbf{W}\mathbf{D}^{-1/2}$ over the active response entity set:
-   $$D_{\text{spec}} = 0.4 \cdot W_1(\boldsymbol{\lambda}_{\text{GT}}, \boldsymbol{\lambda}_{\text{resp}}) + 0.25 \cdot \frac{\Vert{}\mathbf{L}_{\text{norm}}(\mathcal{G}_{\text{GT}}) - \mathbf{L}_{\text{norm}}(\mathcal{G}_{\text{resp}})\Vert{}_F}{\vert{}V_{\text{active}}\vert{}}$$
+
+$$D_{\text{spec}} = 0.4 \cdot W_1\left(\boldsymbol{\lambda}_{\text{GT}}, \boldsymbol{\lambda}_{\text{resp}}\right) + 0.25 \cdot \frac{\left\| \mathbf{L}_{\text{norm}}(G_{\text{GT}}) - \mathbf{L}_{\text{norm}}(G_{\text{resp}}) \right\|_F}{|V_{\text{active}}|}$$
+
 4. **Bayesian Source Trust ($T_{\text{source}}$):** Posterior mean under a $\text{Beta}(1, 1)$ prior over historical source verification outcomes:
-   $$E[\text{Beta}(\alpha, \beta)] = \frac{1 + S_{\text{correct}}}{2 + S_{\text{correct}} + S_{\text{incorrect}}}$$
-5. **Temporal Freshness Decay ($F(\Delta t)$):** Exponential time decay $F(\Delta t) = e^{-\lambda \Delta t}$ parameterized by document age $\Delta t$ and relation volatility $\lambda$.
+
+$$\mathbb{E}[\text{Beta}(\alpha, \beta)] = \frac{1 + S_{\text{correct}}}{2 + S_{\text{correct}} + S_{\text{incorrect}}}$$
+
+5. **Temporal Freshness Decay ($F(\Delta t)$):** Exponential time decay parameterized by document age $\Delta t$ and relation volatility $\lambda$:
+
+$$F(\Delta t) = e^{-\lambda \Delta t}$$
+
 6. **Source Independence ($I_{\text{indep}}$):** Effective independent document cluster ratio.
-7. **Active Conflict Ratio ($C_{\text{conflict}}$):** Fraction of asserted response edges that are topologically disconnected and semantically ungrounded ($<\tau_{\text{sim}}$) relative to $\mathcal{G}_{\text{GT}}$.
+7. **Active Conflict Ratio ($C_{\text{conflict}}$):** Fraction of asserted response edges that are topologically disconnected and semantically ungrounded ($<\tau_{\text{sim}}$) relative to $G_{\text{GT}}$.
 8. **LLM Self-Reported Confidence ($P_{\text{LLM}}$):** The raw self-estimated accuracy probability returned by the language model during Phase 2 interception.
 
 ---
