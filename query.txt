@@ -1,0 +1,100 @@
+1. What is the full title and primary objective of the LINE paper published in 2015?
+2. How does LINE define first-order proximity in information networks?
+3. How does LINE define second-order proximity for directed and undirected edges?
+4. What optimization technique does LINE use to handle the large number of edges in large-scale networks?
+5. What is the core mechanism introduced in DeepWalk for learning social representations?
+6. How does DeepWalk utilize truncated random walks to capture network structure?
+7. What is the role of the Skip-gram model in DeepWalk and LINE?
+8. What flexible neighborhood sampling strategy does node2vec introduce compared to DeepWalk?
+9. What are the two parameters p and q used in node2vec to guide the random walk?
+10. What does the return parameter p control in node2vec's biased random walk?
+11. What does the in-out parameter q control in node2vec's biased random walk?
+12. What are the four operators defined in node2vec for multi-label classification using edge features?
+13. What datasets are used for multi-label classification evaluation in the DeepWalk paper?
+14. What datasets are used for evaluation in the LINE paper, such as Wikipedia, Flickr, and YouTube?
+15. What objective function does LINE optimize for second-order proximity using KL-divergence?
+16. How does LINE's formulation of second-order proximity relate to context-target relationships in word embedding models?
+17. In node2vec, how do the parameters p and q interpolate between breadth-first search and depth-first search behavior?
+18. Why does DeepWalk argue that the frequency of vertex occurrences in short random walks follows a power-law distribution similar to natural language?
+19. How does LINE scale to very large networks with millions of vertices and edges using negative sampling?
+20. In node2vec, how are edge features constructed from individual node embeddings using operators like Hadamard and L2?
+21. What is the connection between DeepWalk's truncated random walks and hierarchical softmax optimization?
+22. How do LINE's first-order and second-order proximity objectives differ in terms of preserving local versus global network structures?
+23. Why does node2vec claim that traditional search strategies like pure BFS or DFS alone are insufficient for rich feature learning?
+24. How does DeepWalk bridge the gap between language modeling and network analysis through graph representations?
+25. In node2vec, how does varying the return parameter p affect the likelihood of immediately revisiting nodes in a random walk?
+26. How does LINE compute the joint probability distribution between vertices in second-order proximity?
+27. What structural equivalence properties does node2vec capture when emphasizing depth-first sampling over breadth-first sampling?
+28. How does DeepWalk handle scale-free networks where vertex degrees span several orders of magnitude?
+29. In LINE, how does the edge weight influence the probability distribution and loss function during optimization?
+30. How do the multi-label classification results across BlogCatalog, PPI, and Wikipedia compare between DeepWalk and node2vec?
+31. What are the exact quantum computing parameters used to accelerate LINE's negative sampling phase?
+32. Which specific cloud provider infrastructure (e.g., AWS vs Azure) was used to host the Neo4j database during the original 2015 LINE experiments?
+33. What is the exact GPU memory consumption measured in gigabytes for training node2vec on the YouTube dataset?
+34. How many convolutional layers were used in DeepWalk's internal image recognition pipeline?
+35. What is the exact timestamp and GPS coordinate where the LINE authors conducted their physical field tests?
+36. Which commercial cryptocurrency token was integrated into the node2vec optimization objective for decentralized node weighting?
+37. What specific programming language compiler flags were enabled during the execution of LINE's C++ codebase?
+38. How does DeepWalk handle real-time streaming updates when new nodes are dynamically inserted into a static graph?
+39. What exact hyperparameters were used for the transformer self-attention blocks in node2vec?
+40. What is the precise monetary cost incurred during the training of LINE across the YouTube network?
+41. Which specific biometric facial recognition dataset was evaluated alongside PPI and BlogCatalog in node2vec?
+42. How does LINE handle encrypted edge weights stored in zero-knowledge blockchain ledgers?
+43. What exact acoustic frequency was used during the audio-based graph representation experiments in DeepWalk?
+44. Which specific database indexing patent did the node2vec authors file with the United States Patent Office?
+45. What exact chemical compound molecular graph dataset was used to benchmark LINE's bioinformatics performance?
+46. Why did LINE rely entirely on deep convolutional neural networks rather than stochastic gradient descent?
+47. How did DeepWalk implement quantum entanglement to perform simultaneous random walks across all graph nodes?
+48. In node2vec, why is the return parameter p measured in kilograms instead of dimensionless units?
+49. How did LINE utilize transformer-based multi-head self-attention mechanisms in its 2015 implementation?
+50. Why does DeepWalk require supervised class labels during its unsupervised random walk generation phase?
+51. How does node2vec use convolutional layers to extract pixel-level features from social network graphs?
+52. Why does LINE's second-order proximity objective function rely on a Gaussian mixture model instead of KL-divergence?
+53. How did DeepWalk achieve linear time complexity by eliminating random walks entirely in favor of matrix inversion?
+54. Why does node2vec store all graph structures inside relational SQL tables rather than adjacency lists?
+55. How does LINE use reinforcement learning agents to autonomously discover network topologies?
+56. Did Bryan Perozzi author the LINE paper, and did Jian Tang author DeepWalk?
+57. Is node2vec an extension of LINE, or is LINE an extension of node2vec developed by Grover and Leskovec?
+58. Did the DeepWalk paper introduce the parameters p and q for biased random walks?
+59. Was LINE published in 2014 by Perozzi, Al-Rfou, and Skiena?
+60. Did node2vec utilize hierarchical softmax exclusively without ever using Skip-gram with negative sampling?
+61. Is the BlogCatalog dataset associated with the LINE paper rather than DeepWalk and node2vec?
+62. Did Jian Tang introduce truncated random walks as the core contribution of LINE?
+63. Are Jaccard's Coefficient and Adamic-Adar scores introduced in the DeepWalk paper as core features?
+64. Did Grover and Leskovec propose first-order and second-order proximity definitions in node2vec?
+65. Is the PPI dataset evaluated in the LINE paper instead of node2vec and DeepWalk?
+66. What is the exact dimension size d typically used for embedding vectors across DeepWalk, LINE, and node2vec?
+67. What was the exact number of vertices in the YouTube network dataset reported in DeepWalk and LINE?
+68. What percentage of labeled nodes was tested across the multi-label classification experiments in DeepWalk?
+69. What was the exact sliding window size w specified in DeepWalk's Algorithm 1?
+70. How many walks per vertex and what walk length were standardly configured in DeepWalk?
+71. What was the total number of edges in the BlogCatalog network dataset?
+72. What improvement margin does node2vec claim over traditional spectral clustering and DeepWalk across Micro-F1 and Macro-F1 scores?
+73. What is the number of negative samples typically drawn per positive edge during LINE's negative sampling optimization?
+74. What is the maximum number of iterations or epochs used during LINE's edge-sampling stochastic gradient descent?
+75. What scale-up factor in running time does node2vec achieve across large networks compared to baseline methods?
+76. How do LINE and DeepWalk fundamentally differ in their approach to preserving local network neighborhood structures?
+77. Why do node2vec and DeepWalk argue that random walks are superior to direct matrix factorization methods used in LINE?
+78. How do LINE's first-order proximity and node2vec's structural equivalence capture different aspects of network topology?
+79. Why do DeepWalk and LINE differ in their handling of sparse versus dense edge distributions in social versus information networks?
+80. How do the sampling efficiency and convergence properties of LINE's edge sampling compare with DeepWalk's vertex random walks?
+81. Why does node2vec criticize existing methods like DeepWalk and LINE for their rigid neighborhood exploration strategies?
+82. How do LINE and node2vec diverge in their definitions of network proximity and feature learning objectives?
+83. Why do LINE and DeepWalk choose different optimization algorithms (alias sampling vs hierarchical softmax / negative sampling)?
+84. How do the empirical results on multi-label classification show trade-offs between LINE, DeepWalk, and node2vec?
+85. In what ways do DeepWalk and node2vec's reliance on word embedding models differ from LINE's direct probability distribution matching?
+86. Does LINE incorporate self-supervised contrastive learning objectives to refine entity representations?
+87. Can node2vec be adapted for dynamic graph streaming by updating edge weights via exponential moving averages?
+88. Does DeepWalk utilize hierarchical community detection preprocessing to speed up random walk generation?
+89. Can LINE's second-order proximity be interpreted as a special case of graph neural network message passing?
+90. Does node2vec automatically tune parameters p and q using gradient-based meta-learning?
+91. Can DeepWalk embeddings be seamlessly transferred across entirely unrelated social networks without retraining?
+92. Does LINE include an automatic mechanism to prune noisy or adversarial edges from citation graphs?
+93. Can node2vec handle attributed graphs where nodes contain rich textual descriptions alongside structural links?
+94. Does DeepWalk's parameter configuration generalize effectively to multi-relational heterogeneous information networks?
+95. Can LINE's edge-sampling algorithm be parallelized efficiently across distributed GPU clusters using parameter servers?
+96. Does reference [16] in the LINE paper correspond to Perozzi et al.'s DeepWalk paper?
+97. Does the node2vec paper cite LINE (Tang et al., 2015) when discussing scalable network embedding baselines?
+98. Does the DeepWalk paper cite word2vec and Mikolov et al. when establishing the analogy between random walks and natural language sentences?
+99. Do the citations in node2vec correctly attribute prior spectral clustering and matrix factorization techniques?
+100. Does the LINE paper cite second-order proximity foundations from multidimensional scaling and stochastic neighbor embedding literature?
