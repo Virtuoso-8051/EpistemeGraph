@@ -1,5 +1,6 @@
-from dataclasses import dataclass
-from typing import List, Dict, Any
+from dataclasses import dataclass, field
+from typing import List, Dict, Any, Optional
+
 
 @dataclass
 class KGBuilderArtifact:
@@ -16,6 +17,7 @@ class KGBuilderArtifact:
     extracted_kg_file_path: str
     neo4j_cloud_pushed: bool
 
+
 @dataclass
 class LLMInterceptorArtifact:
     user_query: str
@@ -25,6 +27,7 @@ class LLMInterceptorArtifact:
     source_documents: List[str]
     captured_payload_path: str
 
+
 @dataclass
 class GraphRetrieverArtifact:
     query_entities: List[str]
@@ -32,6 +35,7 @@ class GraphRetrieverArtifact:
     extracted_edges: List[Dict[str, Any]]
     subgraph_file_path: str
     retrieval_status: bool
+
 
 @dataclass
 class TruthEvaluatorArtifact:
@@ -50,6 +54,8 @@ class TruthEvaluatorArtifact:
     decision_status: str
     is_hallucinated: bool
     evaluation_report_path: str
+    edge_audit_details: Optional[List[Dict[str, Any]]] = field(default_factory=list)
+
 
 @dataclass
 class ModelTrainerArtifact:
@@ -60,3 +66,6 @@ class ModelTrainerArtifact:
     brier_score: float
     expected_calibration_error: float
     is_model_accepted: bool
+    learned_feature_weights: Optional[Dict[str, float]] = field(default_factory=dict)
+    optimal_pass_threshold: float = 0.72
+    optimal_abstain_threshold: float = 0.45
