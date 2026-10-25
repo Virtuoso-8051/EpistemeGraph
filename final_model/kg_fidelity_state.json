@@ -1,0 +1,61 @@
+{
+    "overall_kg_accuracy_score": 0.7942868111475047,
+    "provenance_grounding_score": 0.8692409069463213,
+    "semantic_coverage_score": 0.6980740916237033,
+    "topological_coherence_score": 0.847444089456869,
+    "internal_consistency_score": 0.9946666666666667,
+    "total_chunks_processed": 76,
+    "raw_triplets_extracted": 621,
+    "verified_triplets_pushed": 375,
+    "resolved_entity_count": 313,
+    "cross_pdf_shared_entities_count": 29,
+    "cross_pdf_shared_entities": [
+        "Large-scale Information Network Embedding",
+        "objective function",
+        "classical stochastic gradient descent",
+        "social network",
+        "Node Classification",
+        "Link Prediction",
+        "ISOMAP",
+        "embedding",
+        "matrix factorization",
+        "DEEPWALK",
+        "truncated random walk",
+        "random walk",
+        "low-dimensional space",
+        "vertex representation",
+        "asynchronous stochastic gradient algorithm",
+        "FLICKR",
+        "SKIPGRAM",
+        "one-vs-rest logistic regression classifier",
+        "depth-first search",
+        "multi-label classification",
+        "Optimization Problem",
+        "representation learning",
+        "unsupervised feature learning",
+        "mapping function",
+        "representation",
+        "CLUSTERS",
+        "hierarchical softmax",
+        "BlogCatalog",
+        "social relationship"
+    ],
+    "latest_extracted_kg_path": "Artifacts\\10_25_2026_10_40_21\\kg_builder\\extracted_knowledge_graph.json",
+    "diagnostics": {
+        "claim_acceptance_rate": 0.6038647342995169,
+        "rejected_by_reason": {
+            "entities_not_in_quote": 236,
+            "entities_not_in_anchor": 2
+        },
+        "accepted_by_evidence_match": {
+            "verbatim": 379,
+            "paraphrase_anchored": 4
+        },
+        "chunks_with_zero_claims": 0,
+        "llm_calls": 76,
+        "llm_prompt_tokens": 82170,
+        "llm_completion_tokens": 102575,
+        "prompt_version": "v4"
+    },
+    "timestamp": "2026-10-25T05:12:08.838813+00:00"
+}
