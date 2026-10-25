@@ -1,0 +1,182 @@
+{
+  "entities": [
+    {
+      "name": "Stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "back-propagation algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "learning rate",
+      "alias": "\u03b1",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "random walk generation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representation mapping",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hierarchical Softmax",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "representation",
+      "alias": "\u03a6",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "context",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "asynchronous version of stochastic gradient descent",
+      "alias": "ASGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "optimal rate of convergence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Flickr",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "predictive performance",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "streaming approach",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Stochastic gradient descent",
+      "subject_alias": "SGD",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "back-propagation algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The derivatives are estimated using the back-propagation algorithm.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Stochastic gradient descent",
+      "subject_alias": "SGD",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "learning rate",
+      "object_alias": "\u03b1",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The learning rate \u03b1 for SGD is initially set to 2.5% at the beginning of the training and then decreased linearly (a) Random walk generation.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Hierarchical Softmax",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "(c) Hierarchical Softmax.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "representation",
+      "subject_alias": "\u03a6",
+      "subject_type": "CONCEPT",
+      "relation": "UPDATED_TO",
+      "is_functional": false,
+      "object": "context",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The representation \u03a6 is updated to maximize the probability of v1 co-occurring with its context{v3,v 5}.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "asynchronous version of stochastic gradient descent",
+      "subject_alias": "ASGD",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "optimal rate of convergence",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Given that our updates are sparse and we do not acquire a lock to access the model shared parameters, ASGD will achieve an optimal rate of convergence [36].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "asynchronous version of stochastic gradient descent",
+      "subject_alias": "ASGD",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "multiple threads",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "While we run experiments on one machine using multiple threads, it has been demonstrated that this technique is highly scalable, and can be used in very large scale machine learning [8].",
+      "extraction_confidence": 0.82
+    },
+    {
+      "subject": "parallelizing DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "predictive performance",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "It also shows that there is no loss of predictive performance relative to the running DeepW alkserially (Figure 4b).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "streaming approach",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "graph",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "One interesting variant of this method is a streaming approach, which could be implemented without knowledge of the entire graph.",
+      "extraction_confidence": 0.86
+    }
+  ]
+}

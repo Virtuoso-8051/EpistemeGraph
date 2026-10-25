@@ -1,0 +1,207 @@
+{
+  "entities": [
+    {
+      "name": "GF",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE(1st)",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE(2nd)",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE(1st+2nd)",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "reconstructed network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "original network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Citation Network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "DBLP(AuthorCitation) Network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "DBLP(PaperCitation) Network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "multi-label classification task",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "AAAI",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "CIKM",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "ICML",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "KDD",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "NIPS",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SIGIR",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "WWW",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "GF",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "reconstructed network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The performance of GF, LINE(1st) and LINE(2nd) all improves, especially LINE(2nd).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE(1st)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "reconstructed network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The performance of GF, LINE(1st) and LINE(2nd) all improves, especially LINE(2nd).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "reconstructed network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The performance of GF, LINE(1st) and LINE(2nd) all improves, especially LINE(2nd).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "In the reconstructed network, the LINE(2nd) outperforms DeepWalk in most cases.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE(1st+2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "original network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We can also see that the performance of LINE(1st+2nd) on the reconstructed network does not improve too much compared with those on the original network.",
+      "extraction_confidence": 0.78
+    },
+    {
+      "subject": "GF",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Both the GF and LINE methods, which use first-order proximity, are not applicable for directed networks, and hence we only compare DeepWalk and LINE(2nd).",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Both the GF and LINE methods, which use first-order proximity, are not applicable for directed networks, and hence we only compare DeepWalk and LINE(2nd).",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "The LINE(2nd) significantly outperforms DeepWalk.",
+      "extraction_confidence": 0.99
+    }
+  ]
+}

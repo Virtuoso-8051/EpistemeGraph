@@ -1,0 +1,133 @@
+{
+    "metrics": {
+        "sheaf_laplacian_energy": 0.4195906110014334,
+        "forman_ricci_curvature_distortion": 0.4325880446486553,
+        "spectral_laplacian_divergence": 0.17611681854415617,
+        "bayesian_source_trust": 0.7329251722525421,
+        "temporal_freshness": 0.9550971839742548,
+        "source_independence": 0.5446445618923953,
+        "conflict_ratio": 0.25,
+        "llm_extraction_confidence": 0.91,
+        "analytical_s_query": 0.471417551341168,
+        "calibrated_ml_s_query": 0.8787910336080488,
+        "query_belief_score_S_Query": 0.6547356183612644,
+        "phase1_kg_fidelity_score_S_KG": 0.7942868111475047,
+        "final_compound_accuracy_score": 0.7126114138588937
+    },
+    "learned_parameters_used": {
+        "energy_weights": [
+            0.35,
+            0.25,
+            0.2,
+            0.6
+        ],
+        "prior_weights": [
+            0.45,
+            0.2,
+            0.2,
+            0.15
+        ],
+        "analytical_ml_blend_gamma": 0.45,
+        "s_query_exponent_eta": 0.8,
+        "optimal_pass_threshold": 0.72,
+        "optimal_abstain_threshold": 0.45
+    },
+    "feature_vector_X": [
+        0.4195906110014334,
+        0.4325880446486553,
+        0.17611681854415617,
+        0.7329251722525421,
+        0.9550971839742548,
+        0.5446445618923953,
+        0.25,
+        0.91
+    ],
+    "edge_audit_details": [
+        {
+            "source": "objective function",
+            "relation": "OPTIMIZES",
+            "target": "NODE2VEC",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "GEODESIC_3_HOP"
+        },
+        {
+            "source": "random walk",
+            "relation": "ENABLES",
+            "target": "NODE2VEC",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "DIRECT_NEO4J_EDGE"
+        },
+        {
+            "source": "random walk",
+            "relation": "APPROXIMATES",
+            "target": "BFS",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "GEODESIC_2_HOP"
+        },
+        {
+            "source": "random walk",
+            "relation": "APPROXIMATES",
+            "target": "depth-first search",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "GEODESIC_3_HOP"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "BASED_ON",
+            "target": "Skip-gram model",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "GEODESIC_2_HOP"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "REFUTED",
+            "target": "bootstrapping approach",
+            "claim_type": "REFUTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "VERIFIED_NEGATION"
+        },
+        {
+            "source": "bootstrapping approach",
+            "relation": "USES",
+            "target": "Causal Do-Calculus",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 0.086,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        },
+        {
+            "source": "bootstrapping approach",
+            "relation": "REQUIRES",
+            "target": "structural causal DAG",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 0.125,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        }
+    ],
+    "verdict": {
+        "decision_status": "ABSTAIN",
+        "is_hallucinated": false,
+        "pass_threshold": 0.72,
+        "abstention_threshold": 0.45
+    }
+}

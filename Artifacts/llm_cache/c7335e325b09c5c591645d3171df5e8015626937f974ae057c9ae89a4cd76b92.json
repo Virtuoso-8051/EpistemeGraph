@@ -1,0 +1,311 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Online Learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Social Representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social relations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "continuous vector space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "statistical models",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "unsupervised feature learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "deep learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sequences of words",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "truncated random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sentences",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multi-label network classification tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Flickr",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "YouTube",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "baselines",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "global view of the network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "missing information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "F1 scores",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "competing methods",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "training data",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "online learning algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "incremental results",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "real world applications",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "anomaly detection",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sparsity of a network representation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "efficient discrete algorithms",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "statistical learning",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "latent representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We present DeepWalk, a novel approach for learning latent representations of vertices in a network.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "truncated random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepWalk uses local information obtained from truncated random walks to learn latent representations by treating walks as the equivalent of sentences.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERALIZES",
+      "is_functional": false,
+      "object": "language modeling",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepWalk generalizes recent advancements in language modeling and unsupervised feature learning (or deep learning ) from sequences of words to graphs.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERALIZES",
+      "is_functional": false,
+      "object": "unsupervised feature learning",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepWalk generalizes recent advancements in language modeling and unsupervised feature learning (or deep learning ) from sequences of words to graphs.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "BlogCatalog",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We demonstrate DeepWalk\u2019s latent representations on several multi-label network classification tasks for social networks such as BlogCatalog, Flickr, and YouTube.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Flickr",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We demonstrate DeepWalk\u2019s latent representations on several multi-label network classification tasks for social networks such as BlogCatalog, Flickr, and YouTube.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "YouTube",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We demonstrate DeepWalk\u2019s latent representations on several multi-label network classification tasks for social networks such as BlogCatalog, Flickr, and YouTube.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "baselines",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our results show that DeepWalkoutperforms challenging baselines which are allowed a global view of the network, especially in the presence of missing information.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "F1 scores",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "DeepWalk\u2019s representations can provide F1 scores up to 10% higher than competing methods when labeled data is sparse.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "online learning algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "It is an online learning algorithm which builds useful incremental results, and is trivially parallelizable.",
+      "extraction_confidence": 0.99
+    }
+  ]
+}

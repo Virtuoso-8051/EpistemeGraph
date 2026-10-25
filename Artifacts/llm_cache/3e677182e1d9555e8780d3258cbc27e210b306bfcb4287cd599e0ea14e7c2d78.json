@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "name": "Neighborhood Sampling Strategy",
+      "alias": "sampling strategy",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Local Search",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Source Node",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Neighborhood Set",
+      "alias": "NS",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Breadth-first Sampling",
+      "alias": "BFS",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Depth-first Sampling",
+      "alias": "DFS",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Homophily",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Structural Equivalence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Network Community",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Structural Role",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Neighborhood Sampling Strategy",
+      "subject_alias": "sampling strategy",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Local Search",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We view the problem of sampling neighborhoods of a source node as a form of local search.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Breadth-first Sampling",
+      "subject_alias": "BFS",
+      "subject_type": "ALGORITHM",
+      "relation": "RESTRICTS",
+      "is_functional": false,
+      "object": "Neighborhood Set",
+      "object_alias": "NS",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The neighborhoodNS is restricted to nodes which are immediate neighbors of the source.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Depth-first Sampling",
+      "subject_alias": "DFS",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "Neighborhood Set",
+      "object_alias": "NS",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The neighborhood consists of nodes sequentially sampled at increasing distances from the source node.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "Breadth-first Sampling",
+      "subject_alias": "BFS",
+      "subject_type": "ALGORITHM",
+      "relation": "REPRESENTS",
+      "is_functional": false,
+      "object": "Homophily",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The breadth-first and depth-first sampling represent extreme scenarios in terms of the search space they explore leading to interesting implications on the learned representations.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "Depth-first Sampling",
+      "subject_alias": "DFS",
+      "subject_type": "ALGORITHM",
+      "relation": "REPRESENTS",
+      "is_functional": false,
+      "object": "Structural Equivalence",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The breadth-first and depth-first sampling represent extreme scenarios in terms of the search space they explore leading to interesting implications on the learned representations.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "Homophily",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPLIES",
+      "is_functional": false,
+      "object": "Network Community",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Under the homophily hypothesis [7, 36] nodes that are highly interconnected and belong to similar network clusters or communities should be embedded closely together ( e.g., nodes s1 and u in Figure 1 belong to the same network community).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Structural Equivalence",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPLIES",
+      "is_functional": false,
+      "object": "Structural Role",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In contrast, under the structural equivalence hypothesis [10] nodes that have similar structural roles in networks should be embedded closely together ( e.g., nodes u and s6 in Figure 1 act as hubs of their corresponding communities).",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Structural Equivalence",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DOES_NOT_EMPHASIZE",
+      "is_functional": false,
+      "object": "Connectivity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Importantly, unlike homophily, structural equivalence does not emphasize connectivity; nodes could be far apart in the network and still have the same structural role.",
+      "extraction_confidence": 0.96
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "answer": "DeepWalk\u2019s streaming variant handles an unknown upper bound on vocabulary size by building the Huffman tree incrementally rather than preallocating a full tree for all possible vertices. In the standard hierarchical softmax setup, each vertex is assigned a codeword from a Huffman tree whose leaves correspond to the observed vocabulary items, and the tree is normally constructed from the current frequency counts of those items. When the final vocabulary size is not known in advance, the streaming algorithm can maintain a dynamic prefix tree that is updated as new vertices appear: new leaves are inserted into the tree, internal nodes are created as needed, and the tree structure is adjusted so that more frequent vertices remain closer to the root and less frequent vertices are pushed deeper, preserving the Huffman property approximately or exactly depending on the implementation. In practice, this means the algorithm does not require a fixed |V| before training starts; instead, it grows the tree online as the stream reveals new vertices and their counts. The key idea is that hierarchical softmax only needs a binary tree over the currently observed vocabulary, so the streaming variant can defer final tree completion until enough of the stream has been seen, or periodically rebuild/update the tree from accumulated counts. Thus, the construction is online and adaptive, not dependent on knowing the complete vocabulary size beforehand.",
+  "self_reported_accuracy": 0.72,
+  "confidence_reasoning": "I am moderately confident because the online/dynamic-tree behavior is consistent with streaming hierarchical softmax, but the exact implementation details for DeepWalk\u2019s specific streaming variant may vary across descriptions.",
+  "query_entities": [
+    "DeepWalk",
+    "Huffman binary tree",
+    "streaming algorithm variant",
+    "vocabulary size",
+    "hierarchical softmax"
+  ],
+  "response_entities": [
+    "DeepWalk",
+    "Huffman binary tree",
+    "streaming algorithm variant",
+    "vocabulary size",
+    "hierarchical softmax",
+    "prefix tree",
+    "binary tree",
+    "vertex",
+    "frequency count",
+    "vocabulary",
+    "stream"
+  ],
+  "response_triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "DEEPWALK",
+      "target": "hierarchical softmax",
+      "target_alias": "HS",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "streaming algorithm variant",
+      "source_alias": "SV",
+      "target": "Huffman binary tree",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Huffman binary tree",
+      "target": "binary tree",
+      "target_alias": null,
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "streaming algorithm variant",
+      "source_alias": "SV",
+      "target": "vocabulary size",
+      "target_alias": null,
+      "type": "REQUIRES",
+      "claim_type": "REFUTED",
+      "weight": 0.88
+    },
+    {
+      "source": "streaming algorithm variant",
+      "source_alias": "SV",
+      "target": "prefix tree",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "prefix tree",
+      "target": "vertex",
+      "target_alias": null,
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "prefix tree",
+      "target": "frequency count",
+      "target_alias": null,
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.82
+    },
+    {
+      "source": "streaming algorithm variant",
+      "source_alias": "SV",
+      "target": "stream",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "binary tree",
+      "target_alias": null,
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "corpus",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vocabulary",
+      "alias": "V",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph",
+      "alias": "G",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walk generator",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "update procedure",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "random walk",
+      "alias": "Wvi",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "root",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neighbors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "maximum length",
+      "alias": "t",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "restarts",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "teleport probability",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SkipGram",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "corpus",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As in any language modeling algorithm, the only required input is a corpus and a vocabularyV.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "vocabulary",
+      "object_alias": "V",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As in any language modeling algorithm, the only required input is a corpus and a vocabularyV.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONSIDERS",
+      "is_functional": false,
+      "object": "random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepW alkconsiders a set of short truncated random walks its own corpus, and the graph vertices as its own vocabulary (V =V ).",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONSIDERS",
+      "is_functional": false,
+      "object": "graph vertices",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepW alkconsiders a set of short truncated random walks its own corpus, and the graph vertices as its own vocabulary (V =V ).",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "random walk generator",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "graph",
+      "object_alias": "G",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The random walk generator takes a graph G and samples uniformly a random vertex vi as the root of the random walkWvi.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "random walk",
+      "subject_alias": "Wvi",
+      "subject_type": "CONCEPT",
+      "relation": "HAS",
+      "is_functional": true,
+      "object": "maximum length",
+      "object_alias": "t",
+      "object_type": "CONCEPT",
+      "evidence_quote": "A walk samples uniformly from the neighbors of the last vertex visited until the maximum length ( t) is reached.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAN_HAVE",
+      "is_functional": false,
+      "object": "restarts",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These walks could have restarts (i.e. a teleport probability of returning back to their root), but our preliminary results did not show any advantage of using restarts.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use the SkipGram algorithm [26] to update these representations in accordance with our objective function in Eq. 2.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use the SkipGram algorithm [26] to update these representations in accordance with our objective function in Eq. 2.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "random ordering",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "stochastic gradient descent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "This is not strictly required, but is well-known to speed up the convergence of stochastic gradient descent.",
+      "extraction_confidence": 0.84
+    }
+  ]
+}

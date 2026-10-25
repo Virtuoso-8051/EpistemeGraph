@@ -1,0 +1,89 @@
+{
+  "answer": "In node2vec, the Hadamard operator achieves the highest link prediction performance on the Collaborations, Facebook, and Protein-Protein Interaction (PPI) networks. The paper compares several binary operators for constructing edge features from node embeddings, and Hadamard is reported as the best-performing choice on those three benchmark networks for link prediction.",
+  "self_reported_accuracy": 0.97,
+  "confidence_reasoning": "This is a direct factual detail from the node2vec paper\u2019s link prediction evaluation, and the specific operator ranking on those datasets is well-established.",
+  "query_entities": [
+    "node2vec",
+    "binary operator",
+    "Link Prediction",
+    "Collaborations",
+    "Facebook",
+    "Protein-Protein Interaction"
+  ],
+  "response_entities": [
+    "node2vec",
+    "binary operator",
+    "Link Prediction",
+    "Collaborations",
+    "Facebook",
+    "Protein-Protein Interaction",
+    "Hadamard operator",
+    "edge feature",
+    "node embedding"
+  ],
+  "response_triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "target": "Hadamard operator",
+      "target_alias": "HO",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "HO",
+      "target": "Link Prediction",
+      "target_alias": "LP",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "HO",
+      "target": "Collaborations",
+      "target_alias": null,
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "HO",
+      "target": "Facebook",
+      "target_alias": null,
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "HO",
+      "target": "Protein-Protein Interaction",
+      "target_alias": "PPI",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "target": "edge feature",
+      "target_alias": null,
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "node embedding",
+      "source_alias": null,
+      "target": "edge feature",
+      "target_alias": null,
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    }
+  ]
+}

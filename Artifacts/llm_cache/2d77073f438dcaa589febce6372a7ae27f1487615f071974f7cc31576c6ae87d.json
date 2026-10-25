@@ -1,0 +1,201 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE(2nd)",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DBLP(PaperCitation) Network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "random walk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "paper citation network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "network embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network layout",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multi-label classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Youtube network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "reconstructed network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order neighbors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neighbors of neighbors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertices with small degrees",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE(2nd)",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "As this network is also very sparse, DeepWalk outperforms LINE(2nd).",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "However, by reconstructing the network through recursively adding neighbors of neighbors for vertices with small degrees (smaller than 500), the performance of LINE(2nd) significantly increases and outperforms DeepWalk.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "stochastic gradient descent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The LINE model directly optimized by stochastic gradient descent, LINE(2nd), does not perform well as expected.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "DBLP(PaperCitation) Network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Table 8 reports the results on the DBLP(PaperCitation)network.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The LINE(2nd) significantly outperforms DeepWalk.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "random walk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "paper citation network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "This is because the random walk on the paper citation network can only reach papers along the citing path (i.e., older papers) and cannot reach other references.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "REPRESENTS",
+      "is_functional": false,
+      "object": "paper citation network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Instead, the LINE(2nd) represents each paper with its references, which is obviously more reasonable.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "reconstructed network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The performance of LINE(2nd) is further improved when the network is reconstructed by enriching the neighbors of vertices with small degrees (smaller than 200).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "reconstructed network",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "second-order neighbors",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The results in the brackets are on the reconstructed network, which adds second-order neighbors (i.e., neighbors of neighbors) as neighbors for vertices with a low degree.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "network embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "network layout",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An important application of network embedding is to create meaningful visualizations that layout a network on a",
+      "extraction_confidence": 0.84
+    }
+  ]
+}

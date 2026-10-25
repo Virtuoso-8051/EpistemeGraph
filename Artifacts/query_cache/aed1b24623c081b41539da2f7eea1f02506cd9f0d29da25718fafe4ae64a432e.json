@@ -1,0 +1,88 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding) defines the second-order proximity objective O2 so that each vertex i has a weighting term \u03bb_i that scales its contribution to the loss. In the original formulation, \u03bb_i is set from the vertex out-degree, so higher-out-degree vertices contribute more strongly during optimization. In the reported experiments, the authors also consider replacing the out-degree-based weighting with PageRank scores, using PageRank as an alternative importance measure for vertices. Conceptually, this means \u03bb_i is computed from each vertex\u2019s PageRank value rather than from its out-degree, and the optimization of O2 then proceeds with those PageRank-derived weights. The practical effect is to bias training toward vertices that are more central under PageRank, instead of vertices that merely have many outgoing edges. This is an experimental weighting choice rather than a change to the core LINE objective itself.",
+  "self_reported_accuracy": 0.86,
+  "confidence_reasoning": "The core description of LINE\u2019s second-order objective and the use of PageRank as an alternative weighting signal are well established, but the exact experimental implementation details may vary by paper version and are less certain.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "objective O2",
+    "PageRank",
+    "vertex out-degree",
+    "weighting parameter lambda_i"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "objective O2",
+    "PageRank",
+    "vertex out-degree",
+    "weighting parameter lambda_i",
+    "second-order proximity objective",
+    "vertex",
+    "loss",
+    "optimization"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "objective O2",
+      "target_alias": "O2",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "objective O2",
+      "source_alias": "O2",
+      "target": "weighting parameter lambda_i",
+      "target_alias": "\u03bb_i",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "weighting parameter lambda_i",
+      "source_alias": "\u03bb_i",
+      "target": "vertex out-degree",
+      "target_alias": "OD",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "PageRank",
+      "target_alias": "PAGERANK",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "PageRank",
+      "source_alias": "PAGERANK",
+      "target": "weighting parameter lambda_i",
+      "target_alias": "\u03bb_i",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "PageRank",
+      "source_alias": "PAGERANK",
+      "target": "vertex out-degree",
+      "target_alias": "OD",
+      "type": "COMPARED_WITH",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "objective O2",
+      "source_alias": "O2",
+      "target": "loss",
+      "target_alias": null,
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.8
+    }
+  ]
+}

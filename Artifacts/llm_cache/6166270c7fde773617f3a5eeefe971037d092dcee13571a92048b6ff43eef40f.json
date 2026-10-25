@@ -1,0 +1,261 @@
+{
+  "entities": [
+    {
+      "name": "affinity graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "feature vectors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "K-nearest neighbor graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "low dimensional space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "leading eigenvectors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "eigenvectors of the affinity matrices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "large-scale networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "matrix factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "affinity matrix",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "global network structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE model",
+      "alias": "LINE",
+      "type": "MODEL"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "undirected graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "directed graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "truncated random walk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "social network embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network properties",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "neighborhood of a vertex",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "depth-first search",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "breadthfirst search strategy",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "weighted edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "unweighted edges",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "matrix factorization",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "It finds the low-dimensional embedding of a large graph through matrix factorization, which is optimized using stochastic gradient descent.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "matrix factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "stochastic gradient descent",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "It finds the low-dimensional embedding of a large graph through matrix factorization, which is optimized using stochastic gradient descent.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "affinity matrix",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This is possible because a graph can be represented as an affinity matrix.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "matrix factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "DOES_NOT_PRESERVE",
+      "is_functional": false,
+      "object": "global network structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "However, the objective of matrix factorization is not designed for networks, therefore does not necessarily preserve the global network structure.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE model",
+      "subject_alias": "LINE",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Instead, the LINE model uses an objective that is particularly designed for networks, which preserves both the first-order and the second-order proximities.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "LINE model",
+      "subject_alias": "LINE",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Instead, the LINE model uses an objective that is particularly designed for networks, which preserves both the first-order and the second-order proximities.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPLIES_TO",
+      "is_functional": false,
+      "object": "undirected graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Practically, the graph factorization method only applies to undirected graphs while the proposed model is applicable for both undirected and directed graphs.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "DEPLOYS",
+      "is_functional": false,
+      "object": "truncated random walk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The most recent work related with ours is DeepWalk [16], which deploys a truncated random walk for social network embedding.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepWalk uses random walks to expand the neighborhood of a vertex, which is analogical to a depth-first search.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "APPLIES_TO",
+      "is_functional": false,
+      "object": "unweighted edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Practically, DeepWalk only applies to unweighted networks, while our model is applicable for networks with both weighted and unweighted edges.",
+      "extraction_confidence": 0.96
+    }
+  ]
+}

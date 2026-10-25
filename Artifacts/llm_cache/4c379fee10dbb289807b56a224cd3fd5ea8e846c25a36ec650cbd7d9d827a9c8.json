@@ -1,0 +1,98 @@
+[
+  {
+    "subject": "Users",
+    "subject_alias": null,
+    "subject_type": "PERSON",
+    "relation": "PREFER",
+    "is_functional": false,
+    "object": "Proposed fairness model",
+    "object_alias": null,
+    "object_type": "MODEL",
+    "evidence_quote": "our qualitative study demonstrates that the users unanimously prefer our proposed fairness model, as opposed to enabling group fairness only on the overall window.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Empirical results",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "ARE_CONSISTENT_WITH",
+    "is_functional": false,
+    "object": "Theoretical guarantees",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Second, the em- pirical results are consistent with our theoretical guarantees for the proposed algorithms used in preprocessing, reordering, and fairness checking.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "Proposed framework",
+    "subject_alias": null,
+    "subject_type": "SYSTEM",
+    "relation": "OUTPERFORMS",
+    "is_functional": false,
+    "object": "Designed baselines",
+    "object_alias": null,
+    "object_type": "MODEL",
+    "evidence_quote": "Third, our framework outperforms all designed baselines by 2\u20133 orders of magnitude in terms of efficiency.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Proposed framework",
+    "subject_alias": null,
+    "subject_type": "SYSTEM",
+    "relation": "ENFORCES",
+    "is_functional": false,
+    "object": "Fairness at the block level",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Fourth, it effec- tively enforces fairness at the block level, substantially increasing the percentage of fair blocks when BFair-ReOrder is applied.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Monitor-BFair",
+    "subject_alias": null,
+    "subject_type": "SYSTEM",
+    "relation": "ANSWERS",
+    "is_functional": false,
+    "object": "Queries in fractions of a millisecond",
+    "object_alias": null,
+    "object_type": "METRIC",
+    "evidence_quote": "Additionally, the cost of fairness monitoring remains minimal in both time and memory: Monitor-BFair answers queries in fractions of a millisecond, and BFair-ReOrder scales linearly with the input stream size.",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "BFair-ReOrder",
+    "subject_alias": null,
+    "subject_type": "ALGORITHM",
+    "relation": "SCALES_LINEARLY_WITH",
+    "is_functional": false,
+    "object": "Input stream size",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Additionally, the cost of fairness monitoring remains minimal in both time and memory: Monitor-BFair answers queries in fractions of a millisecond, and BFair-ReOrder scales linearly with the input stream size.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Proposed framework",
+    "subject_alias": null,
+    "subject_type": "SYSTEM",
+    "relation": "IS",
+    "is_functional": false,
+    "object": "Accurate and scalable across a wide range of parameters",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Overall, the framework is accurate and scalable across a wide range of parameters.",
+    "extraction_confidence": 0.94
+  },
+  {
+    "subject": "BFair-ReOrder",
+    "subject_alias": null,
+    "subject_type": "ALGORITHM",
+    "relation": "RETURNS_SAME_NUMBER_OF",
+    "is_functional": false,
+    "object": "Unique fair blocks as BruteForce",
+    "object_alias": "BruteForce",
+    "object_type": "ALGORITHM",
+    "evidence_quote": "We observe that BFair-ReOrder returns the same number of unique fair blocks as that of BruteForce corrob- orating its optimality.",
+    "extraction_confidence": 0.98
+  }
+]

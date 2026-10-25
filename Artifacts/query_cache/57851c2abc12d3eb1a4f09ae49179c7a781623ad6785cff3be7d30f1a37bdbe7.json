@@ -1,0 +1,101 @@
+{
+  "answer": "On the Wikipedia word analogy task, LINE(2nd) is reported to perform better than LINE(1st), Graph Factorization, and DeepWalk, and it is competitive with SkipGram. More specifically, the paper\u2019s comparison indicates that LINE(2nd) captures second-order proximity information that is especially useful for analogy-style semantic relationships, while LINE(1st) focuses on first-order proximity and is generally weaker on this task. DeepWalk also performs well because it learns embeddings from random walks, but LINE(2nd) is described as outperforming it on the Wikipedia analogy benchmark. Graph Factorization is typically the weakest among the compared methods on this task. SkipGram, which is trained on word co-occurrence contexts, is usually the strongest or among the strongest baselines, and LINE(2nd) is close to it rather than clearly surpassing it. Overall, the ranking is roughly: SkipGram at or near the top, LINE(2nd) next, then DeepWalk, LINE(1st), and Graph Factorization, though exact ordering can vary slightly by evaluation setting and reported metric.",
+  "self_reported_accuracy": 0.86,
+  "confidence_reasoning": "The comparison is consistent with the reported qualitative results from the LINE paper, but exact ranking details can vary by table, metric, and experimental setup.",
+  "query_entities": [
+    "Wikipedia data",
+    "word analogy",
+    "Large-scale Information Network Embedding",
+    "LINE-SGD",
+    "DEEPWALK",
+    "graph factorization",
+    "SKIPGRAM"
+  ],
+  "response_entities": [
+    "Wikipedia data",
+    "word analogy",
+    "Large-scale Information Network Embedding",
+    "LINE-SGD",
+    "DEEPWALK",
+    "graph factorization",
+    "SKIPGRAM",
+    "first-order proximity",
+    "second-order proximity",
+    "word cooccurrence network",
+    "word vector"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "first-order proximity",
+      "target_alias": "1st",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "second-order proximity",
+      "target_alias": "2nd",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "word analogy",
+      "target_alias": "WA",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "DeepWalk",
+      "target_alias": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "Graph Factorization",
+      "target_alias": "GF",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "SkipGram",
+      "target_alias": "SKIPGRAM",
+      "type": "COMPARED_WITH",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "SKIPGRAM",
+      "target": "word cooccurrence network",
+      "target_alias": "WCN",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "DEEPWALK",
+      "target": "word vector",
+      "target_alias": "WV",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.8
+    }
+  ]
+}

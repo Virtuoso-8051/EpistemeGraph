@@ -1,0 +1,155 @@
+{
+  "entities": [
+    {
+      "name": "Skip-gram architecture",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "network neighborhood",
+      "alias": "NS(u)",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neighborhood sampling strategy",
+      "alias": "S",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "feature representation",
+      "alias": "f",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "conditional independence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "symmetry in feature space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "softmax unit",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "dot product",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "partition function",
+      "alias": "Zu",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "negative sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "stochastic gradient ascent",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "sliding window",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "randomized procedure",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Skip-gram architecture",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EXTENDED_TO",
+      "is_functional": false,
+      "object": "network neighborhood",
+      "object_alias": "NS(u)",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We proceed by extending the Skip-gram architecture to networks [21, 24].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "network neighborhood",
+      "subject_alias": "NS(u)",
+      "subject_type": "CONCEPT",
+      "relation": "GENERATED_BY",
+      "is_functional": false,
+      "object": "neighborhood sampling strategy",
+      "object_alias": "S",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "For every source node u\u2208V , we defineNS(u)\u2282V as a network neighborhood of node u generated through a neighborhood sampling strategyS.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "feature representation",
+      "subject_alias": "f",
+      "subject_type": "CONCEPT",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "partition function",
+      "object_alias": "Zu",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The per-node partition function, Zu = \u2211v\u2208V exp(f (u)\u00b7f (v)), is expensive to compute for large networks and we approximate it using negative sampling [22].",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "negative sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPROXIMATES",
+      "is_functional": false,
+      "object": "partition function",
+      "object_alias": "Zu",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The per-node partition function, Zu = \u2211v\u2208V exp(f (u)\u00b7f (v)), is expensive to compute for large networks and we approximate it using negative sampling [22].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "stochastic gradient ascent",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "feature representation",
+      "object_alias": "f",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We optimize Eq. 2 using stochastic gradient ascent over the model parameters defining the featuresf.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "sliding window",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINES",
+      "is_functional": false,
+      "object": "network neighborhood",
+      "object_alias": "NS(u)",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Given the linear nature of text, the notion of a neighborhood can be naturally defined using a sliding window over consecutive words.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "randomized procedure",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "SAMPLES",
+      "is_functional": false,
+      "object": "network neighborhood",
+      "object_alias": "NS(u)",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To resolve this issue, we propose a randomized procedure that samples many different neighborhoods of a given source nodeu.",
+      "extraction_confidence": 0.95
+    }
+  ]
+}

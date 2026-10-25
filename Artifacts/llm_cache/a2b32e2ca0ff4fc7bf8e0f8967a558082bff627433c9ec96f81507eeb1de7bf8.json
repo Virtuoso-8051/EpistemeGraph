@@ -1,0 +1,226 @@
+{
+  "entities": [
+    {
+      "name": "Large-scale Information Network Embedding",
+      "alias": "LINE",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "language network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "social networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "citation networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "word cooccurrence network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "EnglishWikipedia pages",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Flickr",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Youtube2",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "author citation network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "paper citation network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "DBLP data set",
+      "alias": "DBLP",
+      "type": "DATASET"
+    },
+    {
+      "name": "Graph factorization",
+      "alias": "GF",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "MDS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "IsoMap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Laplacian eigenmap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "matrix factorization techniques",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph embedding methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "information network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "affinity matrix",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "LINE",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "language network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We applied the method to several large-scale real-world networks of different types, including a language network, two social networks, and two citation networks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "LINE",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "social networks",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We applied the method to several large-scale real-world networks of different types, including a language network, two social networks, and two citation networks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "LINE",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "citation networks",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We applied the method to several large-scale real-world networks of different types, including a language network, two social networks, and two citation networks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "language network",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "EnglishWikipedia pages",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We constructed a word cooccurrence network from the entire set of EnglishWikipedia pages.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "word cooccurrence network",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "EnglishWikipedia pages",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We constructed a word cooccurrence network from the entire set of EnglishWikipedia pages.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "social networks",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Flickr",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We use two social networks:Flickr and Youtube2.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "social networks",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Youtube2",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We use two social networks:Flickr and Youtube2.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "citation networks",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "author citation network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Two types of citation networks are used: an author citation network and a paper citation network.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "citation networks",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "paper citation network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Two types of citation networks are used: an author citation network and a paper citation network.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "Graph factorization",
+      "subject_alias": "GF",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "matrix factorization techniques",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We compare with the matrix factorization techniques for graph factorization.",
+      "extraction_confidence": 0.93
+    }
+  ]
+}

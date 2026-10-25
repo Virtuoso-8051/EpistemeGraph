@@ -1,0 +1,98 @@
+{
+  "answer": "DeepWalk, in its original form, does not use hyperbolic Poincar\u00e9 ball optimization, Riemannian gradient descent, or M\u00f6bius gyrovector addition; those are components of hyperbolic embedding methods, not the standard DeepWalk algorithm. DeepWalk instead learns node embeddings from truncated random walks and a Skip-gram objective in Euclidean space.\n\nIf you are asking for the Poincar\u00e9 distance formula used in hyperbolic embeddings, the distance between two points u and v inside the Poincar\u00e9 ball model is\n\nd(u, v) = arcosh\\left(1 + 2\\,\\frac{\\|u-v\\|^2}{(1-\\|u\\|^2)(1-\\|v\\|^2)}\\right),\n\nwhere \\|u\\| and \\|v\\| are Euclidean norms and both points must lie strictly inside the unit ball (\\|u\\| < 1, \\|v\\| < 1). This metric grows rapidly near the boundary of the ball, which is why the model is well suited to representing tree-like hierarchies with low distortion.\n\nSo, under your assumption, the relevant distance is the Poincar\u00e9 metric above; but for actual DeepWalk, there is no Poincar\u00e9 distance formula because the method is not a hyperbolic model.",
+  "self_reported_accuracy": 0.98,
+  "confidence_reasoning": "I am highly confident because the distinction between original DeepWalk and hyperbolic embedding methods is well established, and the Poincar\u00e9 distance formula is standard.",
+  "query_entities": [
+    "DEEPWALK",
+    "Poincar\u00e9 ball",
+    "Riemannian gradient descent",
+    "M\u00f6bius gyrovector addition",
+    "Poincar\u00e9 distance"
+  ],
+  "response_entities": [
+    "DEEPWALK",
+    "Poincar\u00e9 ball",
+    "Riemannian gradient descent",
+    "M\u00f6bius gyrovector addition",
+    "Poincar\u00e9 distance",
+    "random walk",
+    "SKIPGRAM",
+    "embedding",
+    "low-dimensional space",
+    "tree",
+    "hyperbolic embedding",
+    "Euclidean space"
+  ],
+  "response_triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "SKIPGRAM",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Euclidean space",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Poincar\u00e9 distance",
+      "target": "Poincar\u00e9 ball",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Poincar\u00e9 distance",
+      "target": "Euclidean norm",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Poincar\u00e9 ball",
+      "target": "tree",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Poincar\u00e9 ball",
+      "target": "low-distortion embedding",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Poincar\u00e9 distance",
+      "type": "REFUTED",
+      "claim_type": "REFUTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Riemannian gradient descent",
+      "type": "REFUTED",
+      "claim_type": "REFUTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "M\u00f6bius gyrovector addition",
+      "type": "REFUTED",
+      "claim_type": "REFUTED",
+      "weight": 0.99
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "entities": [
+    {
+      "name": "word feature representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "likelihood objective",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SGD",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "negative sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Skip-gram objective",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "distributional hypothesis",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Skip-gram model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "document",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "sampling strategy",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "feature representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "supervised feature learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph-specific deep network architectures",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "loss function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "downstream prediction task",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "maximum likelihood optimization problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network",
+      "alias": "G",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "mapping function",
+      "alias": "f",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "feature representaions",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "parameter",
+      "alias": "d",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "word feature representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ARE_LEARNED_BY",
+      "is_functional": false,
+      "object": "likelihood objective",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The word feature representations are learned by optmizing the likelihood objective using SGD with negative sampling [22].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "likelihood objective",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "SGD",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The word feature representations are learned by optmizing the likelihood objective using SGD with negative sampling [22].",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "likelihood objective",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "negative sampling",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The word feature representations are learned by optmizing the likelihood objective using SGD with negative sampling [22].",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "Skip-gram objective",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "distributional hypothesis",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The Skip-gram objective is based on the distributional hypothesis which states that words in similar contexts tend to have similar meanings [9].",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "Skip-gram model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "INSPIRES",
+      "is_functional": false,
+      "object": "node2vec",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Inspired by the Skip-gram model, recent research established an analogy for networks by representing a network as a \u201cdocument\u201d [24, 28].",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "sampling strategy",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our algorithm node2vec overcomes this limitation by designing a flexible objective that is not tied to a particular sampling strategy and provides parameters to tune the explored search space (see Section 3).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "feature representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our algorithm node2vec overcomes this limitation by designing a flexible objective that is not tied to a particular sampling strategy and provides parameters to tune the explored search space (see Section 3).",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "supervised feature learning",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "graph-specific deep network architectures",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Finally, for both node and edge based prediction tasks, there is a body of recent work for supervised feature learning based on existing and novel graph-specific deep network architectures [15, 16, 17, 31, 39].",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "graph-specific deep network architectures",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "MINIMIZE",
+      "is_functional": false,
+      "object": "loss function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These architectures directly minimize the loss function for a downstream prediction task using several layers of non-linear transformations which results in high accuracy, but at the cost of scalability due to high training time requirements.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "feature representaions",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ARE_MAPPED_BY",
+      "is_functional": false,
+      "object": "mapping function",
+      "object_alias": "f",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Let f : V \u2192 Rd be the mapping function from nodes to feature representaions we aim to learn for a downstream prediction task.",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

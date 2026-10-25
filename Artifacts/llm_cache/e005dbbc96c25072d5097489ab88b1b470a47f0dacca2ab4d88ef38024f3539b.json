@@ -1,0 +1,204 @@
+{
+  "entities": [
+    {
+      "name": "POS tags",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "homophily",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural equivalence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "syntactic grammar patterns",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "one-vs-rest logistic regression classifier",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "L2 regularization",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "train and test data",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "accuracy",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "PPI",
+      "alias": "Homo Sapiens",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "random walk methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "parameters p and q",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "one-vs-rest logistic regression classifier",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "L2 regularization",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The node feature representations are input to a one-vs-rest logistic regression classifier with L2 regularization.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "train and test data",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "SPLIT_INTO",
+      "is_functional": false,
+      "object": "one-vs-rest logistic regression classifier",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The train and test data is split equally over 10 random instances.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "Macro-F1",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "one-vs-rest logistic regression classifier",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We use the Macro-F1 scores for comparing performance in Table 2 and the relative performance gain is over the closest benchmark.",
+      "extraction_confidence": 0.61
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In BlogCatalog, we can discover the right mix of homophily and structural equivalence by setting parametersp andq to low values, giving us 22.3% gain over DeepWalk and 229.2% gain over LINE in Macro-F1 scores.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In BlogCatalog, we can discover the right mix of homophily and structural equivalence by setting parametersp andq to low values, giving us 22.3% gain over DeepWalk and 229.2% gain over LINE in Macro-F1 scores.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In all other networks, across all fractions of labeled data node2vec performs best.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In all other networks, across all fractions of labeled data node2vec performs best.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "node2vec",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepWalk and node2vec give comparable performance on PPI.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "random walk methods",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "extraction_confidence": 0.74
+    }
+  ]
+}

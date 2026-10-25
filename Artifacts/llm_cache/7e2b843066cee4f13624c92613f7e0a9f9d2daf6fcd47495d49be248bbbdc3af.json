@@ -1,0 +1,98 @@
+[
+  {
+    "subject": "Tail latency",
+    "subject_alias": null,
+    "subject_type": "METRIC",
+    "relation": "INCREASES_WITH",
+    "is_functional": false,
+    "object": "larger |W|",
+    "object_alias": "|W|",
+    "object_type": "VARIABLE",
+    "evidence_quote": "As shown in Figure 8a, tail latency increases with larger|\ud835\udc4a| .",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Processing a single fairness constraint",
+    "subject_alias": null,
+    "subject_type": "PROCESS",
+    "relation": "CAN_EXCEED",
+    "is_functional": false,
+    "object": "10 ms",
+    "object_alias": null,
+    "object_type": "TIME",
+    "evidence_quote": "For instance, the time to process a single fairness constraint can occasionally exceed 10 ms when\ud835\udc4a= 2000.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Tail latency",
+    "subject_alias": null,
+    "subject_type": "METRIC",
+    "relation": "DECREASES_WITH",
+    "is_functional": false,
+    "object": "increasing s",
+    "object_alias": "s",
+    "object_type": "VARIABLE",
+    "evidence_quote": "Figure 8b illustrates the expected decrease in tail latency with increasing\ud835\udc60, consistent with earlier observations.",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "Tail latency",
+    "subject_alias": null,
+    "subject_type": "METRIC",
+    "relation": "HAS_NO_CLEAR_TREND_WITH",
+    "is_functional": false,
+    "object": "increasing \u2113",
+    "object_alias": "\u2113",
+    "object_type": "VARIABLE",
+    "evidence_quote": "Similarly, Figure 8c shows the effect of increasing\u2113.",
+    "extraction_confidence": 0.84
+  },
+  {
+    "subject": "Tail latency",
+    "subject_alias": null,
+    "subject_type": "METRIC",
+    "relation": "INCREASES_WHEN",
+    "is_functional": false,
+    "object": "BFair-ReOrder is integrated into Monitor-BFair",
+    "object_alias": "BFair-ReOrder",
+    "object_type": "SYSTEM",
+    "evidence_quote": "Tail latency rises notably when BFair-ReOrder is integrated into Monitor-BFair, as reordering incurs substantial overhead.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "Average running time",
+    "subject_alias": null,
+    "subject_type": "METRIC",
+    "relation": "IS_TYPICALLY_IN_ORDER_OF",
+    "is_functional": false,
+    "object": "a fraction of milliseconds",
+    "object_alias": null,
+    "object_type": "TIME",
+    "evidence_quote": "Average running time is typically in the order of a fraction of milliseconds, even when reordering is required.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Memory consumption of Monitor-BFair",
+    "subject_alias": "Monitor-BFair",
+    "subject_type": "SYSTEM",
+    "relation": "IS",
+    "is_functional": true,
+    "object": "negligible",
+    "object_alias": null,
+    "object_type": "ATTRIBUTE",
+    "evidence_quote": "Memory consumption of Monitor-BFair is negligible and consistent with the sketch memory consumption presented later.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "BFair-ReOrder",
+    "subject_alias": null,
+    "subject_type": "ALGORITHM",
+    "relation": "IS_FASTER_THAN",
+    "is_functional": false,
+    "object": "BruteForce",
+    "object_alias": null,
+    "object_type": "ALGORITHM",
+    "evidence_quote": "Overall, BFair-ReOrder is over three orders of magnitude faster.",
+    "extraction_confidence": 0.98
+  }
+]

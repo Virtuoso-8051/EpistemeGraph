@@ -1,0 +1,229 @@
+{
+  "entities": [
+    {
+      "name": "Node Classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Labels of Nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Social Network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Interests of Users",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Protein-Protein Interaction Network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Functional Labels of Proteins",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Link Prediction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Edge",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Genomics",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Novel Interactions Between Genes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Social Networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Real-World Friends",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Supervised Machine Learning Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Informative, Discriminating, and Independent Features",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Feature Vector Representation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Nodes and Edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hand-Engineering Domain-Specific Features",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Expert Knowledge",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Feature Engineering",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Prediction Tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Feature Representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Optimization Problem",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Node Classification",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Labels of Nodes",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In a typical node classification task, we are interested in predicting the most probable labels of nodes in a network [33].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Link Prediction",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PREDICTS",
+      "is_functional": false,
+      "object": "Edge",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In link prediction, we wish to predict whether a pair of nodes in a network should have an edge connecting them [18].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Link Prediction",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Novel Interactions Between Genes",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Link prediction is useful in a wide variety of domains; for instance, in genomics, it helps us discover novel interactions between genes, and in social networks, it can identify real-world friends [2, 34].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "Link Prediction",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Real-World Friends",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Link prediction is useful in a wide variety of domains; for instance, in genomics, it helps us discover novel interactions between genes, and in social networks, it can identify real-world friends [2, 34].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "Supervised Machine Learning Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Informative, Discriminating, and Independent Features",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Any supervised machine learning algorithm requires a set of informative, discriminating, and independent features.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "Prediction Tasks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Feature Vector Representation",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In prediction problems on networks this means that one has to construct a feature vector representation for the nodes and edges.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "Hand-Engineering Domain-Specific Features",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Expert Knowledge",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "A typical solution involves hand-engineering domain-specific features based on expert knowledge.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Hand-Engineering Domain-Specific Features",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Feature Engineering",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Even if one discounts the tedious effort required for feature engineering, such features are usually designed for specific tasks and do not generalize across different prediction tasks.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "Feature Representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "Optimization Problem",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An alternative approach is to learn feature representations by solving an optimization problem [4].",
+      "extraction_confidence": 0.95
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "subject": "First-order proximity",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "REFERS_TO",
+    "is_functional": false,
+    "object": "the local pairwise proximity between the vertices in the network",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "ximity refers to the local pairwise prox- imity between the vertices in the network.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "First-order proximity",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "MODELED_BY",
+    "is_functional": false,
+    "object": "joint probability between vertex vi and vj",
+    "object_alias": null,
+    "object_type": "PROBABILITY",
+    "evidence_quote": "To model the \ufb01rst-order proximity, for each undirected edge (i,j ), we de- \ufb01ne the joint probability between vertexvi andvj as follows: p1(vi,v j) = 11 + exp(\u2212\u20d7 uTi \u00b7\u20d7 uj), (1) where \u20d7 ui\u2208Rd is the low-dimensional vector representation of vertex vi.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "p1(vi,vj)",
+    "subject_alias": "p1",
+    "subject_type": "PROBABILITY",
+    "relation": "DEFINED_AS",
+    "is_functional": true,
+    "object": "1 / (1 + exp(\u2212u_i^T \u00b7 u_j))",
+    "object_alias": null,
+    "object_type": "FORMULA",
+    "evidence_quote": "To model the \ufb01rst-order proximity, for each undirected edge (i,j ), we de- \ufb01ne the joint probability between vertexvi andvj as follows: p1(vi,v j) = 11 + exp(\u2212\u20d7 uTi \u00b7\u20d7 uj), (1) where \u20d7 ui\u2208Rd is the low-dimensional vector representation of vertex vi.",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "Empirical probability p\u03021(i,j)",
+    "subject_alias": "p-hat1",
+    "subject_type": "PROBABILITY",
+    "relation": "DEFINED_AS",
+    "is_functional": true,
+    "object": "w_ij / W",
+    "object_alias": null,
+    "object_type": "FORMULA",
+    "evidence_quote": "Eqn. (1) de\ufb01nes a distribution p(\u00b7,\u00b7) over the space V\u00d7V , and its empirical probability can be de\ufb01ned as \u02c6p1(i,j ) = wij W , where W = \u2211(i,j)\u2208Ewij.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "First-order proximity",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "PRESERVED_BY_MINIMIZING",
+    "is_functional": false,
+    "object": "O1 = d( p\u03021(\u00b7,\u00b7), p1(\u00b7,\u00b7) )",
+    "object_alias": "O1",
+    "object_type": "OBJECTIVE_FUNCTION",
+    "evidence_quote": "To preserve the \ufb01rst-order proximity, a straightforward way is to minimize the following objective function: O1 =d(\u02c6p1(\u00b7,\u00b7),p 1(\u00b7,\u00b7)), (2) where d(\u00b7,\u00b7) is the distance between two distributions.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "d(\u00b7,\u00b7)",
+    "subject_alias": "d",
+    "subject_type": "FUNCTION",
+    "relation": "IS_DISTANCE_BETWEEN",
+    "is_functional": false,
+    "object": "two distributions",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "To preserve the \ufb01rst-order proximity, a straightforward way is to minimize the following objective function: O1 =d(\u02c6p1(\u00b7,\u00b7),p 1(\u00b7,\u00b7)), (2) where d(\u00b7,\u00b7) is the distance between two distributions.",
+    "extraction_confidence": 0.93
+  },
+  {
+    "subject": "First-order proximity",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "APPLICABLE_FOR",
+    "is_functional": false,
+    "object": "undirected graphs",
+    "object_alias": null,
+    "object_type": "GRAPH",
+    "evidence_quote": "Note that the \ufb01rst-order proximity is only applicable for undirected graphs, not for directed graphs.",
+    "extraction_confidence": 0.99
+  },
+  {
+    "subject": "Second-order proximity",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "APPLICABLE_FOR",
+    "is_functional": false,
+    "object": "both directed and undirected graphs",
+    "object_alias": null,
+    "object_type": "GRAPH",
+    "evidence_quote": "The second-order proximity is applicable for both directed and undirected graphs.",
+    "extraction_confidence": 0.99
+  }
+]

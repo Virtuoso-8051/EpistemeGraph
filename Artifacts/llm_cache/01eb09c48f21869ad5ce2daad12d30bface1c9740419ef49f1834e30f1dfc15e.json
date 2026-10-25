@@ -1,0 +1,189 @@
+{
+  "entities": [
+    {
+      "name": "learning rate",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "gradients",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "weights",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network with binary edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Optimization via Edge Sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "memory requirement",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edge-sampling treatment",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "alias table method",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "negative sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "time complexity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Optimization via Edge Sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "edge-sampling treatment",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "A simple treatment is thus to unfold a weighted edge into multiple binary edges, e.g., an edge with weight w is unfolded into w binary edges.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "edge-sampling treatment",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "With this edge-sampling treatment, the overall objective function remains the same.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "edge-sampling treatment",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "memory requirement",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This will solve the problem but will significantly increase the memory requirement, especially when the weights of the edges are very large.",
+      "extraction_confidence": 0.91
+    },
+    {
+      "subject": "alias table method",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "weights",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use the alias table method [9] to draw a sample according to the weights of the edges, which takes onlyO(1) time when repeatedly drawing samples from the same discrete distribution.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "alias table method",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "time complexity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Sampling an edge from the alias table takes constant time, O(1), and optimization with negative sampling takesO(d(K+ 1)) time, whereK is the number of negative samples.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "negative sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "number of negative samples",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Sampling an edge from the alias table takes constant time, O(1), and optimization with negative sampling takesO(d(K+ 1)) time, whereK is the number of negative samples.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "HAS_TIME_COMPLEXITY",
+      "is_functional": false,
+      "object": "time complexity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "DEPENDS_ON",
+      "is_functional": false,
+      "object": "number of edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "extraction_confidence": 0.89
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "DOES_NOT_DEPEND_ON",
+      "is_functional": false,
+      "object": "number of vertices",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "extraction_confidence": 0.93
+    }
+  ]
+}

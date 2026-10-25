@@ -1,0 +1,129 @@
+{
+    "winning_model": "RandomForest",
+    "champion_composite_score": 0.9419775286032029,
+    "previous_champion_score": 0.9287102610150842,
+    "is_promoted_to_production": true,
+    "total_training_samples": 1820,
+    "learned_scoring_parameters": {
+        "energy_weights": [
+            0.1427,
+            0.1,
+            0.0919,
+            0.3359
+        ],
+        "prior_weights": [
+            0.5477,
+            0.3635,
+            0.0634,
+            0.0254
+        ],
+        "analytical_ml_blend_gamma": 0.75,
+        "s_query_exponent_eta": 0.82,
+        "optimal_pass_threshold": 0.65,
+        "optimal_abstain_threshold": 0.5,
+        "feature_weight_dict": {
+            "e_sheaf_penalty_weight": 0.1427,
+            "delta_k_penalty_weight": 0.1,
+            "d_spec_penalty_weight": 0.0919,
+            "conflict_penalty_weight": 0.3359,
+            "bayesian_trust_prior_weight": 0.5477,
+            "freshness_prior_weight": 0.3635,
+            "independence_prior_weight": 0.0634,
+            "llm_conf_prior_weight": 0.0254
+        }
+    },
+    "updated_at": "2026-10-25T06:54:07.585012+00:00",
+    "leaderboard": {
+        "LogisticRegression": {
+            "best_params": {
+                "clf__C": 10.0
+            },
+            "roc_auc": 0.9375384048175003,
+            "f1_score": 0.8988235294117647,
+            "brier_score": 0.08921504999893923,
+            "ece": 0.03180302218392514,
+            "composite_score": 0.8165203326346359
+        },
+        "RandomForest": {
+            "best_params": {
+                "max_depth": 10,
+                "n_estimators": 150
+            },
+            "roc_auc": 0.9794457416738356,
+            "f1_score": 0.9830508474576272,
+            "brier_score": 0.02138954049058617,
+            "ece": 0.0160786725800465,
+            "composite_score": 0.9419775286032029
+        },
+        "ExtraTrees": {
+            "best_params": {
+                "max_depth": 10,
+                "n_estimators": 100
+            },
+            "roc_auc": 0.9718569497357747,
+            "f1_score": 0.9666666666666667,
+            "brier_score": 0.03472188994044277,
+            "ece": 0.03589042473037475,
+            "composite_score": 0.9012446350649572
+        },
+        "GradientBoosting": {
+            "best_params": {
+                "learning_rate": 0.05,
+                "max_depth": 5,
+                "n_estimators": 100
+            },
+            "roc_auc": 0.9773257957478186,
+            "f1_score": 0.9805825242718447,
+            "brier_score": 0.025994777408346992,
+            "ece": 0.025097910519855594,
+            "composite_score": 0.9262331078196161
+        },
+        "AdaBoost": {
+            "best_params": {
+                "learning_rate": 0.2,
+                "n_estimators": 100
+            },
+            "roc_auc": 0.949489984023596,
+            "f1_score": 0.920863309352518,
+            "brier_score": 0.07614362199749192,
+            "ece": 0.03378497338536022,
+            "composite_score": 0.8395613886407438
+        },
+        "DeepMLP_NeuralNet": {
+            "best_params": {
+                "mlp__alpha": 0.01,
+                "mlp__hidden_layer_sizes": [
+                    128,
+                    64,
+                    32
+                ]
+            },
+            "roc_auc": 0.9580926631436647,
+            "f1_score": 0.9380952380952381,
+            "brier_score": 0.06643146385933585,
+            "ece": 0.04697780549374852,
+            "composite_score": 0.8446833937905803
+        },
+        "RBF_SVM": {
+            "best_params": {
+                "svm__C": 5.0,
+                "svm__gamma": "scale"
+            },
+            "roc_auc": 0.963622956863709,
+            "f1_score": 0.9406175771971497,
+            "brier_score": 0.06037812369564114,
+            "ece": 0.030793712218469757,
+            "composite_score": 0.8724511209495982
+        },
+        "StackingMetaEnsemble": {
+            "best_params": {
+                "final_estimator__C": 2.0
+            },
+            "roc_auc": 0.9745299250337962,
+            "f1_score": 0.9783132530120482,
+            "brier_score": 0.023159675252041417,
+            "ece": 0.019002366157594028,
+            "composite_score": 0.9323678836241608
+        }
+    }
+}

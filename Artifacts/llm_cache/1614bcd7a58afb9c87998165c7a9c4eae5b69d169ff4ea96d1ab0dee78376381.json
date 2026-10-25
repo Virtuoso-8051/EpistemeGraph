@@ -1,0 +1,216 @@
+{
+  "entities": [
+    {
+      "name": "stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "backpropogation",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "single hidden-layer feedforward neural networks",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "network neighborhood",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "communities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "homophily",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural equivalence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "hub node",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "feature learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "semi-supervised algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "custom graph-based objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "natural language processing",
+      "alias": "NLP",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network neighborhoods",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "d-dimensional feature space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "2 nd order random walk approach",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "node representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embeddings",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "stochastic gradient descent",
+      "subject_alias": "SGD",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "custom graph-based objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The objective can be efficiently optimized using stochastic gradient descent (SGD) akin to backpropogation on just single hidden-layer feedforward neural networks.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": true,
+      "object": "semi-supervised algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Present work. We proposenode2vec, a semi-supervised algorithm for scalable feature learning in networks.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "stochastic gradient descent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We optimize a custom graph-based objective function using SGD motivated by prior work on natural language processing [21].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "2 nd order random walk approach",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We use a 2 nd order random walk approach to generate (sample) network neighborhoods for nodes.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "custom graph-based objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We optimize a custom graph-based objective function using SGD motivated by prior work on natural language processing [21].",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "custom graph-based objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MAXIMIZES",
+      "is_functional": false,
+      "object": "preserving network neighborhoods",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Intuitively, our approach returns feature representations that maximize the likelihood of preserving network neighborhoods of nodes in a d-dimensional feature space.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "2 nd order random walk approach",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "network neighborhoods",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use a 2 nd order random walk approach to generate (sample) network neighborhoods for nodes.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "node representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "By choosing an appropriate notion of a neighborhood, node2vec can learn representations that organize nodes based on their network roles and/or communities they belong to.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "OBEY",
+      "is_functional": false,
+      "object": "homophily",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Thus, it is essential to allow for a flexible algorithm that can learn node representations obeying both principles: ability to learn representations that embed nodes from the same network community closely together, as well as to learn representations where nodes that share similar roles have similar embeddings.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "node representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "OBEY",
+      "is_functional": false,
+      "object": "structural equivalence",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Thus, it is essential to allow for a flexible algorithm that can learn node representations obeying both principles: ability to learn representations that embed nodes from the same network community closely together, as well as to learn representations where nodes that share similar roles have similar embeddings.",
+      "extraction_confidence": 0.84
+    }
+  ]
+}

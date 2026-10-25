@@ -1,0 +1,236 @@
+{
+  "entities": [
+    {
+      "name": "WWW",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "KDD",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "NIPS",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "ICML",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "CVPR",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "ICCV",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "co-author network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "papers",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "authors",
+      "alias": "",
+      "type": "PERSON"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "t-SNE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Flickr network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "network sparsity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "low-dimensional space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "2-D space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "neighbors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "high degree vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "communities",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "co-author network",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BUILT_FROM",
+      "is_functional": false,
+      "object": "papers",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The co-author network is built from the papers published in these conferences.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "authors",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "FILTERED_OUT_BY",
+      "is_functional": false,
+      "object": "co-author network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Authors with degree less than 3 are filtered out, and finally the network contains 18,561 authors and 207,074 edges.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "co-author network",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MAPS_TO",
+      "is_functional": false,
+      "object": "low-dimensional space",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We first map the co-author network into a low-dimensional space with different embedding approaches and then further map the lowdimensional vectors of the vertices to a 2-D space with the t-SNE package [21].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "low-dimensional space",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MAPS_TO",
+      "is_functional": false,
+      "object": "2-D space",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We first map the co-author network into a low-dimensional space with different embedding approaches and then further map the lowdimensional vectors of the vertices to a 2-D space with the t-SNE package [21].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "NOT_MEANINGFUL_FOR",
+      "is_functional": false,
+      "object": "co-author network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The visualization using graph factorization is not very meaningful, in which the authors belonging to the same communities are not clustered together.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "graph factorization",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The result of DeepWalk is much better.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "random walk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "This is because DeepWalk uses a random walk based approach to enrich the neighbors of the vertices, which brings in a lot of noise due to the randomness, especially for vertices with higher degrees.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "meaningful layout of the network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The LINE(2nd) performs quite well and generates meaningful layout of the network (nodes with same colors are distributed closer).",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Flickr network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Fig. 3(a) shows the results w.r.t. the percentage of links on the Flickr network.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "network sparsity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "AFFECTS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In this subsection, we formally analyze the performance of the above models w.r.t. the sparsity of networks.",
+      "extraction_confidence": 0.86
+    }
+  ]
+}

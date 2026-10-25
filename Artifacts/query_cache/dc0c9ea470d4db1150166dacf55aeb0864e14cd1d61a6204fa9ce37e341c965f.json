@@ -1,0 +1,91 @@
+{
+  "answer": "Across DeepWalk, LINE, and node2vec, the core idea is to reuse the natural language Skip-gram model as a neighborhood-prediction objective for graphs, but each method defines the \u201ccontext\u201d differently.\n\nDeepWalk adapts the Skip-gram model by first generating short random walks over the graph and then treating each walk like a sentence: nodes appearing within a fixed window on the same walk are treated as context for one another. The model then learns node embeddings that maximize the likelihood of predicting these context nodes from a center node, analogous to word2vec in text.\n\nLINE adapts the same general embedding goal differently: instead of random-walk sentences, it directly preserves graph proximity by optimizing objectives for first-order and second-order proximity. In practice, LINE uses a Skip-gram-like negative-sampling formulation to learn embeddings from observed edges and neighborhood distributions, so the learned vectors capture local graph structure without relying on random walks.\n\nnode2vec also uses a Skip-gram objective on random-walk-generated node sequences, but it changes the walk strategy. It introduces biased second-order random walks controlled by return and in-out parameters, allowing the walks to interpolate between breadth-first-search-like exploration and depth-first-search-like exploration. This makes the sampled contexts more flexible, and the Skip-gram model then learns embeddings from those biased walk neighborhoods.\n\nSo, in all three papers, Skip-gram is adapted from words to nodes by replacing textual co-occurrence with graph-derived co-occurrence; the main differences are whether the context comes from unbiased random walks (DeepWalk), direct edge/proximity modeling (LINE), or biased random walks with tunable exploration behavior (node2vec).",
+  "self_reported_accuracy": 0.96,
+  "confidence_reasoning": "These methods are well-established and the answer reflects their standard formulations, with only minor simplification in describing LINE's optimization details.",
+  "query_entities": [
+    "DeepWalk",
+    "LINE",
+    "node2vec",
+    "Skip-gram model"
+  ],
+  "response_entities": [
+    "DeepWalk",
+    "LINE",
+    "node2vec",
+    "Skip-gram model",
+    "random walk",
+    "node representation",
+    "low-dimensional vector",
+    "graph",
+    "first-order proximity",
+    "second-order proximity",
+    "negative sampling",
+    "breadth-first search",
+    "depth-first search"
+  ],
+  "response_triples": [
+    {
+      "source": "DeepWalk",
+      "target": "Skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DeepWalk",
+      "target": "random walk",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DeepWalk",
+      "target": "node representation",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "LINE",
+      "target": "Skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "node2vec",
+      "target": "Skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "node2vec",
+      "target": "breadth-first search",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "node2vec",
+      "target": "depth-first search",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    }
+  ]
+}

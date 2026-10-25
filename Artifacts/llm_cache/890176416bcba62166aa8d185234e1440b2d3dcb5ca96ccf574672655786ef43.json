@@ -1,0 +1,256 @@
+{
+  "entities": [
+    {
+      "name": "context",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "ordering constraint",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "probability",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex representation modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "optimization problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social representation learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "training time",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local graph structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "cocitation similarity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "machine learning tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "truncated random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "neural language models",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph",
+      "alias": "G",
+      "type": "DATASET"
+    },
+    {
+      "name": "window size",
+      "alias": "w",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embedding size",
+      "alias": "d",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "walks per vertex",
+      "alias": "\u03b3",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "walk length",
+      "alias": "t",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "matrix of vertex representations",
+      "alias": "\u03a6",
+      "type": "MODEL"
+    },
+    {
+      "name": "binary Tree",
+      "alias": "T",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SkipGram",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "representations of social networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "continuous vector space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent forms of community membership",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network topology",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "ordering constraint",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REMOVED_BY",
+      "is_functional": false,
+      "object": "context",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Finally, it removes the ordering constraint on the problem.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "optimization problem",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MAXIMIZES",
+      "is_functional": false,
+      "object": "probability",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Instead, the model is required to maximize the probability of any word appearing in the context without the knowledge of its offset from the given word.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "optimization problem",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "vertex representation modeling",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In terms of vertex representation modeling, this yields the optimization problem: minimize \u03a6 \u2212 log Pr ( {vi\u2212w,\u00b7\u00b7\u00b7 ,v i\u22121,v i+1,\u00b7\u00b7\u00b7 ,v i+w}| \u03a6(vi) ) (2)",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "nearness",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "First, the order independence assumption better captures a sense of \u2018nearness\u2019 that is provided by random walks.",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "truncated random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "COMBINED_WITH",
+      "is_functional": false,
+      "object": "neural language models",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "By combining both truncated random walks and neural language models we formulate a method which satisfies all Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "graph",
+      "object_alias": "G",
+      "object_type": "DATASET",
+      "evidence_quote": "Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPUTS",
+      "is_functional": false,
+      "object": "matrix of vertex representations",
+      "object_alias": "\u03a6",
+      "object_type": "MODEL",
+      "evidence_quote": "Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "SkipGram",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "7 SkipGram(\u03a6, Wvi, w)",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "representations of social networks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ARE_IN",
+      "is_functional": false,
+      "object": "continuous vector space",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This method generates representations of social networks that are low-dimensional, and exist in a continuous vector space.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "representations of social networks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENCODES",
+      "is_functional": false,
+      "object": "latent forms of community membership",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Its representations encode latent forms of community membership, and because the method outputs useful intermediate representations, it can adapt to changing network topology.",
+      "extraction_confidence": 0.92
+    }
+  ]
+}

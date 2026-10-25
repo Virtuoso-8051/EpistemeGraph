@@ -1,0 +1,172 @@
+{
+  "entities": [
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "DeepW alk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "baselines",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "training data",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "SpectralClustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "YouTube network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "SpectralClustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Modularity",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "real world graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "training ratio",
+      "alias": "TR",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "EdgeCluster",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "labeled nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepW alk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "baselines",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In other words, DeepW alkcan outperform the baselines with 60% less training data.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepW alk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "SpectralClustering",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "It also performs quite well in Macro- F1, initially performing close to SpectralClustering, but distancing itself to a 1% improvement.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "YouTube network",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "real world graph",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "It is much closer to a real world graph than those we have previously considered.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "DeepW alk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "EdgeCluster",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "They show that DeepW alk significantly outperforms the scalable baseline for creating graph representations, EdgeCluster.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "Micro- F1",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "DeepW alk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "When 1% of the labeled nodes are used for test, the Micro- F1 improves by 14%.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "Macro- F1",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "DeepW alk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The Macro- F1 shows a corresponding 10% increase.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "DeepW alk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "SpectralClustering",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Additionally, its Micro- F1 performance when only 3% of the graph is labeled beats all other methods even when they have been given 10% of the data.",
+      "extraction_confidence": 0.78
+    },
+    {
+      "subject": "DeepW alk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "Modularity",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The YouTube network is considerably larger than the previous ones we have experimented on, and its size prevents two of our baseline methods (SpectralClustering and Modularity) from running on it.",
+      "extraction_confidence": 0.95
+    }
+  ]
+}

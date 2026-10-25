@@ -1,0 +1,100 @@
+{
+  "answer": "Node2vec achieves scalability by splitting the embedding pipeline into three largely separable phases, each designed to keep the per-node and per-edge cost manageable on large graphs.\n\n1) Preprocessing modified weights: node2vec first preprocesses transition probabilities for its biased random walk procedure (BRWP). By computing and storing the alias-sampling tables for the second-order transition distribution in advance, the method avoids expensive probability recomputation during every walk step. This makes walk generation fast at runtime, at the cost of an upfront preprocessing pass that is typically linear in the number of edges times the local neighborhood work needed for the second-order bias.\n\n2) Random walk simulation: node2vec then generates a stream of short random walks (SSRW) from each node. These walks are sampled locally and independently, so the algorithm can parallelize walk generation across starting nodes and across walks. Because each walk has fixed length and only explores a bounded local context, the simulation cost scales approximately linearly with the number of walks and walk length rather than with all-pairs graph structure.\n\n3) SGD optimization: finally, node2vec trains the embedding model with an asynchronous stochastic gradient algorithm (ASGA), using the skip-gram objective over node-context pairs extracted from the walks. Stochastic updates operate on small minibatches or individual samples, so training avoids full-batch optimization over the entire graph. The use of asynchronous updates further improves throughput on multicore hardware, making the optimization phase scalable to large graphs and large numbers of sampled contexts.\n\nOverall, scalability comes from: precomputing walk transition data once, using local fixed-length random walks instead of global graph computations, and optimizing with stochastic/asynchronous updates rather than dense global matrix factorization. The result is a method whose runtime is driven mainly by the chosen number of walks, walk length, and embedding dimension, all of which can be tuned to trade accuracy for speed.",
+  "self_reported_accuracy": 0.92,
+  "confidence_reasoning": "The answer reflects the standard node2vec pipeline and its known scalability mechanisms, though exact complexity constants depend on implementation details and graph structure.",
+  "query_entities": [
+    "node2vec",
+    "preprocessing modified weights",
+    "random walk simulation",
+    "SGD optimization"
+  ],
+  "response_entities": [
+    "node2vec",
+    "preprocessing modified weights",
+    "biased random walk procedure",
+    "alias-sampling table",
+    "second-order transition distribution",
+    "random walk simulation",
+    "stream of short random walk",
+    "SGD optimization",
+    "asynchronous stochastic gradient algorithm",
+    "skip-gram objective",
+    "node-context pair",
+    "embedding model",
+    "multicore hardware",
+    "graph",
+    "embedding dimension"
+  ],
+  "response_triples": [
+    {
+      "source": "node2vec",
+      "target": "biased random walk procedure",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "alias-sampling table",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "alias-sampling table",
+      "target": "second-order transition distribution",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "node2vec",
+      "target": "stream of short random walk",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "stream of short random walk",
+      "target": "graph",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "node2vec",
+      "target": "asynchronous stochastic gradient algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "asynchronous stochastic gradient algorithm",
+      "target": "multicore hardware",
+      "type": "ENABLED_BY",
+      "claim_type": "SPECULATIVE",
+      "weight": 0.55
+    },
+    {
+      "source": "asynchronous stochastic gradient algorithm",
+      "target": "skip-gram objective",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "skip-gram objective",
+      "target": "node-context pair",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "node2vec",
+      "target": "embedding dimension",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.72
+    }
+  ]
+}

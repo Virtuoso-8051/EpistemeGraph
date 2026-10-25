@@ -1,0 +1,249 @@
+{
+  "entities": [
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(1st)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE-SGD(1st)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "undirected graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE(2nd)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE-SGD(2nd)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "directed graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "secondorder proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vector representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "supervised learning task",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "training data",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "unsupervised task",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "word embedding",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "negative samples",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "SkipGram",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "GF",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "language network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "word analogy",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "document classification",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Wikipedia data",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Semantic (%)",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Syntactic (%)",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Overall (%)",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Running time",
+      "alias": "",
+      "type": "METRIC"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE(1st)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPLIES_TO",
+      "is_functional": false,
+      "object": "undirected graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Like the graph factorization, both LINE(1st) and LINE-SGD(1st) only apply to undirected graphs.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE-SGD(1st)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPLIES_TO",
+      "is_functional": false,
+      "object": "undirected graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Like the graph factorization, both LINE(1st) and LINE-SGD(1st) only apply to undirected graphs.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPLIES_TO",
+      "is_functional": false,
+      "object": "directed graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "LINE(2nd) and LINESGD(2nd) apply to both undirected and directed graphs.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE-SGD(2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPLIES_TO",
+      "is_functional": false,
+      "object": "directed graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "LINE(2nd) and LINESGD(2nd) apply to both undirected and directed graphs.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "LINE(1st+2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "vector representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To utilize bothfirst-order and secondorder proximity, a simple and effective way is to concatenate the vector representations learned by LINE(1st) and LINE(2nd) into a longer vector.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE(1st+2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "supervised learning task",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore we only apply LINE (1st+2nd) to the scenario of supervised tasks.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "stochastic gradient descent",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "mini-batch size",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The mini-batch size of the stochastic gradient descent is set as 1 for all the methods.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "word analogy",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Wikipedia data",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Table 2: Results of word analogy on Wikipedia data.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "language network",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "two million nodes",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We start with the results on the language network, which contains two million nodes and a billion edges.",
+      "extraction_confidence": 0.93
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "subject": "Algorithm BFair-ReOrder",
+    "subject_alias": "BFair-ReOrder",
+    "subject_type": "ALGORITHM",
+    "relation": "DEFINED_AS",
+    "is_functional": true,
+    "object": "optimal",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Theorem 4.4 (AlgorithmBFair-ReOrderis optimal).",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Algorithm BFair-ReOrder",
+    "subject_alias": "BFair-ReOrder",
+    "subject_type": "ALGORITHM",
+    "relation": "HAS_TIME_COMPLEXITY",
+    "is_functional": true,
+    "object": "O(n \u00d7 2^l)",
+    "object_alias": null,
+    "object_type": "COMPLEXITY",
+    "evidence_quote": "Therefore, Algorithm BFair-ReOrder takes InO(\ud835\udc5b\u00d7 2\u2113) time.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "Algorithm BFair-ReOrder",
+    "subject_alias": "BFair-ReOrder",
+    "subject_type": "ALGORITHM",
+    "relation": "HAS_SPACE_COMPLEXITY",
+    "is_functional": true,
+    "object": "O(n)",
+    "object_alias": null,
+    "object_type": "COMPLEXITY",
+    "evidence_quote": "The space complexity is dominated by queue size,O(\ud835\udc5b).",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Subroutine MaxReOrder",
+    "subject_alias": "MaxReOrder",
+    "subject_type": "ALGORITHM",
+    "relation": "HAS_TIME_COMPLEXITY",
+    "is_functional": true,
+    "object": "O(n)",
+    "object_alias": null,
+    "object_type": "COMPLEXITY",
+    "evidence_quote": "Subroutine MaxReOrder takes at mostO(\ud835\udc5b) (\ud835\udc5b= |\ud835\udc4a|+|X| ) time.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Subroutine MaxReOrder",
+    "subject_alias": "MaxReOrder",
+    "subject_type": "ALGORITHM",
+    "relation": "IS_RUN",
+    "is_functional": false,
+    "object": "2^l times at worst case",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "At the worst case, MaxReOrder needs to be run 2\u2113 times.",
+    "extraction_confidence": 0.94
+  },
+  {
+    "subject": "Extended isomorphic stream",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "IS_OPTIMAL",
+    "is_functional": true,
+    "object": "optimal",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Thus, the extended isomorphic stream is also optimal.",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "Confluent Kafka Python",
+    "subject_alias": "CKP",
+    "subject_type": "SOFTWARE_LIBRARY",
+    "relation": "IS_OFFICIAL_PYTHON_CLIENT_FOR",
+    "is_functional": true,
+    "object": "Apache Kafka",
+    "object_alias": null,
+    "object_type": "SOFTWARE_PLATFORM",
+    "evidence_quote": "The streaming environment is simu- lated using Confluent Kafka Python (CKP), the official Python client for Apache Kafka.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Code and data",
+    "subject_alias": null,
+    "subject_type": "RESOURCE",
+    "relation": "ARE_AVAILABLE_AT",
+    "is_functional": true,
+    "object": "[1]",
+    "object_alias": null,
+    "object_type": "REFERENCE",
+    "evidence_quote": "Code and data are available at [1].",
+    "extraction_confidence": 0.99
+  }
+]

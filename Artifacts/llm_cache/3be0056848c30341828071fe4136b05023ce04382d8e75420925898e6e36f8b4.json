@@ -1,0 +1,174 @@
+{
+  "entities": [
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "network communities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "clusters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "homophily",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural roles",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural equivalence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node features",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "feature representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multilabel classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "link prediction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "prediction tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "real-world networks",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "DISCOVERS",
+      "is_functional": false,
+      "object": "clusters",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this setting node2vec discovers clusters/communities of characters that frequently interact with each other in the major sub-plots of the novel.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "network communities",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ARE_COLORED_USING",
+      "is_functional": false,
+      "object": "node2vec",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Notice how regions of the network (i.e., network communities) are colored using the same color.",
+      "extraction_confidence": 0.74
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "node features",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In order to discover which nodes have the same structural roles we use the same network but setp = 1,q = 2, use node2vec to get node features and then cluster the nodes based on the obtained features.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PRODUCES",
+      "is_functional": false,
+      "object": "feature representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our experiments evaluate the feature representations obtained through node2vec on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "feature representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "multilabel classification",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our experiments evaluate the feature representations obtained through node2vec on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "feature representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "link prediction",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our experiments evaluate the feature representations obtained through node2vec on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "equivalence notions",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPACT",
+      "is_functional": false,
+      "object": "prediction tasks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As we show through our experiments, these equivalence notions are commonly exhibited in most real-world networks and have a significant impact on the performance of the learned representations for prediction tasks.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_NOT_TIED_TO",
+      "is_functional": false,
+      "object": "structural equivalence",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "One could assign alternate semantic interpretations to these clusters of nodes, but the key takeaway is that node2vec is not tied to a particular notion of equivalence.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "structural roles",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In order to discover which nodes have the same structural roles we use the same network but setp = 1,q = 2, use node2vec to get node features and then cluster the nodes based on the obtained features.",
+      "extraction_confidence": 0.88
+    }
+  ]
+}

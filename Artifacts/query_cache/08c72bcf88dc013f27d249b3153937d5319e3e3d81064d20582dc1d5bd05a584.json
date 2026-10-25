@@ -1,0 +1,95 @@
+{
+  "answer": "In LINE, the first-order proximity and second-order proximity are not merged into a single shared objective in the original formulation; instead, they are learned as two separate embedding models and then combined in practice by concatenating the resulting embeddings for downstream use. Concretely, the first-order model learns a low-dimensional representation that preserves local pairwise proximity between directly connected nodes, while the second-order model learns a representation that preserves the similarity of nodes\u2019 neighborhood distributions. After training both models independently, the final node representation is typically formed by concatenating the first-order embedding and the second-order embedding, which lets the combined representation capture both direct edge proximity and neighborhood-structure similarity. This design is used because the two proximity notions encode complementary information: first-order proximity captures observed links, and second-order proximity captures similarity in context even when nodes are not directly connected. In practice, LINE is often trained with negative sampling and stochastic gradient descent to scale to large information networks.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "This is a standard description of LINE\u2019s published training and combination strategy, and the main uncertainty is only in wording details across implementations.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order proximity",
+    "second-order proximity"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order proximity",
+    "second-order proximity",
+    "embedding",
+    "local pairwise proximity",
+    "neighborhood distributions",
+    "negative sampling",
+    "classical stochastic gradient descent",
+    "information network"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "first-order proximity",
+      "target_alias": "FOP",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "second-order proximity",
+      "target_alias": "SON",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "embedding",
+      "target_alias": "embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "target": "local pairwise proximity",
+      "target_alias": "LPP",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "SON",
+      "target": "neighborhood distributions",
+      "target_alias": "neighborhood distributions",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "embedding",
+      "target_alias": "embedding",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "classical stochastic gradient descent",
+      "target_alias": "CSGD",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "negative sampling",
+      "target_alias": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    }
+  ]
+}

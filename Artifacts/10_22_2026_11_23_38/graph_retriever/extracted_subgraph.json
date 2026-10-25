@@ -1,0 +1,522 @@
+{
+    "query_entities": [
+        "double side stream",
+        "specific product or workflow"
+    ],
+    "node_count": 8,
+    "edge_count": 8,
+    "nodes": [
+        {
+            "aliases": [
+                "None",
+                "Continuous Fairness On Data Streams"
+            ],
+            "id": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "labels": [
+                "Entity"
+            ],
+            "name": "Continuous Fairness On Data Streams",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "updated_at": "2026-10-22T05:58:29.278326"
+        },
+        {
+            "aliases": [
+                "BFair-ReOrder",
+                "Algorithm BFair-ReOrder"
+            ],
+            "id": "4:97749650-eed8-4a62-9606-b8b84aea48e4:11",
+            "labels": [
+                "Entity"
+            ],
+            "name": "Algorithm BFair-ReOrder",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "updated_at": "2026-10-22T05:58:29.278326"
+        },
+        {
+            "aliases": [
+                "MaxReOrder",
+                "Subroutine MaxReOrder"
+            ],
+            "id": "4:97749650-eed8-4a62-9606-b8b84aea48e4:12",
+            "labels": [
+                "Entity"
+            ],
+            "name": "Subroutine MaxReOrder",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "updated_at": "2026-10-22T05:58:29.278326"
+        },
+        {
+            "aliases": [
+                "CKP",
+                "Confluent Kafka Python"
+            ],
+            "id": "4:97749650-eed8-4a62-9606-b8b84aea48e4:13",
+            "labels": [
+                "Entity"
+            ],
+            "name": "Confluent Kafka Python",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "updated_at": "2026-10-22T05:58:29.278326"
+        },
+        {
+            "aliases": [
+                "|W|",
+                "larger |W|"
+            ],
+            "id": "4:97749650-eed8-4a62-9606-b8b84aea48e4:15",
+            "labels": [
+                "Entity"
+            ],
+            "name": "larger |W|",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "updated_at": "2026-10-22T05:58:29.278326"
+        },
+        {
+            "aliases": [
+                "increasing s",
+                "s"
+            ],
+            "id": "4:97749650-eed8-4a62-9606-b8b84aea48e4:16",
+            "labels": [
+                "Entity"
+            ],
+            "name": "increasing s",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "updated_at": "2026-10-22T05:58:29.278326"
+        },
+        {
+            "aliases": [
+                "increasing \u2113",
+                "\u2113"
+            ],
+            "id": "4:97749650-eed8-4a62-9606-b8b84aea48e4:17",
+            "labels": [
+                "Entity"
+            ],
+            "name": "increasing \u2113",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "updated_at": "2026-10-22T05:58:29.278326"
+        },
+        {
+            "aliases": [
+                "we",
+                "Authors"
+            ],
+            "id": "4:97749650-eed8-4a62-9606-b8b84aea48e4:18",
+            "labels": [
+                "Entity"
+            ],
+            "name": "Authors",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "updated_at": "2026-10-22T05:58:29.278326"
+        }
+    ],
+    "edges": [
+        {
+            "grounding_score": 0.9343389272689819,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:11",
+            "type": "INCREASES_WHEN",
+            "weight": 0.95
+        },
+        {
+            "grounding_score": 0.8449603319168091,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:15",
+            "type": "INCREASES_WITH",
+            "weight": 0.98
+        },
+        {
+            "grounding_score": 0.7883669137954712,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:16",
+            "type": "DECREASES_WITH",
+            "weight": 0.96
+        },
+        {
+            "grounding_score": 0.20435863733291626,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:17",
+            "type": "HAS_NO_CLEAR_TREND_WITH",
+            "weight": 0.84
+        },
+        {
+            "grounding_score": 0.9252386093139648,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "STUDIES",
+            "weight": 0.98
+        },
+        {
+            "grounding_score": 0.6644759178161621,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "PROPOSES",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.9657596349716187,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "ENSURES",
+            "weight": 0.98
+        },
+        {
+            "grounding_score": 0.7548701167106628,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "ADDRESSES",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.5200427770614624,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "DESIGNS",
+            "weight": 0.98
+        },
+        {
+            "grounding_score": 0.8438047170639038,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "MAINTAINS",
+            "weight": 0.96
+        },
+        {
+            "grounding_score": 0.5812019109725952,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "DEVELOPS",
+            "weight": 0.98
+        },
+        {
+            "grounding_score": 0.683620035648346,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "CHECKS",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.6083351969718933,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "REORDERS",
+            "weight": 0.95
+        },
+        {
+            "grounding_score": 0.4453197121620178,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "EXTEND",
+            "weight": 0.96
+        },
+        {
+            "grounding_score": 0.6473771333694458,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "REPRESENT",
+            "weight": 0.95
+        },
+        {
+            "grounding_score": 0.9343254566192627,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "AIMED_AT",
+            "weight": 0.98
+        },
+        {
+            "grounding_score": 0.3416055142879486,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "PREPROCESSES",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.5884780883789062,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "ANSWERS",
+            "weight": 0.96
+        },
+        {
+            "grounding_score": 0.9200242757797241,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "IS_OPTIMAL",
+            "weight": 0.96
+        },
+        {
+            "grounding_score": 0.7545275688171387,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "ARE_AVAILABLE_AT",
+            "weight": 0.99
+        },
+        {
+            "grounding_score": 0.8201920390129089,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "PREFER",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.3438159227371216,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "ARE_CONSISTENT_WITH",
+            "weight": 0.95
+        },
+        {
+            "grounding_score": 0.8686172962188721,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "OUTPERFORMS",
+            "weight": 0.98
+        },
+        {
+            "grounding_score": 0.5479128360748291,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "ENFORCES",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.8587064146995544,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "IS",
+            "weight": 0.95
+        },
+        {
+            "grounding_score": 0.7586939334869385,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "CAN_EXCEED",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.8627805113792419,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "IS_TYPICALLY_IN_ORDER_OF",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.9786195158958435,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "ENABLES",
+            "weight": 0.95
+        },
+        {
+            "grounding_score": 0.6857990622520447,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "OFFERS",
+            "weight": 0.93
+        },
+        {
+            "grounding_score": 0.8406491279602051,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "HANDLES",
+            "weight": 0.9
+        },
+        {
+            "grounding_score": 0.7410879135131836,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "INCLUDES",
+            "weight": 0.89
+        },
+        {
+            "grounding_score": 0.7552217245101929,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:11",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "DEFINED_AS",
+            "weight": 0.98
+        },
+        {
+            "grounding_score": 0.8643495440483093,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:11",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "HAS_TIME_COMPLEXITY",
+            "weight": 0.95
+        },
+        {
+            "grounding_score": 0.4995332956314087,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:11",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "HAS_SPACE_COMPLEXITY",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.4675156772136688,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:11",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "SCALES_LINEARLY_WITH",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.8270466327667236,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:12",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "HAS_TIME_COMPLEXITY",
+            "weight": 0.97
+        },
+        {
+            "grounding_score": 0.7078279852867126,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:12",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "IS_RUN",
+            "weight": 0.94
+        },
+        {
+            "grounding_score": 0.6426434516906738,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:13",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "IS_OFFICIAL_PYTHON_CLIENT_FOR",
+            "weight": 0.98
+        },
+        {
+            "grounding_score": 0.8620117902755737,
+            "source": "4:97749650-eed8-4a62-9606-b8b84aea48e4:18",
+            "source_pdfs": [
+                "sample.pdf"
+            ],
+            "target": "4:97749650-eed8-4a62-9606-b8b84aea48e4:0",
+            "type": "INVESTIGATE",
+            "weight": 0.96
+        }
+    ]
+}

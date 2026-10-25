@@ -1,0 +1,211 @@
+{
+  "entities": [
+    {
+      "name": "Word Analogy",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Mikolov et al.",
+      "alias": "",
+      "type": "PERSON"
+    },
+    {
+      "name": "cosine proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "semantic",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "syntactic",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Wikipedia corpora",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia word network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "language network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SkipGram",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "matrix factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "window size",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Wikipedia page classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Wikipedia data set",
+      "alias": "",
+      "type": "DATASET"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Word Analogy",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "Mikolov et al.",
+      "object_alias": "",
+      "object_type": "PERSON",
+      "evidence_quote": "This task is introduced by Mikolov et al. [12].",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Word Analogy",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "cosine proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Given the word embeddings, this task is solved by finding the word d\u2217 whose embedding is closest to the vector\u20d7 ub\u2212\u20d7 ua+\u20d7 uc in terms of cosine proximity, i.e.,d\u2217 = argmaxd cos((\u20d7 ub\u2212\u20d7 ua +\u20d7 uc),\u20d7 ud).",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Word Analogy",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "semantic",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Two categories of word analogy are used in this task: semantic and syntactic.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Word Analogy",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "syntactic",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Two categories of word analogy are used in this task: semantic and syntactic.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "TRAINED_ON",
+      "is_functional": false,
+      "object": "Wikipedia corpora",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Table 2 reports the results of word analogy using the embeddings of words learned on the Wikipedia corpora (SkipGram) or the Wikipedia word network (all other methods).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "logarithm of the number of cooccurrences",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For graph factorization, the weight between each pair of words is defined as the logarithm of the number of cooccurrences, which leads to better performance than the original value of cooccurrences.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "language network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For DeepWalk, different cutoff thresholds are tried to convert the language network into a binary network, and the best performance is achieved when all the edges are kept in the network.",
+      "extraction_confidence": 0.94
+    },
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "original Wikipedia pages",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We also compare with the state-of-the-art word embedding model SkipGram [12], which learns the word embeddings directly from the original Wikipedia pages and is also implicitly a matrix factorization approach [8].",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "SkipGram",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "We can see that LINE(2nd) outperforms all other methods, including the graph embedding methods and the SkipGram.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This indicates that the second-order proximity betTable 3: Results of Wikipedia page classification on Wikipedia data set.",
+      "extraction_confidence": 0.72
+    }
+  ]
+}

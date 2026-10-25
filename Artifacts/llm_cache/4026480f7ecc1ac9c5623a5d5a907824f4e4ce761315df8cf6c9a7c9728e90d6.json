@@ -1,0 +1,206 @@
+{
+  "entities": [
+    {
+      "name": "distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "empirical probability",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "distance",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "KL-divergence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "probability distributions",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "undirected graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "directed graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "d-dimensional space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "context",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "conditional distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "first-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To preserve the first-order proximity, a straightforward way is to minimize the following objective function: O1 =d(\u02c6p1(\u00b7,\u00b7),p 1(\u00b7,\u00b7)), (2) where d(\u00b7,\u00b7) is the distance between two distributions.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "KL-divergence",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We choose to minimize the KL-divergence of two probability distributions.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "first-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "APPLICABLE_FOR",
+      "is_functional": false,
+      "object": "undirected graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that the first-order proximity is only applicable for undirected graphs, not for directed graphs.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "first-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "NOT_APPLICABLE_FOR",
+      "is_functional": false,
+      "object": "directed graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that the first-order proximity is only applicable for undirected graphs, not for directed graphs.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "4.1.2 LINE with Second-order Proximity The second-order proximity is applicable for both directed and undirected graphs.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "4.1.2 LINE with Second-order Proximity The second-order proximity is applicable for both directed and undirected graphs.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "APPLICABLE_FOR",
+      "is_functional": false,
+      "object": "directed graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The second-order proximity is applicable for both directed and undirected graphs.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "APPLICABLE_FOR",
+      "is_functional": false,
+      "object": "undirected graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The second-order proximity is applicable for both directed and undirected graphs.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "vertex",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REPRESENTED_IN",
+      "is_functional": false,
+      "object": "d-dimensional space",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "By finding the {\u20d7 ui}i=1..|V| that minimize the objective in Eqn. (3), we can represent every vertex in the d-dimensional space.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ASSUMES",
+      "is_functional": false,
+      "object": "context",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The second-order proximity assumes that vertices sharing many connections to other vertices are similar to each other.",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

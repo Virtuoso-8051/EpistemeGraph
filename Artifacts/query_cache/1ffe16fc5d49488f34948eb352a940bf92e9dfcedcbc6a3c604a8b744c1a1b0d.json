@@ -1,0 +1,120 @@
+{
+  "answer": "Under the stated assumption, LINE\u2019s MoE routing architecture would replace a single shared embedding/MLP pathway with a router that scores each vertex and sends that vertex to its top-2 experts out of 64 expert MLPs. Concretely, a gating network would take the vertex representation as input, produce 64 expert logits, select the two highest-scoring experts, and assign normalized routing weights to those experts so the vertex\u2019s forward pass is computed as a weighted combination of the two expert outputs. A load-balancing auxiliary loss would be added during training to discourage expert collapse and encourage roughly even utilization across the 64 experts. In this design, the router is the mechanism that partitions vertices, the expert MLPs are the capacity that specializes on different vertex subsets, and the auxiliary loss is the regularizer that keeps the partitioning balanced. Because this is a hypothetical modification rather than the original LINE formulation, the description is architectural and speculative: original LINE is a network embedding method based on preserving first- and second-order proximity, not an MoE model. So the MoE version of LINE would be best understood as a sparse conditional-computation variant of LINE in which each vertex is processed by only two of the 64 experts per routing decision.",
+  "self_reported_accuracy": 0.86,
+  "confidence_reasoning": "The MoE routing description is standard, but the claim about LINE itself is speculative because LINE does not natively use MoE routing in its original formulation.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "Mixture-of-Experts",
+    "top-2 gating router",
+    "load-balancing auxiliary loss",
+    "expert MLP",
+    "vertex"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "Mixture-of-Experts",
+    "top-2 gating router",
+    "load-balancing auxiliary loss",
+    "expert MLP",
+    "vertex",
+    "gating network",
+    "expert logits",
+    "routing weights",
+    "auxiliary loss",
+    "first-order proximity",
+    "second-order proximity",
+    "sparse conditional computation"
+  ],
+  "response_triples": [
+    {
+      "source": "Mixture-of-Experts",
+      "source_alias": "MoE",
+      "target": "top-2 gating router",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "top-2 gating router",
+      "source_alias": null,
+      "target": "expert MLP",
+      "target_alias": null,
+      "type": "PART_OF",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "gating network",
+      "source_alias": null,
+      "target": "expert logits",
+      "target_alias": null,
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "expert logits",
+      "source_alias": null,
+      "target": "routing weights",
+      "target_alias": null,
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "load-balancing auxiliary loss",
+      "source_alias": null,
+      "target": "expert collapse",
+      "target_alias": null,
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "load-balancing auxiliary loss",
+      "source_alias": null,
+      "target": "expert utilization",
+      "target_alias": null,
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "Mixture-of-Experts",
+      "target_alias": "MoE",
+      "type": "USES",
+      "claim_type": "SPECULATIVE",
+      "weight": 0.99
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "first-order proximity",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "REFUTED",
+      "weight": 0.96
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "second-order proximity",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "REFUTED",
+      "weight": 0.96
+    },
+    {
+      "source": "Mixture-of-Experts",
+      "source_alias": "MoE",
+      "target": "sparse conditional computation",
+      "target_alias": null,
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    }
+  ]
+}

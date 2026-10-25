@@ -1,0 +1,245 @@
+{
+  "entities": [
+    {
+      "name": "EdgeCluster",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "k-means clustering",
+      "alias": "k-means",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "adjacency matrix",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "G",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Modularity method",
+      "alias": "Modularity",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "spectral decomposition",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "weighted-vote Relational Neighbor",
+      "alias": "wvRN",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "relational classifier",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "neighborhood",
+      "alias": "N_i",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex",
+      "alias": "v_i",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "training set",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "multilabel classification tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "one-vs-rest logistic regression",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LibLinear",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "SpectralClustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "EdgeCluster",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "k-means clustering",
+      "object_alias": "k-means",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "EdgeCluster [40]: This method uses k-means clustering to cluster the adjacency matrix of G.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "EdgeCluster",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "adjacency matrix",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "EdgeCluster [40]: This method uses k-means clustering to cluster the adjacency matrix of G.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "EdgeCluster",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "G",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "EdgeCluster [40]: This method uses k-means clustering to cluster the adjacency matrix of G.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "EdgeCluster",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Modularity method",
+      "object_alias": "Modularity",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Its has been shown to perform comparably to the Modularity method, with the added advantage of scaling to graphs which are too large for spectral decomposition.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "EdgeCluster",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "spectral decomposition",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Its has been shown to perform comparably to the Modularity method, with the added advantage of scaling to graphs which are too large for spectral decomposition.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "weighted-vote Relational Neighbor",
+      "subject_alias": "wvRN",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "relational classifier",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The weighted-vote Relational Neighbor is a relational classifier.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "weighted-vote Relational Neighbor",
+      "subject_alias": "wvRN",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "neighborhood",
+      "object_alias": "N_i",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Given the neighborhood Ni of vertexvi, wvRN estimates Pr(yi|Ni) with the (appropriately normalized) weighted mean of its neighbors (i.e Pr(yi|Ni) = 1Z\u2211vj\u2208Niwij Pr(yj|N j)).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "weighted-vote Relational Neighbor",
+      "subject_alias": "wvRN",
+      "subject_type": "ALGORITHM",
+      "relation": "ESTIMATES",
+      "is_functional": false,
+      "object": "Pr(yi|Ni)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Given the neighborhood Ni of vertexvi, wvRN estimates Pr(yi|Ni) with the (appropriately normalized) weighted mean of its neighbors (i.e Pr(yi|Ni) = 1Z\u2211vj\u2208Niwij Pr(yj|N j)).",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "Majority",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "training set",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "This na \u0308\u0131ve method simply chooses the most frequent labels in the training set.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "EdgeCluster",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "Modularity method",
+      "object_alias": "Modularity",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "weighted-vote Relational Neighbor",
+      "object_alias": "wvRN",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

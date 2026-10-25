@@ -1,0 +1,90 @@
+{
+  "answer": "Under the standard node2vec formulation, there is no backdoor-adjustment equation because node2vec is a biased random-walk embedding method, not a structural causal model. If one were to impose a causal interpretation and treat the random-walk transition as an intervention on the next-node choice, a generic backdoor-adjustment form would be\n\nP(Y \\mid do(X=x)) = \\sum_z P(Y \\mid X=x, Z=z) P(Z=z),\n\nor, in continuous form,\n\nP(Y \\mid do(X=x)) = \\int P(Y \\mid X=x, Z=z) \\, p(z) \\, dz,\n\nwhere Z is a valid adjustment set that blocks all backdoor paths from X to Y. However, this is a hypothetical causal reformulation, not part of the original node2vec algorithm. In node2vec itself, the key mechanism is a biased random walk procedure that interpolates between breadth-first and depth-first exploration using parameters p and q, and the learned node embeddings are optimized from the resulting walk corpus with a skip-gram-style objective.\n\nSo the most accurate answer is: node2vec does not have an official backdoor-adjustment equation; the causal backdoor formula above is only a generic causal-inference template, not a node2vec-specific derivation.",
+  "self_reported_accuracy": 0.91,
+  "confidence_reasoning": "I am highly confident about the generic backdoor formula and about node2vec's original random-walk/skip-gram design, but the causal reinterpretation is hypothetical rather than part of the method.",
+  "query_entities": [
+    "NODE2VEC",
+    "Causal Do-Calculus",
+    "backdoor adjustment",
+    "structural causal DAG",
+    "random walk"
+  ],
+  "response_entities": [
+    "NODE2VEC",
+    "Causal Do-Calculus",
+    "backdoor adjustment",
+    "structural causal DAG",
+    "random walk",
+    "biased random walk procedure",
+    "breadth-first search",
+    "depth-first search",
+    "skip-gram",
+    "objective function",
+    "node2vec parameter"
+  ],
+  "response_triples": [
+    {
+      "source": "Causal Do-Calculus",
+      "target": "backdoor adjustment",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "backdoor adjustment",
+      "target": "structural causal DAG",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk procedure",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "breadth-first search",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "depth-first search",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "objective function",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "biased random walk procedure",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "backdoor adjustment",
+      "target": "NODE2VEC",
+      "type": "REFUTED",
+      "claim_type": "REFUTED",
+      "weight": 0.97
+    }
+  ]
+}

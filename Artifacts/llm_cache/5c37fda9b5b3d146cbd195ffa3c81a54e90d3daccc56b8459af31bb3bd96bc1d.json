@@ -1,0 +1,202 @@
+{
+  "entities": [
+    {
+      "name": "LINE model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embeddings",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function (3)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function (6)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "negative sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "conditional probability p2(\u00b7|vi)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sigmoid function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "observed edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "negative edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "noise distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "out-degree of vertex v",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "asynchronous stochastic gradient algorithm",
+      "alias": "ASGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "mini-batch of edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embedding vector ui",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word cooccurrence network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "gradients",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "learning rate",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To embed the networks by preserving both the first-order and second-order proximity, a simple and effective way we find in practice is to train the LINE model which preserves the first-order proximity and second-order proximity separately and then concatenate the embeddings trained by the two methods for each vertex.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To embed the networks by preserving both the first-order and second-order proximity, a simple and effective way we find in practice is to train the LINE model which preserves the first-order proximity and second-order proximity separately and then concatenate the embeddings trained by the two methods for each vertex.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "embeddings",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To embed the networks by preserving both the first-order and second-order proximity, a simple and effective way we find in practice is to train the LINE model which preserves the first-order proximity and second-order proximity separately and then concatenate the embeddings trained by the two methods for each vertex.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "negative sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "noise distribution",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "More specifically, it specifies the following objective function for each edge (i,j ): log\u03c3(\u20d7 u\u2032j T\u00b7\u20d7 ui) + K\u2211 i=1 Evn\u223cPn(v)[log\u03c3(\u2212\u20d7 u\u2032nT\u00b7\u20d7 ui)], (7) where\u03c3(x) = 1/(1 + exp(\u2212x)) is the sigmoid function.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "negative sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "observed edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The first term models the observed edges, the second term models the negative edges drawn from the noise distribution and K is the number of negative edges.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "negative sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "negative edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The first term models the observed edges, the second term models the negative edges drawn from the noise distribution and K is the number of negative edges.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "asynchronous stochastic gradient algorithm",
+      "subject_alias": "ASGD",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "mini-batch of edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In each step, the ASGD algorithm samples a mini-batch of edges and then updates the model parameters.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "word cooccurrence network",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "gradients",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In such networks, the scales of the gradients diverge and it is very hard to find a good learning rate.",
+      "extraction_confidence": 0.72
+    }
+  ]
+}

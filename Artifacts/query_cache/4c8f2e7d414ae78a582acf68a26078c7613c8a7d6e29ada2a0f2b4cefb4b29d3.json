@@ -1,0 +1,81 @@
+{
+  "answer": "The benchmark datasets shared across the experiments of DeepWalk, LINE, and node2vec are the following:\n\n- **Karate Club**\n- **Dolphins**\n- **Polbooks**\n- **BlogCatalog**\n- **Flickr**\n- **YouTube**\n- **Wikipedia**\n- **PPI**\n\nA few notes on overlap:\n- **Karate Club, Dolphins, and Polbooks** are commonly used in the smaller-scale evaluation sections of these methods.\n- **BlogCatalog, Flickr, YouTube, and Wikipedia** appear in the larger-scale or multi-label classification evaluations.\n- **PPI** is also used in node embedding evaluations, though the exact experimental protocol can differ across papers.\n\nSo, the safest concise answer is that the shared benchmark datasets include **Karate Club, Dolphins, Polbooks, BlogCatalog, Flickr, YouTube, Wikipedia, and PPI**.",
+  "self_reported_accuracy": 0.86,
+  "confidence_reasoning": "These datasets are well-known overlaps across the three papers, but exact inclusion can vary by experimental section and preprocessing details.",
+  "query_entities": [
+    "DeepWalk",
+    "LINE",
+    "node2vec"
+  ],
+  "response_entities": [
+    "DeepWalk",
+    "LINE",
+    "node2vec",
+    "Karate Club",
+    "Dolphins",
+    "Polbooks",
+    "BlogCatalog",
+    "Flickr",
+    "YouTube",
+    "Wikipedia",
+    "PPI"
+  ],
+  "response_triples": [
+    {
+      "source": "DeepWalk",
+      "target": "Karate Club",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "DeepWalk",
+      "target": "Dolphins",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "DeepWalk",
+      "target": "Polbooks",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "LINE",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "LINE",
+      "target": "Flickr",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "node2vec",
+      "target": "Wikipedia",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "node2vec",
+      "target": "PPI",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "DeepWalk",
+      "target": "node2vec",
+      "type": "COMPARED_WITH",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    }
+  ]
+}

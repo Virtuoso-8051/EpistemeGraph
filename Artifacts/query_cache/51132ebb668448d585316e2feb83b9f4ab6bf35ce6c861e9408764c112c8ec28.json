@@ -1,0 +1,59 @@
+{
+  "answer": "In node2vec, the return parameter p controls how strongly the random walk is biased to immediately revisit the previous node. A large p (greater than max(q, 1)) makes returning to the previous node less likely, so the walk is discouraged from backtracking and is more likely to continue exploring outward. A small p (less than min(q, 1)) makes returning to the previous node more likely, so the walk is more likely to backtrack and stay close to the current local neighborhood. In the usual interpretation of node2vec, this means large p pushes the walk toward more outward, exploratory behavior, while small p pushes it toward more local, revisiting behavior. The q parameter separately controls the breadth-first versus depth-first tendency of the walk, but the question here concerns the return bias induced by p.",
+  "self_reported_accuracy": 0.97,
+  "confidence_reasoning": "This is a direct description of the standard node2vec transition bias controlled by p, which is well-established and unambiguous.",
+  "query_entities": [
+    "node2vec parameter"
+  ],
+  "response_entities": [
+    "node2vec parameter",
+    "NODE2VEC",
+    "random walk"
+  ],
+  "response_triples": [
+    {
+      "source": "node2vec parameter",
+      "source_alias": "NP",
+      "target": "random walk",
+      "target_alias": "RW",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "node2vec parameter",
+      "source_alias": "NP",
+      "target": "random walk",
+      "target_alias": "RW",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "node2vec parameter",
+      "source_alias": "NP",
+      "target": "random walk",
+      "target_alias": "RW",
+      "type": "ENABLED_BY",
+      "claim_type": "ASSERTED",
+      "weight": 0.0
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "random walk",
+      "target_alias": "RW",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "node2vec parameter",
+      "source_alias": "NP",
+      "target": "random walk",
+      "target_alias": "RW",
+      "type": "CAUSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    }
+  ]
+}

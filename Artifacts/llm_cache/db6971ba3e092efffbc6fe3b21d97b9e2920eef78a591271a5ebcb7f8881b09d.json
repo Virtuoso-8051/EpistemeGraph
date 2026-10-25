@@ -1,0 +1,172 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "social representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph\u2019s vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "stream of short random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent features",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neighborhood similarity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "community membership",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social relations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "continuous vector space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neural language models",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Zachary\u2019s Karate network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Karate network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Figure 1",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": true,
+      "object": "social representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We develop an algorithm ( DeepW alk) that learns social representations of a graph\u2019s vertices, by modeling a stream of short random walks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "stream of short random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We develop an algorithm ( DeepW alk) that learns social representations of a graph\u2019s vertices, by modeling a stream of short random walks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "social representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "latent features",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Social representations are latent features of the vertices that capture neighborhood similarity and community membership.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "latent features",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAPTURES",
+      "is_functional": false,
+      "object": "neighborhood similarity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Social representations are latent features of the vertices that capture neighborhood similarity and community membership.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "latent features",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAPTURES",
+      "is_functional": false,
+      "object": "community membership",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Social representations are latent features of the vertices that capture neighborhood similarity and community membership.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "latent representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENCODES",
+      "is_functional": false,
+      "object": "social relations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These latent representations encode social relations in a continuous vector space with a relatively small number of dimensions.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "latent representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "continuous vector space",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These latent representations encode social relations in a continuous vector space with a relatively small number of dimensions.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPLIED_TO",
+      "is_functional": false,
+      "object": "Zachary\u2019s Karate network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "The result of applying our method to the well-studied Karate network is shown in Figure 1.",
+      "extraction_confidence": 0.88
+    }
+  ]
+}

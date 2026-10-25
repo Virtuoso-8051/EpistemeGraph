@@ -1,0 +1,216 @@
+{
+  "entities": [
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "PPI",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "10% labeled data",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Figure 5a",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "50-50 split between labeled and unlabeled data",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Macro-F 1 score",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "parameter p",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "parameter q",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "homophilic equivalences",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural equivalences",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "outward exploration",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of features d",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of walks r",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "walk length l",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neighborhood size k",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representations",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "BlogCatalog",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "the node2vec algorithm involves a number of parameters and in Figure 5a, we examine how the different choices of parameters affect the performance of node2vec on the BlogCatalog dataset using a 50-50 split between labeled and unlabeled data.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Macro-F 1 score",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "We measure the Macro-F 1 score as a function of parameters p and q.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Macro-F 1 score",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "The performance of node2vec improves as the in-out parameter p and the return parameter q decrease.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "parameter p",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We measure the Macro-F 1 score as a function of parameters p and q.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "parameter q",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We measure the Macro-F 1 score as a function of parameters p and q.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "number of features d",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We also examine how the number of features d and the node\u2019s neighborhood parameters (number of walks r, walk length l, and neighborhood sizek) affect the performance.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "number of walks r",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We also examine how the number of features d and the node\u2019s neighborhood parameters (number of walks r, walk length l, and neighborhood sizek) affect the performance.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "walk length l",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We also examine how the number of features d and the node\u2019s neighborhood parameters (number of walks r, walk length l, and neighborhood sizek) affect the performance.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "neighborhood size k",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We also examine how the number of features d and the node\u2019s neighborhood parameters (number of walks r, walk length l, and neighborhood sizek) affect the performance.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "APPROXIMATES",
+      "is_functional": false,
+      "object": "100",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We observe that performance tends to saturate once the dimensions of the representations reaches around 100.",
+      "extraction_confidence": 0.84
+    }
+  ]
+}

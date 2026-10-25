@@ -1,0 +1,162 @@
+{
+  "entities": [
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "LibLinear",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "one-vs-rest logistic regression",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "SpectralClustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Modularity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "EdgeCluster",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "wvRN",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Tang and Liu\u2019s preferred dimensionality",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Flickr",
+      "alias": "",
+      "type": "DATASET"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LibLinear",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "IMPLEMENTS",
+      "is_functional": false,
+      "object": "one-vs-rest logistic regression",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "For all models we use a one-vs-rest logistic regression implemented by LibLinear [10] for classification.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "BlogCatalog",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "6.1.1 BlogCatalog In this experiment we increase the training ratio ( TR) on the BlogCatalog network from 10% to 90%.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Flickr",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "6.1.2 Flickr In this experiment we vary the training ratio (TR) on the Flickr network from 1% to 10%.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "EdgeCluster",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "Modularity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "wvRN",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "SpectralClustering",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkstill outperforms when labeled data is sparse on both Macro-F1 (TR\u2264 20%) and Micro-F1 (TR\u2264 60%).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "Macro-F1",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "DeepW alkstill outperforms when labeled data is sparse on both Macro-F1 (TR\u2264 20%) and Micro-F1 (TR\u2264 60%).",
+      "extraction_confidence": 0.62
+    }
+  ]
+}

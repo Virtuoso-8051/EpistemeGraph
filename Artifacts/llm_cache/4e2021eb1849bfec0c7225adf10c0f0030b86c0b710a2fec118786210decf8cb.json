@@ -1,0 +1,202 @@
+{
+  "entities": [
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "YouTube Social Graph",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia Article Text",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "power-law distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "words",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "natural language",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walk",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "similarity measure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "content recommendation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "community detection",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "output sensitive algorithms",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "local community structure information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "short random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "degree distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "connected graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "scale-free",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "power-law distribution",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FOLLOWS",
+      "is_functional": false,
+      "object": "vertices",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The power-law distribution of vertices appearing in short random walks (2a) follows a power-law, much like the distribution of words in natural language (2b).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "power-law distribution",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FOLLOWS",
+      "is_functional": false,
+      "object": "words",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The power-law distribution of vertices appearing in short random walks (2a) follows a power-law, much like the distribution of words in natural language (2b).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USED_AS",
+      "is_functional": false,
+      "object": "similarity measure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USED_IN",
+      "is_functional": false,
+      "object": "content recommendation",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USED_IN",
+      "is_functional": false,
+      "object": "community detection",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FOUNDATION_OF",
+      "is_functional": false,
+      "object": "output sensitive algorithms",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "They are also the foundation of a class ofoutput sensitive algorithms which use them to compute local community structure information in time sublinear to the size of the input graph [38].",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "output sensitive algorithms",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "COMPUTE",
+      "is_functional": false,
+      "object": "local community structure information",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "They are also the foundation of a class ofoutput sensitive algorithms which use them to compute local community structure information in time sublinear to the size of the input graph [38].",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "degree distribution",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FOLLOWS",
+      "is_functional": false,
+      "object": "scale-free",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "If the degree distribution of a connected graph follows a power law (is scale-free), we observe that the frequency which vertices appear in the short random walks will also follow a power-law distribution.",
+      "extraction_confidence": 0.94
+    }
+  ]
+}

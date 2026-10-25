@@ -1,0 +1,164 @@
+{
+  "entities": [
+    {
+      "name": "Large-scale Information Network Embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "network embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "low-dimensional space",
+      "alias": "R^d",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "function fG : V \u2192 R^d",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "joint probability",
+      "alias": "p1(vi,vj)",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "empirical probability",
+      "alias": "p\u03021(i,j)",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex representation",
+      "alias": "ui",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "function fG : V \u2192 R^d",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Definition 4. (Large-scale Information Network Embedding) Given a large network G = (V,E ), the problem of Large-scale Information Network Embedding aims to represent each vertexv\u2208V into a low-dimensional space Rd, i.e., learning a function fG : V \u2192 Rd, where d\u226a| V|.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "low-dimensional space",
+      "object_alias": "R^d",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Definition 4. (Large-scale Information Network Embedding) Given a large network G = (V,E ), the problem of Large-scale Information Network Embedding aims to represent each vertexv\u2208V into a low-dimensional space Rd, i.e., learning a function fG : V \u2192 Rd, where d\u226a| V|.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the space Rd, both the first-order proximity and the second-order proximity between the vertices are preserved.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the space Rd, both the first-order proximity and the second-order proximity between the vertices are preserved.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "network embedding",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this section, we present a novel network embedding model called the \u201cLINE,\u201d which satisfies all the three requirements.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We describe the LINE model to preserve the first-order proximity and second-order proximity separately, and then introduce a simple way to combine the two proximity.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We describe the LINE model to preserve the first-order proximity and second-order proximity separately, and then introduce a simple way to combine the two proximity.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "first-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "joint probability",
+      "object_alias": "p1(vi,vj)",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To model the first-order proximity, for each undirected edge (i,j ), we define the joint probability between vertexvi andvj as follows: p1(vi,v j) = 11 + exp(\u2212\u20d7 uTi \u00b7\u20d7 uj), (1) where \u20d7 ui\u2208Rd is the low-dimensional vector representation of vertex vi.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "vertex representation",
+      "subject_alias": "ui",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "low-dimensional space",
+      "object_alias": "R^d",
+      "object_type": "CONCEPT",
+      "evidence_quote": "where \u20d7 ui\u2208Rd is the low-dimensional vector representation of vertex vi.",
+      "extraction_confidence": 0.94
+    }
+  ]
+}

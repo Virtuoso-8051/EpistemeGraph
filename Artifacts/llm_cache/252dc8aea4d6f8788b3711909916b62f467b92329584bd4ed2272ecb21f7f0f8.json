@@ -1,0 +1,189 @@
+{
+  "entities": [
+    {
+      "name": "streaming variant",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "continually evolving network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "web-scale classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "web-scale graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Experimental Design",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Flickr",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "YouTube",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "SpectralClustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "normalized graph Laplacian",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Modularity",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Modularity matrix",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "EdgeCluster",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "k-means clustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "adjacency matrix",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "streaming variant",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "continually evolving network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This approach can be combined with the streaming variant (Section 4.4.1) to train features on a continually evolving network without ever explicitly constructing the entire graph.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "streaming variant",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "web-scale classification",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Maintaining representations with this technique could enable web-scale classification without the hassles of dealing with a web-scale graph.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "BlogCatalog",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "network of social relationships",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "BlogCatalog [39] is a network of social relationships provided by blogger authors.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Flickr",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "network of the contacts between users of the photo sharing website",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Flickr [39] is a network of the contacts between users of the photo sharing website.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "YouTube",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "social network between users of the popular video sharing website",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "YouTube [40] is a social network between users of the popular video sharing website.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "SpectralClustering",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "normalized graph Laplacian",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This method generates a representation in Rd from the d-smallest eigenvectors of ~L, the normalized graph Laplacian of G.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Modularity",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Modularity matrix",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This method generates a representation in Rd from the top-d eigenvectors ofB, the Modularity matrix of G.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "EdgeCluster",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "k-means clustering",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "This method uses k-means clustering to cluster the adjacency matrix of G.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "EdgeCluster",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "adjacency matrix",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This method uses k-means clustering to cluster the adjacency matrix of G.",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

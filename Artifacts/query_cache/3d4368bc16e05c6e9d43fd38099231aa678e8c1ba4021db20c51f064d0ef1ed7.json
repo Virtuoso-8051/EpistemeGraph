@@ -1,0 +1,80 @@
+{
+  "answer": "In LINE\u2019s Wikipedia language-network experiments, the word co-occurrence graph was built from the Wikipedia text corpus by first tokenizing the text into words, then connecting two words if they appeared within a 5-word sliding window of each other. The resulting co-occurrence counts were used as edge weights, so pairs that co-occurred more often had stronger edges. A frequency filter was then applied to remove very rare words, which reduces noise and keeps the graph from becoming dominated by extremely infrequent tokens. In short, the construction procedure was: extract words from Wikipedia, form edges between words within a window size of 5, weight edges by co-occurrence frequency, and filter out low-frequency words before or during graph construction.",
+  "self_reported_accuracy": 0.86,
+  "confidence_reasoning": "The answer reflects the standard LINE Wikipedia language-network preprocessing described in the literature, but exact threshold details for the frequency filter can vary by implementation and are not fully specified in the query.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "Wikipedia data",
+    "word cooccurrence network",
+    "language network"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "Wikipedia data",
+    "word cooccurrence network",
+    "language network",
+    "sliding window",
+    "co-occurrence count",
+    "edge weight",
+    "frequency filter",
+    "word token"
+  ],
+  "response_triples": [
+    {
+      "source": "Wikipedia data",
+      "source_alias": "WD",
+      "target": "word cooccurrence network",
+      "target_alias": "WCN",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "word cooccurrence network",
+      "source_alias": "WCN",
+      "target": "language network",
+      "target_alias": "LN",
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "word cooccurrence network",
+      "target_alias": "WCN",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "sliding window",
+      "target": "word cooccurrence network",
+      "target_alias": "WCN",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "sliding window",
+      "target": "co-occurrence count",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "co-occurrence count",
+      "target": "edge weight",
+      "type": "DEFINES_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "frequency filter",
+      "target": "word token",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.87
+    }
+  ]
+}

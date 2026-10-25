@@ -1,0 +1,162 @@
+{
+  "entities": [
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Protein-Protein Interactions",
+      "alias": "PPI",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Stanford POS-Tagger",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "homophilic and structural equivalences",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "homophily",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural equivalence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social relationships",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "blogger interests",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "biological states",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Part-of-Speech tags",
+      "alias": "POS",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Wikipedia corpus",
+      "alias": "",
+      "type": "DATASET"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "BlogCatalog",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "social relationships",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This is a network of social relationships of the bloggers listed on the BlogCatalog website.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "BlogCatalog",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "blogger interests",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The labels represent blogger interests inferred through the metadata provided by the bloggers.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Protein-Protein Interactions",
+      "subject_alias": "PPI",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "biological states",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The subgraph corresponds to the graph induced by nodes for which we could obtain labels from the hallmark gene sets [19] and represent biological states.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Part-of-Speech tags",
+      "object_alias": "POS",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The labels represent the Part-of-Speech (POS) tags inferred using the Stanford POS-Tagger [32].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Stanford POS-Tagger",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The labels represent the Part-of-Speech (POS) tags inferred using the Stanford POS-Tagger [32].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Wikipedia corpus",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Hence, words having the same POS tags are not hard to find, lending a high degree of homophily.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "homophilic and structural equivalences",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "homophily",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "All these networks exhibit a fair mix of homophilic and structural equivalences.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "homophilic and structural equivalences",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "structural equivalence",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "All these networks exhibit a fair mix of homophilic and structural equivalences.",
+      "extraction_confidence": 0.84
+    }
+  ]
+}

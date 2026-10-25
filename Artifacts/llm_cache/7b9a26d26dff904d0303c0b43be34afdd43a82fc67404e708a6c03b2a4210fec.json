@@ -1,0 +1,237 @@
+{
+  "entities": [
+    {
+      "name": "Distributed representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "back-propagation",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "gradient descent",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "computational costs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "numerical instability",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "distributed computing",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "larger models",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "unsupervised learning algorithms",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "neural networks",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "computer vision",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "speech recognition",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "natural language processing",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "latent social representations of vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "truncated random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "local information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural regularities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multi-label classification tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "online algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "spectral methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "sparsity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "workers",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "the model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "language modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent representations for networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "unobservable language graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "observable graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Distributed representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "back-propagation",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "These representations are trained by the back-propagation and gradient descent.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Distributed representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "gradient descent",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "These representations are trained by the back-propagation and gradient descent.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "distributed computing",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLED",
+      "is_functional": false,
+      "object": "larger models",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Recently, distributed computing allowed for larger models to be trained [3], and the growth of data for unsupervised learning algorithms to emerge [9].",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "growth of data",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLED",
+      "is_functional": false,
+      "object": "unsupervised learning algorithms",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Recently, distributed computing allowed for larger models to be trained [3], and the growth of data for unsupervised learning algorithms to emerge [9].",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "neural networks",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USED_IN",
+      "is_functional": false,
+      "object": "computer vision",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These networks have made advancements in diverse fields such as computer vision [21], speech recognition [7], and natural language processing [6].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "neural networks",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USED_IN",
+      "is_functional": false,
+      "object": "speech recognition",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These networks have made advancements in diverse fields such as computer vision [21], speech recognition [7], and natural language processing [6].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "neural networks",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USED_IN",
+      "is_functional": false,
+      "object": "natural language processing",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These networks have made advancements in diverse fields such as computer vision [21], speech recognition [7], and natural language processing [6].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": true,
+      "object": "latent social representations of vertices",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We propose DeepW alk, a novel approach for learning latent social representations of vertices.",
+      "extraction_confidence": 0.99
+    }
+  ]
+}

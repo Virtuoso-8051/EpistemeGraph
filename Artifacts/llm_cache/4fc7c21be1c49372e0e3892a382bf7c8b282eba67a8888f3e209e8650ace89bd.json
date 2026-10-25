@@ -1,0 +1,231 @@
+{
+  "entities": [
+    {
+      "name": "deep learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "robust representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "statistical modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "structural regularities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "short random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multilabel classification tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "classification performance",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "label sparsity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "MicroF1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "training data",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "web-scale graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "YouTube",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "parallel implementation",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "streaming version",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "classification in data networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "relational classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "collective classification problem",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "short random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepW alklearns structural regularities present within short random walks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "robust representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We introduce deep learning as a tool to analyze graphs, to build robust representations that are suitable for statistical modeling.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "robust representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ARE_SUITABLE_FOR",
+      "is_functional": false,
+      "object": "statistical modeling",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We introduce deep learning as a tool to analyze graphs, to build robust representations that are suitable for statistical modeling.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "robust representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "multilabel classification tasks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We extensively evaluate our representations on multilabel classification tasks on several social networks.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "multilabel classification tasks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "social networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We extensively evaluate our representations on multilabel classification tasks on several social networks.",
+      "extraction_confidence": 0.82
+    },
+    {
+      "subject": "classification performance",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "MicroF1",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "We show significantly increased classification performance in the presence of label sparsity, getting improvements 5%-10% of MicroF1, on the sparsest problems we consider.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "competitors",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In some cases, DeepW alk\u2019s representations can outperform its competitors even when given 60% less training data.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "training data",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In some cases, DeepW alk\u2019s representations can outperform its competitors even when given 60% less training data.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "parallel implementation",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We demonstrate the scalability of our algorithm by building representations of web-scale graphs, (such as YouTube) using a parallel implementation.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "streaming version",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Moreover, we describe the minimal changes necessary to build a streaming version of our approach.",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

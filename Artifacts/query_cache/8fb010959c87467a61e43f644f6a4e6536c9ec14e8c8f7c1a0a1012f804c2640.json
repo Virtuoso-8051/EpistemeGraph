@@ -1,0 +1,104 @@
+{
+  "answer": "According to the LINE and node2vec papers, classical dimensionality reduction techniques such as MDS, IsoMap, and Laplacian Eigenmaps do not scale to million-node networks because they are built around computations that become prohibitively expensive as the graph grows. In particular, these methods typically require constructing and manipulating large pairwise similarity or neighborhood-preserving matrices, and then solving global eigenvalue or optimization problems whose time and memory costs grow poorly with the number of nodes.\n\nMore concretely, the papers argue that these methods are impractical for very large information networks because they rely on global matrix operations rather than scalable local or sampled updates. MDS depends on pairwise distance information, IsoMap depends on shortest-path/geodesic distances over the graph, and Laplacian Eigenmaps depends on spectral decomposition of a graph Laplacian. For million-node graphs, storing these dense or effectively dense structures and performing the associated decompositions is too expensive in both memory and runtime.\n\nThe LINE paper contrasts this with its own approach, which is designed to preserve first-order and second-order proximity using edge-based stochastic optimization and negative sampling-style training, making it much more scalable. The node2vec paper similarly motivates its method as a scalable alternative that learns node embeddings from sampled random walks and a skip-gram objective, avoiding the need for full graph-matrix factorization or spectral embedding on the entire network.\n\nSo the core reason is not that MDS, IsoMap, and Laplacian Eigenmaps are conceptually unsuitable, but that their classical formulations require global computations that do not scale well to million-node graphs, whereas LINE and node2vec use local, sampled, or stochastic objectives that are computationally feasible at that scale.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "The answer reflects the standard scalability arguments made in the LINE and node2vec papers, though exact wording and emphasis can vary across the papers.",
+  "query_entities": [
+    "Multidimensional Scaling",
+    "ISOMAP",
+    "Laplacian eigenmap",
+    "Large-scale Information Network Embedding",
+    "node2vec"
+  ],
+  "response_entities": [
+    "Multidimensional Scaling",
+    "ISOMAP",
+    "Laplacian eigenmap",
+    "Large-scale Information Network Embedding",
+    "node2vec",
+    "million-node network",
+    "pairwise similarity matrix",
+    "neighborhood-preserving matrix",
+    "eigenvalue problem",
+    "graph Laplacian",
+    "first-order proximity",
+    "second-order proximity",
+    "stochastic optimization",
+    "negative sampling",
+    "random walk",
+    "skip-gram objective",
+    "graph-matrix factorization",
+    "spectral embedding"
+  ],
+  "response_triples": [
+    {
+      "source": "Multidimensional Scaling",
+      "target": "pairwise similarity matrix",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "ISOMAP",
+      "target": "shortest-path distance",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "graph Laplacian",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Multidimensional Scaling",
+      "target": "million-node network",
+      "type": "FAILS_TO_SCALE_TO",
+      "claim_type": "ASSERTED",
+      "weight": 0.94
+    },
+    {
+      "source": "ISOMAP",
+      "target": "million-node network",
+      "type": "FAILS_TO_SCALE_TO",
+      "claim_type": "ASSERTED",
+      "weight": 0.94
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "million-node network",
+      "type": "FAILS_TO_SCALE_TO",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "stochastic optimization",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "node2vec",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "node2vec",
+      "target": "skip-gram objective",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "node2vec",
+      "target": "graph-matrix factorization",
+      "type": "REFUTED",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    }
+  ]
+}

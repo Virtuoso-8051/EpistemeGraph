@@ -1,0 +1,258 @@
+{
+  "entities": [
+    {
+      "name": "information network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "affinity matrix",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "low-dimensional vector",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "matrix factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "large networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "undirected networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "social network embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "binary edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "truncated random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "contextual information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE-SGD",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "objective Eqn. (3)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective Eqn. (6)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edge-sampling treatment",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "weighted edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "undirected graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "information network",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "affinity matrix",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An information network can be represented as an affinity matrix, and is able to represent each vertex with a 2Available at http://socialnetworks.mpi-sws.org/ data-imc2007.html 3Available at http://arnetminer.org/citation Table 1: Statistics of the real-world information networks.",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "matrix factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "low-dimensional vector",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An information network can be represented as an affinity matrix, and is able to represent each vertex with a 2Available at http://socialnetworks.mpi-sws.org/ data-imc2007.html 3Available at http://arnetminer.org/citation Table 1: Statistics of the real-world information networks. Language Network Social Network Citation Network Name Wikipedia Flickr Youtube DBLP(AuthorCitation) DBLP(PaperCitation) Type undirected,weighted undirected,binary undirected,binary dircted,weighted directed,binary |V| 1,985,098 1,715,256 1,138,499 524,061 781,109 |E| 1,000,924,086 22,613,981 2,990,443 20,580,238 4,191,677 Avg. degree 504.22 26.37 5.25 78.54 10.73 #Labels 7 5 47 7 7 #train 70,000 75,958 31,703 20,684 10,398 low-dimensional vector through matrix factorization.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "stochastic gradient descent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Graph factorization is optimized through stochastic gradient descent and is able to handle large networks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "large networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Graph factorization is optimized through stochastic gradient descent and is able to handle large networks.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": true,
+      "object": "undirected networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "It only applies to undirected networks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "social network embedding",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepWalk is an approach recently proposed for social network embedding, which is only applicable for networks with binary edges.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "binary edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepWalk is an approach recently proposed for social network embedding, which is only applicable for networks with binary edges.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "truncated random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "For each vertex, truncated random walks starting from the vertex are used to obtain the contextual information, and therefore only second-order proximity is utilized.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE-SGD",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "objective Eqn. (3)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "LINE-SGD. This is the LINE model introduced in Section 4.1 that optimizes the objective Eqn. (3) or Eqn. (6) directly with stochastic gradient descent.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "LINE-SGD",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "objective Eqn. (6)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "LINE-SGD. This is the LINE model introduced in Section 4.1 that optimizes the objective Eqn. (3) or Eqn. (6) directly with stochastic gradient descent.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "edge-sampling treatment",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "LINE. This is the LINE model optimized through the edge-sampling treatment introduced in Section 4.2.",
+      "extraction_confidence": 0.97
+    }
+  ]
+}

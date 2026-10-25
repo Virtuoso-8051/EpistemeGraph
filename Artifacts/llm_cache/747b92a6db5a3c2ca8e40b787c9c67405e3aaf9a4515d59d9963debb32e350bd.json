@@ -1,0 +1,189 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Figure 1b",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "modularity maximization",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "input graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "large heterogeneous graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "relational classification problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "approximate inference techniques",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "label-independent representations of the graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "other latent representation methods for creating social dimensions",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "logistic regression",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "iterative inference methods",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "online algorithm",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "short random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multilabel classification tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "MicroF1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "web-scale graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "YouTube",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "parallel implementation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "streaming version",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Figure 1b",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "SHOWS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Figure 1b shows the output of our method with 2 latent dimensions.",
+      "extraction_confidence": 0.78
+    },
+    {
+      "subject": "linearly separable portions of (1b)",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CORRESPOND_TO",
+      "object": "clusters found through modularity maximization",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Beyond the striking similarity, we note that linearly separable portions of (1b) correspond to clusters found through modularity maximization in the input graph (1a) (shown as vertex colors).",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "large heterogeneous graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To demonstrate DeepW alk\u2019s potential in real world scearXiv:1403.6652v2 [cs.SI] 27 Jun 2014 narios, we evaluate its performance on challenging multilabel network classification problems in large heterogeneous graphs.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "approximate inference techniques",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "dependency information",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Techniques to address this problem typically use approximate inference techniques [31, 35] to leverage the dependency information to improve classification results.",
+      "extraction_confidence": 0.74
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "label-independent representations of the graph",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We distance ourselves from these approaches by learning labelindependent representations of the graph.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "other latent representation methods for creating social dimensions",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepW alkoutperforms other latent representation methods for creating social dimensions [39, 41], especially when labeled nodes are scarce.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "logistic regression",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Strong performance with our representations is possible with very simple linear classifiers (e.g. logistic regression).",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

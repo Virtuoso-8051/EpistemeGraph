@@ -1,0 +1,3240 @@
+{
+    "fidelity_metrics": {
+        "overall_kg_accuracy_score": 0.7341803500320115,
+        "provenance_grounding_score": 0.835294155354547,
+        "semantic_coverage_score": 0.6499527478270183,
+        "topological_coherence_score": 0.7415148840568082,
+        "internal_consistency_score": 1.0,
+        "total_chunks_processed": 30,
+        "raw_triplets_extracted": 202,
+        "verified_triplets_pushed": 103,
+        "resolved_entity_count": 121,
+        "cross_pdf_shared_entities_count": 7,
+        "cross_pdf_shared_entities": [
+            "LINE",
+            "objective function",
+            "vertices",
+            "SkipGram",
+            "DeepWalk",
+            "words",
+            "one-vs-rest logistic regression classifier"
+        ],
+        "diagnostics": {
+            "claim_acceptance_rate": 0.5099009900990099,
+            "rejected_by_reason": {
+                "entities_not_in_quote": 99
+            },
+            "accepted_by_evidence_match": {
+                "verbatim": 103
+            },
+            "chunks_with_zero_claims": 0,
+            "llm_calls": 30,
+            "llm_prompt_tokens": 33431,
+            "llm_completion_tokens": 34180,
+            "prompt_version": "v3"
+        },
+        "timestamp": "2026-10-24T05:26:37.420357+00:00"
+    },
+    "nodes": [
+        {
+            "id": 0,
+            "name": "Large-scale Information Network Embedding",
+            "type": "CONCEPT",
+            "aliases": [
+                "Large-scale Information Network Embedding"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 1,
+            "name": "information networks",
+            "type": "CONCEPT",
+            "aliases": [
+                "information networks"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "LINE",
+            "type": "ALGORITHM",
+            "aliases": [
+                "LINE"
+            ],
+            "source_pdfs": [
+                "paper1.pdf",
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "objective function",
+            "type": "CONCEPT",
+            "aliases": [
+                "objective function"
+            ],
+            "source_pdfs": [
+                "paper1.pdf",
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "local and global network structures",
+            "type": "CONCEPT",
+            "aliases": [
+                "local and global network structures"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "edge-sampling algorithm",
+            "type": "ALGORITHM",
+            "aliases": [
+                "edge-sampling algorithm"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "effectiveness",
+            "type": "CONCEPT",
+            "aliases": [
+                "effectiveness"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "efficiency",
+            "type": "CONCEPT",
+            "aliases": [
+                "efficiency"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 8,
+            "name": "language networks",
+            "type": "CONCEPT",
+            "aliases": [
+                "language networks"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 9,
+            "name": "social networks",
+            "type": "CONCEPT",
+            "aliases": [
+                "social networks"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 10,
+            "name": "second-order proximity",
+            "type": "CONCEPT",
+            "aliases": [
+                "first-order proximity",
+                "second-order proximity"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 11,
+            "name": "large network G = (V,E",
+            "type": "CONCEPT",
+            "aliases": [
+                "large network G = (V,E"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 12,
+            "name": "low-dimensional space Rd",
+            "type": "CONCEPT",
+            "aliases": [
+                "low-dimensional space Rd"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 13,
+            "name": "network embedding model",
+            "type": "MODEL",
+            "aliases": [
+                "network embedding model"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 14,
+            "name": "LINE model",
+            "type": "MODEL",
+            "aliases": [
+                "LINE model"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 15,
+            "name": "embeddings",
+            "type": "CONCEPT",
+            "aliases": [
+                "embeddings"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 16,
+            "name": "asynchronous stochastic gradient algorithm",
+            "type": "ALGORITHM",
+            "aliases": [
+                "ASGD",
+                "asynchronous stochastic gradient algorithm"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 17,
+            "name": "mini-batch of edges",
+            "type": "CONCEPT",
+            "aliases": [
+                "mini-batch of edges"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 18,
+            "name": "edges",
+            "type": "CONCEPT",
+            "aliases": [
+                "edges"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 19,
+            "name": "vertices",
+            "type": "CONCEPT",
+            "aliases": [
+                "vertices"
+            ],
+            "source_pdfs": [
+                "paper1.pdf",
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 20,
+            "name": "word cooccurrence network",
+            "type": "DATASET",
+            "aliases": [
+                "word cooccurrence network"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 21,
+            "name": "EnglishWikipedia pages",
+            "type": "DATASET",
+            "aliases": [
+                "EnglishWikipedia pages"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 22,
+            "name": "Graph factorization",
+            "type": "ALGORITHM",
+            "aliases": [
+                "GF",
+                "Graph factorization"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 23,
+            "name": "matrix factorization techniques",
+            "type": "ALGORITHM",
+            "aliases": [
+                "matrix factorization techniques"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 24,
+            "name": "SkipGram",
+            "type": "ALGORITHM",
+            "aliases": [
+                "SkipGram"
+            ],
+            "source_pdfs": [
+                "paper1.pdf",
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 25,
+            "name": "Wikipedia corpora",
+            "type": "DATASET",
+            "aliases": [
+                "Wikipedia corpora"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 26,
+            "name": "word analogy",
+            "type": "CONCEPT",
+            "aliases": [
+                "word analogy"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 27,
+            "name": "Semantic (%",
+            "type": "METRIC",
+            "aliases": [
+                "Semantic (%"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 28,
+            "name": "Syntactic (%",
+            "type": "METRIC",
+            "aliases": [
+                "Syntactic (%"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 29,
+            "name": "Mikolov et al",
+            "type": "PERSON",
+            "aliases": [
+                "Mikolov et al"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 30,
+            "name": "Wikipedia",
+            "type": "DATASET",
+            "aliases": [
+                "Wikipedia"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 31,
+            "name": "DBpedia",
+            "type": "ORGANIZATION",
+            "aliases": [
+                "DBpedia"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 32,
+            "name": "LINE(2nd",
+            "type": "MODEL",
+            "aliases": [
+                "LINE(1st",
+                "LINE(2nd"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 33,
+            "name": "DeepWalk",
+            "type": "MODEL",
+            "aliases": [
+                "DeepWalk"
+            ],
+            "source_pdfs": [
+                "paper1.pdf",
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 34,
+            "name": "LINE(1st+2nd",
+            "type": "MODEL",
+            "aliases": [
+                "LINE(1st+2nd"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 35,
+            "name": "original network",
+            "type": "CONCEPT",
+            "aliases": [
+                "original network"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 36,
+            "name": "dimension d",
+            "type": "CONCEPT",
+            "aliases": [
+                "dimension d"
+            ],
+            "source_pdfs": [
+                "paper1.pdf"
+            ]
+        },
+        {
+            "id": 37,
+            "name": "node2vec",
+            "type": "ALGORITHM",
+            "aliases": [
+                "node2vec"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 38,
+            "name": "continuous feature representations",
+            "type": "CONCEPT",
+            "aliases": [
+                "continuous feature representations"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 39,
+            "name": "state-of-the-art techniques",
+            "type": "CONCEPT",
+            "aliases": [
+                "state-of-the-art techniques"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 40,
+            "name": "multi-label classification",
+            "type": "CONCEPT",
+            "aliases": [
+                "multi-label classification"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 41,
+            "name": "link prediction",
+            "type": "CONCEPT",
+            "aliases": [
+                "link prediction"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 42,
+            "name": "real-world networks",
+            "type": "CONCEPT",
+            "aliases": [
+                "real-world networks"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 43,
+            "name": "real-world datasets",
+            "type": "DATASET",
+            "aliases": [
+                "real-world datasets"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 44,
+            "name": "prediction tasks over nodes and edges",
+            "type": "CONCEPT",
+            "aliases": [
+                "prediction tasks over nodes and edges"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 45,
+            "name": "feature learning using node2vec",
+            "type": "CONCEPT",
+            "aliases": [
+                "feature learning using node2vec"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 46,
+            "name": "feature extraction techniques",
+            "type": "CONCEPT",
+            "aliases": [
+                "feature extraction techniques"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 47,
+            "name": "network properties",
+            "type": "CONCEPT",
+            "aliases": [
+                "network properties"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 48,
+            "name": "unsupervised feature learning approaches",
+            "type": "CONCEPT",
+            "aliases": [
+                "unsupervised feature learning approaches"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 49,
+            "name": "spectral properties",
+            "type": "CONCEPT",
+            "aliases": [
+                "spectral properties"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 50,
+            "name": "conditional likelihood",
+            "type": "CONCEPT",
+            "aliases": [
+                "conditional likelihood"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 51,
+            "name": "softmax unit",
+            "type": "CONCEPT",
+            "aliases": [
+                "softmax unit"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 52,
+            "name": "dot product",
+            "type": "CONCEPT",
+            "aliases": [
+                "dot product"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 53,
+            "name": "Skip-gram architecture",
+            "type": "MODEL",
+            "aliases": [
+                "Skip-gram architecture"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 54,
+            "name": "natural language",
+            "type": "CONCEPT",
+            "aliases": [
+                "natural language"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 55,
+            "name": "sliding window",
+            "type": "CONCEPT",
+            "aliases": [
+                "sliding window"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 56,
+            "name": "neighborhood",
+            "type": "CONCEPT",
+            "aliases": [
+                "neighborhood"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 57,
+            "name": "randomized procedure",
+            "type": "ALGORITHM",
+            "aliases": [
+                "randomized procedure"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 58,
+            "name": "Algorithm 1",
+            "type": "CONCEPT",
+            "aliases": [
+                "Algorithm 1"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 59,
+            "name": "semi-supervised method",
+            "type": "CONCEPT",
+            "aliases": [
+                "semi-supervised method"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 60,
+            "name": "GraRep",
+            "type": "ALGORITHM",
+            "aliases": [
+                "GraRep"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 61,
+            "name": "hierarchical sampling",
+            "type": "ALGORITHM",
+            "aliases": [
+                "hierarchical sampling"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 62,
+            "name": "softmax probabilities",
+            "type": "CONCEPT",
+            "aliases": [
+                "softmax probabilities"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 63,
+            "name": "negative sampling",
+            "type": "ALGORITHM",
+            "aliases": [
+                "negative sampling"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 64,
+            "name": "word cooccurence network",
+            "type": "CONCEPT",
+            "aliases": [
+                "word cooccurence network"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 65,
+            "name": "Wikipedia corpus",
+            "type": "DATASET",
+            "aliases": [
+                "Wikipedia corpus"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 66,
+            "name": "words",
+            "type": "CONCEPT",
+            "aliases": [
+                "words"
+            ],
+            "source_pdfs": [
+                "paper2.pdf",
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 67,
+            "name": "POS tags",
+            "type": "CONCEPT",
+            "aliases": [
+                "POS tags"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 68,
+            "name": "one-vs-rest logistic regression classifier",
+            "type": "ALGORITHM",
+            "aliases": [
+                "one-vs-rest logistic regression",
+                "one-vs-rest logistic regression classifier"
+            ],
+            "source_pdfs": [
+                "paper2.pdf",
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 69,
+            "name": "L2 regularization",
+            "type": "CONCEPT",
+            "aliases": [
+                "L2 regularization"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 70,
+            "name": "train and test data",
+            "type": "DATASET",
+            "aliases": [
+                "train and test data"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 71,
+            "name": "10 random instances",
+            "type": "CONCEPT",
+            "aliases": [
+                "10 random instances"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 72,
+            "name": "BlogCatalog",
+            "type": "DATASET",
+            "aliases": [
+                "BlogCatalog"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 73,
+            "name": "Macro-F1",
+            "type": "METRIC",
+            "aliases": [
+                "Macro-F1"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 74,
+            "name": "random walk methods",
+            "type": "ALGORITHM",
+            "aliases": [
+                "random walk methods"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 75,
+            "name": "Spectral clustering",
+            "type": "ALGORITHM",
+            "aliases": [
+                "Spectral clustering"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 76,
+            "name": "Adamic-Adar",
+            "type": "ALGORITHM",
+            "aliases": [
+                "Adamic-Adar"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 77,
+            "name": "Hadamard",
+            "type": "CONCEPT",
+            "aliases": [
+                "Hadamard"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 78,
+            "name": "Table 4",
+            "type": "CONCEPT",
+            "aliases": [
+                "Table 4"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 79,
+            "name": "Area Under Curve",
+            "type": "METRIC",
+            "aliases": [
+                "AUC",
+                "Area Under Curve"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 80,
+            "name": "heterogeneous information networks",
+            "type": "CONCEPT",
+            "aliases": [
+                "heterogeneous information networks"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 81,
+            "name": "networks with explicit domain features for nodes and edges",
+            "type": "CONCEPT",
+            "aliases": [
+                "networks with explicit domain features for nodes and edges"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 82,
+            "name": "signed-edge networks",
+            "type": "CONCEPT",
+            "aliases": [
+                "signed-edge networks"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 83,
+            "name": "node2vec representations",
+            "type": "CONCEPT",
+            "aliases": [
+                "node2vec representations"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 84,
+            "name": "end-to-end deep learning on graphs",
+            "type": "CONCEPT",
+            "aliases": [
+                "end-to-end deep learning on graphs"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 85,
+            "name": "Austin Benson",
+            "type": "PERSON",
+            "aliases": [
+                "Austin Benson"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 86,
+            "name": "anonymous reviewers",
+            "type": "PERSON",
+            "aliases": [
+                "anonymous reviewers"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 87,
+            "name": "Will Hamilton",
+            "type": "PERSON",
+            "aliases": [
+                "Will Hamilton"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 88,
+            "name": "Rok Sosi \u02c7c",
+            "type": "PERSON",
+            "aliases": [
+                "Rok Sosi \u02c7c"
+            ],
+            "source_pdfs": [
+                "paper2.pdf"
+            ]
+        },
+        {
+            "id": 89,
+            "name": "social representations",
+            "type": "CONCEPT",
+            "aliases": [
+                "social representations"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 90,
+            "name": "latent features",
+            "type": "CONCEPT",
+            "aliases": [
+                "latent features"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 91,
+            "name": "neighborhood similarity",
+            "type": "CONCEPT",
+            "aliases": [
+                "neighborhood similarity"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 92,
+            "name": "community membership",
+            "type": "CONCEPT",
+            "aliases": [
+                "community membership"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 93,
+            "name": "latent representations",
+            "type": "CONCEPT",
+            "aliases": [
+                "latent representations"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 94,
+            "name": "social relations",
+            "type": "CONCEPT",
+            "aliases": [
+                "social relations"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 95,
+            "name": "continuous vector space",
+            "type": "CONCEPT",
+            "aliases": [
+                "continuous vector space"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 96,
+            "name": "power-law distribution",
+            "type": "CONCEPT",
+            "aliases": [
+                "power-law distribution"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 97,
+            "name": "random walks",
+            "type": "CONCEPT",
+            "aliases": [
+                "random walks"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 98,
+            "name": "similarity measure",
+            "type": "CONCEPT",
+            "aliases": [
+                "similarity measure"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 99,
+            "name": "content recommendation",
+            "type": "CONCEPT",
+            "aliases": [
+                "content recommendation"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 100,
+            "name": "community detection",
+            "type": "CONCEPT",
+            "aliases": [
+                "community detection"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 101,
+            "name": "degree distribution",
+            "type": "CONCEPT",
+            "aliases": [
+                "degree distribution"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 102,
+            "name": "scale-free",
+            "type": "CONCEPT",
+            "aliases": [
+                "scale-free"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 103,
+            "name": "\u03a6",
+            "type": "CONCEPT",
+            "aliases": [
+                "\u03a6"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 104,
+            "name": "vertex v",
+            "type": "CONCEPT",
+            "aliases": [
+                "vertex v"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 105,
+            "name": "|V|\u00d7 d matrix of free parameters",
+            "type": "CONCEPT",
+            "aliases": [
+                "|V|\u00d7 d matrix of free parameters"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 106,
+            "name": "truncated random walks",
+            "type": "CONCEPT",
+            "aliases": [
+                "truncated random walks"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 107,
+            "name": "neural language models",
+            "type": "CONCEPT",
+            "aliases": [
+                "neural language models"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 108,
+            "name": "LibLinear",
+            "type": "SYSTEM",
+            "aliases": [
+                "LibLinear"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 109,
+            "name": "DeepW alk",
+            "type": "ALGORITHM",
+            "aliases": [
+                "DeepW alk"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 110,
+            "name": "EdgeCluster",
+            "type": "ALGORITHM",
+            "aliases": [
+                "EdgeCluster"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 111,
+            "name": "Relational classification",
+            "type": "ALGORITHM",
+            "aliases": [
+                "Relational classification"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 112,
+            "name": "links between data items",
+            "type": "CONCEPT",
+            "aliases": [
+                "links between data items"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 113,
+            "name": "approximate inference algorithm",
+            "type": "ALGORITHM",
+            "aliases": [
+                "approximate inference algorithm"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 114,
+            "name": "collective classification",
+            "type": "ALGORITHM",
+            "aliases": [
+                "collective classification"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 115,
+            "name": "Graph Kernels",
+            "type": "CONCEPT",
+            "aliases": [
+                "Graph Kernels"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 116,
+            "name": "relational data",
+            "type": "CONCEPT",
+            "aliases": [
+                "relational data"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 117,
+            "name": "representation",
+            "type": "CONCEPT",
+            "aliases": [
+                "representation"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 118,
+            "name": "features",
+            "type": "CONCEPT",
+            "aliases": [
+                "features"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 119,
+            "name": "distributed computing",
+            "type": "CONCEPT",
+            "aliases": [
+                "distributed computing"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        },
+        {
+            "id": 120,
+            "name": "larger models",
+            "type": "MODEL",
+            "aliases": [
+                "larger models"
+            ],
+            "source_pdfs": [
+                "paper3.pdf"
+            ]
+        }
+    ],
+    "edges": [
+        {
+            "subject": "Large-scale Information Network Embedding",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "STUDIES",
+            "is_functional": false,
+            "object": "information networks",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "This paper studies the problem of embedding very large information networks into low-dimensional vector spaces, which is useful in many tasks such as visualization, node classification, and link prediction.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_001",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:09.667202+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "PROPOSES",
+            "is_functional": false,
+            "object": "information networks",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "In this paper, we propose a novel network embedding method called the \u201cLINE,\u201d which is suitable for arbitrary types of information networks: undirected, directed, and/or weighted.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_001",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:09.667202+00:00",
+            "grounding_score": 0.9984146785736083,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "objective function",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "PRESERVES",
+            "is_functional": false,
+            "object": "local and global network structures",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "The method optimizes a carefully designed objective function that preserves both the local and global network structures.",
+            "extraction_confidence": 0.96,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_001",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:09.667202+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "edge-sampling algorithm",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "IMPROVES",
+            "is_functional": false,
+            "object": "effectiveness",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "An edge-sampling algorithm is proposed that addresses the limitation of the classical stochastic gradient descent and improves both the effectiveness and the efficiency of the inference.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_001",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:09.667202+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "edge-sampling algorithm",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "IMPROVES",
+            "is_functional": false,
+            "object": "efficiency",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "An edge-sampling algorithm is proposed that addresses the limitation of the classical stochastic gradient descent and improves both the effectiveness and the efficiency of the inference.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_001",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:09.667202+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "language networks",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_001",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:09.667202+00:00",
+            "grounding_score": 0.8266710472106933,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "social networks",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_001",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:09.667202+00:00",
+            "grounding_score": 0.9375461292266846,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "PROPOSES",
+            "is_functional": true,
+            "object": "Large-scale Information Network Embedding",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We propose a novel network embedding model called the \u201cLINE,\u201d which suits arbitrary types of information networks and easily scales to millions of nodes.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_002",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:09.130938+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "second-order proximity",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "COMPLEMENTS",
+            "is_functional": false,
+            "object": "second-order proximity",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We therefore define the second-order proximity, which complements the first-order proximity and preserves the network structure.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_003",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:08.799353+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Large-scale Information Network Embedding",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "large network G = (V,E",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Definition 4. (Large-scale Information Network Embedding) Given a large network G = (V,E ), the problem of Large-scale Information Network Embedding aims to represent each vertexv\u2208V into a low-dimensional space Rd, i.e., learning a function fG : V \u2192 Rd, where d\u226a| V|.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_003",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:08.799353+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Large-scale Information Network Embedding",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "AIMS_TO_REPRESENT",
+            "is_functional": false,
+            "object": "low-dimensional space Rd",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Definition 4. (Large-scale Information Network Embedding) Given a large network G = (V,E ), the problem of Large-scale Information Network Embedding aims to represent each vertexv\u2208V into a low-dimensional space Rd, i.e., learning a function fG : V \u2192 Rd, where d\u226a| V|.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_003",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:08.799353+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "IS_A",
+            "is_functional": true,
+            "object": "network embedding model",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "In this section, we present a novel network embedding model called the \u201cLINE,\u201d which satisfies all the three requirements.",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_003",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:08.799353+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "PRESERVES",
+            "is_functional": false,
+            "object": "second-order proximity",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We describe the LINE model to preserve the first-order proximity and second-order proximity separately, and then introduce a simple way to combine the two proximity.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_003",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:08.799353+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE model",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "PRESERVES",
+            "is_functional": false,
+            "object": "second-order proximity",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "To embed the networks by preserving both the first-order and second-order proximity, a simple and effective way we find in practice is to train the LINE model which preserves the first-order proximity and second-order proximity separately and then concatenate the embeddings trained by the two methods for each vertex.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_004",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:08.392476+00:00",
+            "grounding_score": 0.9087117385864257,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE model",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "PRESERVES",
+            "is_functional": false,
+            "object": "second-order proximity",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "To embed the networks by preserving both the first-order and second-order proximity, a simple and effective way we find in practice is to train the LINE model which preserves the first-order proximity and second-order proximity separately and then concatenate the embeddings trained by the two methods for each vertex.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_004",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:08.392476+00:00",
+            "grounding_score": 0.907051773071289,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE model",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "embeddings",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "To embed the networks by preserving both the first-order and second-order proximity, a simple and effective way we find in practice is to train the LINE model which preserves the first-order proximity and second-order proximity separately and then concatenate the embeddings trained by the two methods for each vertex.",
+            "extraction_confidence": 0.9,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_004",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:08.392476+00:00",
+            "grounding_score": 0.8900989961624145,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "asynchronous stochastic gradient algorithm",
+            "subject_alias": "ASGD",
+            "subject_type": "ALGORITHM",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "mini-batch of edges",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "In each step, the ASGD algorithm samples a mini-batch of edges and then updates the model parameters.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_004",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:08.392476+00:00",
+            "grounding_score": 0.8321561288833619,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "DEPENDS_ON",
+            "is_functional": false,
+            "object": "edges",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_005",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:07.790732+00:00",
+            "grounding_score": 0.7956963968276978,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "DOES_NOT_DEPEND_ON",
+            "is_functional": false,
+            "object": "vertices",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_005",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:07.790732+00:00",
+            "grounding_score": 0.8469381761550903,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "word cooccurrence network",
+            "subject_alias": "",
+            "subject_type": "DATASET",
+            "relation": "BASED_ON",
+            "is_functional": false,
+            "object": "EnglishWikipedia pages",
+            "object_alias": "",
+            "object_type": "DATASET",
+            "evidence_quote": "We constructed a word cooccurrence network from the entire set of EnglishWikipedia pages.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_005",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:07.790732+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Graph factorization",
+            "subject_alias": "GF",
+            "subject_type": "ALGORITHM",
+            "relation": "BASED_ON",
+            "is_functional": false,
+            "object": "matrix factorization techniques",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "We compare with the matrix factorization techniques for graph factorization.",
+            "extraction_confidence": 0.96,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_006",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:11.887283+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "SkipGram",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "Wikipedia corpora",
+            "object_alias": "",
+            "object_type": "DATASET",
+            "evidence_quote": "Table 2 reports the results of word analogy using the embeddings of words learned on the Wikipedia corpora (SkipGram) or the Wikipedia word network (all other methods).",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_007",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:11.696092+00:00",
+            "grounding_score": 0.9251119804382324,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "word analogy",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "Semantic (%",
+            "object_alias": "",
+            "object_type": "METRIC",
+            "evidence_quote": "Two categories of word analogy are used in this task: semantic and syntactic.",
+            "extraction_confidence": 0.9,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_007",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:11.696092+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "word analogy",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "Syntactic (%",
+            "object_alias": "",
+            "object_type": "METRIC",
+            "evidence_quote": "Two categories of word analogy are used in this task: semantic and syntactic.",
+            "extraction_confidence": 0.9,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_007",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:11.696092+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "word analogy",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "INTRODUCED_BY",
+            "is_functional": true,
+            "object": "Mikolov et al",
+            "object_alias": "",
+            "object_type": "PERSON",
+            "evidence_quote": "Word Analogy. This task is introduced by Mikolov et al. [12].",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_007",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:11.696092+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Wikipedia",
+            "subject_alias": "",
+            "subject_type": "DATASET",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "DBpedia",
+            "object_alias": "",
+            "object_type": "ORGANIZATION",
+            "evidence_quote": "We download the abstracts of Wikipedia pages from http://downloads.dbpedia.org/ 3.9/en/long_abstracts_en.nq.bz2 and the categories of these pages from http://downloads.dbpedia.org/3.9/en/ article_categories_en.nq.bz2.",
+            "extraction_confidence": 0.91,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_008",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:12.620430+00:00",
+            "grounding_score": 0.9479060363769531,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE(2nd",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "DeepWalk",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "In the reconstructed network, the LINE(2nd) outperforms DeepWalk in most cases.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_009",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:14.000521+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE(1st+2nd",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "IMPROVES",
+            "is_functional": false,
+            "object": "original network",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We can also see that the performance of LINE(1st+2nd) on the reconstructed network does not improve too much compared with those on the original network.",
+            "extraction_confidence": 0.78,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_009",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:14.000521+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Graph factorization",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "second-order proximity",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Both the GF and LINE methods, which use first-order proximity, are not applicable for directed networks, and hence we only compare DeepWalk and LINE(2nd).",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_009",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:14.000521+00:00",
+            "grounding_score": 0.8297604513168335,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE(2nd",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "LINE(2nd",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "As we gradually increase the percentage of links, the LINE(2nd) begins to outperform the LINE(1st).",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_010",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:14.489966+00:00",
+            "grounding_score": 0.9322370719909667,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE(2nd",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "DeepWalk",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "We can also see that the LINE(2nd) model on the reconstructed network outperforms DeepWalk in all the groups.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_010",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:14.489966+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE(2nd",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "CONVERGES_FASTER_THAN",
+            "is_functional": false,
+            "object": "DeepWalk",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "The LINE(2nd) consistently outperforms LINE(1st) and DeepWalk, and both the LINE(1st) and LINE(2nd) converge much faster than DeepWalk.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_010",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:14.489966+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE(2nd",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "CONVERGES_FASTER_THAN",
+            "is_functional": false,
+            "object": "DeepWalk",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "The LINE(2nd) consistently outperforms LINE(1st) and DeepWalk, and both the LINE(1st) and LINE(2nd) converge much faster than DeepWalk.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_010",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:14.489966+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE model",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "dimension d",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Fig. 4(a) reports the performance of the LINE model w.r.t. the dimension d.",
+            "extraction_confidence": 0.9,
+            "document_id": "DOC_001",
+            "chunk_id": "DOC_001_CH_010",
+            "source_name": "paper1.pdf",
+            "extracted_at": "2026-10-24T05:26:14.489966+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "PROPOSES",
+            "is_functional": true,
+            "object": "continuous feature representations",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Here we propose node2vec, an algorithmic framework for learning continuous feature representations for nodes in networks.",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_001",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.257328+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "DEMONSTRATES_EFFICACY_OVER",
+            "is_functional": false,
+            "object": "state-of-the-art techniques",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We demonstrate the efficacy of node2vec over existing state-ofthe-art techniques on multi-label classification and link prediction in several real-world networks from diverse domains.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_001",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.257328+00:00",
+            "grounding_score": 0.8886104774475098,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "multi-label classification",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We demonstrate the efficacy of node2vec over existing state-ofthe-art techniques on multi-label classification and link prediction in several real-world networks from diverse domains.",
+            "extraction_confidence": 0.93,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_001",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.257328+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "link prediction",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We demonstrate the efficacy of node2vec over existing state-ofthe-art techniques on multi-label classification and link prediction in several real-world networks from diverse domains.",
+            "extraction_confidence": 0.93,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_001",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.257328+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "real-world networks",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We demonstrate the efficacy of node2vec over existing state-ofthe-art techniques on multi-label classification and link prediction in several real-world networks from diverse domains.",
+            "extraction_confidence": 0.9,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_001",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.257328+00:00",
+            "grounding_score": 0.9524663639068603,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "multi-label classification",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We empirically evaluate node2vec for multi-label classification and link prediction on several real-world datasets.",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_002",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.980571+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "link prediction",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We empirically evaluate node2vec for multi-label classification and link prediction on several real-world datasets.",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_002",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.980571+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "real-world datasets",
+            "object_alias": "",
+            "object_type": "DATASET",
+            "evidence_quote": "We empirically evaluate node2vec for multi-label classification and link prediction on several real-world datasets.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_002",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.980571+00:00",
+            "grounding_score": 0.9938068580627442,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "prediction tasks over nodes and edges",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "In Section 4, we empirically evaluate node2vec on prediction tasks over nodes and edges on various real-world networks and assess the parameter sensitivity, perturbation analysis, and scalability aspects of our algorithm.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_002",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.980571+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "real-world networks",
+            "object_alias": "",
+            "object_type": "DATASET",
+            "evidence_quote": "In Section 4, we empirically evaluate node2vec on prediction tasks over nodes and edges on various real-world networks and assess the parameter sensitivity, perturbation analysis, and scalability aspects of our algorithm.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_002",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.980571+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "feature learning using node2vec",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We present the technical details for feature learning using node2vec in Section 3.",
+            "extraction_confidence": 0.84,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_002",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.980571+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "feature extraction techniques",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "BASED_ON",
+            "is_functional": false,
+            "object": "network properties",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "In networks, the conventional paradigm for generating features for nodes is based on feature extraction techniques which typically involve some seed hand-crafted features based on network properties [8, 11].",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_002",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.980571+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "unsupervised feature learning approaches",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "spectral properties",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Unsupervised feature learning approaches typically exploit the spectral properties of various matrix representations of graphs, especially the Laplacian and the adjacency matrices.",
+            "extraction_confidence": 0.93,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_002",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:15.980571+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "conditional likelihood",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "MODELED_AS",
+            "is_functional": true,
+            "object": "softmax unit",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Accordingly, we model the conditional likelihood of every source-neighborhood node pair as a softmax unit parametrized by a dot product of their features: Pr (ni|f (u)) = exp(f (ni)\u00b7f (u))\u2211 v\u2208V exp(f (v)\u00b7f (u)).",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_003",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:17.240147+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "softmax unit",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "PARAMETRIZED_BY",
+            "is_functional": true,
+            "object": "dot product",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Accordingly, we model the conditional likelihood of every source-neighborhood node pair as a softmax unit parametrized by a dot product of their features: Pr (ni|f (u)) = exp(f (ni)\u00b7f (u))\u2211 v\u2208V exp(f (v)\u00b7f (u)).",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_003",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:17.240147+00:00",
+            "grounding_score": 0.9618322086334228,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Skip-gram architecture",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "DEVELOPED_IN_CONTEXT_OF",
+            "is_functional": false,
+            "object": "natural language",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Feature learning methods based on the Skip-gram architecture have been originally developed in the context of natural language [21].",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_003",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:17.240147+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "sliding window",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "DEFINES",
+            "is_functional": true,
+            "object": "neighborhood",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Given the linear nature of text, the notion of a neighborhood can be naturally defined using a sliding window over consecutive words.",
+            "extraction_confidence": 0.96,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_003",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:17.240147+00:00",
+            "grounding_score": 0.9963970851898193,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "randomized procedure",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "SAMPLES",
+            "is_functional": false,
+            "object": "neighborhood",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "To resolve this issue, we propose a randomized procedure that samples many different neighborhoods of a given source nodeu.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_003",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:17.240147+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "DEFINED_AS",
+            "is_functional": true,
+            "object": "Algorithm 1",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "The pseudocode for node2vec, is given in Algorithm 1.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_005",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.449765+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "IS_A",
+            "is_functional": true,
+            "object": "semi-supervised method",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "The node2vec algorithm provides a semi-supervised method to learn rich feature representations for nodes in a network.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_005",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.449765+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "GraRep",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "GENERALIZES",
+            "is_functional": true,
+            "object": "LINE",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "We also exclude a recent approach, GraRep [6], that generalizes LINE to incorporate information from network neighborhoods beyond 2-hops, but is unable to efficiently scale to large networks.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_006",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.449765+00:00",
+            "grounding_score": 0.6218466949462891,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "DeepWalk",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "USES",
+            "is_functional": true,
+            "object": "hierarchical sampling",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "First, DeepWalk uses hierarchical sampling to approximate the softmax probabilities with an objective similar to the one use by node2vec.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_006",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.449765+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "hierarchical sampling",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "APPROXIMATES",
+            "is_functional": true,
+            "object": "softmax probabilities",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "First, DeepWalk uses hierarchical sampling to approximate the softmax probabilities with an objective similar to the one use by node2vec.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_006",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.449765+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "DeepWalk",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "SWITCHES_TO",
+            "is_functional": true,
+            "object": "negative sampling",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "Hence, keeping everything else the same, we switch to negative sampling in DeepWalk which is also the de facto approximation in node2vec and LINE.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_006",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.449765+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "word cooccurence network",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "BASED_ON",
+            "is_functional": false,
+            "object": "Wikipedia corpus",
+            "object_alias": "",
+            "object_type": "DATASET",
+            "evidence_quote": "The word cooccurence network is fairly dense, since edges exist between words cooccuring in a 2length window in the Wikipedia corpus.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_007",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.656275+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "words",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "HAVE",
+            "is_functional": false,
+            "object": "POS tags",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Hence, words having the same POS tags are not hard to find, lending a high degree of homophily.",
+            "extraction_confidence": 0.93,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_007",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.656275+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "one-vs-rest logistic regression classifier",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "L2 regularization",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "The node feature representations are input to a one-vs-rest logistic regression classifier with L2 regularization.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_007",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.656275+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "train and test data",
+            "subject_alias": "",
+            "subject_type": "DATASET",
+            "relation": "SPLIT_INTO",
+            "is_functional": false,
+            "object": "10 random instances",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "The train and test data is split equally over 10 random instances.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_007",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:19.656275+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "BlogCatalog",
+            "subject_alias": "",
+            "subject_type": "DATASET",
+            "relation": "EVALUATED_ON",
+            "is_functional": false,
+            "object": "Macro-F1",
+            "object_alias": "",
+            "object_type": "METRIC",
+            "evidence_quote": "In BlogCatalog, we can discover the right mix of homophily and structural equivalence by setting parametersp andq to low values, giving us 22.3% gain over DeepWalk and 229.2% gain over LINE in Macro-F1 scores.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_008",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.804286+00:00",
+            "grounding_score": 0.7224269223213196,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "random walk methods",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "ENABLES",
+            "is_functional": false,
+            "object": "LINE",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+            "extraction_confidence": 0.84,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_008",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.804286+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Spectral clustering",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "DeepWalk",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+            "extraction_confidence": 0.93,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_008",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.804286+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "DeepWalk",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "LINE",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_008",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.804286+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "DeepWalk",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_008",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.804286+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "LINE",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_008",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.804286+00:00",
+            "grounding_score": 0.795599193572998,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "Adamic-Adar",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "A general observation we can draw from the results is that the learned feature representations for node pairs significantly outperform the heuristic benchmark scores with node2vec achieving the best AUC improvement on 12.6% on the arXiv dataset over the best performing baseline (Adamic-Adar [1]).",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_009",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.992181+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "DeepWalk",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "Amongst the feature learning algorithms, node2vec outperforms both DeepWalk and LINE in all networks with gain up to 3.8% and 6.5% respectively in the AUC scores for the best possible choices of the binary operator for each algorithm.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_009",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.992181+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "LINE",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "Amongst the feature learning algorithms, node2vec outperforms both DeepWalk and LINE in all networks with gain up to 3.8% and 6.5% respectively in the AUC scores for the best possible choices of the binary operator for each algorithm.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_009",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.992181+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LINE",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "DeepWalk",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "When we look at operators individually (Table 1), node2vec outperforms DeepWalk and LINE barring a couple of cases involving the Weighted-L1 and Weighted-L2 operators in which LINE performs better.",
+            "extraction_confidence": 0.84,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_009",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.992181+00:00",
+            "grounding_score": 0.9606591892242431,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Hadamard",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USED_WITH",
+            "is_functional": false,
+            "object": "node2vec",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "Overall, the Hadamard operator when used with node2vec is highly stable and gives the best performance on average across all networks.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_009",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.992181+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Table 4",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "CONTAINS",
+            "is_functional": false,
+            "object": "Area Under Curve",
+            "object_alias": "AUC",
+            "object_type": "METRIC",
+            "evidence_quote": "Table 4: Area Under Curve (AUC) scores for link prediction.",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_009",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:20.992181+00:00",
+            "grounding_score": 0.7110667657852172,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "heterogeneous information networks",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Future extensions of node2vec could involve networks with special structure such as heterogeneous information networks, networks with explicit domain features for nodes and edges and signed-edge networks.",
+            "extraction_confidence": 0.78,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_010",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:24.857264+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "networks with explicit domain features for nodes and edges",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Future extensions of node2vec could involve networks with special structure such as heterogeneous information networks, networks with explicit domain features for nodes and edges and signed-edge networks.",
+            "extraction_confidence": 0.78,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_010",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:24.857264+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec",
+            "subject_alias": "",
+            "subject_type": "MODEL",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "signed-edge networks",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Future extensions of node2vec could involve networks with special structure such as heterogeneous information networks, networks with explicit domain features for nodes and edges and signed-edge networks.",
+            "extraction_confidence": 0.78,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_010",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:24.857264+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "node2vec representations",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "end-to-end deep learning on graphs",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Continuous feature representations are the backbone of many deep learning algorithms, and it would be interesting to use node2vec representations as building blocks for end-to-end deep learning on graphs.",
+            "extraction_confidence": 0.74,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_010",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:24.857264+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Austin Benson",
+            "subject_alias": "",
+            "subject_type": "PERSON",
+            "relation": "PART_OF",
+            "is_functional": false,
+            "object": "anonymous reviewers",
+            "object_alias": "",
+            "object_type": "PERSON",
+            "evidence_quote": "We are thankful to Austin Benson, Will Hamilton, Rok Sosi \u02c7c, Marinka \u017ditnik as well as the anonymous reviewers for their helpful comments.",
+            "extraction_confidence": 0.62,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_010",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:24.857264+00:00",
+            "grounding_score": 0.8584439945220947,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Will Hamilton",
+            "subject_alias": "",
+            "subject_type": "PERSON",
+            "relation": "PART_OF",
+            "is_functional": false,
+            "object": "anonymous reviewers",
+            "object_alias": "",
+            "object_type": "PERSON",
+            "evidence_quote": "We are thankful to Austin Benson, Will Hamilton, Rok Sosi \u02c7c, Marinka \u017ditnik as well as the anonymous reviewers for their helpful comments.",
+            "extraction_confidence": 0.62,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_010",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:24.857264+00:00",
+            "grounding_score": 0.7740010809898377,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Rok Sosi \u02c7c",
+            "subject_alias": "",
+            "subject_type": "PERSON",
+            "relation": "PART_OF",
+            "is_functional": false,
+            "object": "anonymous reviewers",
+            "object_alias": "",
+            "object_type": "PERSON",
+            "evidence_quote": "We are thankful to Austin Benson, Will Hamilton, Rok Sosi \u02c7c, Marinka \u017ditnik as well as the anonymous reviewers for their helpful comments.",
+            "extraction_confidence": 0.62,
+            "document_id": "DOC_002",
+            "chunk_id": "DOC_002_CH_010",
+            "source_name": "paper2.pdf",
+            "extracted_at": "2026-10-24T05:26:24.857264+00:00",
+            "grounding_score": 0.7871008825302124,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "social representations",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "DEFINED_AS",
+            "is_functional": true,
+            "object": "latent features",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Social representations are latent features of the vertices that capture neighborhood similarity and community membership.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_001",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:22.736577+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "latent features",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "CAPTURES",
+            "is_functional": false,
+            "object": "neighborhood similarity",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Social representations are latent features of the vertices that capture neighborhood similarity and community membership.",
+            "extraction_confidence": 0.96,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_001",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:22.736577+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "latent features",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "CAPTURES",
+            "is_functional": false,
+            "object": "community membership",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Social representations are latent features of the vertices that capture neighborhood similarity and community membership.",
+            "extraction_confidence": 0.96,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_001",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:22.736577+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "latent representations",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "ENCODES",
+            "is_functional": false,
+            "object": "social relations",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "These latent representations encode social relations in a continuous vector space with a relatively small number of dimensions.",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_001",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:22.736577+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "latent representations",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "BASED_ON",
+            "is_functional": false,
+            "object": "continuous vector space",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "These latent representations encode social relations in a continuous vector space with a relatively small number of dimensions.",
+            "extraction_confidence": 0.9,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_001",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:22.736577+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "power-law distribution",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "FOLLOWS",
+            "is_functional": false,
+            "object": "vertices",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "The power-law distribution of vertices appearing in short random walks (2a) follows a power-law, much like the distribution of words in natural language (2b).",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_003",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:25.793110+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "power-law distribution",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "FOLLOWS",
+            "is_functional": false,
+            "object": "words",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "The power-law distribution of vertices appearing in short random walks (2a) follows a power-law, much like the distribution of words in natural language (2b).",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_003",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:25.793110+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "random walks",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USED_AS",
+            "is_functional": false,
+            "object": "similarity measure",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_003",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:25.793110+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "random walks",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "content recommendation",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+            "extraction_confidence": 0.96,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_003",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:25.793110+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "random walks",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "community detection",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+            "extraction_confidence": 0.96,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_003",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:25.793110+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "degree distribution",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "FOLLOWS",
+            "is_functional": false,
+            "object": "scale-free",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "If the degree distribution of a connected graph follows a power law (is scale-free), we observe that the frequency which vertices appear in the short random walks will also follow a power-law distribution.",
+            "extraction_confidence": 0.94,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_003",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:25.793110+00:00",
+            "grounding_score": 0.9029722404479981,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "\u03a6",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "REPRESENTS",
+            "is_functional": false,
+            "object": "vertex v",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "This mapping \u03a6 represents the latent social representation associated with each vertex v in the graph.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_004",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:27.503213+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "\u03a6",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "IS_A",
+            "is_functional": true,
+            "object": "|V|\u00d7 d matrix of free parameters",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "In practice, we represent \u03a6 by a |V|\u00d7 d matrix of free parameters, which will serve later on as our XE.",
+            "extraction_confidence": 0.97,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_004",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:27.503213+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "truncated random walks",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "COMBINES_WITH",
+            "is_functional": false,
+            "object": "neural language models",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "By combining both truncated random walks and neural language models we formulate a method which satisfies all Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+            "extraction_confidence": 0.93,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_004",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:27.503213+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "SkipGram",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "objective function",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "We use the SkipGram algorithm [26] to update these representations in accordance with our objective function in Eq. 2.",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_005",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:25.807100+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "LibLinear",
+            "subject_alias": "",
+            "subject_type": "SYSTEM",
+            "relation": "IMPLEMENTS",
+            "is_functional": false,
+            "object": "one-vs-rest logistic regression classifier",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "For all models we use a one-vs-rest logistic regression implemented by LibLinear [10] for classification.",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_007",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:27.806481+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "DeepW alk",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "OUTPERFORMS",
+            "is_functional": false,
+            "object": "EdgeCluster",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "They show that DeepW alk significantly outperforms the scalable baseline for creating graph representations, EdgeCluster.",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_008",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:28.821338+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Relational classification",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "links between data items",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Relational classification (or collective classification) methods [14,24,31,35] use links between data items as part of the classification process.",
+            "extraction_confidence": 0.99,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_009",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:29.568173+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "approximate inference algorithm",
+            "subject_alias": "",
+            "subject_type": "ALGORITHM",
+            "relation": "REQUIRES",
+            "is_functional": false,
+            "object": "collective classification",
+            "object_alias": "",
+            "object_type": "ALGORITHM",
+            "evidence_quote": "Exact inference in the collective classification problem is NP-hard, and solutions have focused on the use of approximate inference algorithm which may not be guaranteed to converge [37].",
+            "extraction_confidence": 0.86,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_009",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:29.568173+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "Graph Kernels",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "USES",
+            "is_functional": false,
+            "object": "relational data",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Graph Kernels [42] have been proposed as a way to use relational data as part of the classification process, but are quite slow unless approximated [19].",
+            "extraction_confidence": 0.98,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_009",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:29.568173+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "representation",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "ENABLES",
+            "is_functional": false,
+            "object": "features",
+            "object_alias": "",
+            "object_type": "CONCEPT",
+            "evidence_quote": "Our approach is complementary; instead of encoding the structure as part of a kernel function, we learn a representation which allows them to be used directly as features for any classification method.",
+            "extraction_confidence": 0.9,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_009",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:29.568173+00:00",
+            "grounding_score": 0.981401891708374,
+            "evidence_match": "verbatim"
+        },
+        {
+            "subject": "distributed computing",
+            "subject_alias": "",
+            "subject_type": "CONCEPT",
+            "relation": "ENABLED",
+            "is_functional": false,
+            "object": "larger models",
+            "object_alias": "",
+            "object_type": "MODEL",
+            "evidence_quote": "Recently, distributed computing allowed for larger models to be trained [3], and the growth of data for unsupervised learning algorithms to emerge [9].",
+            "extraction_confidence": 0.95,
+            "document_id": "DOC_003",
+            "chunk_id": "DOC_003_CH_010",
+            "source_name": "paper3.pdf",
+            "extracted_at": "2026-10-24T05:26:31.028217+00:00",
+            "grounding_score": 1.0,
+            "evidence_match": "verbatim"
+        }
+    ]
+}

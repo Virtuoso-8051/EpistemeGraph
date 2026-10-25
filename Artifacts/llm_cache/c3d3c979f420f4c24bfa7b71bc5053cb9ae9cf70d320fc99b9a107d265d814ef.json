@@ -1,0 +1,130 @@
+{
+  "entities": [
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Large-scale Information Network Embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "large network G = (V,E)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "low-dimensional space Rd",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "network embedding model",
+      "alias": "",
+      "type": "MODEL"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "COMPLEMENTS",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We therefore define the second-order proximity, which complements the first-order proximity and preserves the network structure.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "the similarity between their neighborhood network structures",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Definition 3. (Second-order Proximity)The secondorder proximity between a pair of vertices (u,v ) in a network is the similarity between their neighborhood network structures.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "learning a function fG : V \u2192 Rd",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Definition 4. (Large-scale Information Network Embedding) Given a large network G = (V,E ), the problem of Large-scale Information Network Embedding aims to represent each vertexv\u2208V into a low-dimensional space Rd, i.e., learning a function fG : V \u2192 Rd, where d\u226a| V|.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "large network G = (V,E)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Definition 4. (Large-scale Information Network Embedding) Given a large network G = (V,E ), the problem of Large-scale Information Network Embedding aims to represent each vertexv\u2208V into a low-dimensional space Rd, i.e., learning a function fG : V \u2192 Rd, where d\u226a| V|.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "AIMS_TO_REPRESENT",
+      "is_functional": false,
+      "object": "low-dimensional space Rd",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Definition 4. (Large-scale Information Network Embedding) Given a large network G = (V,E ), the problem of Large-scale Information Network Embedding aims to represent each vertexv\u2208V into a low-dimensional space Rd, i.e., learning a function fG : V \u2192 Rd, where d\u226a| V|.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "network embedding model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "In this section, we present a novel network embedding model called the \u201cLINE,\u201d which satisfies all the three requirements.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We describe the LINE model to preserve the first-order proximity and second-order proximity separately, and then introduce a simple way to combine the two proximity.",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

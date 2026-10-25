@@ -1,0 +1,116 @@
+{
+  "answer": "In the LINE paper, the authors evaluate the method on five real-world datasets spanning language, social, and citation networks. The five datasets are:\n\n1. BlogCatalog \u2014 a social network dataset.\n2. Flickr \u2014 a social network dataset.\n3. YouTube \u2014 a social network dataset.\n4. Word Association \u2014 a language network dataset.\n5. DBLP \u2014 a citation network dataset.\n\nSo, across the three network types, LINE is evaluated on three social networks, one language network, and one citation network.",
+  "self_reported_accuracy": 0.98,
+  "confidence_reasoning": "These dataset names and categories are standard and directly reported in the LINE paper, so confidence is very high.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "real-world dataset",
+    "language network",
+    "social network",
+    "citation network"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "real-world dataset",
+    "language network",
+    "social network",
+    "citation network",
+    "BlogCatalog",
+    "Flickr",
+    "YouTube",
+    "Word Association",
+    "DBLP"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "BlogCatalog",
+      "target_alias": null,
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "Flickr",
+      "target_alias": null,
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "YouTube",
+      "target_alias": null,
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "Word Association",
+      "target_alias": null,
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "DBLP",
+      "target_alias": null,
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": null,
+      "target": "social network",
+      "target_alias": "SN",
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Flickr",
+      "source_alias": null,
+      "target": "social network",
+      "target_alias": "SN",
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "YouTube",
+      "source_alias": null,
+      "target": "social network",
+      "target_alias": "SN",
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Word Association",
+      "source_alias": null,
+      "target": "language network",
+      "target_alias": "LN",
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "DBLP",
+      "source_alias": null,
+      "target": "citation network",
+      "target_alias": "CN",
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    }
+  ]
+}

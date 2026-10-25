@@ -1,0 +1,184 @@
+{
+  "entities": [
+    {
+      "name": "Information Network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Graph Embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Low-dimensional Embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Visualization",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Node Classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Link Prediction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Recommendation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "MDS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "IsoMap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Laplacian eigenmap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Objective Function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Optimization Technique",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Graph Properties",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Twitter followee-follower network",
+      "alias": "",
+      "type": "DATASET"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Graph Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Low-dimensional Embedding",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This paper studies the problem of embedding information networks into lowdimensional spaces, in which every vertex is represented as a low-dimensional vector.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Low-dimensional Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Visualization",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Such a low-dimensional embedding is very useful in a variety of applications such as visualization [21], node classification [3], link prediction [10], and recommendation [23].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Low-dimensional Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Node Classification",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Such a low-dimensional embedding is very useful in a variety of applications such as visualization [21], node classification [3], link prediction [10], and recommendation [23].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Low-dimensional Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Link Prediction",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Such a low-dimensional embedding is very useful in a variety of applications such as visualization [21], node classification [3], link prediction [10], and recommendation [23].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Low-dimensional Embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Recommendation",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Such a low-dimensional embedding is very useful in a variety of applications such as visualization [21], node classification [3], link prediction [10], and recommendation [23].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "MDS",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Graph Embedding",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For example, the time complexity of classical graph embedding algorithms such as MDS [4], IsoMap [20], Laplacian eigenmap [2] are at least quadratic to the number of vertices, which is too expensive for networks with millions of nodes.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "IsoMap",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Graph Embedding",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For example, the time complexity of classical graph embedding algorithms such as MDS [4], IsoMap [20], Laplacian eigenmap [2] are at least quadratic to the number of vertices, which is too expensive for networks with millions of nodes.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Laplacian eigenmap",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Graph Embedding",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For example, the time complexity of classical graph embedding algorithms such as MDS [4], IsoMap [20], Laplacian eigenmap [2] are at least quadratic to the number of vertices, which is too expensive for networks with millions of nodes.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Twitter followee-follower network",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "175 million active users",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For example, the Twitter followee-follower network contains 175 million active users and around twenty billion edges in 2012 [14].",
+      "extraction_confidence": 0.96
+    }
+  ]
+}

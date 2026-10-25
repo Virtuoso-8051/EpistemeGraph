@@ -1,0 +1,199 @@
+{
+  "entities": [
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "conditional distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "empirical distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "distance",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "prestige",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "degree",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "PageRank",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "KL-divergence",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "out-degree",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE model",
+      "alias": "LINE",
+      "type": "MODEL"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embeddings",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function (3)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function (6)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "conditional probability",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ASSUMES",
+      "is_functional": false,
+      "object": "conditional distribution",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As mentioned above, the second-order proximity assumes that vertices with similar distributions over the contexts are similar to each other.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MINIMIZES",
+      "is_functional": false,
+      "object": "empirical distribution",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore, we minimize the following objective function: O2 = \u2211 i\u2208V \u03bbid(\u02c6p2(\u00b7|vi),p 2(\u00b7|vi)), (5) where d(\u00b7,\u00b7) is the distance between two distributions.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "prestige",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "degree",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As the importance of the vertices in the network may be different, we introduce \u03bbi in the objective function to represent the prestige of vertex i in the network, which can be measured by the degree or estimated through algorithms such as PageRank [15].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "prestige",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ESTIMATED_BY",
+      "is_functional": false,
+      "object": "PageRank",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "As the importance of the vertices in the network may be different, we introduce \u03bbi in the objective function to represent the prestige of vertex i in the network, which can be measured by the degree or estimated through algorithms such as PageRank [15].",
+      "extraction_confidence": 0.94
+    },
+    {
+      "subject": "empirical distribution",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "out-degree",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The empirical distribution \u02c6p2(\u00b7|vi) is defined as \u02c6p2(vj|vi) = wij di , where wij is the weight of the edge (i,j ) and di is the out-degree of vertex i, i.e. di = \u2211k\u2208N (i)wik, where N(i) is the set of out-neighbors of vi.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "KL-divergence",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "In this paper, for simplicity we set\u03bbi as the degree of vertexi, i.e.,\u03bbi =di, and here we also adopt KL-divergence as the distance function.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "LINE model",
+      "subject_alias": "LINE",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To embed the networks by preserving both the first-order and second-order proximity, a simple and effective way we find in practice is to train the LINE model which preserves the first-order proximity and second-order proximity separately and then concatenate the embeddings trained by the two methods for each vertex.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE model",
+      "subject_alias": "LINE",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To embed the networks by preserving both the first-order and second-order proximity, a simple and effective way we find in practice is to train the LINE model which preserves the first-order proximity and second-order proximity separately and then concatenate the embeddings trained by the two methods for each vertex.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "embeddings",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONCATENATES",
+      "is_functional": false,
+      "object": "embeddings",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To embed the networks by preserving both the first-order and second-order proximity, a simple and effective way we find in practice is to train the LINE model which preserves the first-order proximity and second-order proximity separately and then concatenate the embeddings trained by the two methods for each vertex.",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

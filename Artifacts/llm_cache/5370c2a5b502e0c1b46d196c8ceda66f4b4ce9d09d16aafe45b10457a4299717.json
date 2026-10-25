@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "name": "Macro-F1 score",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Erdos-Renyi graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "negative sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "asynchronous SGD",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "transition probabilities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sampling procedure",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "optimization phase",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Macro-F1 score",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "DECREASES_WITH",
+      "is_functional": false,
+      "object": "missing edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As we can see in Figure 5b(top), the decrease in Macro-F1 score as the fraction of missing edges increases is roughly linear with a small slope.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "DECLINES_WITH",
+      "is_functional": false,
+      "object": "noisy edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As shown in Figure 5b(bottom), the performance of node2vec declines slightly faster initially when compared with the setting of missing edges, however, the rate of decrease in Macro-F 1 score gradually slows down over time.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "SCALES_LINEARLY_WITH",
+      "is_functional": false,
+      "object": "number of nodes",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In Figure 6, we empirically observe thatnode2vec scales linearly with increase in number of nodes generating representations for one million nodes in less than four hours.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "negative sampling",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The optimization phase is made efficient using negative sampling [22] and asynchronous SGD [26].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "asynchronous SGD",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The optimization phase is made efficient using negative sampling [22] and asynchronous SGD [26].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "sampling procedure",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "transition probabilities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The sampling procedure comprises of preprocessing for computing transition probabilities for our walk (negligibly small) and simulation of random walks.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "sampling procedure",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The sampling procedure comprises of preprocessing for computing transition probabilities for our walk (negligibly small) and simulation of random walks.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ALSO_USED_IN",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We showed how random walks, also used in DeepWalk [24], allow the sampled nodes to be reused as neighborhoods for different source nodes appearing in the walk.",
+      "extraction_confidence": 0.92
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "entities": [
+    {
+      "name": "Model Optimization",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective (6)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "conditional probability p2(\u00b7|vi)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "negative sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "noise distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function (7)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sigmoid function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "observed edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "negative edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "out-degree of vertex v",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function (3)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "trivial solution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "asynchronous stochastic gradient algorithm",
+      "alias": "ASGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Eqn. (7)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "mini-batch of edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "model parameters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embedding vector ui",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "gradient",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "weight of the edge",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "learning rate",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word cooccurrence network",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "objective (6)",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "conditional probability p2(\u00b7|vi)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Optimizing objective (6) is computationally expensive, which requires the summation over the entire set of vertices when calculating the conditional probability p2(\u00b7|vi).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "negative sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "objective function (7)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "More specifically, it specifies the following objective function for each edge (i,j ): log\u03c3(\u20d7 u\u2032j T\u00b7\u20d7 ui) + K\u2211 i=1 Evn\u223cPn(v)[log\u03c3(\u2212\u20d7 u\u2032nT\u00b7\u20d7 ui)], (7) where\u03c3(x) = 1/(1 + exp(\u2212x)) is the sigmoid function.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "objective function (7)",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "sigmoid function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "More specifically, it specifies the following objective function for each edge (i,j ): log\u03c3(\u20d7 u\u2032j T\u00b7\u20d7 ui) + K\u2211 i=1 Evn\u223cPn(v)[log\u03c3(\u2212\u20d7 u\u2032nT\u00b7\u20d7 ui)], (7) where\u03c3(x) = 1/(1 + exp(\u2212x)) is the sigmoid function.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "objective function (7)",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MODELS",
+      "is_functional": false,
+      "object": "observed edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The first term models the observed edges, the second term models the negative edges drawn from the noise distribution and K is the number of negative edges.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "objective function (7)",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MODELS",
+      "is_functional": false,
+      "object": "negative edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The first term models the observed edges, the second term models the negative edges drawn from the noise distribution and K is the number of negative edges.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "negative sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "noise distribution",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To address this problem, we adopt the approach of negative sampling proposed in [13], which samples multiple negative edges according to some noisy distribution for each edge (i,j ).",
+      "extraction_confidence": 0.94
+    },
+    {
+      "subject": "negative sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "out-degree of vertex v",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We set Pn(v)\u221d dv 3/4 as proposed in [13], where dv is the out-degree of vertex v.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "objective function (3)",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "HAS",
+      "is_functional": false,
+      "object": "trivial solution",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For the objective function (3), there exists a trivial solution: uik =\u221e, for i=1,..., |V| and k = 1,...,d .",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "asynchronous stochastic gradient algorithm",
+      "subject_alias": "ASGD",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "Eqn. (7)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We adopt the asynchronous stochastic gradient algorithm (ASGD) [17] for optimizing Eqn. (7).",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

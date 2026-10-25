@@ -1,0 +1,81 @@
+{
+  "answer": "node2vec extends node embeddings f(u) and f(v) to an edge feature representation g(u,v) by applying a binary operator to the two node vectors. The four standard operators are:\n\n1. Average: g(u,v) = (f(u) + f(v)) / 2. This produces the elementwise mean of the two node embeddings.\n2. Hadamard: g(u,v) = f(u) \u2299 f(v). This produces the elementwise product.\n3. Weighted-L1: g(u,v) = |f(u) - f(v)|. This produces the elementwise absolute difference.\n4. Weighted-L2: g(u,v) = |f(u) - f(v)|^2. This produces the elementwise squared difference.\n\nThese operators are used to convert node representations into edge representations for downstream edge-based prediction tasks such as link prediction. Among them, Hadamard is often reported as a strong default choice in node2vec-style edge classification settings, though the best operator can depend on the dataset and task.",
+  "self_reported_accuracy": 0.98,
+  "confidence_reasoning": "The formulas for the four binary operators are standard and directly documented in node2vec, and the remaining statement about downstream edge prediction is also well-established.",
+  "query_entities": [
+    "NODE2VEC",
+    "binary operator",
+    "node representation",
+    "edge-based prediction task"
+  ],
+  "response_entities": [
+    "NODE2VEC",
+    "binary operator",
+    "node representation",
+    "edge feature representation",
+    "Average",
+    "Hadamard",
+    "Weighted-L1",
+    "Weighted-L2",
+    "edge-based prediction task",
+    "link prediction"
+  ],
+  "response_triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "binary operator",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "binary operator",
+      "target": "edge feature representation",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Average",
+      "target": "edge feature representation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Hadamard",
+      "target": "edge feature representation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Weighted-L1",
+      "target": "edge feature representation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Weighted-L2",
+      "target": "edge feature representation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Hadamard",
+      "target": "link prediction",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.8
+    },
+    {
+      "source": "edge feature representation",
+      "target": "edge-based prediction task",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    }
+  ]
+}

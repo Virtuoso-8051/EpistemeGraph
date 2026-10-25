@@ -1,0 +1,140 @@
+{
+    "winning_model": "RandomForest",
+    "champion_composite_score": 0.9772544111061464,
+    "previous_champion_score": 0.9862026836630144,
+    "is_promoted_to_production": true,
+    "total_training_samples": 1800,
+    "learned_scoring_parameters": {
+        "energy_weights": [
+            0.08,
+            0.08,
+            0.05,
+            0.15
+        ],
+        "prior_weights": [
+            0.8721,
+            0.0581,
+            0.0581,
+            0.0116
+        ],
+        "analytical_ml_blend_gamma": 0.65,
+        "s_query_exponent_eta": 0.85,
+        "optimal_pass_threshold": 0.6,
+        "optimal_abstain_threshold": 0.2618,
+        "feature_weight_dict": {
+            "e_sheaf_penalty_weight": 0.08,
+            "delta_k_penalty_weight": 0.08,
+            "d_spec_penalty_weight": 0.05,
+            "conflict_penalty_weight": 0.15,
+            "bayesian_trust_prior_weight": 0.8721,
+            "freshness_prior_weight": 0.0581,
+            "independence_prior_weight": 0.0581,
+            "llm_conf_prior_weight": 0.0116
+        }
+    },
+    "updated_at": "2026-10-25T11:28:27.736390+00:00",
+    "leaderboard": {
+        "PyTorch_AttentionResNet": {
+            "best_params": {
+                "hidden_dim": 64,
+                "epochs": 120,
+                "self_attention": true
+            },
+            "roc_auc": 0.9913087132502904,
+            "f1_score": 0.9901960784313726,
+            "brier_score": 0.011863406747579575,
+            "ece": 0.0064412979706604525,
+            "composite_score": 0.9730040085320504
+        },
+        "LogisticRegression": {
+            "best_params": {
+                "clf__C": 10.0
+            },
+            "roc_auc": 0.9852530513633083,
+            "f1_score": 0.9776674937965261,
+            "brier_score": 0.02424760516114122,
+            "ece": 0.047402256482334315,
+            "composite_score": 0.9136031897198328
+        },
+        "RandomForest": {
+            "best_params": {
+                "max_depth": 6,
+                "n_estimators": 150
+            },
+            "roc_auc": 0.9940384675724012,
+            "f1_score": 0.9901960784313726,
+            "brier_score": 0.011036922617561081,
+            "ece": 0.005747133848693691,
+            "composite_score": 0.9772544111061464
+        },
+        "ExtraTrees": {
+            "best_params": {
+                "max_depth": 10,
+                "n_estimators": 150
+            },
+            "roc_auc": 0.9900222773053873,
+            "f1_score": 0.9901960784313726,
+            "brier_score": 0.011083184774791038,
+            "ece": 0.00564743554167501,
+            "composite_score": 0.9732916569889212
+        },
+        "GradientBoosting": {
+            "best_params": {
+                "learning_rate": 0.05,
+                "max_depth": 3,
+                "n_estimators": 100
+            },
+            "roc_auc": 0.9925480844655016,
+            "f1_score": 0.9901960784313726,
+            "brier_score": 0.011354447908312765,
+            "ece": 0.006968708066894094,
+            "composite_score": 0.9742249284902947
+        },
+        "AdaBoost": {
+            "best_params": {
+                "learning_rate": 0.2,
+                "n_estimators": 50
+            },
+            "roc_auc": 0.9816447554202881,
+            "f1_score": 0.9829683698296837,
+            "brier_score": 0.014713113005279685,
+            "ece": 0.013465521700428341,
+            "composite_score": 0.95346612071458
+        },
+        "DeepMLP_NeuralNet": {
+            "best_params": {
+                "mlp__alpha": 0.001,
+                "mlp__hidden_layer_sizes": [
+                    64,
+                    32
+                ]
+            },
+            "roc_auc": 0.9837469800131782,
+            "f1_score": 0.9627791563275434,
+            "brier_score": 0.03166404530198919,
+            "ece": 0.039499879326614126,
+            "composite_score": 0.9125830553845748
+        },
+        "RBF_SVM": {
+            "best_params": {
+                "svm__C": 5.0,
+                "svm__gamma": "scale"
+            },
+            "roc_auc": 0.9893947475761664,
+            "f1_score": 0.9901960784313726,
+            "brier_score": 0.011842789389636383,
+            "ece": 0.010640864636830168,
+            "composite_score": 0.9669110935497
+        },
+        "StackingMetaEnsemble": {
+            "best_params": {
+                "final_estimator__C": 1.0
+            },
+            "roc_auc": 0.9913087132502902,
+            "f1_score": 0.9901960784313726,
+            "brier_score": 0.011128472487449305,
+            "ece": 0.0061928426706467045,
+            "composite_score": 0.9739873980921943
+        }
+    }
+}

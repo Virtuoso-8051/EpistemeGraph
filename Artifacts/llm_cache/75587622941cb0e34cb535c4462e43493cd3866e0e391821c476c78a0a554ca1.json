@@ -1,0 +1,206 @@
+{
+  "entities": [
+    {
+      "name": "Large-scale Information Network Embedding",
+      "alias": "LINE",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "embedding very large information networks into low-dimensional vector spaces",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph embedding methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "information networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local and global network structures",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edge-sampling algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "classical stochastic gradient descent",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "inference",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "real-world information networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "citation networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "link prediction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "visualization",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "LINE",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "embedding very large information networks into low-dimensional vector spaces",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This paper studies the problem of embedding very large information networks into low-dimensional vector spaces, which is useful in many tasks such as visualization, node classification, and link prediction.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "LINE",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The method optimizes a carefully designed objective function that preserves both the local and global network structures.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "local and global network structures",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The method optimizes a carefully designed objective function that preserves both the local and global network structures.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "edge-sampling algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "inference",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An edge-sampling algorithm is proposed that addresses the limitation of the classical stochastic gradient descent and improves both the effectiveness and the efficiency of the inference.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "edge-sampling algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "classical stochastic gradient descent",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "An edge-sampling algorithm is proposed that addresses the limitation of the classical stochastic gradient descent and improves both the effectiveness and the efficiency of the inference.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "LINE",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "real-world information networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "real-world information networks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "language networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "real-world information networks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "social networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "real-world information networks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "citation networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Large-scale Information Network Embedding",
+      "subject_alias": "LINE",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "embedding very large information networks into low-dimensional vector spaces",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The algorithm is very efficient, which is able to learn the embedding of a network with millions of vertices and billions of edges in a few hours on a typical single machine.",
+      "extraction_confidence": 0.81
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "entities": [
+    {
+      "name": "First-order Proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edge",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "weight",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "similarity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph embedding algorithms",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "IsoMap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LLE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Laplacian eigenmap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "network structures",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sparsity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neighborhood network structures",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity vector",
+      "alias": "p_u",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity vector",
+      "alias": "p_v",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "First-order Proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "local pairwise proximity between two vertices",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The first-order proximity in a network is the local pairwise proximity between two vertices.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "weight",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "INDICATES",
+      "is_functional": true,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For each pair of vertices linked by an edge (u,v ), the weight on that edge,wuv, indicates the firstorder proximity between u and v.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "first-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "similarity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The first-order proximity usually implies the similarity of two nodes in a real-world network.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "graph embedding algorithms",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "graph embedding algorithms",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "IsoMap",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "graph embedding algorithms",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "LLE",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "graph embedding algorithms",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Laplacian eigenmap",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "graph embedding algorithms",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "graph factorization",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "first-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_NOT_SUFFICIENT_FOR",
+      "is_functional": false,
+      "object": "network structures",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore, first-order proximity alone is not sufficient for preserving the network structures, and it is important to seek an alternative notion of proximity that addresses the problem of sparsity.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "COMPLEMENTS",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We therefore define the second-order proximity, which complements the first-order proximity and preserves the network structure.",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

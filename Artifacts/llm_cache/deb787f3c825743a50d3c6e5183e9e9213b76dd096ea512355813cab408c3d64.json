@@ -1,0 +1,216 @@
+{
+  "entities": [
+    {
+      "name": "network embedding model",
+      "alias": "LINE",
+      "type": "MODEL"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "optimization technique",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local network structures",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "global network structures",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "observed links",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph embedding algorithms",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "IsoMap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Laplacian eigenmap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "real-world network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "shared neighborhood structures",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "shared neighbors",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "network embedding model",
+      "subject_alias": "LINE",
+      "subject_type": "MODEL",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this paper, we propose such a network embedding model called the \u201cLINE,\u201d which is able to scale to very large, arbitrary types of networks: undirected, directed and/or weighted.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "network embedding model",
+      "subject_alias": "LINE",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "optimization technique",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We anticipate that a new model with a carefully designed objective function that preserves properties of the graph and an efficient optimization technique should effectively find the embedding of millions of nodes.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "local network structures",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The model optimizes an objective which preserves both the local and global network structures.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "global network structures",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The model optimizes an objective which preserves both the local and global network structures.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "observed links",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAPTURE",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Naturally, the local structures are represented by the observed links in the networks, which capture the first-order proximity between the vertices.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "graph embedding algorithms",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PRESERVE",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Most existing graph embedding algorithms are designed to preserve thisfirst-order proximity, e.g., IsoMap [20] and Laplacian eigenmap [2], even if they do not scale.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "IsoMap",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PRESERVE",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Most existing graph embedding algorithms are designed to preserve thisfirst-order proximity, e.g., IsoMap [20] and Laplacian eigenmap [2], even if they do not scale.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Laplacian eigenmap",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PRESERVE",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Most existing graph embedding algorithms are designed to preserve thisfirst-order proximity, e.g., IsoMap [20] and Laplacian eigenmap [2], even if they do not scale.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "real-world network",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As a complement, we explore the second-order proximity between the vertices, which is not determined through the observed tie strength but through the shared neighborhood structures of the vertices.",
+      "extraction_confidence": 0.82
+    },
+    {
+      "subject": "shared neighbors",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The general notion of the second-order proximity can be interpreted as nodes with shared neighbors being likely to be similar.",
+      "extraction_confidence": 0.88
+    }
+  ]
+}

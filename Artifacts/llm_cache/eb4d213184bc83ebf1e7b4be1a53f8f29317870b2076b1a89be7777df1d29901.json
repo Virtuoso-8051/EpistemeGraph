@@ -1,0 +1,207 @@
+{
+  "entities": [
+    {
+      "name": "proteins",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neighboring proteins",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word cooccurence network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Wikipedia corpus",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "words",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "POS tags",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Micro-F1 score",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Macro-F1 score",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "PPI (Homo Sapiens)",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Spectral Clustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "one-vs-rest logistic regression classifier",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "L2 regularization",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "train and test data",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "10 random instances",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "accuracy",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "parameters p and q",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "word cooccurence network",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Wikipedia corpus",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "The word cooccurence network is fairly dense, since edges exist between words cooccuring in a 2length window in the Wikipedia corpus.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "words",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "HAVE",
+      "is_functional": false,
+      "object": "POS tags",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Hence, words having the same POS tags are not hard to find, lending a high degree of homophily.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "one-vs-rest logistic regression classifier",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The node feature representations are input to a one-vs-rest logistic regression classifier with L2 regularization.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "one-vs-rest logistic regression classifier",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "L2 regularization",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The node feature representations are input to a one-vs-rest logistic regression classifier with L2 regularization.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "train and test data",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "SPLIT_INTO",
+      "is_functional": false,
+      "object": "10 random instances",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The train and test data is split equally over 10 random instances.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Macro-F1 score",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "USED_FOR",
+      "is_functional": false,
+      "object": "performance",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use the Macro-F1 scores for comparing performance in Table 2 and the relative performance gain is over the closest benchmark.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In BlogCatalog, we can discover the right mix of homophily and structural equivalence by setting parametersp andq to low values, giving us 22.3% gain over DeepWalk and 229.2% gain over LINE in Macro-F1 scores.",
+      "extraction_confidence": 0.91
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In BlogCatalog, we can discover the right mix of homophily and structural equivalence by setting parametersp andq to low values, giving us 22.3% gain over DeepWalk and 229.2% gain over LINE in Macro-F1 scores.",
+      "extraction_confidence": 0.91
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "entities": [
+    {
+      "name": "Flickr network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Youtube network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "LINE",
+      "alias": "LINE(1st)",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE",
+      "alias": "LINE(2nd)",
+      "type": "MODEL"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "reconstructed Youtube network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "original network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "network sparsity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "degree of the vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "dimension d",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of samples",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "optimization",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE",
+      "subject_alias": "LINE(1st)",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "LINE(2nd)",
+      "object_type": "MODEL",
+      "evidence_quote": "We can see that in the beginning, when the network is very sparse, the LINE(1st) outperforms LINE(2nd).",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "LINE(2nd)",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "LINE(1st)",
+      "object_type": "MODEL",
+      "evidence_quote": "As we gradually increase the percentage of links, the LINE(2nd) begins to outperform the LINE(1st).",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "SUFFERS",
+      "is_functional": false,
+      "object": "network sparsity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This shows that the second-order proximity suffers when the network is extremely sparse, and it outperforms first-order proximity when there are sufficient nodes in the neighborhood of a node.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "LINE(2nd)",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "LINE(1st)",
+      "object_type": "MODEL",
+      "evidence_quote": "In the original network, the LINE(2nd) outperforms LINE(1st) except for thefirst group, which confirms that the second-order proximity does not work well for nodes with a low degree.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "LINE(2nd)",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "We can also see that the LINE(2nd) model on the reconstructed network outperforms DeepWalk in all the groups.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "LINE(1st)",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "degree of the vertices",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Overall, the performance of different models increases when the degrees of the vertices increase.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "LINE(2nd)",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "degree of the vertices",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Overall, the performance of different models increases when the degrees of the vertices increase.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "LINE(1st)",
+      "subject_type": "MODEL",
+      "relation": "DROPS",
+      "is_functional": false,
+      "object": "dimension d",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We can see that the performance of the LINE(1st) or LINE(2nd) drops when the dimension becomes too large.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "LINE(2nd)",
+      "subject_type": "MODEL",
+      "relation": "DROPS",
+      "is_functional": false,
+      "object": "dimension d",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We can see that the performance of the LINE(1st) or LINE(2nd) drops when the dimension becomes too large.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "LINE",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "number of samples",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Fig. 4(b) shows the results of the LINE and DeepWalk w.r.t. the number of samples during the optimization.",
+      "extraction_confidence": 0.78
+    }
+  ]
+}

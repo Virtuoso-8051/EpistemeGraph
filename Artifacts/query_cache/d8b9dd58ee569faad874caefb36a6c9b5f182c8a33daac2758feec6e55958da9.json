@@ -1,0 +1,96 @@
+{
+  "answer": "DeepWalk models the probability of a context node u_k given the embedding of a source node v_j by using a softmax over all vertices in the graph. A naive softmax would require computing a normalization term over every vertex in the vertex set V, so evaluating Pr(u_k | Phi(v_j)) would take O(|V|) time per prediction.\n\nTo reduce this cost, DeepWalk replaces the full softmax with Hierarchical Softmax. In this scheme, all vertices are placed as leaves of a binary tree, and each internal node stores a binary decision. The probability of reaching a target vertex is then written as the product of probabilities along the unique root-to-leaf path for that vertex. Instead of scoring every vertex, the model only evaluates the internal nodes on that path.\n\nIf the binary tree is built using Huffman coding, frequent vertices are assigned shorter codes and therefore shorter paths, while rare vertices get longer paths. This makes the average path length small, and the cost of computing Pr(u_k | Phi(v_j)) becomes proportional to the path length rather than to |V|. For a balanced or approximately balanced tree, that cost is O(log |V|). In practice, Huffman coding can make the average computation even better than a uniform balanced tree when vertex frequencies are highly skewed.\n\nSo the key idea is: DeepWalk avoids a full normalization over all vertices by factorizing the softmax into a sequence of binary decisions on a Huffman-coded tree, reducing per-probability computation from linear in the number of vertices to logarithmic in the tree depth on average.",
+  "self_reported_accuracy": 0.97,
+  "confidence_reasoning": "This is a standard description of DeepWalk's hierarchical softmax mechanism and its complexity reduction, with only minor caveats about average versus worst-case path length.",
+  "query_entities": [
+    "DeepWalk",
+    "Hierarchical Softmax",
+    "binary tree",
+    "Huffman coding",
+    "Pr(u_k | Phi(v_j))",
+    "O(|V|)",
+    "O(log |V|)"
+  ],
+  "response_entities": [
+    "DeepWalk",
+    "Hierarchical Softmax",
+    "binary tree",
+    "Huffman coding",
+    "softmax",
+    "vertex set V",
+    "Pr(u_k | Phi(v_j))",
+    "Phi(v_j)",
+    "u_k",
+    "v_j",
+    "root-to-leaf path",
+    "binary decision",
+    "Huffman code",
+    "O(|V|)",
+    "O(log |V|)"
+  ],
+  "response_triples": [
+    {
+      "source": "DeepWalk",
+      "target": "Hierarchical Softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "target": "binary tree",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "binary tree",
+      "target": "Huffman coding",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "target": "softmax",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "softmax",
+      "target": "vertex set V",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "softmax",
+      "target": "O(|V|)",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.94
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "target": "root-to-leaf path",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "Huffman coding",
+      "target": "root-to-leaf path",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "root-to-leaf path",
+      "target": "O(log |V|)",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    }
+  ]
+}

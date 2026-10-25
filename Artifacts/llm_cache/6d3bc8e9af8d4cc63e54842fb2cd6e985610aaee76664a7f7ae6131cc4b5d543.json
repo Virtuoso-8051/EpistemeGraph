@@ -1,0 +1,251 @@
+{
+  "entities": [
+    {
+      "name": "labeled documents",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "one-vs-rest logistic regression classifier",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LibLinear package",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Wikipedia page classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word analogy task",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "edge weights",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINESGDs",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "divergence of the weights of the edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "edge-sampling treatment",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SGD",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(2nd)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(1st)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(1st+2nd)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embeddings",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "contextual proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "most similar words",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "semantically related words",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "syntactically related words",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "one-vs-rest logistic regression classifier",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "LibLinear package",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "All document vectors are used to train a one-vs-rest logistic regression classifier using the LibLinear package 4.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Micro-F1",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Wikipedia page classification",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We report the classification metrics Micro-F1 and Macro-F1 [11].",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "Macro-F1",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Wikipedia page classification",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We report the classification metrics Micro-F1 and Macro-F1 [11].",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The graph factorization outperforms DeepWalk as DeepWalk ignores the weights of the edges.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "SGD",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The LINE optimized by the edge-sampling treatment performs much better than directly deploying SGD.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE(1st)",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The LINE(2nd) outperforms LINE(1st) and is slightly better than the graph factorization.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "graph factorization",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The LINE(2nd) outperforms LINE(1st) and is slightly better than the graph factorization.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "LINE(1st+2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE(1st)",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "As a result, the LINE(1st+2nd) method performs significantly better than all other methods.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "LINE(1st+2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE(2nd)",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "As a result, the LINE(1st+2nd) method performs significantly better than all other methods.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "first-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "proximities are complementary to each other",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This indicates that the first-order and second-order proximities are complementary to each other.",
+      "extraction_confidence": 0.72
+    }
+  ]
+}

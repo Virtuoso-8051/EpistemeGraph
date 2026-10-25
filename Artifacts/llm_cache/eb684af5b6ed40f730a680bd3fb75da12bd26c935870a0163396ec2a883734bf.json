@@ -1,0 +1,162 @@
+{
+  "entities": [
+    {
+      "name": "SkipGram",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "\u03a6",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Wvi",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "w",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walk",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hierarchical Softmax",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "logistic regression",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "binary tree",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Huffman coding",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "binary classifier",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representation vector",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use the SkipGram algorithm [26] to update these representations in accordance with our objective function in Eq. 2.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "language model",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "SkipGram is a language model that maximizes the cooccurrence probability among the words that appear within a window, w, in a sentence [26].",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "MAXIMIZES",
+      "is_functional": false,
+      "object": "cooccurrence probability",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "SkipGram is a language model that maximizes the cooccurrence probability among the words that appear within a window, w, in a sentence [26].",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "random walk",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "representation vector",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For each vertexvi we generate a random walk|Wvi| = t, and then use it to update our representations (Line 7).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Hierarchical Softmax",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "binary tree",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "If we assign the vertices to the leaves of a binary tree, the prediction problem turns into maximizing the probability of a specific path in the tree (See Figure 3c).",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "Hierarchical Softmax",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "binary classifier",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Now, Pr(bl| \u03a6(vj)) could be modeled by a binary classifier that is assigned to the parent of the node bl.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Hierarchical Softmax",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "computational complexity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This reduces the computational complexity of calculating Pr( uk| \u03a6(vj)) from O(|V|) to O(log|V|).",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Huffman coding",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "access time",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Huffman coding is used to reduce the access time of frequent elements in the tree.",
+      "extraction_confidence": 0.97
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "entities": [
+    {
+      "name": "Area Under Curve",
+      "alias": "AUC",
+      "type": "METRIC"
+    },
+    {
+      "name": "link prediction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Common Neighbors",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Jaccard\u2019s Coefficient",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Adamic-Adar",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Pref. Attachment",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Spectral Clustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Average",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hadamard",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Weighted-L1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Weighted-L2",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "binary operators",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "breadth-first strategy",
+      "alias": "BFS",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "depth-first strategy",
+      "alias": "DFS",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "uniform random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "1-hop and 2-hop neighbors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "likelihood",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "exploration-exploitation trade-off",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "interpretability",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "learned representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural equivalences",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "homophilous communities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network neighborhoods",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "uniform random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepWalk [24] proposes search using uniform random walks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "breadth-first strategy",
+      "object_alias": "BFS",
+      "object_type": "CONCEPT",
+      "evidence_quote": "LINE [28] proposes primarily a breadth-first strategy, sampling nodes and optimizing the likelihood independently over only 1-hop and 2-hop neighbors.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "1-hop and 2-hop neighbors",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "LINE [28] proposes primarily a breadth-first strategy, sampling nodes and optimizing the likelihood independently over only 1-hop and 2-hop neighbors.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "COMPARES_WITH",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Both DeepWalk and LINE can be seen as rigid search strategies over networks.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "COMPARES_WITH",
+      "is_functional": false,
+      "object": "node2vec",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Table 4: Area Under Curve (AUC) scores for link prediction.",
+      "extraction_confidence": 0.62
+    },
+    {
+      "subject": "Area Under Curve",
+      "subject_alias": "AUC",
+      "subject_type": "METRIC",
+      "relation": "MEASURED_BY",
+      "is_functional": true,
+      "object": "link prediction",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Table 4: Area Under Curve (AUC) scores for link prediction.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "breadth-first strategy",
+      "subject_alias": "BFS",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "structural equivalences",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This makes BFS suitable for characterizing structural equivalences in network that rely on the immediate local structure of nodes.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "depth-first strategy",
+      "subject_alias": "DFS",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "homophilous communities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "On the other hand, DFS can freely explore network neighborhoods which is important in discovering homophilous communities at the cost of high variance.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROVIDES",
+      "is_functional": false,
+      "object": "interpretability",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Additionally, it provides a degree of interpretability to the learned representations when applied for a prediction task.",
+      "extraction_confidence": 0.74
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "likelihood",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "LINE [28] proposes primarily a breadth-first strategy, sampling nodes and optimizing the likelihood independently over only 1-hop and 2-hop neighbors.",
+      "extraction_confidence": 0.95
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "edge sampling treatment",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity based methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "second-order neighbors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "empirical distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "effectiveness",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "efficiency",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "HAS_TIME_COMPLEXITY",
+      "is_functional": false,
+      "object": "stochastic gradient descent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "extraction_confidence": 0.62
+    },
+    {
+      "subject": "edge sampling treatment",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "stochastic gradient descent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The edge sampling treatment improves the effectiveness of the stochastic gradient descent without compromising the efficiency.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "second-order proximity based methods",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "RELY_ON",
+      "is_functional": false,
+      "object": "second-order neighbors",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An intuitive solution to this is expanding the neighbors of those vertices by adding higher order neighbors, such as neighbors of neighbors.",
+      "extraction_confidence": 0.74
+    },
+    {
+      "subject": "new vertex",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "empirical distribution",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For a new vertex i, if its connections to the existing vertices are known, we can obtain the empirical distribution \u02c6p1(\u00b7,v i) and \u02c6p2(\u00b7|vi) over existing vertices.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "new vertex",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To obtain the embedding of the new vertex, according to the objective function Eqn. (3) or Eqn. (6), a straightforward way is to minimize either one of the following objective functions \u2212 \u2211 j\u2208N (i) wji logp1(vj,v i), or\u2212 \u2211 j\u2208N (i) wji logp2(vj|vi), (10) by updating the embedding of the new vertex and keeping the embeddings of existing vertices.",
+      "extraction_confidence": 0.91
+    },
+    {
+      "subject": "new vertex",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "embedding",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To obtain the embedding of the new vertex, according to the objective function Eqn. (3) or Eqn. (6), a straightforward way is to minimize either one of the following objective functions \u2212 \u2211 j\u2208N (i) wji logp1(vj,v i), or\u2212 \u2211 j\u2208N (i) wji logp2(vj|vi), (10) by updating the embedding of the new vertex and keeping the embeddings of existing vertices.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "effectiveness",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We empirically evaluated the effectiveness and efficiency of the LINE.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "efficiency",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We empirically evaluated the effectiveness and efficiency of the LINE.",
+      "extraction_confidence": 0.97
+    }
+  ]
+}

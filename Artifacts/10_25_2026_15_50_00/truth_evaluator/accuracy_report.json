@@ -1,0 +1,153 @@
+{
+    "metrics": {
+        "sheaf_laplacian_energy": 0.8619400018337602,
+        "forman_ricci_curvature_distortion": 1.0142522625655368,
+        "spectral_laplacian_divergence": 0.4937113541931367,
+        "bayesian_source_trust": 0.09573317319091612,
+        "temporal_freshness": 0.717666127594449,
+        "source_independence": 0.2577069999461417,
+        "conflict_ratio": 0.9918656256155003,
+        "llm_extraction_confidence": 0.91,
+        "pdf_chunk_cooccurrence_phi_cooc": 0.14173649109578668,
+        "out_of_corpus_ratio_rho_ooc": 0.5714285714285714,
+        "query_belief_score_S_Query": 0.09566785200423361,
+        "phase1_kg_fidelity_score_S_KG": 0.7942868111475047,
+        "final_compound_accuracy_score": 0.14595807900927854
+    },
+    "learned_parameters_used": {
+        "energy_weights": [
+            0.1427,
+            0.1,
+            0.0919,
+            0.3359
+        ],
+        "prior_weights": [
+            0.5477,
+            0.3635,
+            0.0634,
+            0.0254
+        ],
+        "analytical_ml_blend_gamma": 0.75,
+        "s_query_exponent_eta": 0.82,
+        "optimal_pass_threshold": 0.65,
+        "optimal_abstain_threshold": 0.5,
+        "feature_weight_dict": {
+            "e_sheaf_penalty_weight": 0.1427,
+            "delta_k_penalty_weight": 0.1,
+            "d_spec_penalty_weight": 0.0919,
+            "conflict_penalty_weight": 0.3359,
+            "bayesian_trust_prior_weight": 0.5477,
+            "freshness_prior_weight": 0.3635,
+            "independence_prior_weight": 0.0634,
+            "llm_conf_prior_weight": 0.0254
+        }
+    },
+    "feature_vector_X": [
+        0.8619400018337602,
+        1.0142522625655368,
+        0.4937113541931367,
+        0.09573317319091612,
+        0.717666127594449,
+        0.2577069999461417,
+        0.9918656256155003,
+        0.91
+    ],
+    "edge_audit_details": [
+        {
+            "source": "objective function",
+            "relation": "OPTIMIZES",
+            "target": "NODE2VEC",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 0.95,
+            "target_grounding_mu": 1.0,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        },
+        {
+            "source": "depth-first search",
+            "relation": "APPROXIMATES",
+            "target": "biased random walk procedure",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "USES",
+            "target": "biased random walk procedure",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "BASED_ON",
+            "target": "Skip-gram model",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "REFUTED",
+            "target": "backdoor adjustment",
+            "claim_type": "REFUTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 0.0,
+            "is_supported": false,
+            "audit_verdict": "UNVERIFIED_PREMISE_OR_SPECULATION"
+        },
+        {
+            "source": "BFS",
+            "relation": "APPROXIMATES",
+            "target": "biased random walk procedure",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        },
+        {
+            "source": "biased random walk procedure",
+            "relation": "ENABLES",
+            "target": "node2vec parameter",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        },
+        {
+            "source": "Causal Do-Calculus",
+            "relation": "USES",
+            "target": "backdoor adjustment",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 0.0,
+            "target_grounding_mu": 0.0,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        },
+        {
+            "source": "backdoor adjustment",
+            "relation": "REQUIRES",
+            "target": "structural causal DAG",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 0.0,
+            "target_grounding_mu": 0.0,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        }
+    ],
+    "verdict": {
+        "decision_status": "HALLUCINATED",
+        "is_hallucinated": true,
+        "pass_threshold": 0.6,
+        "abstention_threshold": 0.3
+    }
+}

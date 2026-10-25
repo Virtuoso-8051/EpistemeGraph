@@ -1,0 +1,209 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Alias sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "weighted networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "search parameters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Score Definition",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Common Neighbors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Jaccard\u2019s Coefficient",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Adamic-Adar Score",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Preferential Attachment",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "semisupervised",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "link prediction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "labeled dataset of edges",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "positive examples",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "negative examples",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Facebook",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Protein-Protein Interactions",
+      "alias": "PPI",
+      "type": "DATASET"
+    },
+    {
+      "name": "Homo Sapiens",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We showed how random walks, also used in DeepWalk [24], allow the sampled nodes to be reused as neighborhoods for different source nodes appearing in the walk.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Alias sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "weighted networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Alias sampling allows our walks to generalize to weighted networks, with little preprocessing [28].",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "search parameters",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "the underlying task and domain",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Though we are free to set the search parameters based on the underlying task and domain at no additional cost, learning the best settings of Score Definition Common Neighbors |N (u)\u2229N (v)| Jaccard\u2019s Coefficient |N(u)\u2229N(v)||N(u)\u222aN(v)| Adamic-Adar Score \u2211t\u2208N(u)\u2229N(v) 1log|N(t)| Preferential Attachment |N (u)|\u00b7|N (v)| Table 3: Link prediction heuristic scores for node pair (u,v ) with immediate neighbor setsN (u) andN (v) respectively.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "semisupervised",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "However, as our experiments confirm, this overhead is minimal since node2vec is semisupervised and hence, can learn these parameters efficiently with very little labeled data.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "labeled dataset of edges",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We generate the labeled dataset of edges as follows:",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "link prediction",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "labeled dataset of edges",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "In link prediction, we are given a network with a certain fraction of edges removed, and we would like to predict these missing edges.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "Facebook",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "USED_FOR",
+      "is_functional": false,
+      "object": "link prediction",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We test our benchmarks on the following datasets: \u2022 Facebook [14]: In the Facebook network, nodes represent users, and edges represent a friendship relation between any two users.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Protein-Protein Interactions",
+      "subject_alias": "PPI",
+      "subject_type": "DATASET",
+      "relation": "USED_FOR",
+      "is_functional": false,
+      "object": "link prediction",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We test our benchmarks on the following datasets: \u2022 Protein-Protein Interactions (PPI) [5]: In the PPI network for Homo Sapiens, nodes represent proteins, and an edge indicates a biological interaction between a pair of proteins.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Protein-Protein Interactions",
+      "subject_alias": "PPI",
+      "subject_type": "DATASET",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Homo Sapiens",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "\u2022 Protein-Protein Interactions (PPI) [5]: In the PPI network for Homo Sapiens, nodes represent proteins, and an edge indicates a biological interaction between a pair of proteins.",
+      "extraction_confidence": 0.84
+    }
+  ]
+}

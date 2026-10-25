@@ -1,0 +1,189 @@
+{
+  "entities": [
+    {
+      "name": "SkipGram",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "language model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "cooccurrence probability",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walk",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representation vector",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "logistic regression",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Hierarchical Softmax",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "probability distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "binary tree",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "binary classifier",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "computational complexity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Huffman coding",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "model parameter set",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use the SkipGram algorithm [26] to update these representations in accordance with our objective function in Eq. 2.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "language model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "SkipGram is a language model that maximizes the cooccurrence probability among the words that appear within a window, w, in a sentence [26].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "language model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "cooccurrence probability",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "SkipGram is a language model that maximizes the cooccurrence probability among the words that appear within a window, w, in a sentence [26].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "Hierarchical Softmax",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "binary tree",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "If we assign the vertices to the leaves of a binary tree, the prediction problem turns into maximizing the probability of a specific path in the tree (See Figure 3c).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Hierarchical Softmax",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPROXIMATES",
+      "is_functional": false,
+      "object": "probability distribution",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To speed the training time, Hierarchical Softmax [29,30] can be used to approximate the probability distribution.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "binary classifier",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "MODELS",
+      "is_functional": false,
+      "object": "probability distribution",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Now, Pr(bl| \u03a6(vj)) could be modeled by a binary classifier that is assigned to the parent of the node bl.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Hierarchical Softmax",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "computational complexity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This reduces the computational complexity of calculating Pr( uk| \u03a6(vj)) from O(|V|) to O(log|V|).",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Huffman coding",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "access time",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Huffman coding is used to reduce the access time of frequent elements in the tree.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "Stochastic gradient descent",
+      "subject_alias": "SGD",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "model parameter set",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Stochastic gradient descent (SGD) [4] is used to optimize these parameters (Line 4, Algorithm 2).",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

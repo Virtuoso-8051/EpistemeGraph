@@ -1,0 +1,140 @@
+{
+  "entities": [
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "pure BFS/DFS approaches",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph connectivity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "effective sampling rate",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sample reuse",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node2vec algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "space complexity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "time complexity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Markovian nature",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "bias",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "space complexity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Random walks are computationally efficient in terms of both space and time requirements.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "time complexity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Random walks are computationally efficient in terms of both space and time requirements.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "graph connectivity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In particular, by imposing graph connectivity in the sample generation process, random walks provide a convenient mechanism to increase the effective sampling rate by reusing samples across different source nodes.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "INCREASES",
+      "is_functional": false,
+      "object": "effective sampling rate",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In particular, by imposing graph connectivity in the sample generation process, random walks provide a convenient mechanism to increase the effective sampling rate by reusing samples across different source nodes.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "sample reuse",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "efficiency",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "However, we observe that it greatly improves the efficiency.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "sample reuse",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "bias",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that sample reuse can introduce some bias in the overall procedure.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "3.2.3 The node2vec algorithm Algorithm 1 The node2vec algorithm.",
+      "extraction_confidence": 0.78
+    }
+  ]
+}

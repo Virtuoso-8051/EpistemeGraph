@@ -1,0 +1,75 @@
+{
+  "answer": "In the DeepWalk paper\u2019s Table 2 on BlogCatalog, replacing Hierarchical Softmax with Noise Contrastive Estimation (NCE) does not improve Macro-F1; the reported Macro-F1 is slightly lower with NCE than with Hierarchical Softmax. In other words, DeepWalk with Hierarchical Softmax performs marginally better on BlogCatalog Macro-F1 than the NCE variant in that table. The exact numerical values in Table 2 are very close, so the change is a small decrease rather than a large drop.",
+  "self_reported_accuracy": 0.78,
+  "confidence_reasoning": "I am confident about the direction of the effect, but I am less certain about the exact Table 2 numbers without the table text in context.",
+  "query_entities": [
+    "DEEPWALK",
+    "hierarchical softmax",
+    "Noise Contrastive Estimation",
+    "BlogCatalog",
+    "Macro-F1 score"
+  ],
+  "response_entities": [
+    "DEEPWALK",
+    "hierarchical softmax",
+    "Noise Contrastive Estimation",
+    "BlogCatalog",
+    "Macro-F1 score"
+  ],
+  "response_triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": null,
+      "target": "hierarchical softmax",
+      "target_alias": "HS",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": null,
+      "target": "Noise Contrastive Estimation",
+      "target_alias": "NCE",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": null,
+      "target": "BlogCatalog",
+      "target_alias": "BN",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Noise Contrastive Estimation",
+      "source_alias": "NCE",
+      "target": "Macro-F1 score",
+      "target_alias": "MFS",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "HS",
+      "target": "Macro-F1 score",
+      "target_alias": "MFS",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "HS",
+      "target": "Noise Contrastive Estimation",
+      "target_alias": "NCE",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED",
+      "weight": 0.82
+    }
+  ]
+}

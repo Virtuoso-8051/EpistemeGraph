@@ -1,0 +1,93 @@
+{
+  "answer": "DeepWalk is evaluated on three social network datasets: BlogCatalog, Flickr, and YouTube. In the evaluation, it is compared against the baseline methods SpectralClustering, Modularity, EdgeCluster, and wvRN. These baselines are used to assess how well DeepWalk performs on social network representation learning and related downstream tasks on those datasets.",
+  "self_reported_accuracy": 0.98,
+  "confidence_reasoning": "The query asks for a specific dataset-and-baseline list from a well-known DeepWalk evaluation setup, which is a stable factual detail with low ambiguity.",
+  "query_entities": [
+    "BlogCatalog",
+    "FLICKR",
+    "YouTube",
+    "DEEPWALK",
+    "SpectralClustering",
+    "Modularity",
+    "EdgeCluster",
+    "wvRN"
+  ],
+  "response_entities": [
+    "DEEPWALK",
+    "BlogCatalog",
+    "FLICKR",
+    "YouTube",
+    "SpectralClustering",
+    "Modularity",
+    "EdgeCluster",
+    "wvRN",
+    "social network",
+    "network representation learning",
+    "downstream task"
+  ],
+  "response_triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "BlogCatalog",
+      "target_alias": "BN",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "FLICKR",
+      "target_alias": "FLICKR",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "YouTube",
+      "target_alias": "YouTube",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "SpectralClustering",
+      "target_alias": "SpectralClustering",
+      "type": "COMPARED_WITH",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "Modularity",
+      "target_alias": "Modularity",
+      "type": "COMPARED_WITH",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "EdgeCluster",
+      "target_alias": "EdgeCluster",
+      "type": "COMPARED_WITH",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "wvRN",
+      "target_alias": "wvRN",
+      "type": "COMPARED_WITH",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    }
+  ]
+}

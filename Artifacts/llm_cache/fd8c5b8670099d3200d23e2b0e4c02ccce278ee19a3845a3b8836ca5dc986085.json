@@ -1,0 +1,302 @@
+{
+  "entities": [
+    {
+      "name": "\u03a6",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex v",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "|V|\u00d7 d matrix of free parameters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "XE",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "likelihood",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Pr ( vi| ( \u03a6(v1), \u03a6(v2),\u00b7\u00b7\u00b7 , \u03a6(vi\u22121) ))",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "context",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "ordering constraint",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex representation modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "optimization problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social representation learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "training time",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local graph structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "similar neighborhoods",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "cocitation similarity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "machine learning tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "truncated random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neural language models",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "method",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Algorithm 1 DeepW alk(G, w, d, \u03b3, t)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph G(V,E )",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "window size w",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embedding size d",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "walks per vertex \u03b3",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "walk length t",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Initialization",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "U|V|\u00d7d",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "binary Tree T",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "V",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Shuffle(V )",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "RandomWalk (G,v i,t)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SkipGram(\u03a6, Wvi, w)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representations of social networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "continuous vector space",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "\u03a6",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REPRESENTS",
+      "is_functional": false,
+      "object": "vertex v",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This mapping \u03a6 represents the latent social representation associated with each vertex v in the graph.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "\u03a6",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "|V|\u00d7 d matrix of free parameters",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In practice, we represent \u03a6 by a |V|\u00d7 d matrix of free parameters, which will serve later on as our XE.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "language modeling",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "context",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "First, instead of using the context to predict a missing word, it uses one word to predict the context.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "language modeling",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "word",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "First, instead of using the context to predict a missing word, it uses one word to predict the context.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "language modeling",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REMOVES",
+      "is_functional": false,
+      "object": "ordering constraint",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Finally, it removes the ordering constraint on the problem.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "truncated random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "COMBINES_WITH",
+      "is_functional": false,
+      "object": "neural language models",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "By combining both truncated random walks and neural language models we formulate a method which satisfies all Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Algorithm 1 DeepW alk(G, w, d, \u03b3, t)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "RandomWalk (G,v i,t)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "6: Wvi =RandomWalk (G,v i,t)",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "Algorithm 1 DeepW alk(G, w, d, \u03b3, t)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "SkipGram(\u03a6, Wvi, w)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "7: SkipGram(\u03a6, Wvi, w)",
+      "extraction_confidence": 0.99
+    }
+  ]
+}

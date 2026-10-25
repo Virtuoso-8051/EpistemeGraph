@@ -1,0 +1,184 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "GraRep",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "C/C++/Python",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SGD",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "hierarchical sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "softmax probabilities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "negative sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "PPI",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Spectral Clustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Homo sapiens",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "GraRep",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "ALGORITHM",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We also exclude a recent approach, GraRep [6], that generalizes LINE to incorporate information from network neighborhoods beyond 2-hops, but is unable to efficiently scale to large networks.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "GraRep",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERALIZES",
+      "is_functional": true,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We also exclude a recent approach, GraRep [6], that generalizes LINE to incorporate information from network neighborhoods beyond 2-hops, but is unable to efficiently scale to large networks.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "GraRep",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "SCALES_TO",
+      "is_functional": true,
+      "object": "large networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We also exclude a recent approach, GraRep [6], that generalizes LINE to incorporate information from network neighborhoods beyond 2-hops, but is unable to efficiently scale to large networks.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "Spectral Clustering",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Table 2: Macro-F1 scores for multilabel classification on BlogCatalog, PPI (Homo sapiens) and Wikipedia word cooccurrence networks with 50% of the nodes labeled for training.",
+      "extraction_confidence": 0.64
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Gain of node2vec [%] 22.3 1.3 21.8 Table 2: Macro-F1 scores for multilabel classification on BlogCatalog, PPI (Homo sapiens) and Wikipedia word cooccurrence networks with 50% of the nodes labeled for training.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "node2vec 0.2581 0.1791 0.1552 node2vec settings (p,q) 0.25, 0.25 4, 1 4, 0.5 Gain of node2vec [%] 22.3 1.3 21.8 Table 2: Macro-F1 scores for multilabel classification on BlogCatalog, PPI (Homo sapiens) and Wikipedia word cooccurrence networks with 50% of the nodes labeled for training.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": true,
+      "object": "hierarchical sampling",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "First, DeepWalk uses hierarchical sampling to approximate the softmax probabilities with an objective similar to the one use by node2vec.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "hierarchical sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPROXIMATES",
+      "is_functional": true,
+      "object": "softmax probabilities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "First, DeepWalk uses hierarchical sampling to approximate the softmax probabilities with an objective similar to the one use by node2vec.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "SWITCHES_TO",
+      "is_functional": true,
+      "object": "negative sampling",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Hence, keeping everything else the same, we switch to negative sampling in DeepWalk which is also the de facto approximation in node2vec and LINE.",
+      "extraction_confidence": 0.97
+    }
+  ]
+}

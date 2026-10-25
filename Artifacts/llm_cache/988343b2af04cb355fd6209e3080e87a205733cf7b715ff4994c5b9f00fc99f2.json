@@ -1,0 +1,251 @@
+{
+  "entities": [
+    {
+      "name": "breadth-first search strategy",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "neighborhood expansion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex degree",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "reconstructed network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "GF",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE(1st)",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE(2nd)",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE(1st+2nd)",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "network embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "original network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "citation networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "directed networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multi-label classification task",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex embeddings",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "AAAI",
+      "alias": "",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "CIKM",
+      "alias": "",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "ICML",
+      "alias": "",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "KDD",
+      "alias": "",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "NIPS",
+      "alias": "",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "SIGIR",
+      "alias": "",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "WWW",
+      "alias": "",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "DBLP(AuthorCitation) Network",
+      "alias": "",
+      "type": "DATASET"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "breadth-first search strategy",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "neighborhood expansion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "A more reasonable way is to expand the neighborhood of each vertex using a breadth-first search strategy, i.e., recursively adding neighbors of neighbors.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "reconstructed network",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "breadth-first search strategy",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "To verify this, we expand the neighborhood of the vertices whose degree are less than 1,000 by adding the neighbors of neighbors until the size of the extended neighborhood reaches 1,000 nodes.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "GF",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "reconstructed network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The performance of GF, LINE(1st) and LINE(2nd) all improves, especially LINE(2nd).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "In the reconstructed network, the LINE(2nd) outperforms DeepWalk in most cases.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE(1st+2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "original network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We can also see that the performance of LINE(1st+2nd) on the reconstructed network does not improve too much compared with those on the original network.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "LINE(1st+2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This implies that the combination of first-order and second-order proximity on the original network has already captured most information and LINE(1st+2nd) approach is a quite effective and efficient way for network embedding, suitable for both dense and sparse networks.",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "LINE(1st+2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This implies that the combination of first-order and second-order proximity on the original network has already captured most information and LINE(1st+2nd) approach is a quite effective and efficient way for network embedding, suitable for both dense and sparse networks.",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "GF",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Both the GF and LINE methods, which use first-order proximity, are not applicable for directed networks, and hence we only compare DeepWalk and LINE(2nd).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "As this network is also very sparse, DeepWalk outperforms LINE(2nd).",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DBLP(AuthorCitation) Network",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "multi-label classification task",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We also evaluate the vertex embeddings through a multi-label classification task.",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "entities": [
+    {
+      "name": "feature extraction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representation learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "hand-engineered features",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "unsupervised feature learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "spectral properties",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "matrix representations of graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Laplacian",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "adjacency matrices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "dimensionality reduction techniques",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Principal Component Analysis",
+      "alias": "PCA",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "IsoMap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "eigendecomposition",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "data matrix",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "approximations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "large networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "homophily",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural equivalence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "spectral clustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph cuts",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "natural language processing",
+      "alias": "NLP",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "feature learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "discrete objects",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "words",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Skip-gram model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "continuous feature representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "neighborhood preserving likelihood objective",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "document",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "context window",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SGD with negative sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "feature extraction",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "representation learning",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In contrast, our goal is to automate the whole process by casting feature extraction as a representation learning problem in which case we do not require any hand-engineered features.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "unsupervised feature learning",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "spectral properties",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Unsupervised feature learning approaches typically exploit the spectral properties of various matrix representations of graphs, especially the Laplacian and the adjacency matrices.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "unsupervised feature learning",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "matrix representations of graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Unsupervised feature learning approaches typically exploit the spectral properties of various matrix representations of graphs, especially the Laplacian and the adjacency matrices.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "dimensionality reduction techniques",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Principal Component Analysis",
+      "object_alias": "PCA",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Several linear ( e.g., PCA) and non-linear (e.g., IsoMap) dimensionality reduction techniques have been proposed [3, 27, 30, 35].",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "dimensionality reduction techniques",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "IsoMap",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Several linear ( e.g., PCA) and non-linear (e.g., IsoMap) dimensionality reduction techniques have been proposed [3, 27, 30, 35].",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "eigendecomposition",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "data matrix",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In terms of computational efficiency, eigendecomposition of a data matrix is expensive unless the solution quality is significantly compromised with approximations, and hence, these methods are hard to scale to large networks.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "eigendecomposition",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "approximations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In terms of computational efficiency, eigendecomposition of a data matrix is expensive unless the solution quality is significantly compromised with approximations, and hence, these methods are hard to scale to large networks.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "spectral clustering",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "homophily",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For instance, spectral clustering makes a strong homophily assumption that graph cuts will be useful for classification [29].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "spectral clustering",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "graph cuts",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For instance, spectral clustering makes a strong homophily assumption that graph cuts will be useful for classification [29].",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Skip-gram model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "neighborhood preserving likelihood objective",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In particular, the Skip-gram model [21] aims to learn continuous feature representations for words by optimizing a neighborhood preserving likelihood objective.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Skip-gram model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "continuous feature representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In particular, the Skip-gram model [21] aims to learn continuous feature representations for words by optimizing a neighborhood preserving likelihood objective.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "SGD with negative sampling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "neighborhood preserving likelihood objective",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The word feature representations are learned by optmizing the likelihood objective using SGD with negative sampling [22].",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

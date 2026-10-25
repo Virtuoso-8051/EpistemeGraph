@@ -1,0 +1,167 @@
+{
+  "entities": [
+    {
+      "name": "Protein-Protein Interactions",
+      "alias": "PPI",
+      "type": "DATASET"
+    },
+    {
+      "name": "Homo Sapiens",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "arXiv ASTRO-PH",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "AUC",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Adamic-Adar",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Hadamard operator",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Weighted-L1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Weighted-L2",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "feature learning in networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "searchbased optimization problem",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Protein-Protein Interactions",
+      "subject_alias": "PPI",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Homo Sapiens",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the PPI network for Homo Sapiens, nodes represent proteins, and an edge indicates a biological interaction between a pair of proteins.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "arXiv ASTRO-PH",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "feature learning in networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This perspective gives us multiple advantages.",
+      "extraction_confidence": 0.41
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Amongst the feature learning algorithms, node2vec outperforms both DeepWalk and LINE in all networks with gain up to 3.8% and 6.5% respectively in the AUC scores for the best possible choices of the binary operator for each algorithm.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Amongst the feature learning algorithms, node2vec outperforms both DeepWalk and LINE in all networks with gain up to 3.8% and 6.5% respectively in the AUC scores for the best possible choices of the binary operator for each algorithm.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "AUC",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "A general observation we can draw from the results is that the learned feature representations for node pairs significantly outperform the heuristic benchmark scores with node2vec achieving the best AUC improvement on 12.6% on the arXiv dataset over the best performing baseline (Adamic-Adar [1]).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "Adamic-Adar",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "A general observation we can draw from the results is that the learned feature representations for node pairs significantly outperform the heuristic benchmark scores with node2vec achieving the best AUC improvement on 12.6% on the arXiv dataset over the best performing baseline (Adamic-Adar [1]).",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "Hadamard operator",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "node2vec",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Overall, the Hadamard operator when used with node2vec is highly stable and gives the best performance on average across all networks.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "feature learning in networks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "searchbased optimization problem",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this paper, we studied feature learning in networks as a searchbased optimization problem.",
+      "extraction_confidence": 0.99
+    }
+  ]
+}

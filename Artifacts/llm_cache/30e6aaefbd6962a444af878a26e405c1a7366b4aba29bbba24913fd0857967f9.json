@@ -1,0 +1,172 @@
+{
+  "entities": [
+    {
+      "name": "LINE(2nd)",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE(1st)",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Youtube networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "original network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "reconstructed Youtube networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "dimension d",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of samples",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "# threads",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Speed up ratio",
+      "alias": "",
+      "type": "METRIC"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE(1st)",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "As we gradually increase the percentage of links, the LINE(2nd) begins to outperform the LINE(1st).",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "SUFFERS",
+      "is_functional": false,
+      "object": "LINE(2nd)",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "This shows that the second-order proximity suffers when the network is extremely sparse, and it outperforms first-order proximity when there are sufficient nodes in the neighborhood of a node.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "We can also see that the LINE(2nd) model on the reconstructed network outperforms DeepWalk in all the groups.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE(1st)",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "The LINE(2nd) consistently outperforms LINE(1st) and DeepWalk, and both the LINE(1st) and LINE(2nd) converge much faster than DeepWalk.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "The LINE(2nd) consistently outperforms LINE(1st) and DeepWalk, and both the LINE(1st) and LINE(2nd) converge much faster than DeepWalk.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE(1st)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "CONVERGES_FASTER_THAN",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "The LINE(2nd) consistently outperforms LINE(1st) and DeepWalk, and both the LINE(1st) and LINE(2nd) converge much faster than DeepWalk.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "CONVERGES_FASTER_THAN",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "The LINE(2nd) consistently outperforms LINE(1st) and DeepWalk, and both the LINE(1st) and LINE(2nd) converge much faster than DeepWalk.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "dimension d",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Fig. 4(a) reports the performance of the LINE model w.r.t. the dimension d.",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

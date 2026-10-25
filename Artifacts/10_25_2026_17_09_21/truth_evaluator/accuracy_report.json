@@ -1,0 +1,154 @@
+{
+    "metrics": {
+        "sheaf_laplacian_energy": 0.4914208599549005,
+        "forman_ricci_curvature_distortion": 0.48508193374912745,
+        "spectral_laplacian_divergence": 0.22549052884193777,
+        "bayesian_source_trust": 0.41964400669864693,
+        "temporal_freshness": 0.8799976004644222,
+        "source_independence": 0.3442980220676188,
+        "conflict_ratio": 0.5117545200927621,
+        "llm_extraction_confidence": 0.98,
+        "pdf_chunk_cooccurrence_phi_cooc": 0.2219969570271058,
+        "out_of_corpus_ratio_rho_ooc": 0.16666666666666666,
+        "calibrated_ml_probability": 0.9796189934304014,
+        "query_belief_score_S_Query": 0.4758886805677435,
+        "phase1_kg_fidelity_score_S_KG": 0.7942868111475047,
+        "final_compound_accuracy_score": 0.5319607242377833
+    },
+    "learned_parameters_used": {
+        "energy_weights": [
+            0.08,
+            0.08,
+            0.05,
+            0.15
+        ],
+        "prior_weights": [
+            0.8721,
+            0.0581,
+            0.0581,
+            0.0116
+        ],
+        "analytical_ml_blend_gamma": 0.65,
+        "s_query_exponent_eta": 0.85,
+        "optimal_pass_threshold": 0.6,
+        "optimal_abstain_threshold": 0.2618,
+        "feature_weight_dict": {
+            "e_sheaf_penalty_weight": 0.08,
+            "delta_k_penalty_weight": 0.08,
+            "d_spec_penalty_weight": 0.05,
+            "conflict_penalty_weight": 0.15,
+            "bayesian_trust_prior_weight": 0.8721,
+            "freshness_prior_weight": 0.0581,
+            "independence_prior_weight": 0.0581,
+            "llm_conf_prior_weight": 0.0116
+        }
+    },
+    "feature_vector_X": [
+        0.4914208599549005,
+        0.48508193374912745,
+        0.22549052884193777,
+        0.41964400669864693,
+        0.8799976004644222,
+        0.3442980220676188,
+        0.5117545200927621,
+        0.98
+    ],
+    "edge_audit_details": [
+        {
+            "source": "classical stochastic gradient descent",
+            "relation": "USES",
+            "target": "NODE2VEC",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "DIRECT_NEO4J_EDGE"
+        },
+        {
+            "source": "truncated random walk",
+            "relation": "USES",
+            "target": "NODE2VEC",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "GEODESIC_2_HOP"
+        },
+        {
+            "source": "depth-first search",
+            "relation": "APPROXIMATES",
+            "target": "NODE2VEC",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "GEODESIC_2_HOP"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "REFUTED",
+            "target": "Convolutional Neural Network",
+            "claim_type": "REFUTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 0.336,
+            "is_supported": false,
+            "audit_verdict": "UNVERIFIED_REFUTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "REFUTED",
+            "target": "multi-head self-attention mechanism",
+            "claim_type": "REFUTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 0.426,
+            "is_supported": false,
+            "audit_verdict": "UNVERIFIED_REFUTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "USES",
+            "target": "Skip-gram model",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "GEODESIC_2_HOP"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "APPROXIMATES",
+            "target": "BFS",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "GEODESIC_2_HOP"
+        },
+        {
+            "source": "NODE2VEC",
+            "relation": "ENABLES",
+            "target": "Structural Equivalence",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 1.0,
+            "is_supported": true,
+            "audit_verdict": "GEODESIC_2_HOP"
+        },
+        {
+            "source": "Skip-gram model",
+            "relation": "BASED_ON",
+            "target": "WORD2VEC",
+            "claim_type": "ASSERTED",
+            "source_grounding_mu": 1.0,
+            "target_grounding_mu": 0.0,
+            "is_supported": false,
+            "audit_verdict": "UNSUPPORTED_CLAIM"
+        }
+    ],
+    "verdict": {
+        "decision_status": "ABSTAIN",
+        "is_hallucinated": false,
+        "pass_threshold": 0.6,
+        "abstention_threshold": 0.2618
+    }
+}

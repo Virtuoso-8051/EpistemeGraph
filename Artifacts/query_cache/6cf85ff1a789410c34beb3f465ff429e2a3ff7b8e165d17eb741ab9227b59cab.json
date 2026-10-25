@@ -1,0 +1,103 @@
+{
+  "answer": "DeepWalk, LINE, and node2vec are all network representation learning methods, but they differ in how naturally they handle edge direction and edge weights in information networks.\n\nDeepWalk learns node embeddings from truncated random walks and a skip-gram objective. In its original form, it is primarily defined for unweighted, undirected graphs: the random walks typically treat adjacency as symmetric and do not explicitly model edge weights or direction. As a result, handling weighted or directed information networks usually requires preprocessing or a modified walk scheme rather than the vanilla method.\n\nLINE is designed to preserve first-order and second-order proximity in large-scale networks. Unlike vanilla DeepWalk, LINE explicitly supports weighted graphs, because edge weights can be incorporated directly into the proximity-preserving objective and sampling procedure. LINE is also more naturally applicable to directed graphs than DeepWalk because first-order proximity is defined over observed edges and second-order proximity can be modeled using source and context roles, which helps represent asymmetric relationships.\n\nnode2vec extends DeepWalk by introducing a biased random walk controlled by return and in-out parameters. In its standard formulation, node2vec still assumes an unweighted graph for the walk transition probabilities unless weights are incorporated into the transition rule, and it does not inherently model edge direction in the same explicit way that a directed-edge method would. Its main advantage is flexibility in interpolating between breadth-first and depth-first exploration, not native support for weighted or directed edges.\n\nSo, in practical terms: LINE is the most directly suited of the three for weighted and directed information networks; DeepWalk is the least suited in its original form; and node2vec sits in between, improving neighborhood exploration but not fundamentally solving weighted/directed edge handling without adaptation.",
+  "self_reported_accuracy": 0.89,
+  "confidence_reasoning": "These comparisons are well established in the original methods, though exact implementation details can vary across later variants and libraries.",
+  "query_entities": [
+    "DeepWalk",
+    "LINE",
+    "node2vec",
+    "weighted graph",
+    "directed graph",
+    "information network"
+  ],
+  "response_entities": [
+    "DeepWalk",
+    "LINE",
+    "node2vec",
+    "weighted graph",
+    "directed graph",
+    "information network",
+    "random walk",
+    "skip-gram",
+    "first-order proximity",
+    "second-order proximity",
+    "source",
+    "context",
+    "return parameter",
+    "in-out parameter",
+    "breadth-first search",
+    "depth-first search"
+  ],
+  "response_triples": [
+    {
+      "source": "DeepWalk",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DeepWalk",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "DeepWalk",
+      "target": "weighted graph",
+      "type": "REFUTED",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "DeepWalk",
+      "target": "directed graph",
+      "type": "REFUTED",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "LINE",
+      "target": "weighted graph",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "LINE",
+      "target": "directed graph",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "node2vec",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "node2vec",
+      "target": "breadth-first search",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "answer": "For LINE with negative sampling and edge sampling, the overall training time complexity is typically expressed as O(NE \u00d7 NS \u00d7 d), where NE is the number of edges, NS is the number of negative samples per positive edge, and d is the embedding dimension. If edge sampling is used to subsample training edges, the effective cost becomes proportional to the number of sampled edges rather than all possible vertex pairs, so the runtime is linear in the observed edge set and the sampling budget.\n\nThe reason this complexity is independent of the number of vertices |V| is that LINE does not enumerate all vertices during training. Instead, each update only touches the two endpoints of a sampled edge plus a small, fixed number of negative samples. Because the per-update work depends on the embedding dimension and the sampling parameters, not on scanning the full vertex set, increasing |V| alone does not increase the asymptotic training cost unless it also changes the number of sampled edges or negative samples.\n\nIn short: the model\u2019s training cost scales with edges and samples, not with the total vertex count, because optimization is performed on sampled local interactions rather than on all vertices globally.",
+  "self_reported_accuracy": 0.84,
+  "confidence_reasoning": "I am confident about the qualitative explanation and the dependence on sampled edges and negative samples, but the exact asymptotic form can vary by LINE variant and implementation details.",
+  "query_entities": [
+    "LINE-SGD",
+    "negative sampling",
+    "edge-sampling algorithm",
+    "time complexity",
+    "number of vertice"
+  ],
+  "response_entities": [
+    "LINE-SGD",
+    "negative sampling",
+    "edge-sampling algorithm",
+    "time complexity",
+    "number of vertice",
+    "number of edge",
+    "number of sample",
+    "embedding dimension",
+    "sampled edge",
+    "vertex pair",
+    "local interaction"
+  ],
+  "response_triples": [
+    {
+      "source": "LINE-SGD",
+      "source_alias": "1ST",
+      "target": "time complexity",
+      "target_alias": "TC",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "LINE-SGD",
+      "source_alias": "1ST",
+      "target": "negative sampling",
+      "target_alias": "NS",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "LINE-SGD",
+      "source_alias": "1ST",
+      "target": "edge-sampling algorithm",
+      "target_alias": "ESA",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "time complexity",
+      "source_alias": "TC",
+      "target": "number of edge",
+      "target_alias": "NE",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "time complexity",
+      "source_alias": "TC",
+      "target": "number of vertice",
+      "target_alias": "NV",
+      "type": "REFUTED",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "NS",
+      "target": "number of sample",
+      "target_alias": "NS",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "edge-sampling algorithm",
+      "source_alias": "ESA",
+      "target": "sampled edge",
+      "target_alias": null,
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.91
+    },
+    {
+      "source": "sampled edge",
+      "source_alias": null,
+      "target": "vertex pair",
+      "target_alias": null,
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    }
+  ]
+}

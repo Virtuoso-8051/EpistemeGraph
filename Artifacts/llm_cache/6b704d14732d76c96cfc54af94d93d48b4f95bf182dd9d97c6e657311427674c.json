@@ -1,0 +1,87 @@
+[
+  {
+    "subject": "Forward Sketch Construct",
+    "subject_alias": "FSketch",
+    "subject_type": "ALGORITHM",
+    "relation": "TAKES_TIME",
+    "is_functional": false,
+    "object": "O(|W|\u00d7\u2113)",
+    "object_type": "COMPLEXITY",
+    "evidence_quote": "Theorem 3.2.Algorithm Construct-Sketch (Algorithm 1) takes O(|\ud835\udc4a|\u00d7\u2113)to run and takesO(|\ud835\udc4a|\u00d7\u2113)space.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Forward Sketch Construct",
+    "subject_alias": "FSketch",
+    "subject_type": "ALGORITHM",
+    "relation": "TAKES_SPACE",
+    "is_functional": false,
+    "object": "O(|W|\u00d7\u2113)",
+    "object_type": "COMPLEXITY",
+    "evidence_quote": "Theorem 3.2.Algorithm Construct-Sketch (Algorithm 1) takes O(|\ud835\udc4a|\u00d7\u2113)to run and takesO(|\ud835\udc4a|\u00d7\u2113)space.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Forward Sketch Construct",
+    "subject_alias": "FSketch",
+    "subject_type": "ALGORITHM",
+    "relation": "INITIALIZES_AS",
+    "is_functional": true,
+    "object": "list of |W| vectors, each of length (\u2113\u2212 1), with all entries set to 0",
+    "object_type": "DATA_STRUCTURE",
+    "evidence_quote": "1: Initialize sketch\ud835\udc46 as list of|\ud835\udc4a| vectors, each of length(\u2113\u2212 1), with all entries set to0",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Forward Sketch Construct",
+    "subject_alias": "FSketch",
+    "subject_type": "ALGORITHM",
+    "relation": "USES_INPUT",
+    "is_functional": false,
+    "object": "Window W",
+    "object_type": "CONCEPT",
+    "evidence_quote": "Require:Window\ud835\udc4a={\ud835\udc61 1,\ud835\udc61 2,...,\ud835\udc61 |\ud835\udc4a|}of size|\ud835\udc4a|",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "Forward Sketch Construct",
+    "subject_alias": "FSketch",
+    "subject_type": "ALGORITHM",
+    "relation": "USES_INPUT",
+    "is_functional": false,
+    "object": "Set of protected attribute values A",
+    "object_type": "CONCEPT",
+    "evidence_quote": "Require:Set of protected attribute valuesA={\ud835\udc5d 1,\ud835\udc5d 2,...,\ud835\udc5d \u2113}",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "Sketch update",
+    "subject_type": "CONCEPT",
+    "relation": "SHIFTS_LEFT_BY",
+    "is_functional": true,
+    "object": "one position",
+    "object_type": "QUANTITY",
+    "evidence_quote": "When window\ud835\udc4a is slid over,the sketch shifts all entries one position to the left.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "Sketch update",
+    "subject_type": "CONCEPT",
+    "relation": "UPDATES_LAST_ENTRY_USING",
+    "is_functional": false,
+    "object": "the last but one entry and the protected attribute value of the newly added item",
+    "object_type": "CONCEPT",
+    "evidence_quote": "The last entry in the sketch is then updated considering the last but one entry and with the protected attribute value of the newly added item.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "Sketch",
+    "subject_type": "CONCEPT",
+    "relation": "TAKES_TIME_TO_UPDATE",
+    "is_functional": true,
+    "object": "O(\u2113)",
+    "object_type": "COMPLEXITY",
+    "evidence_quote": "Lemma 3.3.The sketch takes\ud835\udc42(\u2113)time to update.",
+    "extraction_confidence": 0.97
+  }
+]

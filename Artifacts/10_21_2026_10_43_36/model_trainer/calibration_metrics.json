@@ -1,0 +1,91 @@
+{
+    "winning_model": "ExtraTrees",
+    "champion_composite_score": 0.8705217648319348,
+    "previous_champion_score": 0.8705217648319348,
+    "is_promoted_to_production": true,
+    "total_training_samples": 805,
+    "updated_at": "2026-10-21T05:17:15.768124",
+    "leaderboard": {
+        "LogisticRegression": {
+            "best_params": {
+                "clf__C": 10.0
+            },
+            "roc_auc": 0.9518575851393188,
+            "f1_score": 0.9431818181818182,
+            "brier_score": 0.057384966427052035,
+            "ece": 0.04182488209089489,
+            "composite_score": 0.8526477366213719
+        },
+        "RandomForest": {
+            "best_params": {
+                "max_depth": 4,
+                "n_estimators": 50
+            },
+            "roc_auc": 0.9374613003095974,
+            "f1_score": 0.9595375722543352,
+            "brier_score": 0.045212989442585755,
+            "ece": 0.02276951780930011,
+            "composite_score": 0.8694787930577115
+        },
+        "ExtraTrees": {
+            "best_params": {
+                "max_depth": 6,
+                "n_estimators": 50
+            },
+            "roc_auc": 0.9368421052631579,
+            "f1_score": 0.9431818181818182,
+            "brier_score": 0.04705475947274437,
+            "ece": 0.01926558095847875,
+            "composite_score": 0.8705217648319348
+        },
+        "GradientBoosting": {
+            "best_params": {
+                "learning_rate": 0.03,
+                "max_depth": 3,
+                "n_estimators": 100
+            },
+            "roc_auc": 0.946671826625387,
+            "f1_score": 0.9534883720930233,
+            "brier_score": 0.04795511707362569,
+            "ece": 0.031940612808699254,
+            "composite_score": 0.866776096743062
+        },
+        "AdaBoost": {
+            "best_params": {
+                "learning_rate": 0.05,
+                "n_estimators": 50
+            },
+            "roc_auc": 0.9352941176470589,
+            "f1_score": 0.9595375722543352,
+            "brier_score": 0.0460799233698222,
+            "ece": 0.0220426736346202,
+            "composite_score": 0.8671715206426165
+        },
+        "DeepMLP_NeuralNet": {
+            "best_params": {
+                "mlp__alpha": 0.001,
+                "mlp__hidden_layer_sizes": [
+                    128,
+                    64,
+                    32
+                ]
+            },
+            "roc_auc": 0.9501547987616099,
+            "f1_score": 0.9431818181818182,
+            "brier_score": 0.0586650937395065,
+            "ece": 0.029687696845956874,
+            "composite_score": 0.8618020081761466
+        },
+        "RBF_SVM": {
+            "best_params": {
+                "svm__C": 0.5,
+                "svm__gamma": "scale"
+            },
+            "roc_auc": 0.9509287925696595,
+            "f1_score": 0.9431818181818182,
+            "brier_score": 0.05296437200360849,
+            "ece": 0.03301616369397073,
+            "composite_score": 0.8649482568720802
+        }
+    }
+}

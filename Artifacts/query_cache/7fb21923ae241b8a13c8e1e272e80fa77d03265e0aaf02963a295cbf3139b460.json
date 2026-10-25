@@ -1,0 +1,93 @@
+{
+  "answer": "In LINE, negative edge weights are not handled as ordinary weighted edges in the optimization objective. Instead, for signed social networks such as Epinions and Slashdot, the edge-sampling algorithm treats a negative weight w_uv < 0 as indicating a negative social relationship and uses the edge only to define a negative sampling signal, not as a positive co-occurrence to be maximized. In practice, LINE\u2019s first-order and second-order objectives are formulated for nonnegative edge weights, so signed edges are typically converted into separate positive and negative training signals or otherwise excluded from the positive edge-sampling distribution. Thus, a negative edge weight does not contribute as a positive edge in the standard edge-sampling treatment; it is used to discourage embedding nearby nodes together, consistent with signed-network extensions rather than the original unsigned LINE formulation.",
+  "self_reported_accuracy": 0.72,
+  "confidence_reasoning": "I am confident about the general treatment of signed edges in LINE-style extensions, but the exact handling can vary by implementation and the original LINE paper is primarily formulated for nonnegative weights.",
+  "query_entities": [
+    "edge-sampling algorithm",
+    "negative edge weights",
+    "signed social network",
+    "Epinions",
+    "Slashdot",
+    "LINE"
+  ],
+  "response_entities": [
+    "edge-sampling algorithm",
+    "negative edge weights",
+    "signed social network",
+    "Epinions",
+    "Slashdot",
+    "LINE",
+    "first-order proximity objective",
+    "second-order proximity objective",
+    "negative sampling",
+    "positive edge-sampling distribution",
+    "signed-network extension",
+    "positive edge",
+    "negative social relationship"
+  ],
+  "response_triples": [
+    {
+      "source": "edge-sampling algorithm",
+      "target": "negative edge weights",
+      "type": "USES",
+      "claim_type": "REFUTED",
+      "weight": 0.93
+    },
+    {
+      "source": "negative edge weights",
+      "target": "negative sampling",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "signed social network",
+      "target": "negative social relationship",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity objective",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity objective",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "first-order proximity objective",
+      "target": "nonnegative edge weights",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "second-order proximity objective",
+      "target": "nonnegative edge weights",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "signed-network extension",
+      "target": "negative edge weights",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.8
+    },
+    {
+      "source": "negative edge weights",
+      "target": "positive edge-sampling distribution",
+      "type": "PART_OF",
+      "claim_type": "REFUTED",
+      "weight": 0.9
+    }
+  ]
+}

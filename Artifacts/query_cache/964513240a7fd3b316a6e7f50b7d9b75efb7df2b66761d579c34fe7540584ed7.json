@@ -1,0 +1,85 @@
+{
+  "answer": "In DeepWalk, Algorithm 1 has two main components: (1) generating truncated random walks from each vertex, and (2) using those walks to train a SkipGram model on the resulting vertex sequences. The random-walk stage samples local neighborhoods in the graph, while the SkipGram stage learns low-dimensional vertex representations from co-occurring vertices in those walks.\n\nFor the SkipGram update over a sliding window w, DeepWalk treats each vertex in a walk as a center vertex and uses the vertices within a window of size w around it as context. For a center vertex v_i, the model updates its representation to increase the probability of predicting nearby vertices v_{i-j} and v_{i+j} for 1 <= j <= w, typically by maximizing the log-likelihood of observed context vertices. In practice, this means the embedding vectors are adjusted so that vertices appearing close together in random walks become more similar in the learned representation space.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "This answer is highly likely to be correct because it reflects the standard DeepWalk algorithm and SkipGram training procedure, though exact notation can vary across presentations of the paper.",
+  "query_entities": [
+    "DEEPWALK",
+    "SKIPGRAM",
+    "vertex representation"
+  ],
+  "response_entities": [
+    "DEEPWALK",
+    "SKIPGRAM",
+    "vertex representation",
+    "random walk",
+    "truncated random walk",
+    "sliding window",
+    "context vertex",
+    "low-dimensional space of feature"
+  ],
+  "response_triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "truncated random walk",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "SKIPGRAM",
+      "target_alias": "SKIPGRAM",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "truncated random walk",
+      "source_alias": null,
+      "target": "vertex representation",
+      "target_alias": "UI",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "SKIPGRAM",
+      "source_alias": "SKIPGRAM",
+      "target": "sliding window",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "sliding window",
+      "source_alias": null,
+      "target": "context vertex",
+      "target_alias": null,
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "SKIPGRAM",
+      "source_alias": "SKIPGRAM",
+      "target": "vertex representation",
+      "target_alias": "UI",
+      "type": "UPDATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "vertex representation",
+      "source_alias": "UI",
+      "target": "low-dimensional space of feature",
+      "target_alias": "MNLDSF",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    }
+  ]
+}

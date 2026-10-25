@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "random walk methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "PPI network",
+      "alias": "PPI",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia word cooccurrence network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Spectral clustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "BlogCatalog",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Macro-F1",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "In BlogCatalog, we can discover the right mix of homophily and structural equivalence by setting parametersp andq to low values, giving us 22.3% gain over DeepWalk and 229.2% gain over LINE in Macro-F1 scores.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "random walk methods",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "PPI network",
+      "object_alias": "PPI",
+      "object_type": "DATASET",
+      "evidence_quote": "In the case of PPI network, the best exploration strategy (p = 4 ,q = 1 ) turns out to be virtually indistinguishable from DeepWalk\u2019s uniform (p = 1,q = 1) exploration giving us only a slight edge over DeepWalk by avoiding redudancy in already visited nodes through a high p value, but a convincing 23.8% gain over LINE in Macro-F 1 scores.",
+      "extraction_confidence": 0.62
+    },
+    {
+      "subject": "Wikipedia word cooccurrence network",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Micro-F1",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "For brevity, we summarize the results for the Micro-F 1 and Macro-F1 scores graphically in Figure 4.",
+      "extraction_confidence": 0.61
+    },
+    {
+      "subject": "Spectral clustering",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

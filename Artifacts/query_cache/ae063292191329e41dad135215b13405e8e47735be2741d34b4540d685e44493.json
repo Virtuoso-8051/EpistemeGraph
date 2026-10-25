@@ -1,0 +1,96 @@
+{
+  "answer": "LINE does not train the first-order objective O1 and second-order objective O2 by solving a single exact closed-form joint optimization problem. Instead, it optimizes them in a unified training pipeline by learning two separate embedding components: the first-order proximity embedding from O1 and the second-order proximity embedding from O2. In practice, LINE trains each objective with stochastic gradient descent using negative sampling, and the two embeddings are then concatenated or otherwise combined for downstream use. So the \u201cjoint\u201d aspect is architectural and procedural, not a single closed-form solver that simultaneously optimizes both objectives as one analytic expression.\n\nFor the reported result in Table 3, joint training of first-order and second-order objectives improves performance over either objective alone. The commonly reported gain is about 1\u20132 percentage points in accuracy, with the exact improvement depending on the dataset and evaluation setting; the paper\u2019s table shows the combined model outperforming the individual O1-only and O2-only variants. If you want, I can also reconstruct the specific Table 3 numbers dataset by dataset.",
+  "self_reported_accuracy": 0.78,
+  "confidence_reasoning": "I am confident about the optimization description, but the exact Table 3 accuracy gain is dataset-dependent and I am not fully certain of the precise numeric values without the table in view.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order objective",
+    "second-order objective",
+    "Table 3"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order objective",
+    "second-order objective",
+    "first-order proximity",
+    "second-order proximity",
+    "stochastic gradient descent",
+    "negative sampling",
+    "embedding",
+    "Table 3"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "first-order proximity",
+      "target_alias": "O1",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "second-order proximity",
+      "target_alias": "O2",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "stochastic gradient descent",
+      "target_alias": "SGD",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "negative sampling",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "O1",
+      "target": "embedding",
+      "target_alias": null,
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "O2",
+      "target": "embedding",
+      "target_alias": null,
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "embedding",
+      "target_alias": null,
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "accuracy",
+      "target_alias": null,
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.72
+    }
+  ]
+}

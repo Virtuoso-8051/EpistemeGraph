@@ -1,0 +1,98 @@
+[
+  {
+    "subject": "Continuous Fairness Monitoring",
+    "subject_alias": null,
+    "subject_type": "SYSTEM",
+    "relation": "STUDIES",
+    "is_functional": false,
+    "object": "Continuous Stream Reordering Problem",
+    "object_alias": null,
+    "object_type": "PROBLEM",
+    "evidence_quote": "To support this framework, we study two interrelated problems:Continuous Fairness Monitoringand theContinuous Stream Reordering Problem.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Monitoring module",
+    "subject_alias": null,
+    "subject_type": "SYSTEM",
+    "relation": "CHECKS",
+    "is_functional": false,
+    "object": "fairness constraints",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "The monitoring module continu- ously checks whether fairness constraints hold within each block of every sliding window (see Continuous Fairness Monitoring in Figure 1).",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "System",
+    "subject_alias": null,
+    "subject_type": "SYSTEM",
+    "relation": "REORDERS",
+    "is_functional": false,
+    "object": "items within the current window",
+    "object_alias": null,
+    "object_type": "DATA",
+    "evidence_quote": "When a violation is detected, the system first attempts to reorder the items within the current window to restore fairness.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "Landmark bits",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "EXTEND",
+    "is_functional": false,
+    "object": "current stream",
+    "object_alias": null,
+    "object_type": "DATA_STREAM",
+    "evidence_quote": "If reordering alone cannot resolve the issue, the decision making pauses - it reads a small number of additional items\u2014referred to as landmark bits\u2014which effectively extend the current stream and create new sliding windows.",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "Landmark bits",
+    "subject_alias": null,
+    "subject_type": "CONCEPT",
+    "relation": "REPRESENT",
+    "is_functional": false,
+    "object": "limited buffer time",
+    "object_alias": null,
+    "object_type": "CONCEPT",
+    "evidence_quote": "Conceptually, these landmarks repre- sent a limited \u201cbuffer time\u201d that the application is willing to tolerate before producing output (see Continuous Stream Reordering in Figure 1).",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "Continuous Stream Reordering Problem",
+    "subject_alias": null,
+    "subject_type": "PROBLEM",
+    "relation": "AIMED_AT",
+    "is_functional": false,
+    "object": "maximizing the number of distinct fair blocks across both current and newly spawned sliding windows",
+    "object_alias": null,
+    "object_type": "OBJECTIVE",
+    "evidence_quote": "We formalize this task as theContinuous Stream Reordering Problem, aimed at maximizing the number of distinct fair blocks across both current and newly spawned slid windows.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "Sketch-based data structure",
+    "subject_alias": null,
+    "subject_type": "DATA_STRUCTURE",
+    "relation": "PREPROCESSES",
+    "is_functional": false,
+    "object": "every window",
+    "object_alias": null,
+    "object_type": "DATA",
+    "evidence_quote": "We define asketch-baseddata structure to pre-process every window and an Algorithm Monitor-BFair for answeringMonitor- ing Continuous Fairness.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "Algorithm Monitor-BFair",
+    "subject_alias": null,
+    "subject_type": "ALGORITHM",
+    "relation": "ANSWERS",
+    "is_functional": false,
+    "object": "Monitoring Continuous Fairness",
+    "object_alias": null,
+    "object_type": "TASK",
+    "evidence_quote": "We define asketch-baseddata structure to pre-process every window and an Algorithm Monitor-BFair for answeringMonitor- ing Continuous Fairness.",
+    "extraction_confidence": 0.96
+  }
+]

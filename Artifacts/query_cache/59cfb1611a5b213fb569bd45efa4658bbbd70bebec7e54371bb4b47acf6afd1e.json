@@ -1,0 +1,87 @@
+{
+  "answer": "In DeepWalk, the vertices encountered in many short random walks are not expected to be uniformly distributed. On scale-free graphs, high-degree vertices are visited much more often than low-degree vertices, so the empirical frequency of vertex occurrences in the random-walk corpus becomes heavy-tailed. The paper draws an analogy to natural language: just as word frequencies in text often approximately follow Zipf's law (a power law where a small number of words occur very frequently and many words occur rarely), vertex frequencies in short random walks on scale-free networks also exhibit a similar power-law-like distribution. In other words, the walk-generated \u201csentence\u201d corpus over vertices tends to mirror the Zipfian skew seen in language, with hubs playing the role of common words and peripheral vertices playing the role of rare words. This is one reason DeepWalk can treat random walks as a language-modeling corpus for learning node embeddings.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "This is a well-known qualitative claim from the DeepWalk paper, but the exact empirical form can vary with graph structure and walk parameters.",
+  "query_entities": [
+    "DEEPWALK",
+    "random walk",
+    "scale-free graph",
+    "Zipf's power law",
+    "natural language"
+  ],
+  "response_entities": [
+    "DEEPWALK",
+    "random walk",
+    "scale-free graph",
+    "Zipf's power law",
+    "natural language",
+    "vertex frequency distribution",
+    "short random walk",
+    "power-law distribution",
+    "node embedding",
+    "language-modeling corpus",
+    "high-degree vertex",
+    "low-degree vertex"
+  ],
+  "response_triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "short random walk",
+      "target_alias": "TRW",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "scale-free graph",
+      "target": "power-law distribution",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "vertex frequency distribution",
+      "target": "power-law distribution",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "Zipf's power law",
+      "target": "power-law distribution",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "natural language",
+      "target": "Zipf's power law",
+      "type": "FOLLOWS",
+      "claim_type": "ASSERTED",
+      "weight": 0.8
+    },
+    {
+      "source": "high-degree vertex",
+      "target": "vertex frequency distribution",
+      "type": "INCREASES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "node embedding",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "language-modeling corpus",
+      "target": "node embedding",
+      "type": "ENables",
+      "claim_type": "ASSERTED",
+      "weight": 0.78
+    }
+  ]
+}

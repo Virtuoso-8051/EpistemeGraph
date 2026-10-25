@@ -1,0 +1,155 @@
+{
+  "entities": [
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "transition probabilities",
+      "alias": "\u03c0vx",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "unnormalized transition probability",
+      "alias": "\u03c0vx = \u03b1pq(t,x )\u00b7wvx",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "search biases",
+      "alias": "\u03b1",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "shortest path distance",
+      "alias": "dtx",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "parameters p and q",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "BFS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DFS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Return parameter",
+      "alias": "p",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "In-out parameter",
+      "alias": "q",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "starting node u",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node t",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "transition probabilities",
+      "object_alias": "\u03c0vx",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The walk now needs to decide on the next step so it evaluates the transition probabilities\u03c0vx on edges (v,x ) leading fromv.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "transition probabilities",
+      "subject_alias": "\u03c0vx",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "unnormalized transition probability",
+      "object_alias": "\u03c0vx = \u03b1pq(t,x )\u00b7wvx",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We set the unnormalized transition probability to\u03c0vx =\u03b1pq(t,x )\u00b7wvx, where \u03b1pq(t,x ) = \uf8f1 \uf8f4\uf8f2 \uf8f4\uf8f3 1 p ifdtx = 0 1 ifdtx = 1 1 q ifdtx = 2 t x2 x1 v x3 \u03b1=1 \u03b1=1/q \u03b1=1/q \u03b1=1/p u s3 s2 s1 s4 s7 s6 s5 BFS DFS v \u03b1=1 \u03b1=1/q \u03b1=1/q \u03b1=1/p x2 x3 t x1 Figure 2: Illustration of the random walk procedure in node2vec.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "shortest path distance",
+      "subject_alias": "dtx",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "CONCEPT",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "anddtx denotes the shortest path distance between nodes t andx.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "parameters p and q",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ARE_NECESSARY_AND_SUFFICIENT_FOR",
+      "is_functional": false,
+      "object": "random walk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Note thatdtx must be one of{0, 1, 2}, and hence, the two parameters are necessary and sufficient to guide the walk.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "parameters p and q",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTROL",
+      "is_functional": false,
+      "object": "random walk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Intuitively, parametersp andq control how fast the walk explores and leaves the neighborhood of starting node u.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "parameters p and q",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ALLOW",
+      "is_functional": false,
+      "object": "BFS",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In particular, the parameters allow our search procedure to (approximately) interpolate between BFS and DFS and thereby reflect an affinity for different notions of node equivalences.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "parameters p and q",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ALLOW",
+      "is_functional": false,
+      "object": "DFS",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In particular, the parameters allow our search procedure to (approximately) interpolate between BFS and DFS and thereby reflect an affinity for different notions of node equivalences.",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

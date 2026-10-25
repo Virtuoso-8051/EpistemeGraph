@@ -1,0 +1,239 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "SGD",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "edge-sampling treatment",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "threshold-cutting technique",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "gradients",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word embeddings",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word vectors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "document representation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "document classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Wikipedia pages",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "DBpedia",
+      "alias": "",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "long abstracts",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "article categories",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Arts",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "History",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Human",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Mathematics",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Nature",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Technology",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Sports",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IGNORES",
+      "is_functional": false,
+      "object": "edge weights",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This is because DeepWalk has to ignore the weights (i.e., co-occurrences) of the edges, which is very important in a language network.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZED_BY",
+      "is_functional": false,
+      "object": "SGD",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The performance by the LINE models directly optimized with SGD is much worse, because the weights of the edges in the language network diverge, which range from a single digit to tens of thousands, making the learning process suffer.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "edge-sampling treatment",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The LINE optimized by the edge-sampling treatment effectively addresses this problem, and performs very well using either first-order or second-order proximity.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The LINE optimized by the edge-sampling treatment effectively addresses this problem, and performs very well using either first-order or second-order proximity.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The LINE optimized by the edge-sampling treatment effectively addresses this problem, and performs very well using either first-order or second-order proximity.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "graph factorization",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Both are at least 10% faster than graph factorization, and much more efficient than DeepWalk (five times slower).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Both are at least 10% faster than graph factorization, and much more efficient than DeepWalk (five times slower).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "threshold-cutting technique",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PREVENTS",
+      "is_functional": false,
+      "object": "gradients",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The reason that LINE-SGDs are slightly slower is that a threshold-cutting technique has to be applied to prevent the gradients from exploding.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "word vectors",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USED_FOR",
+      "is_functional": false,
+      "object": "document representation",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Another way to evaluate the quality of the word embeddings is to use the word vectors to compute document representation, which can be evaluated with document classification tasks.",
+      "extraction_confidence": 0.94
+    }
+  ]
+}

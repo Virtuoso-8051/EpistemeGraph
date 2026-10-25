@@ -1,0 +1,227 @@
+{
+  "entities": [
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Algorithm 1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "GraphG = (V,E,W )",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Dimensionsd",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Walks per noder",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Walk lengthl",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Context sizek",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Returnp",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "In-outq",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "PreprocessModifiedWeights",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "G\u2032 = (V,E,\u03c0 )",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "StochasticGradientDescent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "node2vecWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "AliasSample",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "2nd order Markov chain",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "alias sampling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "semi-supervised method",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "link prediction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "feature representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "bootstrapping approach",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "binary operator\u25e6",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "g(u,v )",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "f (u)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "f (v)",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "V\u00d7V \u2192 Rd\u2032",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "Algorithm 1",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The pseudocode for node2vec, is given in Algorithm 1.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "PreprocessModifiedWeights",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "LearnFeatures (GraphG = (V,E,W ), Dimensionsd, Walks per noder, Walk lengthl, Context sizek, Returnp, In-outq) \u03c0 = PreprocessModifiedWeights(G,p,q )",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "StochasticGradientDescent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "f = StochasticGradientDescent(k,d,walks) returnf",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "node2vecWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "for all nodesu\u2208V do walk = node2vecWalk(G\u2032,u,l ) Appendwalk towalks",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "node2vecWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "AliasSample",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "s = AliasSample(Vcurr,\u03c0 ) Appends towalk",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "2nd order Markov chain",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The transition probabilities\u03c0vx for the 2nd order Markov chain can be precomputed and hence, sampling of nodes while simulating the random walk can be done efficiently in O(1) time using alias sampling.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "semi-supervised method",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The node2vec algorithm provides a semi-supervised method to learn rich feature representations for nodes in a network.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "link prediction",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For instance, in link prediction, we predict whether a link exists between two nodes in a network.",
+      "extraction_confidence": 0.72
+    }
+  ]
+}

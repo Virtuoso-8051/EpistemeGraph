@@ -1,0 +1,99 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding) uses the alias table method to make edge sampling in its edge-sampling treatment efficient. The core idea is to preprocess the discrete edge distribution once, building an alias table that stores, for each edge, a small amount of auxiliary information so that a sample can later be drawn in constant time. After this preprocessing, each sampled edge is obtained by two O(1) operations: one uniform random index lookup into the table and one constant-time accept/reject decision using the stored probability threshold. As a result, the per-sample cost of edge sampling is O(1), while the one-time table construction cost is paid upfront. In LINE, this matters because the method is designed to learn local and global network structure from large graphs, so reducing training time complexity is important for scalability. More generally, the alias table method is a standard constant-time discrete sampling technique, and LINE applies it to edge sampling rather than to random walks or neighborhood sampling.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "The answer relies on standard alias-sampling mechanics and LINE\u2019s well-known edge-sampling design, but exact wording and implementation details can vary across descriptions of the method.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "alias table method",
+    "edge sampling",
+    "time complexity"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "alias table method",
+    "edge sampling",
+    "time complexity",
+    "edge-sampling treatment",
+    "discrete edge distribution",
+    "alias table",
+    "constant time",
+    "local and global network structure",
+    "training time complexity",
+    "random walk",
+    "neighborhood sampling"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "alias table method",
+      "target_alias": "ATM",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "alias table method",
+      "source_alias": "ATM",
+      "target": "edge sampling",
+      "target_alias": "ESA",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "alias table method",
+      "source_alias": "ATM",
+      "target": "constant time",
+      "target_alias": "O(1)",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "edge sampling",
+      "source_alias": "ESA",
+      "target": "time complexity",
+      "target_alias": "TC",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "local and global network structure",
+      "target_alias": "LGNS",
+      "type": "LEARNS",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "training time complexity",
+      "target_alias": "TTC",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "alias table method",
+      "source_alias": "ATM",
+      "target": "random walk",
+      "target_alias": "RW",
+      "type": "REFUTED",
+      "claim_type": "REFUTED",
+      "weight": 0.93
+    },
+    {
+      "source": "alias table method",
+      "source_alias": "ATM",
+      "target": "neighborhood sampling",
+      "target_alias": "NSS",
+      "type": "REFUTED",
+      "claim_type": "REFUTED",
+      "weight": 0.9
+    }
+  ]
+}

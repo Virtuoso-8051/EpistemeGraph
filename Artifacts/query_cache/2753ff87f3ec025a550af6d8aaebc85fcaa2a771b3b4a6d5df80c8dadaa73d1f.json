@@ -1,0 +1,100 @@
+{
+  "answer": "In LINE, first-order proximity between two vertices u and v is defined using the edge weight w_uv as the strength of their direct connection. The model assigns a joint probability to the pair (u, v) with a sigmoid of the dot product of their embeddings:\n\np1(u, v) = 1 / (1 + exp(-u^T v))\n\nand then fits this probability to the empirical edge distribution by minimizing the negative log-likelihood over observed edges, typically weighted by w_uv. Intuitively, first-order proximity means that if two vertices are directly connected by a strong edge, their embeddings should be close in the latent space.\n\nIt applies only to undirected graphs because first-order proximity is defined as a symmetric relation on an edge: the direct connection between u and v has no direction, so the model treats w_uv = w_vu and uses a single shared pairwise similarity term. In a directed graph, the relation from u to v and from v to u can differ, so a symmetric first-order formulation would not correctly represent asymmetric edge semantics. LINE therefore uses first-order proximity for undirected graphs, while its second-order proximity formulation is the one used to handle directed graphs by modeling a node's context distribution separately from its source embedding.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "I am highly confident in the LINE first-order proximity formulation and its undirected-graph interpretation, though exact notation can vary slightly across presentations of the paper.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order proximity",
+    "undirected graph",
+    "vertices"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order proximity",
+    "undirected graph",
+    "vertices",
+    "edge weight",
+    "sigmoid function",
+    "dot product",
+    "embedding",
+    "negative log-likelihood",
+    "second-order proximity",
+    "directed graph",
+    "context distribution",
+    "source embedding"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "first-order proximity",
+      "target_alias": "FOP",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "target": "sigmoid function",
+      "target_alias": null,
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "target": "dot product",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "undirected graph",
+      "target_alias": "UG",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "target": "undirected graph",
+      "target_alias": "UG",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "target": "directed graph",
+      "target_alias": null,
+      "type": "REQUIRES",
+      "claim_type": "REFUTED",
+      "weight": 0.88
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "second-order proximity",
+      "target_alias": null,
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": null,
+      "target": "directed graph",
+      "target_alias": null,
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    }
+  ]
+}

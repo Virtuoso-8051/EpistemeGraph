@@ -1,0 +1,191 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "EdgeCluster",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Modularity",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "wvRN",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "SpectralClustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Flickr",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "YouTube",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "training ratio",
+      "alias": "TR",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "labeled data",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "nodes labeled for classification",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "EdgeCluster",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "Modularity",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "wvRN",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "SpectralClustering",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The performance of SpectralClustering proves much more competitive, but DeepW alkstill outperforms when labeled data is sparse on both Macro-F1 (TR\u2264 20%) and Micro-F1 (TR\u2264 60%).",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "EdgeCluster",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkoutperforms all baselines by at least 3% with respect to Micro-F1.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "SpectralClustering",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "It also performs quite well in Macro- F1, initially performing close to SpectralClustering, but distancing itself to a 1% improvement.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "EdgeCluster",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "They show that DeepW alk significantly outperforms the scalable baseline for creating graph representations, EdgeCluster.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Micro-F1",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "When 1% of the labeled nodes are used for test, the Micro- F1 improves by 14%.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Macro-F1",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "The Macro- F1 shows a corresponding 10% increase.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Flickr",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "6.1.2 Flickr In this experiment we vary the training ratio (TR) on the Flickr network from 1% to 10%.",
+      "extraction_confidence": 0.99
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "entities": [
+    {
+      "name": "representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of walks per source",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "length of walks per source",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Macro-F1 score",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "context size",
+      "alias": "k",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "optimization time",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "perturbation study",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "BlogCatalog network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "fraction of missing edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of connected components",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "SATURATES",
+      "is_functional": false,
+      "object": "Macro-F1 score",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "We observe that performance tends to saturate once the dimensions of the representations reaches around 100.",
+      "extraction_confidence": 0.78
+    },
+    {
+      "subject": "number of walks per source",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Macro-F1 score",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Similarly, we observe that increasing the number and length of walks per source improves performance, \uffff3\uffff2\uffff10 1 2 3 log2 p 0.16 0.18 0.20 0.22 0.24 0.26 0.28 Macro-F1 score \uffff3\uffff2\uffff10 1 2 3 log2 q 0.16 0.18 0.20 0.22 0.24 0.26 0.28 3 4 5 6 7 8 9 log2 d 0.16 0.18 0.20 0.22 0.24 0.26 0.28 68101214161820 Number of walks per node, r 0.16 0.18 0.20 0.22 0.24 0.26 0.28 Macro-F1 score 30405060708090100110 Length of walk, l 0.16 0.18 0.20 0.22 0.24 0.26 0.28 8101214161820 Context size, k 0.16 0.18 0.20 0.22 0.24 0.26 0.28 (a) \uffff3\uffff2\uffff10 1 2 3 log2 p 0.16 0.18 0.20 0.22 0.24 0.26 0.28 Macro-F1 score \uffff3\uffff2\uffff10 1 2 3 log2 q 0.16 0.18 0.20 0.22 0.24 0.26 0.28 0.00.10.20.30.40.5 0.6 Fraction of missing edges 0.00 0.05 0.10 0.15 0.20 0.25 0.30 Macro-F1 score 68101214161820 Number of walks per node, r 0.16 0.18 0.20 0.22 0.24 0.26 0.28 Macro-F1 score 30405060708090100110 Length of walk, l 0.16 0.18 0.20 0.22 0.24 0.26 0.28 0.00.10.20.30.40.5 0.6 Fraction of additional edges 0.00 0.05 0.10 0.15 0.20 0.25 0.30 Macro-F1 score (b) Figure 5: (a). Parameter sensitivity (b). Perturbation analysis for multilabel classification on the BlogCatalog network.",
+      "extraction_confidence": 0.62
+    },
+    {
+      "subject": "context size",
+      "subject_alias": "k",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Macro-F1 score",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Interestingly, the context size,k also improves performance at the cost of increased optimization time.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "context size",
+      "subject_alias": "k",
+      "subject_type": "CONCEPT",
+      "relation": "INCREASES",
+      "is_functional": false,
+      "object": "optimization time",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Interestingly, the context size,k also improves performance at the cost of increased optimization time.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "BlogCatalog network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We performed a perturbation study where we analyzed the performance of node2vec for two imperfect information scenarios related to the edge structure in the BlogCatalog network.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "perturbation study",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ANALYZES",
+      "is_functional": false,
+      "object": "fraction of missing edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the first scenario, we measure performace as a function of the fraction of missing edges (relative to the full network).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "fraction of missing edges",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "number of connected components",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The missing edges are chosen randomly, subject to the constraint that the number of connected components in the network remains fixed.",
+      "extraction_confidence": 0.88
+    }
+  ]
+}

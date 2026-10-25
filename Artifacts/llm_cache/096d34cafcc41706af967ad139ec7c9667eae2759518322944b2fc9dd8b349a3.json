@@ -1,0 +1,192 @@
+{
+  "entities": [
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE-SGD",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "GF",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "SkipGram",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Wikipedia data",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia corpora",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia word network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "word analogy",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "document classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Semantic (%)",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Syntactic (%)",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Overall (%)",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Running time",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "language network",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Mikolov et al.",
+      "alias": "",
+      "type": "PERSON"
+    },
+    {
+      "name": "cosine proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Wikipedia word network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Table 2 reports the results of word analogy using the embeddings of words learned on the Wikipedia corpora (SkipGram) or the Wikipedia word network (all other methods).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "SkipGram",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Wikipedia corpora",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Table 2 reports the results of word analogy using the embeddings of words learned on the Wikipedia corpora (SkipGram) or the Wikipedia word network (all other methods).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "language network",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "two million nodes",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We start with the results on the language network, which contains two million nodes and a billion edges.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "language network",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "a billion edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We start with the results on the language network, which contains two million nodes and a billion edges.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "word analogy",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Semantic (%)",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Two categories of word analogy are used in this task: semantic and syntactic.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "word analogy",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Syntactic (%)",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Two categories of word analogy are used in this task: semantic and syntactic.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "word analogy",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Overall (%)",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Table 2: Results of word analogy on Wikipedia data.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "word analogy",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "INTRODUCED_BY",
+      "is_functional": true,
+      "object": "Mikolov et al.",
+      "object_alias": "",
+      "object_type": "PERSON",
+      "evidence_quote": "Word Analogy. This task is introduced by Mikolov et al. [12].",
+      "extraction_confidence": 0.99
+    }
+  ]
+}

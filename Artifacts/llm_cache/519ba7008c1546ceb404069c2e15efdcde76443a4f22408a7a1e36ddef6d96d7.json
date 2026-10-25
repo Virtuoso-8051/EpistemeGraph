@@ -1,0 +1,284 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "neural language models",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "randomly-generated walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "semantic and syntactic structure of human language",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "logical analogies",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent representation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Karate network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "force-directed layouts",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "linearly separable portions",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "clusters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "modularity maximization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "multilabel network classification problems",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "large heterogeneous graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "relational classification problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "i.i.d. assumption",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "approximate inference techniques",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "dependency information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "classification results",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "label-independent representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "labeled vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "other latent representation methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "social dimensions",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "labeled nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "linear classifiers",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "logistic regression",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "classification method",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "iterative inference methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "online algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "deep learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "robust representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "statistical modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERALIZES",
+      "is_functional": false,
+      "object": "neural language models",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "DeepW alkgeneralizes neural language models to process a special language composed of a set of randomly-generated walks.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "neural language models",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "randomly-generated walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepW alkgeneralizes neural language models to process a special language composed of a set of randomly-generated walks.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "TAKES_AS_INPUT",
+      "is_functional": true,
+      "object": "graph",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepW alk takes a graph as input and produces a latent representation as an output.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PRODUCES",
+      "is_functional": true,
+      "object": "latent representation",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepW alk takes a graph as input and produces a latent representation as an output.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPLIED_TO",
+      "is_functional": false,
+      "object": "Karate network",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "The result of applying our method to the well-studied Karate network is shown in Figure 1.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "linearly separable portions",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CORRESPOND_TO",
+      "is_functional": false,
+      "object": "clusters",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Beyond the striking similarity, we note that linearly separable portions of (1b) correspond to clusters found through modularity maximization in the input graph (1a) (shown as vertex colors).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "clusters",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FOUND_THROUGH",
+      "is_functional": false,
+      "object": "modularity maximization",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Beyond the striking similarity, we note that linearly separable portions of (1b) correspond to clusters found through modularity maximization in the input graph (1a) (shown as vertex colors).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "other latent representation methods",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkoutperforms other latent representation methods for creating social dimensions [39, 41], especially when labeled nodes are scarce.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "online algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "DeepW alkachieves all of that while being an online algorithm that is trivially parallelizable.",
+      "extraction_confidence": 0.88
+    }
+  ]
+}

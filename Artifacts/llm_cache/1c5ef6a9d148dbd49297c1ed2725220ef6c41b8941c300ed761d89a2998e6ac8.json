@@ -1,0 +1,239 @@
+{
+  "entities": [
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "connectivity structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "underlying network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "bootstrapping approach",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "feature representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "binary operator",
+      "alias": "\u25e6",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "feature vectors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representation",
+      "alias": "g(u,v)",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "link prediction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "objective in Eq. 2",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "downstream task",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "BFS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DFS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "homophily",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network communities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural equivalence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "structural roles of nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Les Mis\u00e9rables network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "characters in the novel Les Mis\u00e9rables",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "coappearing characters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "kmeans",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "network analysis settings",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embedding nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "bootstrapping approach",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "feature representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Since our random walks are naturally based on the connectivity structure between nodes in the underlying network, we extend them to pairs of nodes using a bootstrapping approach over the feature representations of the individual nodes.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "binary operator",
+      "subject_alias": "\u25e6",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "feature vectors",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Given two nodesu andv, we define a binary operator\u25e6 over the corresponding feature vectors f (u) andf (v) in order to generate a representation g(u,v ) such that g : V\u00d7V \u2192 Rd\u2032 whered\u2032 is the representation size for the pair (u,v ).",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "representation",
+      "subject_alias": "g(u,v)",
+      "subject_type": "CONCEPT",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "link prediction",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We want our operators to be generally defined for any pair of nodes, even if an edge does not exist between the pair since doing so makes the representations useful for link prediction where our test set contains both true and false edges (i.e., do not exist).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "objective in Eq. 2",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "downstream task",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The objective in Eq. 2 is independent of any downstream task and the flexibility in exploration offered by node2vec lends the learned feature representations to a wide variety of network analysis settings discussed below.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "feature representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The objective in Eq. 2 is independent of any downstream task and the flexibility in exploration offered by node2vec lends the learned feature representations to a wide variety of network analysis settings discussed below.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "BFS",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REPRESENTS",
+      "is_functional": false,
+      "object": "homophily",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In Section 3.1 we observed that BFS and DFS strategies represent extreme ends on the spectrum of embedding nodes based on the principles of homophily (i.e., network communities) and structural equivalence ( i.e., structural roles of nodes).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DFS",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REPRESENTS",
+      "is_functional": false,
+      "object": "structural equivalence",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In Section 3.1 we observed that BFS and DFS strategies represent extreme ends on the spectrum of embedding nodes based on the principles of homophily (i.e., network communities) and structural equivalence ( i.e., structural roles of nodes).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Les Mis\u00e9rables network",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "characters in the novel Les Mis\u00e9rables",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use a network where nodes correspond to characters in the novel Les Mis\u00e9rables [13] and edges connect coappearing characters.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "kmeans",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "feature representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The feature representations are clustered using kmeans.",
+      "extraction_confidence": 0.99
+    }
+  ]
+}

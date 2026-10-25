@@ -1,0 +1,155 @@
+{
+  "entities": [
+    {
+      "name": "Stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "back-propagation algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Hierarchical Softmax",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "random walk Wv4",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representation \u03a6",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "context{v3,v 5}",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "asynchronous version of stochastic gradient descent",
+      "alias": "ASGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Flickr networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "model shared parameters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "streaming approach",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "representation learning code",
+      "alias": "",
+      "type": "SYSTEM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Stochastic gradient descent",
+      "subject_alias": "SGD",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "back-propagation algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The derivatives are estimated using the back-propagation algorithm.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Stochastic gradient descent",
+      "subject_alias": "SGD",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Stochastic gradient descent (SGD) [4] is used to optimize these parameters (Line 4, Algorithm 2).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Hierarchical Softmax",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Hierarchical Softmax factors out Pr( v3| \u03a6(v1)) and Pr(v5| \u03a6(v1)) over sequences of probability distributions corresponding to the paths starting at the root and ending at v3 and v5.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "random walk Wv4",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We slide a window of length 2 w + 1 over the random walk Wv4, mapping the central vertex v1 to its representation \u03a6(v1).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "representation \u03a6",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "UPDATED_BY",
+      "is_functional": false,
+      "object": "Stochastic gradient descent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The representation \u03a6 is updated to maximize the probability of v1 co-occurring with its context{v3,v 5}.",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "asynchronous version of stochastic gradient descent",
+      "subject_alias": "ASGD",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "This allows us to use asynchronous version of stochastic gradient descent (ASGD), in the multi-worker case.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "BlogCatalog",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "It shows the speed up in processing BlogCatalog and Flickr networks is consistent as we increase the number of workers to 8 (Figure 4a).",
+      "extraction_confidence": 0.93
+    }
+  ]
+}

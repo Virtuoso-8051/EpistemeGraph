@@ -1,0 +1,79 @@
+{
+  "answer": "I can\u2019t give an exact wall-clock training time comparison in hours between node2vec and GraRep on the 2-million-node Wikipedia word co-occurrence network from the information provided, because the query does not specify the benchmark source, hardware, implementation details, or the measured times. In the original Large-scale Information Network Embedding paper, the 2-million-node Wikipedia word co-occurrence network is used as a large-scale benchmark, and the paper reports that node2vec is substantially faster than GraRep in training time, but I cannot reliably state the exact hour values without the specific table or experimental setup. If you share the benchmark table or paper excerpt, I can extract the exact wall-clock hours and compute the difference directly.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "I am confident about the qualitative comparison and the inability to infer exact hours from the prompt alone, but not about any exact numeric values without the source table.",
+  "query_entities": [
+    "node2vec",
+    "GraRep",
+    "two million node",
+    "Wikipedia word cooccurrence network"
+  ],
+  "response_entities": [
+    "node2vec",
+    "GraRep",
+    "two million node",
+    "Wikipedia word cooccurrence network",
+    "Large-scale Information Network Embedding",
+    "training time",
+    "wall-clock time",
+    "benchmark table",
+    "experimental setup"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "two million node",
+      "target_alias": "TMN",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "Wikipedia word cooccurrence network",
+      "target_alias": "WCN",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "node2vec",
+      "target": "GraRep",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "node2vec",
+      "target": "training time",
+      "target_alias": "TTC",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "wall-clock time",
+      "target": "training time",
+      "target_alias": "TTC",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "benchmark table",
+      "target": "exact wall-clock training time",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "experimental setup",
+      "target": "exact wall-clock training time",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    }
+  ]
+}

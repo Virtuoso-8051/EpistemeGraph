@@ -1,0 +1,84 @@
+{
+  "answer": "The paper\u2019s argument is not a formal theorem that LINE(1st+2nd) exactly orthogonalizes two subspaces in the linear-algebraic sense. Rather, the paper shows that the two objectives optimize different proximity notions and are trained separately, so the combined embedding is formed by concatenating two independently learned representations: one for first-order proximity and one for second-order proximity. Because the two parts are learned with separate parameter sets and no supervised re-weighting term is introduced, the method does not perform supervised re-weighting between the first-order and second-order components.\n\nMore concretely, LINE defines two embedding objectives: the first-order proximity objective models observed edge strength directly, while the second-order proximity objective models similarity between a node and the context distribution of its neighbors. The paper then trains these objectives independently using negative sampling and stochastic gradient descent, and the final LINE(1st+2nd) representation is the concatenation of the two learned embeddings. This design encourages the two components to capture complementary information, but the paper does not prove orthogonality as a strict geometric property, nor does it introduce a supervised mechanism to re-weight the two parts.\n\nSo the exact answer is: there is no exact proof in the paper that LINE(1st+2nd) orthogonalizes first-order and second-order subspaces; the paper instead provides an optimization-based justification for learning them separately and concatenating them, without supervised re-weighting.",
+  "self_reported_accuracy": 0.91,
+  "confidence_reasoning": "I am highly confident about the paper\u2019s training and concatenation design, but less certain about the user\u2019s phrasing of an exact orthogonalization proof because the paper does not present such a theorem.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order proximity",
+    "second-order neighbor"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order proximity",
+    "second-order neighbor",
+    "negative sampling",
+    "stochastic gradient descent",
+    "embedding",
+    "objective function"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "first-order proximity",
+      "target_alias": "FOP",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "second-order neighbor",
+      "target_alias": "SON",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "objective function",
+      "target_alias": "3",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "negative sampling",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "stochastic gradient descent",
+      "target_alias": "CSGD",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "embedding",
+      "target_alias": null,
+      "type": "GENERATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "supervised re-weighting",
+      "target_alias": null,
+      "type": "REQUIRES",
+      "claim_type": "REFUTED",
+      "weight": 0.97
+    }
+  ]
+}

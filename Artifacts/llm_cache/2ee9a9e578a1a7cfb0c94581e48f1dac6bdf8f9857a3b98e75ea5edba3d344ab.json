@@ -1,0 +1,162 @@
+{
+  "entities": [
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "first-order proximities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edge-sampling algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "stochastic gradient decent",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "real-world information networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "multidimensional scaling",
+      "alias": "MDS",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "IsoMap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LLE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Laplacian Eigenmap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "large-scale information network embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PROPOSES",
+      "is_functional": true,
+      "object": "large-scale information network embedding",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We propose a novel network embedding model called the \u201cLINE,\u201d which suits arbitrary types of information networks and easily scales to millions of nodes.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "first-order proximities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "It has a carefully designed objective function that preserves both the first-order and second-order proximities.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "second-order proximities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "It has a carefully designed objective function that preserves both the first-order and second-order proximities.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "edge-sampling algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": true,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "We propose an edge-sampling algorithm for optimizing the objective.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "edge-sampling algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "stochastic gradient decent",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The algorithm tackles the limitation of the classical stochastic gradient decent and improves the effectiveness and efficiency of the inference.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "edge-sampling algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "effectiveness and efficiency of the inference",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The algorithm tackles the limitation of the classical stochastic gradient decent and improves the effectiveness and efficiency of the inference.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "real-world information networks",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We conduct extensive experiments on real-world information networks.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "graph factorization",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": true,
+      "object": "stochastic gradient descent",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "It finds the low-dimensional embedding of a large graph through matrix factorization, which is optimized using stochastic gradient descent.",
+      "extraction_confidence": 0.93
+    }
+  ]
+}

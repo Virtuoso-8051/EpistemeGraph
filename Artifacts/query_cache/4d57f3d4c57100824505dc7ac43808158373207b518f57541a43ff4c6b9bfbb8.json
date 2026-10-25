@@ -1,0 +1,103 @@
+{
+  "answer": "DeepWalk, node2vec, and LINE all optimize objectives over observed node-context pairs, but they avoid computing the full normalizing partition function by using different approximations.\n\nDeepWalk uses hierarchical softmax to approximate the softmax normalization over the output vocabulary of nodes. In practice, this replaces the expensive partition function with a binary tree decomposition, so the probability of a context node is computed as a product of sigmoid decisions along a path from the root to that node. This makes training much cheaper than exact normalization while still providing a principled probabilistic approximation.\n\nnode2vec and LINE instead use negative sampling. Negative sampling does not approximate the full partition function as a normalized probability distribution in the same way hierarchical softmax does; rather, it converts the multiclass prediction problem into a set of binary classification problems that distinguish observed positive pairs from sampled noise pairs. The model learns embeddings by maximizing the score of true pairs and minimizing the score of randomly sampled negative pairs, which sidesteps explicit computation of the partition function entirely.\n\nSo the key difference is:\n- DeepWalk: approximates the partition function with hierarchical softmax, preserving a normalized probabilistic interpretation.\n- node2vec and LINE: replace normalization with negative sampling, which is a discriminative surrogate objective rather than an explicit normalization approximation.\n\nIn short, DeepWalk\u2019s approximation is tree-based and normalization-preserving, whereas node2vec and LINE use noise-contrastive-style training that avoids the partition function altogether.",
+  "self_reported_accuracy": 0.96,
+  "confidence_reasoning": "This is a well-established distinction in the original DeepWalk, node2vec, and LINE formulations, and the answer stays close to those standard optimization descriptions.",
+  "query_entities": [
+    "DeepWalk",
+    "node2vec",
+    "normalizing partition function",
+    "Hierarchical Softmax",
+    "Negative Sampling",
+    "LINE"
+  ],
+  "response_entities": [
+    "DeepWalk",
+    "node2vec",
+    "LINE",
+    "normalizing partition function",
+    "Hierarchical Softmax",
+    "Negative Sampling",
+    "softmax",
+    "binary tree decomposition",
+    "sigmoid function",
+    "node-context pair",
+    "positive pair",
+    "negative pair",
+    "noise-contrastive-style training",
+    "embedding"
+  ],
+  "response_triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": null,
+      "target": "Hierarchical Softmax",
+      "target_alias": "HS",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "source_alias": "HS",
+      "target": "normalizing partition function",
+      "target_alias": "PF",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "source_alias": "HS",
+      "target": "binary tree decomposition",
+      "target_alias": null,
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "node2vec",
+      "source_alias": null,
+      "target": "Negative Sampling",
+      "target_alias": "NS",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "LINE",
+      "source_alias": null,
+      "target": "Negative Sampling",
+      "target_alias": "NS",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Negative Sampling",
+      "source_alias": "NS",
+      "target": "normalizing partition function",
+      "target_alias": "PF",
+      "type": "REFUTED",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "Negative Sampling",
+      "source_alias": "NS",
+      "target": "binary classification",
+      "target_alias": null,
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "Negative Sampling",
+      "source_alias": "NS",
+      "target": "sigmoid function",
+      "target_alias": "SF",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    }
+  ]
+}

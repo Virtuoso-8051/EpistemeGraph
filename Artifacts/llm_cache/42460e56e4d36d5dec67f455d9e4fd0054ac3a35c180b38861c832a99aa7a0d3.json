@@ -1,0 +1,189 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "weighted networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "unweighted networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "large-scale information network embedding",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "information network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "data object",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edge",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "relationship",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "weight",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local pairwise proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "low-dimensional space",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPLIES_TO",
+      "is_functional": false,
+      "object": "unweighted networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Practically, DeepWalk only applies to unweighted networks, while our model is applicable for networks with both weighted and unweighted edges.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "large-scale information network embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "first-order proximities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We formally define the problem of large-scale information network embedding using first-order and second-order proximities.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "large-scale information network embedding",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "second-order proximities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We formally define the problem of large-scale information network embedding using first-order and second-order proximities.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "information network",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "vertex",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An information network is defined as G = (V,E ), where V is the set of vertices, each representing a data object and E is the set of edges between the vertices, each representing a relationship between two data objects.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "vertex",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REPRESENTS",
+      "is_functional": false,
+      "object": "data object",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An information network is defined as G = (V,E ), where V is the set of vertices, each representing a data object and E is the set of edges between the vertices, each representing a relationship between two data objects.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "edge",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REPRESENTS",
+      "is_functional": false,
+      "object": "relationship",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An information network is defined as G = (V,E ), where V is the set of vertices, each representing a data object and E is the set of edges between the vertices, each representing a relationship between two data objects.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "edge",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "HAS_PROPERTY",
+      "is_functional": false,
+      "object": "weight",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Each edge e\u2208 E is an ordered pair e = (u,v ) and is associated with a weight wuv > 0, which indicates the strength of the relation.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "weight",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "INDICATES",
+      "is_functional": true,
+      "object": "relationship",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Each edge e\u2208 E is an ordered pair e = (u,v ) and is associated with a weight wuv > 0, which indicates the strength of the relation.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "first-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "local pairwise proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Definition 2. (First-order Proximity) The first-order proximity in a network is the local pairwise proximity between two vertices.",
+      "extraction_confidence": 0.99
+    }
+  ]
+}

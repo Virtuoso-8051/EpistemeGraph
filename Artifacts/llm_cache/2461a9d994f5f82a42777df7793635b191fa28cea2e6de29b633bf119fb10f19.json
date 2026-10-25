@@ -1,0 +1,239 @@
+{
+  "entities": [
+    {
+      "name": "Effect of sampling frequency",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "gamma",
+      "alias": "\u03b3",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent representations for vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent social representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "centrality",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "partitioning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "collective inference",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph kernels",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "scalable online method",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "local information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "global information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "unsupervised representation learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Relational classification",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "collective classification",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "approximate inference algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "community information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "clusters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "PageRank",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "additional features",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representations of network structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "existing inference procedure",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "iterative ones",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "features from graphs",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "gamma",
+      "subject_alias": "\u03b3",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINES",
+      "is_functional": false,
+      "object": "random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Figure 5a shows the effects of increasing \u03b3, the number of random walks that we start from each vertex.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "gamma",
+      "subject_alias": "\u03b3",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "latent representations for vertices",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These results demonstrate that we are able to learn meaningful latent representations for vertices after only a small number of random walks.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "latent social representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTRASTS_WITH",
+      "is_functional": false,
+      "object": "centrality",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "1. We learn our latent social representations, instead of computing statistics related to centrality [12] or partitioning [41].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "latent social representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTRASTS_WITH",
+      "is_functional": false,
+      "object": "partitioning",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "1. We learn our latent social representations, instead of computing statistics related to centrality [12] or partitioning [41].",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "scalable online method",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "local information",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "3. We propose a scalable online method which uses only local information.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Most methods",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "global information",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Most methods require global information and are offline [16,39\u201341].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "unsupervised representation learning",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "APPLIES_TO",
+      "is_functional": false,
+      "object": "graphs",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "4. We apply unsupervised representation learning to graphs.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "Relational classification",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "links between data items",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Relational classification (or collective classification) methods [14,24,31,35] use links between data items as part of the classification process.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "exact inference in the collective classification problem",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "NP-hard",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Exact inference in the collective classification problem is NP-hard, and solutions have focused on the use of approximate inference algorithm which may not be guaranteed to converge [37].",
+      "extraction_confidence": 0.95
+    }
+  ]
+}

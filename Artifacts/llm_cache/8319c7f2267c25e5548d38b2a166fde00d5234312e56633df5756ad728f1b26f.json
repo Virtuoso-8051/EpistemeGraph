@@ -1,0 +1,231 @@
+{
+  "entities": [
+    {
+      "name": "Learning social representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Adaptability",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Community aware",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Low dimensional",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Continuous",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Latent representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Partial community membership",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Continuous space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Optimization techniques originally designed for language modeling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Language modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Vertex visitation count",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Frequency of Vertex Occurrence in Short Random Walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Word mention count",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Frequency of Word Occurrence in Wikipedia",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "YouTube Social Graph",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia Article Text",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Power-law distribution",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Similarity measure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Content recommendation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Community detection",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Learning social representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "HAS_CHARACTERISTIC",
+      "is_functional": false,
+      "object": "Adaptability",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We seek learning social representations with the following characteristics: \u2022 Adaptability - Real social networks are constantly evolving; new social relations should not require repeating the learning process all over again.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Learning social representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "HAS_CHARACTERISTIC",
+      "is_functional": false,
+      "object": "Community aware",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We seek learning social representations with the following characteristics: \u2022 Community aware - The distance between latent dimensions should represent a metric for evaluating social similarity between the corresponding members of the network.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Learning social representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "HAS_CHARACTERISTIC",
+      "is_functional": false,
+      "object": "Low dimensional",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We seek learning social representations with the following characteristics: \u2022 Low dimensional - When labeled data is scarce, lowdimensional models generalize better, and speed up convergence and inference.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Learning social representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "HAS_CHARACTERISTIC",
+      "is_functional": false,
+      "object": "Continuous",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We seek learning social representations with the following characteristics: \u2022 Continuous - We require latent representations to model partial community membership in continuous space.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Optimization techniques originally designed for language modeling",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Our method for satisfying these requirements learns representation for vertices from a stream of short random walks, using optimization techniques originally designed for language modeling.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USED_AS",
+      "is_functional": false,
+      "object": "Similarity measure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USED_IN",
+      "is_functional": false,
+      "object": "Content recommendation",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USED_IN",
+      "is_functional": false,
+      "object": "Community detection",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Power-law distribution",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DESCRIBES",
+      "is_functional": false,
+      "object": "Frequency of Vertex Occurrence in Short Random Walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Figure 2: The power-law distribution of vertices appearing in short random walks (2a) follows a power-law, much like the distribution of words in natural language (2b).",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "Power-law distribution",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DESCRIBES",
+      "is_functional": false,
+      "object": "Frequency of Word Occurrence in Wikipedia",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Figure 2: The power-law distribution of vertices appearing in short random walks (2a) follows a power-law, much like the distribution of words in natural language (2b).",
+      "extraction_confidence": 0.88
+    }
+  ]
+}

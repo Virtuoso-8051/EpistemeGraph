@@ -1,0 +1,221 @@
+{
+  "entities": [
+    {
+      "name": "graph kernels",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representation learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "relational data",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "classification process",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "approximated",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "distributed representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "back-propagation",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "gradient descent",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "neural networks",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "latent social representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "truncated random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "structural regularities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multi-label classification tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "spectral methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "sparsity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "graph kernels",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "relational data",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Graph Kernels [42] have been proposed as a way to use relational data as part of the classification process, but are quite slow unless approximated [19].",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "representation learning",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FRAME_AS",
+      "is_functional": false,
+      "object": "classification process",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In contrast to these methods, we frame the feature creation procedure as a representation learning problem.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "distributed representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MODEL",
+      "is_functional": false,
+      "object": "structural relationship",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Distributed representations have been proposed to model structural relationship between concepts [17].",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "distributed representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "TRAINED_BY",
+      "is_functional": false,
+      "object": "back-propagation",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "These representations are trained by the back-propagation and gradient descent.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "distributed representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "TRAINED_BY",
+      "is_functional": false,
+      "object": "gradient descent",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "These representations are trained by the back-propagation and gradient descent.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "latent social representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We propose DeepW alk, a novel approach for learning latent social representations of vertices.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "truncated random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Using local information from truncated random walks as input, our method learns a representation which encodes structural regularities.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "LEARNS",
+      "is_functional": false,
+      "object": "structural regularities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Using local information from truncated random walks as input, our method learns a representation which encodes structural regularities.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "spectral methods",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Our results show that we can create meaningful representations for graphs too large to run spectral methods on.",
+      "extraction_confidence": 0.82
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "sparsity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "On such large graphs, our method significantly outperforms other methods designed to operate for sparsity.",
+      "extraction_confidence": 0.78
+    }
+  ]
+}

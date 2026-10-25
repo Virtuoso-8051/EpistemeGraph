@@ -1,0 +1,231 @@
+{
+  "entities": [
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "similarity measure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "content recommendation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "community detection",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "output sensitive algorithms",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "local community structure information",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "input graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "stream of short random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local exploration",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walkers",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "learned model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "power law",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "scale-free graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word frequency",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "natural language",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "English Wikipedia",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Zipf\u2019s law",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "community structure in networks",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "similarity measure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "output sensitive algorithms",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "They are also the foundation of a class ofoutput sensitive algorithms which use them to compute local community structure information in time sublinear to the size of the input graph [38].",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "output sensitive algorithms",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "COMPUTE",
+      "is_functional": false,
+      "object": "local community structure information",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "They are also the foundation of a class ofoutput sensitive algorithms which use them to compute local community structure information in time sublinear to the size of the input graph [38].",
+      "extraction_confidence": 0.94
+    },
+    {
+      "subject": "stream of short random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "It is this connection to local structure that motivates us to use a stream of short random walks as our basic tool for extracting information from a network.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "local exploration",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "parallelize",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "First, local exploration is easy to parallelize.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "random walkers",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "local exploration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Several random walkers (in different threads, processes, or machines) can simultaneously explore different parts of the same graph.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "short random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "small changes in the graph structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Secondly, relying on information obtained from short random walks make it possible to accommodate small changes in the graph structure without the need for global recomputation.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "learned model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "new random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We can iteratively update the learned model with new random walks from the changed region in time sub-linear to the entire graph.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "degree distribution",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FOLLOWS",
+      "is_functional": false,
+      "object": "power law",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "If the degree distribution of a connected graph follows a power law (is scale-free), we observe that the frequency which vertices appear in the short random walks will also follow a power-law distribution.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "word frequency",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FOLLOWS",
+      "is_functional": false,
+      "object": "power law",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Word frequency in natural language follows a similar distribution, and techniques from language modeling account for this distributional behavior.",
+      "extraction_confidence": 0.96
+    }
+  ]
+}

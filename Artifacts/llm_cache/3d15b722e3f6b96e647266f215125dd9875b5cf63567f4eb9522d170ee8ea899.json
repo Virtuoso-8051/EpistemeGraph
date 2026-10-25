@@ -1,0 +1,206 @@
+{
+  "entities": [
+    {
+      "name": "search biases",
+      "alias": "\u03b1",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "shortest path distance",
+      "alias": "dtx",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "parameters p and q",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "BFS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DFS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "search procedure",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "starting node u",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Return parameter",
+      "alias": "p",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "In-out parameter",
+      "alias": "q",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "node t",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node equivalences",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "underlying graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "2nd order Markovian",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "pure BFS/DFS approaches",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "shortest path distance",
+      "subject_alias": "dtx",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "search biases",
+      "object_alias": "\u03b1",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Edge labels indicate search biases\u03b1. anddtx denotes the shortest path distance between nodes t andx.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "parameters p and q",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ARE_NECESSARY_AND_SUFFICIENT_FOR",
+      "is_functional": false,
+      "object": "search procedure",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Note thatdtx must be one of{0, 1, 2}, and hence, the two parameters are necessary and sufficient to guide the walk.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "parameters p and q",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "APPROXIMATES",
+      "is_functional": false,
+      "object": "BFS",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In particular, the parameters allow our search procedure to (approximately) interpolate between BFS and DFS and thereby reflect an affinity for different notions of node equivalences.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "parameters p and q",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "APPROXIMATES",
+      "is_functional": false,
+      "object": "DFS",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In particular, the parameters allow our search procedure to (approximately) interpolate between BFS and DFS and thereby reflect an affinity for different notions of node equivalences.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "Return parameter",
+      "subject_alias": "p",
+      "subject_type": "CONCEPT",
+      "relation": "CONTROLS",
+      "is_functional": false,
+      "object": "random walk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Parameterp controls the likelihood of immediately revisiting a node in the walk.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "In-out parameter",
+      "subject_alias": "q",
+      "subject_type": "CONCEPT",
+      "relation": "CONTROLS",
+      "is_functional": false,
+      "object": "random walk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Parameterq allows the search to differentiate between \u201cinward\u201d and \u201coutward\u201d nodes.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "In-out parameter",
+      "subject_alias": "q",
+      "subject_type": "CONCEPT",
+      "relation": "APPROXIMATES",
+      "is_functional": false,
+      "object": "BFS",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Such walks obtain a local view of the underlying graph with respect to the start node in the walk and approximate BFS behavior in the sense that our samples comprise of nodes within a small locality.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "In-out parameter",
+      "subject_alias": "q",
+      "subject_type": "CONCEPT",
+      "relation": "REFLECTS",
+      "is_functional": false,
+      "object": "DFS",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Such behavior is reflective of DFS which encourages outward exploration.",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ARE",
+      "is_functional": false,
+      "object": "2nd order Markovian",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that by setting \u03c0v,x to be a function of the preceeding node in the walk t, the random walks are 2nd order Markovian.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "HAVE_BENEFIT",
+      "is_functional": false,
+      "object": "tractable preprocessing and superior sampling efficiency of random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Hence, the sampled nodes are not at strictly increasing distances from a given source nodeu, but in turn, we benefit from tractable preprocessing and superior sampling efficiency of random walks.",
+      "extraction_confidence": 0.78
+    }
+  ]
+}

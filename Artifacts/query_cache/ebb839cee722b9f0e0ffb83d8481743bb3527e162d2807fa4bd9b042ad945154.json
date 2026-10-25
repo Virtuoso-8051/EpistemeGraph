@@ -1,0 +1,98 @@
+{
+  "answer": "DeepWalk is a representation-learning method for social networks that learns node embeddings from random walks. In the context of learning social representations, it is commonly described as seeking four desirable characteristics:\n\n1. Adaptability: the learned representation should be flexible enough to work across different networks and tasks, rather than being tied to a single hand-crafted feature set.\n2. Community aware: nodes that belong to the same community or have similar network context should be mapped to similar representations.\n3. Low dimensional: each node should be represented by a compact vector in a low-dimensional space, making the representation efficient and easier to use in downstream learning.\n4. Continuous: the representation should be a continuous-valued vector embedding, rather than a discrete symbolic label or sparse indicator.\n\nSo, in short, DeepWalk aims to produce adaptable, community-aware, low-dimensional, continuous vector representations of nodes in a social network.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "These characteristics are standard descriptions of DeepWalk-style social network embeddings, though exact wording can vary across sources.",
+  "query_entities": [
+    "DEEPWALK",
+    "Learning social representation",
+    "Community aware",
+    "low-dimensional space",
+    "continuous feature representation"
+  ],
+  "response_entities": [
+    "DEEPWALK",
+    "Learning social representation",
+    "Community aware",
+    "low-dimensional space",
+    "continuous feature representation",
+    "representation learning",
+    "social network",
+    "node embedding",
+    "random walk",
+    "low-dimensional vector"
+  ],
+  "response_triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "representation learning",
+      "target_alias": "RL",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "random walk",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "social network",
+      "target_alias": "SN",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "community aware",
+      "target_alias": "CA",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "low-dimensional space",
+      "target_alias": "LDS",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "continuous feature representation",
+      "target_alias": "CFR",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DEEPWALK",
+      "target": "Learning social representation",
+      "target_alias": "LSR",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "node embedding",
+      "source_alias": null,
+      "target": "low-dimensional vector",
+      "target_alias": "LDV",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    }
+  ]
+}

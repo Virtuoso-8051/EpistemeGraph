@@ -1,0 +1,88 @@
+[
+  {
+    "subject": "LINE-SGD(1st)",
+    "subject_alias": "LINE-SGD",
+    "subject_type": "MODEL",
+    "relation": "USES",
+    "is_functional": false,
+    "object": "first-order proximity",
+    "object_type": "CONCEPT",
+    "evidence_quote": "There are two variants of this approach: LINE-SGD(1st) and LINE-SGD(2nd), which use \ufb01rst- and second-order proximity respectively.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "LINE-SGD(2nd)",
+    "subject_alias": "LINE-SGD",
+    "subject_type": "MODEL",
+    "relation": "USES",
+    "is_functional": false,
+    "object": "second-order proximity",
+    "object_type": "CONCEPT",
+    "evidence_quote": "There are two variants of this approach: LINE-SGD(1st) and LINE-SGD(2nd), which use \ufb01rst- and second-order proximity respectively.",
+    "extraction_confidence": 0.98
+  },
+  {
+    "subject": "LINE",
+    "subject_type": "MODEL",
+    "relation": "OPTIMIZED_THROUGH",
+    "is_functional": false,
+    "object": "edge-sampling treatment",
+    "object_type": "METHOD",
+    "evidence_quote": "This is the LINE model optimized through the edge-sampling treatment introduced in Section 4.2.",
+    "extraction_confidence": 0.96
+  },
+  {
+    "subject": "LINE",
+    "subject_type": "MODEL",
+    "relation": "SAMPLES",
+    "is_functional": false,
+    "object": "edge",
+    "object_type": "ENTITY",
+    "evidence_quote": "In each stochastic gradient step, an edge is sampled with the probability proportional to its weight and then treated as binary for model updating.",
+    "extraction_confidence": 0.95
+  },
+  {
+    "subject": "LINE(1st)",
+    "subject_alias": "LINE",
+    "subject_type": "MODEL",
+    "relation": "APPLIES_TO",
+    "is_functional": false,
+    "object": "undirected graphs",
+    "object_type": "GRAPH",
+    "evidence_quote": "Like the graph factorization, both LINE(1st) and LINE-SGD(1st) only apply to undirected graphs.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "LINE-SGD(1st)",
+    "subject_alias": "LINE-SGD",
+    "subject_type": "MODEL",
+    "relation": "APPLIES_TO",
+    "is_functional": false,
+    "object": "undirected graphs",
+    "object_type": "GRAPH",
+    "evidence_quote": "Like the graph factorization, both LINE(1st) and LINE-SGD(1st) only apply to undirected graphs.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "LINE(2nd)",
+    "subject_alias": "LINE",
+    "subject_type": "MODEL",
+    "relation": "APPLIES_TO",
+    "is_functional": false,
+    "object": "undirected and directed graphs",
+    "object_type": "GRAPH",
+    "evidence_quote": "LINE(2nd) and LINE- SGD(2nd) apply to both undirected and directed graphs.",
+    "extraction_confidence": 0.97
+  },
+  {
+    "subject": "LINE-SGD(2nd)",
+    "subject_alias": "LINE-SGD",
+    "subject_type": "MODEL",
+    "relation": "APPLIES_TO",
+    "is_functional": false,
+    "object": "undirected and directed graphs",
+    "object_type": "GRAPH",
+    "evidence_quote": "LINE(2nd) and LINE- SGD(2nd) apply to both undirected and directed graphs.",
+    "extraction_confidence": 0.97
+  }
+]

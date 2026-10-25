@@ -1,0 +1,201 @@
+{
+  "entities": [
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "random walk methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "PPI network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "uniform random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Wikipedia word cooccurrence network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "train-test split",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "p",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "q",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Micro-F 1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Spectral clustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "labeled data",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PERFORMS_WORSE_THAN",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "extraction_confidence": 0.89
+    },
+    {
+      "subject": "random walk methods",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "sample reuse",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "semi-supervised nature",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Even in our other two networks, where we have a mix of equivalences present, the semi-supervised nature of node2vec can help us infer the appropriate degree of exploration necessary for feature learning.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "In the case of PPI network, the best exploration strategy (p = 4 ,q = 1 ) turns out to be virtually indistinguishable from DeepWalk\u2019s uniform (p = 1,q = 1) exploration giving us only a slight edge over DeepWalk by avoiding redudancy in already visited nodes through a high p value, but a convincing 23.8% gain over LINE in Macro-F 1 scores.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "uniform random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PERFORMS_WORSE_THAN",
+      "is_functional": false,
+      "object": "node2vec",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "However, in general, the uniform random walks can be much worse than the exploration strategy learned bynode2vec.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "uniform random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "As we can see in the Wikipedia word cooccurrence network, uniform walks cannot guide the search procedure towards the best samples and hence, we achieve a gain of 21.8% over DeepWalk and 33.2% over LINE.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "uniform random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "As we can see in the Wikipedia word cooccurrence network, uniform walks cannot guide the search procedure towards the best samples and hence, we achieve a gain of 21.8% over DeepWalk and 33.2% over LINE.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "Spectral clustering",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Macro-F1",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "For example, we achieve the biggest improvement over DeepWalk of 26.7% on BlogCatalog at 70% labeled data.",
+      "extraction_confidence": 0.74
+    }
+  ]
+}

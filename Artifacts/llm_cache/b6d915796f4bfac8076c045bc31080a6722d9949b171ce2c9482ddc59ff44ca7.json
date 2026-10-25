@@ -1,0 +1,226 @@
+{
+  "entities": [
+    {
+      "name": "natural language",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "power law distribution",
+      "alias": "Zipf\u2019s law",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "community structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "corpus",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "sequence of words",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vocabulary",
+      "alias": "V",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "probabilistic neural networks",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "representation learning",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertices",
+      "alias": "vi",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent representation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "mapping function",
+      "alias": "\u03a6",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "latent social representation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node co-occurrences",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "prediction problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "context",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "missing word",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "language modeling",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINES",
+      "is_functional": false,
+      "object": "estimate the likelihood of a specific sequence of words appearing in a corpus",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The goal of language modeling is estimate the likelihood of a specific sequence of words appearing in a corpus.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "language modeling",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "probabilistic neural networks",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Recent work in representation learning has focused on using probabilistic neural networks to build general representations of words which extend the scope of language modeling beyond its original goals.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "representation learning",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "probabilistic neural networks",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Recent work in representation learning has focused on using probabilistic neural networks to build general representations of words which extend the scope of language modeling beyond its original goals.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "language modeling",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "GENERALIZED_TO",
+      "is_functional": false,
+      "object": "random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this work, we present a generalization of language modeling to explore the graph through a stream of short random walks.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAN_BE_THOUGHT_OF_AS",
+      "is_functional": false,
+      "object": "short sentences and phrases in a special language",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These walks can be thought of short sentences and phrases in a special language.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "mapping function",
+      "subject_alias": "\u03a6",
+      "subject_type": "ALGORITHM",
+      "relation": "MAPS_TO",
+      "is_functional": true,
+      "object": "latent social representation",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This mapping \u03a6 represents the latent social representation associated with each vertex v in the graph.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "mapping function",
+      "subject_alias": "\u03a6",
+      "subject_type": "ALGORITHM",
+      "relation": "REPRESENTS",
+      "is_functional": true,
+      "object": "latent social representation",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This mapping \u03a6 represents the latent social representation associated with each vertex v in the graph.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BECOMES_UNFEASIBLE",
+      "is_functional": false,
+      "object": "computing this objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "However as the walk length grows, computing this objective function becomes unfeasible.",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "prediction problem",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "context",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "First, instead of using the context to predict a missing word, it uses one word to predict the context.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "prediction problem",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PREDICTS",
+      "is_functional": false,
+      "object": "context",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "First, instead of using the context to predict a missing word, it uses one word to predict the context.",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

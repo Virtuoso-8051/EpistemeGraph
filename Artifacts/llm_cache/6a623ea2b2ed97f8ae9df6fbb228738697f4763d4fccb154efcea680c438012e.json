@@ -1,0 +1,231 @@
+{
+  "entities": [
+    {
+      "name": "streaming approach",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "small walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "representation learning code",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "learning rate",
+      "alias": "\u03b1",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hierarchical Softmax tree",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "cardinality of V",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "vertex frequency",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Huffman coding",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "non-random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "agents",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sequence of elements",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language modeling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sentences",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SkipGram",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "streaming variant",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "features",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "continually evolving network",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "streaming approach",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "small walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this variant small walks from the graph are passed directly to the representation learning code, and the model is updated directly.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "streaming approach",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "representation learning code",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In this variant small walks from the graph are passed directly to the representation learning code, and the model is updated directly.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "streaming approach",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "UPDATES",
+      "is_functional": false,
+      "object": "model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "In this variant small walks from the graph are passed directly to the representation learning code, and the model is updated directly.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "learning rate",
+      "subject_alias": "\u03b1",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "small constant value",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Instead, we can initialize the learning rate \u03b1 to a small constant value.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Hierarchical Softmax tree",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "cardinality of V",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "If the cardinality of V is known (or can be bounded), we can build the Hierarchical Softmax tree for that maximum value.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "Hierarchical Softmax tree",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "vertex frequency",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "If we have the ability to estimate the vertex frequency a priori, we can 20 21 22 23 # of Workers 2-3 2-2 2-1 20 Relative Time BlogCatalog Flickr (a) Running Time 20 21 22 23 # of Workers 0.02 0.01 0.00 0.01 0.02 Relative Change in Micro F1 BlogCatalog Flickr (b) Performance Figure 4: Effects of parallelizing DeepW alk also still use Huffman coding to decrease frequent element access times.",
+      "extraction_confidence": 0.74
+    },
+    {
+      "subject": "Huffman coding",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "frequent element access times",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "If we have the ability to estimate the vertex frequency a priori, we can 20 21 22 23 # of Workers 2-3 2-2 2-1 20 Relative Time BlogCatalog Flickr (a) Running Time 20 21 22 23 # of Workers 0.02 0.01 0.00 0.01 0.02 Relative Change in Micro F1 BlogCatalog Flickr (b) Performance Figure 4: Effects of parallelizing DeepW alk also still use Huffman coding to decrease frequent element access times.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "non-random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "sequence of elements",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Some graphs are created as a by-product of agents interacting with a sequence of elements (e.g. users\u2019 navigation of pages on a website).",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "non-random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAPTURES",
+      "is_functional": false,
+      "object": "network structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Graphs sampled in this way will not only capture information related to network structure, but also to the frequency at which paths are traversed.",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "non-random walks",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAPTURES",
+      "is_functional": false,
+      "object": "frequency at which paths are traversed",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Graphs sampled in this way will not only capture information related to network structure, but also to the frequency at which paths are traversed.",
+      "extraction_confidence": 0.86
+    }
+  ]
+}

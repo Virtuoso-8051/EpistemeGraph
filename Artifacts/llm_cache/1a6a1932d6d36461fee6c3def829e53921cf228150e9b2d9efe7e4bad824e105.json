@@ -1,0 +1,182 @@
+{
+  "entities": [
+    {
+      "name": "EnglishWikipedia pages",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "5-word sliding window",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Flickr",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Youtube2",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DBLP data set",
+      "alias": "DBLP",
+      "type": "DATASET"
+    },
+    {
+      "name": "author citation network",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "paper citation network",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "LINE model",
+      "alias": "LINE",
+      "type": "MODEL"
+    },
+    {
+      "name": "MDS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "IsoMap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Laplacian eigenmap",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Graph factorization",
+      "alias": "GF",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "matrix factorization techniques",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "information network",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "EnglishWikipedia pages",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "USED_TO_CONSTRUCT",
+      "is_functional": false,
+      "object": "word cooccurrence network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We constructed a word cooccurrence network from the entire set of EnglishWikipedia pages.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "5-word sliding window",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINES",
+      "is_functional": true,
+      "object": "word cooccurrence network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Words within every 5-word sliding window are considered to be co-occurring with each other.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Flickr",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USED_AS",
+      "is_functional": false,
+      "object": "social networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use two social networks:Flickr and Youtube2.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Youtube2",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USED_AS",
+      "is_functional": false,
+      "object": "social networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use two social networks:Flickr and Youtube2.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DBLP data set",
+      "subject_alias": "DBLP",
+      "subject_type": "DATASET",
+      "relation": "USED_TO_CONSTRUCT",
+      "is_functional": false,
+      "object": "citation networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We use the DBLP data set [19] 3 to construct the citation networks between authors and between papers.",
+      "extraction_confidence": 0.99
+    },
+    {
+      "subject": "author citation network",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "RECORDS",
+      "is_functional": false,
+      "object": "the number of papers written by one author and cited by another author",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The author citation network records the number of papers written by one author and cited by another author.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "LINE model",
+      "subject_alias": "LINE",
+      "subject_type": "MODEL",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Graph factorization",
+      "object_alias": "GF",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We compare the LINE model with several existing graph embedding methods that are able to scale up to very large networks.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "Graph factorization",
+      "subject_alias": "GF",
+      "subject_type": "ALGORITHM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "matrix factorization techniques",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We compare with the matrix factorization techniques for graph factorization.",
+      "extraction_confidence": 0.96
+    }
+  ]
+}

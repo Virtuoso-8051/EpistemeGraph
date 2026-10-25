@@ -1,0 +1,97 @@
+{
+  "answer": "LINE embeds a newly arrived vertex i by solving an optimization problem for only that vertex while keeping all previously learned vertex embeddings fixed. In the standard LINE formulation, the embedding of i is obtained from the observed edges between i and existing vertices, using the learned embeddings of those existing vertices as constants. Concretely, if the graph contains edges from i to a set of existing vertices, LINE estimates the vector for i by maximizing the same edge-preservation objective used in training, but with respect to i alone. This is typically done with stochastic gradient updates on i's embedding while freezing the rest of the embedding matrix. If LINE is using its first-order proximity objective, the new vertex is fit to preserve direct neighborhood similarity; if it is using the second-order proximity objective, the new vertex is fit to predict the context distribution of its neighbors. In both cases, the key idea is that the new vertex is inserted by optimizing only its own low-dimensional representation against fixed neighbor embeddings, rather than retraining the whole model. This makes incremental embedding efficient for a vertex whose incident edges to existing vertices are known.",
+  "self_reported_accuracy": 0.86,
+  "confidence_reasoning": "The answer reflects the standard incremental inference procedure for LINE, but the exact optimization details can vary by implementation and objective variant.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "vertex representation",
+    "vertex",
+    "embedding"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "vertex representation",
+    "vertex",
+    "embedding",
+    "Optimization Problem",
+    "objective function",
+    "stochastic gradient descent",
+    "first-order proximity",
+    "second-order proximity",
+    "low-dimensional space"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "Optimization Problem",
+      "target_alias": "OP",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "vertex representation",
+      "target_alias": "UI",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "vertex representation",
+      "source_alias": "UI",
+      "target": "low-dimensional space",
+      "target_alias": "LDS",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "stochastic gradient descent",
+      "target_alias": "CSGD",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "objective function",
+      "target_alias": "3",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "first-order proximity",
+      "target_alias": null,
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "second-order proximity",
+      "target_alias": null,
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "vertex representation",
+      "target_alias": "UI",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED",
+      "weight": 0.87
+    }
+  ]
+}

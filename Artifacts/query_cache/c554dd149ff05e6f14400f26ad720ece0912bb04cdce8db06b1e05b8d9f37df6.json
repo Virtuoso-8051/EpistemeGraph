@@ -1,0 +1,87 @@
+{
+  "answer": "In LINE, negative sampling is used to replace the expensive normalization over all possible nodes with a much cheaper binary classification objective. For each observed edge (u, v), the model maximizes the score of the positive pair and simultaneously samples several \u201cnegative\u201d nodes v_n from a noise distribution Pn(v) proportional to out-degree d_v^(3/4). The positive pair is trained to have high similarity, while sampled negative pairs are trained to have low similarity. This avoids the trivial solution because the model cannot simply assign uniformly high scores to every node pair: doing so would also make the negative samples score highly, which is penalized by the objective. The 3/4-power noise distribution is a heuristic that oversamples frequent nodes less aggressively than pure degree-proportional sampling, giving a better mix of frequent and infrequent negatives and improving training effectiveness. Computationally, the method reduces cost because it avoids summing over all vertices for each update; instead, it only evaluates a small fixed number of sampled negatives per positive edge, so each stochastic update is approximately constant-time with respect to the number of nodes.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "This is a standard description of LINE\u2019s negative sampling objective and its computational motivation, with only minor uncertainty about the exact heuristic interpretation of the 3/4 exponent.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "negative sampling",
+    "out-degree"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "negative sampling",
+    "out-degree",
+    "noise distribution",
+    "trivial solution",
+    "computational cost",
+    "binary classification objective",
+    "positive pair",
+    "negative pair",
+    "stochastic update"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "negative sampling",
+      "target": "trivial solution",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "negative sampling",
+      "target": "computational cost",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "noise distribution",
+      "target": "out-degree",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "noise distribution",
+      "target": "3/4 power",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "negative sampling",
+      "target": "binary classification objective",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.94
+    },
+    {
+      "source": "positive pair",
+      "target": "high similarity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "negative pair",
+      "target": "low similarity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "stochastic update",
+      "target": "all vertices",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    }
+  ]
+}

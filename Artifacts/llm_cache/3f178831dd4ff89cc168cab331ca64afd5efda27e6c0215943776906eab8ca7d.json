@@ -1,0 +1,202 @@
+{
+  "entities": [
+    {
+      "name": "Wikipedia",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "DBpedia",
+      "alias": "",
+      "type": "ORGANIZATION"
+    },
+    {
+      "name": "Arts",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "History",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Human",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Mathematics",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Nature",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Technology",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Sports",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "one-vs-rest logistic regression classifier",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LibLinear package",
+      "alias": "LibLinear",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Micro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINESGDs",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(1st)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(2nd)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(1st+2nd)",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "DBpedia",
+      "object_alias": "",
+      "object_type": "ORGANIZATION",
+      "evidence_quote": "We download the abstracts of Wikipedia pages from http://downloads.dbpedia.org/ 3.9/en/long_abstracts_en.nq.bz2 and the categories of these pages from http://downloads.dbpedia.org/3.9/en/ article_categories_en.nq.bz2.",
+      "extraction_confidence": 0.91
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Arts",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We choose 7 diverse categories for classification including\u201cArts,\u201d\u201cHistory,\u201d\u201cHuman,\u201d \u201cMathematics,\u201d \u201cNature,\u201d \u201cTechnology,\u201d and \u201cSports.\u201d",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "History",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We choose 7 diverse categories for classification including\u201cArts,\u201d\u201cHistory,\u201d\u201cHuman,\u201d \u201cMathematics,\u201d \u201cNature,\u201d \u201cTechnology,\u201d and \u201cSports.\u201d",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Human",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We choose 7 diverse categories for classification including\u201cArts,\u201d\u201cHistory,\u201d\u201cHuman,\u201d \u201cMathematics,\u201d \u201cNature,\u201d \u201cTechnology,\u201d and \u201cSports.\u201d",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Mathematics",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We choose 7 diverse categories for classification including\u201cArts,\u201d\u201cHistory,\u201d\u201cHuman,\u201d \u201cMathematics,\u201d \u201cNature,\u201d \u201cTechnology,\u201d and \u201cSports.\u201d",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Nature",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We choose 7 diverse categories for classification including\u201cArts,\u201d\u201cHistory,\u201d\u201cHuman,\u201d \u201cMathematics,\u201d \u201cNature,\u201d \u201cTechnology,\u201d and \u201cSports.\u201d",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Technology",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We choose 7 diverse categories for classification including\u201cArts,\u201d\u201cHistory,\u201d\u201cHuman,\u201d \u201cMathematics,\u201d \u201cNature,\u201d \u201cTechnology,\u201d and \u201cSports.\u201d",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "Wikipedia",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Sports",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We choose 7 diverse categories for classification including\u201cArts,\u201d\u201cHistory,\u201d\u201cHuman,\u201d \u201cMathematics,\u201d \u201cNature,\u201d \u201cTechnology,\u201d and \u201cSports.\u201d",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

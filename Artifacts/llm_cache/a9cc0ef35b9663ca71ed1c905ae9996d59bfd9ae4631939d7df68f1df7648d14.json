@@ -1,0 +1,142 @@
+{
+  "entities": [
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "vertices",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity based methods",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "neighbors of neighbors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "EnglishWikipedia pages",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "word cooccurrence network",
+      "alias": "",
+      "type": "DATASET"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "HAS_TIME_COMPLEXITY",
+      "is_functional": true,
+      "object": "O(dK|E|)",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "DEPENDS_ON",
+      "is_functional": false,
+      "object": "edges",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "DOES_NOT_DEPEND_ON",
+      "is_functional": false,
+      "object": "vertices",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "edge sampling treatment",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "stochastic gradient descent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The edge sampling treatment improves the effectiveness of the stochastic gradient descent without compromising the efficiency.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "second-order proximity based methods",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "RELY_ON",
+      "is_functional": false,
+      "object": "neighbors of neighbors",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An intuitive solution to this is expanding the neighbors of those vertices by adding higher order neighbors, such as neighbors of neighbors.",
+      "extraction_confidence": 0.72
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "CONSIDERS",
+      "is_functional": false,
+      "object": "second-order neighbors",
+      "object_alias": "neighbors of neighbors",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this paper, we only consider adding second-order neighbors, i.e., neighbors of neighbors, to each vertex.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "EnglishWikipedia pages",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We constructed a word cooccurrence network from the entire set of EnglishWikipedia pages.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "word cooccurrence network",
+      "subject_alias": "",
+      "subject_type": "DATASET",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "EnglishWikipedia pages",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "We constructed a word cooccurrence network from the entire set of EnglishWikipedia pages.",
+      "extraction_confidence": 0.98
+    }
+  ]
+}

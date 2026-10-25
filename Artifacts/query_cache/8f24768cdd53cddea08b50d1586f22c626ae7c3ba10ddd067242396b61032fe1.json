@@ -1,0 +1,66 @@
+{
+  "answer": "LINE minimizes the Kullback\u2013Leibler divergence between the empirical proximity distribution and the distribution induced by the low-dimensional embedding probabilities. In the LINE formulation, both the first-order objective (O1) and the second-order objective (O2) are cast as minimizing KL divergence: O1 matches the empirical distribution over observed edges to the model distribution over node pairs, while O2 matches the empirical distribution over context pairs to the model distribution defined by the embedding. So the distance function is KL divergence, not Euclidean distance or cosine distance.",
+  "self_reported_accuracy": 0.98,
+  "confidence_reasoning": "This is a standard, well-established description of LINE\u2019s objective functions and the KL-divergence formulation is directly documented in the original method.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order proximity",
+    "second-order proximity"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "first-order proximity",
+    "second-order proximity",
+    "Kullback\u2013Leibler divergence",
+    "empirical distribution",
+    "low-dimensional embedding",
+    "objective function"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "Kullback\u2013Leibler divergence",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "1ST",
+      "target": "objective function",
+      "target_alias": "3",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "target": "Kullback\u2013Leibler divergence",
+      "target_alias": null,
+      "type": "MINIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": null,
+      "target": "Kullback\u2013Leibler divergence",
+      "target_alias": null,
+      "type": "MINIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "empirical distribution",
+      "source_alias": "ED",
+      "target": "low-dimensional embedding",
+      "target_alias": "LDE",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    }
+  ]
+}

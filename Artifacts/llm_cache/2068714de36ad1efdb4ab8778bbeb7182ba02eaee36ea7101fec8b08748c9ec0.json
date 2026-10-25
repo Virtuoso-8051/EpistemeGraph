@@ -1,0 +1,211 @@
+{
+  "entities": [
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "classification tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multi-label classifications tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Flickr",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "window size",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "walk length",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent dimensions",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of walks started per vertex",
+      "alias": "\u03b3",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "training data available",
+      "alias": "TR",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network classification performance",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "dimensionality",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "training rate",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of training examples",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of random walks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "model",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "sparsely labeled environment",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PERFORMS_WELL_IN",
+      "is_functional": false,
+      "object": "sparsely labeled environment",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "DeepW alk, can scale to large graphs, and performs exceedingly well in such a sparsely labeled environment.",
+      "extraction_confidence": 0.86
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Flickr",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "In order to evaluate how changes to the parameterization of DeepW alkeffect its performance on classification tasks, we conducted experiments on two multi-label classifications tasks (Flickr, and BlogCatalog).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "BlogCatalog",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "In order to evaluate how changes to the parameterization of DeepW alkeffect its performance on classification tasks, we conducted experiments on two multi-label classifications tasks (Flickr, and BlogCatalog).",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "window size",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FIXED_TO",
+      "is_functional": true,
+      "object": "sensible values",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For this test, we have fixed the window size and the walk length to sensible values (w = 10,t = 40) which should emphasize local structure.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "walk length",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "FIXED_TO",
+      "is_functional": true,
+      "object": "sensible values",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "For this test, we have fixed the window size and the walk length to sensible values (w = 10,t = 40) which should emphasize local structure.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "latent dimensions",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "network classification performance",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We then vary the number of latent dimensions ( d), the number of walks started per vertex (\u03b3), and the amount of training data available (TR) to determine their impact on the network classification performance.",
+      "extraction_confidence": 0.78
+    },
+    {
+      "subject": "number of walks started per vertex",
+      "subject_alias": "\u03b3",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "network classification performance",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We then vary the number of latent dimensions ( d), the number of walks started per vertex (\u03b3), and the amount of training data available (TR) to determine their impact on the network classification performance.",
+      "extraction_confidence": 0.78
+    },
+    {
+      "subject": "training data available",
+      "subject_alias": "TR",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "network classification performance",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We then vary the number of latent dimensions ( d), the number of walks started per vertex (\u03b3), and the amount of training data available (TR) to determine their impact on the network classification performance.",
+      "extraction_confidence": 0.78
+    },
+    {
+      "subject": "performance",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEPENDS_ON",
+      "is_functional": false,
+      "object": "number of training examples",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The performance is quite consistent between both Flickr and BlogCatalog and show that the optimal dimensionality for a model is dependent on the number of training examples.",
+      "extraction_confidence": 0.82
+    },
+    {
+      "subject": "performance",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEPENDS_ON",
+      "is_functional": false,
+      "object": "number of random walks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These experiments show that our method can make useful models of various sizes.",
+      "extraction_confidence": 0.55
+    }
+  ]
+}

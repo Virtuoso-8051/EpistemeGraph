@@ -1,0 +1,73 @@
+{
+  "answer": "node2vec formulates its Skip-gram maximum likelihood objective by making two standard assumptions about the context of a node in a random walk. First, it assumes conditional independence of the context nodes given the source node: the probability of observing the full neighborhood/context around a node is factorized into a product of probabilities for each context node independently. Second, it assumes symmetry in feature space, meaning the learned source and context embeddings are treated as interchangeable in the sense that the model uses a shared low-dimensional representation space and scores node-context co-occurrence with a symmetric dot-product-style similarity. In the node2vec paper\u2019s formulation, these assumptions let the objective be written as a sum over log-probabilities of context nodes conditioned on a center node, which is then optimized with the Skip-gram objective. In short: (1) context nodes are conditionally independent given the center node, and (2) node and context representations live in a symmetric shared embedding space used by the Skip-gram model.",
+  "self_reported_accuracy": 0.91,
+  "confidence_reasoning": "The answer reflects the standard node2vec/Skip-gram formulation and the two assumptions commonly stated in that derivation, though exact wording can vary across presentations.",
+  "query_entities": [
+    "node2vec",
+    "conditional independence",
+    "symmetry in feature space",
+    "Skip-gram maximum likelihood objective"
+  ],
+  "response_entities": [
+    "node2vec",
+    "conditional independence",
+    "symmetry in feature space",
+    "Skip-gram maximum likelihood objective",
+    "Skip-gram model",
+    "low-dimensional space",
+    "source embedding",
+    "context embedding",
+    "dot-product similarity"
+  ],
+  "response_triples": [
+    {
+      "source": "node2vec",
+      "target": "conditional independence",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "node2vec",
+      "target": "symmetry in feature space",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "node2vec",
+      "target": "Skip-gram maximum likelihood objective",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "Skip-gram maximum likelihood objective",
+      "target": "Skip-gram model",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "Skip-gram model",
+      "target": "low-dimensional space",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "source embedding",
+      "target": "context embedding",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.72
+    },
+    {
+      "source": "dot-product similarity",
+      "target": "symmetry in feature space",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.7
+    }
+  ]
+}

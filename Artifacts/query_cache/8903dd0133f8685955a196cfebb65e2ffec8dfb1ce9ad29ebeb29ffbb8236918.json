@@ -1,0 +1,81 @@
+{
+  "answer": "In node2vec, the 2nd-order random walk transition bias \\u03b1_pq(t, x) depends on the graph distance between the previous node t and the candidate next node x, relative to the current node v. The walk chooses the next step from neighbors x of v with probability proportional to \\u03b1_pq(t, x) \\u00d7 w_vx, where w_vx is the edge weight.\n\nThe bias is defined by three cases:\n- If x = t, then \\u03b1_pq(t, x) = 1/p. This is the return move, so smaller p makes immediately going back to t more likely, while larger p suppresses backtracking.\n- If x is adjacent to t, then \\u03b1_pq(t, x) = 1. This is the neutral case.\n- If x is not adjacent to t, then \\u03b1_pq(t, x) = 1/q. This is the outward move, so smaller q makes exploration farther from t more likely, while larger q discourages moving outward.\n\nInterpretation:\n- p controls the likelihood of returning to the previous node, so it tunes backtracking versus forward progress.\n- q controls the breadth-first versus depth-first tendency of the walk: q > 1 biases toward staying close to the current neighborhood, while q < 1 biases toward exploring nodes farther away from the previous node.\n\nSo, in short: p governs return behavior, and q governs exploration bias between local neighborhood sampling and outward exploration.",
+  "self_reported_accuracy": 0.98,
+  "confidence_reasoning": "This is a direct restatement of the node2vec transition rule and its standard interpretation, which are well-established and unambiguous.",
+  "query_entities": [
+    "NODE2VEC",
+    "return parameter",
+    "in-out parameter",
+    "2nd-order random walk",
+    "transition probability"
+  ],
+  "response_entities": [
+    "NODE2VEC",
+    "return parameter",
+    "in-out parameter",
+    "2nd-order random walk",
+    "transition probability",
+    "biased random walk procedure",
+    "transition probability",
+    "random walk",
+    "node2vec parameter"
+  ],
+  "response_triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk procedure",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "2nd-order random walk",
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "return parameter",
+      "target": "transition probability",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "in-out parameter",
+      "target": "transition probability",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "return parameter",
+      "target": "backtracking",
+      "type": "CAUSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "in-out parameter",
+      "target": "breadth-first search",
+      "type": "CAUSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "in-out parameter",
+      "target": "depth-first search",
+      "type": "CAUSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "transition probability",
+      "target": "random walk",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.92
+    }
+  ]
+}

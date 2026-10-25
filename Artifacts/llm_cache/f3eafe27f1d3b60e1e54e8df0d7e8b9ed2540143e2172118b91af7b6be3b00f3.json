@@ -1,0 +1,196 @@
+{
+  "entities": [
+    {
+      "name": "BFS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DFS",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "structural equivalence",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "homophily",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embeddings",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local neighborhoods",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "network roles",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "bridges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "hubs",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "1-hop nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "source node",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "communities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "flexible neighborhood sampling strategy",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "BFS",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "LEADS_TO",
+      "is_functional": false,
+      "object": "embeddings",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In particular, the neighborhoods sampled by BFS lead to embeddings that correspond closely to structural equivalence.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "embeddings",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CORRESPONDS_TO",
+      "is_functional": false,
+      "object": "structural equivalence",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In particular, the neighborhoods sampled by BFS lead to embeddings that correspond closely to structural equivalence.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "BFS",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "structural equivalence",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "By restricting search to nearby nodes, BFS achieves this characterization and obtains a microscopic view of the neighborhood of every node.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "BFS",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "variance",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This is also important as it reduces the variance in characterizing the distribution of 1-hop nodes with respect the source node.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "DFS",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EXPLORES",
+      "is_functional": false,
+      "object": "larger parts of the network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The opposite is true for DFS which can explore larger parts of the network as it can move further away from the source node u (with sample sizek being fixed).",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "DFS",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REFLECTS",
+      "is_functional": false,
+      "object": "macro-view of the neighborhood",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In DFS, the sampled nodes more accurately reflect a macro-view of the neighborhood which is essential in inferring communities based on homophily.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "macro-view of the neighborhood",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_ESSENTIAL_FOR",
+      "is_functional": false,
+      "object": "communities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In DFS, the sampled nodes more accurately reflect a macro-view of the neighborhood which is essential in inferring communities based on homophily.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "flexible neighborhood sampling strategy",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "3.2 node2vec Building on the above observations, we design a flexible neighborhood sampling strategy which allows us to smoothly interpolate between BFS and DFS.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "flexible neighborhood sampling strategy",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "INTERPOLATES_BETWEEN",
+      "is_functional": false,
+      "object": "BFS",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "3.2 node2vec Building on the above observations, we design a flexible neighborhood sampling strategy which allows us to smoothly interpolate between BFS and DFS.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "flexible neighborhood sampling strategy",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "INTERPOLATES_BETWEEN",
+      "is_functional": false,
+      "object": "DFS",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "3.2 node2vec Building on the above observations, we design a flexible neighborhood sampling strategy which allows us to smoothly interpolate between BFS and DFS.",
+      "extraction_confidence": 0.96
+    }
+  ]
+}

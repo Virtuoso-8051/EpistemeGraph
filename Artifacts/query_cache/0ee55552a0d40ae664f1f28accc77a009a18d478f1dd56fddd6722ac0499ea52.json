@@ -1,0 +1,87 @@
+{
+  "answer": "In LINE, the optimization objective is built over edges of an information network, and for a weighted graph each edge can represent many repeated interactions through its weight. If classical stochastic gradient descent samples edges uniformly, then a very large-weight edge is treated no differently from a small-weight edge in terms of sampling frequency. To compensate, the gradient contribution of a sampled weighted edge must be scaled by its weight, so rare but very heavy edges can produce very large gradient updates. This can make the stochastic gradient have high variance and can lead to gradient explosion or unstable training, especially when edge weights are highly skewed.\n\nThe edge-sampling algorithm addresses this by converting the weighted-edge optimization into an equivalent unweighted-edge sampling problem. Instead of using the weight as a multiplier inside the gradient, it samples edges with probability proportional to their weights and then applies the same update rule as for an unweighted edge. In effect, the expected update matches the weighted objective, but individual updates are bounded by the unweighted formulation, which reduces variance and avoids the large per-step gradients that classical stochastic gradient descent can produce on heavily weighted edges. This is why edge-sampling is used in LINE as a more stable and efficient alternative to classical stochastic gradient descent for weighted information networks.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "The explanation matches the standard LINE edge-sampling derivation and its motivation, though exact wording about 'gradient explosion' can vary across presentations of the method.",
+  "query_entities": [
+    "classical stochastic gradient descent",
+    "weighted information network",
+    "LINE",
+    "gradient explosion",
+    "edge-sampling algorithm"
+  ],
+  "response_entities": [
+    "classical stochastic gradient descent",
+    "weighted graph",
+    "information network",
+    "LINE",
+    "gradient",
+    "edge-sampling algorithm",
+    "unweighted edge",
+    "edge-sampling treatment"
+  ],
+  "response_triples": [
+    {
+      "source": "LINE",
+      "source_alias": "1ST",
+      "target": "weighted graph",
+      "target_alias": "WG",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "classical stochastic gradient descent",
+      "source_alias": "CSGD",
+      "target": "weighted graph",
+      "target_alias": "WG",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "classical stochastic gradient descent",
+      "source_alias": "CSGD",
+      "target": "gradient",
+      "target_alias": null,
+      "type": "CAUSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.82
+    },
+    {
+      "source": "edge-sampling algorithm",
+      "source_alias": "ESA",
+      "target": "unweighted edge",
+      "target_alias": "UE",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "edge-sampling algorithm",
+      "source_alias": "ESA",
+      "target": "classical stochastic gradient descent",
+      "target_alias": "CSGD",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "edge-sampling algorithm",
+      "source_alias": "ESA",
+      "target": "gradient",
+      "target_alias": null,
+      "type": "REDUCES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "edge-sampling treatment",
+      "source_alias": "EST",
+      "target": "weighted graph",
+      "target_alias": "WG",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    }
+  ]
+}

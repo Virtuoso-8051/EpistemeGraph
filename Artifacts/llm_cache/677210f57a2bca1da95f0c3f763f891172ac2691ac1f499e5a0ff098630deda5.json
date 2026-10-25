@@ -1,0 +1,248 @@
+{
+  "entities": [
+    {
+      "name": "feature representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "optimization problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "computational efficiency",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "predictive accuracy",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "downstream prediction task",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "supervised procedure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "training time complexity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "number of parameters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "unsupervised feature learning in networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "task-independent features",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "task-specific approaches",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Principal Component Analysis",
+      "alias": "PCA",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Multi-Dimensional Scaling",
+      "alias": "MDS",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "linear and non-linear dimensionality reduction techniques",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "eigendecomposition",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "data matrix",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "latent representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "local neighborhoods of nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "SGD",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "backpropogation",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "single hidden-layer feedforward neural networks",
+      "alias": "",
+      "type": "MODEL"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "feature representations",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "LEARNED_BY",
+      "is_functional": false,
+      "object": "optimization problem",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An alternative approach is to learn feature representations by solving an optimization problem [4].",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "INVOLVES",
+      "is_functional": false,
+      "object": "computational efficiency",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The challenge in feature learning is defining an objective function, which involves a trade-off in balancing computational efficiency and predictive accuracy.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "INVOLVES",
+      "is_functional": false,
+      "object": "predictive accuracy",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "The challenge in feature learning is defining an objective function, which involves a trade-off in balancing computational efficiency and predictive accuracy.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "supervised procedure",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "predictive accuracy",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "While this supervised procedure results in good accuracy, it comes at the cost of high training time complexity due to a blowup in the number of parameters that need to be estimated.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "supervised procedure",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "training time complexity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "While this supervised procedure results in good accuracy, it comes at the cost of high training time complexity due to a blowup in the number of parameters that need to be estimated.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "independent of the downstream prediction task",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "At the other extreme, the objective function can be defined to be independent of the downstream prediction task and the representations can be learned in a purely unsupervised way.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "unsupervised feature learning in networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "At the other extreme, the objective function can be defined to be independent of the downstream prediction task and the representations can be learned in a purely unsupervised way.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "Principal Component Analysis",
+      "subject_alias": "PCA",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "eigendecomposition",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Consequently, these approaches invariably involve eigendecomposition of the appropriate data matrix which is expensive for large real-world networks.",
+      "extraction_confidence": 0.94
+    },
+    {
+      "subject": "Multi-Dimensional Scaling",
+      "subject_alias": "MDS",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "eigendecomposition",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Consequently, these approaches invariably involve eigendecomposition of the appropriate data matrix which is expensive for large real-world networks.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "objective",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "local neighborhoods of nodes",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Alternatively, we can design an objective that seeks to preserve local neighborhoods of nodes.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "objective",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "OPTIMIZED_BY",
+      "is_functional": false,
+      "object": "stochastic gradient descent",
+      "object_alias": "SGD",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The objective can be efficiently optimized using stochastic gradient descent (SGD) akin to backpropogation on just single hidden-layer feedforward neural networks.",
+      "extraction_confidence": 0.97
+    }
+  ]
+}

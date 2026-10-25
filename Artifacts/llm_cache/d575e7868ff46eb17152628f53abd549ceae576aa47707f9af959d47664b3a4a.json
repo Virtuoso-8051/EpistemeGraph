@@ -1,0 +1,291 @@
+{
+  "entities": [
+    {
+      "name": "sampling budget",
+      "alias": "K",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "optimization phase",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "SGD",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "hierarchical sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "softmax probabilities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "hierarchical softmax",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "negative sampling",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Algorithm Dataset BlogCatalog PPI Wikipedia Spectral Clustering 0.0405 0.0681 0.0395 DeepWalk 0.2110 0.1768 0.1274 LINE 0.0784 0.1447 0.1164 node2vec 0.2581 0.1791 0.1552 node2vec settings",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "BlogCatalog",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "PPI",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Wikipedia",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Spectral Clustering",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Macro-F1",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "multilabel classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Homo sapiens",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word cooccurrence networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "context neighborhood nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "epoch",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "p",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "q",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "d",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "r",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "l",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "k",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "p-value",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "10-fold cross-validation",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "grid search",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "multi-label classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "label",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "SGD",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In the optimization phase, all these benchmarks optimize using SGD with two key differences that we correct for.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "hierarchical sampling",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "First, DeepWalk uses hierarchical sampling to approximate the softmax probabilities with an objective similar to the one use by node2vec.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "hierarchical softmax",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "APPROXIMATES",
+      "is_functional": false,
+      "object": "softmax probabilities",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "First, DeepWalk uses hierarchical sampling to approximate the softmax probabilities with an objective similar to the one use by node2vec.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "hierarchical softmax",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "INEFFICIENT_WITH",
+      "is_functional": false,
+      "object": "negative sampling",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "However, hierarchical softmax is inefficient when compared with negative sampling [22].",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "negative sampling",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Hence, keeping everything else the same, we switch to negative sampling in DeepWalk which is also the de facto approximation in node2vec and LINE.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "negative sampling",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Hence, keeping everything else the same, we switch to negative sampling in DeepWalk which is also the de facto approximation in node2vec and LINE.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "negative sampling",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Hence, keeping everything else the same, we switch to negative sampling in DeepWalk which is also the de facto approximation in node2vec and LINE.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "BlogCatalog",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "Table 2: Macro-F1 scores for multilabel classification on BlogCatalog, PPI (Homo sapiens) and Wikipedia word cooccurrence networks with 50% of the nodes labeled for training.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Macro-F1",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Table 2: Macro-F1 scores for multilabel classification on BlogCatalog, PPI (Homo sapiens) and Wikipedia word cooccurrence networks with 50% of the nodes labeled for training.",
+      "extraction_confidence": 0.92
+    },
+    {
+      "subject": "10-fold cross-validation",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "grid search",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The best in-out and return hyperparameters were learned using 10-fold cross-validation on 10% labeled data with a grid search overp,q\u2208{ 0.25, 0.50, 1, 2, 4}.",
+      "extraction_confidence": 0.9
+    }
+  ]
+}

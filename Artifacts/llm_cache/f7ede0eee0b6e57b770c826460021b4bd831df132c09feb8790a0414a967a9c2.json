@@ -1,0 +1,186 @@
+{
+  "entities": [
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "embedded space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "global structure of the network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "objective function",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "stochastic gradient descent",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "real world information networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "word co-occurrence network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "gradients",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edge-sampling method",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "inference",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "MODEL"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "COMPLEMENTS",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We expect that the consideration of the secondorder proximity effectively complements the sparsity of the first-order proximity and better preserves the global structure of the network.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "global structure of the network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We expect that the consideration of the secondorder proximity effectively complements the sparsity of the first-order proximity and better preserves the global structure of the network.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "first-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this paper, we will present carefully designed objectives that preserve the first-order and the second-order proximities.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "objective function",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "second-order proximity",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this paper, we will present carefully designed objectives that preserve the first-order and the second-order proximities.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "stochastic gradient descent",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "objective function",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "One approach that attracts attention in recent years is using the stochastic gradient descent for the optimization.",
+      "extraction_confidence": 0.88
+    },
+    {
+      "subject": "stochastic gradient descent",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": true,
+      "object": "ALGORITHM",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "One approach that attracts attention in recent years is using the stochastic gradient descent for the optimization.",
+      "extraction_confidence": 0.55
+    },
+    {
+      "subject": "edge-sampling method",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "inference",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To address this, we propose a novel edge-sampling method, which improves both the effectiveness and efficiency of the inference.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "edge-sampling method",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "gradients",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "With this sampling process, the objective function remains the same and the weights of the edges no longer affect the gradients.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "WORKS_WELL_FOR",
+      "is_functional": false,
+      "object": "real world information networks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The LINE is very general, which works well for directed or undirected, weighted or unweighted graphs.",
+      "extraction_confidence": 0.84
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "WORKS_WELL_FOR",
+      "is_functional": false,
+      "object": "word co-occurrence network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Consider a word co-occurrence network, in which the weights (co-occurrences) of word pairs may range from one to hundreds of thousands.",
+      "extraction_confidence": 0.62
+    }
+  ]
+}

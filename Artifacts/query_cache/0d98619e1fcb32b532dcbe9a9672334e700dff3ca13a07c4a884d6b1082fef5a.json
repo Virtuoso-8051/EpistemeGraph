@@ -1,0 +1,104 @@
+{
+  "answer": "LINE defines second-order proximity by treating each vertex as having a context distribution over its neighbors. For a vertex u, the model learns a low-dimensional representation that predicts the observed context vertices v adjacent to u, so the conditional probability of seeing v given u is modeled from u's embedding. In the original LINE formulation, this is implemented with a softmax over context vertices, where the score depends on the embedding of u and a separate embedding for the context representation of v. The training objective then maximizes the likelihood of observed vertex-context pairs, so vertices with similar neighborhood distributions are placed close in the learned space.\n\nSecond-order proximity applies to both directed and undirected graphs because it is defined through vertex-context co-occurrence rather than through edge direction itself. In a directed graph, the context distribution can be formed from outgoing or incoming neighbors depending on how the graph is modeled, so the method naturally captures asymmetric neighborhood roles. In an undirected graph, each edge simply contributes a symmetric neighbor-context relation, so the same objective still applies without modification. In both cases, the key idea is to preserve similarity between vertices that have similar context distributions, regardless of whether the underlying graph has directed edges or not.",
+  "self_reported_accuracy": 0.93,
+  "confidence_reasoning": "This is a standard description of LINE's second-order proximity, and I am highly confident in the core mechanism, though exact notation can vary across presentations.",
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "second-order proximity",
+    "vertex context distribution",
+    "directed graph",
+    "undirected graph"
+  ],
+  "response_entities": [
+    "Large-scale Information Network Embedding",
+    "second-order proximity",
+    "vertex context distribution",
+    "directed graph",
+    "undirected graph",
+    "vertex",
+    "context vertex",
+    "low-dimensional representation",
+    "softmax",
+    "embedding",
+    "conditional probability",
+    "likelihood",
+    "neighborhood distribution",
+    "outgoing neighbor",
+    "incoming neighbor",
+    "vertex-context pair"
+  ],
+  "response_triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "target": "second-order proximity",
+      "target_alias": "SON",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "SON",
+      "target": "vertex context distribution",
+      "target_alias": null,
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "vertex",
+      "source_alias": null,
+      "target": "low-dimensional representation",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "low-dimensional representation",
+      "source_alias": null,
+      "target": "context vertex",
+      "target_alias": null,
+      "type": "PREDICTS",
+      "claim_type": "ASSERTED",
+      "weight": 0.86
+    },
+    {
+      "source": "softmax",
+      "source_alias": null,
+      "target": "conditional probability",
+      "target_alias": null,
+      "type": "ENABLES",
+      "claim_type": "ASSERTED",
+      "weight": 0.88
+    },
+    {
+      "source": "training objective",
+      "source_alias": null,
+      "target": "likelihood",
+      "target_alias": null,
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "directed graph",
+      "source_alias": "DG",
+      "target": "outgoing neighbor",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.84
+    },
+    {
+      "source": "undirected graph",
+      "source_alias": "UG",
+      "target": "symmetric neighbor-context relation",
+      "target_alias": null,
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.83
+    }
+  ]
+}

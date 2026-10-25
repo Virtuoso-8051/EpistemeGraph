@@ -1,0 +1,123 @@
+{
+  "answer": "DeepWalk, LINE, and node2vec do not use 10-layer message passing in the sense of a deep graph neural network, so they do not \u201cprevent over-smoothing\u201d by architectural tricks such as residual connections, normalization, or skip connections. Instead, they avoid the over-smoothing problem largely by not repeatedly aggregating neighbor features through many stacked layers at all.\n\nDeepWalk learns node embeddings from truncated random walks and a skip-gram objective, so each node representation is trained to predict nodes that co-occur within short random-walk contexts rather than being formed by iterative neighborhood averaging. LINE similarly learns embeddings by preserving first-order and second-order proximity with shallow objectives, again without multi-layer message passing. node2vec also uses biased random walks plus a skip-gram-style objective, and its return/in-out parameters let it interpolate between breadth-first-search-like and depth-first-search-like sampling, which helps capture either local homophily or more structural roles depending on the graph.\n\nFor heterophilic graphs, this means these methods can still produce useful embeddings because they are not forced to smooth features across many hops in a way that would wash out class distinctions. However, they do not explicitly solve heterophily in the modern GNN sense; they mainly sidestep over-smoothing by using shallow, walk-based representation learning rather than deep message passing. If you need a method that directly addresses heterophily under deep propagation, you would typically look at heterophily-aware GNNs rather than DeepWalk, LINE, or node2vec.",
+  "self_reported_accuracy": 0.91,
+  "confidence_reasoning": "The answer is high-confidence because it states the well-established training mechanisms of DeepWalk, LINE, and node2vec and carefully distinguishes them from deep message-passing GNNs, though the heterophily comparison is somewhat interpretive.",
+  "query_entities": [
+    "DEEPWALK",
+    "LINE-SGD",
+    "NODE2VEC",
+    "10-fold cross-validation",
+    "homophilic and structural equivalence"
+  ],
+  "response_entities": [
+    "DEEPWALK",
+    "LINE-SGD",
+    "NODE2VEC",
+    "random walk",
+    "truncated random walk",
+    "objective function",
+    "embedding",
+    "low-dimensional space",
+    "breadth-first search",
+    "depth-first search",
+    "heterophilic graph",
+    "message passing",
+    "over-smoothing",
+    "skip-gram objective",
+    "first-order proximity",
+    "second-order proximity",
+    "heterophily-aware graph neural network"
+  ],
+  "response_triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": null,
+      "target": "truncated random walk",
+      "target_alias": "TRW",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": null,
+      "target": "skip-gram objective",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "LINE-SGD",
+      "source_alias": "LINE-SGD",
+      "target": "first-order proximity",
+      "target_alias": null,
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "LINE-SGD",
+      "source_alias": "LINE-SGD",
+      "target": "second-order proximity",
+      "target_alias": null,
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED",
+      "weight": 0.96
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": null,
+      "target": "random walk",
+      "target_alias": "RW",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": null,
+      "target": "skip-gram objective",
+      "target_alias": null,
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.97
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": null,
+      "target": "breadth-first search",
+      "target_alias": null,
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": null,
+      "target": "depth-first search",
+      "target_alias": null,
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.93
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": null,
+      "target": "message passing",
+      "target_alias": null,
+      "type": "REFUTED",
+      "claim_type": "REFUTED",
+      "weight": 0.98
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "target": "over-smoothing",
+      "target_alias": null,
+      "type": "REDUCES",
+      "claim_type": "SPECULATIVE",
+      "weight": 0.62
+    }
+  ]
+}

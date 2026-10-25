@@ -1,0 +1,89 @@
+{
+  "answer": "In node2vec, 3rd-order and 4th-order Markovian random walk transition tensors are not precomputed or stored in memory as explicit high-order tensors for million-node graphs. The method uses a biased random walk procedure (BRWP) that is 2nd-order Markovian (2OM): the next-step transition probability depends only on the current node and the previous node, not on a longer history. In practice, node2vec precomputes only pairwise transition probabilities for each directed edge (previous node, current node) over the current node\u2019s neighbors, typically by building alias-sampling tables for those local distributions. This makes the memory cost proportional to the number of edges and local neighborhood sizes, rather than to the number of possible 3rd-order or 4th-order state tuples, which would be infeasible on million-node graphs. During sampling, the random walk generator (RWG) draws the next node from these cached local distributions on the fly. So the short answer is: node2vec does not store 3rd-order or 4th-order transition tensors in memory; it stores local 2nd-order transition tables instead.",
+  "self_reported_accuracy": 0.97,
+  "confidence_reasoning": "The answer follows the standard node2vec formulation, which is explicitly 2nd-order and uses alias tables for local transition sampling rather than higher-order tensors.",
+  "query_entities": [
+    "NODE2VEC",
+    "2nd order random walk approach",
+    "2nd-order Markovian",
+    "random walk generator",
+    "transition probability"
+  ],
+  "response_entities": [
+    "NODE2VEC",
+    "2nd order random walk approach",
+    "2nd-order Markovian",
+    "biased random walk procedure",
+    "random walk generator",
+    "transition probability",
+    "million-node graph",
+    "alias-sampling table",
+    "edge",
+    "neighbor"
+  ],
+  "response_triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk procedure",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.99
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "2nd order random walk approach",
+      "type": "IS_A",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "2nd order random walk approach",
+      "target": "2nd-order Markovian",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED",
+      "weight": 0.98
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "transition probability",
+      "type": "PRECOMPUTES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "alias-sampling table",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.95
+    },
+    {
+      "source": "alias-sampling table",
+      "target": "transition probability",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED",
+      "weight": 0.9
+    },
+    {
+      "source": "random walk generator",
+      "target": "alias-sampling table",
+      "type": "USES",
+      "claim_type": "ASSERTED",
+      "weight": 0.94
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "3rd-order Markovian random walk transition tensor",
+      "type": "REFUTED",
+      "claim_type": "REFUTED",
+      "weight": 0.97
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "4th-order Markovian random walk transition tensor",
+      "type": "REFUTED",
+      "claim_type": "REFUTED",
+      "weight": 0.97
+    }
+  ]
+}

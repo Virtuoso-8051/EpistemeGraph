@@ -1,0 +1,246 @@
+{
+  "entities": [
+    {
+      "name": "node2vec",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "biased random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "network roles",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "communities",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "search space",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "tunable parameters",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "prior work",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "full spectrum of equivalences observed in networks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "feature representations",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "binary operators",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "prediction tasks",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multi-label classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "link prediction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "state-of-the-art feature learning algorithms",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "real-world networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "social networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "information networks",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "networks from systems biology",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "multi-label classification",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "link prediction",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "labeled data",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "noisy or missing edges",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "large networks with millions of nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "biased random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We achieve this by developing a family of biased random walks, which efficiently explore diverse neighborhoods of a given node.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "biased random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We achieve this by developing a family of biased random walks, which efficiently explore diverse neighborhoods of a given node.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "prior work",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Consequently, our method generalizes prior work and can model the full spectrum of equivalences observed in networks.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "feature representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We also show how feature representations of individual nodes can be extended to pairs of nodes (i.e., edges).",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "binary operators",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "feature representations",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In order to generate feature representations of edges, we compose the learned feature representations of the individual nodes using simple binary operators.",
+      "extraction_confidence": 0.94
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "prediction tasks",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This compositionality lends node2vec to prediction tasks involving nodes as well as edges.",
+      "extraction_confidence": 0.93
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "state-of-the-art feature learning algorithms",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We contrast the performance of node2vec with state-of-the-art feature learning algorithms [24, 28].",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "multi-label classification",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Experiments demonstrate that node2vec outperforms state-of-the-art methods by up to 26.7% on multi-label classification and up to 12.6% on link prediction.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "link prediction",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Experiments demonstrate that node2vec outperforms state-of-the-art methods by up to 26.7% on multi-label classification and up to 12.6% on link prediction.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "node2vec",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "labeled data",
+      "object_alias": "",
+      "object_type": "DATASET",
+      "evidence_quote": "These parameters can also be learned directly using a tiny fraction of labeled data in a semisupervised fashion.",
+      "extraction_confidence": 0.88
+    }
+  ]
+}

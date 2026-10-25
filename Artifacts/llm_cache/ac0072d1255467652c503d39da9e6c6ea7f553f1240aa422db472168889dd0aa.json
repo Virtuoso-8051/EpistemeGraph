@@ -1,0 +1,206 @@
+{
+  "entities": [
+    {
+      "name": "LINE",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(1st+2nd)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(1st)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LINE(2nd)",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "graph factorization",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "DeepWalk",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "first-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "second-order proximity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "multi-label classification",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "social network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "language network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Flickr network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "Youtube Network",
+      "alias": "",
+      "type": "DATASET"
+    },
+    {
+      "name": "network sparsity",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "truncated random walks",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "depth-first search",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "LINE(1st+2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "graph factorization",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Again, LINE(1st+2nd) significantly outperforms all other methods.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE(1st)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "LINE(2nd)",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "LINE(1st) is slightly better than LINE(2nd), which is opposite to the results on the language network.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE(1st)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "graph factorization",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "LINE(1st) outperforms graph factorization, indicating a better capability of modeling the first-order proximity.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "LINE(2nd) outperforms DeepWalk, indicating a better capability of modeling the second-order proximity.",
+      "extraction_confidence": 0.98
+    },
+    {
+      "subject": "first-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "CONCEPT",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The reasons are two fold: (1) first-order proximity is still more important than secondorder proximity in social network, which indicates strong ties; (2) when the network is too sparse and the average number of neighbors of a node is too small, the second-order proximity may become inaccurate.",
+      "extraction_confidence": 0.62
+    },
+    {
+      "subject": "second-order proximity",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "CONCEPT",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The reasons are two fold: (1) first-order proximity is still more important than secondorder proximity in social network, which indicates strong ties; (2) when the network is too sparse and the average number of neighbors of a node is too small, the second-order proximity may become inaccurate.",
+      "extraction_confidence": 0.62
+    },
+    {
+      "subject": "LINE(2nd)",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "LINE(2nd) outperforms DeepWalk, indicating a better capability of modeling the second-order proximity.",
+      "extraction_confidence": 0.95
+    },
+    {
+      "subject": "LINE",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "DeepWalk",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "By combining the representations learned by the LINE with both the first- and second-order proximity, the performance of LINE outperforms DeepWalk with either 128 or 256 dimension, showing that the two proximities are complementary to each other and able to address the problem of network sparsity.",
+      "extraction_confidence": 0.96
+    },
+    {
+      "subject": "DeepWalk",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "truncated random walks",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "It is interesting to observe how DeepWalk tackles the network sparsity through truncated random walks, which enrich the neighbors or contexts of each vertex.",
+      "extraction_confidence": 0.97
+    },
+    {
+      "subject": "truncated random walks",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "depth-first search",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The random walk approach acts like a depth-first search.",
+      "extraction_confidence": 0.93
+    }
+  ]
+}
