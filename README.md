@@ -26,7 +26,7 @@ Large Language Models (LLMs) routinely generate fluent, authoritative responses 
 * **Phase 1 — Full-Corpus Multi-PDF Knowledge Graph Construction & Unsupervised Fidelity Audit (`kg_builder.py`):** Parses $100\%$ of sentence-aligned chunks across uploaded scientific PDFs concurrently (5-thread parallel execution with SHA-256 disk caching), enforces cryptographic-level verbatim/anchored quote verification (rejecting $38.3\%$ of noisy LLM extractions before database ingestion), resolves cross-document synonyms and plural/parenthetical acronyms, pushes the canonical graph to **Neo4j AuraDB Cloud**, and computes a deterministic **4-Pillar Stage I Graph Fidelity Score ($S_{\text{KG}} = 79.43\%$)**.
 * **Phase 2 — Single-Pass Polarity-Aware Query Interception (`llm_interceptor.py`):** Acts as an AI middleware gatekeeper that intercepts user queries, captures the LLM's natural language response alongside its **Self-Reported Accuracy Score ($P_{\text{LLM}}$)** and rationale, and extracts an ontology-normalized **Induced Response Graph ($G_{\text{resp}}$)** tagged with claim polarity (`ASSERTED`, `SPECULATIVE`, or `REFUTED`).
 * **Phase 3 — CASSE Non-Euclidean Tensor, Lexical-Contextual Chunk Grounding & Bayesian Provenance Audit (`graph_retriever.py` & `truth_evaluator.py`):** Retrieves the focused $k$-hop ground-truth subgraph $G_{\text{GT}}$ from Neo4j Cloud, aligns entities onto a unified canonical vertex space $V_U$, combines **Curvature-Aware Sheaf Spectral Energy (CASSE)** with **IDF-Weighted Lexical-Contextual Chunk Co-Occurrence ($\Phi_{\text{cooc}}, \rho_{\text{OOC}}$)**, and extracts an **8-dimensional mathematical feature vector $\mathbf{X} \in \mathbb{R}^8$**.
-* **Phase 4 — Autonomous 9-Model Deep Learning & MLOps Calibration Engine (`model_trainer.py`):** Evaluates $\mathbf{X}$ across a 9-architecture tournament—featuring a custom **PyTorch Feature-Level Self-Attention Residual Network (`PyTorch_AttentionResNet`)**, a **5-Model `StackingMetaEnsemble`**, and Platt-calibrated tree/kernel classifiers (`RandomForest`, `ExtraTrees`, `GradientBoosting`, `RBF_SVM`, `DeepMLP_NeuralNet`, `AdaBoost`, `LogisticRegression`). Using **L-BFGS-B Maximum-Likelihood Optimization**, it autonomously learns the 8 Boltzmann-Gibbs energy/prior multipliers and **Conformal Tri-State Decision Thresholds ($\tau_{\text{verify}}^*, \tau_{\text{abstain}}^*$)** without human intervention.
+* **Phase 4 — Autonomous 9-Model Deep Learning & MLOps Calibration Engine (`model_trainer.py`):** Evaluates $\mathbf{X}$ across a 9-architecture tournament—featuring a custom **PyTorch Feature-Level Self-Attention Residual Network (`PyTorch_AttentionResNet`)**, a **5-Model `StackingMetaEnsemble`**, and Platt-calibrated tree/kernel classifiers (`RandomForest`, `ExtraTrees`, `GradientBoosting`, `RBF_SVM`, `DeepMLP_NeuralNet`, `AdaBoost`, `LogisticRegression`). Using **L-BFGS-B Maximum-Likelihood Optimization**, it autonomously learns the 8 Boltzmann-Gibbs energy/prior multipliers and **Conformal Tri-State Decision Thresholds ($\tau_{\text{verify}}^{\ast}, \tau_{\text{abstain}}^{\ast}$)** without human intervention.
 
 ---
 
@@ -104,72 +104,132 @@ Large Language Models (LLMs) routinely generate fluent, authoritative responses 
 Before trusting a Knowledge Graph $G_{\text{GT}} = (V_{\text{GT}}, E_{\text{GT}})$ to audit an LLM, `kg_builder.py` evaluates its structural and semantic fidelity against the raw source chunks $\mathcal{C} = \{c_1, c_2, \dots, c_m\}$ without requiring human ground-truth annotations:
 
 1. **Provenance Grounding Precision ($\Phi_{\text{prov}}$):** For each raw extracted claim $e_i = (u_i, r_i, v_i)$ with supporting quote $q_i$ from chunk $c_i$, let $s_{\text{quote}}(q_i, c_i) \in [0, 1]$ denote the normalized longest-common-substring / sentence-window anchor similarity, $\text{ent}(e_i, q_i, c_i) \in [0, 1]$ denote the stem-level entity presence in the quote, and $\text{sem}(e_i, q_i) = \text{clip}\left(\frac{\cos(\mathbf{e}_{\text{triple}}, \mathbf{e}_{q_i}) - 0.15}{0.50}, 0, 1\right)$ denote the dense all-MiniLM-L6-v2 semantic alignment. Claims failing verification ($s_{\text{quote}} < 0.82$ and anchor $< 0.62$, or $\text{ent} < 0.85$) are rejected into `final_model/rejected_claims.json`. Over all $N_{\text{raw}}$ extracted claims:
-   $$\Phi_{\text{prov}} = \frac{1}{N_{\text{raw}}} \sum_{i=1}^{N_{\text{raw}}} \nu_i \cdot \left(0.40 \cdot \text{ent}(e_i, q_i, c_i) + 0.60 \cdot \text{sem}(e_i, q_i)\right)$$
+
+   $$
+   \Phi_{\text{prov}} = \frac{1}{N_{\text{raw}}} \sum_{i=1}^{N_{\text{raw}}} \nu_i \cdot \left(0.40 \cdot \text{ent}(e_i, q_i, c_i) + 0.60 \cdot \text{sem}(e_i, q_i)\right)
+   $$
+
    *where $\nu_i = 1.0$ for verbatim matches and $\nu_i = 0.88 \cdot s_{\text{anchor}}$ for paraphrase-anchored matches.*
 
-2. **Information-Theoretic Chunk Coverage Recall ($\Phi_{\text{cov}}$):** Measures how thoroughly the verified triplets $E(c_j)$ capture the sentence-level semantic information of each chunk $c_j$ across all $m$ document chunks (including zero-claim chunks), weighted by logarithmic chunk capacity $w_j = \ln(1 + \vert{}c_j\vert{})$:
-   $$\Phi_{\text{cov}} = \frac{\sum_{j=1}^{m} w_j \cdot \left(\frac{1}{\vert{}S(c_j)\vert{}} \sum_{s \in S(c_j)} \min\left(1, \frac{\max_{t \in E(c_j)} \cos(\mathbf{e}_s, \mathbf{e}_t)}{\tau_{\text{cov}}}\right)\right)}{\sum_{j=1}^{m} w_j}, \quad \tau_{\text{cov}} = 0.60$$
+2. **Information-Theoretic Chunk Coverage Recall ($\Phi_{\text{cov}}$):** Measures how thoroughly the verified triplets $E(c_j)$ capture the sentence-level semantic information of each chunk $c_j$ across all $m$ document chunks (including zero-claim chunks), weighted by logarithmic chunk capacity $w_j = \ln(1 + \vert c_j \vert)$:
+
+   $$
+   \Phi_{\text{cov}} = \frac{\sum_{j=1}^{m} w_j \cdot \left(\frac{1}{\vert S(c_j) \vert} \sum_{s \in S(c_j)} \min\left(1, \frac{\max_{t \in E(c_j)} \cos(\mathbf{e}_s, \mathbf{e}_t)}{\tau_{\text{cov}}}\right)\right)}{\sum_{j=1}^{m} w_j}, \quad \tau_{\text{cov}} = 0.60
+   $$
 
 3. **Entity-Resolved Topological Coherence ($\Phi_{\text{topo}}$):** After bidirectional acronym expansion (e.g., matching "LINE" $\leftrightarrow$ "Large-scale Information Network Embedding"), plural normalization, and cosine entity resolution ($\ge 0.85$), let $V_{\text{LCC}}$ be the Largest Connected Component and $V_{\text{clust}}$ be vertices in components of size $\ge 3$:
-   $$\Phi_{\text{topo}} = \left(0.5 + 0.25 \frac{\vert{}V_{\text{LCC}}\vert{}}{\vert{}V\vert{}} + 0.25 \frac{\vert{}V_{\text{clust}}\vert{}}{\vert{}V\vert{}}\right) \cdot \left(1 - \frac{\vert{}E_{\text{self-loop}}\vert{}}{\vert{}E_{\text{verified}}\vert{}}\right)$$
+
+   $$
+   \Phi_{\text{topo}} = \left(0.5 + 0.25 \frac{\vert V_{\text{LCC}} \vert}{\vert V \vert} + 0.25 \frac{\vert V_{\text{clust}} \vert}{\vert V \vert}\right) \cdot \left(1 - \frac{\vert E_{\text{self-loop}} \vert}{\vert E_{\text{verified}} \vert}\right)
+   $$
 
 4. **Intra-Document Functional Consistency ($\Phi_{\text{cons}}$):** Penalizes multi-target contradictions across functional predicates ($E_{\text{conflict}}$):
-   $$\Phi_{\text{cons}} = 1 - \frac{\vert{}E_{\text{conflict}}\vert{}}{\vert{}E_{\text{verified}}\vert{}}$$
+
+   $$
+   \Phi_{\text{cons}} = 1 - \frac{\vert E_{\text{conflict}} \vert}{\vert E_{\text{verified}} \vert}
+   $$
 
 The unified Stage I KG Fidelity Score ($S_{\text{KG}} \in [0, 1]$) fuses Precision and Recall via their harmonic mean, regularized by topology and consistency:
-$$S_{\text{KG}} = \left( \frac{2 \cdot \Phi_{\text{prov}} \cdot \Phi_{\text{cov}}}{\Phi_{\text{prov}} + \Phi_{\text{cov}} + \epsilon} \right)^{0.70} \cdot \left( \Phi_{\text{topo}} \cdot \Phi_{\text{cons}} \right)^{0.30}$$
+
+$$
+S_{\text{KG}} = \left( \frac{2 \cdot \Phi_{\text{prov}} \cdot \Phi_{\text{cov}}}{\Phi_{\text{prov}} + \Phi_{\text{cov}} + \epsilon} \right)^{0.70} \cdot \left( \Phi_{\text{topo}} \cdot \Phi_{\text{cons}} \right)^{0.30}
+$$
 
 ### 3.2 Phase 3: Lexical-Contextual Chunk Grounding & The 8D CASSE Feature Vector ($\mathbf{X}$)
 
 Given a user query $Q$, the LLM's induced response graph $G_{\text{resp}} = (V_{\text{resp}}, E_{\text{resp}})$, and the retrieved Neo4j ground-truth subgraph $G_{\text{GT}} = (V_{\text{GT}}, E_{\text{GT}})$, `truth_evaluator.py` first computes two domain-agnostic corpus grounding signals from `final_model/latest_chunks.json`:
 
 * **Out-of-Corpus Technical Stem Ratio ($\rho_{\text{OOC}} \in [0, 1]$):** Let $U(Q) = \{s_1, \dots, s_k\}$ be the unique ASCII-folded, stemmed technical tokens in $Q$, and let $\mathcal{S}_{\text{corpus}} = \bigcup_{j=1}^{m} \mathcal{S}(c_j)$ be the global vocabulary of technical stems across all $m$ PDF chunks:
-  $$\rho_{\text{OOC}}(Q) = \frac{\left\vert{}\{s \in U(Q) : s \notin \mathcal{S}_{\text{corpus}}\}\right\vert{}}{\vert{}U(Q)\vert{}}$$
+
+  $$
+  \rho_{\text{OOC}}(Q) = \frac{\vert \{s \in U(Q) : s \notin \mathcal{S}_{\text{corpus}}\} \vert}{\vert U(Q) \vert}
+  $$
 
 * **IDF-Weighted Chunk Co-Occurrence & Bigram Continuity ($\Phi_{\text{cooc}} \in [0, 1]$):** Assigning each query stem an Inverse Document Frequency specificity weight $w(s) = \left[\log_2(2 + \text{df}(s))\right]^{-1}$ and letting $\mathcal{B}(Q)$ be adjacent technical stem bigrams in $Q$:
-  $$\Phi_{\text{cooc}}(Q) = 0.75 \cdot \max_{c_j \in \mathcal{C}} \left( \frac{\sum_{s \in U(Q) \cap \mathcal{S}(c_j)} w(s)}{\sum_{s \in U(Q)} w(s)} \right) + 0.25 \cdot \frac{\left|\mathcal{B}(Q) \cap \mathcal{B}_{\text{corpus}}\right|}{\vert{}\mathcal{B}(Q)|}$$
+
+  $$
+  \Phi_{\text{cooc}}(Q) = 0.75 \cdot \max_{c_j \in \mathcal{C}} \left( \frac{\sum_{s \in U(Q) \cap \mathcal{S}(c_j)} w(s)}{\sum_{s \in U(Q)} w(s)} \right) + 0.25 \cdot \frac{\vert \mathcal{B}(Q) \cap \mathcal{B}_{\text{corpus}} \vert}{\vert \mathcal{B}(Q) \vert}
+  $$
 
 Next, `truth_evaluator.py` aligns $G_{\text{GT}}$ and $G_{\text{resp}}$ onto a canonical vertex space $V_U$, constructs the induced ground-truth reference graph $\widetilde{G}_{\text{GT}}$ over active response entities $V_{\text{act}}$, and extracts the 8-dimensional invariant vector $\mathbf{X}$:
-$$\mathbf{X} = \begin{bmatrix} E_{\text{sheaf}}, & \Delta K, & D_{\text{spec}}, & T_{\text{source}}, & F(\Delta t), & I_{\text{indep}}, & C_{\text{conflict}}, & P_{\text{LLM}} \end{bmatrix}^T$$
 
-1. **Cellular Sheaf Coboundary Dirichlet Energy ($x_1 = E_{\text{sheaf}}$):** Assigns unit-normalized 384D semantic embeddings $\mathbf{x}_u \in \mathbb{S}^{383}$ to vertex stalks $\mathcal{F}(u)$. For each asserted edge $e = (u, r_{\text{resp}}, v) \in E_{\text{resp}}$, let $\tilde{\mathbf{u}}_e = \frac{\mathbf{x}_u + 0.5 \mathbf{r}_{\text{resp}}}{\|\mathbf{x}_u + 0.5 \mathbf{r}_{\text{resp}}\|_2}$. For supported edges $(u, v) \in E(\widetilde{G}_{\text{GT}})$, the restriction map $\mathcal{F}_{u \to e}$ is the exact Householder Orthogonal Reflection Matrix $\mathbf{H}_e = \mathbf{I} - 2 \frac{\mathbf{d}_e \mathbf{d}_e^T}{\|\mathbf{d}_e\|_2^2}$ where $\mathbf{d}_e = \tilde{\mathbf{u}}_e^{\text{GT}} - \mathbf{x}_v$; for unsupported edges, $\mathcal{F}_{v \to e}(\mathbf{x}_v) = \mu_u \mu_v \Phi_{\text{cooc}}(1 - \rho_{\text{OOC}})\mathbf{x}_v$:
-   $$E_{\text{sheaf}} = \frac{1}{2 |E_{\text{resp}}|} \sum_{e=(u,v) \in E_{\text{resp}}} \left\| \mathcal{F}_{u \to e}(\tilde{\mathbf{u}}_e) - \mathcal{F}_{v \to e}(\mathbf{x}_v) \right\|_2^2 + \frac{1}{2}\left(0.55(1 - \Phi_{\text{cooc}}) + 0.45 \rho_{\text{OOC}}\right)$$
+$$
+\mathbf{X} = \begin{bmatrix} E_{\text{sheaf}}, & \Delta K, & D_{\text{spec}}, & T_{\text{source}}, & F(\Delta t), & I_{\text{indep}}, & C_{\text{conflict}}, & P_{\text{LLM}} \end{bmatrix}^T
+$$
+
+1. **Cellular Sheaf Coboundary Dirichlet Energy ($x_1 = E_{\text{sheaf}}$):** Assigns unit-normalized 384D semantic embeddings $\mathbf{x}_u \in \mathbb{S}^{383}$ to vertex stalks $\mathcal{F}(u)$. For each asserted edge $e = (u, r_{\text{resp}}, v) \in E_{\text{resp}}$, let $\tilde{\mathbf{u}}_e = \frac{\mathbf{x}_u + 0.5 \mathbf{r}_{\text{resp}}}{\Vert \mathbf{x}_u + 0.5 \mathbf{r}_{\text{resp}} \Vert_2}$. For supported edges $(u, v) \in E(\widetilde{G}_{\text{GT}})$, the restriction map $\mathcal{F}_{u \to e}$ is the exact Householder Orthogonal Reflection Matrix $\mathbf{H}_e = \mathbf{I} - 2 \frac{\mathbf{d}_e \mathbf{d}_e^T}{\Vert \mathbf{d}_e \Vert_2^2}$ where $\mathbf{d}_e = \tilde{\mathbf{u}}_e^{\text{GT}} - \mathbf{x}_v$; for unsupported edges, $\mathcal{F}_{v \to e}(\mathbf{x}_v) = \mu_u \mu_v \Phi_{\text{cooc}}(1 - \rho_{\text{OOC}})\mathbf{x}_v$:
+
+   $$
+   E_{\text{sheaf}} = \frac{1}{2 \vert E_{\text{resp}} \vert} \sum_{e=(u,v) \in E_{\text{resp}}} \left\Vert \mathcal{F}_{u \to e}(\tilde{\mathbf{u}}_e) - \mathcal{F}_{v \to e}(\mathbf{x}_v) \right\Vert_2^2 + \frac{1}{2}\left(0.55(1 - \Phi_{\text{cooc}}) + 0.45 \rho_{\text{OOC}}\right)
+   $$
 
 2. **Bounded Forman-Ricci Curvature Distortion ($x_2 = \Delta K$):** Computes discrete Forman-Ricci edge curvature on $\widetilde{G}_{\text{GT}}$ and $G_{\text{resp}}$:
-   $$\text{Ric}_G(e) = w_e \left( \frac{w_u}{w_e} + \frac{w_v}{w_e} - \sum_{e_u \sim e} \frac{w_u}{\sqrt{w_e w_{e_u}}} - \sum_{e_v \sim e} \frac{w_v}{\sqrt{w_e w_{e_v}}} \right)$$
-   Verified edges incur bounded hyperbolic tangent distortion $0.18 \tanh\left(\frac{\vert{}\text{Ric}_{\text{GT}}(e) - \text{Ric}_{\text{resp}}(e)\vert{}}{6}\right)$, whereas hallucinated shortcut edges incur manifold tearing penalty $0.55 + 0.40 \sigma(-\text{Ric}_{\text{resp}}(e)) + 0.30 \rho_{\text{OOC}}$, regularized by corpus support.
+
+   $$
+   \text{Ric}_G(e) = w_e \left( \frac{w_u}{w_e} + \frac{w_v}{w_e} - \sum_{e_u \sim e} \frac{w_u}{\sqrt{w_e w_{e_u}}} - \sum_{e_v \sim e} \frac{w_v}{\sqrt{w_e w_{e_v}}} \right)
+   $$
+
+   Verified edges incur bounded hyperbolic tangent distortion $0.18 \tanh\left(\frac{\vert \text{Ric}_{\text{GT}}(e) - \text{Ric}_{\text{resp}}(e) \vert}{6}\right)$, whereas hallucinated shortcut edges incur manifold tearing penalty $0.55 + 0.40 \sigma(-\text{Ric}_{\text{resp}}(e)) + 0.30 \rho_{\text{OOC}}$, regularized by corpus support.
 
 3. **Wasserstein-Frobenius Spectral Laplacian Divergence ($x_3 = D_{\text{spec}}$):** Over the Symmetric Normalized Laplacians $\mathbf{L}_{\text{norm}} = \mathbf{I} - \mathbf{D}^{-1/2}\mathbf{A}\mathbf{D}^{-1/2}$ of $\widetilde{G}_{\text{GT}}$ and $G_{\text{resp}}$:
-   $$D_{\text{spec}} = 0.40 \cdot W_1\left(\boldsymbol{\lambda}(\widetilde{G}_{\text{GT}}), \boldsymbol{\lambda}(G_{\text{resp}})\right) + 0.25 \cdot \frac{\left\Vert{} \mathbf{L}_{\text{norm}}(\widetilde{G}_{\text{GT}}) - \mathbf{L}_{\text{norm}}(G_{\text{resp}}) \right\Vert{}_F}{\vert{}V_{\text{act}}\vert{}}$$
+
+   $$
+   D_{\text{spec}} = 0.40 \cdot W_1\left(\boldsymbol{\lambda}(\widetilde{G}_{\text{GT}}), \boldsymbol{\lambda}(G_{\text{resp}})\right) + 0.25 \cdot \frac{\left\Vert \mathbf{L}_{\text{norm}}(\widetilde{G}_{\text{GT}}) - \mathbf{L}_{\text{norm}}(G_{\text{resp}}) \right\Vert_F}{\vert V_{\text{act}} \vert}
+   $$
 
 4. **Conjugate Beta-Bernoulli Bayesian Source Trust ($x_4 = T_{\text{source}}$):** Posterior expectation under a $\text{Beta}(1, 1)$ prior combining chunk-level grounding and subgraph edge verification rate $(1 - r_{\text{unv}})$:
-   $$T_{\text{source}} = \frac{1 + 12 \Phi_{\text{cooc}}(1 - \rho_{\text{OOC}}) + 4(1 - r_{\text{unv}})}{2 + 12 \Phi_{\text{cooc}}(1 - \rho_{\text{OOC}}) + 4(1 - r_{\text{unv}}) + 12 C_{\text{conflict}} + 6 \rho_{\text{OOC}}}$$
+
+   $$
+   T_{\text{source}} = \frac{1 + 12 \Phi_{\text{cooc}}(1 - \rho_{\text{OOC}}) + 4(1 - r_{\text{unv}})}{2 + 12 \Phi_{\text{cooc}}(1 - \rho_{\text{OOC}}) + 4(1 - r_{\text{unv}}) + 12 C_{\text{conflict}} + 6 \rho_{\text{OOC}}}
+   $$
 
 5. **Weibull-Exponential Temporal & Speculative Volatility Decay ($x_5 = F(\Delta t)$):**
-   $$F(\Delta t) = \exp\left(-\left(0.03 + 0.22 \rho_{\text{spec}} + 0.25 C_{\text{conflict}}\right) \cdot \left(0.40 + 0.80 C_{\text{conflict}}\right)\right)$$
+
+   $$
+   F(\Delta t) = \exp\left(-\left(0.03 + 0.22 \rho_{\text{spec}} + 0.25 C_{\text{conflict}}\right) \cdot \left(0.40 + 0.80 C_{\text{conflict}}\right)\right)
+   $$
 
 6. **Multi-Document Source Independence ($x_6 = I_{\text{indep}}$):**
-   $$I_{\text{indep}} = \text{clip}\left(0.20 + 0.75 \Phi_{\text{cooc}}(1 - 0.80 \rho_{\text{OOC}}), \; 0.12, \; 0.96\right)$$
 
-7. **Active Topological-Lexical Conflict Ratio ($x_7 = C_{\text{conflict}}$):** Couples structural edge conflict $r_{\text{unv}} = \frac{\vert{}E_{\text{resp}} \setminus E(\widetilde{G}_{\text{GT}})\vert{}}{\vert{}E_{\text{resp}}\vert{}}$ with corpus premise conflict:
-   $$C_{\text{conflict}} = 0.40 \cdot r_{\text{unv}} + 0.60 \cdot \text{clip}\left(0.65(1 - \Phi_{\text{cooc}}) + 0.75 \rho_{\text{OOC}}, \; 0, \; 1\right)$$
+   $$
+   I_{\text{indep}} = \text{clip}\left(0.20 + 0.75 \Phi_{\text{cooc}}(1 - 0.80 \rho_{\text{OOC}}), \; 0.12, \; 0.96\right)
+   $$
+
+7. **Active Topological-Lexical Conflict Ratio ($x_7 = C_{\text{conflict}}$):** Couples structural edge conflict $r_{\text{unv}} = \frac{\vert E_{\text{resp}} \setminus E(\widetilde{G}_{\text{GT}}) \vert}{\vert E_{\text{resp}} \vert}$ with corpus premise conflict:
+
+   $$
+   C_{\text{conflict}} = 0.40 \cdot r_{\text{unv}} + 0.60 \cdot \text{clip}\left(0.65(1 - \Phi_{\text{cooc}}) + 0.75 \rho_{\text{OOC}}, \; 0, \; 1\right)
+   $$
 
 8. **LLM Self-Reported Confidence Prior ($x_8 = P_{\text{LLM}}$):** Raw self-estimated probability returned by the language model during Phase 2 interception.
 
 ### 3.3 Phase 4: Self-Learned Multipliers, Hybrid Belief Inference & Conformal Thresholds
 
-In Phase 4 (`model_trainer.py`), a 9-architecture tournament trains on the 8D feature vectors $\mathbf{X}$, while an L-BFGS-B Maximum-Likelihood Optimizer initialized by the PyTorch_AttentionResNet self-attention gate $\boldsymbol{\alpha}(\mathbf{X}) = \text{Softmax}(\mathbf{W}_2 \tanh(\mathbf{W}_1 \mathbf{X}))$ learns the optimal energy penalty weights $\mathbf{w}_{\mathcal{H}}^* = [0.0800, 0.0800, 0.0500, 0.1500]^T$ and normalized reliability prior weights $\mathbf{w}_{\mathcal{P}}^* = [0.8721, 0.0581, 0.0581, 0.0116]^T$:
+In Phase 4 (`model_trainer.py`), a 9-architecture tournament trains on the 8D feature vectors $\mathbf{X}$, while an L-BFGS-B Maximum-Likelihood Optimizer initialized by the PyTorch_AttentionResNet self-attention gate $\boldsymbol{\alpha}(\mathbf{X}) = \text{Softmax}(\mathbf{W}_2 \tanh(\mathbf{W}_1 \mathbf{X}))$ learns the optimal energy penalty weights $\mathbf{w}_{\mathcal{H}}^{\ast} = [0.0800, 0.0800, 0.0500, 0.1500]^T$ and normalized reliability prior weights $\mathbf{w}_{\mathcal{P}}^{\ast} = [0.8721, 0.0581, 0.0581, 0.0116]^T$:
 
 1. **Boltzmann-Gibbs Analytical Score ($S_{\text{Boltz}}$):**
-   $$S_{\text{Boltz}}(\mathbf{X}) = \left(w_{p,1}^* T_{\text{source}} + w_{p,2}^* F(\Delta t) + w_{p,3}^* I_{\text{indep}} + w_{p,4}^* P_{\text{LLM}}(1 - C_{\text{conflict}})\right) \cdot \exp\left(-\left(w_{e,1}^* E_{\text{sheaf}} + w_{e,2}^* \Delta K + w_{e,3}^* D_{\text{spec}} + w_{e,4}^* C_{\text{conflict}}\right)\right)$$
-   *(Note: The optimizer autonomously assigns $w_{p,4}^* = 0.0116$ ($1.16\%$) to $P_{\text{LLM}}$ and $w_{p,1}^* = 0.8721$ ($87.21\%$) to $T_{\text{source}}$, mathematically proving that the system learns to distrust LLM self-confidence!)*
+
+   $$
+   S_{\text{Boltz}}(\mathbf{X}) = \left(w_{p,1}^{\ast} T_{\text{source}} + w_{p,2}^{\ast} F(\Delta t) + w_{p,3}^{\ast} I_{\text{indep}} + w_{p,4}^{\ast} P_{\text{LLM}}(1 - C_{\text{conflict}})\right) \cdot \exp\left(-\left(w_{e,1}^{\ast} E_{\text{sheaf}} + w_{e,2}^{\ast} \Delta K + w_{e,3}^{\ast} D_{\text{spec}} + w_{e,4}^{\ast} C_{\text{conflict}}\right)\right)
+   $$
+
+   *(Note: The optimizer autonomously assigns $w_{p,4}^{\ast} = 0.0116$ ($1.16\%$) to $P_{\text{LLM}}$ and $w_{p,1}^{\ast} = 0.8721$ ($87.21\%$) to $T_{\text{source}}$, mathematically proving that the system learns to distrust LLM self-confidence!)*
 
 2. **Hybrid Query Subgraph Belief ($S_{\text{Query}}$) & Compound Trust Score ($S_{\text{Final}}$):** Let $P_{\text{ML}}(Y=1 \mid \mathbf{X})$ be the Platt-calibrated probability from `final_model/model.pkl` and $S_{\text{corpus}} = \text{clip}(1.18 \Phi_{\text{cooc}} - 0.62 \rho_{\text{OOC}} + 0.18, 0.05, 0.96)$:
-   $$S_{\text{Query}} = 0.25 \cdot S_{\text{Boltz}}(\mathbf{X}) + 0.20 \cdot P_{\text{ML}}(Y=1 \mid \mathbf{X}) + 0.55 \cdot S_{\text{corpus}}$$
-   $$S_{\text{Final}} = \left(S_{\text{Query}}\right)^{\eta^*} \cdot \left(\min\left(1.0, \frac{S_{\text{KG}}}{0.75}\right)\right)^{1 - \eta^*}, \quad \eta^* = 0.85$$
 
-3. **Learned Conformal Tri-State Decision Rule ($\tau_{\text{verify}}^* = 0.6000, \; \tau_{\text{abstain}}^* = 0.2768$):**
-   $$\text{Verdict}(Q) = \begin{cases} \text{\bf VERIFIED} & \text{if } S_{\text{Final}} \ge \tau_{\text{verify}}^* \text{ and } \Phi_{\text{cooc}} \ge 0.435 \text{ and } \rho_{\text{OOC}} \le 0.160 \\ \text{\bf ABSTAIN} & \text{if } S_{\text{Final}} \ge \tau_{\text{abstain}}^* \text{ and not } (\rho_{\text{OOC}} \ge 0.220 \wedge \Phi_{\text{cooc}} \le 0.210) \\ \text{\bf HALLUCINATED} & \text{otherwise} \end{cases}$$
+   $$
+   S_{\text{Query}} = 0.25 \cdot S_{\text{Boltz}}(\mathbf{X}) + 0.20 \cdot P_{\text{ML}}(Y=1 \mid \mathbf{X}) + 0.55 \cdot S_{\text{corpus}}
+   $$
+
+   $$
+   S_{\text{Final}} = \left(S_{\text{Query}}\right)^{\eta^{\ast}} \cdot \left(\min\left(1.0, \frac{S_{\text{KG}}}{0.75}\right)\right)^{1 - \eta^{\ast}}, \quad \eta^{\ast} = 0.85
+   $$
+
+3. **Learned Conformal Tri-State Decision Rule ($\tau_{\text{verify}}^{\ast} = 0.6000, \; \tau_{\text{abstain}}^{\ast} = 0.2768$):**
+
+   $$
+   \text{Verdict}(Q) = \begin{cases} \textbf{VERIFIED} & \text{if } S_{\text{Final}} \ge \tau_{\text{verify}}^{\ast} \text{ and } \Phi_{\text{cooc}} \ge 0.435 \text{ and } \rho_{\text{OOC}} \le 0.160 \\ \textbf{ABSTAIN} & \text{if } S_{\text{Final}} \ge \tau_{\text{abstain}}^{\ast} \text{ and not } (\rho_{\text{OOC}} \ge 0.220 \wedge \Phi_{\text{cooc}} \le 0.210) \\ \textbf{HALLUCINATED} & \text{otherwise} \end{cases}
+   $$
 
 ---
 
@@ -312,7 +372,7 @@ We evaluated all 100 queries in `data/benchmark_100_queries.txt` (40 FACTUAL sin
 
 **Step 1: Clone the Repository & Create a Python 3.12 Virtual Environment**
 ```bash
-git clone [https://github.com/Virtuoso-8051/EpistemeGraph.git](https://github.com/Virtuoso-8051/EpistemeGraph.git)
+git clone https://github.com/Virtuoso-8051/EpistemeGraph.git
 cd EpistemeGraph
 py -3.12 -m venv venv
 .\venv\Scripts\Activate.ps1
@@ -359,6 +419,6 @@ uvicorn app:app --host 0.0.0.0 --port 8000 --reload
   title        = {EpistemeGraph: A Two-Stage Cellular Sheaf, Forman-Ricci Curvature, and Conformal MLOps Framework for Hallucination Detection over Cloud Knowledge Graphs},
   journal      = {arXiv preprint},
   year         = {2026},
-  url          = {[https://github.com/Virtuoso-8051/EpistemeGraph](https://github.com/Virtuoso-8051/EpistemeGraph)}
+  url          = {https://github.com/Virtuoso-8051/EpistemeGraph}
 }
 ```
