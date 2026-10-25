@@ -391,11 +391,11 @@ uvicorn app:app --host 0.0.0.0 --port 8000 --reload
 ## 7. Citation
 
 ```bibtex
-@article{raj2026epistemegraph,
+@article{The-Episteme-Graph,
   author       = {Anurag Raj},
   title        = {EpistemeGraph: A Two-Stage Cellular Sheaf, Forman-Ricci Curvature, and Conformal MLOps Framework for Hallucination Detection over Cloud Knowledge Graphs},
-  journal      = {arXiv preprint},
-  year         = {2026},
-  url          = {[https://github.com/Virtuoso-8051/EpistemeGraph](https://github.com/Virtuoso-8051/EpistemeGraph)}
+  journal      = {hopefully soon},
+  year         = {2026 or 27},
+  url          = [https://github.com/Virtuoso-8051/EpistemeGraph]
 }
 ```
