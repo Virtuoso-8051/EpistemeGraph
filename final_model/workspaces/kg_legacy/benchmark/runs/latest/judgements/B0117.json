@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Edges link authors whose papers cite each other (mutual citation), which misstates the directed 'written by one author and cited by another' relation",
+    "Papers are nodes and citation links are edges / authors are nodes (generic detail not stated, though plausible)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly identifies the two network types (author and paper citation) and that the author network is weighted by citation counts. However, it describes edges as linking authors whose papers cite each other, which implies mutual citation and diverges from the evidence's directed 'papers written by one author and cited by another' definition; it also omits the DBLP source.",
+  "judge_model": "claude-sonnet-5-5"
+}

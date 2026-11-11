@@ -1,0 +1,150 @@
+{
+    "user_query": "Under which exact conditions does LINE switch from using the first-order proximity objective to the second-order proximity objective, and how many training epochs are used for each objective?",
+    "mode": "closed_book",
+    "llm_response": "In LINE, the model does not switch objectives during a single training run; instead, the first-order and second-order proximity objectives are trained separately as two different variants of the model. The first-order proximity objective is used in LINE-1st, and the second-order proximity objective is used in LINE-2nd. In the combined LINE approach, embeddings are typically learned by training LINE-1st and LINE-2nd independently and then concatenating their embeddings. Each objective is trained for the same number of epochs specified by the user; the original LINE paper does not define a fixed universal epoch count for one objective before switching to the other, because there is no such switch within the method itself.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "I am confident about the conceptual distinction between LINE-1st and LINE-2nd, but the exact epoch count is not fixed by the method and depends on implementation or experimental setup, so the answer is accurate in principle but not tied to a single universal numeric value.",
+    "extracted_query_entities": [
+        "LINE",
+        "first-order proximity objective",
+        "second-order proximity objective",
+        "LINE-1ST",
+        "LINE-2ND",
+        "embedding",
+        "original LINE paper",
+        "EPOCHS"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "first-order proximity objective",
+        "second-order proximity objective",
+        "LINE-1ST",
+        "LINE-2ND",
+        "embedding",
+        "original LINE paper",
+        "EPOCHS",
+        "switch objectives during a single training run",
+        "trained separately as a different variant of the model",
+        "training LINE-1st and LINE-2nd independently and then concatenating their embedding",
+        "same number of epochs specified by the user",
+        "fixed universal epoch count for one objective before switching to the other"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "switch objectives during a single training run",
+            "type": "REFUTED",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "first-order proximity objective",
+            "target": "trained separately as a different variant of the model",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity objective",
+            "target": "trained separately as a different variant of the model",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity objective",
+            "target": "LINE-1ST",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity objective",
+            "target": "LINE-2ND",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE-1ST",
+            "target": "first-order proximity objective",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE-2ND",
+            "target": "second-order proximity objective",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "training LINE-1st and LINE-2nd independently and then concatenating their embedding",
+            "type": "PROPOSES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE-1ST",
+            "target": "embedding",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE-2ND",
+            "target": "embedding",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity objective",
+            "target": "same number of epochs specified by the user",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity objective",
+            "target": "same number of epochs specified by the user",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "original LINE paper",
+            "target": "fixed universal epoch count for one objective before switching to the other",
+            "type": "DEFINED_AS",
+            "claim_type": "REFUTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which exact conditions does LINE switch from using the first-order proximity objective to the second-order proximity objective, and how many training epochs are used for each objective?",
+        "llm_response": "In LINE, the model does not switch objectives during a single training run; instead, the first-order and second-order proximity objectives are trained separately as two different variants of the model. The first-order proximity objective is used in LINE-1st, and the second-order proximity objective is used in LINE-2nd. In the combined LINE approach, embeddings are typically learned by training LINE-1st and LINE-2nd independently and then concatenating their embeddings. Each objective is trained for the same number of epochs specified by the user; the original LINE paper does not define a fixed universal epoch count for one objective before switching to the other, because there is no such switch within the method itself.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "I am confident about the conceptual distinction between LINE-1st and LINE-2nd, but the exact epoch count is not fixed by the method and depends on implementation or experimental setup, so the answer is accurate in principle but not tied to a single universal numeric value.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 3231.8,
+            "prompt_tokens": 121,
+            "completion_tokens": 219
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2917.0,
+            "prompt_tokens": 735,
+            "completion_tokens": 477
+        },
+        "asserted_claim_count": 11,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 2,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.21946589152018228,
+        "query_entities": [
+            "LINE",
+            "first-order proximity objective",
+            "second-order proximity objective",
+            "LINE-1ST",
+            "LINE-2ND",
+            "embedding",
+            "original LINE paper",
+            "EPOCHS"
+        ]
+    }
+}

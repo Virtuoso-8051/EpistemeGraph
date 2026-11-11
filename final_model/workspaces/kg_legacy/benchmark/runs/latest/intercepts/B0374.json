@@ -1,0 +1,62 @@
+{
+  "answer": "The premise is not well supported. DeepWalk's original paper (Perozzi et al., 2014) evaluated mainly on BlogCatalog, Flickr, and YouTube, not Cora or Citeseer, so it does not establish a strong DeepWalk advantage over LINE on those citation networks. Later papers that benchmark both on Cora and Citeseer report mixed results that depend heavily on the setup, such as the labeled-data fraction, the classifier, and hyperparameter tuning, and LINE is often competitive. Any advantage DeepWalk shows is plausibly due to its random-walk, skip-gram objective, which captures higher-order neighborhood structure beyond LINE's explicit first- and second-order proximity, but this is a hypothesis rather than a result that holds across studies. I cannot confirm a consistent, large gap in DeepWalk's favor on fully observed Cora/Citeseer.",
+  "confidence": 0.5,
+  "confidence_reasoning": "I am fairly confident the original DeepWalk paper did not center on Cora/Citeseer and that cross-paper results vary, but I am not certain of the exact numbers or every benchmark comparison in the literature.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "FLICKR",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "YOUTUBE",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "CORA",
+      "type": "EVALUATED_ON",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "CITESEER",
+      "type": "EVALUATED_ON",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "LINE-SGD",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram objective",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "higher-order neighborhood structure",
+      "type": "CAPTURES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "first- and second-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

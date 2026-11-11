@@ -1,0 +1,68 @@
+{
+  "answer": "The passage describes node2vec as having three phases: (1) sampling biased random walks from each node, (2) using those walks to learn node embeddings with a skip-gram model, and (3) using the learned embeddings for downstream tasks such as node classification or link prediction. In execution, node2vec first generates many random walks that are biased by parameters controlling breadth-first versus depth-first exploration, then treats the resulting node sequences like sentences and trains a skip-gram model to produce vector representations, and finally applies those vectors to the target task.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This is a standard description of node2vec and is likely correct, but I cannot verify the exact wording of the unseen passage.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk procedure",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Skip-gram model",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node embedding",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "random walk",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "breadth-first exploration",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "depth-first exploration",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "target": "node sequence",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "target": "vector representation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "node classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "link prediction",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.15328994550203023
+}

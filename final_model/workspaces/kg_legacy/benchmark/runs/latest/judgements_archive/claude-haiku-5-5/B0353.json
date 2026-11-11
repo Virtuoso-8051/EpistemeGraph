@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The AI says the premise is likely mistaken but hedges heavily and does not state the correct split (50-50 between labeled and unlabeled data) for the BlogCatalog parameter-sensitivity study, so it fails to supply the correction.",
+    "The AI says the paper uses a range of labeled-training fractions for BlogCatalog classification, which is not directly stated in the evidence beyond the 10% and 50% settings mentioned."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The AI correctly rejects the false premise that the gains are attributed to a 10% labeled-data split and does not accept it. However, it hedges and fails to state the correct 50-50 split that the passage specifies for the BlogCatalog parameter-sensitivity analysis, and its description of the labeled-fraction range is loosely supported.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,62 @@
+{
+  "answer": "DeepWalk does not build the graph incrementally in the streaming setting. It is a static method, so it works by accumulating every edge that has arrived so far into one static graph (the union of the stream up to the current time step). Only then does it run its usual pipeline: sample truncated random walks from each node over that accumulated graph, and train skip-gram with hierarchical softmax or negative sampling on the walks. To handle new data, it is typically retrained from scratch on each new snapshot rather than updated online. The question's premise that it 'builds the full graph before training' is a reasonable description of this offline behaviour, though the exact procedure depends on the specific paper's evaluation setup, which I could not confirm.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The general description of DeepWalk as a static method retrained on accumulated snapshots is well founded, but I could not identify the specific source paper, so the exact streaming protocol it describes is uncertain.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "static method",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "accumulated static graph",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "accumulated static graph",
+      "target": "union of the edge stream up to the current time step",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "retraining from scratch on each new snapshot",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "offline behaviour",
+      "type": "DEFINED_AS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,56 @@
+{
+  "answer": "LINE can embed a newly arrived vertex only when it has observed edges connecting it to vertices already in the network, so its neighborhood provides information. In that case, the existing embeddings are kept fixed and only the new vertex's embedding is optimized, using the objective over its incident edges (the edge-sampling objective with negative sampling). The recommended objective is the second-order proximity objective, which models the conditional distribution of context vertices given a vertex, optionally combined with first-order proximity. A vertex with no links to the existing network has no signal for this optimization, so LINE cannot embed it without retraining.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The general idea (new vertex needs links to existing nodes, optimize only its embedding with others fixed) matches my recollection of the LINE paper, but I am unsure of the exact wording and whether the paper specifies second-order versus combined proximity as the recommended objective.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "embedding",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "network neighborhood",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "new vertex embedding optimization",
+      "target": "edge-sampling treatment",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling treatment",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity objective",
+      "target": "conditional distribution of context vertices given a vertex",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity objective",
+      "target": "first-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "retraining",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "vertex with no links to existing network",
+      "target": "SIGNAL",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "DeepWalk trains a skip-gram model with hierarchical softmax on windows of node co-occurrence (hierarchical softmax is only partly in evidence; skip-gram/window not explicitly stated)",
+    "LINE trains the first-order and second-order objectives separately and concatenates the results",
+    "LINE handles weighted edges via edge sampling rather than random walks",
+    "DeepWalk is designed for unweighted graphs (only loosely supported by the statement that it ignores edge weights)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: DeepWalk treats truncated random walks as sentences, and LINE optimizes first-order proximity plus second-order proximity based on shared neighbors. The extra details on concatenation, edge sampling, and the skip-gram window setup are not in the provided evidence, though they are generally accurate background.",
+  "judge_model": "claude-sonnet-5-5"
+}

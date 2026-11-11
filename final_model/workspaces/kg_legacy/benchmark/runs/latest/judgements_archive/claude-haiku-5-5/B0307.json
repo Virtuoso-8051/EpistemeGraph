@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI says node2vec tunes p and q over a bounded grid of roughly {0.25, 0.5, 1, 2, 4}; the evidence does not describe the grid.",
+    "The AI says the best settings are typically intermediate or dataset-specific; the evidence does not support this, and it reports that performance improves as p and q decrease.",
+    "The AI says p is the return parameter and q is the in-out parameter; the source names p as the in-out parameter and q as the return parameter.",
+    "The AI says large p discourages revisiting the previous node and large q keeps walks BFS-like; these mechanistic details are not stated in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The AI correctly rejects the premise that performance rises with p and q, but it never states the source's actual finding that performance improves as they decrease. It also adds unsupported claims about the tuning grid, the best settings, and mechanics, and it swaps the names of p and q relative to the source.",
+  "judge_model": "claude-haiku-5-5"
+}

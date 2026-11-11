@@ -1,0 +1,1693 @@
+{
+  "query_entities": [
+    "first-order proximity",
+    "second-order proximity",
+    "Table 4",
+    "GRAPH",
+    "neighborhood",
+    "local similarity",
+    "structural similarity",
+    "contextual similarity",
+    "words directly connected or very close in the graph",
+    "near-synonyms or tightly related term",
+    "sharing similar neighborhood",
+    "words related in meaning or usage but not necessarily direct graph neighbor",
+    "more immediate, local similarity",
+    "more structural or contextual similarity"
+  ],
+  "snapshot_source": "neo4j",
+  "seed_count": 19,
+  "node_count": 50,
+  "edge_count": 65,
+  "nodes": [
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "name": "Large-scale Information Network Embedding",
+      "type": "ALGORITHM",
+      "aliases": [
+        "1ST",
+        "1ST+2ND",
+        "2ND",
+        "LINE",
+        "LINE model",
+        "LINE(2ND",
+        "LSINE",
+        "Large-scale Information Network Embedding",
+        "network embedding model"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:1",
+      "name": "embedding very large information networks into low-dimensional vector space",
+      "type": "CONCEPT",
+      "aliases": [
+        "embedding very large information networks into low-dimensional vector space"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:2",
+      "name": "objective function",
+      "type": "CONCEPT",
+      "aliases": [
+        "EQN",
+        "OF",
+        "objective Eqn",
+        "objective function"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:3",
+      "name": "local and global network structure",
+      "type": "CONCEPT",
+      "aliases": [
+        "LGNS",
+        "global network structure",
+        "global structure of the network",
+        "local and global network structure"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:17",
+      "name": "Graph Embedding",
+      "type": "CONCEPT",
+      "aliases": [
+        "GE",
+        "Graph Embedding",
+        "graph embedding algorithm"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:18",
+      "name": "ISOMAP",
+      "type": "ALGORITHM",
+      "aliases": [
+        "ISOMAP"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:19",
+      "name": "Laplacian eigenmap",
+      "type": "ALGORITHM",
+      "aliases": [
+        "LE",
+        "Laplacian eigenmap"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:21",
+      "name": "observed link",
+      "type": "CONCEPT",
+      "aliases": [
+        "OL",
+        "observed link"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "name": "first-order proximity",
+      "type": "CONCEPT",
+      "aliases": [
+        "FOP",
+        "first-order proximity",
+        "higher-order proximity",
+        "second-order proximity"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:23",
+      "name": "shared neighbor",
+      "type": "CONCEPT",
+      "aliases": [
+        "SN",
+        "shared neighbor"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:25",
+      "name": "directed graph",
+      "type": "CONCEPT",
+      "aliases": [
+        "DG",
+        "directed graph"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:26",
+      "name": "undirected graph",
+      "type": "CONCEPT",
+      "aliases": [
+        "UG",
+        "undirected graph"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:32",
+      "name": "graph factorization",
+      "type": "ALGORITHM",
+      "aliases": [
+        "GF",
+        "graph factorization"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:35",
+      "name": "truncated random walk",
+      "type": "ALGORITHM",
+      "aliases": [
+        "TRW",
+        "truncated random walk"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "name": "random walk",
+      "type": "ALGORITHM",
+      "aliases": [
+        "RW",
+        "random walk",
+        "random walk method"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:39",
+      "name": "first-order proximitie",
+      "type": "CONCEPT",
+      "aliases": [
+        "FOP",
+        "first-order proximitie",
+        "second-order proximitie"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:43",
+      "name": "local pairwise proximity",
+      "type": "CONCEPT",
+      "aliases": [
+        "LPP",
+        "local pairwise proximity"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:44",
+      "name": "similarity",
+      "type": "CONCEPT",
+      "aliases": [
+        "similarity"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:46",
+      "name": "network structure",
+      "type": "CONCEPT",
+      "aliases": [
+        "NS",
+        "network structure"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:50",
+      "name": "joint probability",
+      "type": "CONCEPT",
+      "aliases": [
+        "JP",
+        "P1(VI,VJ",
+        "joint probability"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:65",
+      "name": "alias table method",
+      "type": "ALGORITHM",
+      "aliases": [
+        "ATM",
+        "alias table method"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:66",
+      "name": "WEIGHTS",
+      "type": "CONCEPT",
+      "aliases": [
+        "WEIGHTS"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:83",
+      "name": "LINE-SGD",
+      "type": "ALGORITHM",
+      "aliases": [
+        "1ST",
+        "2ND",
+        "LINE-SGD",
+        "LS"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "name": "depth-first search",
+      "type": "ALGORITHM",
+      "aliases": [
+        "DFS",
+        "depth-first search",
+        "depth-first strategy"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:100",
+      "name": "reconstructed network",
+      "type": "CONCEPT",
+      "aliases": [
+        "RN",
+        "reconstructed network"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:101",
+      "name": "second-order neighbor",
+      "type": "CONCEPT",
+      "aliases": [
+        "SON",
+        "second-order neighbor"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "name": "NODE2VEC",
+      "type": "ALGORITHM",
+      "aliases": [
+        "NODE2VEC"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:130",
+      "name": "2 nd order random walk approach",
+      "type": "ALGORITHM",
+      "aliases": [
+        "2 nd order random walk approach",
+        "2NORWA"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:131",
+      "name": "network neighborhood",
+      "type": "CONCEPT",
+      "aliases": [
+        "NN",
+        "NS(U",
+        "network neighborhood"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:136",
+      "name": "feature learning in network",
+      "type": "CONCEPT",
+      "aliases": [
+        "FLN",
+        "feature learning in network"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:154",
+      "name": "homophily",
+      "type": "CONCEPT",
+      "aliases": [
+        "homophily"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:163",
+      "name": "sampling strategy",
+      "type": "CONCEPT",
+      "aliases": [
+        "SS",
+        "sampling strategy"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:168",
+      "name": "neighborhood sampling strategy",
+      "type": "ALGORITHM",
+      "aliases": [
+        "NSS",
+        "flexible neighborhood sampling strategy",
+        "neighborhood sampling strategy",
+        "sampling strategy"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:170",
+      "name": "Local Search",
+      "type": "CONCEPT",
+      "aliases": [
+        "LS",
+        "Local Search"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:172",
+      "name": "Structural Equivalence",
+      "type": "CONCEPT",
+      "aliases": [
+        "SE",
+        "Structural Equivalence"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:175",
+      "name": "biased random walk procedure",
+      "type": "ALGORITHM",
+      "aliases": [
+        "BRWP",
+        "biased random walk procedure"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:177",
+      "name": "2nd order Markovian",
+      "type": "CONCEPT",
+      "aliases": [
+        "2OM",
+        "2nd order Markovian"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:526",
+      "name": "fraction of missing edge",
+      "type": "CONCEPT",
+      "aliases": [
+        "FME",
+        "fraction of missing edge"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:527",
+      "name": "number of connected component",
+      "type": "CONCEPT",
+      "aliases": [
+        "NCC",
+        "number of connected component"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:537",
+      "name": "searchbased optimization problem",
+      "type": "CONCEPT",
+      "aliases": [
+        "SOP",
+        "searchbased optimization problem"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:538",
+      "name": "1-hop and 2-hop neighbor",
+      "type": "CONCEPT",
+      "aliases": [
+        "1-hop and 2-hop neighbor",
+        "1H2HN"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:539",
+      "name": "homophilous communitie",
+      "type": "CONCEPT",
+      "aliases": [
+        "HC",
+        "homophilous communitie"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:596",
+      "name": "random walk generator",
+      "type": "ALGORITHM",
+      "aliases": [
+        "RWG",
+        "random walk generator"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:597",
+      "name": "GRAPH",
+      "type": "CONCEPT",
+      "aliases": [
+        "GRAPH",
+        "GRAPHS"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:604",
+      "name": "streaming approach",
+      "type": "ALGORITHM",
+      "aliases": [
+        "SA",
+        "streaming approach"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:610",
+      "name": "EdgeCluster",
+      "type": "ALGORITHM",
+      "aliases": [
+        "EdgeCluster"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:613",
+      "name": "weighted-vote Relational Neighbor",
+      "type": "ALGORITHM",
+      "aliases": [
+        "WVRN",
+        "weighted-vote Relational Neighbor"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:614",
+      "name": "relational classifier",
+      "type": "ALGORITHM",
+      "aliases": [
+        "RC",
+        "relational classifier"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:615",
+      "name": "neighborhood",
+      "type": "CONCEPT",
+      "aliases": [
+        "N_I",
+        "neighborhood"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:623",
+      "name": "unsupervised representation learning",
+      "type": "CONCEPT",
+      "aliases": [
+        "URL",
+        "unsupervised representation learning"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:1",
+      "type": "PROPOSES",
+      "weight": 0.88,
+      "grounding_score": 1.0,
+      "evidence_quote": "This paper studies the problem of embedding very large information networks into low-dimensional vector spaces, which is useful in many tasks such as visualization, node classification, and link prediction.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "PRESERVES",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "Instead, the LINE model uses an objective that is particularly designed for networks, which preserves both the first-order and the second-order proximities.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_006",
+        "DOC_001_CH_009",
+        "DOC_001_CH_011"
+      ],
+      "support_count": 3,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "USES",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "4.1.2 LINE with Second-order Proximity The second-order proximity is applicable for both directed and undirected graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_010",
+        "DOC_001_CH_019"
+      ],
+      "support_count": 2,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "BASED_ON",
+      "weight": 0.86,
+      "grounding_score": 0.7926898908615112,
+      "evidence_quote": "This implies that the combination of first-order and second-order proximity on the original network has already captured most information and LINE(1st+2nd) approach is a quite effective and efficient way for network embedding, suitable for both dense and sparse networks.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_022"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:25",
+      "type": "WORKS_WELL_FOR",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "The LINE is very general, which works well for directed or undirected, weighted or unweighted graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_005"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:25",
+      "type": "APPLIES_TO",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "LINE(2nd) and LINESGD(2nd) apply to both undirected and directed graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_017"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:26",
+      "type": "WORKS_WELL_FOR",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "The LINE is very general, which works well for directed or undirected, weighted or unweighted graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_005"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:26",
+      "type": "APPLIES_TO",
+      "weight": 0.98,
+      "grounding_score": 0.8644099426269531,
+      "evidence_quote": "Like the graph factorization, both LINE(1st) and LINE-SGD(1st) only apply to undirected graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_017"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:32",
+      "type": "OUTPERFORMS",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "The LINE(2nd) outperforms LINE(1st) and is slightly better than the graph factorization.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_020",
+        "DOC_001_CH_021"
+      ],
+      "support_count": 2,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "type": "USES",
+      "weight": 0.74,
+      "grounding_score": 1.0,
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_021"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:39",
+      "type": "DEFINED_AS",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "We formally define the problem of large-scale information network embedding using first-order and second-order proximities.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_007"
+      ],
+      "support_count": 1,
+      "is_functional": true
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:100",
+      "type": "IMPROVES",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "The performance of LINE(2nd) is further improved when the network is reconstructed by enriching the neighbors of vertices with small degrees (smaller than 200).",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_023"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:538",
+      "type": "USES",
+      "weight": 0.96,
+      "grounding_score": 0.8566564273834228,
+      "evidence_quote": "LINE [28] proposes primarily a breadth-first strategy, sampling nodes and optimizing the likelihood independently over only 1-hop and 2-hop neighbors.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_028"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:2",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:3",
+      "type": "PRESERVES",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "The method optimizes a carefully designed objective function that preserves both the local and global network structures.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:17",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:18",
+      "type": "CONTAINS",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:17",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:19",
+      "type": "CONTAINS",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:17",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "PRESERVE",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "Most existing graph embedding algorithms are designed to preserve thisfirst-order proximity, e.g., IsoMap [20] and Laplacian eigenmap [2], even if they do not scale.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_003"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:17",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "PROPOSES",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:17",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:32",
+      "type": "CONTAINS",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:18",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:17",
+      "type": "IS_A",
+      "weight": 0.9,
+      "grounding_score": 0.8691269111633301,
+      "evidence_quote": "For example, the time complexity of classical graph embedding algorithms such as MDS [4], IsoMap [20], Laplacian eigenmap [2] are at least quadratic to the number of vertices, which is too expensive for networks with millions of nodes.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_002"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:18",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "PRESERVE",
+      "weight": 0.9,
+      "grounding_score": 0.9241654109954833,
+      "evidence_quote": "Most existing graph embedding algorithms are designed to preserve thisfirst-order proximity, e.g., IsoMap [20] and Laplacian eigenmap [2], even if they do not scale.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_003"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:19",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:17",
+      "type": "IS_A",
+      "weight": 0.9,
+      "grounding_score": 0.9152569007873534,
+      "evidence_quote": "For example, the time complexity of classical graph embedding algorithms such as MDS [4], IsoMap [20], Laplacian eigenmap [2] are at least quadratic to the number of vertices, which is too expensive for networks with millions of nodes.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_002"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:19",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "PRESERVE",
+      "weight": 0.9,
+      "grounding_score": 0.9847405624389648,
+      "evidence_quote": "Most existing graph embedding algorithms are designed to preserve thisfirst-order proximity, e.g., IsoMap [20] and Laplacian eigenmap [2], even if they do not scale.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_003"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:21",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "CAPTURE",
+      "weight": 0.96,
+      "grounding_score": 0.8329161596298218,
+      "evidence_quote": "Naturally, the local structures are represented by the observed links in the networks, which capture the first-order proximity between the vertices.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_003"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:2",
+      "type": "OPTIMIZES",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "To preserve the first-order proximity, a straightforward way is to minimize the following objective function: O1 =d(\u02c6p1(\u00b7,\u00b7),p 1(\u00b7,\u00b7)), (2) where d(\u00b7,\u00b7) is the distance between two distributions.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_010"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:3",
+      "type": "PRESERVES",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "We expect that the consideration of the secondorder proximity effectively complements the sparsity of the first-order proximity and better preserves the global structure of the network.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_004"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:25",
+      "type": "NOT_APPLICABLE_FOR",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Note that the first-order proximity is only applicable for undirected graphs, not for directed graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_010"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:25",
+      "type": "APPLICABLE_FOR",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "The second-order proximity is applicable for both directed and undirected graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_010"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:26",
+      "type": "APPLICABLE_FOR",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Note that the first-order proximity is only applicable for undirected graphs, not for directed graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_010"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:43",
+      "type": "DEFINED_AS",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "Definition 2. (First-order Proximity) The first-order proximity in a network is the local pairwise proximity between two vertices.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_007"
+      ],
+      "support_count": 1,
+      "is_functional": true
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:44",
+      "type": "IS_A",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "The first-order proximity usually implies the similarity of two nodes in a real-world network.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": true
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:46",
+      "type": "IS_NOT_SUFFICIENT_FOR",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "Therefore, first-order proximity alone is not sufficient for preserving the network structures, and it is important to seek an alternative notion of proximity that addresses the problem of sparsity.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:50",
+      "type": "DEFINED_AS",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "To model the first-order proximity, for each undirected edge (i,j ), we define the joint probability between vertexvi andvj as follows: p1(vi,v j) = 11 + exp(\u2212\u20d7 uTi \u00b7\u20d7 uj), (1) where \u20d7 ui\u2208Rd is the low-dimensional vector representation of vertex vi.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_009"
+      ],
+      "support_count": 1,
+      "is_functional": true
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:23",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "ENABLES",
+      "weight": 0.88,
+      "grounding_score": 1.0,
+      "evidence_quote": "The general notion of the second-order proximity can be interpreted as nodes with shared neighbors being likely to be similar.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_003"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:32",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "USES",
+      "weight": 0.95,
+      "grounding_score": 0.8297604513168335,
+      "evidence_quote": "Both the GF and LINE methods, which use first-order proximity, are not applicable for directed networks, and hence we only compare DeepWalk and LINE(2nd).",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_022"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:32",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:26",
+      "type": "APPLIES_TO",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Practically, the graph factorization method only applies to undirected graphs while the proposed model is applicable for both undirected and directed graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_006"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:35",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "type": "BASED_ON",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "The random walk approach acts like a depth-first search.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_021"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:177",
+      "type": "ARE",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "Note that by setting \u03c0v,x to be a function of the preceeding node in the walk t, the random walks are 2nd order Markovian.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_013"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:65",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:66",
+      "type": "USES",
+      "weight": 0.98,
+      "grounding_score": 0.6708126020431519,
+      "evidence_quote": "We use the alias table method [9] to draw a sample according to the weights of the edges, which takes onlyO(1) time when repeatedly drawing samples from the same discrete distribution.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_013"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:83",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:2",
+      "type": "OPTIMIZES",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "LINE-SGD. This is the LINE model introduced in Section 4.1 that optimizes the objective Eqn. (3) or Eqn. (6) directly with stochastic gradient descent.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_016"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:83",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:25",
+      "type": "APPLIES_TO",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "LINE(2nd) and LINESGD(2nd) apply to both undirected and directed graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_017"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:83",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:26",
+      "type": "APPLIES_TO",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Like the graph factorization, both LINE(1st) and LINE-SGD(1st) only apply to undirected graphs.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_017"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:154",
+      "type": "SUITED_FOR",
+      "weight": 0.9,
+      "grounding_score": 0.6757088851928711,
+      "evidence_quote": "Additionally, unlike BFS and DFS which are extreme sampling paradigms suited for structural equivalence and homophily respectively, our random walks should accommodate for the fact that these notions of equivalence are not competing or exclusive, and real-world networks commonly exhibit a mixture of both.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_012"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:172",
+      "type": "REPRESENTS",
+      "weight": 0.9,
+      "grounding_score": 0.8614193868637084,
+      "evidence_quote": "In Section 3.1 we observed that BFS and DFS strategies represent extreme ends on the spectrum of embedding nodes based on the principles of homophily (i.e., network communities) and structural equivalence ( i.e., structural roles of nodes).",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_016"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:539",
+      "type": "ENABLES",
+      "weight": 0.92,
+      "grounding_score": 0.6715538215637207,
+      "evidence_quote": "On the other hand, DFS can freely explore network neighborhoods which is important in discovering homophilous communities at the cost of high variance.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_028"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:100",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:101",
+      "type": "CONTAINS",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "The results in the brackets are on the reconstructed network, which adds second-order neighbors (i.e., neighbors of neighbors) as neighbors for vertices with a low degree.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_023"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "type": "OUTPERFORMS",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Amongst the feature learning algorithms, node2vec outperforms both DeepWalk and LINE in all networks with gain up to 3.8% and 6.5% respectively in the AUC scores for the best possible choices of the binary operator for each algorithm.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_027"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "type": "USES",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "The three phases of node2vec, i.e., preprocessing to compute transition probabilities, random walk simulations and optimization using SGD, are executed sequentially.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_015"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:136",
+      "type": "PROPOSES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "We propose node2vec, an efficient scalable algorithm for feature learning in networks that efficiently optimizes a novel network-aware, neighborhood preserving objective using SGD.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_006"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:136",
+      "type": "IS_A",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "We propose node2vec, an efficient scalable algorithm for feature learning in networks that efficiently optimizes a novel network-aware, neighborhood preserving objective using SGD.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_006"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:163",
+      "type": "PROPOSES",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "Our algorithm node2vec overcomes this limitation by designing a flexible objective that is not tied to a particular sampling strategy and provides parameters to tune the explored search space (see Section 3).",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:168",
+      "type": "PROPOSES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "3.2 node2vec Building on the above observations, we design a flexible neighborhood sampling strategy which allows us to smoothly interpolate between BFS and DFS.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_011"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:130",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:131",
+      "type": "GENERATES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "We use a 2 nd order random walk approach to generate (sample) network neighborhoods for nodes.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_004"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:131",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:168",
+      "type": "GENERATED_BY",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "For every source node u\u2208V , we defineNS(u)\u2282V as a network neighborhood of node u generated through a neighborhood sampling strategyS.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_009"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:136",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:537",
+      "type": "BASED_ON",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "In this paper, we studied feature learning in networks as a searchbased optimization problem.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_027"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:168",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "type": "INTERPOLATES_BETWEEN",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "3.2 node2vec Building on the above observations, we design a flexible neighborhood sampling strategy which allows us to smoothly interpolate between BFS and DFS.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_011"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:168",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:170",
+      "type": "BASED_ON",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "We view the problem of sampling neighborhoods of a source node as a form of local search.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_010"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:175",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "type": "ENABLES",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "We achieve this by developing a flexible biased random walk procedure that can explore neighborhoods in a BFS as well as DFS fashion.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_012"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:526",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:527",
+      "type": "REQUIRES",
+      "weight": 0.88,
+      "grounding_score": 1.0,
+      "evidence_quote": "The missing edges are chosen randomly, subject to the constraint that the number of connected components in the network remains fixed.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_024"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:596",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:597",
+      "type": "USES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "The random walk generator takes a graph G and samples uniformly a random vertex vi as the root of the random walkWvi.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_010"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:604",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:597",
+      "type": "REQUIRES",
+      "weight": 0.86,
+      "grounding_score": 1.0,
+      "evidence_quote": "One interesting variant of this method is a streaming approach, which could be implemented without knowledge of the entire graph.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_012"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:610",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:597",
+      "type": "USES",
+      "weight": 0.9,
+      "grounding_score": 0.9068032932281493,
+      "evidence_quote": "EdgeCluster [40]: This method uses k-means clustering to cluster the adjacency matrix of G.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_015"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:613",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:614",
+      "type": "IS_A",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "The weighted-vote Relational Neighbor is a relational classifier.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_015"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:613",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:615",
+      "type": "USES",
+      "weight": 0.95,
+      "grounding_score": 0.7692395877838134,
+      "evidence_quote": "Given the neighborhood Ni of vertexvi, wvRN estimates Pr(yi|Ni) with the (appropriately normalized) weighted mean of its neighbors (i.e Pr(yi|Ni) = 1Z\u2211vj\u2208Niwij Pr(yj|N j)).",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_015"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:623",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:597",
+      "type": "APPLIES_TO",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "4. We apply unsupervised representation learning to graphs.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_018"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    }
+  ]
+}

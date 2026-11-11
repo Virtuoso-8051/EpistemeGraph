@@ -1,0 +1,71 @@
+{
+    "user_query": "What hidden-layer size or embedding dimensionality did DeepWalk use in its representation learning model?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk used a 128-dimensional hidden representation (embedding size 128) in its Skip-gram-based representation learning model.",
+    "llm_self_reported_accuracy": 0.98,
+    "llm_confidence_reasoning": "This is a standard, explicitly reported hyperparameter in the original DeepWalk paper and is widely cited consistently.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "Skip-gram",
+        "representation learning model"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "Skip-gram",
+        "representation learning model",
+        "128-dimensional hidden representation"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "Skip-gram",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "128-dimensional hidden representation",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "representation learning model",
+            "type": "BASED_ON",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What hidden-layer size or embedding dimensionality did DeepWalk use in its representation learning model?",
+        "llm_response": "DeepWalk used a 128-dimensional hidden representation (embedding size 128) in its Skip-gram-based representation learning model.",
+        "llm_extraction_confidence": 0.98,
+        "llm_confidence_reasoning": "This is a standard, explicitly reported hyperparameter in the original DeepWalk paper and is widely cited consistently.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2354.0,
+            "prompt_tokens": 107,
+            "completion_tokens": 66
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1328.9,
+            "prompt_tokens": 638,
+            "completion_tokens": 118
+        },
+        "asserted_claim_count": 3,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.10044568379720052,
+        "query_entities": [
+            "DEEPWALK",
+            "Skip-gram",
+            "representation learning model"
+        ]
+    }
+}

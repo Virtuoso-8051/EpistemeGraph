@@ -1,0 +1,74 @@
+{
+  "answer": "Learning social representations typically requires four characteristics: (1) they should be low-dimensional, so the model can capture the main structure without excessive complexity; (2) they should be continuous, so similar people or communities have nearby representations; (3) they should be learnable from observed social data, such as interactions or network structure; and (4) they should preserve meaningful relational structure, so distances or directions in the latent space correspond to social similarity or community organization. Continuous latent representations are useful for community membership because community affiliation is often not strictly binary: people can belong to multiple communities, participate to different degrees, or sit near boundaries between groups. A continuous embedding can represent graded membership and overlap, making it easier to model soft, mixed, or uncertain community assignments rather than forcing a hard one-community label.",
+  "confidence": 0.78,
+  "confidence_reasoning": "The answer reflects standard ideas from representation learning and community detection, but the exact wording of the four required characteristics may vary by source, so I am moderately confident rather than certain.",
+  "triples": [
+    {
+      "source": "Learning social representation",
+      "target": "low-dimensional",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Learning social representation",
+      "target": "continuous",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Learning social representation",
+      "target": "learnable from observed social data",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Learning social representation",
+      "target": "meaningful relational structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continuous latent representation",
+      "target": "community membership",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community membership",
+      "target": "not strictly binary",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community membership",
+      "target": "graded membership",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community membership",
+      "target": "OVERLAP",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continuous embedding",
+      "target": "soft community assignment",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continuous embedding",
+      "target": "mixed community assignment",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continuous embedding",
+      "target": "uncertain community assignment",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2237900143577939
+}

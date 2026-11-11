@@ -1,0 +1,140 @@
+{
+    "user_query": "How does DeepWalk differ from graph kernels in the way it uses graph structure for classification, and what advantage does this give DeepWalk?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk uses graph structure by performing random walks to learn low-dimensional node embeddings, then uses those embeddings as features for classification. Graph kernels, by contrast, compare graphs or nodes through hand-designed structural similarity measures and typically rely on explicit feature counts or pairwise similarity computations. The main advantage of DeepWalk is that it learns task-specific, continuous representations automatically from the graph, which can capture latent structural patterns and scale better to large graphs than many kernel methods.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "This is a standard and well-established distinction in graph representation learning, and the answer stays within broadly accepted descriptions of DeepWalk and graph kernels.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "graph kernel",
+        "random walk",
+        "low-dimensional node embedding",
+        "classification",
+        "hand-designed structural similarity measure",
+        "explicit feature count",
+        "pairwise similarity computation",
+        "task-specific continuous representation",
+        "latent structural pattern",
+        "large graph",
+        "kernel method"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "graph kernel",
+        "random walk",
+        "low-dimensional node embedding",
+        "classification",
+        "hand-designed structural similarity measure",
+        "explicit feature count",
+        "pairwise similarity computation",
+        "task-specific continuous representation",
+        "latent structural pattern",
+        "large graph",
+        "kernel method",
+        "scalability to large graph"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "random walk",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random walk",
+            "target": "low-dimensional node embedding",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "low-dimensional node embedding",
+            "target": "classification",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph kernel",
+            "target": "hand-designed structural similarity measure",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph kernel",
+            "target": "explicit feature count",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph kernel",
+            "target": "pairwise similarity computation",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "task-specific continuous representation",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "latent structural pattern",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "scalability to large graph",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "kernel method",
+            "type": "OUTPERFORMS",
+            "claim_type": "SPECULATIVE"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does DeepWalk differ from graph kernels in the way it uses graph structure for classification, and what advantage does this give DeepWalk?",
+        "llm_response": "DeepWalk uses graph structure by performing random walks to learn low-dimensional node embeddings, then uses those embeddings as features for classification. Graph kernels, by contrast, compare graphs or nodes through hand-designed structural similarity measures and typically rely on explicit feature counts or pairwise similarity computations. The main advantage of DeepWalk is that it learns task-specific, continuous representations automatically from the graph, which can capture latent structural patterns and scale better to large graphs than many kernel methods.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "This is a standard and well-established distinction in graph representation learning, and the answer stays within broadly accepted descriptions of DeepWalk and graph kernels.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "extract_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "asserted_claim_count": 9,
+        "speculative_claim_count": 1,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.1,
+        "token_nll": 0.1991140896216371,
+        "query_entities": [
+            "DEEPWALK",
+            "graph kernel",
+            "random walk",
+            "low-dimensional node embedding",
+            "classification",
+            "hand-designed structural similarity measure",
+            "explicit feature count",
+            "pairwise similarity computation",
+            "task-specific continuous representation",
+            "latent structural pattern",
+            "large graph",
+            "kernel method"
+        ]
+    }
+}

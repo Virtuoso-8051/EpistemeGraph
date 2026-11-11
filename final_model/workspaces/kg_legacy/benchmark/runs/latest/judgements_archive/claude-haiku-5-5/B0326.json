@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI answer accepts the false premise that first-order proximity returns only semantically related words and second-order proximity mixes syntactic and semantic neighbors, reversing the paper's finding that second-order neighbors are all semantically related and first-order neighbors mix syntactic and semantic relations.",
+    "Attributes to the papers the claim that first-order neighbors are dominated by semantically linked co-occurring words, contradicting the evidence that first-order neighbors are a mixture of syntactic and semantic relations.",
+    "Attributes to the papers that second-order neighborhoods mix syntactically substitutable words with semantically related ones, which the evidence contradicts (it says second-order neighbors are all semantically related).",
+    "Cites Levy and Goldberg (2014) as analyzing first- vs. second-order similarity in this context, which is not in the provided evidence."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly states that second-order proximity returns only semantically related words while first-order returns a mixture of syntactic and semantic words, so the answer's core explanation inverts the paper's findings. The answer accepts the false premise and attributes unsupported claims to the papers, so it fails the faithfulness check.",
+  "judge_model": "claude-haiku-5-5"
+}

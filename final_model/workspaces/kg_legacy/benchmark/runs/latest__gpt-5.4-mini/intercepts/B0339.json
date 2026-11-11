@@ -1,0 +1,62 @@
+{
+  "answer": "DeepWalk\u2019s performance can drop when \u03b3 is increased enough that it reduces the number of random walks started from each node too much, especially on sparse graphs or when the embedding quality depends on having many walk samples to capture local and global co-occurrence statistics. In practice, this hurts most when the graph is small, sparse, or has limited connectivity, because fewer walks mean poorer coverage of node neighborhoods and less reliable training data for the skip-gram model.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This is a well-known tradeoff in DeepWalk between walk length/number and sampling coverage, but the exact conditions can vary by dataset and implementation.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "performance can drop",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "target": "number of random walks started from each node",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "target": "number of random walks started from each node",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "sparse graph",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "graphs with limited connectivity",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "small graph",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "fewer walk",
+      "target": "node neighborhood",
+      "type": "PRESERVES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "fewer walk",
+      "target": "local and global co-occurrence statistics",
+      "type": "PRESERVES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "fewer walk",
+      "target": "reliable training data for the Skip-gram model",
+      "type": "PRESERVES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": 0.24553485446506076
+}

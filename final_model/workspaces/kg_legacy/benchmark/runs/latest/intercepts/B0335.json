@@ -1,0 +1,56 @@
+{
+  "answer": "The question rests on a false premise. Standard DeepWalk does not use edge weights. It generates truncated random walks that step to neighbors uniformly at random, so it treats the graph as unweighted. LINE, by contrast, explicitly models edge weights: it samples edges with probability proportional to weight (using alias sampling) when optimizing its first-order and second-order proximity objectives. So edge weighting cannot be the reason DeepWalk outperforms LINE on a language network. If DeepWalk did outperform LINE there, the cause would lie elsewhere, such as its multi-hop co-occurrence (higher-order proximity) captured by random walks and skip-gram windows, hyperparameter choices, network preprocessing, or the specific evaluation setup. Variants like weighted random walks exist, but they are not the original DeepWalk. I cannot verify the specific study the question refers to, so I cannot confirm the size of any reported gap.",
+  "confidence": 0.7,
+  "confidence_reasoning": "I am fairly confident that original DeepWalk is unweighted and LINE models weights, but I cannot verify the specific language-network study or its reported results.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "edge weight",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "target": "uniform random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unweighted graph",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "alias sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "higher-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

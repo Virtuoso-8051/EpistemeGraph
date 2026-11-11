@@ -1,0 +1,68 @@
+{
+  "answer": "DeepWalk and LINE are both network embedding methods, but they emphasize different notions of proximity and are suited to different graph types. DeepWalk learns embeddings by running random walks and treating the resulting node sequences like sentences, so it mainly captures higher-order, context-based proximity: nodes that co-occur in short random-walk windows are embedded similarly. LINE, by contrast, explicitly preserves first-order proximity (direct edge relationships) and second-order proximity (similarity of neighborhood distributions), so it models both direct and neighborhood-based similarity more explicitly. In terms of network type, DeepWalk is designed primarily for homogeneous networks, where nodes are of the same type and edges are untyped. LINE is also commonly used for large-scale homogeneous networks, but it was introduced to scale efficiently to very large graphs and can be extended more naturally to handle weighted graphs and, with variants, heterogeneous settings.",
+  "confidence": 0.84,
+  "confidence_reasoning": "The core distinction about proximity is standard and well-established; the network-type statement is broadly correct but the exact scope of what each method can handle can vary by implementation and extension.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "network embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "network embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "higher-order, context-based proximity",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "homogeneous network",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "large-scale homogeneous network",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "weighted graph",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "heterogeneous setting",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2593513283494342
+}

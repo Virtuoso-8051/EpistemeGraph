@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Real-world networks are often heterogeneous and weighted or unweighted, as a reason for the requirements (not stated in the evidence)",
+    "A useful model must capture structure well enough for downstream tasks such as classification, link prediction, and visualization (not in the provided evidence)",
+    "LINE is optimized with edge sampling and negative sampling (not in the provided evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The three core requirements (first- and second-order proximity, scalability to millions of vertices and billions of edges, directed/undirected/weighted edges) match the evidence. However, the answer adds details about heterogeneity, downstream tasks, and edge/negative sampling that the provided evidence does not contain, though some are true of the LINE paper in general.",
+  "judge_model": "claude-sonnet-5-5"
+}

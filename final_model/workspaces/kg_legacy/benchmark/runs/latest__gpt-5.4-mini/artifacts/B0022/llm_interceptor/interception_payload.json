@@ -1,0 +1,151 @@
+{
+    "user_query": "Why does graph factorization outperform DeepWalk in the Wikipedia page classification results when compared with LINE-based methods?",
+    "mode": "closed_book",
+    "llm_response": "Graph factorization outperforms DeepWalk in the Wikipedia page classification results because it directly factorizes a graph proximity matrix, so it can preserve the global weighted structure of the Wikipedia link graph more faithfully than DeepWalk\u2019s random-walk-based, local co-occurrence objective. In that setting, the graph is relatively sparse and the classification signal is strongly tied to explicit link structure, which favors methods that optimize a matrix factorization objective over methods that learn embeddings indirectly from sampled walks. Compared with LINE-based methods, graph factorization also tends to capture higher-order proximity more effectively while still using the full graph information, whereas LINE mainly preserves first- or second-order local neighborhood relations. As a result, graph factorization produces embeddings that are more aligned with the class structure in Wikipedia pages, leading to better classification performance.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This explanation is consistent with the standard differences between graph factorization, DeepWalk, and LINE, but the exact empirical reason depends on the specific dataset and experimental setup.",
+    "extracted_query_entities": [
+        "graph factorization",
+        "DEEPWALK",
+        "Wikipedia page classification",
+        "Wikipedia link graph",
+        "graph proximity matrix",
+        "random-walk-based local co-occurrence objective",
+        "matrix factorization objective",
+        "LINE-based method",
+        "higher-order proximity",
+        "first-order local neighborhood relation",
+        "second-order local neighborhood relation",
+        "class structure in Wikipedia page",
+        "classification performance"
+    ],
+    "extracted_response_entities": [
+        "graph factorization",
+        "DEEPWALK",
+        "Wikipedia page classification",
+        "Wikipedia link graph",
+        "graph proximity matrix",
+        "random-walk-based local co-occurrence objective",
+        "matrix factorization objective",
+        "LINE-based method",
+        "higher-order proximity",
+        "first-order local neighborhood relation",
+        "second-order local neighborhood relation",
+        "class structure in Wikipedia page",
+        "classification performance",
+        "global weighted structure of the Wikipedia link graph",
+        "full graph information",
+        "better classification performance"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "graph factorization",
+            "target": "DEEPWALK",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "graph proximity matrix",
+            "type": "BASED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "global weighted structure of the Wikipedia link graph",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "random-walk-based local co-occurrence objective",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "matrix factorization objective",
+            "type": "OPTIMIZES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "full graph information",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE-based method",
+            "target": "first-order local neighborhood relation",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE-based method",
+            "target": "second-order local neighborhood relation",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "higher-order proximity",
+            "type": "CAPTURES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "better classification performance",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "class structure in Wikipedia page",
+            "type": "ALIGNS_WITH",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why does graph factorization outperform DeepWalk in the Wikipedia page classification results when compared with LINE-based methods?",
+        "llm_response": "Graph factorization outperforms DeepWalk in the Wikipedia page classification results because it directly factorizes a graph proximity matrix, so it can preserve the global weighted structure of the Wikipedia link graph more faithfully than DeepWalk\u2019s random-walk-based, local co-occurrence objective. In that setting, the graph is relatively sparse and the classification signal is strongly tied to explicit link structure, which favors methods that optimize a matrix factorization objective over methods that learn embeddings indirectly from sampled walks. Compared with LINE-based methods, graph factorization also tends to capture higher-order proximity more effectively while still using the full graph information, whereas LINE mainly preserves first- or second-order local neighborhood relations. As a result, graph factorization produces embeddings that are more aligned with the class structure in Wikipedia pages, leading to better classification performance.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This explanation is consistent with the standard differences between graph factorization, DeepWalk, and LINE, but the exact empirical reason depends on the specific dataset and experimental setup.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "extract_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "asserted_claim_count": 11,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2826255101423997,
+        "query_entities": [
+            "graph factorization",
+            "DEEPWALK",
+            "Wikipedia page classification",
+            "Wikipedia link graph",
+            "graph proximity matrix",
+            "random-walk-based local co-occurrence objective",
+            "matrix factorization objective",
+            "LINE-based method",
+            "higher-order proximity",
+            "first-order local neighborhood relation",
+            "second-order local neighborhood relation",
+            "class structure in Wikipedia page",
+            "classification performance"
+        ]
+    }
+}

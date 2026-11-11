@@ -1,0 +1,50 @@
+{
+  "answer": "Under second-order proximity, LINE gives each vertex two separate embedding vectors: a vertex embedding and a context embedding. The vertex embedding is used when the node is treated as a vertex in its own right, and the context embedding is used when the node acts as a specific 'context' for other vertices. So a vertex plays two roles: a node in the network, and a context (neighbor) for the other nodes it is linked to.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am fairly sure this matches LINE's (Tang et al., 2015) second-order formulation with separate vertex and context vectors, though I'm recalling the exact wording from memory.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "vertex embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "context embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "vertex embedding",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "context embedding",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex embedding",
+      "target": "VERTEX",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context embedding",
+      "target": "node representation",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "VERTEX",
+      "target": "node representation",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

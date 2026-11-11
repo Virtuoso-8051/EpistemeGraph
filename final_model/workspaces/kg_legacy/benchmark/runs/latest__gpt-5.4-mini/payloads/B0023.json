@@ -1,0 +1,114 @@
+{
+    "user_query": "Why can DeepWalk\u2019s learned representations be shared among tasks, and what kind of classifier can achieve strong performance with them?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk learns node embeddings in an unsupervised way from the graph structure alone, so the representations are not tied to any single downstream task and can be reused across different tasks. With these embeddings, even a simple linear classifier such as logistic regression can achieve strong performance.",
+    "llm_self_reported_accuracy": 0.96,
+    "llm_confidence_reasoning": "This is a well-established property of DeepWalk: it produces task-agnostic graph embeddings, and linear classifiers are commonly reported to work well on top of them.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "node embedding",
+        "graph structure",
+        "downstream task",
+        "linear classifier",
+        "logistic regression"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "node embedding",
+        "graph structure",
+        "downstream task",
+        "linear classifier",
+        "logistic regression",
+        "unsupervised way",
+        "not tied to any single downstream task",
+        "different task",
+        "strong performance",
+        "these embedding"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "node embedding",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "unsupervised way",
+            "type": "APPROXIMATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "node embedding",
+            "target": "graph structure",
+            "type": "BASED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "node embedding",
+            "target": "not tied to any single downstream task",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "node embedding",
+            "target": "different task",
+            "type": "GENERALIZES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "linear classifier",
+            "target": "logistic regression",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "logistic regression",
+            "target": "strong performance",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "logistic regression",
+            "target": "these embedding",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why can DeepWalk\u2019s learned representations be shared among tasks, and what kind of classifier can achieve strong performance with them?",
+        "llm_response": "DeepWalk learns node embeddings in an unsupervised way from the graph structure alone, so the representations are not tied to any single downstream task and can be reused across different tasks. With these embeddings, even a simple linear classifier such as logistic regression can achieve strong performance.",
+        "llm_extraction_confidence": 0.96,
+        "llm_confidence_reasoning": "This is a well-established property of DeepWalk: it produces task-agnostic graph embeddings, and linear classifiers are commonly reported to work well on top of them.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1629.6,
+            "prompt_tokens": 113,
+            "completion_tokens": 107
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1850.4,
+            "prompt_tokens": 680,
+            "completion_tokens": 267
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.15378306171681622,
+        "query_entities": [
+            "DEEPWALK",
+            "node embedding",
+            "graph structure",
+            "downstream task",
+            "linear classifier",
+            "logistic regression"
+        ]
+    }
+}

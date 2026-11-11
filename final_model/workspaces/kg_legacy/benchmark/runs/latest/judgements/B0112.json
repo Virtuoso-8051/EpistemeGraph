@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "DeepWalk uses skip-gram with hierarchical softmax (evidence only shows a binary tree and SkipGram, not explicitly hierarchical softmax)",
+    "The frequency distribution of vertices visited by short random walks follows a power law similar to word frequencies (not in provided evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims (vertices as words, truncated random walks as sentences, skip-gram embeddings, window co-occurrence) are supported by the evidence. The power-law claim is not in the excerpts, though it is a real finding of the paper. Hierarchical softmax is only implied by the binary tree in Algorithm 1, so it is a minor addition.",
+  "judge_model": "claude-sonnet-5-5"
+}

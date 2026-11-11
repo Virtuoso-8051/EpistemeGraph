@@ -1,0 +1,38 @@
+{
+  "answer": "Node2vec's performance degrades only modestly when random noisy edges are added between randomly selected node pairs, so its embeddings stay fairly useful for downstream tasks such as node classification or link prediction. This robustness matters in applications built on noisy or incomplete networks, such as biological networks (for example protein-protein interaction networks), where spurious or missing interactions are common.",
+  "confidence": 0.5,
+  "confidence_reasoning": "I am not certain which specific paper or experiment the question refers to, so the exact magnitude of the performance change and the named application are inferred from general knowledge rather than verified.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "Node Classification",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Node Classification",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Link Prediction",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biological network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "biological network",
+      "target": "protein-protein interaction network",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

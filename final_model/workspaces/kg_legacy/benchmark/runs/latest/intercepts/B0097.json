@@ -1,0 +1,68 @@
+{
+  "answer": "In node2vec, the search bias parameters (return parameter p and in-out parameter q) control the random walk. DFS-like exploration becomes useful when the in-out parameter q is small (q < 1), which biases the walk to move outward and explore deeper parts of the graph; this lets the sampled neighborhood capture macro-level, structural equivalence (roles based on the network's global position, e.g., hubs or bridges). The drawback is that when the walk goes to greater depths, it is prone to sampling nodes that are far from the source, so the embedding captures a broader, less local context and becomes less representative of the immediate neighborhood, and the walk may wander into distant parts of the graph, weakening the homophily (community/local similarity) signal. In short, DFS-like walks help with structural roles but, at greater depth, lose local neighborhood fidelity and can become noisy.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The general node2vec picture (small q favors DFS-like outward exploration capturing structural equivalence) is well established, but the exact wording of the depth drawback is my paraphrase and may not match the source's specific claim.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "NP",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NP",
+      "target": "in-out parameter q",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "target": "NODE2VEC",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "target": "outward exploration of the graph",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "target": "structural equivalence",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "target": "greater depth sampling leads to distant node",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "greater depth sampling",
+      "target": "broader less local context",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like walk",
+      "target": "structural role",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like walks at greater depth",
+      "target": "noisy embedding",
+      "type": "GENERATES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "greater depth random walk",
+      "target": "homophily",
+      "type": "PRESERVE",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

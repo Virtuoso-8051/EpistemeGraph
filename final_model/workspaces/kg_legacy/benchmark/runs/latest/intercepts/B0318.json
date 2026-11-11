@@ -1,0 +1,32 @@
+{
+  "answer": "Probably when the context is not limited to a local window around each vertex. If the window spans the entire walk or sentence, so that every other token counts as context, the objective becomes the joint likelihood of the whole sequence rather than a per-vertex likelihood from nearby neighbors. I could not identify which 'paper3' is meant, so this is a best inference from the DeepWalk-style skip-gram setup.",
+  "confidence": 0.25,
+  "confidence_reasoning": "The referenced paper is unidentified and the answer is inferred from general knowledge of skip-gram/DeepWalk-style objectives, so the specific claim may not match the intended paper.",
+  "triples": [
+    {
+      "source": "context window spanning entire walk or sentence",
+      "target": "joint likelihood of whole word sequence",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "joint likelihood of whole word sequence",
+      "type": "OPTIMIZES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "joint likelihood of whole word sequence",
+      "target": "likelihood",
+      "type": "DEFINED_AS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram model",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

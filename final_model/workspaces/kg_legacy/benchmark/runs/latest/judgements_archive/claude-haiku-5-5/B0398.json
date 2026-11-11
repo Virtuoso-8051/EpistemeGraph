@@ -1,0 +1,14 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "Node2vec's p and q parameters trade off breadth-first and depth-first exploration (the evidence does not mention p and q parameters; it only says DFS/BFS-style trade-off is discussed)",
+    "The claim that uniform DeepWalk walks explore the neighborhood broadly and place same-community nodes close together is attributed to the papers without direct support in the evidence",
+    "The claim that LINE's edge sampling is stochastic and has variance is not stated in the evidence",
+    "The claim that different random walks yield different embeddings across runs is an inference not stated in the evidence",
+    "The claim that DeepWalk's uniform walks cause the homophily effect is not stated in the evidence"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that LINE uses uniform random walks, which matches the passage's statement that DeepWalk uses uniform random walks and LINE is primarily breadth-first over 1-hop and 2-hop neighbors. However, it misattributes the homophily/high-variance discussion to DeepWalk instead of DFS, and adds several unsupported specifics such as node2vec's p and q parameters and variance claims about LINE's edge sampling.",
+  "judge_model": "claude-haiku-5-5"
+}

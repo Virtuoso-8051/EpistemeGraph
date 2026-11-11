@@ -1,0 +1,44 @@
+{
+  "answer": "DeepWalk uses short random walks on the graph as its input, treating the resulting vertex sequences like sentences. The learned latent representation encodes local neighborhood structure and broader graph proximity/co-occurrence patterns, so vertices that appear in similar random-walk contexts get similar embeddings.",
+  "confidence": 0.97,
+  "confidence_reasoning": "This is a well-established description of DeepWalk and matches the original method: random-walk vertex sequences are used to learn embeddings that preserve graph neighborhood/co-occurrence information.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "vertex sequence",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex sequence",
+      "target": "like sentence",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned latent representation",
+      "target": "local neighborhood structure",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned latent representation",
+      "target": "broader graph proximity/co-occurrence pattern",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertices that appear in similar random-walk context",
+      "target": "similar embedding",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.19423229859607055
+}

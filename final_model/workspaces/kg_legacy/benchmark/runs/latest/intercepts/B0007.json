@@ -1,0 +1,80 @@
+{
+  "answer": "Classic dimensionality reduction methods such as Principal Component Analysis (PCA) and Multi-Dimensional Scaling (MDS) are considered expensive for large real-world networks because they operate on dense matrix representations of the graph (e.g., adjacency, Laplacian, or pairwise distance/similarity matrices) and rely on eigen-decomposition or singular value decomposition of these matrices. Their time complexity is roughly cubic in the number of nodes (or at least quadratic in memory for storing the dense matrices), which becomes computationally and memory prohibitive for networks with millions of nodes and edges. Because of this scalability bottleneck, they are impractical for large sparse, real-world graphs. In terms of prediction performance, their latent representations do reasonably well on small networks, achieving competitive results on tasks such as node classification and link prediction, but they are generally outperformed by more scalable neural and random-walk-based embedding methods (e.g., DeepWalk, node2vec, LINE), which capture higher-order proximity and non-linear structure more effectively.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The scalability explanation is well established, but the exact characterization of their prediction performance relative to other methods is drawn from general literature recollection and may not match the specific source the question targets.",
+  "triples": [
+    {
+      "source": "Principal Component Analysis",
+      "target": "eigen-decomposition",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "target": "singular value decomposition",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Multi-Dimensional Scaling",
+      "target": "dense matrix representation of graph",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "target": "dense matrix representation of graph",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "target": "cubic time complexity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "target": "dimensionality reduction technique",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Multi-Dimensional Scaling",
+      "target": "dimensionality reduction technique",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "target": "small network",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Principal Component Analysis",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Principal Component Analysis",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "Principal Component Analysis",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "higher-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,74 @@
+{
+  "answer": "The passage says a desirable embedding model for real-world information networks must satisfy multiple requirements because such networks are large, sparse, and often contain both local and global structural information, so a useful model has to preserve different kinds of relationships at once rather than only one. For LINE, the requirements are that it should preserve first-order proximity (direct pairwise connections), second-order proximity (similarity of neighborhood distributions for nodes that are not directly connected), and it should be scalable to very large networks while handling sparsity effectively.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This answer matches the standard description of LINE in the cited context, though exact wording may vary slightly across versions of the passage.",
+  "triples": [
+    {
+      "source": "real-world information network",
+      "target": "LARGE",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information network",
+      "target": "SPARSE",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information network",
+      "target": "local and global structural information",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "desirable embedding model for real-world information network",
+      "target": "different kinds of relationship",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "direct pairwise connection",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "similarity of neighborhood distribution",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "nodes that are not directly connected",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "large network",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "SPARSITY",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.22352237432775363
+}

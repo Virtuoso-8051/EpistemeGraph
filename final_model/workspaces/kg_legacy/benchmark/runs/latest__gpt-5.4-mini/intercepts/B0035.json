@@ -1,0 +1,50 @@
+{
+  "answer": "In the streaming setting, DeepWalk can still build a Hierarchical Softmax tree as long as the graph is being processed in a way that allows the vocabulary/tree to be updated incrementally rather than requiring a full rebuild from scratch. In practice, this means the method can continue using hierarchical softmax when new vertices arrive and the model can extend the tree to include them. New vertices are handled by inserting them into the existing structure and assigning them a place in the tree, so the tree grows to accommodate the new nodes instead of discarding the old one and rebuilding everything.",
+  "confidence": 0.42,
+  "confidence_reasoning": "This answer reflects the general idea of incremental tree extension for streaming DeepWalk, but the exact implementation details depend on the specific paper or system and I am not fully certain of the precise conditions and update procedure.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "streaming setting",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vocabulary/tree",
+      "target": "TREE",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vocabulary/tree",
+      "target": "incrementally updated",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "new vertice",
+      "target": "tree growth",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "new vertice",
+      "target": "existing structure",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "new vertice",
+      "target": "place in the tree",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.25798738919771635
+}

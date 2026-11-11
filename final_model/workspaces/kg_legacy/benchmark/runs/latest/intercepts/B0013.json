@@ -1,0 +1,56 @@
+{
+  "answer": "The passage most likely says edge sampling helps LINE's training because it turns a weighted network into a set of binary edges. Edges are sampled with probability proportional to their weights, and each sampled edge is treated as a unit-weight training example in stochastic gradient descent. This avoids the gradient explosion and high-variance updates that large or widely varying edge weights would cause, and it makes each update cheap and the optimization more stable and efficient. The passage itself was not provided, so this is based on the original LINE method rather than the specific text.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The passage was not supplied, so the answer relies on my recollection of the original LINE paper's edge-sampling rationale, which I believe is accurate but may not match the passage's exact wording.",
+  "triples": [
+    {
+      "source": "edge sampling",
+      "target": "LINE",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "edge sampling",
+      "target": "binary edge",
+      "type": "MAPS_TO",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "edge sampling",
+      "target": "sampling strategy",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "target": "effective sampling rate",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "edge sampling",
+      "target": "stochastic gradient descent",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "target": "unweighted edge",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "edge sampling",
+      "target": "optimization stability",
+      "type": "IMPROVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "edge sampling",
+      "target": "gradient explosion",
+      "type": "PRESERVES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,73 @@
+{
+    "user_query": "Which specific datasets did DeepWalk use for the large heterogeneous graph classification experiments, and how many nodes were in each dataset?",
+    "mode": "closed_book",
+    "llm_response": "In the large heterogeneous graph classification experiments, DeepWalk used the following datasets: BlogCatalog (10,312 nodes), Flickr (80,513 nodes), and YouTube (1,138,499 nodes).",
+    "llm_self_reported_accuracy": 0.98,
+    "llm_confidence_reasoning": "These dataset names and node counts are directly reported in the DeepWalk paper\u2019s experimental section and are widely cited consistently.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "BlogCatalog",
+        "FLICKR",
+        "YOUTUBE"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "BlogCatalog",
+        "FLICKR",
+        "YOUTUBE"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "BlogCatalog",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "FLICKR",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "YOUTUBE",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Which specific datasets did DeepWalk use for the large heterogeneous graph classification experiments, and how many nodes were in each dataset?",
+        "llm_response": "In the large heterogeneous graph classification experiments, DeepWalk used the following datasets: BlogCatalog (10,312 nodes), Flickr (80,513 nodes), and YouTube (1,138,499 nodes).",
+        "llm_extraction_confidence": 0.98,
+        "llm_confidence_reasoning": "These dataset names and node counts are directly reported in the DeepWalk paper\u2019s experimental section and are widely cited consistently.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1772.8,
+            "prompt_tokens": 113,
+            "completion_tokens": 91
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 5648.6,
+            "prompt_tokens": 674,
+            "completion_tokens": 123
+        },
+        "asserted_claim_count": 3,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.09687322302709651,
+        "query_entities": [
+            "DEEPWALK",
+            "BlogCatalog",
+            "FLICKR",
+            "YOUTUBE"
+        ]
+    }
+}

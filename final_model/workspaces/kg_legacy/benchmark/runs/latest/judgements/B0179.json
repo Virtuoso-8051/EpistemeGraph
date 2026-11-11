@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The paper does not report Common Neighbors, Jaccard's Coefficient, Adamic-Adar, or Preferential Attachment baselines (contradicted by evidence: the paper evaluates node2vec against these heuristic scores, and Table 3 defines them).",
+    "Those heuristic numbers may come from a different paper (speculation contradicted by evidence that the node2vec paper includes these baselines)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give exact numbers. However, it wrongly says the node2vec paper does not report these heuristic baselines, when the evidence shows the paper evaluates them (only the exact PPI numbers are missing from the passage). It also wrongly describes Table 3 as results; in the paper Table 3 defines the heuristic scores.",
+  "judge_model": "claude-sonnet-5-5"
+}

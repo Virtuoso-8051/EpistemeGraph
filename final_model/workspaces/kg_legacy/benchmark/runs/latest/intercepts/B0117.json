@@ -1,0 +1,50 @@
+{
+  "answer": "LINE (Tang et al., 2015) evaluated on citation networks of two kinds: a paper citation network, where papers are nodes and citation links are edges, and an author citation network, where authors are nodes. The author citation network records citation relationships between authors, with edges linking authors whose papers cite each other, typically weighted by the number of such citations. I am not certain of the exact dataset names or edge-weighting details used in the paper.",
+  "confidence": 0.4,
+  "confidence_reasoning": "I recall the general structure (paper and author citation networks, likely from DBLP/arXiv) but am unsure of the exact datasets and how edges were defined and weighted.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "paper citation network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "author citation network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper citation network",
+      "target": "citation network",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper citation network",
+      "target": "citation links as edge",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "author citation network",
+      "target": "citation relationships between author",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "author citation network",
+      "target": "authors as node",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "author citation network",
+      "target": "weighted network",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

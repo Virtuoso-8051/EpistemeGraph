@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "In a streaming setting the tree can be built from early-stream counts, degree-based estimates, or periodic rebuilds (the paper only says frequency may be estimated a priori).",
+    "Hierarchical softmax remains valid for any tree shape so a stale tree only affects efficiency, not correctness (not stated in the evidence).",
+    "Graph frequency distributions are typically skewed and fairly stable, so codes stay close to optimal (not in the evidence).",
+    "Expected code length tracks the entropy of the vertex frequency distribution (not in the evidence)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer's core matches the reference: Huffman coding stays usable if vertex frequency can be estimated, and it speeds access to frequent vertices. However, it adds several specifics not in the evidence, such as the estimation methods, the stability of the distributions, and the entropy-tracking claim. The O(|V|) to O(log|V|) cost claim is textbook background and is fine.",
+  "judge_model": "claude-sonnet-5-5"
+}

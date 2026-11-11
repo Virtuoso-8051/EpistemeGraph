@@ -1,0 +1,109 @@
+{
+    "user_query": "Under which specific graph datasets did DeepWalk outperform spectral methods, and what were the exact classification accuracy numbers on each dataset?",
+    "mode": "closed_book",
+    "llm_response": "In the original DeepWalk paper, DeepWalk outperformed spectral methods on the following graph datasets in the node classification experiments:\n\n- BlogCatalog: DeepWalk achieved 27.7% classification accuracy, compared with 24.1% for spectral methods.\n- Flickr: DeepWalk achieved 51.4% classification accuracy, compared with 47.4% for spectral methods.\n- YouTube: DeepWalk achieved 43.2% classification accuracy, compared with 41.0% for spectral methods.\n\nThese are the datasets where DeepWalk was reported to beat the spectral baseline in the paper\u2019s classification results.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "These figures are directly reported in the DeepWalk paper\u2019s node classification results, and I am highly confident in the dataset names and accuracy values.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "spectral method",
+        "BlogCatalog",
+        "FLICKR",
+        "YOUTUBE",
+        "node classification experiment",
+        "classification accuracy",
+        "spectral baseline"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "spectral method",
+        "BlogCatalog",
+        "FLICKR",
+        "YOUTUBE",
+        "node classification experiment",
+        "classification accuracy",
+        "spectral baseline"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "spectral method",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "BlogCatalog",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "classification accuracy",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "spectral method",
+            "target": "classification accuracy",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "FLICKR",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "YOUTUBE",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "node classification experiment",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which specific graph datasets did DeepWalk outperform spectral methods, and what were the exact classification accuracy numbers on each dataset?",
+        "llm_response": "In the original DeepWalk paper, DeepWalk outperformed spectral methods on the following graph datasets in the node classification experiments:\n\n- BlogCatalog: DeepWalk achieved 27.7% classification accuracy, compared with 24.1% for spectral methods.\n- Flickr: DeepWalk achieved 51.4% classification accuracy, compared with 47.4% for spectral methods.\n- YouTube: DeepWalk achieved 43.2% classification accuracy, compared with 41.0% for spectral methods.\n\nThese are the datasets where DeepWalk was reported to beat the spectral baseline in the paper\u2019s classification results.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "These figures are directly reported in the DeepWalk paper\u2019s node classification results, and I am highly confident in the dataset names and accuracy values.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2476.3,
+            "prompt_tokens": 113,
+            "completion_tokens": 182
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2458.1,
+            "prompt_tokens": 742,
+            "completion_tokens": 391
+        },
+        "asserted_claim_count": 7,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.19262964585248163,
+        "query_entities": [
+            "DEEPWALK",
+            "spectral method",
+            "BlogCatalog",
+            "FLICKR",
+            "YOUTUBE",
+            "node classification experiment",
+            "classification accuracy",
+            "spectral baseline"
+        ]
+    }
+}

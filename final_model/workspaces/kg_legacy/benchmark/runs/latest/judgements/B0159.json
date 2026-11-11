@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The streaming variant updates existing embeddings incrementally without full retraining, embedding new nodes on arrival at much lower cost.",
+    "The streaming variant treats the network as a sequence of arriving edges or nodes.",
+    "Node2vec requires rerunning walks and retraining on the whole graph to incorporate new nodes or edges (stated as the paper's description)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly captures that the streaming variant handles an evolving network, and the evidence supports node2vec's biased walks with p and q. However, the evidence says only that features can be trained on an evolving network without explicitly constructing the whole graph, and the answer instead asserts incremental updates and lower cost, which the evidence does not state. It also omits the web-scale classification point.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,68 @@
+{
+  "answer": "DeepWalk generalizes neural language models by replacing word sequences with random walks over a graph: it treats nodes like words and short random-walk neighborhoods like sentences, then learns embeddings using the same kind of skip-gram objective used in neural language models. Given a graph as input, DeepWalk produces a low-dimensional vector representation (embedding) for each node in the graph.",
+  "confidence": 0.98,
+  "confidence_reasoning": "This is a standard, well-established description of DeepWalk and its output, and I am highly confident it is correct.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "neural language model",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "NODE",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "WORD",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "short random-walk neighborhood",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "SENTENCE",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "low-dimensional vector representation",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "GRAPH",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "embedding for each node in the graph",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.12553702081952775
+}

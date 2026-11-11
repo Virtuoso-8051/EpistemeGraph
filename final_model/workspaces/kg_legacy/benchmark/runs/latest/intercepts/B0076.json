@@ -1,0 +1,50 @@
+{
+  "answer": "I could not identify the specific study this question refers to, so this is a low-confidence inference rather than a verified finding. The most plausible reading is that LINE beat node2vec mainly under the distance-based edge operators (Weighted-L1 and Weighted-L2), while node2vec tended to win with the Hadamard and Average operators. The operators involved would therefore be the distance-based ones.",
+  "confidence": 0.2,
+  "confidence_reasoning": "I could not pin down the source paper, so the specific condition and operator types are an uncertain inference from the standard node2vec operator set (Average, Hadamard, Weighted-L1, Weighted-L2).",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "NODE2VEC",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "Weighted-L1",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "Weighted-L2",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Hadamard operator",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Average operator",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Weighted-L1",
+      "target": "distance-based edge operator",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Weighted-L2",
+      "target": "distance-based edge operator",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

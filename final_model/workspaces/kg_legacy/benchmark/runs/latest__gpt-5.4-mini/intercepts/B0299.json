@@ -1,0 +1,38 @@
+{
+  "answer": "LINE(1st) beats LINE(2nd) when the graph setting is dominated by first-order proximity, i.e., when preserving direct edge relationships is more important than preserving neighborhood similarity. In that stronger first-order-proximity regime, LINE(1st) performs better on both semantic and syntactic analogy tasks than LINE(2nd).",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a high-level summary of the reported comparison, but the exact experimental conditions and dataset details are not fully specified in the question, so there is some uncertainty.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "semantic analogy",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "syntactic analogy",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "direct edge relationship",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "stronger setting",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood similarity",
+      "target": "weaker setting",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.16740308958908606
+}

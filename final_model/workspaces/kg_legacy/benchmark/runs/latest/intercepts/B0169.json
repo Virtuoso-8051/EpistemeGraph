@@ -1,0 +1,44 @@
+{
+  "answer": "The node2vec paper (Grover & Leskovec, KDD 2016) does not report an exact training hardware setup, so the GPU model, CPU type, and RAM amount cannot be stated from the source. The method optimizes its skip-gram objective with stochastic gradient descent, as in word2vec, and the reference implementations are CPU-based, so no GPU was needed. Any specific hardware details would be unsupported by the paper.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am fairly sure the original paper lacks hardware specifications and that the method is CPU-based SGD, but I cannot verify every detail of the paper or its supplementary materials from memory.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "exact training hardware setup",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram objective",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram objective",
+      "target": "stochastic gradient descent",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "WORD2VEC",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec reference implementation",
+      "target": "CPU",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec reference implementation",
+      "target": "GPU",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

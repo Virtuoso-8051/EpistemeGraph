@@ -1,0 +1,56 @@
+{
+  "answer": "LINE(1st) and LINE-SGD(1st) use the first-order proximity objective, which models the probability of an edge between two vertices as a symmetric function of their embeddings (for example, the sigmoid of the inner product, p1(vi,vj) = sigmoid(ui\u00b7uj)) and is trained by matching this to the empirical edge weight. Because the first-order proximity is defined over undirected pairs and the joint distribution is symmetric, the formulation does not distinguish the direction of an edge. The premise in the question is therefore mistaken: LINE(1st) and LINE-SGD(1st) are designed for undirected graphs, not directed ones. In the original LINE paper (Tang et al., 2015), first-order proximity is explicitly intended for undirected networks, while second-order proximity is the one that handles directed edges, using separate vertex and context embeddings.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident that first-order LINE is described as suited to undirected graphs and that the question's premise is inverted, but I am recalling the paper's framing from memory and the question's intended answer could rest on a specific source wording I cannot verify.",
+  "triples": [
+    {
+      "source": "LINE-SGD",
+      "target": "first-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "undirected graph",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "undirected graph",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "undirected graph",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "directed graph",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "undirected graph",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "directed graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

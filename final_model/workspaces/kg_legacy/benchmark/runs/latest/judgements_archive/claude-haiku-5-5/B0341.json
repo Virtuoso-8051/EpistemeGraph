@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI answer accepts the false premise that LINE(2nd) beats LINE(1st) on social network classification; the evidence states LINE(1st) is slightly better than LINE(2nd) on the social network (Flickr) task, and that first-order proximity is still more important there.",
+    "The claim that second-order proximity captures the useful signal for label prediction on these social network datasets, so neighborhood-overlap carries more signal than direct adjacency, contradicts the paper's stated conclusion that first-order proximity is more important in social networks."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer builds its core explanation on the false premise that LINE(2nd) outperforms LINE(1st) on the social network task and that second-order proximity is more important there, when the source explicitly says the opposite. Although it correctly notes that concatenation is complementary, its main reasoning contradicts the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

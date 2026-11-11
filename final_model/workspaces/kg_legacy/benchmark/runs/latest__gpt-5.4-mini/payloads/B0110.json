@@ -1,0 +1,140 @@
+{
+    "user_query": "Why is graph factorization described as scalable to large networks, and what graph type restriction does it have?",
+    "mode": "closed_book",
+    "llm_response": "Graph factorization is described as scalable to large networks because it learns low-dimensional representations by factorizing a graph-related matrix, which can be done efficiently with linear or near-linear methods and avoids expensive operations on the full graph. Its main graph-type restriction is that it is typically formulated for simple, undirected graphs, so it does not directly handle directed or multi-relational graphs without modification.",
+    "llm_self_reported_accuracy": 0.84,
+    "llm_confidence_reasoning": "This is a standard description of graph factorization methods, though exact scalability claims and graph-type restrictions can vary somewhat by specific formulation.",
+    "extracted_query_entities": [
+        "graph factorization",
+        "large network",
+        "graph-related matrix",
+        "linear method",
+        "near-linear method",
+        "full graph",
+        "simple, undirected graph",
+        "directed graph",
+        "multi-relational graph"
+    ],
+    "extracted_response_entities": [
+        "graph factorization",
+        "large network",
+        "graph-related matrix",
+        "linear method",
+        "near-linear method",
+        "full graph",
+        "simple, undirected graph",
+        "directed graph",
+        "multi-relational graph",
+        "low-dimensional representation",
+        "factorizing a graph-related matrix",
+        "avoids expensive operations on the full graph",
+        "modification"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "graph factorization",
+            "target": "large network",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "graph-related matrix",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "low-dimensional representation",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "factorizing a graph-related matrix",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "linear method",
+            "target": "graph factorization",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "near-linear method",
+            "target": "graph factorization",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "avoids expensive operations on the full graph",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "simple, undirected graph",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "modification",
+            "type": "REQUIRES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "directed graph",
+            "type": "DOES_NOT_DIRECTLY_HANDLE",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "multi-relational graph",
+            "type": "DOES_NOT_DIRECTLY_HANDLE",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why is graph factorization described as scalable to large networks, and what graph type restriction does it have?",
+        "llm_response": "Graph factorization is described as scalable to large networks because it learns low-dimensional representations by factorizing a graph-related matrix, which can be done efficiently with linear or near-linear methods and avoids expensive operations on the full graph. Its main graph-type restriction is that it is typically formulated for simple, undirected graphs, so it does not directly handle directed or multi-relational graphs without modification.",
+        "llm_extraction_confidence": 0.84,
+        "llm_confidence_reasoning": "This is a standard description of graph factorization methods, though exact scalability claims and graph-type restrictions can vary somewhat by specific formulation.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1877.3,
+            "prompt_tokens": 110,
+            "completion_tokens": 123
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2315.4,
+            "prompt_tokens": 695,
+            "completion_tokens": 414
+        },
+        "asserted_claim_count": 11,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.24455427512144431,
+        "query_entities": [
+            "graph factorization",
+            "large network",
+            "graph-related matrix",
+            "linear method",
+            "near-linear method",
+            "full graph",
+            "simple, undirected graph",
+            "directed graph",
+            "multi-relational graph"
+        ]
+    }
+}

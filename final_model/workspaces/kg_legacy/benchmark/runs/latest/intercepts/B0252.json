@@ -1,0 +1,62 @@
+{
+  "answer": "The premise is incorrect. DeepWalk does not use node labels as supervised targets. It is an unsupervised method: it generates truncated random walks over the graph, treats each walk as a 'sentence' of node tokens, and trains a skip-gram model (with hierarchical softmax) to predict a node's context nodes within a window. Labels are used only afterward, to evaluate the embeddings, for example by training a classifier such as logistic regression on them for node classification.\n\nDeepWalk can still produce embeddings that reflect community structure, but for a different reason. Random walks tend to stay within densely connected regions, so nodes in the same community co-occur in walks more often. Skip-gram, which maximizes the likelihood of observed co-occurrences, therefore places such nodes close together in the embedding space. The result is that nodes in the same community get similar vectors, which makes clustering effective. This comes from the graph's topology and the walk-based co-occurrence objective, not from label supervision.",
+  "confidence": 0.9,
+  "confidence_reasoning": "I am confident that DeepWalk (Perozzi et al., 2014) is unsupervised, uses random walks with skip-gram, and that labels are only used in downstream evaluation, though I'm summarizing from memory without checking the paper.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "Labels of Node",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unsupervised method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Labels of Node",
+      "target": "node classification",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Random walk",
+      "target": "community structure",
+      "type": "PRESERVE",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "likelihood of observed co-occurrence",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Community detection",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

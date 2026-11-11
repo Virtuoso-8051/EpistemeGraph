@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "Node2vec reuses samples through precomputed alias tables for its biased second-order transitions. The evidence does not mention alias tables; the answer flags this as an unconfirmed inference."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core attributions are correct: LINE(2nd) is evaluated on word analogy using the Wikipedia word network, and node2vec's random-walk sampling reuses samples across source nodes, as the second paper's text states. The added mechanism about alias tables is not in the provided evidence, though the answer hedges it as inference.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,44 @@
+{
+  "answer": "Zero. Table 1 of the node2vec paper (Grover & Leskovec, 2016) already lists the binary operators the method uses for edge features: Average, Hadamard, Weighted-L1, and Weighted-L2. I am not aware of any additional operators the paper or its reference implementation supports beyond these four.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly sure the paper's edge-feature operators are those four and that none are added elsewhere, but I am recalling this from memory and the question's framing may imply a different count.",
+  "triples": [
+    {
+      "source": "Table 1",
+      "target": "binary operator",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "AVERAGE",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Hadamard operator",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Weighted-L1",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Weighted-L2",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "binary operator",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

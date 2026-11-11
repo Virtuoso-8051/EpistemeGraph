@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Claim that node2vec uses biased second-order random walks with return parameter p and in-out parameter q interpolating BFS/DFS, capturing structural equivalence vs homophily, is not in the provided evidence (though it is well-known from the paper).",
+    "Claim that logistic regression is the downstream classifier is not in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and states the neighborhood log-probability objective with negative sampling, matching the evidence. The remaining details (p/q, BFS/DFS, homophily vs structural equivalence, logistic regression) are not in the excerpt but are accurate, standard node2vec background.",
+  "judge_model": "claude-sonnet-5-5"
+}

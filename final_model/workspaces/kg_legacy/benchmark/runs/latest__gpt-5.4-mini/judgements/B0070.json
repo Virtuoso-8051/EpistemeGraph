@@ -1,0 +1,11 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "DeepWalk characterizes its search strategy as a set of short, truncated random walks over the network, which are used to sample local neighborhoods in a way analogous to sentences in language modeling.",
+    "The passage identifies a limitation of this strategy: because the walks are local and finite, they may fail to capture broader, more global structural relationships in the network."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence supports that DeepWalk proposes search using uniform random walks and that the limitation is lack of control over explored neighborhoods. However, the answer adds unsupported details about truncated walks, sentence-like sampling, and a broader limitation about missing global structure, which are not stated in the provided passage.",
+  "judge_model": "gpt-5.4-mini"
+}

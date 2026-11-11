@@ -1,0 +1,32 @@
+{
+  "answer": "I could not reliably recall the exact figure. My best recollection is that the node2vec paper (Grover & Leskovec, KDD 2016) reports preprocessing for a graph with about 10 million edges taking on the order of minutes on a single multi-core commodity machine, but I cannot confirm the specific duration or the exact hardware specification. Please check Section 4 (Scalability) of the paper.",
+  "confidence": 0.15,
+  "confidence_reasoning": "I have only a vague memory of the scalability section and cannot verify the specific timing or hardware details, so the answer is likely incorrect or imprecise.",
+  "triples": [
+    {
+      "source": "node2vec paper",
+      "target": "NODE2VEC",
+      "type": "PROPOSES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "preprocessing on a graph with about 10 million edge",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "preprocessing on a graph with about 10 million edge",
+      "target": "optimization time on the order of minute",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "single multi-core commodity machine",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

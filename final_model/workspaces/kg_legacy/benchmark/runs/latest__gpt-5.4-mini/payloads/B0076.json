@@ -1,0 +1,139 @@
+{
+    "user_query": "Under which condition did LINE outperform node2vec in the operator-wise comparison, and what kinds of operators were involved?",
+    "mode": "closed_book",
+    "llm_response": "LINE outperformed node2vec in the operator-wise comparison when the task used a simple linear classifier/operator rather than a more complex nonlinear one. The operators involved were the standard embedding-combination operators used for link prediction/classification, such as Hadamard, average, weighted-L1, and weighted-L2; LINE\u2019s advantage was observed specifically in the simpler operator setting.",
+    "llm_self_reported_accuracy": 0.62,
+    "llm_confidence_reasoning": "I\u2019m moderately confident because the answer matches the typical operator-wise comparison setup, but the exact wording and which operator was best can vary by paper and dataset.",
+    "extracted_query_entities": [
+        "LINE",
+        "NODE2VEC",
+        "operator-wise comparison",
+        "simple linear classifier/operator",
+        "more complex nonlinear operator",
+        "HADAMARD",
+        "AVERAGE",
+        "weighted-L1",
+        "weighted-L2",
+        "link prediction/classification"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "NODE2VEC",
+        "operator-wise comparison",
+        "simple linear classifier/operator",
+        "more complex nonlinear operator",
+        "HADAMARD",
+        "AVERAGE",
+        "weighted-L1",
+        "weighted-L2",
+        "link prediction/classification"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "NODE2VEC",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "operator-wise comparison",
+            "target": "simple linear classifier/operator",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "simple linear classifier/operator",
+            "target": "more complex nonlinear operator",
+            "type": "CONTRASTS_WITH",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "operator-wise comparison",
+            "target": "HADAMARD",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "operator-wise comparison",
+            "target": "AVERAGE",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "operator-wise comparison",
+            "target": "weighted-L1",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "operator-wise comparison",
+            "target": "weighted-L2",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "HADAMARD",
+            "target": "link prediction/classification",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "AVERAGE",
+            "target": "link prediction/classification",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "weighted-L1",
+            "target": "link prediction/classification",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "weighted-L2",
+            "target": "link prediction/classification",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which condition did LINE outperform node2vec in the operator-wise comparison, and what kinds of operators were involved?",
+        "llm_response": "LINE outperformed node2vec in the operator-wise comparison when the task used a simple linear classifier/operator rather than a more complex nonlinear one. The operators involved were the standard embedding-combination operators used for link prediction/classification, such as Hadamard, average, weighted-L1, and weighted-L2; LINE\u2019s advantage was observed specifically in the simpler operator setting.",
+        "llm_extraction_confidence": 0.62,
+        "llm_confidence_reasoning": "I\u2019m moderately confident because the answer matches the typical operator-wise comparison setup, but the exact wording and which operator was best can vary by paper and dataset.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2272.9,
+            "prompt_tokens": 112,
+            "completion_tokens": 131
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2252.8,
+            "prompt_tokens": 683,
+            "completion_tokens": 394
+        },
+        "asserted_claim_count": 11,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.26544952392578125,
+        "query_entities": [
+            "LINE",
+            "NODE2VEC",
+            "operator-wise comparison",
+            "simple linear classifier/operator",
+            "more complex nonlinear operator",
+            "HADAMARD",
+            "AVERAGE",
+            "weighted-L1",
+            "weighted-L2",
+            "link prediction/classification"
+        ]
+    }
+}

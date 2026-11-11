@@ -1,0 +1,62 @@
+{
+  "answer": "In the LINE paper (Tang et al., 2015, \"LINE: Large-scale Information Network Embedding\"), second-order proximity is applicable to directed and undirected networks (it is specifically designed for directed graphs, where a vertex's role as a context/neighbor differs from its role as a node, though it applies to undirected graphs as well). It captures the proximity between a pair of vertices through their shared neighborhoods: two vertices are considered similar if they share many common neighbors, i.e., vertices with similar neighborhood structures (neighbor distributions) are assumed to be similar, even if they are not directly linked. Second-order proximity is thus used when first-order proximity (direct ties) is sparse or absent, and it is modeled by giving each vertex a separate 'context' embedding for when it acts as a neighbor.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The core idea (shared neighbors imply similarity, with separate context vectors and applicability to directed and undirected graphs) matches my recollection of LINE, but the exact wording of the stated conditions in the paper is uncertain.",
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "target": "directed graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "undirected graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "shared neighbor",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertices with similar neighborhood structure",
+      "target": "similar vertice",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "graph structure",
+      "type": "APPROXIMATES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "sparse first-order proximity",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "context embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "first-order proximity",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

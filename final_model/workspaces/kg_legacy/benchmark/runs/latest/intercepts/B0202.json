@@ -1,0 +1,44 @@
+{
+  "answer": "I can't confirm the exact number from memory. The DeepWalk paper (Perozzi, Al-Rfou & Skiena, 2014) describes its training as asynchronous SGD in the Hogwild style, with multiple workers updating shared embedding parameters concurrently, and reports that the speedup scales nearly linearly with the number of workers. My best recollection is that the experiments used on the order of 20 workers, but I am not certain of that figure.",
+  "confidence": 0.25,
+  "confidence_reasoning": "The general description of asynchronous, near-linear-speedup parallel SGD is plausible, but I cannot reliably recall the exact worker count or the precise speedup reported in the paper.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "asynchronous SGD",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous SGD",
+      "target": "Hogwild SGD",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "shared embedding parameter",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "SPEEDUP",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SPEEDUP",
+      "target": "nearly linear scaling with number of worker",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "20 worker",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

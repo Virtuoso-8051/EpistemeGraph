@@ -1,0 +1,44 @@
+{
+  "answer": "40 steps per walk. In the original DeepWalk paper (Perozzi et al., 2014), the walk length t was set to 40, with 80 walks started per vertex and a window size of 10.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I recall the walk length of 40 from the DeepWalk paper's experimental setup, but I am not certain of the exact value or whether the question refers to a different parameter, such as walks per vertex (80).",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "walk length",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length",
+      "target": "random walk",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "walk length",
+      "target": "40 step",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "target": "80",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "window size",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "window size",
+      "target": "10",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

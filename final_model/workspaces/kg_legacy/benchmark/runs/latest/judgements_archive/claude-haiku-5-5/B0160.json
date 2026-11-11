@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The AI answer relies on general background about LINE and DeepWalk rather than the passages; the passages do not state that DeepWalk was designed for large sparse social networks or that LINE was designed for large-scale information networks, and the passages do not explicitly discuss LINE's directed/undirected/weighted handling in the way the gold answer frames supervised vs unsupervised use.",
+    "The answer omits the key passage-grounded facts: LINE(2nd) applies to directed and undirected graphs, LINE(1st+2nd) is restricted to supervised tasks, and DeepWalk is evaluated as a one-vs-rest logistic regression feature method on BlogCatalog.",
+    "The answer claims LINE is typically chosen for large weighted or directed networks, which is an implication not drawn from the evidence's supervised/unsupervised restriction."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly notes the passages were not provided and gives general background that is broadly accurate about both methods, which is partly uncontroversial. However, the specific claims about each paper's design and use cases are not grounded in the evidence, and it misses the passage-stated directionality and supervised-only restriction for LINE(1st+2nd) as well as DeepWalk's BlogCatalog classification setup.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,68 @@
+{
+  "answer": "Node2vec\u2019s supervised training objective helps it learn the exploration degree indirectly by treating the walk parameters as learnable choices that are judged by downstream prediction performance. In practice, node2vec generates random walks with two key biases: a return parameter p and an in-out parameter q. These control whether walks stay close to the source node or explore farther away. When the embeddings are trained in a supervised or task-driven setting, the model can be evaluated on how well the resulting features support the target labels or prediction task. That feedback tells the method which balance of local versus broader neighborhood exploration produces the most useful representations for the network at hand. So, instead of fixing a single exploration depth manually, node2vec uses the supervised objective to favor the walk bias that best captures the structural patterns relevant to the task, effectively inferring the right exploration degree for feature learning across different graphs.",
+  "confidence": 0.78,
+  "confidence_reasoning": "The core idea is correct, but node2vec is primarily an unsupervised embedding method and the exact phrasing about a supervised objective learning p and q directly is somewhat interpretive rather than literal.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "supervised training objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "random walk",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "return parameter p",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "in-out parameter q",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "target": "stay close to the source node",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "target": "explore farther away",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "downstream prediction performance",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "target": "supervised or task-driven setting",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised objective",
+      "target": "walk bias",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk bias",
+      "target": "best captures the structural patterns relevant to the task",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.27091930006268766
+}

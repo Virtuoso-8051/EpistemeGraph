@@ -1,0 +1,32 @@
+{
+  "answer": "In the Zachary\u2019s Karate network example, DeepWalk used a 2-dimensional latent representation for visualization, and the authors reported the embedding size as 2.",
+  "confidence": 0.98,
+  "confidence_reasoning": "This is a specific detail from the DeepWalk paper\u2019s Karate Club example, and the reported embedding dimensionality is consistently given as 2.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "latent representation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Zachary\u2019s Karate network",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representation",
+      "target": "2-dimensional",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding size",
+      "target": "2",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.09899959048709354
+}

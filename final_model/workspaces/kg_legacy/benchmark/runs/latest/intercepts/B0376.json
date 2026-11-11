@@ -1,0 +1,92 @@
+{
+  "answer": "DeepWalk treats the random walks generated over the graph as a corpus of 'sentences', where each vertex visited in a walk is a 'word'. From this corpus it builds a vocabulary V, which is simply the set of graph vertices (each vertex v in V is a unique word, so the vocabulary size equals the number of vertices |V|). Vertex identities are mapped to word tokens, and the vocabulary is not a separate set of learned language words. During training, DeepWalk feeds these walk sequences into a skip-gram language model (Word2Vec-style, typically with hierarchical softmax) that learns a latent representation \u03a6: v -> R^{|V|\u00d7d} for each vertex. Because the vertices form their own vocabulary, the model learns one embedding per vertex, with the context of each vertex defined by the vertices appearing within a window of size w around it in the walks. The vertex embeddings are the only parameters of interest and are used as the node representations, while the context (output) side of the skip-gram model is auxiliary.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core claim that the vocabulary is the set of graph vertices and that skip-gram with hierarchical softmax learns per-vertex embeddings matches the DeepWalk paper (Perozzi et al., 2014), but some details of phrasing and the exact notation are reconstructed from memory.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "corpus of sentence",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "VERTEX",
+      "target": "WORD",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "vocabulary V",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vocabulary V",
+      "target": "set of graph vertice",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vocabulary V",
+      "target": "size equal to number of vertices |V|",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vocabulary V",
+      "target": "set of learned language word",
+      "type": "DEFINED_AS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "SGM",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SGM",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "SGM",
+      "target": "latent representation \u03a6: v -> R^{|V|\u00d7d}",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "VERTEX",
+      "target": "word token",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "vertex embedding",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex embedding",
+      "target": "node representation",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context of each vertex",
+      "target": "vertices within window of size w in walk",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

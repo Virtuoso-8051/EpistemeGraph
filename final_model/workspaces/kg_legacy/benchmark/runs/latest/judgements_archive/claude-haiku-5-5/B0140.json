@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "On sparsely labeled graphs such as Flickr and YouTube, node2vec's gains over DeepWalk were largest",
+    "the tuned parameters generally favored the more community-oriented exploration",
+    "the labels in these networks appear to depend mainly on homophilous community structure",
+    "so the BFS/DFS trade-off explains why DeepWalk underperforms there"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence supports the DeepWalk-as-p=q=1 special case and the BFS=structural equivalence / DFS=homophily mapping, but it contains nothing about node2vec's gains over DeepWalk on Flickr/YouTube or tuned parameter values. The answer also contradicts the gold framing by claiming DeepWalk underperforms on these graphs, whereas the source reports DeepWalk performing strongly with sparse labels.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Spectral methods scale to large networks by avoiding full eigendecomposition via sparse kNN graphs, iterative solvers, Nystr\u00f6m/landmark methods (accepts the false premise; the passage says these methods rely on expensive eigendecomposition and are hard to scale)",
+    "Detailed complexity figures for PCA, IsoMap and Landmark IsoMap (e.g., O(n^3), O(n^2 log n)) are not in the evidence"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise, describing how spectral methods scale while avoiding eigendecomposition. It never corrects it by saying the passage states they rely on expensive eigendecomposition and are hard to scale. It does note it is not drawing on the passage, but its core content still contradicts the source's framing.",
+  "judge_model": "claude-sonnet-5-5"
+}

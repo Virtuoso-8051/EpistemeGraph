@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Sparsity is explained as inefficiency of storing and computing with sparse high-dimensional representations; the passage instead says sparsity enables efficient algorithms but makes statistical generalization harder.",
+    "DeepWalk applies the skip-gram model from word2vec to truncated random walks (evidence only says it generalizes neural language models to random walks and simulates uniform random walks)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The DeepWalk description (random walks, low-dimensional vertex embeddings capturing neighborhood similarity, use for classification) is largely supported. However, the sparsity explanation contradicts the passage's framing, since sparsity enables efficiency but hinders generalization. The skip-gram/word2vec specifics and truncated walks go slightly beyond the evidence, though they are well-known background.",
+  "judge_model": "claude-sonnet-5-5"
+}

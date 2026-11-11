@@ -1,0 +1,62 @@
+{
+  "answer": "In the BlogCatalog perturbation analysis, adding missing edges hurts Macro-F1 the most when the graph is made denser by adding a relatively large fraction of non-edges, especially under the more local/biased node2vec settings (low return parameter p and/or low in-out parameter q). In that regime, the added edges most strongly distort the neighborhood structure that node2vec relies on, so Macro-F1 drops more than it does when edges are removed.",
+  "confidence": 0.34,
+  "confidence_reasoning": "I\u2019m moderately uncertain because the question refers to a specific experimental result from a paper, and I do not have the exact figure/table in front of me to verify the precise condition wording.",
+  "triples": [
+    {
+      "source": "BlogCatalog",
+      "target": "NODE2VEC",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "target": "MACRO-F1",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adding missing edge",
+      "target": "MACRO-F1",
+      "type": "IMPROVES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "adding a relatively large fraction of non-edge",
+      "target": "MACRO-F1",
+      "type": "IMPROVES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "low return parameter p",
+      "target": "more local/biased node2vec setting",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low in-out parameter q",
+      "target": "more local/biased node2vec setting",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "added edge",
+      "target": "neighborhood structure",
+      "type": "DISTORTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "neighborhood structure",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adding missing edge",
+      "target": "removing edge",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.23802767859564888
+}

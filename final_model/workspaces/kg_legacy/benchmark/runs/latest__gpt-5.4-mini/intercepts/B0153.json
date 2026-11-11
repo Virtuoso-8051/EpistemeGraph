@@ -1,0 +1,56 @@
+{
+  "answer": "In the experiments, DeepWalk is used as a graph-embedding baseline with its standard random-walk setup, while LINE is evaluated with its embedding objective and settings as described in the paper; in both passages, the two methods are serving the same broad purpose of learning low-dimensional vector representations of nodes so they can be used for downstream tasks such as classification or link prediction.",
+  "confidence": 0.62,
+  "confidence_reasoning": "The shared goal is clear, but the exact experimental configuration of DeepWalk versus LINE depends on the specific passages, which are not fully provided here.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "standard random-walk setup",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "graph-embedding baseline",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "embedding objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "settings as described in the paper",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "low-dimensional vector representations of node",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "low-dimensional vector representations of node",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional vector representations of node",
+      "target": "classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional vector representations of node",
+      "target": "link prediction",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.233104249351045
+}

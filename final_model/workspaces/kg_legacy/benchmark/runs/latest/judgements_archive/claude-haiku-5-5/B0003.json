@@ -1,0 +1,13 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The AI answer does not identify the source paper's actual findings: it says it cannot identify the study, although the evidence clearly describes DeepWalk parallelization with ASGD on BlogCatalog and Flickr, and states the speedup is consistent up to 8 workers with no loss of predictive performance.",
+    "The AI answer says speedup is typically near-linear at low thread counts and then saturates due to memory bandwidth and cache contention, which is not reported in the evidence and is presented as the general pattern of the literature rather than the source papers' results.",
+    "The AI answer implies that the conditions for preserving performance are a large sparse graph and fixed learning rate and epochs, whereas the evidence attributes it to sparse updates from power-law vertex frequencies combined with asynchronous SGD without locking; the fixed learning rate/epoch condition is not in the evidence.",
+    "The AI answer does not state that speedup is consistent up to 8 workers for BlogCatalog and Flickr, which is the reported result in the evidence."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is answerable from the source text, which states that ASGD without locks on sparse updates preserves performance and that speedup is consistent up to 8 workers on BlogCatalog and Flickr. The AI answer declines to give these findings and instead offers generic, unsourced background about saturation and learning-rate conditions, so its core content is not supported by the papers.",
+  "judge_model": "claude-haiku-5-5"
+}

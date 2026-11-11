@@ -1,0 +1,92 @@
+{
+  "answer": "LINE did not compare itself with MDS, IsoMap, or Laplacian eigenmaps because those classic dimensionality-reduction methods do not scale to large networks. They rely on dense pairwise similarity matrices and eigen-decomposition, which cost roughly quadratic memory and cubic time in the number of nodes, making them infeasible for the networks LINE targets. The evaluated datasets were large-scale information networks, on the order of millions of vertices and tens of millions to billions of edges (for example, Flickr, Twitter, and Sina Weibo-type networks), along with some smaller benchmark networks.",
+  "confidence": 0.4,
+  "confidence_reasoning": "The scalability rationale is well grounded in the paper's framing, but I am unsure of the exact stated reason and the precise node and edge counts for each dataset.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "MDS",
+      "type": "DEFINED_AS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "MDS",
+      "target": "dense pairwise similarity matrice",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "ISOMAP",
+      "target": "eigen-decomposition",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "eigen-decomposition",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "dense pairwise similarity matrice",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "dimensionality reduction method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "MDS",
+      "target": "dimensionality reduction method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "ISOMAP",
+      "target": "dimensionality reduction method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "quadratic memory and cubic time complexity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "MDS",
+      "target": "quadratic memory and cubic time complexity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "ISOMAP",
+      "target": "quadratic memory and cubic time complexity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "evaluated dataset",
+      "target": "large-scale information network",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large-scale information network",
+      "target": "millions of vertice",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "FLICKR",
+      "target": "information network",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

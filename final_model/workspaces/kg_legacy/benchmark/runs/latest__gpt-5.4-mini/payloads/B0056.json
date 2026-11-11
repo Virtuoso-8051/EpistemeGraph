@@ -1,0 +1,130 @@
+{
+    "user_query": "What does the LINE model aim to preserve in the low-dimensional space Rd, and how is the overall Large-scale Information Network Embedding problem defined for a network G = (V,E)?",
+    "mode": "closed_book",
+    "llm_response": "The LINE model aims to preserve the network\u2019s observed proximity information in the low-dimensional space R^d, specifically first-order proximity (direct edge/adjacency strength) and second-order proximity (similarity of neighborhood distributions). In general, the Large-scale Information Network Embedding problem for a network G = (V,E) is defined as learning a mapping f: V -> R^d that assigns each vertex a d-dimensional vector representation so that the important structural proximities of the original graph are preserved in the embedding space.",
+    "llm_self_reported_accuracy": 0.95,
+    "llm_confidence_reasoning": "This matches the standard definition of LINE and the network embedding objective, though exact wording can vary slightly across sources.",
+    "extracted_query_entities": [
+        "LINE model",
+        "Large-scale Information Network Embedding",
+        "network G =",
+        "low-dimensional space R^d",
+        "first-order proximity",
+        "second-order proximity",
+        "mapping f: V -> R^d",
+        "VERTEX",
+        "d-dimensional vector representation",
+        "important structural proximitie",
+        "original graph",
+        "embedding space"
+    ],
+    "extracted_response_entities": [
+        "LINE model",
+        "Large-scale Information Network Embedding",
+        "network G =",
+        "low-dimensional space R^d",
+        "first-order proximity",
+        "second-order proximity",
+        "mapping f: V -> R^d",
+        "VERTEX",
+        "d-dimensional vector representation",
+        "important structural proximitie",
+        "original graph",
+        "embedding space",
+        "network\u2019s observed proximity information",
+        "learning a mapping f: V -> R^d",
+        "each vertex a d-dimensional vector representation"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE model",
+            "target": "network\u2019s observed proximity information",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "network\u2019s observed proximity information",
+            "target": "first-order proximity",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "network\u2019s observed proximity information",
+            "target": "second-order proximity",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "learning a mapping f: V -> R^d",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "mapping f: V -> R^d",
+            "target": "each vertex a d-dimensional vector representation",
+            "type": "ASSIGNS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "d-dimensional vector representation",
+            "target": "important structural proximitie",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "important structural proximitie",
+            "target": "original graph",
+            "type": "OF",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "d-dimensional vector representation",
+            "target": "low-dimensional space R^d",
+            "type": "IN",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What does the LINE model aim to preserve in the low-dimensional space Rd, and how is the overall Large-scale Information Network Embedding problem defined for a network G = (V,E)?",
+        "llm_response": "The LINE model aims to preserve the network\u2019s observed proximity information in the low-dimensional space R^d, specifically first-order proximity (direct edge/adjacency strength) and second-order proximity (similarity of neighborhood distributions). In general, the Large-scale Information Network Embedding problem for a network G = (V,E) is defined as learning a mapping f: V -> R^d that assigns each vertex a d-dimensional vector representation so that the important structural proximities of the original graph are preserved in the embedding space.",
+        "llm_extraction_confidence": 0.95,
+        "llm_confidence_reasoning": "This matches the standard definition of LINE and the network embedding objective, though exact wording can vary slightly across sources.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1947.2,
+            "prompt_tokens": 126,
+            "completion_tokens": 146
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1690.0,
+            "prompt_tokens": 752,
+            "completion_tokens": 359
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.1690273012433733,
+        "query_entities": [
+            "LINE model",
+            "Large-scale Information Network Embedding",
+            "network G =",
+            "low-dimensional space R^d",
+            "first-order proximity",
+            "second-order proximity",
+            "mapping f: V -> R^d",
+            "VERTEX",
+            "d-dimensional vector representation",
+            "important structural proximitie",
+            "original graph",
+            "embedding space"
+        ]
+    }
+}

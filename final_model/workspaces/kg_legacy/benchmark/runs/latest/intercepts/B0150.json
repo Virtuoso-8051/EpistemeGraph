@@ -1,0 +1,68 @@
+{
+  "answer": "LINE's objective is built to capture two kinds of proximity in a network. First-order proximity is the local pairwise similarity of directly linked nodes: connected nodes should have similar embeddings, which matches the homophily-style ties seen in BlogCatalog's social links, PPI's protein interactions, and Wikipedia's word co-occurrence links. Second-order proximity is the similarity of neighborhood structure: nodes that share many neighbors or have similar connection patterns should have similar embeddings, which matches structural-equivalence-style relationships. LINE aims to preserve both first-order and second-order proximity, and these datasets illustrate both kinds of structure.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The core claim that LINE preserves first-order and second-order proximity is well established, but the exact wording of how the three datasets are described in the source is uncertain, so the dataset-specific framing may not match.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "local pairwise similarity of directly linked node",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "similarity of neighborhood structure between node",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog network",
+      "target": "first-order proximity",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia data",
+      "target": "word cooccurrence network",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI",
+      "target": "protein interaction",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "homophily-style ties",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "structural-equivalence-style relationship",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog network",
+      "target": "social link",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

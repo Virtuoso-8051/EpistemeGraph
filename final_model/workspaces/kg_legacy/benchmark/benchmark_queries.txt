@@ -1,0 +1,400 @@
+B0001 | FACTUAL | 1 | VERIFIED | What are the three phases of node2vec, and how are they executed according to the passage?
+B0002 | FACTUAL | 1 | VERIFIED | Under which conditions does DeepWalk outperform its competitors, and by how much less training data can it still do so?
+B0003 | FACTUAL | 1 | VERIFIED | Under what conditions does parallelizing DeepWalk preserve predictive performance, and what speedup behavior is reported for the BlogCatalog and Flickr networks?
+B0004 | FACTUAL | 1 | VERIFIED | Why is BFS considered suitable for characterizing structural equivalences in a network, according to the passage?
+B0005 | FACTUAL | 1 | VERIFIED | How does DeepWalk differ from graph kernels in the way it uses graph structure for classification, and what advantage does this give DeepWalk?
+B0006 | FACTUAL | 1 | VERIFIED | Under which conditions does LINE say second-order proximity is applicable, and what similarity assumption does it make about vertices?
+B0007 | FACTUAL | 1 | VERIFIED | Why are classic dimensionality reduction methods such as Principal Component Analysis and Multi-Dimensional Scaling considered expensive for large real-world networks, and what kind of prediction performance do their latent representations achieve?
+B0008 | FACTUAL | 1 | VERIFIED | Why did LINE avoid comparing itself with MDS, IsoMap, and Laplacian eigenmap, and what scale of networks did the evaluated datasets have?
+B0009 | FACTUAL | 1 | VERIFIED | What four characteristics are required for learning social representations, and why are continuous latent representations useful for community membership?
+B0010 | FACTUAL | 1 | VERIFIED | How does LINE(1st) compare with LINE(2nd) on the Flickr network when the network is very sparse, and what happens as more links are added?
+B0011 | FACTUAL | 1 | VERIFIED | Under what conditions do DeepWalk’s representations provide the largest reported gains over competing methods?
+B0012 | FACTUAL | 1 | VERIFIED | Under which tasks and in what kinds of networks does node2vec demonstrate efficacy over existing state-of-the-art techniques?
+B0013 | FACTUAL | 1 | VERIFIED | Why does the passage say that edge sampling is useful for LINE’s training procedure?
+B0014 | FACTUAL | 1 | VERIFIED | Why does the passage say a desirable embedding model for real-world information networks must satisfy multiple requirements, and what are those requirements for LINE?
+B0015 | FACTUAL | 1 | VERIFIED | How does the streaming variant of DeepWalk change the learning process when the entire graph is not known in advance, and what is one tradeoff of using this approach?
+B0016 | FACTUAL | 1 | VERIFIED | What is the difference between DeepWalk and LINE in how they treat proximity and in the type of networks they can handle?
+B0017 | FACTUAL | 1 | VERIFIED | Why does the passage claim that DeepWalk can be viewed as a generalization of neural language models, and what is the special language it processes?
+B0018 | FACTUAL | 1 | VERIFIED | What kind of representation does the method aim to learn for the network, and how are the learned dimensions described?
+B0019 | FACTUAL | 1 | VERIFIED | What is the main goal of node2vec's flexible neighborhood sampling strategy, and how does it relate BFS and DFS?
+B0020 | FACTUAL | 1 | VERIFIED | Under what condition does LINE(1st+2nd) perform significantly better than all other methods, and what does this suggest about the two proximities in LINE?
+B0021 | FACTUAL | 1 | VERIFIED | Under which goals do the authors plan to continue their future work, and what specific aims do they list for that work?
+B0022 | FACTUAL | 1 | VERIFIED | Why does graph factorization outperform DeepWalk in the Wikipedia page classification results when compared with LINE-based methods?
+B0023 | FACTUAL | 1 | VERIFIED | Why can DeepWalk’s learned representations be shared among tasks, and what kind of classifier can achieve strong performance with them?
+B0024 | FACTUAL | 1 | VERIFIED | Why is DeepWalk described as suitable for real-world applications such as network classification and anomaly detection?
+B0025 | FACTUAL | 1 | VERIFIED | Under what condition does the passage say DeepWalk’s randomness becomes especially noisy, and what comparison is made between graph factorization and DeepWalk in the visualization results?
+B0026 | FACTUAL | 1 | VERIFIED | Why do the authors describe LINE(1st+2nd) as a quite effective and efficient network embedding approach, and how did its performance change on the reconstructed network compared with the original network?
+B0027 | FACTUAL | 1 | VERIFIED | What is the main objective that node2vec optimizes, and how does it do so according to the passage?
+B0028 | FACTUAL | 1 | VERIFIED | How does the optimal dimensionality of DeepWalk depend on the amount of training data available in the Flickr and BlogCatalog experiments?
+B0029 | FACTUAL | 1 | VERIFIED | Under the perturbation analysis for node2vec on the BlogCatalog network, how are the missing edges selected in the first imperfect-information scenario, and what constraint must still hold?
+B0030 | FACTUAL | 1 | VERIFIED | Why does BFS reduce variance in node2vec’s neighborhood characterization, and what limitation does it have compared with DFS?
+B0031 | FACTUAL | 1 | VERIFIED | Under which condition does the second-order proximity between two vertices become 0, and how is this condition stated in terms of their shared links?
+B0032 | FACTUAL | 1 | VERIFIED | What trade-off does feature learning in networks face when choosing an objective function, and how does a supervised procedure compare with an unsupervised procedure in terms of training time complexity and predictive accuracy?
+B0033 | FACTUAL | 1 | VERIFIED | Why does the passage claim node2vec generalizes prior work, and what limitation of earlier feature learning approaches does it address?
+B0034 | FACTUAL | 1 | VERIFIED | Under what conditions does node2vec assign α_pq(t,x) equal to 1/p, 1, or 1/q when choosing the next node x?
+B0035 | FACTUAL | 1 | VERIFIED | Under what conditions can DeepWalk still build a Hierarchical Softmax tree in the streaming setting, and how are new vertices handled?
+B0036 | FACTUAL | 1 | VERIFIED | Under what conditions are LINE(1st) and LINE(2nd) reported to be efficient, and how fast are they relative to graph factorization and DeepWalk?
+B0037 | FACTUAL | 1 | VERIFIED | Why does node2vec extend its random walks to pairs of nodes, and what kind of prediction task is given as an example?
+B0038 | FACTUAL | 1 | VERIFIED | How do the number and length of walks per source affect node2vec performance on the BlogCatalog network, and what tradeoff is mentioned for the context size k?
+B0039 | FACTUAL | 1 | VERIFIED | Why are the relaxations used in DeepWalk considered particularly desirable for social representation learning?
+B0040 | FACTUAL | 1 | VERIFIED | Why can DeepWalk be parallelized with asynchronous stochastic gradient descent, and what property of the updates makes this possible?
+B0041 | FACTUAL | 1 | VERIFIED | How does the DeepWalk objective define the context of a vertex, and what is the effect of removing the ordering constraint on the training problem?
+B0042 | FACTUAL | 1 | VERIFIED | Under which experimental tasks are the node2vec feature representations evaluated according to the passage?
+B0043 | FACTUAL | 1 | VERIFIED | Which variants of LINE and LINE-SGD are limited to undirected graphs, and what proximity order does each variant use?
+B0044 | FACTUAL | 1 | VERIFIED | Under what conditions were the missing edges selected in the perturbation experiment, and what constraint was imposed on that selection?
+B0045 | FACTUAL | 1 | VERIFIED | Why does node2vec use a second-order random walk with parameters p and q instead of sampling the next node only according to the static edge weights w_vx?
+B0046 | FACTUAL | 1 | VERIFIED | How did the authors construct the co-author network used for visualization, and what were the final network size and edge count after filtering authors with low degree?
+B0047 | FACTUAL | 1 | VERIFIED | In what way does node2vec extend feature learning methods for prediction tasks beyond nodes, and what kind of prediction tasks are mentioned?
+B0048 | FACTUAL | 1 | VERIFIED | What happens to node2vec’s performance when noisy edges are added between randomly selected pairs of nodes, and in what kind of application is this robustness useful?
+B0049 | FACTUAL | 1 | VERIFIED | Under which conditions should the social representations remain useful when the network changes, and what property should the latent dimensions satisfy for community awareness?
+B0050 | FACTUAL | 1 | VERIFIED | Under which conditions is the second-order proximity between two vertices u and v equal to 0, according to the passage?
+B0051 | FACTUAL | 1 | VERIFIED | Under which conditions is graph factorization applicable, and how does that compare with the applicability of LINE?
+B0052 | FACTUAL | 1 | VERIFIED | What do the BFS and DFS strategies represent in the node2vec case study, and what does the Les Misérables example aim to show about them?
+B0053 | FACTUAL | 1 | VERIFIED | What are the size and construction of the network used in the Les Misérables case study, and how is it analyzed with node2vec?
+B0054 | FACTUAL | 1 | VERIFIED | How do BFS and DFS differ in the kinds of network equivalences that node2vec can capture, and what role does BFS play in representing structural equivalence?
+B0055 | FACTUAL | 1 | VERIFIED | Under which kinds of network properties do the authors of the network embedding method say they will extend their work in the future?
+B0056 | FACTUAL | 1 | VERIFIED | What does the LINE model aim to preserve in the low-dimensional space Rd, and how is the overall Large-scale Information Network Embedding problem defined for a network G = (V,E)?
+B0057 | FACTUAL | 1 | VERIFIED | How does the passage explain why sparsity matters for machine learning applications in networks, and what role does DeepWalk play in addressing that issue?
+B0058 | FACTUAL | 1 | VERIFIED | How do LINE(1st), LINE(2nd), and DeepWalk compare in terms of convergence speed and performance as the number of samples increases during optimization?
+B0059 | FACTUAL | 1 | VERIFIED | Why does DeepWalk perform poorly on the language network compared with the LINE variants, and what aspect of the edges does LINE need to handle effectively?
+B0060 | FACTUAL | 1 | VERIFIED | What matrix representations of graphs are highlighted as especially important for unsupervised feature learning, and how are these methods interpreted under a linear algebra perspective?
+B0061 | FACTUAL | 1 | VERIFIED | How does node2vec scale computationally, and what does the passage say about the parallelizability of its major phases?
+B0062 | FACTUAL | 1 | VERIFIED | Under which conditions do short random walks support generalization in networks, and how is the distance between latent dimensions interpreted?
+B0063 | FACTUAL | 1 | VERIFIED | What relationship does DeepWalk report between the 2-dimensional latent representation of the Karate network and the structure of the original graph?
+B0064 | FACTUAL | 1 | VERIFIED | Why do the affinity-graph embedding methods described in the passage become inefficient on large-scale networks, and what is the main computational bottleneck?
+B0065 | FACTUAL | 1 | VERIFIED | Under what condition do the authors expect the frequency of vertices in short random walks to follow a power-law distribution, and what analogy do they draw from natural language?
+B0066 | FACTUAL | 1 | VERIFIED | How does LINE(2nd) on the reconstructed Youtube network compare with DeepWalk across the degree groups, and what does the reconstructed dense network change?
+B0067 | FACTUAL | 1 | VERIFIED | What effect does increasing the number of walks per vertex, gamma, have on DeepWalk's classification performance, and around what value does most of the benefit appear?
+B0068 | FACTUAL | 1 | VERIFIED | Why does the passage say that the community clusters discovered by node2vec closely relate to homophily in the character network?
+B0069 | FACTUAL | 1 | VERIFIED | Why might Huffman coding still be usable in the streaming version of DeepWalk, and what does it optimize?
+B0070 | FACTUAL | 1 | VERIFIED | How does DeepWalk characterize its search strategy over networks, and what limitation does the passage identify for that strategy?
+B0071 | FACTUAL | 1 | VERIFIED | How is second-order proximity defined, and what network information does it compare between two vertices such as u and v?
+B0072 | FACTUAL | 1 | VERIFIED | Which binary operator did node2vec use most successfully on average across all networks, and what was the stated reason for highlighting it?
+B0073 | FACTUAL | 1 | VERIFIED | According to the authors, how are advances in language modeling expected to help network representation learning, and how might graph modeling feed back into language modeling?
+B0074 | FACTUAL | 1 | VERIFIED | How does node2vec characterize the blue-colored nodes in the novel network when the nodes are clustered using the same network with setp = 1 and q = 2?
+B0075 | FACTUAL | 1 | VERIFIED | How does LINE define the joint probability for an undirected edge when modeling first-order proximity, and what is the empirical probability used in that setting?
+B0076 | FACTUAL | 1 | VERIFIED | Under which condition did LINE outperform node2vec in the operator-wise comparison, and what kinds of operators were involved?
+B0077 | FACTUAL | 1 | VERIFIED | Which social networks did LINE use in its experiments, and how is the Flickr network described relative to Youtube?
+B0078 | FACTUAL | 1 | VERIFIED | Why did the authors fix the window size and walk length to w = 10 and t = 40 before varying other DeepWalk parameters?
+B0079 | FACTUAL | 1 | VERIFIED | How do the most similar words returned by LINE's first-order proximity differ from those returned by its second-order proximity in Table 4?
+B0080 | FACTUAL | 1 | VERIFIED | How does graph factorization differ from LINE in terms of the network properties each method preserves?
+B0081 | FACTUAL | 1 | VERIFIED | Under which assumption does spectral clustering operate according to the passage, and why is that assumption considered limiting?
+B0082 | FACTUAL | 1 | VERIFIED | What is the arXiv ASTRO-PH network in terms of node meaning and edge meaning, and how many nodes and edges does it contain?
+B0083 | FACTUAL | 1 | VERIFIED | How does node2vec reduce the implicit bias caused by the choice of the start node when learning representations for all nodes, and how is the random walk sampling made efficient?
+B0084 | FACTUAL | 1 | VERIFIED | Under which degree conditions does LINE(2nd) fail to work well on the original Youtube network, and how is this reflected in the grouped results?
+B0085 | FACTUAL | 1 | VERIFIED | What limitation of DeepWalk is reported in the visualization of the co-author network, especially for high-degree vertices?
+B0086 | FACTUAL | 1 | VERIFIED | Why does the passage say DeepWalk is suitable for statistical modeling of graphs, and what kind of graph regularities does it learn from?
+B0087 | FACTUAL | 1 | VERIFIED | What kind of structural similarity do the vertex representations learned by DeepWalk capture, and what downstream benefit does this provide?
+B0088 | FACTUAL | 1 | VERIFIED | What is the core contribution of the authors' approach to modeling community structure in networks, and how do they justify it using the relationship between random walks and language modeling?
+B0089 | FACTUAL | 1 | VERIFIED | What future research directions do the authors of the network embedding method plan to investigate beyond first-order and second-order proximities?
+B0090 | FACTUAL | 1 | VERIFIED | How are non-random walks used in DeepWalk-style modeling, and what additional type of information do they capture compared with ordinary graph structure?
+B0091 | FACTUAL | 1 | VERIFIED | What conditional probability does LINE define for generating a context vertex vj from a vertex vi, and over what set is this distribution defined?
+B0092 | FACTUAL | 1 | VERIFIED | How does the proposed unsupervised method for relational classification differ from traditional approaches that use iterative approximate inference, and what advantage does this separation provide?
+B0093 | FACTUAL | 1 | VERIFIED | How does LINE represent each vertex under the second-order proximity setting, and what are the two roles a vertex plays there?
+B0094 | FACTUAL | 1 | VERIFIED | How does DeepWalk define the classification problem on a social network, and what role do the graph structure and labels play in that formulation?
+B0095 | FACTUAL | 1 | VERIFIED | Why is first-order proximity alone considered insufficient for preserving network structure in a real-world information network?
+B0096 | FACTUAL | 1 | VERIFIED | How do the authors describe the relationship between graph modeling and language modeling, and what future research directions do they name?
+B0097 | FACTUAL | 1 | VERIFIED | Under what conditions does DFS become useful for node2vec, and what drawback arises when it goes to greater depths?
+B0098 | FACTUAL | 1 | VERIFIED | How does LINE-SGD differ from LINE in the way each model uses edge weights during optimization?
+B0099 | FACTUAL | 1 | VERIFIED | What kind of search strategy does LINE primarily use, and over which neighborhood depths does it optimize the likelihood?
+B0100 | FACTUAL | 1 | VERIFIED | How do short random walks help the authors accommodate small changes in a graph, and what is the computational benefit of that approach?
+B0101 | FACTUAL | 1 | VERIFIED | What specific example of heterogeneity do the authors of the network embedding method give when describing future work, and what does that imply about the network setting?
+B0102 | FACTUAL | 1 | VERIFIED | Why do the linear and non-linear dimensionality reduction methods mentioned in the passage struggle to scale to large networks, and what is one additional limitation of their objectives?
+B0103 | FACTUAL | 1 | VERIFIED | How does DeepWalk generalize neural language models, and what kind of output does DeepWalk produce when given a graph as input?
+B0104 | FACTUAL | 1 | VERIFIED | What kind of vertex information does DeepWalk learn from a graph, and how are those learned representations described in terms of dimensionality and meaning?
+B0105 | FACTUAL | 1 | VERIFIED | Why are the learned structural features said to be especially useful with simple machine learning algorithms, even though they can be used with any classifier?
+B0106 | FACTUAL | 1 | VERIFIED | Compare DeepWalk and LINE in terms of flexibility and the depth of neighborhoods they explore. What trade-off does the passage describe?
+B0107 | FACTUAL | 1 | VERIFIED | How does node2vec scale with increasing graph size, and what specific result is reported for one million nodes?
+B0108 | FACTUAL | 1 | VERIFIED | Under what conditions can LINE obtain an embedding for a newly arrived vertex, and what is the recommended optimization objective?
+B0109 | FACTUAL | 1 | VERIFIED | What is the overall time complexity of LINE, and how does it scale with the number of edges and vertices?
+B0110 | FACTUAL | 1 | VERIFIED | Why is graph factorization described as scalable to large networks, and what graph type restriction does it have?
+B0111 | FACTUAL | 1 | VERIFIED | What different kinds of node groupings does node2vec reveal in the novel network, and how do those groupings differ in meaning?
+B0112 | FACTUAL | 1 | VERIFIED | How does DeepWalk generalize ideas from language modeling to graphs?
+B0113 | FACTUAL | 1 | VERIFIED | What type of input does DeepWalk use to learn latent social representations of vertices, and what kind of graph information does the learned representation encode?
+B0114 | FACTUAL | 1 | VERIFIED | Under which parameter setting does the Les Misérables visualization show regions of the network colored with the same color, and what does that indicate?
+B0115 | FACTUAL | 1 | VERIFIED | What does the perturbation study of node2vec on the BlogCatalog network examine in addition to missing edges, and what kind of structural uncertainty does this second scenario represent?
+B0116 | FACTUAL | 1 | VERIFIED | How does DeepWalk use stochastic gradient descent to optimize its parameters, and how are the derivatives obtained during training?
+B0117 | FACTUAL | 1 | VERIFIED | What kinds of citation networks did LINE evaluate on, and what does the author citation network record?
+B0118 | FACTUAL | 1 | VERIFIED | In the node2vec parameter sensitivity study on the BlogCatalog network, what happens to performance as the representation dimension increases, and around what dimension does it saturate?
+B0119 | FACTUAL | 1 | VERIFIED | Why does the paper claim that the LINE inference algorithm is quite scalable, and what implementation choices support that claim?
+B0120 | FACTUAL | 1 | VERIFIED | According to the DeepWalk description, what properties do the resulting representations have, and how do they relate to community structure and network changes?
+B0121 | CROSS_DOC | 1 | VERIFIED | How do DeepWalk and LINE differ in the kind of network structure they use to learn node representations: what does DeepWalk treat as the equivalent of sentences, and what additional proximity does LINE explicitly optimize beyond observed links?
+B0122 | CROSS_DOC | 1 | VERIFIED | What does DeepWalk use as its corpus and vocabulary, and how does that compare with the graph representation assumed in paper1?
+B0123 | CROSS_DOC | 1 | VERIFIED | Compared with LINE's handling of weighted edges, what is the key practical effect of increasing the random-walk parameter γ in the method from PASSAGE A, and when does that effect diminish?
+B0124 | CROSS_DOC | 1 | VERIFIED | What common tractability problem do the network embedding method in PASSAGE A and the language-modeling method in PASSAGE B each face, and how does each passage address it?
+B0125 | CROSS_DOC | 1 | VERIFIED | How do the mechanisms used by node2vec in PASSAGE A and LINE(2nd) in PASSAGE B differ in exploiting graph structure to improve performance?
+B0126 | CROSS_DOC | 1 | VERIFIED | Compare the types of network properties emphasized by DeepWalk and LINE: which method is presented as exploiting missing information well, and which method explicitly models both observed ties and shared-neighborhood similarity?
+B0127 | CROSS_DOC | 1 | VERIFIED | Compare how node2vec and LINE relate their embedding objectives to network structure: what does node2vec emphasize about roles and communities, and what does LINE emphasize about first- versus second-order proximity in social networks?
+B0128 | CROSS_DOC | 1 | VERIFIED | What contrast can be drawn between LINE’s scalability claim and the size characteristics of the BlogCatalog, PPI, and Wikipedia networks, and how does LINE’s edge-sampling algorithm help with that contrast?
+B0129 | CROSS_DOC | 1 | VERIFIED | Under which conditions does PASSAGE A report stable results for its random-walk sampling strategy, and how does that stability contrast with LINE's motivation for edge sampling?
+B0130 | CROSS_DOC | 1 | VERIFIED | Under which conditions does paper3’s SkipGram use Hierarchical Softmax, and how does node2vec in paper2 motivate a different neighborhood-learning design for networks with both communities and structural roles?
+B0131 | CROSS_DOC | 1 | VERIFIED | How does LINE(2nd) compare with node2vec in terms of the kind of proximity or neighborhood information each method emphasizes, and which method is reported to achieve the better overall word analogy score?
+B0132 | CROSS_DOC | 1 | VERIFIED | Under which conditions does the graph embedding approach in LINE use a logarithm of cooccurrence counts, and how does that contrast with node2vec’s use of random-walk samples?
+B0133 | CROSS_DOC | 1 | VERIFIED | Why would LINE be suitable for the BlogCatalog, PPI, and Wikipedia networks described in the datasets, and what property of LINE makes it applicable to those three networks regardless of whether they are social, biological, or word cooccurrence graphs?
+B0134 | CROSS_DOC | 1 | VERIFIED | What computational trick does SkipGram in paper3 use to reduce the cost of predicting a vertex, and how does node2vec in paper2 describe the purpose of its custom graph-based objective?
+B0135 | CROSS_DOC | 1 | VERIFIED | Under which conditions does DeepWalk sample vertices during a walk, and how does that relate to the role of edge weights in paper1’s information network definition?
+B0136 | CROSS_DOC | 1 | VERIFIED | How does node2vec use biased random walks to control the search space, and how does LINE address network sparsity with truncated random walks when comparing its first- and second-order proximity variants?
+B0137 | CROSS_DOC | 1 | VERIFIED | How do the goals of the low-dimensional embedding model in Passage A compare with the language-model interpretation of SkipGram in Passage B when the graph is generated from a sequence of elements?
+B0138 | CROSS_DOC | 1 | VERIFIED | Under which conditions does LINE require supervised data, and how does that contrast with the way DeepWalk is evaluated on BlogCatalog?
+B0139 | CROSS_DOC | 1 | VERIFIED | What common network property do the method in PASSAGE A and LINE in PASSAGE B both aim to exploit, and how do their approaches to using that property differ?
+B0140 | CROSS_DOC | 1 | VERIFIED | Why is the comparison between BFS and DFS in node2vec relevant when interpreting DeepWalk's results on sparsely labeled graphs such as Flickr and YouTube?
+B0141 | CROSS_DOC | 1 | VERIFIED | Under which conditions would the node2vec sampling strategy that explores nodes at increasing distances be more consistent with DeepWalk's gains on Flickr and YouTube: when homophily dominates, or when structural equivalence matters more?
+B0142 | CROSS_DOC | 1 | VERIFIED | How do DeepWalk and the model in paper1 differ in what structural information they explicitly preserve or exploit?
+B0143 | CROSS_DOC | 1 | VERIFIED | Under what data-sparsity conditions does DeepWalk report an advantage, and how does that compare with LINE’s stated ability to scale to large graphs?
+B0144 | CROSS_DOC | 1 | VERIFIED | What optimization target distinguishes LINE from DeepWalk’s learning procedure when preserving graph information, and how does DeepWalk describe its approach to learning latent representations?
+B0145 | CROSS_DOC | 1 | VERIFIED | How does the embedding model in Passage A address scalability for networks with millions of nodes, and what streaming-related training adjustment does DeepWalk in Passage B require when the full graph is not available upfront?
+B0146 | CROSS_DOC | 1 | VERIFIED | What limitation of classical graph embedding methods does Passage A emphasize, and under which condition can DeepWalk in Passage B still build a Hierarchical Softmax tree without seeing the entire graph?
+B0147 | CROSS_DOC | 1 | VERIFIED | Compared with BFS and DFS in the neighborhood-sampling method described for node2vec, what kind of graph similarity does DeepWalk's reported performance suggest is especially useful under sparse supervision?
+B0148 | CROSS_DOC | 1 | VERIFIED | Why is the embedding problem in Passage A harder for real-world information networks than for smaller networks, and how does DeepWalk in Passage B exploit non-random walks to capture more than just topology?
+B0149 | CROSS_DOC | 1 | VERIFIED | How does the Skip-gram objective in the model from PASSAGE A differ from the language-modeling objective in PASSAGE B in terms of what is being predicted from what?
+B0150 | CROSS_DOC | 1 | VERIFIED | How does LINE’s embedding objective relate to the kinds of node relationships that BlogCatalog, PPI, and Wikipedia are described as exhibiting, and what two types of network structure does LINE aim to preserve that are illustrated by those datasets?
+B0151 | CROSS_DOC | 1 | VERIFIED | Why do PASSAGE A and PASSAGE B both claim that their original neighborhood or context definitions are insufficient, and what replacement does each method use?
+B0152 | CROSS_DOC | 1 | VERIFIED | How do SkipGram in paper3 and node2vec in paper2 differ in the kind of neighborhood structure they use to learn node embeddings, and what shared optimization method do they both rely on?
+B0153 | CROSS_DOC | 1 | VERIFIED | Compared with LINE's treatment of embeddings, how is DeepWalk configured in the experiments, and what common goal do both methods serve across the two passages?
+B0154 | CROSS_DOC | 1 | VERIFIED | What is the reported running time difference between LINE(2nd) and DeepWalk in the word analogy experiment, and how does that relate to node2vec’s claim about efficiency from random walks?
+B0155 | CROSS_DOC | 1 | VERIFIED | Under what conditions does node2vec outperform the other benchmark algorithms in PASSAGE A, and what kind of network reconstruction improves LINE(2nd) in PASSAGE B?
+B0156 | CROSS_DOC | 1 | VERIFIED | What do node2vec and LINE each say about combining learned representations, and how do the combinations differ in what they are intended to represent?
+B0157 | CROSS_DOC | 1 | VERIFIED | Compare how LINE(2nd) and node2vec each exploit graph structure: which one is evaluated on word analogy using Wikipedia word networks, and which one reuses samples across source nodes to improve sampling efficiency?
+B0158 | CROSS_DOC | 1 | VERIFIED | What explanation is given for why LINE performed worse than expected in PASSAGE A, and why does LINE(2nd) outperform DeepWalk on the DBLP(PaperCitation) network in PASSAGE B?
+B0159 | CROSS_DOC | 1 | VERIFIED | How do node2vec and the streaming variant differ in their treatment of a growing network, and what capability does the streaming variant add that node2vec alone does not explicitly mention?
+B0160 | CROSS_DOC | 1 | VERIFIED | How do LINE and DeepWalk differ in the graph types or problem settings they are explicitly used for in the two passages, and what does that imply about when each method is applied?
+B0161 | BORDERLINE | 1 | ABSTAIN | What hardware configuration or runtime environment did node2vec require to run the three sequential phases of preprocessing, random-walk simulation, and SGD optimization?
+B0162 | BORDERLINE | 1 | ABSTAIN | How many random walks per node r did node2vec use in the reported experiments, and did the authors compare that setting against smaller or larger values of r?
+B0163 | BORDERLINE | 1 | ABSTAIN | How many labeled nodes were used for training in absolute counts for the BlogCatalog, PPI, and Wikipedia multi-label classification experiments with node2vec?
+B0164 | BORDERLINE | 1 | ABSTAIN | How many dimensions did DeepWalk use for the latent representation in the Zachary’s Karate network example, and what exact value did the authors report for that embedding size?
+B0165 | BORDERLINE | 1 | ABSTAIN | Under which exact conditions on the citation networks did the authors find that DeepWalk outperformed LINE(2nd), and what were the corresponding numerical results?
+B0166 | BORDERLINE | 1 | ABSTAIN | Compared with DeepWalk, what exact number of parameters did node2vec use for its embedding model on the protein-protein interaction network?
+B0167 | BORDERLINE | 1 | ABSTAIN | In LINE, what exact distance function is used when minimizing the second-order proximity objective after the authors simplify the formulation, and what is the resulting expression for O2?
+B0168 | BORDERLINE | 1 | ABSTAIN | Under what conditions, if any, do the authors assign a nonzero first-order proximity to a pair of vertices that are not connected by an observed edge in the network embedding model?
+B0169 | BORDERLINE | 1 | ABSTAIN | Under which exact training hardware setup did node2vec optimize its feature learning objective, including GPU model, CPU type, and amount of RAM?
+B0170 | BORDERLINE | 1 | ABSTAIN | Under which hardware configuration did the authors train the language-modeling approach when sampling from an unobservable language graph?
+B0171 | BORDERLINE | 1 | ABSTAIN | Under which exact conditions does LINE switch from using the first-order proximity objective to the second-order proximity objective, and how many training epochs are used for each objective?
+B0172 | BORDERLINE | 1 | ABSTAIN | Under which specific graph datasets did DeepWalk outperform spectral methods, and what were the exact classification accuracy numbers on each dataset?
+B0173 | BORDERLINE | 1 | ABSTAIN | Compared with global recomputation, by how much did the random-walk-based method reduce update time when the graph changed, and under what benchmark conditions was this speedup reported?
+B0174 | BORDERLINE | 1 | ABSTAIN | What are the exact micro-F1 or macro-F1 scores achieved by LINE(1st+2nd) on the DBLP(AuthorCitation) network for the seven conference labels AAAI, CIKM, ICML, KDD, NIPS, SIGIR, and WWW?
+B0175 | BORDERLINE | 1 | ABSTAIN | What exact embedding dimension did LINE use in its experiments on large-scale networks?
+B0176 | BORDERLINE | 1 | ABSTAIN | How many labeled examples did DeepWalk use in the Flickr experiment at the 10% training-rate setting?
+B0177 | BORDERLINE | 1 | ABSTAIN | Under which hardware configuration did the authors train LINE, including the CPU model, RAM size, and number of cores?
+B0178 | BORDERLINE | 1 | ABSTAIN | In node2vec, what exact value of the return parameter p did the authors find to be optimal on their largest benchmark graph?
+B0179 | BORDERLINE | 1 | ABSTAIN | For node2vec's link prediction experiments, what were the exact performance numbers for Common Neighbors, Jaccard's Coefficient, Adamic-Adar Score, and Preferential Attachment on the PPI dataset?
+B0180 | BORDERLINE | 1 | ABSTAIN | Compared with DeepWalk, what is the exact number of optimization iterations or wall-clock seconds required for LINE(2nd) to converge in Fig. 4(b)?
+B0181 | BORDERLINE | 1 | ABSTAIN | How many random walks per vertex did DeepWalk use when learning latent social representations, and what exact walk length did the authors choose?
+B0182 | BORDERLINE | 1 | ABSTAIN | How does the network embedding method quantify second-order proximity when two vertices do not share any common in-neighbors or out-neighbors, and what numerical value is used in that case?
+B0183 | BORDERLINE | 1 | ABSTAIN | Which specific social network datasets did DeepWalk evaluate on to show that vertices with similar neighborhoods acquire similar representations?
+B0184 | BORDERLINE | 1 | ABSTAIN | In LINE, what embedding dimension d did the authors use in their experiments for the vertex vectors ui and u'i?
+B0185 | BORDERLINE | 1 | ABSTAIN | In node2vec's link prediction setup, what exact fraction of edges are removed to create the positive examples, and how is connectivity of the residual network preserved after removal?
+B0186 | BORDERLINE | 1 | ABSTAIN | How many vertices and edges were used in the largest dataset evaluated by LINE, and what were its exact counts?
+B0187 | BORDERLINE | 1 | ABSTAIN | How many dimensions were used in the learned node2vec feature vectors when evaluating link prediction on Facebook, PPI, and arXiv ASTRO-PH?
+B0188 | BORDERLINE | 1 | ABSTAIN | What hidden-layer size or embedding dimensionality did DeepWalk use in its representation learning model?
+B0189 | BORDERLINE | 1 | ABSTAIN | Under what hardware configuration or parallel computing setup did DeepWalk report its runtime when claiming that it is trivially parallelizable?
+B0190 | BORDERLINE | 1 | ABSTAIN | When applying the random-walk-based approach to a scale-free graph, what measured exponent did the authors find for the power-law frequency distribution of vertices appearing in short random walks?
+B0191 | BORDERLINE | 1 | ABSTAIN | What exact parallel hardware configuration did DeepWalk use to build web-scale graph representations for YouTube, such as the number of machines or CPU cores?
+B0192 | BORDERLINE | 1 | ABSTAIN | In node2vec, what exact value of the walk length l did the authors use in their experiments on link prediction or node classification, and how does that choice affect performance relative to other l values?
+B0193 | BORDERLINE | 1 | ABSTAIN | How many walks per vertex γ did DeepWalk set when training the vertex representations described in the passage?
+B0194 | BORDERLINE | 1 | ABSTAIN | Compared with the graph-based method, what exact numerical improvement in perplexity did the authors claim for language modeling after using insights from observable graphs?
+B0195 | BORDERLINE | 1 | ABSTAIN | How many additional experiments did the authors of the language-modeling method report for improving language modeling from observable graphs?
+B0196 | BORDERLINE | 1 | ABSTAIN | What embedding dimension d did DeepWalk use for the low-dimensional vertex representation matrix Φ in its reported experiments?
+B0197 | BORDERLINE | 1 | ABSTAIN | What exact runtime, memory usage, or training speed does LINE report for optimizing the second-order proximity objective on a large graph, and on what hardware was that measurement taken?
+B0198 | BORDERLINE | 1 | ABSTAIN | For DeepWalk, what exact classification accuracy or F1 score was obtained on Flickr when the latent dimension was set to 128 and the number of walks per vertex was 30?
+B0199 | BORDERLINE | 1 | ABSTAIN | Under which network conditions did node2vec authors test the proposed extension on heterogeneous information networks, networks with explicit domain features for nodes and edges, or signed-edge networks, and what hardware was used for those experiments?
+B0200 | BORDERLINE | 1 | ABSTAIN | What exact graph dataset did the authors of the language-modeling method use in their future work to test the proposed graph-language duality?
+B0201 | BORDERLINE | 1 | ABSTAIN | What hardware, CPU/GPU configuration, or runtime environment was used to compare node2vec against DeepWalk, LINE, and spectral clustering?
+B0202 | BORDERLINE | 1 | ABSTAIN | How many worker threads or machines did DeepWalk use to update different parts of the model concurrently, and what speedup did the parallelization achieve?
+B0203 | BORDERLINE | 1 | ABSTAIN | In the reconstructed network used by LINE(1st+2nd), what exact neighborhood size threshold did the authors test beyond which adding more vertices no longer improved performance?
+B0204 | BORDERLINE | 1 | ABSTAIN | Under which specific experimental conditions or datasets did LINE achieve the reported overall time complexity of O(dK|E|), and what were the corresponding runtime numbers?
+B0205 | BORDERLINE | 1 | ABSTAIN | Under which exact conditions on p and q did node2vec authors report the strongest performance for link prediction on weighted graphs, and what was the corresponding AUC?
+B0206 | BORDERLINE | 1 | ABSTAIN | What exact number of random-walk steps does DeepWalk use when learning structural regularities from short random walks?
+B0207 | BORDERLINE | 1 | ABSTAIN | For node2vec, what exact experimental result shows how much learning the search parameters p and q directly from data improves performance over using fixed hand-tuned values on complex networks?
+B0208 | BORDERLINE | 1 | ABSTAIN | How many additional binary operators beyond those listed in Table 1 does node2vec support, and which operators are they?
+B0209 | BORDERLINE | 1 | ABSTAIN | How many random walks per vertex did DeepWalk generate when evaluating the BlogCatalog and Flickr networks, and what walk length did it use in those experiments?
+B0210 | BORDERLINE | 1 | ABSTAIN | What were the exact macro-F1 scores of node2vec on BlogCatalog, PPI, and Wikipedia when using the best in-out and return hyperparameters found by 10-fold cross-validation, averaged over the 10 random seed initializations rather than reported per seed?
+B0211 | BORDERLINE | 1 | ABSTAIN | How many node classification datasets did node2vec evaluate on in the KDD'16 study, and what were their names?
+B0212 | BORDERLINE | 1 | ABSTAIN | Compared with DeepWalk using 30 walks per node, what was the percentage improvement from increasing the number of walks per vertex to 50 on BlogCatalog?
+B0213 | BORDERLINE | 1 | ABSTAIN | For node2vec, what exact value of the sampling budget K was used in the experiments on multilabel classification and link prediction, and how was it chosen relative to DeepWalk and LINE?
+B0214 | BORDERLINE | 1 | ABSTAIN | In LINE, what exact memory increase occurs when an edge with weight w is unfolded into w binary edges, and how does this compare numerically to the alias-table approach on a graph with the same edge weights?
+B0215 | BORDERLINE | 1 | ABSTAIN | For the graph embedding methods discussed alongside first-order proximity, how many datasets did the authors evaluate on, and what were their names?
+B0216 | BORDERLINE | 1 | ABSTAIN | If node2vec were evaluated on the same multi-label classification task with the grid search expanded beyond p,q∈{0.25, 0.50, 1, 2, 4}, which additional hyperparameter values were tested and how did they affect the macro-F1 scores?
+B0217 | BORDERLINE | 1 | ABSTAIN | Compared with preserving only first-order proximity, by how much did LINE improve link prediction accuracy when both first-order and second-order proximity were preserved?
+B0218 | BORDERLINE | 1 | ABSTAIN | How many labeled edge examples did node2vec use for link prediction on the Facebook network after removing half of its edges, and what was the final train-test split?
+B0219 | BORDERLINE | 1 | ABSTAIN | Which specific datasets did DeepWalk use for the large heterogeneous graph classification experiments, and how many nodes were in each dataset?
+B0220 | BORDERLINE | 1 | ABSTAIN | For node2vec on the arXiv ASTRO-PH network, what exact p and q values were used for the best-performing setting in Table 4?
+B0221 | BORDERLINE | 1 | ABSTAIN | For DeepWalk, what exact initial learning rate schedule was used on the BlogCatalog and Flickr experiments, and what final learning rate value did the authors report after the linear decrease?
+B0222 | BORDERLINE | 1 | ABSTAIN | For node2vec, how many dimensions d did the authors choose for the learned node feature vectors in their main experiments?
+B0223 | BORDERLINE | 1 | ABSTAIN | Under which hardware setup or GPU model did the authors train node2vec, DeepWalk, and LINE for the link prediction experiments?
+B0224 | BORDERLINE | 1 | ABSTAIN | Compared with serial DeepWalk, what exact quantitative predictive-performance difference did the 8-worker asynchronous version achieve on BlogCatalog and Flickr, and what metric was used to measure that difference?
+B0225 | BORDERLINE | 1 | ABSTAIN | Compared with DeepWalk, by how many percentage points did node2vec improve classification accuracy on the Cora dataset under the best hyperparameter setting?
+B0226 | BORDERLINE | 1 | ABSTAIN | Under which exact hardware configuration or CPU model did LINE(1st) and LINE(2nd) achieve the near-linear speedup reported in Fig. 5(a)?
+B0227 | BORDERLINE | 1 | ABSTAIN | What exact value of K negative samples did LINE use in its optimization experiments, and how did changing K affect the per-step complexity beyond O(d(K + 1))?
+B0228 | BORDERLINE | 1 | ABSTAIN | What exact classifier or downstream model did node2vec use to turn the heuristic scores in Table 3 into link-prediction decisions, and what hyperparameters were selected for that classifier?
+B0229 | BORDERLINE | 1 | ABSTAIN | How many hidden dimensions were used for LINE(1st) and LINE(2nd) in the scalability experiment of Fig. 5 on the Youtube data set?
+B0230 | BORDERLINE | 1 | ABSTAIN | How many nodes and edges were in the largest graph evaluated with DeepWalk in the experiments described by this passage?
+B0231 | BORDERLINE | 1 | ABSTAIN | How does LINE perform when the vertex importance weights λi are estimated with PageRank instead of being set to the degree of each vertex, and what quantitative improvement or drop is reported?
+B0232 | BORDERLINE | 1 | ABSTAIN | In node2vec, what exact negative-sampling rate or number of negative samples per positive pair did the authors use when optimizing the likelihood objective with SGD?
+B0233 | BORDERLINE | 1 | ABSTAIN | In the network embedding framework that defines second-order proximity, what exact similarity function do the authors use to compare the neighborhood vectors p_u and p_v, and what is the formula for it?
+B0234 | BORDERLINE | 1 | ABSTAIN | For node2vec, how much wall-clock time did the authors measure for preprocessing on a graph with 10 million edges, and on what hardware was that timing obtained?
+B0235 | BORDERLINE | 1 | ABSTAIN | How many nodes and edges were in the largest graph used to benchmark LINE on real-world information networks?
+B0236 | BORDERLINE | 1 | ABSTAIN | In LINE, what exact value of the embedding dimension d did the authors use in their main experiments on large-scale information networks?
+B0237 | BORDERLINE | 1 | ABSTAIN | Under which hardware configuration did DeepWalk achieve its reported speedup on BlogCatalog and Flickr, and what CPU or memory specifications were used for the multi-worker runs?
+B0238 | BORDERLINE | 1 | ABSTAIN | How does LINE perform on a directed graph dataset compared with DeepWalk in terms of Micro-F1 or another downstream classification metric?
+B0239 | BORDERLINE | 1 | ABSTAIN | What exact embedding dimensionality did LINE use in its experiments on language, social, and citation networks?
+B0240 | BORDERLINE | 1 | ABSTAIN | What random-walk length and window size did DeepWalk use when modeling the stream of short random walks?
+B0241 | FALSE_PREMISE | 0 | HALLUCINATED | Why does node2vec use the Les Misérables network to evaluate link prediction on a graph with 77 nodes and 254 edges, and what makes that dataset ideal for testing true and false edges?
+B0242 | FALSE_PREMISE | 0 | HALLUCINATED | What comparison result shows that the yellow nodes are the best-connected characters, while the blue nodes sit at the periphery of the network?
+B0243 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE rely on random walks to capture second-order proximity, and how does that choice help it scale to millions of nodes?
+B0244 | FALSE_PREMISE | 0 | HALLUCINATED | What makes graph factorization cluster authors from the same communities together so effectively in the visualization of the co-author network?
+B0245 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk's use of a decaying learning rate make the streaming variant faster to train on large graphs?
+B0246 | FALSE_PREMISE | 0 | HALLUCINATED | What evidence shows that DeepWalk's parallelization hurts predictive performance on BlogCatalog and Flickr once the number of workers reaches 8?
+B0247 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk use weighted edges and matrix factorization to capture first-order proximity on citation networks like DBLP(PaperCitation)?
+B0248 | FALSE_PREMISE | 0 | HALLUCINATED | How does the method in paper3.pdf use observable graphs to improve language modeling rather than treating language modeling as the main source of graph representations?
+B0249 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does Skip-gram optimize a classification loss over adjacency matrices instead of using negative sampling for nearby words?
+B0250 | FALSE_PREMISE | 0 | HALLUCINATED | Why does node2vec use DFS-only sampling to reduce the effective sampling rate when generating neighborhoods from a random walk of length l>k?
+B0251 | FALSE_PREMISE | 0 | HALLUCINATED | What comparison does LINE make between the BlogCatalog network and structural equivalence in PPI, given that BlogCatalog is the biological-state dataset and PPI is the social-network dataset?
+B0252 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk's use of node labels as supervised targets make the learned embeddings especially effective for community detection?
+B0253 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE(2nd) fail to generate a meaningful layout of the co-author network, with authors from the same communities scattered apart?
+B0254 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec in paper3 use DeepWalk-style skip-gram training to learn only a probability distribution of node co-occurrences instead of a latent representation for each vertex?
+B0255 | FALSE_PREMISE | 0 | HALLUCINATED | How does DeepWalk's use of node2vec-style biased second-order random walks explain its improvement on Flickr and BlogCatalog?
+B0256 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec extend the collective classification procedure itself with graph kernels to improve inference?
+B0257 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does node2vec's DFS sampling reduce variance in characterizing 1-hop nodes with respect to the source node?
+B0258 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does node2vec outperform DeepWalk and LINE on link prediction when the embeddings are bootstrapped using the Hadamard operator on the Facebook dataset?
+B0259 | FALSE_PREMISE | 0 | HALLUCINATED | What does node2vec compare against LINE to show that LINE is more robust to the fraction of additional edges in BlogCatalog?
+B0260 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does DeepWalk rely on a graph of agents interacting with pages to create its training walks?
+B0261 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE construct its language network from DBLP citation data, and why is that dataset ideal for word cooccurrence modeling?
+B0262 | FALSE_PREMISE | 0 | HALLUCINATED | What does the comparison between DeepWalk on Flickr and BlogCatalog show about why the model needs many more labeled examples on BlogCatalog to reach the same accuracy?
+B0263 | FALSE_PREMISE | 0 | HALLUCINATED | What does the LINE(2nd) model on the reconstructed Youtube network show about its comparison with DeepWalk across the degree groups?
+B0264 | FALSE_PREMISE | 0 | HALLUCINATED | What results does the passage report for node classification and link prediction on the Twitter followee-follower network after embedding it into low-dimensional spaces?
+B0265 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk's use of global network views help it beat local random-walk methods on dense social graphs, especially when plenty of labeled data is available?
+B0266 | FALSE_PREMISE | 0 | HALLUCINATED | How do negative edge weights improve the proposed model's embedding objective in this study?
+B0267 | FALSE_PREMISE | 0 | HALLUCINATED | What comparison result does LINE report against DeepWalk, and how does LINE’s edge sampling hurt its efficiency relative to DeepWalk?
+B0268 | FALSE_PREMISE | 0 | HALLUCINATED | How does DeepWalk's supervised training objective improve its latent vertex embeddings for node classification compared with other deep learning methods?
+B0269 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does DeepWalk require knowing the vertex frequency distribution ahead of training in order to work correctly?
+B0270 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE’s use of random walks and skip-gram training make it especially effective on vertex classification?
+B0271 | FALSE_PREMISE | 0 | HALLUCINATED | Why does SkipGram use logistic regression to speed up training when predicting neighbors in the random walk, instead of the hierarchical softmax approximation described in the method?
+B0272 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE rely on random walks to preserve both local and global structure in large information networks?
+B0273 | FALSE_PREMISE | 0 | HALLUCINATED | Why does node2vec's hand-engineered feature extraction objective make it especially effective for multi-label classification on graphs with millions of nodes?
+B0274 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does paper3.pdf rely on graph convolution networks to strengthen the theoretical justifications of the method?
+B0275 | FALSE_PREMISE | 0 | HALLUCINATED | How do the graph-based spectral methods in the passage scale to large networks while avoiding eigendecomposition, especially compared with PCA and IsoMap?
+B0276 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does DeepWalk outperform standard classification methods by directly predicting labels from the graph?
+B0277 | FALSE_PREMISE | 0 | HALLUCINATED | How does DeepWalk build the full graph before training when it is used in the streaming setting?
+B0278 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does node2vec rely on graph convolution layers instead of negative sampling to make the partition function tractable?
+B0279 | FALSE_PREMISE | 0 | HALLUCINATED | Why does node2vec's unbiased random walk help it preserve only immediate neighbors so well on citation networks?
+B0280 | FALSE_PREMISE | 0 | HALLUCINATED | Why does the method in paper3 rely on global recomputation after small graph changes instead of updating the learned model with new short random walks from the changed region?
+B0281 | FALSE_PREMISE | 0 | HALLUCINATED | What explains DeepWalk’s weaker Macro-F1 than EdgeCluster on Flickr when the training ratio is only 3%, despite having more labeled data?
+B0282 | FALSE_PREMISE | 0 | HALLUCINATED | Why does node2vec become more robust when the missing edges are added in a way that increases the number of connected components, and how does that affect its Macro-F1 trend?
+B0283 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does the relational classification method rely on the network's label distribution as part of the feature space, and why is that mixing necessary for its classification performance?
+B0284 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does node2vec multiply the gradient by the edge weight only after clipping it to prevent explosions on high-variance graphs?
+B0285 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE use truncated random walks to improve its first-order proximity modeling on Youtube network?
+B0286 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE improve node classification accuracy on citation networks by focusing only on local network structure?
+B0287 | FALSE_PREMISE | 0 | HALLUCINATED | What evidence do the experiments on node2vec's edge-based prediction tasks provide that the method was evaluated only on synthetic benchmarks rather than real-world datasets?
+B0288 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does LINE combine first-order proximity with textual features of newly arrived vertices to infer embeddings?
+B0289 | FALSE_PREMISE | 0 | HALLUCINATED | How does SpectralClustering use the top-d eigenvectors of the modularity matrix to build its representation for classification?
+B0290 | FALSE_PREMISE | 0 | HALLUCINATED | Compared with DeepWalk, why does node2vec only learn embeddings for nodes that share the same community and ignore nodes with similar structural roles?
+B0291 | FALSE_PREMISE | 0 | HALLUCINATED | What makes the paper3 method's direct analog of language modeling estimate Pr(vi | Φ(vi+1), Φ(vi+2), …) from future vertices rather than from the previously visited vertices in the walk?
+B0292 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does DeepWalk require knowledge of the entire graph for its streaming variant to work?
+B0293 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE(1st) outperform LINE(2nd) on the Wikipedia word analogy task when it combines both first-order and second-order proximity?
+B0294 | FALSE_PREMISE | 0 | HALLUCINATED | How does DeepWalk rely on spectral methods to scale to very large graphs?
+B0295 | FALSE_PREMISE | 0 | HALLUCINATED | What makes LINE unsuitable for directed and weighted information networks compared with methods that only handle undirected graphs?
+B0296 | FALSE_PREMISE | 0 | HALLUCINATED | What makes node2vec's pure BFS/DFS sampling strategy more time-efficient than random walks on large graphs?
+B0297 | FALSE_PREMISE | 0 | HALLUCINATED | What does DeepWalk's use of all edges being removed from the network reveal about its best cutoff threshold on the Wikipedia word network?
+B0298 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does node2vec's Figure 3(top) result show that p = 1 and q = 0.5 produce embeddings that capture structural equivalence rather than homophily?
+B0299 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does LINE(1st) beat LINE(2nd) on semantic and syntactic analogy, given that first-order proximity is the stronger setting here?
+B0300 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does Spectral clustering outperform node2vec while DeepWalk and LINE remain the top two methods across the datasets?
+B0301 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does LINE work only for undirected, unweighted networks, unlike methods designed for directed graphs?
+B0302 | FALSE_PREMISE | 0 | HALLUCINATED | Why does the method in paper3 use the right-side context only to predict the left-side words in each random walk, and how does that choice improve its likelihood objective?
+B0303 | FALSE_PREMISE | 0 | HALLUCINATED | How does DeepWalk’s performance on YouTube compare to SpectralClustering and Modularity, which are reported to run successfully on that larger graph?
+B0304 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec's BFS-style sampling help it infer communities based on homophily by exploring larger parts of the network?
+B0305 | FALSE_PREMISE | 0 | HALLUCINATED | How does wvRN use the same one-vs-rest logistic regression classifier as the other baselines when estimating labels from a node's neighborhood?
+B0306 | FALSE_PREMISE | 0 | HALLUCINATED | What makes LINE's unrestricted exploration over deeper network neighborhoods a flexible alternative to DeepWalk's rigid search strategy?
+B0307 | FALSE_PREMISE | 0 | HALLUCINATED | Why does node2vec's performance on BlogCatalog keep improving as the in-out parameter p and the return parameter q increase, and what does that suggest about its walk strategy?
+B0308 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec rely on convolutional filters instead of random walks to generate network neighborhoods for nodes?
+B0309 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec's second-order random walk scheme eliminate the need to store any neighborhood information beyond immediate neighbors?
+B0310 | FALSE_PREMISE | 0 | HALLUCINATED | How does SkipGram use the Wikipedia word network to achieve its word analogy scores, unlike the graph-based methods?
+B0311 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE's edge-sampling scheme change the objective function so that edge weights directly scale the gradients without causing instability?
+B0312 | FALSE_PREMISE | 0 | HALLUCINATED | Why does the Skip-gram model use graph cuts to enforce homophily when learning word embeddings from the passage's network data?
+B0313 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE(2nd) use random walks to reach other references in the paper citation network, and why does that help it beat DeepWalk?
+B0314 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does LINE rely on an unweighted author citation network rather than the weighted one, and how does that choice affect the results?
+B0315 | FALSE_PREMISE | 0 | HALLUCINATED | What explains DeepWalk's 23.8% Macro-F1 gain over node2vec on the PPI network when node2vec uses the uniform setting (p = 1, q = 1)?
+B0316 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE preserve only first-order proximity while ignoring global network structure, and why is that sufficient for real-world graphs?
+B0317 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk's skip-gram objective make the model most effective only when the walk length is increased far beyond the fixed value used in the Flickr and BlogCatalog experiments?
+B0318 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does the paper3 approach maximize the probability of an entire word sequence in a corpus, rather than estimating the likelihood of a vertex from its preceding random-walk neighbors?
+B0319 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk outperform LINE(2nd) on Wikipedia page classification when the edge-sampling treatment removes the need for weighted edges?
+B0320 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE's use of DeepWalk on the Youtube network make the comparison especially fair for large-scale graphs?
+B0321 | FALSE_PREMISE | 0 | HALLUCINATED | What makes node2vec optimize its objective with Adam rather than stochastic gradient descent on a single hidden-layer feedforward neural network?
+B0322 | FALSE_PREMISE | 0 | HALLUCINATED | How does the relational classification method's goal of predicting labels with the same representation for each node differ from its objective of learning latent dimensions that are independent of the labels' distribution?
+B0323 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does node2vec avoid any bias from sample reuse while still improving efficiency?
+B0324 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does LINE rely on second-order proximity to outperform graph factorization by modeling the first-order proximity more effectively?
+B0325 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec use spectral clustering to build its embeddings for the Wikipedia network?
+B0326 | FALSE_PREMISE | 0 | HALLUCINATED | What makes the first-order proximity return only semantically related words, while the second-order proximity mixes syntactic and semantic neighbors?
+B0327 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does Modularity outperform EdgeCluster, since EdgeCluster already uses the adjacency matrix features that Modularity derives from the graph structure?
+B0328 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk use the PPI network to predict blogger interests, and how does that choice affect its performance on social relationships?
+B0329 | FALSE_PREMISE | 0 | HALLUCINATED | What comparison result shows that the relational classification method works best only when paired with iterative methods rather than simple machine learning algorithms?
+B0330 | FALSE_PREMISE | 0 | HALLUCINATED | What comparison result does node2vec report when ASGD is replaced by a full-batch Newton-style optimizer for Eqn. (7)?
+B0331 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE(1st+2nd) handle unsupervised tasks in the language network, given that it is applied there to tune the dimension weights automatically from unlabeled data?
+B0332 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions do SpectralClustering, Modularity, and EdgeCluster use Tang and Liu's preferred dimensionality of d = 128 rather than d = 500?
+B0333 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk avoid random walks and instead rely on deterministic neighborhood aggregation to produce such a clean layout of the co-author network?
+B0334 | FALSE_PREMISE | 0 | HALLUCINATED | How does the passage's graph embedding method use MDS to embed millions of nodes efficiently?
+B0335 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk’s use of edge weights help it outperform LINE on the language network so strongly?
+B0336 | FALSE_PREMISE | 0 | HALLUCINATED | What role does the binary tree T play in DeepWalk's random walk generation and SkipGram training loop?
+B0337 | FALSE_PREMISE | 0 | HALLUCINATED | Why does the node2vec objective maximize the probability of reconstructing a node's class label from its embedding, and how does that classification target shape the learned features?
+B0338 | FALSE_PREMISE | 0 | HALLUCINATED | What centrality-based statistics does node2vec compute instead of learning latent social representations?
+B0339 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does DeepWalk's performance drop because increasing γ reduces the number of random walks per node?
+B0340 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec's binary operator over node feature vectors rely on an edge existing between the two nodes before it can form g(u,v)?
+B0341 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE(2nd) outperform LINE(1st) on the social network classification task, and what does that suggest about second-order proximity being more important than first-order proximity there?
+B0342 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does LINESGDs outperform graph factorization on Wikipedia page classification because the weights of the edges are consistent?
+B0343 | FALSE_PREMISE | 0 | HALLUCINATED | What makes LINE's evaluation on MDS and IsoMap compelling, given that those classical embedding methods are included in its comparison set?
+B0344 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does the proposed model stop preserving second-order proximity and instead focus only on first-order proximity between vertices?
+B0345 | FALSE_PREMISE | 0 | HALLUCINATED | Why does paper3.pdf claim that language modeling is sampling from an observable graph, making the graph fully observed and directly accessible?
+B0346 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk's graph-kernel encoding make it usable as a direct feature extractor for any classification method?
+B0347 | FALSE_PREMISE | 0 | HALLUCINATED | How do the short random walks in the social representation method model partial community membership by choosing each next vertex directly from all vertices in the graph rather than from the current vertex's neighbors?
+B0348 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does node2vec's performance keep rising once the representation dimension exceeds around 100, and how does that interact with the walk-length setting?
+B0349 | FALSE_PREMISE | 0 | HALLUCINATED | How does the unsupervised objective in the method optimize performance on a downstream prediction task without any task-independent constraints?
+B0350 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec rely on a pure DFS traversal strategy to discover representations that conform only to DFS-style equivalence, rather than BFS behavior?
+B0351 | FALSE_PREMISE | 0 | HALLUCINATED | Why does the method described in the social representation model rely on supervised labels from the YouTube social graph to learn its low-dimensional embeddings so efficiently?
+B0352 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk's stochastic gradient descent optimization make it outperform LINE(2nd) on the DBLP(PaperCitation) network?
+B0353 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec use the BlogCatalog dataset to show that its gains come from a 10% labeled-data split in the parameter-sensitivity study?
+B0354 | FALSE_PREMISE | 0 | HALLUCINATED | What makes DeepWalk’s matrix factorization step preserve community structure in the learned embeddings?
+B0355 | FALSE_PREMISE | 0 | HALLUCINATED | What explains node2vec's strong scalability on Barabási-Albert graphs with increasing average degree, and why does it still generate one million node representations so quickly?
+B0356 | FALSE_PREMISE | 0 | HALLUCINATED | What comparison result does paper3 report between random-walk frequencies and word frequencies in natural language, and why does the method conclude they are unrelated distributions?
+B0357 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does the model in paper3 need the Wikipedia article corpus to train its graph embeddings, given that it models English text frequencies directly from the network?
+B0358 | FALSE_PREMISE | 0 | HALLUCINATED | What comparison result does paper3.pdf report between modeling observable graphs and modeling unobservable ones, given that observable-graph modeling is said to hurt language modeling performance?
+B0359 | FALSE_PREMISE | 0 | HALLUCINATED | What comparison result does the passage report for DeepWalk, where streaming with hierarchical softmax is impossible unless the vertex cardinality is unknown?
+B0360 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE rely on directly deploying stochastic gradient descent to avoid gradient explosion in word co-occurrence networks?
+B0361 | FALSE_PREMISE | 0 | HALLUCINATED | What dataset does node2vec train on to evaluate structural equivalence in citation graphs, given that it relies on only immediate neighborhoods?
+B0362 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does DeepWalk stop outperforming the baselines once the labeled fraction rises above 20%, especially on Macro-F1 and Micro-F1?
+B0363 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE improve document embeddings by optimizing them directly for the best document classification accuracy?
+B0364 | FALSE_PREMISE | 0 | HALLUCINATED | What makes LINE depend on observed links as the sole signal for global similarity, given that it treats second-order proximity as determined by edge weights?
+B0365 | FALSE_PREMISE | 0 | HALLUCINATED | Why does the PCA-based objective in the passage preserve local neighborhoods so well while avoiding eigendecomposition on large networks?
+B0366 | FALSE_PREMISE | 0 | HALLUCINATED | What experimental results does the method in paper1.pdf report for embedding heterogeneous information networks with vertices that have multiple types?
+B0367 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does the stochastic gradient descent optimization in the method rely on eigendecomposition of the data matrix instead of backpropagation on a single hidden-layer feedforward neural network?
+B0368 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk’s use of SpectralClustering on the Flickr network let it outperform the baselines even when only 3% of the graph is labeled?
+B0369 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec's supervised training objective help it infer the right exploration degree for feature learning across the networks?
+B0370 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec benefit from shrinking the representation dimension well below 100 instead of letting it saturate around that value?
+B0371 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does LINE-SGD treat sampled edges as binary and use edge-sampling instead of direct gradient updates?
+B0372 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE use random walks to optimize its embeddings for large weighted networks, and how does that help preserve second-order proximity?
+B0373 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does DeepWalk outperform node2vec on PPI because node2vec is the weakest method there?
+B0374 | FALSE_PREMISE | 0 | HALLUCINATED | What makes DeepWalk's evaluation on citation networks like Cora and Citeseer so strong relative to methods such as LINE when the graph is fully observed?
+B0375 | FALSE_PREMISE | 0 | HALLUCINATED | How does DeepWalk preserve the exact ordering of neighbors within each walk window when constructing vertex embeddings?
+B0376 | FALSE_PREMISE | 0 | HALLUCINATED | What vocabulary does DeepWalk build from the corpus, and how does it treat the graph vertices as a separate vocabulary during training?
+B0377 | FALSE_PREMISE | 0 | HALLUCINATED | What makes node2vec's source-neighborhood dot product asymmetric, and how does that asymmetry improve the model's ability to distinguish the source node from its neighbors?
+B0378 | FALSE_PREMISE | 0 | HALLUCINATED | Why does the relational classification method use Gibbs Sampling to directly learn label distributions from the network structure, and how does that iterative inference improve its social representations?
+B0379 | FALSE_PREMISE | 0 | HALLUCINATED | What explains why LINE(1st) and LINE-SGD(1st) are designed for directed graphs rather than undirected graphs?
+B0380 | FALSE_PREMISE | 0 | HALLUCINATED | What does node2vec's comparison with DeepWalk reveal about its improvement on PPI when training on just 10% labeled data?
+B0381 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does LINE fail to scale to networks with millions of nodes, especially on a typical single machine?
+B0382 | FALSE_PREMISE | 0 | HALLUCINATED | How does DeepWalk's use of a lock on shared parameters help it avoid the sparse-update problem in its multi-worker training?
+B0383 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE(1st) alone achieve the best Wikipedia page classification result once its embeddings are concatenated with LINE(2nd)?
+B0384 | FALSE_PREMISE | 0 | HALLUCINATED | Why does node2vec's use of random walks centered on homophily make the blue cluster correspond to structural equivalence in the novel network?
+B0385 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec handle the Wikipedia dataset when the labels are inferred from the Stanford POS-Tagger, and why is that dataset especially sparse for cooccurrence edges?
+B0386 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec improve multi-class image recognition by learning task-specific representations for pixels?
+B0387 | FALSE_PREMISE | 0 | HALLUCINATED | What makes LINE-SGD faster than graph factorization when it is trained with ordinary SGD on the language network?
+B0388 | FALSE_PREMISE | 0 | HALLUCINATED | What makes DeepWalk's back-propagation training especially stable compared with older distributed representations?
+B0389 | FALSE_PREMISE | 0 | HALLUCINATED | How does the method in paper1.pdf already incorporate higher-order proximity beyond first-order and second-order proximities to improve network embeddings?
+B0390 | FALSE_PREMISE | 0 | HALLUCINATED | Why does EdgeCluster's spectral decomposition step make it scale to graphs that are too large for k-means clustering, while still matching Modularity's performance?
+B0391 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE's ability to reuse samples make it outperform the random-walk methods in the comparison described for the PPI network?
+B0392 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does increasing the dimension d keep improving the performance of LINE(1st) and LINE(2nd)?
+B0393 | FALSE_PREMISE | 0 | HALLUCINATED | Why does LINE(2nd) outperform LINE(1st) on the Flickr network when the graph is extremely sparse?
+B0394 | FALSE_PREMISE | 0 | HALLUCINATED | How does node2vec use negative sampling and asynchronous SGD to make the sampling procedure itself faster during the random-walk phase?
+B0395 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does node2vec's perturbation analysis on the BlogCatalog network show that adding missing edges, rather than removing them, reduces Macro-F1 the most?
+B0396 | FALSE_PREMISE | 0 | HALLUCINATED | What explains why DeepWalk significantly outperforms LINE(2nd) on the DBLP(PaperCitation) network, and how does the citation-path limitation of LINE(2nd) contribute to that result?
+B0397 | FALSE_PREMISE | 0 | HALLUCINATED | Under which conditions does node2vec use DeepWalk embeddings to separate peripheral characters from bridge characters in Figure 3(bottom)?
+B0398 | FALSE_PREMISE | 0 | HALLUCINATED | How does LINE's uniform random-walk exploration help it discover homophilous communities at the cost of high variance?
+B0399 | FALSE_PREMISE | 0 | HALLUCINATED | Why does node2vec’s inability to reuse samples explain its strong Macro-F1 gains over LINE on BlogCatalog?
+B0400 | FALSE_PREMISE | 0 | HALLUCINATED | Why does DeepWalk outperform LINE(2nd) on the word analogy task when both are trained on the Wikipedia corpora?

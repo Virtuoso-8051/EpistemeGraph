@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "DeepWalk tends to outperform standard classification methods that predict labels directly from the graph when the graph is only partially labeled and labels correlate with community structure",
+    "Its advantage is greatest when labeled data is sparse (few labeled nodes per class)",
+    "In the original DeepWalk evaluation (Perozzi et al., 2014) on BlogCatalog, Flickr, and YouTube, DeepWalk remained competitive or superior especially when the fraction of labeled nodes was small",
+    "DeepWalk is robust to sparse labels and captures higher-order relationships rather than relying only on direct neighbors' labels, as a comparative claim against direct graph-based classifiers"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise that DeepWalk directly predicts labels and outperforms direct graph-based classifiers, whereas the evidence says DeepWalk learns latent representations that standard classifiers exploit. The evidence contains no comparison against relational/collective classifiers or label-fraction results on BlogCatalog, Flickr, or YouTube, so those specifics are unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

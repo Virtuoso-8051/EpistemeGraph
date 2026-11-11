@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "Second-order proximity is measured via a dot product, cosine, or Jaccard-style overlap of neighborhood vectors (the passage only says it is determined by the similarity between p_u and p_v, with no specific measure)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim is supported: the passage states that when no vertex is linked from/to both u and v, second-order proximity is 0. The parenthetical naming of dot product, cosine, or Jaccard as example measures is not in the evidence, though it is hedged with 'for example'.",
+  "judge_model": "claude-sonnet-5-5"
+}

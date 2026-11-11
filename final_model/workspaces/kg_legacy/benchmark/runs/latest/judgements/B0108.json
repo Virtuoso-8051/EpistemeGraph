@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The recommended objective is the second-order proximity objective, optionally combined with first-order proximity; the paper offers either the first-order or second-order objective with no preference for one.",
+    "The new vertex's optimization uses the edge-sampling objective with negative sampling; the paper gives the weighted negative log-likelihood of Eqn. (10) and does not mention edge sampling or negative sampling here.",
+    "A vertex with no links cannot be embedded without retraining; the paper only says other information such as text would be needed and leaves this to future work, and never mentions retraining."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The conditions (known connections, existing embeddings fixed, only the new vertex's embedding updated) are supported. The answer wrongly names second-order as the recommended objective, adds edge-sampling and negative-sampling details, and claims retraining is needed, none of which the paper states.",
+  "judge_model": "claude-sonnet-5-5"
+}

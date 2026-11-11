@@ -1,0 +1,38 @@
+{
+  "answer": "The learned node2vec feature vectors were 128-dimensional for Facebook, PPI, and arXiv ASTRO-PH in the link prediction evaluation.",
+  "confidence": 0.98,
+  "confidence_reasoning": "This matches the standard node2vec experimental setup reported for those datasets, and I am highly confident the dimensionality was 128 across all three.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "feature vector",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "FACEBOOK",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "PPI",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "arXiv ASTRO-PH",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Link Prediction",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.10980518444164379
+}

@@ -1,0 +1,152 @@
+{
+    "user_query": "How do LINE and DeepWalk differ in the graph types or problem settings they are explicitly used for in the two passages, and what does that imply about when each method is applied?",
+    "mode": "closed_book",
+    "llm_response": "LINE is explicitly described as a method for large-scale information network embedding, and the passage says it can be used for both directed and undirected graphs, as well as weighted and unweighted graphs. DeepWalk is described as a method for learning latent representations of vertices in a graph by treating random walks as sentences, which is presented in the context of general graph representation learning rather than specifically emphasizing directed/undirected or weighted/unweighted cases. This implies that LINE is applied when the graph may be very large and may have edge direction or weights that should be preserved, while DeepWalk is applied more generally to graphs where local neighborhood structure can be captured through random walks and skip-gram-style learning.",
+    "llm_self_reported_accuracy": 0.86,
+    "llm_confidence_reasoning": "The distinction is well supported by the standard descriptions of LINE and DeepWalk, though exact wording can vary across passages and I cannot verify the passages themselves.",
+    "extracted_query_entities": [
+        "LINE",
+        "Large-scale Information Network Embedding",
+        "DEEPWALK",
+        "GRAPH",
+        "directed graph",
+        "undirected graph",
+        "weighted graph",
+        "unweighted graph",
+        "latent representations of vertice",
+        "random walk",
+        "sentence",
+        "graph representation learning",
+        "local neighborhood structure",
+        "skip-gram-style learning"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "Large-scale Information Network Embedding",
+        "DEEPWALK",
+        "GRAPH",
+        "directed graph",
+        "undirected graph",
+        "weighted graph",
+        "unweighted graph",
+        "latent representations of vertice",
+        "random walk",
+        "sentence",
+        "graph representation learning",
+        "local neighborhood structure",
+        "skip-gram-style learning",
+        "learning latent representations of vertices in a graph"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "Large-scale Information Network Embedding",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "directed graph",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "undirected graph",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "weighted graph",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "unweighted graph",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "learning latent representations of vertices in a graph",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "random walk",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random walk",
+            "target": "sentence",
+            "type": "MAPS_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "graph representation learning",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "local neighborhood structure",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "skip-gram-style learning",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How do LINE and DeepWalk differ in the graph types or problem settings they are explicitly used for in the two passages, and what does that imply about when each method is applied?",
+        "llm_response": "LINE is explicitly described as a method for large-scale information network embedding, and the passage says it can be used for both directed and undirected graphs, as well as weighted and unweighted graphs. DeepWalk is described as a method for learning latent representations of vertices in a graph by treating random walks as sentences, which is presented in the context of general graph representation learning rather than specifically emphasizing directed/undirected or weighted/unweighted cases. This implies that LINE is applied when the graph may be very large and may have edge direction or weights that should be preserved, while DeepWalk is applied more generally to graphs where local neighborhood structure can be captured through random walks and skip-gram-style learning.",
+        "llm_extraction_confidence": 0.86,
+        "llm_confidence_reasoning": "The distinction is well supported by the standard descriptions of LINE and DeepWalk, though exact wording can vary across passages and I cannot verify the passages themselves.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2495.5,
+            "prompt_tokens": 125,
+            "completion_tokens": 188
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2517.3,
+            "prompt_tokens": 788,
+            "completion_tokens": 388
+        },
+        "asserted_claim_count": 11,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2449603237948575,
+        "query_entities": [
+            "LINE",
+            "Large-scale Information Network Embedding",
+            "DEEPWALK",
+            "GRAPH",
+            "directed graph",
+            "undirected graph",
+            "weighted graph",
+            "unweighted graph",
+            "latent representations of vertice",
+            "random walk",
+            "sentence",
+            "graph representation learning",
+            "local neighborhood structure",
+            "skip-gram-style learning"
+        ]
+    }
+}

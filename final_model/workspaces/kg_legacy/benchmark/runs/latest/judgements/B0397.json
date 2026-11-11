@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Setting q > 1 favours outward, DFS-like exploration, and this is what lets bridge characters be separated from peripheral ones; the evidence gives p=1, q=2 but does not say this."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, says DeepWalk is a special case of node2vec with p=q=1, and gives q=2 for Figure 3 (bottom), all of which the evidence supports. The DFS-like exploration explanation is not stated in the evidence, though it is standard node2vec background, and the answer hedges on the exact q value even though the passage gives p=1, q=2.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,56 @@
+{
+  "answer": "In graph-embedding terms, first-order proximity is based on direct edges between two nodes, so it preserves immediate co-occurrence/adjacency and therefore tends to return words that are directly and strongly related in meaning. Second-order proximity compares the similarity of nodes\u2019 neighborhood distributions: two words are considered close if they connect to similar surrounding words, even if they are not directly connected. Because similar contexts can arise from both shared meaning and shared grammatical roles, second-order proximity often mixes semantic neighbors with syntactic neighbors.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a standard distinction in network embedding and word-representation methods, and the explanation matches the usual definition of first- vs second-order proximity.",
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "target": "direct edge",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "co-occurrence",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "adjacency",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "semantic neighbor",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "neighborhood distribution",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "similarity of nodes\u2019 neighborhood distribution",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "semantic neighbor",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "syntactic neighbor",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.21228679788523708
+}

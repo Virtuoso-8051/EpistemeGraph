@@ -1,0 +1,56 @@
+{
+  "answer": "Node2vec extends its learned node representations to pairs of nodes because many downstream tasks, especially link prediction, need features for edges, not just individual nodes. Node embeddings for the two endpoints are combined with a binary operator (such as average, Hadamard product, L1 or L2 distance) to form an edge feature vector, which can then be fed to a classifier. The example given is link prediction: predicting whether an edge (for instance, an interaction between two proteins in a protein-protein interaction network, or a collaboration or friendship tie) exists or is likely to form between a pair of nodes.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The general motivation (edge features for link prediction via binary operators) matches my recollection of the node2vec paper, but I am less certain of the exact example the paper uses and its specific wording.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "node representation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation",
+      "target": "edge-based prediction task",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "node embedding",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "binary operator",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary operator",
+      "target": "edge feature vector",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge feature vector",
+      "target": "classifier",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "edge-based prediction task",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "protein-protein interaction network",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

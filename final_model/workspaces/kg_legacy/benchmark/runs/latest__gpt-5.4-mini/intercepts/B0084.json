@@ -1,0 +1,62 @@
+{
+  "answer": "LINE(2nd) performs poorly on the original YouTube network when the graph is very sparse, i.e. at low degree conditions. In the grouped results, this shows up as noticeably weaker performance for the low-degree group compared with the higher-degree groups, while the method improves as degree increases and the network becomes denser. In other words, the grouped results reflect that LINE(2nd) is not robust on low-degree nodes/low-average-degree settings, but works better on medium- and high-degree settings.",
+  "confidence": 0.74,
+  "confidence_reasoning": "This answer matches the commonly reported pattern for LINE(2nd) on sparse original YouTube data, but the exact degree thresholds and grouped values depend on the specific table/figure, which I cannot verify here.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "graph is very sparse",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "low degree condition",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "degree increase",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "network becomes denser",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grouped result",
+      "target": "weaker performance for the low-degree group",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-degree group",
+      "target": "higher-degree group",
+      "type": "OUTPERFORMS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "not robust on low-degree node",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "medium-degree setting",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "high-degree setting",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2362180233001709
+}

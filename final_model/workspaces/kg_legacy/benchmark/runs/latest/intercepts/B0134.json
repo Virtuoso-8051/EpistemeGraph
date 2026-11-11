@@ -1,0 +1,80 @@
+{
+  "answer": "Assuming paper3 is DeepWalk-style SkipGram, it uses hierarchical softmax: vertices are placed as leaves of a binary tree, so predicting a vertex costs O(log|V|) rather than O(|V|) for a full softmax over the partition function. (Negative sampling is the other common SkipGram trick, if paper3 is a different SkipGram variant.) Node2vec (paper2) describes its custom graph-based objective as learning feature representations that preserve each node's network neighborhood, i.e., maximizing the likelihood of observing a node's neighborhood. Its neighborhood notion is flexible, controlled by biased random walks (BFS-like and DFS-like), so the embeddings balance homophily and structural equivalence.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The papers were not provided, so I inferred that paper3 is DeepWalk and paper2 is node2vec, and the specific claims about hierarchical softmax and neighborhood preservation are from memory and may not match the actual documents.",
+  "triples": [
+    {
+      "source": "SKIPGRAM",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "binary tree",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "O(log|V|) prediction cost",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "full softmax",
+      "target": "O(|V|) prediction cost",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Skip-gram objective",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "likelihood of preserving network neighborhoods of node",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "network neighborhood",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "BFS",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "DFS",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "homophily and structural equivalence balance",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

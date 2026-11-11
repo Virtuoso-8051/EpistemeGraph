@@ -1,0 +1,125 @@
+{
+    "user_query": "How does the streaming variant of DeepWalk change the learning process when the entire graph is not known in advance, and what is one tradeoff of using this approach?",
+    "mode": "closed_book",
+    "llm_response": "The streaming variant of DeepWalk learns embeddings incrementally as new nodes and edges arrive, rather than requiring the full graph to be available up front. It updates the model online from the observed stream, so it can adapt to evolving graphs without retraining from scratch on the entire network. One tradeoff is that, because it only sees a partial graph at any moment, the learned embeddings can be less globally consistent or slightly less accurate than those from a batch method that has access to the full graph.",
+    "llm_self_reported_accuracy": 0.9,
+    "llm_confidence_reasoning": "This is a standard description of streaming DeepWalk and its main limitation, though exact performance tradeoffs can vary by implementation and dataset.",
+    "extracted_query_entities": [
+        "streaming variant",
+        "DEEPWALK"
+    ],
+    "extracted_response_entities": [
+        "streaming variant",
+        "DEEPWALK",
+        "embedding",
+        "continually evolving network",
+        "full graph",
+        "model online",
+        "adapt to evolving graph",
+        "retraining from scratch",
+        "learned embedding",
+        "less globally consistent",
+        "slightly less accurate",
+        "batch method"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "streaming variant",
+            "target": "DEEPWALK",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "streaming variant",
+            "target": "embedding",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "streaming variant",
+            "target": "embedding",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "streaming variant",
+            "target": "continually evolving network",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "streaming variant",
+            "target": "full graph",
+            "type": "REQUIRES",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "streaming variant",
+            "target": "model online",
+            "type": "UPDATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "streaming variant",
+            "target": "adapt to evolving graph",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "streaming variant",
+            "target": "retraining from scratch",
+            "type": "REQUIRES",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "learned embedding",
+            "target": "less globally consistent",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "learned embedding",
+            "target": "slightly less accurate",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "learned embedding",
+            "target": "batch method",
+            "type": "OUTPERFORMS",
+            "claim_type": "REFUTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does the streaming variant of DeepWalk change the learning process when the entire graph is not known in advance, and what is one tradeoff of using this approach?",
+        "llm_response": "The streaming variant of DeepWalk learns embeddings incrementally as new nodes and edges arrive, rather than requiring the full graph to be available up front. It updates the model online from the observed stream, so it can adapt to evolving graphs without retraining from scratch on the entire network. One tradeoff is that, because it only sees a partial graph at any moment, the learned embeddings can be less globally consistent or slightly less accurate than those from a batch method that has access to the full graph.",
+        "llm_extraction_confidence": 0.9,
+        "llm_confidence_reasoning": "This is a standard description of streaming DeepWalk and its main limitation, though exact performance tradeoffs can vary by implementation and dataset.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1932.7,
+            "prompt_tokens": 122,
+            "completion_tokens": 145
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2370.5,
+            "prompt_tokens": 757,
+            "completion_tokens": 369
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 3,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.16610734239756633,
+        "query_entities": [
+            "streaming variant",
+            "DEEPWALK"
+        ]
+    }
+}

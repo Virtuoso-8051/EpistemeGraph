@@ -1,0 +1,62 @@
+{
+  "answer": "LINE's training objective is built entirely from the observed weighted edges. For first-order proximity it sets the empirical distribution p\u03021(i,j) = w_ij / W, and for second-order proximity it sets p\u03022(v_j|v_i) = w_ij / d_i, where d_i is the weighted out-degree. It then minimizes a KL divergence between these empirical distributions and the model's embedding-based distributions, so only observed links (positive samples, drawn by edge sampling) shape the embeddings. Second-order similarity is defined through shared neighbors in the adjacency, so it depends only on the edge weights. Negative sampling from a degree-based noise distribution does not add information about unobserved relations. As a result, LINE captures proximity only among directly linked nodes and nodes sharing neighbors, roughly local structure rather than true global similarity. Pairs with no observed connection or common neighbors get no direct training signal. The question's premise is somewhat imprecise: LINE is not strictly 'global', and its second-order proximity is local, extending about two hops.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core mechanism (empirical distributions from edge weights, KL objective, edge sampling) matches LINE's paper, but the question is ambiguous and I may be imprecise about the exact framing it intends.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "KL divergence",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "shared neighbors in the adjacency",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "information about unobserved relation",
+      "type": "DOES_NOT_ADD",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "local structure",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "true global similarity",
+      "type": "APPROXIMATES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "local neighborhood extending about two hops",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The answer states that the most common example in this literature is heterogeneous networks with academic networks linking authors, papers, and venues, which is general background rather than from the evidence, and the answer implies the LINE paper's future-work example is not identifiable from the provided text even though the evidence explicitly contains it (vertices with multiple types)",
+    "The answer claims it cannot tell which paper is meant, although the evidence clearly identifies the LINE paper and its future-work sentence about vertices with multiple types"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer fails to identify the specific example stated in the evidence (vertices with multiple types) even though the source passage is present and clearly identifies the LINE method. Its core claim that it cannot determine the paper is contradicted by the evidence, so the answer is unsupported despite gesturing at a similar heterogeneity concept.",
+  "judge_model": "claude-haiku-5-5"
+}

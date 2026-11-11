@@ -1,0 +1,74 @@
+{
+  "answer": "DeepWalk (Perozzi, Al-Rfou, and Skiena, 2014) transfers the word2vec/skip-gram framework from natural language to graph-structured data by treating graph vertices as words and random walks over the graph as sentences. Specifically, it first generates many truncated, fixed-length random walks starting from each vertex, which play the role of word sequences or text corpora. It then feeds these walk sequences into the skip-gram model with hierarchical softmax, learning a low-dimensional embedding for each node such that nodes co-occurring within a window along a walk (i.e., nodes near each other in the graph) have similar representations. This exploits the observation that the frequency distribution of vertices visited by short random walks follows a power law similar to word frequencies in natural language, so language-modeling techniques designed for word-frequency-skewed corpora apply naturally. The result is an unsupervised, scalable method that learns node representations capturing structural neighborhood information, which can then be used for tasks such as node classification.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The core description of DeepWalk (random walks as sentences, nodes as words, skip-gram with hierarchical softmax, power-law observation) matches the original paper well, though minor details like the exact framing of the power-law claim could be slightly off.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram model",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "language modeling",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Graph Embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "word sequence",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "structural neighborhood information",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "frequency distribution of vertices visited by short random walk",
+      "target": "power law",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "node classification",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unsupervised",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "SCALABLE",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

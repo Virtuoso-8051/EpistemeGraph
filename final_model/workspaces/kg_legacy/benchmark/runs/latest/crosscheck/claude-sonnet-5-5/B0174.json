@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The paper has a per-label results table with a LINE(1st+2nd) row under DBLP(AuthorCitation); the evidence says only that Table 7 reports results, and it mentions only DeepWalk and LINE(2nd) as compared methods on citation networks."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give numbers, which fits the unanswerable question. However, it suggests the paper has a per-label LINE(1st+2nd) row for DBLP(AuthorCitation). The evidence says that on citation networks only DeepWalk and LINE(2nd) are compared, so that suggestion is unsupported and contradicts the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

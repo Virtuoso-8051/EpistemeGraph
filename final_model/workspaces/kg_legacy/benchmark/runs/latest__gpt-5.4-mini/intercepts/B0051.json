@@ -1,0 +1,98 @@
+{
+  "answer": "Graph factorization is generally applicable when the graph can be represented as a weighted adjacency matrix and the goal is to learn low-dimensional embeddings by approximating that matrix; in practice it is most natural for static, relatively small-to-medium graphs because it relies on matrix factorization over the whole graph. LINE is more broadly applicable to large-scale graphs, including very large sparse networks, because it is designed to optimize first-order and/or second-order proximity with efficient edge-sampling and negative-sampling style training, so it scales much better than standard graph factorization. In short: graph factorization is more limited by graph size and the need for a matrix-form representation, while LINE is applicable to much larger graphs and is specifically built for scalability.",
+  "confidence": 0.92,
+  "confidence_reasoning": "This answer reflects the standard distinction in the graph embedding literature between matrix-factorization methods and LINE\u2019s scalable edge-based optimization, though exact applicability can vary by implementation and problem setup.",
+  "triples": [
+    {
+      "source": "graph factorization",
+      "target": "weighted adjacency matrix",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "low-dimensional embedding",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "weighted adjacency matrix",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "matrix factorization",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "static graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "relatively small-to-medium graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "matrix-form representation",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "large-scale graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "very large sparse network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge-sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "negative-sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "scalability",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "graph factorization",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.23943546001727764
+}

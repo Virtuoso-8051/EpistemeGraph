@@ -1,0 +1,93 @@
+{
+    "user_query": "Under which conditions is the second-order proximity between two vertices u and v equal to 0, according to the passage?",
+    "mode": "closed_book",
+    "llm_response": "The second-order proximity between two vertices u and v is equal to 0 when they have no common neighbors, meaning their neighborhood vectors have no overlap and the sum over shared neighbors is zero.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "This directly matches the standard definition of second-order proximity as being based on shared neighbors, so if there are none, the value is 0.",
+    "extracted_query_entities": [
+        "second-order proximity",
+        "vertices u and v",
+        "common neighbor",
+        "neighborhood vector",
+        "shared neighbor"
+    ],
+    "extracted_response_entities": [
+        "second-order proximity",
+        "vertices u and v",
+        "common neighbor",
+        "neighborhood vector",
+        "shared neighbor",
+        "0",
+        "no common neighbor",
+        "no overlap",
+        "sum over shared neighbor",
+        "ZERO"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "second-order proximity",
+            "target": "0",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "0",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "vertices u and v",
+            "target": "no common neighbor",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "neighborhood vector",
+            "target": "no overlap",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "sum over shared neighbor",
+            "target": "ZERO",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which conditions is the second-order proximity between two vertices u and v equal to 0, according to the passage?",
+        "llm_response": "The second-order proximity between two vertices u and v is equal to 0 when they have no common neighbors, meaning their neighborhood vectors have no overlap and the sum over shared neighbors is zero.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "This directly matches the standard definition of second-order proximity as being based on shared neighbors, so if there are none, the value is 0.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "extract_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "asserted_claim_count": 5,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2104066448447145,
+        "query_entities": [
+            "second-order proximity",
+            "vertices u and v",
+            "common neighbor",
+            "neighborhood vector",
+            "shared neighbor"
+        ]
+    }
+}

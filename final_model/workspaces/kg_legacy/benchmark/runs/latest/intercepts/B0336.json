@@ -1,0 +1,104 @@
+{
+  "answer": "T is a binary tree, typically a Huffman tree built from vertex frequencies in the generated random walks, that serves as a hierarchical softmax over the vertices. Its leaves are the graph's vertices, and each internal node carries a learned logistic classifier (weight vector). The random walk generator itself does not use T. Instead, walks are sampled uniformly from the graph and treated as sentences. In the SkipGram step, for each vertex v_j in a walk and each context vertex u_k in its window, the model computes Pr(u_k | \u03a6(v_j)) as the product of binary decisions along the unique root-to-leaf path to u_k in T. It then updates the embedding \u03a6(v_j) and the internal-node weights by SGD to minimize -log of that probability. Because the path length is O(log |V|), this replaces the costly full softmax over all vertices with a much cheaper computation. Frequent vertices get shorter paths, which speeds training further.",
+  "confidence": 0.8,
+  "confidence_reasoning": "The hierarchical softmax with a Huffman-style binary tree over vertices is the well-known DeepWalk design, though I am recalling details of the tree construction and the exact update from memory.",
+  "triples": [
+    {
+      "source": "binary tree T",
+      "target": "Huffman tree",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "binary tree T",
+      "target": "vertex frequencie",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "target": "hierarchical softmax",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk generator",
+      "target": "binary tree T",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "random walk",
+      "target": "stream of short random walk",
+      "type": "GENERATES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "SKIPGRAM",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "binary tree T",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "target": "internal node",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "internal node",
+      "target": "logistic classifier",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "target": "likelihood of preserving network neighborhoods of node",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "full softmax",
+      "type": "REPLACES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "full softmax",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk generator",
+      "target": "uniform random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "target": "path length O",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "target": "negative log probability of context vertex",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "target": "faster training",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,136 @@
+{
+    "user_query": "Why does the passage claim node2vec generalizes prior work, and what limitation of earlier feature learning approaches does it address?",
+    "mode": "closed_book",
+    "llm_response": "The passage says node2vec generalizes prior work because it can recover both breadth-first and depth-first neighborhood exploration as special cases of its biased random walks, rather than committing to only one fixed notion of a node\u2019s neighborhood. It addresses the limitation of earlier feature learning approaches that used a single, rigid neighborhood definition or sampling strategy, which made them unable to adapt to different structural roles and community patterns in graphs.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "This is a standard description of node2vec\u2019s contribution and limitation addressed, and it matches the commonly cited formulation in the original paper.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "biased random walk",
+        "breadth-first neighborhood exploration",
+        "depth-first neighborhood exploration",
+        "feature learning approache",
+        "neighborhood definition",
+        "sampling strategy",
+        "structural role",
+        "community pattern",
+        "GRAPHS"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "biased random walk",
+        "breadth-first neighborhood exploration",
+        "depth-first neighborhood exploration",
+        "feature learning approache",
+        "neighborhood definition",
+        "sampling strategy",
+        "structural role",
+        "community pattern",
+        "GRAPHS",
+        "single, rigid neighborhood definition",
+        "single, rigid sampling strategy",
+        "adaptation to different structural roles and community patterns in graph"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "breadth-first neighborhood exploration",
+            "type": "GENERALIZES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "depth-first neighborhood exploration",
+            "type": "GENERALIZES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "biased random walk",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "biased random walk",
+            "target": "breadth-first neighborhood exploration",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "biased random walk",
+            "target": "depth-first neighborhood exploration",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "feature learning approache",
+            "target": "neighborhood definition",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "feature learning approache",
+            "target": "sampling strategy",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "feature learning approache",
+            "target": "single, rigid neighborhood definition",
+            "type": "REQUIRES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "feature learning approache",
+            "target": "single, rigid sampling strategy",
+            "type": "REQUIRES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "single, rigid neighborhood definition",
+            "target": "adaptation to different structural roles and community patterns in graph",
+            "type": "PREVENTS",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why does the passage claim node2vec generalizes prior work, and what limitation of earlier feature learning approaches does it address?",
+        "llm_response": "The passage says node2vec generalizes prior work because it can recover both breadth-first and depth-first neighborhood exploration as special cases of its biased random walks, rather than committing to only one fixed notion of a node\u2019s neighborhood. It addresses the limitation of earlier feature learning approaches that used a single, rigid neighborhood definition or sampling strategy, which made them unable to adapt to different structural roles and community patterns in graphs.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "This is a standard description of node2vec\u2019s contribution and limitation addressed, and it matches the commonly cited formulation in the original paper.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "extract_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "asserted_claim_count": 10,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.21772738200862232,
+        "query_entities": [
+            "NODE2VEC",
+            "biased random walk",
+            "breadth-first neighborhood exploration",
+            "depth-first neighborhood exploration",
+            "feature learning approache",
+            "neighborhood definition",
+            "sampling strategy",
+            "structural role",
+            "community pattern",
+            "GRAPHS"
+        ]
+    }
+}

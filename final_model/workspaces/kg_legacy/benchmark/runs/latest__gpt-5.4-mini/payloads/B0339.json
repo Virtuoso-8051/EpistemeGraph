@@ -1,0 +1,118 @@
+{
+    "user_query": "Under which conditions does DeepWalk's performance drop because increasing \u03b3 reduces the number of random walks per node?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk\u2019s performance can drop when \u03b3 is increased enough that it reduces the number of random walks started from each node too much, especially on sparse graphs or when the embedding quality depends on having many walk samples to capture local and global co-occurrence statistics. In practice, this hurts most when the graph is small, sparse, or has limited connectivity, because fewer walks mean poorer coverage of node neighborhoods and less reliable training data for the skip-gram model.",
+    "llm_self_reported_accuracy": 0.84,
+    "llm_confidence_reasoning": "This is a well-known tradeoff in DeepWalk between walk length/number and sampling coverage, but the exact conditions can vary by dataset and implementation.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "number of walks started per vertex",
+        "random walk",
+        "Skip-gram model"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "number of walks started per vertex",
+        "random walk",
+        "Skip-gram model",
+        "performance can drop",
+        "number of random walks started from each node",
+        "sparse graph",
+        "graphs with limited connectivity",
+        "small graph",
+        "fewer walk",
+        "node neighborhood",
+        "local and global co-occurrence statistics",
+        "reliable training data for the Skip-gram model"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "performance can drop",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "number of walks started per vertex",
+            "target": "number of random walks started from each node",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "number of walks started per vertex",
+            "target": "number of random walks started from each node",
+            "type": "REDUCES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "sparse graph",
+            "type": "WORKS_WELL_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "graphs with limited connectivity",
+            "type": "WORKS_WELL_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "small graph",
+            "type": "WORKS_WELL_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "fewer walk",
+            "target": "node neighborhood",
+            "type": "PRESERVES",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "fewer walk",
+            "target": "local and global co-occurrence statistics",
+            "type": "PRESERVES",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "fewer walk",
+            "target": "reliable training data for the Skip-gram model",
+            "type": "PRESERVES",
+            "claim_type": "REFUTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which conditions does DeepWalk's performance drop because increasing \u03b3 reduces the number of random walks per node?",
+        "llm_response": "DeepWalk\u2019s performance can drop when \u03b3 is increased enough that it reduces the number of random walks started from each node too much, especially on sparse graphs or when the embedding quality depends on having many walk samples to capture local and global co-occurrence statistics. In practice, this hurts most when the graph is small, sparse, or has limited connectivity, because fewer walks mean poorer coverage of node neighborhoods and less reliable training data for the skip-gram model.",
+        "llm_extraction_confidence": 0.84,
+        "llm_confidence_reasoning": "This is a well-known tradeoff in DeepWalk between walk length/number and sampling coverage, but the exact conditions can vary by dataset and implementation.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2002.6,
+            "prompt_tokens": 110,
+            "completion_tokens": 141
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 4138.8,
+            "prompt_tokens": 748,
+            "completion_tokens": 367
+        },
+        "asserted_claim_count": 6,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 3,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.24553485446506076,
+        "query_entities": [
+            "DEEPWALK",
+            "number of walks started per vertex",
+            "random walk",
+            "Skip-gram model"
+        ]
+    }
+}

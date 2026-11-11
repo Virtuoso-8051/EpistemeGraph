@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The network contains 18,772 nodes (evidence says 18,722).",
+    "It covers papers from January 1993 to April 2003 (not in evidence).",
+    "Each node is an author who posted at least one paper in the astro-ph category (more specific than the evidence; co-authorship detail not stated).",
+    "It is SNAP's ca-AstroPh network, undirected (not stated in evidence)."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer gets the node/edge meaning and the edge count (198,110) right, but gives the node count as 18,772 instead of 18,722. It also adds a date range and dataset-specific details that the evidence does not contain.",
+  "judge_model": "claude-sonnet-5-5"
+}

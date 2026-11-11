@@ -1,0 +1,127 @@
+{
+    "user_query": "How does LINE represent each vertex under the second-order proximity setting, and what are the two roles a vertex plays there?",
+    "mode": "closed_book",
+    "llm_response": "Under LINE\u2019s second-order proximity setting, each vertex is represented by two vectors: a \"vertex\" vector for when it appears as the source (or center) node, and a separate \"context\" vector for when it appears as a neighbor. The two roles a vertex plays are therefore as a target/source vertex and as a context/neighbor vertex in edge-based prediction.",
+    "llm_self_reported_accuracy": 0.96,
+    "llm_confidence_reasoning": "This matches the standard LINE formulation: second-order proximity uses distinct embeddings for a node\u2019s role as a vertex and as its context, so the answer is well-established.",
+    "extracted_query_entities": [
+        "LINE",
+        "second-order proximity",
+        "VERTEX",
+        "vertex vector",
+        "context vector",
+        "source node",
+        "NEIGHBOR",
+        "target/source vertex",
+        "context/neighbor vertex",
+        "edge-based prediction"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "second-order proximity",
+        "VERTEX",
+        "vertex vector",
+        "context vector",
+        "source node",
+        "NEIGHBOR",
+        "target/source vertex",
+        "context/neighbor vertex",
+        "edge-based prediction"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "second-order proximity",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "VERTEX",
+            "target": "vertex vector",
+            "type": "REPRESENTS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "VERTEX",
+            "target": "context vector",
+            "type": "REPRESENTS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "vertex vector",
+            "target": "source node",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "context vector",
+            "target": "NEIGHBOR",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "VERTEX",
+            "target": "target/source vertex",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "VERTEX",
+            "target": "context/neighbor vertex",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "target/source vertex",
+            "target": "edge-based prediction",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "context/neighbor vertex",
+            "target": "edge-based prediction",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does LINE represent each vertex under the second-order proximity setting, and what are the two roles a vertex plays there?",
+        "llm_response": "Under LINE\u2019s second-order proximity setting, each vertex is represented by two vectors: a \"vertex\" vector for when it appears as the source (or center) node, and a separate \"context\" vector for when it appears as a neighbor. The two roles a vertex plays are therefore as a target/source vertex and as a context/neighbor vertex in edge-based prediction.",
+        "llm_extraction_confidence": 0.96,
+        "llm_confidence_reasoning": "This matches the standard LINE formulation: second-order proximity uses distinct embeddings for a node\u2019s role as a vertex and as its context, so the answer is well-established.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1833.0,
+            "prompt_tokens": 113,
+            "completion_tokens": 127
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2027.9,
+            "prompt_tokens": 699,
+            "completion_tokens": 308
+        },
+        "asserted_claim_count": 9,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.21909701134547716,
+        "query_entities": [
+            "LINE",
+            "second-order proximity",
+            "VERTEX",
+            "vertex vector",
+            "context vector",
+            "source node",
+            "NEIGHBOR",
+            "target/source vertex",
+            "context/neighbor vertex",
+            "edge-based prediction"
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The embedding dimension of 128 is attributed to the papers, but the evidence excerpt does not contain it.",
+    "The setting of 10 walks per node is attributed to the papers, but the evidence excerpt does not contain it.",
+    "The walk length of 80 is attributed to the papers, but the evidence excerpt does not contain it.",
+    "The window size of 10 is attributed to the papers, but the evidence excerpt does not contain it."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer is correct: the papers do not report hardware, CPU/GPU, or runtime environment, and the response says so. However, it adds specific hyperparameter values (128 dimensions, 10 walks, walk length 80, window size 10) that do not appear in the provided evidence, so those claims are unsupported by it even if they may be true of the original paper.",
+  "judge_model": "claude-haiku-5-5"
+}

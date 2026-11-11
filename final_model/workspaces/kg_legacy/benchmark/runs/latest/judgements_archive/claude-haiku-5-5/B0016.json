@@ -1,0 +1,14 @@
+{
+  "claims_checked": 12,
+  "unsupported_claims": [
+    "DeepWalk is typically applied to homogeneous networks and is designed for undirected graphs (the evidence only states it applies to unweighted networks).",
+    "Both methods are for homogeneous networks, and metapath2vec or heterogeneous LINE variants are needed for heterogeneous networks (not in the evidence).",
+    "LINE does not explicitly sample multi-hop paths, so its proximity is restricted to first- and second-order neighborhoods, while DeepWalk's walks reach beyond these (an inference not stated in the papers).",
+    "DeepWalk captures multi-hop, higher-order structure up to the window size, whereas the papers describe its intended proximity as second-order.",
+    "LINE's first-order and second-order objectives are described with joint edge probability, context vectors, edge sampling, and negative sampling (none of these details appear in the evidence)."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core network-type difference (DeepWalk unweighted only, LINE handling weighted and unweighted, both directed and undirected) is supported by the evidence. However, the proximity comparison omits the paper's explicit statement that DeepWalk expects second-order proximity to yield similar representations, and it adds unsupported claims about heterogeneous networks, multi-hop reach, and LINE's sampling and objective details.",
+  "judge_model": "claude-haiku-5-5"
+}

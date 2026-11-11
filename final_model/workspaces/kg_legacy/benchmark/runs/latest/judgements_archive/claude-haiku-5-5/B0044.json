@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The answer's generic guess that missing edges are chosen uniformly at random with a constraint that the perturbed graph stays connected or that no node is isolated. The evidence says the constraint is that the number of connected components remains fixed, which is not the same as staying connected."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is answerable from the node2vec perturbation analysis in the evidence, which states missing edges are chosen randomly with the number of connected components held fixed. The AI claims it cannot identify the experiment and offers a generic guess about other studies, so its core content is unsupported and it misses the constraint stated in the papers.",
+  "judge_model": "claude-haiku-5-5"
+}

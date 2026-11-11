@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "node2vec's learning objective is unsupervised (the source describes node2vec as semi-supervised)",
+    "The method's objective does not infer the exploration degree, and supervision enters only through external hyperparameter tuning (the source says node2vec's semi-supervised nature helps infer the appropriate exploration degree)",
+    "The answer never mentions the semi-supervised nature the passage credits for inferring exploration"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that node2vec is supervised, and its description of p and q as tunable parameters is consistent with the evidence. However, it wrongly calls the objective unsupervised and denies that the semi-supervised nature helps infer exploration, which contradicts the passage's stated correction.",
+  "judge_model": "claude-haiku-5-5"
+}

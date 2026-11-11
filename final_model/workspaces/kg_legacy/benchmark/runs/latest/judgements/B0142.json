@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk uses hierarchical softmax (not explicitly stated in the evidence, though a related sentence mentions hierarchical sampling; it is also common background)",
+    "DeepWalk does not explicitly model edge weights \u2014 supported by evidence, so not unsupported"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer declines to identify paper1 and only describes DeepWalk, which is consistent with the evidence: truncated random walks, SkipGram, window co-occurrence, and unweighted-only. It does not state paper1's first-order proximity focus, so it is incomplete, but it makes no unsupported claims about the papers.",
+  "judge_model": "claude-sonnet-5-5"
+}

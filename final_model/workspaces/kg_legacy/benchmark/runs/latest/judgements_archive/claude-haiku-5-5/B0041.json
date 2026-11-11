@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI answer says the context is defined as vertices within window w in short random walks, excluding v_i, which matches the paper's window description but the evidence does not explicitly mention excluding v_i; this is a minor elaboration.",
+    "The claim that the probability is factorized as a product over context vertices, Pr(C|\u03a6(v_i)) = \u220f Pr(u|\u03a6(v_i)), is not stated in the evidence; the paper only says the model maximizes probability of any word in context without offset knowledge.",
+    "The claim that removing ordering makes the problem 'cheaper' via hierarchical softmax with a single shared prediction per context vertex is not in the evidence; the paper only says it speeds up training by building small models with one vertex at a time.",
+    "The claim that the answer 'discards positional information' is a reasonable reading but the evidence does not explicitly state this cost."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer, that context is the vertices on both sides within a window and that removing ordering means maximizing probability of any context vertex without knowing its offset, matches the evidence. However, the answer adds unsupported specifics about factorization, hierarchical softmax, and cost trade-offs that the source passage does not state.",
+  "judge_model": "claude-haiku-5-5"
+}

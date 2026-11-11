@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Link prediction experiments used unweighted networks (Facebook, PPI, arXiv ASTRO-PH) - evidence only mentions Facebook, not the others or unweighted status.",
+    "p and q were tuned over a grid of {0.25, 0.5, 1, 2, 4} - not in the evidence.",
+    "Results were reported for the best setting per dataset and operator - only partly supported by 'best possible choices of the binary operator'.",
+    "Facebook with Hadamard operator gave roughly 0.996 AUC - not in the evidence (hedged as unverified, but still a specific figure)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give a specific (p, q) pair and AUC and rejects the weighted-graph premise. However, it adds details from memory (grid values, dataset list, a 0.996 AUC figure) that the evidence does not contain.",
+  "judge_model": "claude-sonnet-5-5"
+}

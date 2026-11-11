@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "LINE's experiments used K = 5 negative samples per edge (as I recall from the paper's parameter settings)",
+    "Per step, the work grows linearly in K (and in the embedding dimension d), since each of the K negative edges adds one more O(d) update - this is consistent with the stated O(d(K+1)) but is an inference beyond the explicit text"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence gives no chosen numerical value for K, so the claim that LINE used K = 5 is an invented specific that the papers do not support, even though it is hedged as recollection. The statements that the paper does not describe effects of changing K beyond O(d(K+1)) and that the per-step cost is linear in K are supported by the stated complexity formula.",
+  "judge_model": "claude-haiku-5-5"
+}

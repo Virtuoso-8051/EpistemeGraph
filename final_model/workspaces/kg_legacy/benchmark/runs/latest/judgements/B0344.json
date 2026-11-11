@@ -1,0 +1,11 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "The model stops preserving second-order proximity when the weight on the second-order term is set to zero or the second-order objective is disabled, so the loss reduces to first-order.",
+    "A degenerate case, such as vertices with no shared neighbors, is an alternative condition under which the model focuses only on first-order proximity."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise and invents conditions under which the model drops second-order proximity. It never corrects the premise, and the evidence says the model is defined using both first-order and second-order proximities, with no such switch.",
+  "judge_model": "claude-sonnet-5-5"
+}

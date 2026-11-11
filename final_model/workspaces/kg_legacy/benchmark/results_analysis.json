@@ -1,0 +1,284 @@
+{
+  "run": "final_model\\workspaces\\kg_legacy\\benchmark\\runs\\latest",
+  "n_items": 400,
+  "verdicts": {
+    "PARTIALLY_SUPPORTED": 222,
+    "UNSUPPORTED": 100,
+    "SUPPORTED": 78
+  },
+  "verdicts_by_category": {
+    "BORDERLINE": {
+      "PARTIALLY_SUPPORTED": 37,
+      "SUPPORTED": 18,
+      "UNSUPPORTED": 25
+    },
+    "CROSS_DOC": {
+      "PARTIALLY_SUPPORTED": 28,
+      "SUPPORTED": 8,
+      "UNSUPPORTED": 4
+    },
+    "FACTUAL": {
+      "PARTIALLY_SUPPORTED": 87,
+      "SUPPORTED": 18,
+      "UNSUPPORTED": 15
+    },
+    "FALSE_PREMISE": {
+      "PARTIALLY_SUPPORTED": 70,
+      "SUPPORTED": 34,
+      "UNSUPPORTED": 56
+    }
+  },
+  "supported_rate_by_category": {
+    "BORDERLINE": 0.225,
+    "CROSS_DOC": 0.2,
+    "FACTUAL": 0.15,
+    "FALSE_PREMISE": 0.2125
+  },
+  "false_premise_accepted_rate": 0.3875,
+  "judge_agreement": {
+    "n": 100,
+    "primary": "claude-haiku-5-5",
+    "second": "claude-haiku-5-5",
+    "kappa": {
+      "supported_vs_rest": {
+        "kappa": 0.3519118600129617,
+        "agreement": 0.8
+      },
+      "unsupported_vs_rest": {
+        "kappa": 0.48060941828254844,
+        "agreement": 0.85
+      },
+      "three_class": {
+        "kappa": 0.3974769346639051,
+        "agreement": 0.68
+      },
+      "ordinal_linear_weighted": {
+        "kappa": 0.41412788751255436
+      }
+    },
+    "confusion_3class[primary_rows x second_cols]": {
+      "PARTIALLY_SUPPORTED": {
+        "PARTIALLY_SUPPORTED": 49,
+        "SUPPORTED": 11,
+        "UNSUPPORTED": 6
+      },
+      "SUPPORTED": {
+        "PARTIALLY_SUPPORTED": 6,
+        "SUPPORTED": 9,
+        "UNSUPPORTED": 2
+      },
+      "UNSUPPORTED": {
+        "PARTIALLY_SUPPORTED": 6,
+        "SUPPORTED": 1,
+        "UNSUPPORTED": 10
+      }
+    }
+  },
+  "confounds": {
+    "answer_length_auroc_for_supported": 0.6037585602802994,
+    "n_claims_auroc_for_supported": 0.6249402771141901,
+    "mean_answer_chars_by_verdict": {
+      "PARTIALLY_SUPPORTED": 821.5,
+      "SUPPORTED": 647.6,
+      "UNSUPPORTED": 633.2
+    }
+  },
+  "oof_auroc": {
+    "EpistemeGraph_v4": 0.7139671922280618,
+    "same_learner_v3_inputs": 0.730510431597388,
+    "text_nli_checker": 0.7085125019907629,
+    "llm_self_confidence": 0.590539894887721,
+    "answer_length": 0.6276676222328397
+  },
+  "oof_auroc_by_category": {
+    "BORDERLINE": {
+      "EpistemeGraph_v4": 0.6854838709677419,
+      "same_learner_v3_inputs": 0.7025089605734767,
+      "text_nli_checker": 0.71415770609319,
+      "llm_self_confidence": 0.3413978494623655,
+      "answer_length": 0.7517921146953406
+    },
+    "CROSS_DOC": {
+      "EpistemeGraph_v4": 0.5390625,
+      "same_learner_v3_inputs": 0.6640625,
+      "text_nli_checker": 0.6015625,
+      "llm_self_confidence": 0.21875,
+      "answer_length": 0.703125
+    },
+    "FACTUAL": {
+      "EpistemeGraph_v4": 0.6949891067538126,
+      "same_learner_v3_inputs": 0.7445533769063181,
+      "text_nli_checker": 0.6416122004357298,
+      "llm_self_confidence": 0.7587145969498911,
+      "answer_length": 0.6797385620915033
+    },
+    "FALSE_PREMISE": {
+      "EpistemeGraph_v4": 0.7763772175536882,
+      "same_learner_v3_inputs": 0.7540849673202614,
+      "text_nli_checker": 0.7565359477124183,
+      "llm_self_confidence": 0.7086834733893558,
+      "answer_length": 0.5322128851540616
+    }
+  },
+  "vs_second_judge_labels": {
+    "n": 100,
+    "positives": 17,
+    "auroc_v4_vs_second_judge": 0.7136782423812899,
+    "auroc_v4_vs_primary_judge_same_items": 0.722724532851115,
+    "auroc_llm_conf_vs_second_judge": 0.39546420978029767,
+    "auroc_v4_on_items_where_judges_agree": 0.755868544600939,
+    "n_agree": 80
+  },
+  "conformal_curve_cv": [
+    {
+      "alpha": 0.05,
+      "coverage": 0.9575,
+      "coverage_supported": 0.9625,
+      "coverage_hallucinated": 0.9566346153846155,
+      "abstention_rate": 0.8225,
+      "selective_accuracy": 0.765494227994228
+    },
+    {
+      "alpha": 0.1,
+      "coverage": 0.9425,
+      "coverage_supported": 0.9116666666666667,
+      "coverage_hallucinated": 0.9504326923076922,
+      "abstention_rate": 0.6575,
+      "selective_accuracy": 0.8302469535908737
+    },
+    {
+      "alpha": 0.15,
+      "coverage": 0.9325,
+      "coverage_supported": 0.8616666666666667,
+      "coverage_hallucinated": 0.9504326923076922,
+      "abstention_rate": 0.605,
+      "selective_accuracy": 0.8271559164206224
+    },
+    {
+      "alpha": 0.2,
+      "coverage": 0.915,
+      "coverage_supported": 0.7733333333333334,
+      "coverage_hallucinated": 0.9504326923076922,
+      "abstention_rate": 0.4875,
+      "selective_accuracy": 0.8310669194126246
+    },
+    {
+      "alpha": 0.25,
+      "coverage": 0.9125,
+      "coverage_supported": 0.7608333333333335,
+      "coverage_hallucinated": 0.9504326923076922,
+      "abstention_rate": 0.41,
+      "selective_accuracy": 0.8535425154555589
+    },
+    {
+      "alpha": 0.3,
+      "coverage": 0.905,
+      "coverage_supported": 0.7225,
+      "coverage_hallucinated": 0.9504326923076922,
+      "abstention_rate": 0.385,
+      "selective_accuracy": 0.8477678879969985
+    }
+  ],
+  "matching": {
+    "n": 400,
+    "matched_at_0.5": 330,
+    "majority_baseline": 322,
+    "balanced_accuracy": 0.6290014333492595,
+    "recall_supported": 0.3076923076923077,
+    "recall_hallucinated": 0.9503105590062112,
+    "committed": 137,
+    "committed_correct": 114,
+    "abstained": 263,
+    "by_category": {
+      "BORDERLINE": {
+        "n": 80,
+        "matched": 63
+      },
+      "CROSS_DOC": {
+        "n": 40,
+        "matched": 33
+      },
+      "FACTUAL": {
+        "n": 120,
+        "matched": 104
+      },
+      "FALSE_PREMISE": {
+        "n": 160,
+        "matched": 130
+      }
+    },
+    "note": "out-of-fold: every answer is scored by a model that never saw it"
+  },
+  "judge_agreement_full": {
+    "other_judge": "claude-haiku-5-5",
+    "n": 400,
+    "kappa_binary": 0.5665108372290693,
+    "raw_agreement_binary": 0.8725,
+    "kappa_3class": 0.5653496761855088
+  },
+  "consensus_two_judges": {
+    "n": 349,
+    "positives": 46,
+    "auroc_v4": 0.7617305208781747,
+    "auroc_llm": 0.5714951929975607,
+    "matched_at_0.5": 305
+  },
+  "third_judge": {
+    "judge": "Gemini Pro (high reasoning)",
+    "n": 100,
+    "supported_rate": 0.7,
+    "auroc_v4_vs_third": 0.4857142857142857,
+    "auroc_llm_vs_third": 0.7138095238095238,
+    "agreement": {
+      "claude-sonnet-5-5": {
+        "n": 100,
+        "kappa_binary": 0.17207792207792205,
+        "raw_agreement_binary": 0.49,
+        "kappa_3class": 0.21527596128694748
+      },
+      "claude-haiku-5-5": {
+        "n": 100,
+        "kappa_binary": -0.028481012658227778,
+        "raw_agreement_binary": 0.35,
+        "kappa_3class": 0.05159332321699539
+      }
+    },
+    "majority_supported_rate": 0.24,
+    "auroc_v4_vs_majority": 0.7269736842105263,
+    "auroc_llm_vs_majority": 0.6504934210526315,
+    "n_unanimous": 32,
+    "auroc_v4_unanimous": 0.703125,
+    "fleiss_style_all_three_agree": 0.32
+  },
+  "label_design": {
+    "protocol": "3x5 repeated stratified CV, ExtraTrees, evaluated on the binary target",
+    "binary_auroc": 0.734318576388889,
+    "ordinal_auroc": 0.7388161057692307
+  },
+  "cost": {
+    "this_run_estimate_usd": 1.5185,
+    "ledger_total_usd": 1.8988,
+    "per_model": {
+      "claude-haiku-5-5": {
+        "calls": 400,
+        "input_tokens": 843102,
+        "output_tokens": 180573,
+        "usd": 0.08729834999999997
+      },
+      "claude-sonnet-5-5": {
+        "calls": 403,
+        "input_tokens": 849957,
+        "output_tokens": 113846,
+        "usd": 1.4311570000000005
+      }
+    }
+  },
+  "kg": {
+    "overall_kg_accuracy_score": 0.8442440064991328,
+    "verified_triplets_pushed": 375,
+    "resolved_entity_count": 313,
+    "documents_in_corpus": 3,
+    "total_chunks_processed": 76,
+    "cross_pdf_shared_entities_count": 29
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Flickr is \"much smaller\" than YouTube (the table shows Flickr has more nodes and edges: 1.7M nodes and 22.6M edges versus 1.1M nodes and 3.0M edges)",
+    "YouTube is \"larger and sparser\" (YouTube is sparser, but it is not larger)",
+    "The language network is described as a Wikipedia co-occurrence network, which is supported, but the DBLP network is called a \"co-authorship\" network, whereas the paper describes author and paper citation networks"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly names Flickr and YouTube and says Flickr is denser. It wrongly calls Flickr smaller and YouTube larger, since Flickr has more nodes and edges, and it mislabels DBLP as co-authorship rather than citation networks.",
+  "judge_model": "claude-sonnet-5-5"
+}

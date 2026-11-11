@@ -1,0 +1,56 @@
+{
+  "answer": "LINE-SGD is faster because, on the language network, it uses a much simpler objective and update rule than graph factorization: it optimizes only local pairwise edge information with negative sampling, avoids expensive matrix-factorization-style computations over the whole graph, and can be trained efficiently with ordinary SGD using sparse, edge-based updates. This makes each iteration cheaper and the optimization more scalable on large networks.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a well-established explanation of why LINE-style methods are faster, but the exact wording depends on the specific paper and implementation details, so I am not fully certain every phrasing matches the source.",
+  "triples": [
+    {
+      "source": "LINE-SGD",
+      "target": "much simpler objective and update rule than graph factorization",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "local pairwise edge information",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "expensive matrix-factorization-style computations over the whole graph",
+      "type": "AVOIDS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "ordinary stochastic gradient descent",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "sparse, edge-based update",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "cheaper each iteration",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "optimization scalability on large network",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.32206891187980996
+}

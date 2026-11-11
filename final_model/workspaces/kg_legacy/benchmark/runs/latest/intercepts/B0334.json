@@ -1,0 +1,56 @@
+{
+  "answer": "I can't see the passage you're referring to, so I can't describe its specific method. In general, graph embedding methods that use multidimensional scaling (MDS) to handle millions of nodes avoid the O(n\u00b2) cost of full MDS on the all-pairs distance matrix. A common approach is landmark-based MDS: pick a small set of landmark nodes, compute distances only from those landmarks to all nodes, run exact MDS on the small landmark subproblem, and then place every remaining node by triangulation or distance-based projection against the landmark coordinates. Other variants use sparse or approximate distance matrices (for example, shortest-path distances within a neighbourhood) or Nystr\u00f6m-style low-rank approximations, so the cost scales roughly linearly in the number of nodes. If you paste the passage, I can give the answer specific to its method.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The passage was not provided, so the answer relies on general knowledge of landmark and Nystr\u00f6m MDS methods rather than the specific method the question is asking about.",
+  "triples": [
+    {
+      "source": "Graph Embedding",
+      "target": "multidimensional scaling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "full MDS",
+      "target": "all-pairs distance matrix",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "landmark-based MDS",
+      "target": "multidimensional scaling",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "landmark-based MDS",
+      "target": "landmark node",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "landmark-based MDS",
+      "target": "triangulation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "landmark-based MDS",
+      "target": "linear scaling in number of node",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "MDS variant",
+      "target": "sparse distance matrix",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "MDS variant",
+      "target": "Nystr\u00f6m approximation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

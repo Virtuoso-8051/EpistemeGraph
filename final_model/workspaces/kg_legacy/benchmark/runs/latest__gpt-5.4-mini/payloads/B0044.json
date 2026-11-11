@@ -1,0 +1,107 @@
+{
+    "user_query": "Under what conditions were the missing edges selected in the perturbation experiment, and what constraint was imposed on that selection?",
+    "mode": "closed_book",
+    "llm_response": "The missing edges were chosen uniformly at random from the set of non-edges in the graph, and the selection was constrained so that the added/removed perturbations did not create self-loops or duplicate existing edges (i.e., the perturbed graph remained a simple graph).",
+    "llm_self_reported_accuracy": 0.62,
+    "llm_confidence_reasoning": "This answer reflects the standard setup for graph perturbation experiments, but without the specific source text I cannot be fully certain the exact selection rule and constraint match the question\u2019s intended context.",
+    "extracted_query_entities": [
+        "missing edge",
+        "perturbation experiment",
+        "non-edge",
+        "GRAPH",
+        "self-loop",
+        "duplicate existing edge",
+        "perturbed graph",
+        "simple graph"
+    ],
+    "extracted_response_entities": [
+        "missing edge",
+        "perturbation experiment",
+        "non-edge",
+        "GRAPH",
+        "self-loop",
+        "duplicate existing edge",
+        "perturbed graph",
+        "simple graph",
+        "uniformly at random",
+        "selection",
+        "no self-loop",
+        "no duplicate existing edge"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "missing edge",
+            "target": "non-edge",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "missing edge",
+            "target": "GRAPH",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "missing edge",
+            "target": "uniformly at random",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "selection",
+            "target": "no self-loop",
+            "type": "REQUIRES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "selection",
+            "target": "no duplicate existing edge",
+            "type": "REQUIRES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "perturbed graph",
+            "target": "simple graph",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under what conditions were the missing edges selected in the perturbation experiment, and what constraint was imposed on that selection?",
+        "llm_response": "The missing edges were chosen uniformly at random from the set of non-edges in the graph, and the selection was constrained so that the added/removed perturbations did not create self-loops or duplicate existing edges (i.e., the perturbed graph remained a simple graph).",
+        "llm_extraction_confidence": 0.62,
+        "llm_confidence_reasoning": "This answer reflects the standard setup for graph perturbation experiments, but without the specific source text I cannot be fully certain the exact selection rule and constraint match the question\u2019s intended context.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1406.7,
+            "prompt_tokens": 112,
+            "completion_tokens": 112
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1478.1,
+            "prompt_tokens": 585,
+            "completion_tokens": 213
+        },
+        "asserted_claim_count": 6,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.18665526048192438,
+        "query_entities": [
+            "missing edge",
+            "perturbation experiment",
+            "non-edge",
+            "GRAPH",
+            "self-loop",
+            "duplicate existing edge",
+            "perturbed graph",
+            "simple graph"
+        ]
+    }
+}

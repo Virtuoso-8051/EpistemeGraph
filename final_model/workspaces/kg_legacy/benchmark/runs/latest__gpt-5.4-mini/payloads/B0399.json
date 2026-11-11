@@ -1,0 +1,152 @@
+{
+    "user_query": "Why does node2vec\u2019s inability to reuse samples explain its strong Macro-F1 gains over LINE on BlogCatalog?",
+    "mode": "closed_book",
+    "llm_response": "Because node2vec generates many more distinct random-walk contexts than LINE\u2019s edge-sampling objective, it can expose the classifier to a much richer set of neighborhood patterns on BlogCatalog, where labels are highly overlapping and depend on higher-order proximity. LINE\u2019s samples are effectively one-shot edge observations, so it cannot repeatedly reuse the same local structure to reinforce useful signals. node2vec\u2019s walk-based sampling therefore acts like a stronger data-augmentation mechanism, which helps the downstream classifier separate classes better and yields a much larger Macro-F1 improvement on BlogCatalog.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This explanation matches the standard intuition for node2vec versus LINE on overlapping-label social networks, but the exact causal wording depends on the specific experimental setup and paper interpretation.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "LINE",
+        "BlogCatalog",
+        "MACRO-F1"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "LINE",
+        "BlogCatalog",
+        "MACRO-F1",
+        "random-walk context",
+        "edge-sampling objective",
+        "classifier",
+        "richer set of neighborhood pattern",
+        "highly overlapping label",
+        "labels depend on higher-order proximity",
+        "one-shot edge observation",
+        "same local structure",
+        "walk-based sampling",
+        "stronger data-augmentation mechanism",
+        "downstream classifier",
+        "separate classes better",
+        "much larger Macro-F1 improvement"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "random-walk context",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "edge-sampling objective",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "classifier",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "classifier",
+            "target": "richer set of neighborhood pattern",
+            "type": "EXPOSED_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "BlogCatalog",
+            "target": "highly overlapping label",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "BlogCatalog",
+            "target": "labels depend on higher-order proximity",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "one-shot edge observation",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "same local structure",
+            "type": "CANNOT_REUSE",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "walk-based sampling",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "walk-based sampling",
+            "target": "stronger data-augmentation mechanism",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "stronger data-augmentation mechanism",
+            "target": "downstream classifier",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "downstream classifier",
+            "target": "separate classes better",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "much larger Macro-F1 improvement",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "BlogCatalog",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why does node2vec\u2019s inability to reuse samples explain its strong Macro-F1 gains over LINE on BlogCatalog?",
+        "llm_response": "Because node2vec generates many more distinct random-walk contexts than LINE\u2019s edge-sampling objective, it can expose the classifier to a much richer set of neighborhood patterns on BlogCatalog, where labels are highly overlapping and depend on higher-order proximity. LINE\u2019s samples are effectively one-shot edge observations, so it cannot repeatedly reuse the same local structure to reinforce useful signals. node2vec\u2019s walk-based sampling therefore acts like a stronger data-augmentation mechanism, which helps the downstream classifier separate classes better and yields a much larger Macro-F1 improvement on BlogCatalog.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This explanation matches the standard intuition for node2vec versus LINE on overlapping-label social networks, but the exact causal wording depends on the specific experimental setup and paper interpretation.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2435.8,
+            "prompt_tokens": 112,
+            "completion_tokens": 164
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 4947.5,
+            "prompt_tokens": 737,
+            "completion_tokens": 454
+        },
+        "asserted_claim_count": 14,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.32934239544445953,
+        "query_entities": [
+            "NODE2VEC",
+            "LINE",
+            "BlogCatalog",
+            "MACRO-F1"
+        ]
+    }
+}

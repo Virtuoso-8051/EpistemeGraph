@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI answer says the passage is not included, yet the evidence does contain the relevant passage describing DeepWalk as uniform random walks with no control and LINE as breadth-first over 1-hop and 2-hop neighbors; the answer never states this contrast.",
+    "DeepWalk is described as flexible in how far it looks via window size and walk length, which contradicts the evidence that DeepWalk gives no control over explored neighborhoods.",
+    "The claimed trade-off between depth/flexibility and efficiency/explicit control is not the trade-off described in the passage, which contrasts the easier-to-characterize but restrictive LINE exploration with the uncontrolled DeepWalk walks.",
+    "LINE is described as cheaper and more interpretable; the evidence says LINE's effect is easier to characterize but does not claim it is cheaper."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer relies on general background instead of the source passage, and it characterizes DeepWalk as flexible in exploring depth, the opposite of the passage's claim that DeepWalk offers no control over explored neighborhoods. The trade-off it describes (depth/flexibility versus efficiency/control) is not the one the passage presents, so the core answer is unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

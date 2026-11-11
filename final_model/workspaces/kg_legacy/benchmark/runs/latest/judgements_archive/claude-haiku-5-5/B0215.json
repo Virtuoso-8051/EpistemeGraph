@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI attributes the discussed methods to LINE (Tang et al., 2015) and claims its experiments used roughly four to five networks including Wikipedia, Flickr, YouTube, Orkut, and Twitter for visualization; the evidence contains no information about LINE's datasets or experiments and does not name the paper.",
+    "The claim that the paper is LINE and that it discusses first-order proximity is not verifiable from the evidence, which only defines first-order proximity without naming a source paper."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The question is unanswerable from the provided passage, which lists no experimental datasets, and the AI correctly admits uncertainty and defers to the paper's dataset table. However, it still injects specific unsupported details (LINE, Flickr, YouTube, Orkut, Twitter) from outside the evidence, which counts as invented specifics.",
+  "judge_model": "claude-haiku-5-5"
+}

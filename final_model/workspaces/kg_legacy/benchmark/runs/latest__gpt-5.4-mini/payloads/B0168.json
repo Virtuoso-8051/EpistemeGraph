@@ -1,0 +1,114 @@
+{
+    "user_query": "Under what conditions, if any, do the authors assign a nonzero first-order proximity to a pair of vertices that are not connected by an observed edge in the network embedding model?",
+    "mode": "closed_book",
+    "llm_response": "In the standard network embedding model of this type, first-order proximity is defined only for observed edges: a nonzero first-order proximity is assigned to a vertex pair if and only if there is an edge between them in the input network. For a pair of vertices with no observed edge, the first-order proximity is zero, so the model does not assign them a nonzero first-order proximity. Any similarity between non-adjacent vertices is handled through second-order proximity or other higher-order/indirect mechanisms, not first-order proximity.",
+    "llm_self_reported_accuracy": 0.96,
+    "llm_confidence_reasoning": "This is a direct statement of the usual definition of first-order proximity in the cited network embedding framework, and there is little ambiguity unless the paper uses a nonstandard variant.",
+    "extracted_query_entities": [
+        "network embedding model",
+        "first-order proximity",
+        "observed edge",
+        "input network",
+        "second-order proximity",
+        "higher-order/indirect mechanism"
+    ],
+    "extracted_response_entities": [
+        "network embedding model",
+        "first-order proximity",
+        "observed edge",
+        "input network",
+        "second-order proximity",
+        "higher-order/indirect mechanism",
+        "nonzero first-order proximity",
+        "vertex pair with an edge between them in the input network",
+        "pair of vertices with no observed edge",
+        "first-order proximity is zero",
+        "similarity between non-adjacent vertice"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "first-order proximity",
+            "target": "observed edge",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "observed edge",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "nonzero first-order proximity",
+            "target": "vertex pair with an edge between them in the input network",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "pair of vertices with no observed edge",
+            "target": "first-order proximity is zero",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "network embedding model",
+            "target": "nonzero first-order proximity",
+            "type": "DOES_NOT_ASSIGN",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "similarity between non-adjacent vertice",
+            "target": "second-order proximity",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "similarity between non-adjacent vertice",
+            "target": "higher-order/indirect mechanism",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "similarity between non-adjacent vertice",
+            "target": "first-order proximity",
+            "type": "NOT_FIRST_ORDER_PROXIMITY",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under what conditions, if any, do the authors assign a nonzero first-order proximity to a pair of vertices that are not connected by an observed edge in the network embedding model?",
+        "llm_response": "In the standard network embedding model of this type, first-order proximity is defined only for observed edges: a nonzero first-order proximity is assigned to a vertex pair if and only if there is an edge between them in the input network. For a pair of vertices with no observed edge, the first-order proximity is zero, so the model does not assign them a nonzero first-order proximity. Any similarity between non-adjacent vertices is handled through second-order proximity or other higher-order/indirect mechanisms, not first-order proximity.",
+        "llm_extraction_confidence": 0.96,
+        "llm_confidence_reasoning": "This is a direct statement of the usual definition of first-order proximity in the cited network embedding framework, and there is little ambiguity unless the paper uses a nonstandard variant.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2063.2,
+            "prompt_tokens": 125,
+            "completion_tokens": 160
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2257.1,
+            "prompt_tokens": 768,
+            "completion_tokens": 321
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.19653939581536628,
+        "query_entities": [
+            "network embedding model",
+            "first-order proximity",
+            "observed edge",
+            "input network",
+            "second-order proximity",
+            "higher-order/indirect mechanism"
+        ]
+    }
+}

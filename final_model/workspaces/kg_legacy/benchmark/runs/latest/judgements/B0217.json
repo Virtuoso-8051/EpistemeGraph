@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "Combining first- and second-order proximity (LINE-1st+2nd) gave clearly higher link prediction accuracy than first-order alone, with a substantial gap, is not supported by the evidence.",
+    "The answer attributes a specific link prediction comparison of LINE-1st+2nd versus LINE-1st to the Tang et al. paper, but the evidence contains no such result."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give a number, but it goes along with the premise by asserting that the combined model was clearly and substantially better at link prediction. The evidence has no such comparison, and it only mentions LINE(1st) versus LINE(2nd) results under different sparsity conditions.",
+  "judge_model": "claude-sonnet-5-5"
+}

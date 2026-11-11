@@ -1,0 +1,44 @@
+{
+  "answer": "DeepWalk tends to outperform competing network-embedding and baseline methods (e.g., spectral clustering, modularity, EdgeCluster) when labeled training data is scarce, i.e., when only a small fraction of nodes is labeled for the downstream node-classification task. In the original DeepWalk evaluation on BlogCatalog, it kept its advantage even with as little as about 1% of nodes labeled, which is roughly 4-5 times less labeled data than the roughly 5% level at which some competitors need to match it. I am not certain of the exact percentages or margins, so treat the specific figures as approximate.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I recall the general claim that DeepWalk excels under sparse labels, but the exact percentages and the comparison ratio are uncertain and not verified from the source.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "spectral clustering",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "modularity",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "EdgeCluster",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "classification performance",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "classification performance",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

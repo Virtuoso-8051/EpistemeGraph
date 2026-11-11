@@ -1,0 +1,14 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "LINE(1st+2nd) is only applied to supervised tasks is the core point; the AI answer instead says LINE does not require supervised data, contradicting the evidence that LINE(1st+2nd) is only applied to supervised tasks because weights are hard to set unsupervised.",
+    "The claim that LINE is evaluated with labels only downstream and that labels are used only for evaluation omits that the paper restricts the concatenated LINE(1st+2nd) variant to supervised tasks.",
+    "The claim that LINE's original paper used Flickr, YouTube, Orkut, and Twitter is not contained in the evidence and is offered from memory.",
+    "The claim that DeepWalk's original paper reports BlogCatalog results is not stated in the provided evidence, though the evidence shows this paper's BlogCatalog evaluation.",
+    "The claim that DeepWalk is evaluated with a one-vs-rest logistic regression on 10%-90% training ratios with Micro/Macro-F1 averaged over random splits is supported by the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly describes the DeepWalk BlogCatalog evaluation protocol (training ratio 10%-90%, Macro/Micro-F1, one-vs-rest logistic regression), but it misses the key point from the evidence that LINE(1st+2nd) is applied only to supervised tasks because dimension weights are hard to set unsupervised. It also adds uncited claims about LINE's datasets and DeepWalk's original reporting.",
+  "judge_model": "claude-haiku-5-5"
+}

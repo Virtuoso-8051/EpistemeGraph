@@ -1,0 +1,50 @@
+{
+  "answer": "Without the specific paper in view, the most likely answer is the standard incremental random-walk approach. The method precomputes and stores a set of short random walks starting from each node. When an edge is added or removed, only the stored walks that pass through the affected node(s) are identified and regenerated from the point of change onward, while the rest stay valid. Because a small graph change affects only a small fraction of these walks, the update cost scales with the number of affected walks rather than with the whole graph. The computational benefit is that the walk-based embedding or PageRank-style estimates can be kept current at a cost far below recomputing all walks from scratch. If the paper uses a different mechanism, this answer may not match it.",
+  "confidence": 0.4,
+  "confidence_reasoning": "The question does not name the paper, so I am inferring the likely incremental random-walk scheme from the general literature, and the specific details may not match the authors' method.",
+  "triples": [
+    {
+      "source": "incremental random-walk approach",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental random-walk approach",
+      "target": "update cost",
+      "type": "OPTIMIZES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "stored walks passing through affected node",
+      "target": "regeneration from point of change",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "small graph change",
+      "target": "small fraction of stored walk",
+      "type": "APPLIES_TO",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "update cost",
+      "target": "number of affected walk",
+      "type": "DEFINED_AS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental random-walk approach",
+      "target": "walk-based embedding updates at cost below recomputing all walk",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental random-walk approach",
+      "target": "PAGERANK",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

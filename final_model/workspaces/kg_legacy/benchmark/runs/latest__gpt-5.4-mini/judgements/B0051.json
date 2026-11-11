@@ -1,0 +1,15 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Graph factorization is generally applicable when the graph can be represented as a weighted adjacency matrix.",
+    "it is most natural for static, relatively small-to-medium graphs because it relies on matrix factorization over the whole graph.",
+    "LINE is more broadly applicable to large-scale graphs, including very large sparse networks, because it is designed to optimize first-order and/or second-order proximity with efficient edge-sampling and negative-sampling style training.",
+    "so it scales much better than standard graph factorization.",
+    "graph factorization is more limited by graph size and the need for a matrix-form representation.",
+    "LINE is applicable to much larger graphs and is specifically built for scalability."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The papers support only the direct comparison that graph factorization applies to undirected graphs, while LINE applies to both undirected and directed graphs. The answer adds several extra claims about weighted adjacency matrices, graph size limits, and specific training tricks/scalability that are not stated in the provided evidence.",
+  "judge_model": "gpt-5.4-mini"
+}

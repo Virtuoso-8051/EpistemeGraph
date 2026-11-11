@@ -1,0 +1,86 @@
+{
+  "answer": "The passage isn't included, so this is a general answer. Affinity-graph embedding methods (such as Laplacian Eigenmaps, LLE, Isomap, and spectral embeddings) build a pairwise affinity or similarity matrix over all n nodes. Storing that matrix takes O(n^2) memory, and it is often dense. The main computational bottleneck is the eigendecomposition (or other spectral solve) of this n\u00d7n matrix, which costs roughly O(n^3) time in the naive case. Constructing the pairwise affinities and shortest-path or neighbourhood computations add further quadratic costs. Together these make the methods impractical as the number of nodes grows, and approximations such as sparse graphs, landmarks, or randomized eigensolvers are typically used to address this.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The passage was not provided, so the answer relies on the standard complexity of spectral affinity-graph methods, which is well established but may not match the passage's specific framing.",
+  "triples": [
+    {
+      "source": "affinity-graph embedding method",
+      "target": "affinity matrix",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "affinity matrix",
+      "target": "O(n^2) memory",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "eigendecomposition",
+      "target": "O(n^3) time",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "eigendecomposition",
+      "target": "main computational bottleneck",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "affinity-graph embedding method",
+      "target": "Laplacian Eigenmap",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "affinity-graph embedding method",
+      "target": "LLE",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "affinity-graph embedding method",
+      "target": "ISOMAP",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "affinity-graph embedding method",
+      "target": "spectral embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "affinity-graph embedding method",
+      "target": "pairwise affinity construction",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "affinity-graph embedding method",
+      "target": "shortest-path computation",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sparse graph",
+      "target": "affinity-graph embedding method",
+      "type": "APPROXIMATES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "randomized eigensolver",
+      "target": "eigendecomposition",
+      "type": "APPROXIMATES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "affinity-graph embedding method",
+      "target": "scalability on large-scale network",
+      "type": "IMPROVES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

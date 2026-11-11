@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Their time complexity is roughly cubic in the number of nodes",
+    "Their latent representations do reasonably well on small networks, achieving competitive results on tasks such as node classification and link prediction",
+    "They are generally outperformed by more scalable neural and random-walk-based embedding methods (e.g., DeepWalk, node2vec, LINE)",
+    "Operate on dense matrix representations of the graph such as adjacency or Laplacian matrices"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence supports that PCA/MDS require eigendecomposition of a data matrix, which is expensive for large networks, and that their latent representations perform poorly on prediction tasks. However, the answer's claims that they do competitively on small networks, the specific cubic complexity, and the named comparison to DeepWalk/node2vec/LINE are not stated in the provided evidence, and the answer's characterization of performance contradicts the gold claim of poor performance.",
+  "judge_model": "claude-haiku-5-5"
+}

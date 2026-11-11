@@ -1,0 +1,44 @@
+{
+  "answer": "The question doesn't name the specific method, so I can't tie this to a particular paper with confidence. In general, an unsupervised objective can be made to improve downstream prediction without task-independent constraints in a few ways: (1) the representation or feature-learning loss is coupled to the downstream predictor, so gradients or selection criteria favor features that help the prediction; (2) the unsupervised term is weighted or selected using downstream validation performance, so it is pushed toward task-relevant structure rather than generic reconstruction or density fidelity; or (3) the objective is defined over the joint data distribution in a way that its optimum aligns with predictive information about the target. Under this reading, the unsupervised signal does not need to preserve everything about the input, because the task-related structure is what it is steered toward. If you can name the paper or method, I can give a more specific answer.",
+  "confidence": 0.2,
+  "confidence_reasoning": "The question refers to an unnamed method, so my answer is a generic reconstruction of plausible mechanisms rather than a verified account of the specific paper's objective.",
+  "triples": [
+    {
+      "source": "objective",
+      "target": "downstream task",
+      "type": "IMPROVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "feature learning loss",
+      "target": "downstream task",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unsupervised term",
+      "target": "downstream validation performance",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unsupervised term",
+      "target": "task-relevant structure",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "objective",
+      "target": "predictive information about the target",
+      "type": "OPTIMIZES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "objective",
+      "target": "input information",
+      "type": "PRESERVES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,50 @@
+{
+  "answer": "I can't reliably recall the exact figure. The LINE paper (Tang et al., WWW 2015) reports wall-clock training times for the second-order model on large graphs such as Twitter, and says the cost scales roughly linearly with the number of edge samples, using asynchronous SGD with edge sampling. It was run on a single multi-core machine with many threads rather than a cluster. I could not confirm the specific minutes or hours, the memory figure, or the exact thread count and CPU/RAM specs, so please check Section 4 or the efficiency experiments of the paper directly.",
+  "confidence": 0.2,
+  "confidence_reasoning": "The general setup (single multi-threaded machine, asynchronous SGD, linear scaling in edge samples) is recalled with moderate confidence, but the specific runtime, memory, and hardware numbers are not reliably recalled and may be wrong.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "wall-clock training time on large graph",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "TWITTER",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training time complexity",
+      "target": "roughly linear scaling with number of edge sample",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "asynchronous SGD",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge-sampling algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "single multi-core machine",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "CLUSTER",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

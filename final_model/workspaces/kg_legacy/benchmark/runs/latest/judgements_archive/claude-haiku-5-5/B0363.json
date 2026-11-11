@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The answer says LINE uses edge sampling with negative sampling; the evidence mentions edge-sampling but does not mention negative sampling explicitly, though this is standard background for LINE and is not contradicted.",
+    "The answer says the objective does not use class labels; the evidence does not state this explicitly, though it is consistent with LINE being an unsupervised embedding method."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that LINE optimizes document embeddings for classification, and its core description of LINE as a large-scale network embedding method preserving first- and second-order proximity is supported by the evidence. The only minor gaps (negative sampling, no use of class labels) are background details that are consistent with the papers and do not contradict them, so the answer is faithful overall.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,120 @@
+{
+    "user_query": "Under which conditions does LINE rely on second-order proximity to outperform graph factorization by modeling the first-order proximity more effectively?",
+    "mode": "closed_book",
+    "llm_response": "LINE is reported to rely on second-order proximity to outperform graph factorization when the graph is sparse and the task benefits from preserving neighborhood similarity rather than only direct edge weights. In that setting, modeling second-order proximity lets LINE capture shared-context information between nodes, which is often more effective than graph factorization\u2019s direct first-order proximity modeling on sparse networks.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This is consistent with the LINE paper\u2019s general claim about sparse graphs and second-order proximity, but the exact wording of the condition is somewhat interpretive rather than a verbatim statement.",
+    "extracted_query_entities": [
+        "LINE",
+        "second-order proximity",
+        "graph factorization",
+        "first-order proximity",
+        "GRAPH",
+        "neighborhood similarity",
+        "direct edge weight",
+        "shared-context information",
+        "sparse network"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "second-order proximity",
+        "graph factorization",
+        "first-order proximity",
+        "GRAPH",
+        "neighborhood similarity",
+        "direct edge weight",
+        "shared-context information",
+        "sparse network",
+        "TASK",
+        "more effective than graph factorization\u2019s direct first-order proximity modeling on sparse network"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "second-order proximity",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "graph factorization",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "GRAPH",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "GRAPH",
+            "target": "sparse network",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "TASK",
+            "target": "neighborhood similarity",
+            "type": "BENEFITS_FROM",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "TASK",
+            "target": "direct edge weight",
+            "type": "NOT_ONLY",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "shared-context information",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "shared-context information",
+            "target": "more effective than graph factorization\u2019s direct first-order proximity modeling on sparse network",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which conditions does LINE rely on second-order proximity to outperform graph factorization by modeling the first-order proximity more effectively?",
+        "llm_response": "LINE is reported to rely on second-order proximity to outperform graph factorization when the graph is sparse and the task benefits from preserving neighborhood similarity rather than only direct edge weights. In that setting, modeling second-order proximity lets LINE capture shared-context information between nodes, which is often more effective than graph factorization\u2019s direct first-order proximity modeling on sparse networks.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This is consistent with the LINE paper\u2019s general claim about sparse graphs and second-order proximity, but the exact wording of the condition is somewhat interpretive rather than a verbatim statement.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1731.3,
+            "prompt_tokens": 113,
+            "completion_tokens": 126
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2093.8,
+            "prompt_tokens": 705,
+            "completion_tokens": 284
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2472495396931966,
+        "query_entities": [
+            "LINE",
+            "second-order proximity",
+            "graph factorization",
+            "first-order proximity",
+            "GRAPH",
+            "neighborhood similarity",
+            "direct edge weight",
+            "shared-context information",
+            "sparse network"
+        ]
+    }
+}

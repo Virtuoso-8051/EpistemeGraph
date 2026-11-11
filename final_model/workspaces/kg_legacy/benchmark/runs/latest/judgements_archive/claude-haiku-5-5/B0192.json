@@ -1,0 +1,14 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The authors set the walk length to l = 80 in their link prediction and node classification experiments.",
+    "Hyperparameters r = 10, k = 10, d = 128 were used in these experiments.",
+    "The sensitivity analysis shows performance generally improves as l increases, with gains diminishing at larger values.",
+    "l = 80 was chosen as a trade-off between accuracy and computational cost."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is not answerable from the provided evidence, which only defines l and mentions that increasing walk length improves performance, without giving the exact value used or its relative effects. The AI answer asserts a specific value (l = 80) and specific diminishing-returns and trade-off claims that the evidence does not contain, so its core answer is unsupported.",
+  "parse_note": "",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,68 @@
+{
+    "user_query": "What conditional probability does LINE define for generating a context vertex vj from a vertex vi, and over what set is this distribution defined?",
+    "mode": "closed_book",
+    "llm_response": "LINE defines the conditional probability of generating a context vertex v_j from a vertex v_i as p(v_j \\mid v_i) = \\frac{\\exp(\\mathbf{u}_j^\\top \\mathbf{v}_i)}{\\sum_{k=1}^{|V|} \\exp(\\mathbf{u}_k^\\top \\mathbf{v}_i)}. This distribution is defined over all vertices in the graph, i.e., the full vertex set V.",
+    "llm_self_reported_accuracy": 0.97,
+    "llm_confidence_reasoning": "This is the standard softmax conditional probability used in LINE, and the denominator sums over the entire vertex set.",
+    "extracted_query_entities": [
+        "LINE",
+        "context vertex",
+        "VERTEX",
+        "full vertex set V"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "context vertex",
+        "VERTEX",
+        "full vertex set V",
+        "conditional probability of generating a context vertex v_j from a vertex v_i"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "conditional probability of generating a context vertex v_j from a vertex v_i",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "conditional probability of generating a context vertex v_j from a vertex v_i",
+            "target": "full vertex set V",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What conditional probability does LINE define for generating a context vertex vj from a vertex vi, and over what set is this distribution defined?",
+        "llm_response": "LINE defines the conditional probability of generating a context vertex v_j from a vertex v_i as p(v_j \\mid v_i) = \\frac{\\exp(\\mathbf{u}_j^\\top \\mathbf{v}_i)}{\\sum_{k=1}^{|V|} \\exp(\\mathbf{u}_k^\\top \\mathbf{v}_i)}. This distribution is defined over all vertices in the graph, i.e., the full vertex set V.",
+        "llm_extraction_confidence": 0.97,
+        "llm_confidence_reasoning": "This is the standard softmax conditional probability used in LINE, and the denominator sums over the entire vertex set.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1728.5,
+            "prompt_tokens": 116,
+            "completion_tokens": 143
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1938.1,
+            "prompt_tokens": 726,
+            "completion_tokens": 241
+        },
+        "asserted_claim_count": 2,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.07819747924804688,
+        "query_entities": [
+            "LINE",
+            "context vertex",
+            "VERTEX",
+            "full vertex set V"
+        ]
+    }
+}

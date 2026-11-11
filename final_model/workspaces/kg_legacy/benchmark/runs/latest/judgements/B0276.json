@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk outperforms standard classification methods that predict labels directly from the graph (accepts the false premise; the evidence says DeepWalk learns latent representations used by standard classifiers, not that it directly predicts labels)",
+    "DeepWalk's advantage is greatest when labeled data is sparse, versus direct classifiers",
+    "In the dense/abundant-label or misaligned-label case, direct graph-based classifiers match or outperform DeepWalk",
+    "In the original evaluation on BlogCatalog, Flickr and YouTube, DeepWalk was competitive or superior especially with few labeled nodes (not in the provided evidence)"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise that DeepWalk directly predicts labels and outperforms standard classifiers. It never says DeepWalk only learns latent representations that feed standard classifiers, though it does mention embeddings feeding logistic regression in passing. Its specific conditions and results are not supported by the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

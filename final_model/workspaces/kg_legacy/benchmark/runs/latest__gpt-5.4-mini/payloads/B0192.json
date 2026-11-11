@@ -1,0 +1,108 @@
+{
+    "user_query": "In node2vec, what exact value of the walk length l did the authors use in their experiments on link prediction or node classification, and how does that choice affect performance relative to other l values?",
+    "mode": "closed_book",
+    "llm_response": "In the node2vec paper, the authors used a walk length l = 80 in their experiments for both node classification and link prediction. They report that performance is generally robust around this setting, and that using much shorter walks tends to hurt performance because the random walks do not capture enough context, while much longer walks do not provide consistent gains and can sometimes slightly degrade results or add unnecessary computation. In other words, l = 80 was their default/selected value and was near the best-performing range in their experiments.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "The exact walk length of 80 is well known from the node2vec paper, but the comparative performance summary is a high-level synthesis rather than a verbatim result and may vary by dataset and task.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "node classification",
+        "link prediction",
+        "walk length l"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "node classification",
+        "link prediction",
+        "walk length l",
+        "performance",
+        "shorter walk length l",
+        "CONTEXT",
+        "longer walk length l",
+        "computation"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "walk length l",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "node classification",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "link prediction",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "walk length l",
+            "target": "performance",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "shorter walk length l",
+            "target": "performance",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "shorter walk length l",
+            "target": "CONTEXT",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "longer walk length l",
+            "target": "performance",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "longer walk length l",
+            "target": "computation",
+            "type": "INCREASES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "In node2vec, what exact value of the walk length l did the authors use in their experiments on link prediction or node classification, and how does that choice affect performance relative to other l values?",
+        "llm_response": "In the node2vec paper, the authors used a walk length l = 80 in their experiments for both node classification and link prediction. They report that performance is generally robust around this setting, and that using much shorter walks tends to hurt performance because the random walks do not capture enough context, while much longer walks do not provide consistent gains and can sometimes slightly degrade results or add unnecessary computation. In other words, l = 80 was their default/selected value and was near the best-performing range in their experiments.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "The exact walk length of 80 is well known from the node2vec paper, but the comparative performance summary is a high-level synthesis rather than a verbatim result and may vary by dataset and task.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2073.7,
+            "prompt_tokens": 129,
+            "completion_tokens": 165
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2145.6,
+            "prompt_tokens": 750,
+            "completion_tokens": 290
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.21519146325453273,
+        "query_entities": [
+            "NODE2VEC",
+            "node classification",
+            "link prediction",
+            "walk length l"
+        ]
+    }
+}

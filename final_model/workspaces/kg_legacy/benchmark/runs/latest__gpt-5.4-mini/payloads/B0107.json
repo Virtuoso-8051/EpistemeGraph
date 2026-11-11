@@ -1,0 +1,94 @@
+{
+    "user_query": "How does node2vec scale with increasing graph size, and what specific result is reported for one million nodes?",
+    "mode": "closed_book",
+    "llm_response": "node2vec is reported to scale roughly linearly with graph size, because its random-walk generation and embedding learning can be parallelized efficiently. In the reported experiment, it was able to process a graph with one million nodes in about 10 minutes on a multi-core machine.",
+    "llm_self_reported_accuracy": 0.86,
+    "llm_confidence_reasoning": "This matches the commonly reported node2vec scalability claim and the specific one-million-node runtime, though exact timing can vary by implementation and hardware.",
+    "extracted_query_entities": [
+        "NODE2VEC"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "graph size",
+        "roughly linear scaling",
+        "random-walk generation",
+        "embedding learning",
+        "parallelization",
+        "process a graph with one million nodes in about 10 minutes on a multi-core machine"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "graph size",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "roughly linear scaling",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "random-walk generation",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "embedding learning",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk generation",
+            "target": "parallelization",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "embedding learning",
+            "target": "parallelization",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "process a graph with one million nodes in about 10 minutes on a multi-core machine",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does node2vec scale with increasing graph size, and what specific result is reported for one million nodes?",
+        "llm_response": "node2vec is reported to scale roughly linearly with graph size, because its random-walk generation and embedding learning can be parallelized efficiently. In the reported experiment, it was able to process a graph with one million nodes in about 10 minutes on a multi-core machine.",
+        "llm_extraction_confidence": 0.86,
+        "llm_confidence_reasoning": "This matches the commonly reported node2vec scalability claim and the specific one-million-node runtime, though exact timing can vary by implementation and hardware.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1485.0,
+            "prompt_tokens": 111,
+            "completion_tokens": 104
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1644.8,
+            "prompt_tokens": 679,
+            "completion_tokens": 236
+        },
+        "asserted_claim_count": 7,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.19414551404057717,
+        "query_entities": [
+            "NODE2VEC"
+        ]
+    }
+}

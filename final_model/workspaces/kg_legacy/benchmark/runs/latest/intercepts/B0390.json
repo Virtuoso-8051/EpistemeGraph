@@ -1,0 +1,68 @@
+{
+  "answer": "The question's premise is somewhat muddled. EdgeCluster's scalability does not come from its spectral step replacing k-means. It comes from computing a truncated, sparse eigen-decomposition (e.g., Lanczos-style methods) of the sparse graph or edge-centric matrix. Each iteration needs only sparse matrix-vector products, so the cost scales roughly with the number of edges, and the method never forms the dense n-by-n modularity matrix that Modularity-based embeddings require. The resulting low-dimensional node embedding is then clustered (with k-means) to produce latent social dimensions. Because the spectral features capture much the same community structure as the modularity matrix's leading eigenvectors, EdgeCluster achieves comparable classification performance while remaining tractable on very large graphs.",
+  "confidence": 0.4,
+  "confidence_reasoning": "I am reasonably familiar with the EdgeCluster and Modularity literature (Tang and Liu), but I am unsure of the exact details of how k-means is used in EdgeCluster, so the framing of the answer may be partly inaccurate.",
+  "triples": [
+    {
+      "source": "EdgeCluster",
+      "target": "k-means clustering",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "target": "truncated sparse eigen-decomposition",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated sparse eigen-decomposition",
+      "target": "Lanczos-style method",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "EdgeCluster",
+      "target": "sparse matrix-vector product",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "target": "computational cost scales with number of edge",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "target": "dense n-by-n modularity matrix",
+      "type": "PRESERVE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Modularity-based embedding",
+      "target": "dense n-by-n modularity matrix",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "target": "latent social dimension",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral feature",
+      "target": "community structure",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "target": "comparable classification performance",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

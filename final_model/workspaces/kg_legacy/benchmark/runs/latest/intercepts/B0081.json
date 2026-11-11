@@ -1,0 +1,44 @@
+{
+  "answer": "The passage is not included in your message, so I can't quote its exact wording. In general, spectral clustering assumes that the data can be represented by a similarity graph (built from a pairwise affinity or kernel) in which clusters appear as densely connected groups that are weakly linked to each other. Its eigenvectors of the graph Laplacian then reveal the cluster structure. The assumption is considered limiting because the result depends heavily on the chosen similarity measure and its parameters, such as kernel width or number of nearest neighbours. It also typically requires the number of clusters k to be specified in advance, and it can perform poorly when clusters are non-graph-like, highly unbalanced, or differ greatly in density. If you share the passage, I can give an answer tied to its specific wording.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The passage was not provided, so the answer reflects the general textbook view of spectral clustering rather than the specific text the question refers to.",
+  "triples": [
+    {
+      "source": "spectral clustering",
+      "target": "similarity graph",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "similarity graph",
+      "target": "clusters appear as densely connected group",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "graph Laplacian eigenvector",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "number of clusters k specified in advance",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "non-graph-like cluster",
+      "type": "APPLIES_TO",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "cluster structure revealed by eigenvector",
+      "type": "PRESERVE",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

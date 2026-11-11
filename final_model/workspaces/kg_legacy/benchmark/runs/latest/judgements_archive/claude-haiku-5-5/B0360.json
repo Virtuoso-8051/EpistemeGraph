@@ -1,0 +1,10 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The answer says LINE's edge sampling uses alias tables, which the evidence does not mention."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and explains that edge sampling, not plain SGD, addresses the weight-induced gradient explosion, consistent with the evidence. However, its specific claim about alias tables is not in the provided excerpts, and the citation metadata (Tang et al., 2015) is likewise not stated in the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

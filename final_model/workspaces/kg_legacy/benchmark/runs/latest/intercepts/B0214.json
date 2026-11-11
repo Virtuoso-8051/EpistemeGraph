@@ -1,0 +1,56 @@
+{
+  "answer": "The LINE paper does not give a specific numeric memory figure for this. Unfolding an edge of weight w into w binary edges replaces one stored edge with w stored edges, so the edge storage grows from |E| to the sum of all edge weights, sum_e w_e. The extra storage is sum_e (w_e - 1) edges, and the blow-up factor is the average edge weight, sum_e w_e / |E|. With the alias-table method (Walker's alias method), edge sampling needs only one table entry per edge, about O(|E|) space, plus the original edge list, regardless of weight magnitudes. So on a graph with the same weights, the unfolding approach needs roughly (average weight) times as many edge entries as the alias table, which is a factor of 1 for unit weights and grows linearly with the average weight otherwise.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The general reasoning (edge count becomes the sum of weights, versus O(|E|) for alias tables) is sound, but I cannot recall the paper giving an exact numeric example, so the specific framing of the 'exact increase' may not match the source.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "specific numeric memory figure for unfolding",
+      "type": "DOES_NOT_CONTAIN",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "unfolding an edge of weight w into w binary edge",
+      "target": "w stored edge",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge storage under unfolding",
+      "target": "sum of all edge weights sum_e w_e",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "blow-up factor of unfolding",
+      "target": "average edge weight sum_e w_e / |E|",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias table method",
+      "target": "one table entry per edge, about O(|E|) space",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias table method",
+      "target": "space independent of weight magnitude",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unfolding approach",
+      "target": "roughly average weight times as many edge entries as alias table",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison factor between unfolding and alias table",
+      "target": "1 for unit weight",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

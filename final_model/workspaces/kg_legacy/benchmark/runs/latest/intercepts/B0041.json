@@ -1,0 +1,74 @@
+{
+  "answer": "In DeepWalk (Perozzi et al., 2014), the context of a vertex v_i is defined as the set of vertices that appear within a window of size w around v_i in short random walks: for each walk, the vertices v_{i-w},...,v_{i+w} (excluding v_i itself) form the context C of v_i, so the skip-gram objective maximizes the log-probability of observing these neighbors given v_i, i.e., minimize -log Pr({v_{i-w},...,v_{i+w}} \\ {v_i} | \u03a6(v_i)). The ordering constraint is that the context vertices are treated as ordered by their position relative to v_i (in the walk). Removing this ordering constraint means the model is trained to predict the context vertices as an unordered set: the probability is factorized independently over context vertices, Pr(C | \u03a6(v_i)) = \u220f_{u\u2208C} Pr(u | \u03a6(v_i)), so the output for each context vertex is predicted independently of its position. This makes the training problem simpler and cheaper to optimize (e.g., via hierarchical softmax with a single shared prediction per context vertex, and it is order-invariant), at the cost of discarding positional information within the window.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The window-based skip-gram context definition is well established, but the precise description of the unordered-set relaxation and its effects is my paraphrase of the paper's discussion and may not match exact wording or details.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "context of a vertex v_i is the set of vertices within a window of size w around v_i in short random walk",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIP-GRAM OBJECTIVE",
+      "target": "log-probability of observing context neighbors given vertex v_i",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "RANDOM WALK",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "SKIP-GRAM OBJECTIVE",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "ordering constraint treats context vertices as ordered by position relative to v_i in the walk",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "removing ordering constraint",
+      "target": "context vertices predicted as an unordered set",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unordered context objective",
+      "target": "probability factorized independently over context vertices as product of Pr(u | \u03a6(v_i",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unordered context objective",
+      "target": "order-invariant training objective",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unordered context objective",
+      "target": "HIERARCHICAL SOFTMAX",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "removing ordering constraint",
+      "target": "simpler and cheaper training problem",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "removing ordering constraint",
+      "target": "discarding positional information within the window",
+      "type": "PRESERVE",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE-SGD \"does not use edge-sampling\" and is a separate plain SGD formulation: the evidence says edges are sampled in LINE-SGD too (\"when the edges are sampled for model updating\"), so this claim partly contradicts it.",
+    "Requires careful learning-rate tuning: the evidence mentions threshold-cutting to prevent exploding gradients, not learning-rate tuning."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast matches the gold answer: LINE samples edges proportionally to weight and then treats them as binary, while LINE-SGD multiplies the weights into the gradients. However, the claim that LINE-SGD does not use edge sampling contradicts the evidence, and the learning-rate tuning detail is not in the evidence (the paper mentions threshold-cutting instead).",
+  "judge_model": "claude-sonnet-5-5"
+}

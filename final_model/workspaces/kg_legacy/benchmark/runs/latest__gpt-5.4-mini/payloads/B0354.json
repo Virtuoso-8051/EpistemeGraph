@@ -1,0 +1,126 @@
+{
+    "user_query": "What makes DeepWalk\u2019s matrix factorization step preserve community structure in the learned embeddings?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk\u2019s matrix factorization preserves community structure because the matrix it factorizes is built from random-walk co-occurrence statistics, so nodes that are often reached from each other within short walks get similar rows and therefore similar embeddings. In graph terms, random walks stay longer within densely connected regions than they do across sparse cuts, so the resulting co-occurrence matrix implicitly captures proximity and shared neighborhood context. When this matrix is factorized, nodes in the same community are pulled close together in the embedding space because they have similar walk-based context distributions. This is why DeepWalk tends to preserve community structure rather than just immediate edges: it encodes higher-order connectivity patterns from the graph\u2019s random-walk dynamics.",
+    "llm_self_reported_accuracy": 0.95,
+    "llm_confidence_reasoning": "This is a standard and well-established interpretation of DeepWalk\u2019s random-walk co-occurrence matrix and its factorization, so I am highly confident in it.",
+    "extracted_query_entities": [
+        "DEEPWALK"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "community structure",
+        "random-walk co-occurrence statistics",
+        "similar rows",
+        "similar embedding",
+        "random walk",
+        "staying longer within densely connected regions than across sparse cuts",
+        "co-occurrence matrix",
+        "proximity and shared neighborhood context",
+        "matrix factorization",
+        "nodes in the same community",
+        "close embeddings in the embedding space",
+        "similar walk-based context distribution",
+        "higher-order connectivity pattern",
+        "graph\u2019s random-walk dynamics"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "community structure",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "random-walk co-occurrence statistics",
+            "type": "BASED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk co-occurrence statistics",
+            "target": "similar rows",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "similar rows",
+            "target": "similar embedding",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random walk",
+            "target": "staying longer within densely connected regions than across sparse cuts",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "co-occurrence matrix",
+            "target": "proximity and shared neighborhood context",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "matrix factorization",
+            "target": "community structure",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "nodes in the same community",
+            "target": "close embeddings in the embedding space",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "nodes in the same community",
+            "target": "similar walk-based context distribution",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "higher-order connectivity pattern",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "higher-order connectivity pattern",
+            "target": "graph\u2019s random-walk dynamics",
+            "type": "BASED_ON",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What makes DeepWalk\u2019s matrix factorization step preserve community structure in the learned embeddings?",
+        "llm_response": "DeepWalk\u2019s matrix factorization preserves community structure because the matrix it factorizes is built from random-walk co-occurrence statistics, so nodes that are often reached from each other within short walks get similar rows and therefore similar embeddings. In graph terms, random walks stay longer within densely connected regions than they do across sparse cuts, so the resulting co-occurrence matrix implicitly captures proximity and shared neighborhood context. When this matrix is factorized, nodes in the same community are pulled close together in the embedding space because they have similar walk-based context distributions. This is why DeepWalk tends to preserve community structure rather than just immediate edges: it encodes higher-order connectivity patterns from the graph\u2019s random-walk dynamics.",
+        "llm_extraction_confidence": 0.95,
+        "llm_confidence_reasoning": "This is a standard and well-established interpretation of DeepWalk\u2019s random-walk co-occurrence matrix and its factorization, so I am highly confident in it.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 4853.9,
+            "prompt_tokens": 106,
+            "completion_tokens": 193
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 6602.3,
+            "prompt_tokens": 791,
+            "completion_tokens": 375
+        },
+        "asserted_claim_count": 11,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2376276924010904,
+        "query_entities": [
+            "DEEPWALK"
+        ]
+    }
+}

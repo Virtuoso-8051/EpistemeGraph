@@ -1,0 +1,74 @@
+{
+  "answer": "The matrices usually highlighted are the adjacency matrix A, the graph Laplacian L = D - A (and its normalized form), and proximity matrices derived from them, such as random-walk transition matrices, Katz or other high-order proximity matrices, and positive pointwise mutual information (PPMI) matrices of node co-occurrence. Under a linear algebra perspective, many unsupervised embedding methods are interpreted as low-rank matrix factorization or spectral decomposition of these matrices. Examples include Laplacian eigenmaps, which use the smallest nontrivial eigenvectors of L, and factorization-based methods such as GraRep, HOPE, and NetMF, which factor proximity matrices via truncated SVD or eigendecomposition. Node embeddings are the resulting low-dimensional factors, chosen to minimize a reconstruction error (typically Frobenius norm) so that inner products or distances between embeddings approximate the graph's structural similarities.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The answer reflects the common survey framing of factorization-based graph embedding, but I am not certain which specific source the question refers to, so the exact set of matrices and methods named may differ.",
+  "triples": [
+    {
+      "source": "graph Laplacian",
+      "target": "D - A",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix representations of graph",
+      "target": "adjacency matrix",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix representations of graph",
+      "target": "graph Laplacian",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix representations of graph",
+      "target": "positive pointwise mutual information (PPMI) matrix",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised representation learning",
+      "target": "matrix factorization",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "graph Laplacian",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GRAREP",
+      "target": "matrix factorization",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HOPE",
+      "target": "matrix factorization",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NETMF",
+      "target": "matrix factorization",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation",
+      "target": "reconstruction error",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation",
+      "target": "structural similarity of graph",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

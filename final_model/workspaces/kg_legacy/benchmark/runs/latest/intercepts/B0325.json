@@ -1,0 +1,92 @@
+{
+  "answer": "Node2vec does not use spectral clustering to build its embeddings, so the question's premise is incorrect. Node2vec generates embeddings by running second-order biased random walks over the graph, controlled by return (p) and in-out (q) parameters that interpolate between breadth-first and depth-first exploration. It then feeds these walks as sequences into the skip-gram model with negative sampling (the word2vec objective) to learn node representations. Spectral methods such as Laplacian eigenmaps or matrix factorization appear in the node2vec paper only as related-work baselines and comparison points. The Wikipedia dataset in the node2vec paper is a word co-occurrence network in which nodes are words and labels are part-of-speech tags. It is used to evaluate the learned embeddings on multi-label node classification, not to illustrate spectral clustering.",
+  "confidence": 0.85,
+  "confidence_reasoning": "I am confident node2vec uses biased random walks with skip-gram rather than spectral clustering and that the Wikipedia dataset is a POS-tag co-occurrence network, though I am less certain of the exact baselines and details of the dataset description.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "spectral clustering",
+      "type": "DOES_NOT_USE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "second-order biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "second-order biased random walk",
+      "type": "CONTROLS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order biased random walk",
+      "target": "node embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram model with negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model with negative sampling",
+      "target": "word2vec objective",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Wikipedia dataset",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia dataset",
+      "target": "word cooccurrence network",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word cooccurrence network",
+      "target": "part-of-speech tags",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia dataset",
+      "target": "part-of-speech tags",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Node Classification",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "spectral method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix factorization",
+      "target": "spectral method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "node2vec paper related-work baseline",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

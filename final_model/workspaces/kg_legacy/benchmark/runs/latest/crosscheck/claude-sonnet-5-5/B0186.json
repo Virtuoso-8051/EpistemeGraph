@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The largest dataset in the LINE paper was a Twitter follower network.",
+    "Flickr has about 1.7 million vertices and 22.6 million edges, which contradicts Table 1 (80,513 vertices and 5,899,882 edges)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give exact counts. It still asserts, with hedging, that the largest dataset was a Twitter network and gives Flickr figures that contradict Table 1 (80,513 vertices, 5,899,882 edges), so those claims are unsupported.",
+  "judge_model": "claude-sonnet-5-5"
+}

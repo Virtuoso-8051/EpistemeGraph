@@ -1,0 +1,68 @@
+{
+  "answer": "The comparison is not precisely recoverable from memory, so this is a hedged summary. In the LINE paper (Tang et al., 2015), LINE(1st) and LINE(2nd) both improve as the number of edge samples grows and then plateau. LINE(1st), which models only first-order proximity, tends to reach its plateau sooner, while LINE(2nd) usually needs more samples but reaches a higher final quality. DeepWalk is trained on random-walk corpora with skip-gram and SGD; the paper reports it as competitive in accuracy but slower in wall-clock training time than LINE, so LINE's advantage is mainly efficiency rather than a large accuracy gap. Exact curves depend on the dataset and should be checked against the paper's figures.",
+  "confidence": 0.35,
+  "confidence_reasoning": "I recall the general trends from the LINE paper but not the exact figures, dataset-specific behavior, or the precise DeepWalk comparison, so several claims may be wrong.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge sample",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "plateau sooner",
+      "type": "ACHIEVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "higher final quality",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk corpora",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "SGD",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "competitive accuracy",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "training time",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

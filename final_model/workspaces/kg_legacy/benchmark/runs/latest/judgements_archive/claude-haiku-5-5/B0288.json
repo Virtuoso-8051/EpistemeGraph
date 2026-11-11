@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI answer claims that LINE uses text features to establish first-order proximity between the new vertex and existing vertices (e.g., via text similarity yielding weighted links), which the evidence does not contain; the paper says textual information is future work and only used when no connections are observed.",
+    "The AI answer claims the new vertex's embedding is optimized against the first-order objective using text-derived links, which accepts the false premise that textual features are used in the inference.",
+    "The AI answer states that text is the only available information for the cold-start vertex and that it is used to infer embeddings, contradicting the paper's statement that textual information is merely left as future work."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence states that for new vertices with observed connections LINE optimizes an objective based on p1 or p2 using those connections, and that textual information is only mentioned as future work when no connections exist. The AI answer accepts the false premise that LINE combines first-order proximity with textual features to embed new vertices, which the papers do not support.",
+  "judge_model": "claude-haiku-5-5"
+}

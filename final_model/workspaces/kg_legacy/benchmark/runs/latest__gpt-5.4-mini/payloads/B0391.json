@@ -1,0 +1,196 @@
+{
+    "user_query": "Why does LINE's ability to reuse samples make it outperform the random-walk methods in the comparison described for the PPI network?",
+    "mode": "closed_book",
+    "llm_response": "LINE outperforms the random-walk methods on the PPI network because it is much more sample-efficient and scalable: it learns from edge-based first- and second-order proximity objectives using negative sampling, so it can reuse the same observed edges many times during training instead of relying on many random-walk contexts. On a large, dense, and highly connected graph like PPI, random-walk methods spend a lot of effort generating walk sequences and repeated context pairs, which is less efficient and can be less effective at capturing the network\u2019s local structure. LINE\u2019s ability to repeatedly reuse samples lets it make better use of the available data and train embeddings more effectively under the same computational budget.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This is a well-supported high-level explanation from the LINE paper and related comparisons, but the exact wording of the PPI comparison may vary, so I am not fully certain about every detail.",
+    "extracted_query_entities": [
+        "LINE",
+        "random-walk method",
+        "PPI network",
+        "edge-based first-order proximity objective",
+        "edge-based second-order proximity objective",
+        "negative sampling",
+        "random-walk context",
+        "random walk sequence",
+        "context pair",
+        "local structure",
+        "embedding",
+        "computational budget"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "random-walk method",
+        "PPI network",
+        "edge-based first-order proximity objective",
+        "edge-based second-order proximity objective",
+        "negative sampling",
+        "random-walk context",
+        "random walk sequence",
+        "context pair",
+        "local structure",
+        "embedding",
+        "computational budget",
+        "sample-efficient",
+        "SCALABLE",
+        "sample reuse",
+        "repeatedly reuse sample",
+        "less efficient",
+        "less effective at capturing the network\u2019s local structure",
+        "LARGE",
+        "DENSE",
+        "highly connected"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "random-walk method",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "sample-efficient",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "SCALABLE",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "edge-based first-order proximity objective",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "edge-based second-order proximity objective",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "negative sampling",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "negative sampling",
+            "target": "sample reuse",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "sample reuse",
+            "target": "repeatedly reuse sample",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk method",
+            "target": "random-walk context",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk method",
+            "target": "random walk sequence",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk method",
+            "target": "context pair",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk method",
+            "target": "less efficient",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk method",
+            "target": "less effective at capturing the network\u2019s local structure",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "PPI network",
+            "target": "LARGE",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "PPI network",
+            "target": "DENSE",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "PPI network",
+            "target": "highly connected",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "embedding",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "computational budget",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why does LINE's ability to reuse samples make it outperform the random-walk methods in the comparison described for the PPI network?",
+        "llm_response": "LINE outperforms the random-walk methods on the PPI network because it is much more sample-efficient and scalable: it learns from edge-based first- and second-order proximity objectives using negative sampling, so it can reuse the same observed edges many times during training instead of relying on many random-walk contexts. On a large, dense, and highly connected graph like PPI, random-walk methods spend a lot of effort generating walk sequences and repeated context pairs, which is less efficient and can be less effective at capturing the network\u2019s local structure. LINE\u2019s ability to repeatedly reuse samples lets it make better use of the available data and train embeddings more effectively under the same computational budget.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This is a well-supported high-level explanation from the LINE paper and related comparisons, but the exact wording of the PPI comparison may vary, so I am not fully certain about every detail.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 4862.0,
+            "prompt_tokens": 115,
+            "completion_tokens": 195
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 4858.2,
+            "prompt_tokens": 784,
+            "completion_tokens": 583
+        },
+        "asserted_claim_count": 18,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.28521524661432496,
+        "query_entities": [
+            "LINE",
+            "random-walk method",
+            "PPI network",
+            "edge-based first-order proximity objective",
+            "edge-based second-order proximity objective",
+            "negative sampling",
+            "random-walk context",
+            "random walk sequence",
+            "context pair",
+            "local structure",
+            "embedding",
+            "computational budget"
+        ]
+    }
+}

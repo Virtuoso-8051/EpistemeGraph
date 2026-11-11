@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The specific binary operators (average, Hadamard product, L1, L2 distance) used to combine node embeddings into edge features are not stated in the provided evidence.",
+    "The examples of protein-protein interaction networks, collaboration, or friendship ties are not in the provided evidence."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer is supported: the evidence says node2vec extends its random walks to pairs of nodes because many prediction tasks involve node pairs, and gives link prediction as the example. However, the answer adds operator details and application examples that the provided excerpts do not contain, so those extra claims cannot be verified from the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

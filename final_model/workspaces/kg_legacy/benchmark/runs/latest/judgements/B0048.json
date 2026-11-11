@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The robustness to noisy edges is useful in biological networks such as protein-protein interaction networks, where spurious interactions are common. The paper ties noisy-edge robustness to sensor networks, and mentions biological networks only for missing edges."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The claim that performance degrades only modestly matches the evidence, which describes a slight, slowing decline. The application is wrong: the paper names sensor networks with noisy measurements for noisy edges, and the answer gives biological networks instead, which the paper links to missing edges. The answer also never mentions the specific pattern of a slightly faster initial decline that then slows.",
+  "judge_model": "claude-sonnet-5-5"
+}

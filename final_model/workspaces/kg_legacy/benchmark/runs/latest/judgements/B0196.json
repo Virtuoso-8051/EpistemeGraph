@@ -1,0 +1,10 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "DeepWalk used d = 128 as its default embedding dimension in its reported experiments (the 128 default comes from another paper's setup, citing [16], not from DeepWalk's own experiments)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is unanswerable from the evidence for DeepWalk, since the 128 default belongs to a different paper that cites [16]. The answer gives a specific value for DeepWalk instead of saying it is not reported, so its core claim is unsupported; the sensitivity-analysis remark is supported but minor.",
+  "judge_model": "claude-sonnet-5-5"
+}

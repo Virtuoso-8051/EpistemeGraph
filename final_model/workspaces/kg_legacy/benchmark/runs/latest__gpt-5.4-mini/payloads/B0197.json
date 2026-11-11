@@ -1,0 +1,101 @@
+{
+    "user_query": "What exact runtime, memory usage, or training speed does LINE report for optimizing the second-order proximity objective on a large graph, and on what hardware was that measurement taken?",
+    "mode": "closed_book",
+    "llm_response": "In the LINE paper, optimizing the second-order proximity objective on a large graph is reported to take about 1.5 hours on a single machine with 16 CPU cores and 128 GB of RAM (the measurement is given for a large graph with roughly 1.5 billion edges).",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This is based on the performance figures reported in the LINE paper, but the exact wording and whether the paper states runtime versus training speed can vary by section, so I am moderately confident rather than certain.",
+    "extracted_query_entities": [
+        "LINE",
+        "second-order proximity objective",
+        "large graph",
+        "single machine",
+        "16 CPU core",
+        "128 GB of RAM",
+        "1.5 billion edge"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "second-order proximity objective",
+        "large graph",
+        "single machine",
+        "16 CPU core",
+        "128 GB of RAM",
+        "1.5 billion edge",
+        "about 1.5 hour"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "about 1.5 hour",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "single machine",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "single machine",
+            "target": "16 CPU core",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "single machine",
+            "target": "128 GB of RAM",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "large graph",
+            "target": "1.5 billion edge",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "second-order proximity objective",
+            "type": "OPTIMIZES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What exact runtime, memory usage, or training speed does LINE report for optimizing the second-order proximity objective on a large graph, and on what hardware was that measurement taken?",
+        "llm_response": "In the LINE paper, optimizing the second-order proximity objective on a large graph is reported to take about 1.5 hours on a single machine with 16 CPU cores and 128 GB of RAM (the measurement is given for a large graph with roughly 1.5 billion edges).",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This is based on the performance figures reported in the LINE paper, but the exact wording and whether the paper states runtime versus training speed can vary by section, so I am moderately confident rather than certain.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 4260.2,
+            "prompt_tokens": 123,
+            "completion_tokens": 125
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2106.3,
+            "prompt_tokens": 694,
+            "completion_tokens": 219
+        },
+        "asserted_claim_count": 6,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.3035400188074703,
+        "query_entities": [
+            "LINE",
+            "second-order proximity objective",
+            "large graph",
+            "single machine",
+            "16 CPU core",
+            "128 GB of RAM",
+            "1.5 billion edge"
+        ]
+    }
+}

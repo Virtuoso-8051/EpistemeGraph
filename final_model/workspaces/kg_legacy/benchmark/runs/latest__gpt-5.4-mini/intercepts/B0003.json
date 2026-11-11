@@ -1,0 +1,56 @@
+{
+  "answer": "Parallelizing DeepWalk preserves predictive performance when the parallel implementation generates essentially the same random walks and trains the embeddings with the same objective/optimization setup as the original method, so that the only change is how the work is distributed across threads or machines rather than changing the model itself. In the reported results, the parallel version achieves near-linear speedup on both BlogCatalog and Flickr, with the speedup increasing almost proportionally as more processors are used.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This answer reflects the standard reported claim about parallel DeepWalk and its benchmark behavior, but I am not fully certain of the exact wording or whether the paper reports strictly linear versus near-linear speedup for both datasets.",
+  "triples": [
+    {
+      "source": "Parallelizing DeepWalk",
+      "target": "predictive performance",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel implementation",
+      "target": "random walk",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel implementation",
+      "target": "same objective/optimization setup",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel implementation",
+      "target": "work across threads or machine",
+      "type": "DISTRIBUTES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel version",
+      "target": "near-linear speedup",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel version",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel version",
+      "target": "FLICKR",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SPEEDUP",
+      "target": "processor",
+      "type": "INCREASES_PROPORTIONALLY_WITH",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.27331614001043913
+}

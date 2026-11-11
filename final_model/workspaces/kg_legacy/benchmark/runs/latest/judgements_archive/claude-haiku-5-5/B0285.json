@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "LINE defines a first-order joint distribution p1(vi, vj) = sigmoid(ui \u00b7 uj) and matches it to the empirical edge distribution by minimizing KL divergence (not in the evidence)",
+    "LINE trains with edge sampling via alias tables and negative sampling (not in the evidence)",
+    "Edge sampling was chosen over random walks to handle weighted edges well and reduce stochastic gradient variance (not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise: the evidence attributes truncated random walks to DeepWalk, and LINE's first-order and second-order proximities are presented as separate, complementary components. However, its detailed LINE mechanics (the sigmoid formulation, KL objective, alias-table edge sampling, negative sampling, and variance rationale) are not in the provided evidence, even though they are plausible descriptions of LINE.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "LINE (as a whole, including first-order) tends to perform comparably to or modestly better than DeepWalk on directed graphs, with a small, dataset-dependent advantage. The evidence says first-order LINE is not applicable to directed graphs, and that only LINE(2nd) is compared on the directed network. It also says LINE(2nd) outperforms DeepWalk only after the network is reconstructed.",
+    "LINE models first- and second-order proximity directly from edges, which implies this applies to directed graphs. The first-order proximity is only for undirected graphs."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says it cannot give an exact comparison. It then offers an unverified general tendency, 'comparable or modestly better, small advantage', that the evidence does not support. The evidence shows LINE(2nd) initially underperforming on a sparse directed network and only winning after reconstruction, and that first-order LINE does not apply to directed graphs.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "DeepWalk generated 80 random walks per vertex (\u03b3 = 80) in the BlogCatalog and Flickr experiments",
+    "DeepWalk used a walk length of 40 (t = 40) in those experiments",
+    "The evidence for the specific default settings (\u03b3 = 40, t = 40) is from a different context than the BlogCatalog and Flickr experiments, and the answer's \u03b3 = 80 contradicts the reported default of \u03b3 = 40"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is not answerable from the passage, which mentions random walks but never states walks per vertex or walk length for BlogCatalog and Flickr. The only numeric settings in the evidence are \u03b3 = 40 and t = 40 as defaults, so the answer's \u03b3 = 80 is invented and unsupported, and the answer should have said the papers do not report these values.",
+  "judge_model": "claude-haiku-5-5"
+}

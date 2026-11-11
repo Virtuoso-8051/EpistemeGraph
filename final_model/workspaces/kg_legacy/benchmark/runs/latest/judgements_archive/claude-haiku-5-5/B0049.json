@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "For community awareness, the latent dimensions should be non-negative and sparse, so that each dimension behaves like a community membership, allowing soft or overlapping community assignments.",
+    "Social representations should stay useful when the network changes if the embedding is stable and updated incrementally with temporal smoothness of embeddings."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence says representations should adapt to network changes without repeating learning from scratch, which the answer captures in general terms, but it does not mention temporal smoothness or incremental updating as the mechanism. The community-awareness claim is wrong: the evidence states that distance between latent dimensions should act as a similarity metric between members, not that dimensions should be non-negative, sparse, or soft/overlapping memberships.",
+  "judge_model": "claude-haiku-5-5"
+}

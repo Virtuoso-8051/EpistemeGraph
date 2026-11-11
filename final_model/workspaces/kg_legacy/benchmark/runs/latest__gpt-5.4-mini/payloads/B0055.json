@@ -1,0 +1,67 @@
+{
+    "user_query": "Under which kinds of network properties do the authors of the network embedding method say they will extend their work in the future?",
+    "mode": "closed_book",
+    "llm_response": "The authors say they plan to extend their network embedding method to handle more complex network properties, specifically dynamic/temporal networks and heterogeneous networks with richer node and edge types.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This answer reflects the common future-work directions stated in papers on network embedding, but without the specific paper title I cannot be fully certain the exact properties match the authors' wording.",
+    "extracted_query_entities": [
+        "network embedding"
+    ],
+    "extracted_response_entities": [
+        "network embedding",
+        "dynamic/temporal network",
+        "heterogeneous network",
+        "richer node and edge type"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "network embedding",
+            "target": "dynamic/temporal network",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "network embedding",
+            "target": "heterogeneous network",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "heterogeneous network",
+            "target": "richer node and edge type",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which kinds of network properties do the authors of the network embedding method say they will extend their work in the future?",
+        "llm_response": "The authors say they plan to extend their network embedding method to handle more complex network properties, specifically dynamic/temporal networks and heterogeneous networks with richer node and edge types.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This answer reflects the common future-work directions stated in papers on network embedding, but without the specific paper title I cannot be fully certain the exact properties match the authors' wording.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1661.0,
+            "prompt_tokens": 113,
+            "completion_tokens": 95
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1381.5,
+            "prompt_tokens": 670,
+            "completion_tokens": 114
+        },
+        "asserted_claim_count": 3,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.20749062227915568,
+        "query_entities": [
+            "network embedding"
+        ]
+    }
+}

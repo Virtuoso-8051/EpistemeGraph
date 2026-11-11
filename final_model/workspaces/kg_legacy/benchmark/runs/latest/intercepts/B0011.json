@@ -1,0 +1,62 @@
+{
+  "answer": "DeepWalk's representations give the largest reported gains when labeled data is sparse. In the original paper (Perozzi, Al-Rfou, Skiena, KDD 2014), the advantage over baselines such as spectral clustering, edge-cluster, modularity-based and wvRN methods was most pronounced when only a small fraction of nodes were labeled (for example, on BlogCatalog with roughly 1% to 10% of nodes labeled, and similarly on Flickr and YouTube). As the proportion of labeled training data grows, the gap narrows and the competing methods approach DeepWalk's performance. The method also scales to large graphs, where it was reported to be efficient and to outperform the baselines on sparse, social-network-style graphs.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The core claim that gains are largest under scarce labels matches my recollection of the DeepWalk paper's results, but I am not certain of the exact label fractions and dataset-specific details cited.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "spectral clustering",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "WVRN",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "FLICKR",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "YOUTUBE",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "largest reported gains when labeled data is sparse",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "large graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "sparse social-network-style graph",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "modularity-based method",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

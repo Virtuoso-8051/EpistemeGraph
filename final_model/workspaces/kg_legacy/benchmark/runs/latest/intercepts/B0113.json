@@ -1,0 +1,68 @@
+{
+  "answer": "DeepWalk takes as input only the graph structure of the social network itself: an unweighted adjacency structure over the vertices (no node attributes or labels are required). It generates truncated random walks over this graph, treating each walk as a sentence and each vertex as a word, and then applies a skip-gram language model (Word2Vec-style) to learn a continuous, low-dimensional embedding for each vertex. The learned representation therefore encodes the vertex's structural neighborhood and community/co-occurrence information, i.e., how vertices are connected and positioned relative to one another in the network (local and higher-order neighborhood similarity), in a dense latent space that generalizes well for tasks such as multi-label classification.",
+  "confidence": 0.8,
+  "confidence_reasoning": "The description matches the original DeepWalk paper (Perozzi et al., 2014), which uses only the graph's adjacency structure and random walks with skip-gram to encode neighborhood/community structure, though the question's wording leaves some room for differing emphasis.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "social network",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "graph structure",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "node attribute",
+      "type": "DOES_NOT_REQUIRE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "target": "skip-gram language model",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram language model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent social representation",
+      "target": "vertex structural neighborhood",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent social representation",
+      "target": "community and co-occurrence information",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent social representation",
+      "target": "multi-label classification",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "continuous low-dimensional embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

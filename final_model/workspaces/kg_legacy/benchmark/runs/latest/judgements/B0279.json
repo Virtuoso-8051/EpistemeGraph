@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Small p favors returning to the previous node and produces BFS-like walks that capture immediate neighborhoods and structural roles. Small q favors moving outward and produces DFS-like walks capturing community/homophily. The evidence does not state this, and it also appears to be reversed: in node2vec, a high q gives BFS-like walks and a low q gives DFS-like walks, while a low p keeps the walk local."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise: node2vec uses a biased walk and does not preserve only immediate neighbors. However, its description of how p and q map to BFS/DFS behavior is not in the evidence, and the q mapping appears inverted (low q favors DFS-like outward exploration, high q favors BFS-like local walks). The supported parts are the biased-walk correction, the p=q=1 special case, and the hedging about citation networks.",
+  "judge_model": "claude-sonnet-5-5"
+}

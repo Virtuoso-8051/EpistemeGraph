@@ -1,0 +1,78 @@
+{
+    "user_query": "Compared with DeepWalk, what exact number of parameters did node2vec use for its embedding model on the protein-protein interaction network?",
+    "mode": "closed_book",
+    "llm_response": "On the protein-protein interaction network, node2vec used 128-dimensional embeddings for each node, so its embedding model had 128 parameters per node\u2014the same as DeepWalk in that comparison.",
+    "llm_self_reported_accuracy": 0.62,
+    "llm_confidence_reasoning": "I am fairly confident about the 128-dimensional embedding size, but the question\u2019s wording about the exact parameter count relative to DeepWalk depends on the specific paper\u2019s phrasing and whether it refers to per-node embedding dimensions or total model parameters.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "DEEPWALK",
+        "Protein-Protein Interaction"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "DEEPWALK",
+        "Protein-Protein Interaction",
+        "128-dimensional embedding",
+        "128 parameters per node"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "128-dimensional embedding",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "128 parameters per node",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "Protein-Protein Interaction",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "DEEPWALK",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Compared with DeepWalk, what exact number of parameters did node2vec use for its embedding model on the protein-protein interaction network?",
+        "llm_response": "On the protein-protein interaction network, node2vec used 128-dimensional embeddings for each node, so its embedding model had 128 parameters per node\u2014the same as DeepWalk in that comparison.",
+        "llm_extraction_confidence": 0.62,
+        "llm_confidence_reasoning": "I am fairly confident about the 128-dimensional embedding size, but the question\u2019s wording about the exact parameter count relative to DeepWalk depends on the specific paper\u2019s phrasing and whether it refers to per-node embedding dimensions or total model parameters.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1946.7,
+            "prompt_tokens": 116,
+            "completion_tokens": 113
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1572.2,
+            "prompt_tokens": 679,
+            "completion_tokens": 152
+        },
+        "asserted_claim_count": 4,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.23694512395575495,
+        "query_entities": [
+            "NODE2VEC",
+            "DEEPWALK",
+            "Protein-Protein Interaction"
+        ]
+    }
+}

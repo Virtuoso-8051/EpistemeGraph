@@ -1,0 +1,56 @@
+{
+  "answer": "The comparison attributes LINE's advantage to its edge-based sampling. LINE draws edges directly from the network, with alias-table sampling, and it can reuse those sampled edges many times over training, along with their negative samples. That gives it a larger, more efficient set of training signals about direct and second-order neighbourhood structure. Random-walk methods such as DeepWalk and node2vec instead generate walks and extract co-occurrence windows from them, which spend effort on multi-hop context and are less efficient to reuse. I could not verify the specific paper or its exact wording, so this reflects the general mechanism rather than a confirmed quotation.",
+  "confidence": 0.35,
+  "confidence_reasoning": "I could not identify the specific PPI comparison the question refers to, so the explanation rests on general knowledge of how LINE and random-walk methods sample, which may not match the source's stated reason.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "edge-sampling algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "alias-table sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "sample reuse",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sample reuse",
+      "target": "larger, more efficient set of training signal",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "multi-hop context",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "less efficient to reuse",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

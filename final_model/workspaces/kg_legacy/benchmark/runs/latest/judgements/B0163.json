@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Dataset sizes (BlogCatalog 10,312 nodes; PPI 3,890 nodes; Wikipedia 4,777 nodes) are not in the evidence.",
+    "The labeled training fraction varied from 1% to 90% (evidence only mentions 50% for Table 2 and 10% for hyperparameter tuning).",
+    "The computed absolute training counts (BlogCatalog ~103 to 9,281; PPI ~39 to 3,501; Wikipedia ~48 to 4,299) rest on node counts the evidence does not contain.",
+    "Does not state that the exact counts are unreported, and instead gives invented specifics for a question the papers cannot answer."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence gives only a 50% labeled fraction for Table 2 and does not give dataset node totals. The answer invents node counts and absolute training counts instead of saying they are not reported, and it ignores the 50% setting the question refers to.",
+  "judge_model": "claude-sonnet-5-5"
+}

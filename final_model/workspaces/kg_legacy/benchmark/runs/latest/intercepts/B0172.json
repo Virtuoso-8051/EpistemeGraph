@@ -1,0 +1,68 @@
+{
+  "answer": "I can't reliably recall the exact accuracy figures. In the DeepWalk paper (Perozzi, Al-Rfou & Skiena, KDD 2014), the main multi-label classification experiments used BlogCatalog, Flickr, and YouTube, with Wikipedia (POS tags) as a further task. Spectral clustering and other baselines (such as modularity, EdgeCluster, and wvRN) were compared on these graphs, and DeepWalk generally scored higher, especially on the sparser labeled-fraction settings. The paper reports Micro-F1 and Macro-F1 across varying training ratios, and I would need the original tables to give the exact numbers for each dataset. Please check Table 2 and related tables in the paper for the precise values.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I am fairly confident about the datasets and the general finding that DeepWalk beat spectral baselines, but I cannot verify the exact numbers and some baseline details may be misremembered.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "FLICKR",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "YOUTUBE",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Wikipedia",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "SPECTRAL CLUSTERING",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "modularity",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "EdgeCluster",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "WVRN",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Macro-F1 score",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Micro-F1 score",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

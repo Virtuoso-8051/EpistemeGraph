@@ -1,0 +1,56 @@
+{
+  "answer": "Both methods face the tractability problem of an enormous search space: there are too many possible embeddings or model states to optimize over directly. In PASSAGE A, the network embedding method addresses this by using a tractable approximation/optimization strategy rather than searching exhaustively over all possible embeddings. In PASSAGE B, the language-modeling method addresses the same kind of tractability issue by using a simplified probabilistic formulation and efficient training/inference approximation instead of exact computation over all possible language sequences.",
+  "confidence": 0.42,
+  "confidence_reasoning": "I can identify the general tractability issue and the typical kinds of fixes, but without the actual passages I cannot verify the specific methods or wording used in each one.",
+  "triples": [
+    {
+      "source": "network embedding",
+      "target": "enormous search space",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "enormous search space",
+      "target": "too many possible embeddings or model states to optimize over directly",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network embedding",
+      "target": "tractable approximation/optimization strategy",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network embedding",
+      "target": "searching exhaustively over all possible embedding",
+      "type": "REFUTES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language-modeling method",
+      "target": "enormous search space",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language-modeling method",
+      "target": "simplified probabilistic formulation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language-modeling method",
+      "target": "efficient training/inference approximation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language-modeling method",
+      "target": "exact computation over all possible language sequence",
+      "type": "REFUTES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.26205052342908136
+}

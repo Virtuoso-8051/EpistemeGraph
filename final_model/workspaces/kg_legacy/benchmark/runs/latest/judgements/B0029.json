@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The constraint is that no node is left isolated (every node keeps at least one edge), whereas the paper states the number of connected components must remain fixed.",
+    "Missing edges are chosen uniformly at random from the observed edges; the paper says they are chosen randomly relative to the full network, so this detail is not stated and is imprecise."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer gets 'random' selection roughly right, but the core constraint is wrong: the paper requires the number of connected components to stay fixed, not that no node is isolated. The answer also hedges that it could not identify the paper.",
+  "judge_model": "claude-sonnet-5-5"
+}

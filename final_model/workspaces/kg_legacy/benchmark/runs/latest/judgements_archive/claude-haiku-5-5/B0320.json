@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI answer states that LINE used DeepWalk as a baseline on YouTube; the evidence shows LINE compared against several graph embedding methods and DeepWalk was used on the YouTube network as a dataset context, not that DeepWalk was a baseline in a clearly stated way, and the answer's claim that the comparison used 'the same embedding dimensionality and the same varying labeled-node fractions' is not contained in the evidence.",
+    "The claim that the comparison is fairer on large graphs because DeepWalk is a realistic competitor at scale is an inference not stated in the evidence, and the answer attributes this reasoning to the setup without support."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer only partly rejects the false premise: it says the premise is 'partly supported' and accepts that DeepWalk was a baseline on YouTube, when the evidence shows LINE was compared with several scalable embedding methods and YouTube was simply a dataset. It also adds unsupported specifics about shared protocol and labeled-node fractions, though it does honestly flag that its explanation is inferred.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Classical methods are limited by needing the whole graph up front (the paper emphasizes quadratic time complexity, not this requirement).",
+    "DeepWalk can build the Hierarchical Softmax tree without seeing the entire graph when vertex frequencies follow a power-law distribution (the paper's condition is that the cardinality of V is known or can be bounded).",
+    "The Huffman-coded tree is built from observed frequencies, enabling online operation (the paper builds the tree for a maximum vertex count and uses Huffman coding only if frequencies can be estimated a priori)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer gets the classical-method limitation only vaguely (costly and poorly scaling, but not the quadratic complexity) and adds an unsupported 'needs whole graph' claim. Its core claim about DeepWalk, a power-law frequency condition, contradicts the source, which requires that the cardinality of V be known or boundable.",
+  "judge_model": "claude-sonnet-5-5"
+}

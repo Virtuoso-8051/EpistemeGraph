@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Its edge-sampling optimization handles directed, undirected, and weighted networks (edge-sampling is not mentioned in the evidence, though the general claim of handling these network types is supported)",
+    "Restrictions like the undirected-unweighted one are often attributed to some matrix-factorization approaches (not in evidence; only DeepWalk's unweighted restriction is stated)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and its caveat that first-order proximity is not applicable to directed networks (so second-order is used) matches the evidence. However, it adds details not in the evidence, such as edge-sampling and matrix-factorization attributions, and the claim about separate vertex and context embeddings is not shown either.",
+  "judge_model": "claude-sonnet-5-5"
+}

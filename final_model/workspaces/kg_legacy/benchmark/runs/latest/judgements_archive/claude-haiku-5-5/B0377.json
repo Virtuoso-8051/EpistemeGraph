@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The answer says the conditional probabilities P(n|u) and P(u|n) are asymmetric because they use different normalizers and different sampled neighborhoods; the paper states symmetry in feature space and does not discuss P(u|n) versus P(n|u) asymmetry, so this is an extrapolation beyond the source.",
+    "The answer says node2vec's neighborhoods come from biased second-order random walks controlled by p and q; the provided evidence does not mention these parameters, though this is standard knowledge about node2vec rather than an asserted claim about the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, since the evidence states that node2vec assumes symmetry in feature space and models each pair with a softmax over a dot product. However, its added claim that conditional probabilities are asymmetric via different normalizers and neighborhoods goes beyond what the papers state, and the p/q description is not in the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

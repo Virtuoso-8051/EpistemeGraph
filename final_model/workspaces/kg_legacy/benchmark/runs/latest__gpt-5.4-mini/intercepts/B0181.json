@@ -1,0 +1,38 @@
+{
+  "answer": "In the original DeepWalk paper, the authors used 10 random walks per vertex and chose a walk length of 40.",
+  "confidence": 0.98,
+  "confidence_reasoning": "This is a direct parameter setting reported in the DeepWalk paper, so I am highly confident in the values.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "number of walks started per vertex",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "target": "10",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "walk length",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length",
+      "target": "40",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.1436922667456455
+}

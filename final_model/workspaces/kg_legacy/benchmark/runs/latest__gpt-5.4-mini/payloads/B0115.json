@@ -1,0 +1,85 @@
+{
+    "user_query": "What does the perturbation study of node2vec on the BlogCatalog network examine in addition to missing edges, and what kind of structural uncertainty does this second scenario represent?",
+    "mode": "closed_book",
+    "llm_response": "In addition to missing edges, the perturbation study examines missing nodes (i.e., removing nodes and their incident edges). This second scenario represents node uncertainty, specifically uncertainty about the presence or absence of vertices in the network rather than just links.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "This matches the standard two perturbation settings used in node2vec robustness studies on BlogCatalog: edge deletion and node deletion, with the latter modeling uncertainty in the vertex set.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "BlogCatalog network"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "BlogCatalog network",
+        "perturbation study of node2vec on the BlogCatalog network",
+        "missing edge",
+        "missing node",
+        "removing nodes and their incident edge",
+        "node uncertainty",
+        "uncertainty about the presence or absence of vertices in the network rather than just link"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "perturbation study of node2vec on the BlogCatalog network",
+            "target": "missing edge",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "perturbation study of node2vec on the BlogCatalog network",
+            "target": "missing node",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "missing node",
+            "target": "removing nodes and their incident edge",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "missing node",
+            "target": "node uncertainty",
+            "type": "REPRESENTS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "node uncertainty",
+            "target": "uncertainty about the presence or absence of vertices in the network rather than just link",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What does the perturbation study of node2vec on the BlogCatalog network examine in addition to missing edges, and what kind of structural uncertainty does this second scenario represent?",
+        "llm_response": "In addition to missing edges, the perturbation study examines missing nodes (i.e., removing nodes and their incident edges). This second scenario represents node uncertainty, specifically uncertainty about the presence or absence of vertices in the network rather than just links.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "This matches the standard two perturbation settings used in node2vec robustness studies on BlogCatalog: edge deletion and node deletion, with the latter modeling uncertainty in the vertex set.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1531.7,
+            "prompt_tokens": 123,
+            "completion_tokens": 103
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1633.2,
+            "prompt_tokens": 665,
+            "completion_tokens": 209
+        },
+        "asserted_claim_count": 5,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.21437517146474308,
+        "query_entities": [
+            "NODE2VEC",
+            "BlogCatalog network"
+        ]
+    }
+}

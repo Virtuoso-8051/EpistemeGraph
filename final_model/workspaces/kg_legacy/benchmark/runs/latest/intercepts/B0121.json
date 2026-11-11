@@ -1,0 +1,62 @@
+{
+  "answer": "DeepWalk treats truncated random walks over the graph as the equivalent of sentences: each walk is a sequence of node IDs, analogous to a sentence of words, and a skip-gram model with hierarchical softmax is trained so that nodes co-occurring within a window on these walks get similar embeddings. It thus captures higher-order neighborhood structure via walk co-occurrence, and it is designed for unweighted graphs. LINE instead works directly on the graph's edges (first-order proximity, the observed links between a pair of nodes, optimized by making the embedding similarity of linked nodes high) and additionally explicitly optimizes second-order proximity, which holds that two nodes are similar if they share many neighbors, i.e., their neighborhood distributions (context vectors) are similar. LINE trains these two objectives separately and concatenates the results, and it handles weighted edges via edge sampling rather than random walks.",
+  "confidence": 0.8,
+  "confidence_reasoning": "The core descriptions (DeepWalk random walks as sentences with skip-gram; LINE first- and second-order proximity) are well-established from the original papers, though some finer details like the exact training specifics are stated from memory.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "target": "SENTENCE",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram model with hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unweighted graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "two nodes are similar if they share many neighbor",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "weighted network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

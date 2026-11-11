@@ -1,0 +1,74 @@
+{
+  "answer": "The premise is not supported. DeepWalk's skip-gram objective does not make the model most effective only at much longer walk lengths than the ones used for Flickr and BlogCatalog. The original paper (Perozzi et al., 2014) used a walk length of t=40, 80 walks per node, and a window size of w=10 for these datasets. Skip-gram maximizes the likelihood of nodes co-occurring within a context window of size w along the walks, so its behavior depends mainly on the window size and the number of walks, with walk length mattering only insofar as walks must be long enough to cover the relevant neighborhood. The paper's sensitivity analyses show that performance generally improves with more walks and a suitable window, and that gains flatten beyond a point, not that a much longer walk length is required. The question therefore rests on a false premise.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident about the DeepWalk hyperparameters (t=40, \u03b3=80, w=10) and that the paper does not claim a need for far longer walks, though I am less certain of every detail of its sensitivity analysis.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "SKIPGRAM",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Walk length of 40",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "80 walks per node",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Window size of 10",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Flickr and BlogCatalog experiment",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "target": "likelihood of nodes co-occurring within a context window along walk",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "target": "Window size",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "target": "Number of walk",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "longer walk length as a requirement",
+      "type": "OUTPERFORMS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "performance with more walks and suitable window",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "performance gains flatten beyond a point",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

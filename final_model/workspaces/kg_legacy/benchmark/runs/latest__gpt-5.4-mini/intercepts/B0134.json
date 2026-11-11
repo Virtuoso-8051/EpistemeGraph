@@ -1,0 +1,56 @@
+{
+  "answer": "In paper 3, SkipGram reduces the cost of predicting a vertex by using a hierarchical softmax tree, which turns prediction over all vertices into a sequence of binary decisions along a path in a binary tree. In paper 2, node2vec says its custom graph-based objective is designed to learn feature representations that preserve network neighborhoods, so vertices that are close or structurally related in the graph end up with similar embeddings.",
+  "confidence": 0.92,
+  "confidence_reasoning": "These are standard descriptions of SkipGram hierarchical softmax and node2vec's neighborhood-preserving objective, and I am highly confident they match the papers' wording and intent.",
+  "triples": [
+    {
+      "source": "SKIPGRAM",
+      "target": "hierarchical softmax tree",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax tree",
+      "target": "prediction over all vertice",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "prediction over all vertice",
+      "target": "sequence of binary decision",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sequence of binary decision",
+      "target": "binary tree",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "custom graph-based objective",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "custom graph-based objective",
+      "target": "feature representation",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature representation",
+      "target": "network neighborhood",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network neighborhood",
+      "target": "similar embedding",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.1680820149586613
+}

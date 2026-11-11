@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The largest graph was the Twitter network with roughly 10 million nodes (about 10.3 million)",
+    "The Twitter network had on the order of a billion edges (about 1.5-1.7 billion)",
+    "Attributing the Twitter network as the largest benchmark graph used in LINE's experiments"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence does not report the size of the specific largest benchmark graph used to evaluate LINE; the Twitter figures (175 million users, around twenty billion edges) come from a general statement about 2012 networks, not from LINE's experiments, and the answer's node count (~10 million) and edge count (~1.5-1.7 billion) are invented and contradict the cited Twitter figures. The correct response would have been to say the papers do not report this specific size.",
+  "judge_model": "claude-haiku-5-5"
+}

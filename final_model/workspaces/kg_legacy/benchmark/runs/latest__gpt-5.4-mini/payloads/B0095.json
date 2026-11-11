@@ -1,0 +1,110 @@
+{
+    "user_query": "Why is first-order proximity alone considered insufficient for preserving network structure in a real-world information network?",
+    "mode": "closed_book",
+    "llm_response": "First-order proximity only captures direct links between pairs of nodes, so it preserves immediate adjacency but ignores broader structural information such as shared neighborhoods, higher-order connectivity patterns, community structure, and nodes that play similar roles without being directly connected. In real-world information networks, these indirect relationships are often crucial for representing the true network structure, so relying on first-order proximity alone can miss important similarities and organization in the graph.",
+    "llm_self_reported_accuracy": 0.97,
+    "llm_confidence_reasoning": "This is a standard and well-established explanation in network representation learning, and the statement is broadly correct across real-world information networks.",
+    "extracted_query_entities": [
+        "first-order proximity",
+        "real-world information network",
+        "network structure"
+    ],
+    "extracted_response_entities": [
+        "first-order proximity",
+        "real-world information network",
+        "network structure",
+        "direct links between pairs of node",
+        "immediate adjacency",
+        "shared neighborhood",
+        "higher-order connectivity pattern",
+        "community structure",
+        "nodes that play similar roles without being directly connected",
+        "indirect relationship",
+        "representing the true network structure",
+        "relying on first-order proximity alone",
+        "important similarities and organization in the graph"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "first-order proximity",
+            "target": "direct links between pairs of node",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "immediate adjacency",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "shared neighborhood",
+            "type": "IGNORES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "higher-order connectivity pattern",
+            "type": "IGNORES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "community structure",
+            "type": "IGNORES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "nodes that play similar roles without being directly connected",
+            "type": "IGNORES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "indirect relationship",
+            "target": "representing the true network structure",
+            "type": "ARE_CRUCIAL_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "relying on first-order proximity alone",
+            "target": "important similarities and organization in the graph",
+            "type": "MISSES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why is first-order proximity alone considered insufficient for preserving network structure in a real-world information network?",
+        "llm_response": "First-order proximity only captures direct links between pairs of nodes, so it preserves immediate adjacency but ignores broader structural information such as shared neighborhoods, higher-order connectivity patterns, community structure, and nodes that play similar roles without being directly connected. In real-world information networks, these indirect relationships are often crucial for representing the true network structure, so relying on first-order proximity alone can miss important similarities and organization in the graph.",
+        "llm_extraction_confidence": 0.97,
+        "llm_confidence_reasoning": "This is a standard and well-established explanation in network representation learning, and the statement is broadly correct across real-world information networks.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1996.6,
+            "prompt_tokens": 108,
+            "completion_tokens": 127
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2020.5,
+            "prompt_tokens": 716,
+            "completion_tokens": 285
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.17009621612296616,
+        "query_entities": [
+            "first-order proximity",
+            "real-world information network",
+            "network structure"
+        ]
+    }
+}

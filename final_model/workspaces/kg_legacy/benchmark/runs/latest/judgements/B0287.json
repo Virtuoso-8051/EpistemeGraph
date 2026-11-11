@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Link prediction experiments were run on a PPI network from Stanford/BioGRID and arXiv collaboration networks (ASTRO-PH and HEP-PH); the evidence only names Facebook.",
+    "Edge feature operators (average, Hadamard, weighted-L1, weighted-L2) were evaluated on these graphs; not in the provided evidence.",
+    "Node classification used BlogCatalog, Wikipedia word co-occurrence, and PPI; not in the provided evidence.",
+    "Synthetic data appears only in illustrative analyses (e.g., the Les Miserables network); not stated in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and notes real-world datasets including Facebook, which the evidence supports. However, the specific datasets, edge operators, and the claim about synthetic data go beyond the provided evidence, though they are accurate to the actual paper.",
+  "judge_model": "claude-sonnet-5-5"
+}

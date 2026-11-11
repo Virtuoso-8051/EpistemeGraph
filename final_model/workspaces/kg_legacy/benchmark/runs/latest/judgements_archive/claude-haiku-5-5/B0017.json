@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The passage's generalization claim is attributed to the skip-gram objective with a neural embedding model as in word2vec; the evidence does not mention skip-gram or word2vec.",
+    "The claim that DeepWalk maximizes the probability of nodes co-occurring within a window of the walk is not stated in the evidence excerpt.",
+    "The label 'language of graphs' is not used in the evidence, though the set-of-random-walks description is supported."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer matches the evidence: DeepWalk generalizes neural language models to process a special language made of randomly-generated walks, with walks treated as sentences and vertices as vocabulary. However, the answer adds specifics (skip-gram, word2vec, window-based co-occurrence objective) not present in the provided passage, though it does hedge that it is relying on the standard description.",
+  "judge_model": "claude-haiku-5-5"
+}

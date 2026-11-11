@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The 'relaxations' are misidentified as using truncated random walks rather than a raw graph and using Skip-gram with hierarchical softmax; the evidence defines them as the changes to the language-model objective (right-side context, order independence).",
+    "The reasons given (online learning, parallelizability, adaptability to community structure, noise tolerance) are not the stated reasons; the evidence says order independence captures nearness and speeds training via small models.",
+    "Short random walks are forgiving of missing or noisy edges is not stated in the evidence.",
+    "The answer omits the actual reasons (order independence better captures nearness; training speedup from small models, one vertex at a time)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer misidentifies what the relaxations are and gives reasons (online, parallel, noise-robust) different from the paper's two stated reasons: order independence capturing nearness and faster training through small models. The core explanation is therefore not supported by the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

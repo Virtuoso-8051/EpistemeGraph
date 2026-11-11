@@ -1,0 +1,44 @@
+{
+  "answer": "The missing edges were chosen uniformly at random from the set of non-edges in the graph, and the selection was constrained so that the added/removed perturbations did not create self-loops or duplicate existing edges (i.e., the perturbed graph remained a simple graph).",
+  "confidence": 0.62,
+  "confidence_reasoning": "This answer reflects the standard setup for graph perturbation experiments, but without the specific source text I cannot be fully certain the exact selection rule and constraint match the question\u2019s intended context.",
+  "triples": [
+    {
+      "source": "missing edge",
+      "target": "non-edge",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing edge",
+      "target": "GRAPH",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing edge",
+      "target": "uniformly at random",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "selection",
+      "target": "no self-loop",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "selection",
+      "target": "no duplicate existing edge",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "perturbed graph",
+      "target": "simple graph",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.18665526048192438
+}

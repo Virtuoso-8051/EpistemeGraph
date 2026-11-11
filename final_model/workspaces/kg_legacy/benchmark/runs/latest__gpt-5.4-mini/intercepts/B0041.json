@@ -1,0 +1,44 @@
+{
+  "answer": "In DeepWalk, the context of a vertex is defined by the vertices that appear within a fixed-size window around it in random-walk sequences, treating those nearby vertices as its \u201cneighbors\u201d in the walk. The objective is to maximize the probability of observing these context vertices given the target vertex, analogous to the skip-gram model in word2vec. If the ordering constraint is removed, the training problem becomes much simpler: instead of modeling the exact sequence order of context vertices, the model only needs to predict an unordered set or multiset of co-occurring vertices, which reduces the problem to a bag-of-contexts formulation and makes optimization easier.",
+  "confidence": 0.92,
+  "confidence_reasoning": "This matches the standard DeepWalk/skip-gram formulation and the common interpretation of removing order as turning sequence prediction into an unordered co-occurrence problem.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "vertices that appear within a fixed-size window around a vertex in random-walk sequence",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram model",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "WORD2VEC",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "training problem",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "bag-of-contexts formulation",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "bag-of-contexts formulation",
+      "target": "optimization",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.19476399476500764
+}

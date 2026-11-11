@@ -1,0 +1,50 @@
+{
+  "answer": "Node2vec's link prediction setup removes 50% of the network's edges to form the positive test examples. The edges are removed so that the residual network stays connected. The paper does not spell out a specific procedure, but this is the stated constraint. Equal numbers of randomly sampled node pairs with no edge between them serve as negative examples.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I recall the 50% figure and the explicit 'residual network remains connected' wording from the node2vec paper, but I am less sure of the exact mechanism used to ensure connectivity, which the paper does not detail.",
+  "triples": [
+    {
+      "source": "Link Prediction",
+      "target": "fraction of missing edge",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "fraction of missing edge",
+      "target": "50% of network edges removed to form positive test example",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "reconstructed network",
+      "target": "graph connectivity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Link Prediction",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "randomly sampled node pairs with no edge as negative example",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "graph connectivity",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph connectivity",
+      "target": "residual network",
+      "type": "PRESERVE",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Qiu et al. 2018 NetMF showed DeepWalk implicitly factorizes a log-transformed windowed co-occurrence matrix (external, not in evidence)",
+    "DeepWalk (Perozzi et al.) trains skip-gram with hierarchical softmax, treating walks as sentences (not in evidence)",
+    "DeepWalk handles directed citation networks by walking along edges without special treatment (not in evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise: DeepWalk works on unweighted (binary) edges and uses truncated random walks capturing higher/second-order proximity, which matches the evidence. The extra details (skip-gram, NetMF, directed handling) go beyond the evidence but are accurate, well-known background, so they don't undermine the core answer.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "The method aims to learn a compact latent representation for the network.",
+    "The learned dimensions are described as disentangled and interpretable factors of variation."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The papers do say the method learns low-dimensional latent representations, but the answer adds 'compact' without the specific matrix form and small latent dimension framing from the source. The description of the dimensions as 'disentangled and interpretable factors of variation' is not in the papers and is unsupported; the papers instead describe them as distributed, with each social phenomenon expressed by a subset of dimensions.",
+  "judge_model": "gpt-5.4-mini"
+}

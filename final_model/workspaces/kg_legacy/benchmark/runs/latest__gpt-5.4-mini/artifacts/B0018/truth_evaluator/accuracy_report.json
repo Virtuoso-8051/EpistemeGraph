@@ -1,0 +1,121 @@
+{
+    "schema_version": "casse-v3",
+    "user_query": "What kind of representation does the method aim to learn for the network, and how are the learned dimensions described?",
+    "feature_vector_X": {
+        "e_sheaf": 2.514344937425699,
+        "delta_k": 0.05868350182809026,
+        "d_spec": 0.5,
+        "pi_prov": 0.3333333333333333,
+        "sigma_ent": 0.5156211853027344,
+        "nli_cons": -0.0028233621269464493,
+        "nli_worst": -0.0028233621269464493,
+        "nu_ooc": 0.5567878938994577,
+        "kappa_con": 0.0,
+        "align_rate": 0.3333333333333333,
+        "c_llm": 0.78,
+        "u_nll": 0.18835493447124094,
+        "spec_ratio": 0.0
+    },
+    "scores": {
+        "S_query": null,
+        "S_final": null,
+        "S_KG_global": 0.8442440064991328,
+        "S_KG_local": 0.9606753727294903
+    },
+    "decision": {
+        "status": "UNCALIBRATED",
+        "conformal_prediction_set": [],
+        "alpha": 0.1,
+        "tau_verified": 0.0,
+        "tau_hallucinated": 1.0
+    },
+    "champion_model": null,
+    "brain": {
+        "source_workspace": null,
+        "transferred": false,
+        "champion": null
+    },
+    "pool": {
+        "b0": 0.0,
+        "b_query": 1.0,
+        "b_kg": 0.0,
+        "fitted": false,
+        "n_fit": 0
+    },
+    "diagnostics": {
+        "gt_nodes": 19,
+        "gt_edges": 14,
+        "response_entities": 3,
+        "response_claims": 1,
+        "asserted_claims": 1,
+        "unsupported_claims": 1,
+        "conflicting_claims": 0,
+        "hallucination_extent": 1.0,
+        "entity_alignment_rate": 0.3333333333333333,
+        "mean_alignment_confidence": 1.0,
+        "nli_model": "cross-encoder/nli-deberta-v3-xsmall",
+        "hallucination_probability": null,
+        "brain": {
+            "source_workspace": null,
+            "transferred": false,
+            "champion": null
+        }
+    },
+    "edge_audit_details": [
+        {
+            "source": "learned dimension",
+            "relation": "ARE_DESCRIBED_AS",
+            "target": "disentangled and interpretable factors of variation",
+            "claim_type": "ASSERTED",
+            "source_aligned": false,
+            "target_aligned": false,
+            "support_tier": "UNGROUNDED",
+            "provenance_strength": 0.0,
+            "conflict": null,
+            "evidence_quote": "",
+            "is_supported": false,
+            "nearest_corpus_sentence": "These low-dimensional representations are distributed; meaning each social phenomena is expressed by a subset of the dimensions and each dimension contributes to a subset of the social concepts expressed by the space.",
+            "nli_entail": 0.0486,
+            "nli_contra": 0.6931,
+            "nli_consistency": -0.0028
+        }
+    ],
+    "claim_matrix": {
+        "features": [
+            "s_prov",
+            "tier_direct",
+            "tier_two_hop",
+            "conflict",
+            "pol_asserted",
+            "pol_speculative",
+            "pol_refuted",
+            "aligned_frac",
+            "nli_entail",
+            "nli_contra",
+            "nli_cons",
+            "cos_evidence",
+            "ooc_rate",
+            "sheaf_resid",
+            "forman_graft"
+        ],
+        "rows": [
+            [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.04856967180967331,
+                0.6931188106536865,
+                -0.0028233621269464493,
+                0.5156211853027344,
+                0.5567878938994577,
+                1.2568531458540124,
+                1.0986122886681098
+            ]
+        ]
+    }
+}

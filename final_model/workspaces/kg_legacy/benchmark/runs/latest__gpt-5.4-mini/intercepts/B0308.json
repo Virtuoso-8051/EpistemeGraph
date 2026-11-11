@@ -1,0 +1,68 @@
+{
+  "answer": "node2vec does not rely on convolutional filters to generate neighborhoods. It generates node neighborhoods by simulating biased random walks over the graph, then treats the resulting walk sequences like sentences and learns embeddings with a skip-gram model. Convolutional filters are associated with graph convolutional networks or CNN-based methods, not node2vec. If you meant a convolution-based graph method, those typically aggregate information from a node\u2019s local neighbors using learned filters rather than sampling random walks.",
+  "confidence": 0.98,
+  "confidence_reasoning": "This is a direct description of node2vec\u2019s standard algorithm, which is well-established and does not use convolutional filters.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "convolutional filter",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node neighborhood",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "GRAPH",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolutional filter",
+      "target": "graph convolutional network",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolutional filter",
+      "target": "CNN-based method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolution-based graph method",
+      "target": "learned filter",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolution-based graph method",
+      "target": "local neighbor",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolution-based graph method",
+      "target": "random walk",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": 0.18987877689190766
+}

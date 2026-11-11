@@ -1,0 +1,50 @@
+{
+  "answer": "I could not identify a specific, well-established study showing that node2vec keeps improving past about 100 dimensions under defined conditions, so I can't give a verified answer. The general pattern in the embedding literature is that gains flatten out somewhere around 100 to 200 dimensions for most tasks. Continued gains are more plausible when the graph is large, the downstream task has many classes or fine-grained labels, and the training data is rich enough (for example, more or longer random walks) to populate the extra dimensions. Under those conditions, longer walks supply more co-occurrence context, so higher dimensions can keep helping. With short walks, the extra dimensions tend to add little or overfit, so the benefit of higher dimensionality depends on walk length. If you have a specific paper in mind, I can try to reason from its setup, but I would not state the exact conditions as established fact.",
+  "confidence": 0.25,
+  "confidence_reasoning": "I could not verify a specific source for the claimed conditions, so the general trends I describe are plausible but uncertain and may not match the study the question refers to.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "embedding performance beyond 100 dimension",
+      "type": "IMPROVES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "embedding performance",
+      "target": "plateau at around 100 to 200 dimension",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continued gain",
+      "target": "large graphs with many classes or fine-grained label",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "longer random walk",
+      "target": "co-occurrence context",
+      "type": "GENERATES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "longer random walk",
+      "target": "higher dimensions continuing to help",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "short random walk",
+      "target": "extra dimensions add little or overfit",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "walk length",
+      "target": "benefit of higher dimensionality",
+      "type": "IMPROVES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

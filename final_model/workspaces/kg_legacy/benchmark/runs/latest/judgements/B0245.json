@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The streaming variant's speed comes from generating random walks on the fly, single-pass processing, and avoiding a stored walk corpus or repeated passes; the evidence does not say this.",
+    "The answer implies a streaming variant of DeepWalk uses or could use a decaying schedule that affects stability, but the evidence says decay is not possible in streaming and a small constant rate is used instead.",
+    "The answer does not state the actual correction that streaming uses a small constant learning rate, which makes learning slower."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer rejects the premise that decay makes streaming faster, and correctly notes that DeepWalk's SGD uses a linearly decreasing rate. But it misses the key correction that streaming cannot use decay and uses a small constant rate (slower learning), and it invents speed-advantage mechanisms not found in the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

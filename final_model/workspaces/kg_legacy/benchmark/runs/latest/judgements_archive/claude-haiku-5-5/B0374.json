@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Later papers that benchmark both on Cora and Citeseer report mixed results that depend on labeled-data fraction, classifier, and hyperparameter tuning, with LINE often competitive.",
+    "Any advantage DeepWalk shows is plausibly due to its random-walk, skip-gram objective capturing higher-order neighborhood structure beyond LINE's first- and second-order proximity."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise by noting the original DeepWalk paper evaluated on BlogCatalog, Flickr, and YouTube rather than Cora or Citeseer, and that the paper does not establish a Cora/Citeseer advantage. However, its claims about later papers' mixed Cora/Citeseer results and the explanation for DeepWalk's advantage are not contained in the provided evidence, so they are unsupported attributions.",
+  "judge_model": "claude-haiku-5-5"
+}

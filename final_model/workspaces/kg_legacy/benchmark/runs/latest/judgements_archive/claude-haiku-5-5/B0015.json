@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The streaming variant generates random walks from the portion of the graph observed so far as edges or nodes arrive, and updates skip-gram embeddings online (the evidence says small walks are passed directly to the representation learning code and the model is updated directly, which supports online updating, but not the specific description of walks generated from partial graphs)",
+    "The tradeoff described (early embeddings biased from incomplete view, drift, need for periodic retraining, replaying old walks, or regularization) is not in the evidence; the paper's stated tradeoff is that a constant learning rate takes longer to learn but may be worth it",
+    "Claims that nodes with few observed neighbors get poorly estimated vectors and that embeddings drift are not stated in the source"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly captures that streaming DeepWalk updates the model directly from small walks without the full graph. However, the specified tradeoff (accuracy vs. timeliness, drift, replay/regularization) is not what the paper reports, which is slower learning from a necessarily constant learning rate.",
+  "judge_model": "claude-haiku-5-5"
+}

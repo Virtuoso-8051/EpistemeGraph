@@ -1,0 +1,121 @@
+{
+    "user_query": "What kind of search strategy does LINE primarily use, and over which neighborhood depths does it optimize the likelihood?",
+    "mode": "closed_book",
+    "llm_response": "LINE (Large-scale Information Network Embedding) primarily uses a stochastic, edge-sampling-based optimization strategy with negative sampling rather than an exhaustive global search. It optimizes the likelihood over local neighborhoods of depth 1 for the first-order proximity objective and depth 2 for the second-order proximity objective.",
+    "llm_self_reported_accuracy": 0.95,
+    "llm_confidence_reasoning": "This matches the standard LINE formulation: it learns embeddings by maximizing local edge-based likelihoods using negative sampling, with first-order and second-order proximity corresponding to 1-hop and 2-hop neighborhood information.",
+    "extracted_query_entities": [
+        "LINE",
+        "Large-scale Information Network Embedding",
+        "stochastic, edge-sampling-based optimization strategy",
+        "negative sampling",
+        "exhaustive global search",
+        "likelihood",
+        "local neighborhoods of depth 1",
+        "first-order proximity objective",
+        "local neighborhoods of depth 2",
+        "second-order proximity objective"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "Large-scale Information Network Embedding",
+        "stochastic, edge-sampling-based optimization strategy",
+        "negative sampling",
+        "exhaustive global search",
+        "likelihood",
+        "local neighborhoods of depth 1",
+        "first-order proximity objective",
+        "local neighborhoods of depth 2",
+        "second-order proximity objective"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "stochastic, edge-sampling-based optimization strategy",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "negative sampling",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "exhaustive global search",
+            "type": "REFUTED",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "likelihood",
+            "type": "OPTIMIZES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "local neighborhoods of depth 1",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "first-order proximity objective",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "local neighborhoods of depth 2",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "second-order proximity objective",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What kind of search strategy does LINE primarily use, and over which neighborhood depths does it optimize the likelihood?",
+        "llm_response": "LINE (Large-scale Information Network Embedding) primarily uses a stochastic, edge-sampling-based optimization strategy with negative sampling rather than an exhaustive global search. It optimizes the likelihood over local neighborhoods of depth 1 for the first-order proximity objective and depth 2 for the second-order proximity objective.",
+        "llm_extraction_confidence": 0.95,
+        "llm_confidence_reasoning": "This matches the standard LINE formulation: it learns embeddings by maximizing local edge-based likelihoods using negative sampling, with first-order and second-order proximity corresponding to 1-hop and 2-hop neighborhood information.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1852.4,
+            "prompt_tokens": 110,
+            "completion_tokens": 119
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2190.0,
+            "prompt_tokens": 686,
+            "completion_tokens": 365
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.18691503474142698,
+        "query_entities": [
+            "LINE",
+            "Large-scale Information Network Embedding",
+            "stochastic, edge-sampling-based optimization strategy",
+            "negative sampling",
+            "exhaustive global search",
+            "likelihood",
+            "local neighborhoods of depth 1",
+            "first-order proximity objective",
+            "local neighborhoods of depth 2",
+            "second-order proximity objective"
+        ]
+    }
+}

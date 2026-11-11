@@ -1,0 +1,12 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "LINE(2nd) reconstructs high-degree node neighborhoods reasonably well but falls behind DeepWalk on low-degree nodes",
+    "DeepWalk's advantage is concentrated in the sparse, low-degree groups",
+    "The general pattern reported for LINE(2nd) vs DeepWalk is that DeepWalk wins on low-degree groups"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The source says LINE(2nd) on the reconstructed network outperforms DeepWalk in all degree groups, which contradicts the answer's claim that DeepWalk has an advantage in low-degree groups. The answer also fails to correct the false premise, and its hedging does not fix the contradicted core claim.",
+  "judge_model": "claude-sonnet-5-5"
+}

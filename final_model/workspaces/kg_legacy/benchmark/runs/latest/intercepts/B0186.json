@@ -1,0 +1,32 @@
+{
+  "answer": "I believe the largest dataset in the LINE paper (Tang et al., 2015) was a Twitter follower network, but I cannot reliably recall its exact vertex and edge counts, so I cannot give them with confidence. Among the datasets I recall, Flickr (about 1.7 million vertices and 22.6 million edges) is also large, and I am unsure which of these the paper treats as the largest.",
+  "confidence": 0.15,
+  "confidence_reasoning": "I am unsure which dataset is the largest in LINE's evaluation and do not reliably remember the exact vertex and edge counts, so most of the factual content is likely wrong or unverified.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "Twitter follower network",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "FLICKR",
+      "target": "VERTEX",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "FLICKR",
+      "target": "EDGE",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "FLICKR",
+      "target": "LN",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

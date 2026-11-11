@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "DeepWalk (Perozzi et al., 2014) was evaluated on PPI to show generalization; the evidence shows PPI was a node2vec benchmark where DeepWalk was a baseline, not DeepWalk's own evaluation.",
+    "DeepWalk was reported to beat baseline embedding methods including spectral approaches, especially when labelled data was scarce; this is not stated in the evidence, which only gives node2vec's gains over DeepWalk.",
+    "DeepWalk's performance is attributed to homophily and short random walks placing similar users close together; the evidence does not state this explanation."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and identifies BlogCatalog for blogger interests and PPI as a separate protein network. However, it adds unsupported claims about DeepWalk's own evaluation on PPI, its results against baselines, and why it performs well on social networks.",
+  "judge_model": "claude-sonnet-5-5"
+}

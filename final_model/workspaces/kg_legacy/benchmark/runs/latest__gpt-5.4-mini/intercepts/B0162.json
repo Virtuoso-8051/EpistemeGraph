@@ -1,0 +1,32 @@
+{
+  "answer": "In the reported node2vec experiments, the authors used r = 10 random walks per node. They did compare this setting against other values of r, including smaller and larger ones, as part of their parameter sensitivity analysis; the reported results indicate performance was fairly robust around that choice rather than showing a strong dependence on a single exact value.",
+  "confidence": 0.86,
+  "confidence_reasoning": "The value r = 10 is directly reported in the node2vec paper, and the paper also includes sensitivity experiments over different r values, though the exact range is less certain from memory than the main setting.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "random walks per node",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "parameter sensitivity analysis",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "smaller and larger values of random walks per node",
+      "type": "COMPARES_WITH",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "performance robustness",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.19733564315303678
+}

@@ -1,0 +1,60 @@
+{
+  "run_dir": "final_model\\workspaces\\kg_legacy\\benchmark\\runs\\latest",
+  "n_items": 400,
+  "label_distribution": {
+    "UNSUPPORTED": 94,
+    "PARTIALLY_SUPPORTED": 241,
+    "SUPPORTED": 65
+  },
+  "label_by_category": {
+    "BORDERLINE": 0.1625,
+    "CROSS_DOC": 0.125,
+    "FACTUAL": 0.125,
+    "FALSE_PREMISE": 0.2
+  },
+  "champion": "RandomForest",
+  "promoted": true,
+  "test_S_final": {
+    "roc_auc": 0.6710526315789473,
+    "log_loss": 0.4848786295800773,
+    "brier": 0.1525231889559443,
+    "ece": 0.07616149175596724,
+    "f1_at_0.5": 0.3157894736842105,
+    "accuracy_at_0.5": 0.821917808219178
+  },
+  "test_conformal": {
+    "coverage": 0.7808219178082192,
+    "coverage_supported": 0.8125,
+    "coverage_hallucinated": 0.7719298245614035,
+    "abstention_rate": 0.36986301369863017,
+    "selective_accuracy": 0.6521739130434783,
+    "n": 73
+  },
+  "llm_self_confidence_baseline": {
+    "roc_auc": 0.7664473684210527,
+    "log_loss": 0.6312387008741444,
+    "brier": 0.21469452054794522,
+    "ece": 0.2932876712328767,
+    "f1_at_0.5": 0.5416666666666666,
+    "accuracy_at_0.5": 0.6986301369863014,
+    "ci95": {
+      "roc_auc": [
+        0.6013845505307386,
+        0.9073620047715443
+      ],
+      "log_loss": [
+        0.5130769985155735,
+        0.7605884671303796
+      ],
+      "brier": [
+        0.16870397260273973,
+        0.263916095890411
+      ],
+      "ece": [
+        0.22571917808219172,
+        0.37755136986301363
+      ]
+    }
+  },
+  "results_csv": "final_model\\workspaces\\kg_legacy\\benchmark\\results.csv"
+}

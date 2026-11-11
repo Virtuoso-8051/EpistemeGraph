@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Storing the affinity matrix takes O(n^2) memory and is often dense (not stated in the evidence)",
+    "Eigendecomposition costs roughly O(n^3) time in the naive case (the evidence says only at least quadratic)",
+    "Constructing pairwise affinities and shortest-path computations add further quadratic costs (not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that eigendecomposition of the affinity matrix is the bottleneck and makes these methods inefficient on large networks is supported. However, the answer adds specifics the evidence does not contain: O(n^3) time, O(n^2) memory, and extra quadratic costs. It also says the passage isn't included, although the evidence is available, and it never states the passage's \"at least quadratic\" bound explicitly.",
+  "judge_model": "claude-sonnet-5-5"
+}

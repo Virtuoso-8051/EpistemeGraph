@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The AI claims it cannot identify the paper or experiment, which is false: the evidence clearly contains the word analogy table with LINE(2nd) at 2.55h and DeepWalk at 16.64h, so the core requested figures were available and not reported.",
+    "The AI fails to state that LINE(2nd) is about 6.5 times faster than DeepWalk in that experiment (2.55h vs 16.64h), so the central answer is missing."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer refuses to identify the word analogy experiment and omits the reported running times (LINE(2nd) 2.55h vs DeepWalk 16.64h), which are directly present in the evidence. Its general background claim about LINE not generating random walks is uncontroversial, but the core answer is not supported by the answer given, and it does not engage with node2vec's efficiency claim from the provided text.",
+  "judge_model": "claude-haiku-5-5"
+}

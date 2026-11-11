@@ -1,0 +1,98 @@
+{
+    "user_query": "In the network embedding framework that defines second-order proximity, what exact similarity function do the authors use to compare the neighborhood vectors p_u and p_v, and what is the formula for it?",
+    "mode": "closed_book",
+    "llm_response": "In the LINE network embedding framework, the authors compare the neighborhood vectors p_u and p_v using the Kullback\u2013Leibler (KL) divergence. The exact similarity/distance function is\n\nD_{KL}(p_u \\| p_v) = \\sum_i p_u(i) \\log \\frac{p_u(i)}{p_v(i)}.\n\nFor second-order proximity, they minimize this divergence between the empirical neighborhood distribution of a vertex and the distribution predicted by its embedding.",
+    "llm_self_reported_accuracy": 0.96,
+    "llm_confidence_reasoning": "This is a standard, explicit formula from the LINE paper\u2019s second-order proximity objective, and I am highly confident it is stated correctly.",
+    "extracted_query_entities": [
+        "LINE network embedding framework",
+        "Kullback\u2013Leibler divergence",
+        "second-order proximity",
+        "neighborhood vectors p_u and p_v",
+        "empirical neighborhood distribution of a vertex",
+        "distribution predicted by its embedding"
+    ],
+    "extracted_response_entities": [
+        "LINE network embedding framework",
+        "Kullback\u2013Leibler divergence",
+        "second-order proximity",
+        "neighborhood vectors p_u and p_v",
+        "empirical neighborhood distribution of a vertex",
+        "distribution predicted by its embedding",
+        "D_{KL}(p_u \\| p_v) = \\sum_i p_u(i) \\log \\frac{p_u(i)}{p_v(i)}"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE network embedding framework",
+            "target": "Kullback\u2013Leibler divergence",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Kullback\u2013Leibler divergence",
+            "target": "D_{KL}(p_u \\| p_v) = \\sum_i p_u(i) \\log \\frac{p_u(i)}{p_v(i)}",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "Kullback\u2013Leibler divergence",
+            "type": "OPTIMIZES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "empirical neighborhood distribution of a vertex",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "distribution predicted by its embedding",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Kullback\u2013Leibler divergence",
+            "target": "neighborhood vectors p_u and p_v",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "In the network embedding framework that defines second-order proximity, what exact similarity function do the authors use to compare the neighborhood vectors p_u and p_v, and what is the formula for it?",
+        "llm_response": "In the LINE network embedding framework, the authors compare the neighborhood vectors p_u and p_v using the Kullback\u2013Leibler (KL) divergence. The exact similarity/distance function is\n\nD_{KL}(p_u \\| p_v) = \\sum_i p_u(i) \\log \\frac{p_u(i)}{p_v(i)}.\n\nFor second-order proximity, they minimize this divergence between the empirical neighborhood distribution of a vertex and the distribution predicted by its embedding.",
+        "llm_extraction_confidence": 0.96,
+        "llm_confidence_reasoning": "This is a standard, explicit formula from the LINE paper\u2019s second-order proximity objective, and I am highly confident it is stated correctly.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2006.4,
+            "prompt_tokens": 127,
+            "completion_tokens": 149
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 4527.8,
+            "prompt_tokens": 755,
+            "completion_tokens": 305
+        },
+        "asserted_claim_count": 6,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.14172851455795182,
+        "query_entities": [
+            "LINE network embedding framework",
+            "Kullback\u2013Leibler divergence",
+            "second-order proximity",
+            "neighborhood vectors p_u and p_v",
+            "empirical neighborhood distribution of a vertex",
+            "distribution predicted by its embedding"
+        ]
+    }
+}

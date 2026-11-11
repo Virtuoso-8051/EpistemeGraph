@@ -1,0 +1,62 @@
+{
+  "answer": "The premise is largely mistaken. LINE (Tang et al., 2015) is not restricted to undirected, unweighted networks. Its edge-sampling optimization handles directed, undirected, and weighted networks. The closest true caveat is that its first-order proximity objective models symmetric (undirected) ties, so for directed graphs the second-order proximity variant, with separate vertex and context embeddings, is the one that captures edge direction. Restrictions like the undirected-unweighted one are often attributed to methods such as DeepWalk or some matrix-factorization approaches, not to LINE.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I'm fairly confident LINE's paper claims support for directed, undirected, and weighted networks, but the question's framing may reflect a specific source's claim I can't verify, and the first-order symmetry nuance adds some uncertainty.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "Tang et al., 2015",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "directed graph",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling optimization",
+      "target": "weighted network",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "undirected graph",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "undirected graph",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "directed graph",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "separate vertex and context embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "undirected unweighted restriction",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "matrix factorization",
+      "target": "undirected unweighted restriction",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

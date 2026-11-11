@@ -1,0 +1,74 @@
+{
+  "answer": "DeepWalk is described as suitable for real-world applications such as network classification and anomaly detection because it learns low-dimensional, continuous vector representations (embeddings) of the nodes in a network in an unsupervised way, using truncated random walks treated as sentences fed to a skip-gram language model. These embeddings capture the network's structural neighborhood and community information, so they can be used directly as features for downstream tasks: classifying nodes or networks, detecting anomalous nodes or structures, and related tasks like link prediction. Because the method is scalable (it is online and parallelizable, and does not require labeled data for the embedding step), it can handle large, sparse, real-world graphs, and it remains robust when labels are scarce, which is common in practical settings.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core description of DeepWalk (random walks plus skip-gram, unsupervised node embeddings, usefulness for classification and anomaly detection) is well established, but the exact wording of the source's justification is uncertain and some added details about scalability and robustness may not match what the question expects.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "network neighborhood structure",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "low-dimensional continuous vector representations of node",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "target": "skip-gram language model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "NC",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "anomaly detection",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "link prediction",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "scalability",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unsupervised learning",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "large sparse real-world graph",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "scarce label setting",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

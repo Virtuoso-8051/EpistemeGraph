@@ -1,0 +1,56 @@
+{
+  "answer": "LINE primarily uses a breadth-first-style search: it considers only the immediate neighborhood of each node, not long random walks or depth-first exploration. Its objective optimizes the likelihood over depth-1 neighborhoods (first-order proximity, direct edges) and depth-2 neighborhoods (second-order proximity, nodes sharing neighbors). LINE is therefore described as preserving local 1-hop and 2-hop structure.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core claim that LINE uses BFS-like 1-hop and 2-hop neighborhoods matches the original paper's framing, but the exact wording of 'search strategy' in the question adds some uncertainty about the intended phrasing.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "breadth-first search",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "depth-first search",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "long random walk",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "likelihood objective",
+      "target": "depth-1 neighborhood",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "likelihood objective",
+      "target": "depth-2 neighborhood",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-1 neighborhood",
+      "target": "first-order proximity",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-2 neighborhood",
+      "target": "second-order neighbor",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "1-hop and 2-hop neighbor",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

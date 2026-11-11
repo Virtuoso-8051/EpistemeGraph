@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The answer asserts a single dimensionality of 128 for all networks, but the evidence says the language network used 200 dimensions and other networks used 128 by default, so the answer conflates the settings and gives a single 'exact' value that the passage does not support for the language network.",
+    "The answer states LINE's experiments on the language, social, and citation networks all used d=128, which contradicts the evidence that the language network used 200."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly sets the language network embedding dimension to 200 and other networks (social and citation) to 128 by default, so the answer's blanket claim of 128 across all three network types contradicts the source. The question is borderline-unanswerable as a single exact value, and the answer instead asserts a specific number that the papers do not support for the full set of networks.",
+  "judge_model": "claude-haiku-5-5"
+}

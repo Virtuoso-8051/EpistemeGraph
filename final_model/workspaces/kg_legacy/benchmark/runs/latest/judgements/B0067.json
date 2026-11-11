@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "Most of the benefit appears at roughly gamma \u2248 10 walks per vertex (the paper says gamma = 30).",
+    "Gains show diminishing returns with further increases adding comparatively little (only loosely implied, but tied to the wrong value)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says that increasing gamma improves performance, but it gives the wrong threshold: the paper says most of the benefit is reached by gamma = 30, not about 10. Since the question asks for this value, the core numeric claim is contradicted by the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

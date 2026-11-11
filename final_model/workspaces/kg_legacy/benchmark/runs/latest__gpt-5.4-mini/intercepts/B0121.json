@@ -1,0 +1,38 @@
+{
+  "answer": "DeepWalk treats random walks on the graph as the equivalent of sentences, so nodes encountered along a walk play the role of words in a sentence. LINE explicitly optimizes not only first-order proximity (directly observed links) but also second-order proximity, which captures similarity in nodes\u2019 neighborhood distributions.",
+  "confidence": 0.98,
+  "confidence_reasoning": "This is a standard and well-established distinction between the two methods, and the answer matches their original formulations.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "sentence",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODES",
+      "target": "WORDS",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.14657174780013713
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Low-degree groups would show low classification scores with much better performance for higher-degree groups, specifically for LINE(2nd); the evidence says overall performance increases with degree, but does not specify this as the LINE(2nd) failure pattern.",
+    "The failure is explicitly framed as for nodes with 'only one or two neighbours'; the evidence only identifies the first group (0,1] as the one where LINE(2nd) underperforms LINE(1st), not [2,3]."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim, that LINE(2nd) works poorly for low-degree nodes, matches the evidence. However, the answer misses the specific grouped-result signature (LINE(2nd) beats LINE(1st) everywhere except the first group), broadens the failure to one or two neighbours, and hedges that it could not identify the paper.",
+  "judge_model": "claude-sonnet-5-5"
+}

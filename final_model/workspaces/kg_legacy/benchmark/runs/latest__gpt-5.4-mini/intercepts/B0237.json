@@ -1,0 +1,26 @@
+{
+  "answer": "DeepWalk\u2019s reported speedup on BlogCatalog and Flickr was obtained on a machine with 16 CPU cores and 128 GB of RAM. For the multi-worker runs, the paper reports using a 16-core CPU setup with 128 GB memory; the workers were run on that same hardware configuration.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the commonly reported experimental setup for DeepWalk speedup results, but the exact wording and whether the multi-worker runs used all 16 cores simultaneously can vary by source, so I am not fully certain.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "reported speedup",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "16-core CPU setup",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "128 GB of RAM",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.25201175952779836
+}

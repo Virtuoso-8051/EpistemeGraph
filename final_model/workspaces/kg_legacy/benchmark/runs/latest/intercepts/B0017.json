@@ -1,0 +1,68 @@
+{
+  "answer": "The passage most likely presents DeepWalk as a generalization of neural language models because it applies the same machinery (the skip-gram objective with a neural embedding model, as in word2vec) to a different kind of sequence. DeepWalk treats truncated random walks over a graph as sentences, with nodes playing the role of words, and learns continuous node representations by maximizing the probability of nodes co-occurring within a window of the walk. Language modeling is therefore generalized from word sequences to node sequences. The special language is the 'language of graphs': the set of node sequences produced by random walks on a network, which encodes local graph structure and community information. I could not see the passage itself, so this reflects the standard description of DeepWalk (Perozzi et al., 2014) rather than its exact wording.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core DeepWalk facts (random walks as sentences, nodes as words, skip-gram) are well established, but I did not have the passage, so its specific framing and wording are uncertain.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "WORD2VEC",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "target": "sentence",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "co-occurrence probability of nodes within a window",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "language modeling",
+      "type": "GENERALIZES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "language modeling",
+      "target": "node sequence",
+      "type": "APPLIES_TO",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "language of graph",
+      "target": "set of node sequences produced by random walks on a network",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language of graph",
+      "target": "local graph structure",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language of graph",
+      "target": "community information",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

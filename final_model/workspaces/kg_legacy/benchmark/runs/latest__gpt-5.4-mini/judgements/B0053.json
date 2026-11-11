@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The edge connects two characters if they appear together in the same scene/chapter segment.",
+    "The graph has weighted edges reflecting how often characters co-occur.",
+    "node2vec is analyzed by running biased random walks over the graph to generate node sequences, then training a skip-gram model on those walks.",
+    "The learned embeddings are said to preserve both local neighborhood structure and more global community/role similarity."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The paper supports that the Les Mis\u00e9rables network has 77 nodes and 254 edges, with nodes as characters and edges connecting coappearing characters, and that node2vec is run with d = 16 and the resulting representations are clustered with kmeans. However, the answer adds several details not stated in the provided evidence, including weighted edges, the specific co-occurrence granularity, and the skip-gram/random-walk training description, so it is only partially faithful.",
+  "judge_model": "gpt-5.4-mini"
+}

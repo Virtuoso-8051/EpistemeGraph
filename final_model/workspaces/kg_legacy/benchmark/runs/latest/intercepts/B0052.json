@@ -1,0 +1,56 @@
+{
+  "answer": "In the node2vec case study, BFS and DFS are two extremes of neighborhood sampling for random walks. BFS-like walks stay close to the source node, sampling its immediate neighbors, so they capture structural equivalence: nodes with similar structural roles (such as hubs, bridges, or peripheral nodes) get similar embeddings even when they are far apart in the graph. DFS-like walks move outward through the network, so they capture homophily: nodes in the same community or tightly connected region get similar embeddings. The Les Mis\u00e9rables co-appearance network example shows that tuning the return and in-out parameters (p and q) shifts the embedding between these behaviors. A DFS-leaning setting groups characters by community (homophily), while a BFS-leaning setting groups them by structural role across communities.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I recall the paper's framing and the Les Mis\u00e9rables figure reasonably well, but I am not certain of the exact p/q values and figure details, so some specifics may be off.",
+  "triples": [
+    {
+      "source": "BFS-like walk",
+      "target": "structural equivalence",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like walk",
+      "target": "homophily",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "target": "neighborhood sampling strategy",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "target": "neighborhood sampling strategy",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "return and in-out parameter",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables co-appearance network example",
+      "target": "NODE2VEC",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-leaning setting",
+      "target": "characters by community",
+      "type": "GROUPS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-leaning setting",
+      "target": "characters by structural role across communitie",
+      "type": "GROUPS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

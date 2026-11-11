@@ -1,0 +1,56 @@
+{
+  "answer": "First-order proximity only captures direct links between pairs of nodes, so it preserves immediate adjacency but ignores broader structural information such as shared neighborhoods, higher-order connectivity patterns, community structure, and nodes that play similar roles without being directly connected. In real-world information networks, these indirect relationships are often crucial for representing the true network structure, so relying on first-order proximity alone can miss important similarities and organization in the graph.",
+  "confidence": 0.97,
+  "confidence_reasoning": "This is a standard and well-established explanation in network representation learning, and the statement is broadly correct across real-world information networks.",
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "target": "direct links between pairs of node",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "immediate adjacency",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "shared neighborhood",
+      "type": "IGNORES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "higher-order connectivity pattern",
+      "type": "IGNORES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "community structure",
+      "type": "IGNORES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "nodes that play similar roles without being directly connected",
+      "type": "IGNORES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "indirect relationship",
+      "target": "representing the true network structure",
+      "type": "ARE_CRUCIAL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relying on first-order proximity alone",
+      "target": "important similarities and organization in the graph",
+      "type": "MISSES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.17009621612296616
+}

@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The original LINE objective sums w_ij log p(v_j|v_i) over edges (the objective formula is not in the evidence)",
+    "Sampling is done over an alias table (not mentioned in the evidence)",
+    "Each sampled edge is paired with negative samples drawn from a noise distribution (not in the evidence)",
+    "The learning rate is decayed linearly (not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise: the evidence says sampled edges are treated as binary so weights no longer affect the gradients, and that the objective remains the same. However, it adds implementation details (the alias table, negative sampling from a noise distribution, linear learning-rate decay, and the explicit objective formula) that do not appear in the provided evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

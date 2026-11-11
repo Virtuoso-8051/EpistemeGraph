@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "DeepWalk treats each random walk as a sentence and trains a Skip-gram (word2vec-style) model so that nodes co-occurring in walks get similar embeddings (the evidence mentions random walks and neighborhood enrichment but not the Skip-gram/sentence mechanism explicitly)",
+    "The clean visualization comes from a separate t-SNE or PCA projection step and depends on community structure and projection method rather than avoiding randomness (the evidence confirms t-SNE but does not discuss PCA or the claim that quality depends on community structure)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, stating DeepWalk is built on truncated random walks, which matches the evidence. However, it adds some mechanistic details (Skip-gram, sentence treatment, PCA alternative) that the source passage does not state, though these are standard background about DeepWalk.",
+  "judge_model": "claude-haiku-5-5"
+}

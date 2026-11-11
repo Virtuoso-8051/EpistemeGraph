@@ -1,0 +1,44 @@
+{
+  "answer": "Second-order proximity is typically measured as the similarity between the vertices' neighborhood distributions, i.e., how similar their in-neighbor sets and out-neighbor sets are (for example, via a dot product, cosine, or Jaccard-style overlap of their neighborhood vectors). If two vertices share no common in-neighbors or out-neighbors, their neighborhood overlap is empty, so the second-order proximity is set to 0.",
+  "confidence": 0.5,
+  "confidence_reasoning": "I could not identify the specific paper, so the exact similarity formula is uncertain, though a zero value for no shared neighbors is the most likely convention.",
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "target": "similarity between vertices' neighborhood distribution",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "dot product of neighborhood vector",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "cosine similarity of neighborhood vector",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "Jaccard-style neighborhood overlap",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "vertices with no common in-neighbors or out-neighbor",
+      "target": "empty neighborhood overlap",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "0",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

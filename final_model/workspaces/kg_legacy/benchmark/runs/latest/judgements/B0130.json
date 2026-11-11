@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Breadth-first exploration captures structural equivalence and depth-first exploration captures homophily; the evidence does not state this BFS/DFS mapping.",
+    "Node2vec uses a biased second-order random walk with return parameter p and in-out parameter q to interpolate between BFS-like and DFS-like sampling; the evidence mentions a 2nd order random walk but not p, q, or the BFS/DFS interpolation."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The hierarchical softmax claims (expensive normalization over all vertices, binary tree, O(log|V|) vs O(|V|)) and node2vec's motivation (rigid neighborhoods, need to capture both communities and roles) are supported. The BFS/DFS mapping and the p/q parameters go beyond the provided evidence, though they are accurate background about node2vec.",
+  "judge_model": "claude-sonnet-5-5"
+}

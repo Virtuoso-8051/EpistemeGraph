@@ -1,0 +1,542 @@
+{
+  "query_entities": [
+    "co-author network",
+    "publication record",
+    "AUTHOR",
+    "co-author link",
+    "coauthored at least one paper",
+    "low-degree author",
+    "1,024 author",
+    "3,842 co-author link"
+  ],
+  "snapshot_source": "neo4j",
+  "seed_count": 6,
+  "node_count": 19,
+  "edge_count": 18,
+  "nodes": [
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:10",
+      "name": "citation network",
+      "type": "CONCEPT",
+      "aliases": [
+        "CN",
+        "citation network",
+        "paper citation network"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:11",
+      "name": "Low-dimensional Embedding",
+      "type": "CONCEPT",
+      "aliases": [
+        "LDE",
+        "Low-dimensional Embedding"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:14",
+      "name": "Link Prediction",
+      "type": "CONCEPT",
+      "aliases": [
+        "LP",
+        "Link Prediction"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:21",
+      "name": "observed link",
+      "type": "CONCEPT",
+      "aliases": [
+        "OL",
+        "observed link"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "name": "first-order proximity",
+      "type": "CONCEPT",
+      "aliases": [
+        "FOP",
+        "first-order proximity",
+        "higher-order proximity",
+        "second-order proximity"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:48",
+      "name": "low-dimensional space",
+      "type": "CONCEPT",
+      "aliases": [
+        "LDS",
+        "Low dimensional",
+        "R^D",
+        "low-dimensional space"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:54",
+      "name": "PRESTIGE",
+      "type": "CONCEPT",
+      "aliases": [
+        "PRESTIGE"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:55",
+      "name": "DEGREE",
+      "type": "CONCEPT",
+      "aliases": [
+        "DEGREE"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:57",
+      "name": "empirical distribution",
+      "type": "CONCEPT",
+      "aliases": [
+        "ED",
+        "empirical distribution"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:58",
+      "name": "out-degree",
+      "type": "CONCEPT",
+      "aliases": [
+        "OD",
+        "out-degree"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:76",
+      "name": "author citation network",
+      "type": "DATASET",
+      "aliases": [
+        "ACN",
+        "author citation network"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:103",
+      "name": "co-author network",
+      "type": "CONCEPT",
+      "aliases": [
+        "CAN",
+        "co-author network"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:104",
+      "name": "PAPERS",
+      "type": "CONCEPT",
+      "aliases": [
+        "PAPERS"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "name": "NODE2VEC",
+      "type": "ALGORITHM",
+      "aliases": [
+        "NODE2VEC"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:120",
+      "name": "Novel Interactions Between Gene",
+      "type": "CONCEPT",
+      "aliases": [
+        "NIBG",
+        "Novel Interactions Between Gene"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:121",
+      "name": "Real-World Friend",
+      "type": "CONCEPT",
+      "aliases": [
+        "RWF",
+        "Real-World Friend"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:126",
+      "name": "Feature Representation",
+      "type": "CONCEPT",
+      "aliases": [
+        "FR",
+        "Feature Representation"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:499",
+      "name": "representation",
+      "type": "CONCEPT",
+      "aliases": [
+        "G(U,V",
+        "representation"
+      ],
+      "source_pdfs": [
+        "paper2.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:534",
+      "name": "AUC",
+      "type": "METRIC",
+      "aliases": [
+        "AUC",
+        "Area Under Curve"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:10",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:76",
+      "type": "CONTAINS",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "Two types of citation networks are used: an author citation network and a paper citation network.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_015"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:11",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:14",
+      "type": "ENABLES",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "Such a low-dimensional embedding is very useful in a variety of applications such as visualization [21], node classification [3], link prediction [10], and recommendation [23].",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_002"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:14",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:120",
+      "type": "ENABLES",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "Link prediction is useful in a wide variety of domains; for instance, in genomics, it helps us discover novel interactions between genes, and in social networks, it can identify real-world friends [2, 34].",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_002"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:14",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:121",
+      "type": "ENABLES",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "Link prediction is useful in a wide variety of domains; for instance, in genomics, it helps us discover novel interactions between genes, and in social networks, it can identify real-world friends [2, 34].",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_002"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:21",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:22",
+      "type": "CAPTURE",
+      "weight": 0.96,
+      "grounding_score": 0.8329161596298218,
+      "evidence_quote": "Naturally, the local structures are represented by the observed links in the networks, which capture the first-order proximity between the vertices.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_003"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:54",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:55",
+      "type": "MEASURED_BY",
+      "weight": 0.93,
+      "grounding_score": 0.783730490207672,
+      "evidence_quote": "As the importance of the vertices in the network may be different, we introduce \u03bbi in the objective function to represent the prestige of vertex i in the network, which can be measured by the degree or estimated through algorithms such as PageRank [15].",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_011"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:57",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:58",
+      "type": "DEFINED_AS",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "The empirical distribution \u02c6p2(\u00b7|vi) is defined as \u02c6p2(vj|vi) = wij di , where wij is the weight of the edge (i,j ) and di is the out-degree of vertex i, i.e. di = \u2211k\u2208N (i)wik, where N(i) is the set of out-neighbors of vi.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_011"
+      ],
+      "support_count": 1,
+      "is_functional": true
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:103",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:48",
+      "type": "MAPS_TO",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "We first map the co-author network into a low-dimensional space with different embedding approaches and then further map the lowdimensional vectors of the vertices to a 2-D space with the t-SNE package [21].",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_024"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:103",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:104",
+      "type": "BUILT_FROM",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "The co-author network is built from the papers published in these conferences.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_024"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:14",
+      "type": "EVALUATED_ON",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "We demonstrate the efficacy of node2vec over existing state-of-the-art techniques on multi-label classification and link prediction in several real-world networks from diverse domains.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_001",
+        "DOC_002_CH_006",
+        "DOC_002_CH_018"
+      ],
+      "support_count": 3,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:14",
+      "type": "OUTPERFORMS",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "Experiments demonstrate that node2vec outperforms state-of-the-art methods by up to 26.7% on multi-label classification and up to 12.6% on link prediction.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_005"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:126",
+      "type": "ENABLES",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "The node2vec algorithm provides a semi-supervised method to learn rich feature representations for nodes in a network.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_015"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:126",
+      "type": "PROPOSES",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "The objective in Eq. 2 is independent of any downstream task and the flexibility in exploration offered by node2vec lends the learned feature representations to a wide variety of network analysis settings discussed below.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_016"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:126",
+      "type": "PRODUCES",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "Our experiments evaluate the feature representations obtained through node2vec on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_017"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:534",
+      "type": "ACHIEVES",
+      "weight": 0.95,
+      "grounding_score": 0.9966533613204955,
+      "evidence_quote": "A general observation we can draw from the results is that the learned feature representations for node pairs significantly outperform the heuristic benchmark scores with node2vec achieving the best AUC improvement on 12.6% on the arXiv dataset over the best performing baseline (Adamic-Adar [1]).",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_027"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:126",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:14",
+      "type": "EVALUATED_ON",
+      "weight": 0.97,
+      "grounding_score": 0.926770658493042,
+      "evidence_quote": "Our experiments evaluate the feature representations obtained through node2vec on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_017"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:499",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:14",
+      "type": "GENERATES",
+      "weight": 0.95,
+      "grounding_score": 0.7793594551086426,
+      "evidence_quote": "We want our operators to be generally defined for any pair of nodes, even if an edge does not exist between the pair since doing so makes the representations useful for link prediction where our test set contains both true and false edges (i.e., do not exist).",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_016"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:534",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:14",
+      "type": "MEASURED_BY",
+      "weight": 0.88,
+      "grounding_score": 0.9953509521484375,
+      "evidence_quote": "Table 4: Area Under Curve (AUC) scores for link prediction.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_028"
+      ],
+      "support_count": 1,
+      "is_functional": true
+    }
+  ]
+}

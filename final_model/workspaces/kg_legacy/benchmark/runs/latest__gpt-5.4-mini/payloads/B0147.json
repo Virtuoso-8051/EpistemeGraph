@@ -1,0 +1,123 @@
+{
+    "user_query": "Compared with BFS and DFS in the neighborhood-sampling method described for node2vec, what kind of graph similarity does DeepWalk's reported performance suggest is especially useful under sparse supervision?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk\u2019s reported performance suggests that, under sparse supervision, **homophily-based similarity**\u2014that is, nodes being similar because they are close in the graph and tend to share labels or community membership\u2014is especially useful. In contrast, node2vec\u2019s BFS/DFS bias is meant to trade off between local homophily and more structural/role-based similarity, but DeepWalk\u2019s strong results indicate that simple random-walk neighborhoods capturing local proximity are often enough when labeled data are scarce.",
+    "llm_self_reported_accuracy": 0.92,
+    "llm_confidence_reasoning": "This is a well-established interpretation of DeepWalk versus node2vec: DeepWalk emphasizes local neighborhood homophily, and the question directly asks for that contrast under sparse supervision.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "NODE2VEC",
+        "BFS",
+        "DFS",
+        "homophily-based similarity",
+        "local proximity",
+        "random-walk neighborhood",
+        "sparse supervision",
+        "labeled data"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "NODE2VEC",
+        "BFS",
+        "DFS",
+        "homophily-based similarity",
+        "local proximity",
+        "random-walk neighborhood",
+        "sparse supervision",
+        "labeled data",
+        "reported performance",
+        "nodes being similar because they are close in the graph and tend to share labels or community membership",
+        "local homophily",
+        "structural/role-based similarity",
+        "simple random-walk neighborhoods capturing local proximity are often enough when labeled data are scarce"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "reported performance",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "homophily-based similarity",
+            "type": "SUGGESTS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "homophily-based similarity",
+            "target": "nodes being similar because they are close in the graph and tend to share labels or community membership",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "BFS",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "DFS",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "local homophily",
+            "type": "TRADE_OFFS_BETWEEN",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "structural/role-based similarity",
+            "type": "TRADE_OFFS_BETWEEN",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "simple random-walk neighborhoods capturing local proximity are often enough when labeled data are scarce",
+            "type": "INDICATES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Compared with BFS and DFS in the neighborhood-sampling method described for node2vec, what kind of graph similarity does DeepWalk's reported performance suggest is especially useful under sparse supervision?",
+        "llm_response": "DeepWalk\u2019s reported performance suggests that, under sparse supervision, **homophily-based similarity**\u2014that is, nodes being similar because they are close in the graph and tend to share labels or community membership\u2014is especially useful. In contrast, node2vec\u2019s BFS/DFS bias is meant to trade off between local homophily and more structural/role-based similarity, but DeepWalk\u2019s strong results indicate that simple random-walk neighborhoods capturing local proximity are often enough when labeled data are scarce.",
+        "llm_extraction_confidence": 0.92,
+        "llm_confidence_reasoning": "This is a well-established interpretation of DeepWalk versus node2vec: DeepWalk emphasizes local neighborhood homophily, and the question directly asks for that contrast under sparse supervision.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2040.9,
+            "prompt_tokens": 125,
+            "completion_tokens": 154
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2321.0,
+            "prompt_tokens": 751,
+            "completion_tokens": 323
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.21494316410373998,
+        "query_entities": [
+            "DEEPWALK",
+            "NODE2VEC",
+            "BFS",
+            "DFS",
+            "homophily-based similarity",
+            "local proximity",
+            "random-walk neighborhood",
+            "sparse supervision",
+            "labeled data"
+        ]
+    }
+}

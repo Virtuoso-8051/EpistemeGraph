@@ -1,0 +1,74 @@
+{
+  "answer": "The premise is mistaken. node2vec does not use negative sampling or asynchronous SGD to speed up the random-walk phase. Walk generation is a second-order biased random walk controlled by the return parameter p and in-out parameter q. Its per-step cost is reduced by precomputing alias tables, which give O(1) sampling of the next node for each (previous, current) edge pair. Negative sampling belongs to the later skip-gram embedding-learning phase, where it draws negative nodes (typically from a unigram distribution raised to the 3/4 power) to make the softmax objective tractable. Asynchronous SGD (Hogwild-style lock-free updates, as in word2vec) is at most a parallelization technique for that training step; it does not make sampling of walks faster.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am fairly confident that node2vec's walk speedup comes from alias sampling and that negative sampling and SGD apply to the embedding-training step, though implementation details of the original code could differ slightly.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "negative sampling",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "asynchronous stochastic gradient algorithm",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "2 nd order random walk approach",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node2vec parameter",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "alias table",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias table",
+      "target": "O(1) sampling of the next node",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "skip-gram embedding-learning phase",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "unigram distribution raised to the 3/4 power",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "tractable softmax objective",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous stochastic gradient algorithm",
+      "target": "parallelization technique",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous stochastic gradient algorithm",
+      "target": "faster walk sampling",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,56 @@
+{
+  "answer": "I can't identify the specific paper this refers to, so I can't give its exact conditions. In general, DeepWalk's advantage over baselines in node classification tends to shrink as the labeled fraction grows, because supervised or attribute-aware baselines gain more from additional labels. A reported stop-outperforming pattern above 20% labeled data would most likely depend on the dataset (for example, graphs with informative node attributes or strong label homophily) and on the metric, with Macro-F1 often showing the gap more clearly than Micro-F1 because it weights minority classes equally. Please check the source paper's results table for the exact thresholds.",
+  "confidence": 0.2,
+  "confidence_reasoning": "I could not identify the source paper, so the answer is a general inference about the trend rather than a verified finding, and the specific conditions and metric details are unconfirmed.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "baseline",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DeepWalk's advantage over baselines in node classification",
+      "target": "node classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised or attribute-aware baseline",
+      "target": "additional label",
+      "type": "BENEFIT_FROM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stop-outperforming pattern above 20% labeled data",
+      "target": "DATASET",
+      "type": "DEPENDS_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graphs with informative node attribute",
+      "target": "attribute-aware baseline",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Macro-F1 score",
+      "target": "Micro-F1 score",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Macro-F1 score",
+      "target": "minority classe",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Micro-F1 score",
+      "target": "source paper results table",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

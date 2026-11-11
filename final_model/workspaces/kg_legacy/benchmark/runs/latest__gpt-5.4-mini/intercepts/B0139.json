@@ -1,0 +1,80 @@
+{
+  "answer": "Both methods aim to exploit network sparsity, especially the fact that real-world graphs often have many more non-edges than edges. PASSAGE A\u2019s method uses this property by sampling only a small subset of the many possible negative/non-edge pairs during training, so it can scale to large sparse graphs without enumerating all absent links. LINE also exploits sparsity, but differently: it preserves local and global network structure by learning embeddings from observed edges and carefully designed negative sampling, rather than relying on a sparse matrix factorization-style objective over all node pairs. In short, both use sparsity to make learning tractable, but PASSAGE A uses it mainly to reduce the number of negative examples considered, while LINE uses it to efficiently train embeddings that capture first- and second-order proximity.",
+  "confidence": 0.62,
+  "confidence_reasoning": "I\u2019m moderately confident because the shared property and the broad distinction between negative sampling and embedding-based proximity preservation are standard, but I do not have the exact text of PASSAGE A and B to verify the wording precisely.",
+  "triples": [
+    {
+      "source": "network sparsity",
+      "target": "real-world graph",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PASSAGE A\u2019s method",
+      "target": "network sparsity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PASSAGE A\u2019s method",
+      "target": "negative/non-edge pair",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PASSAGE A\u2019s method",
+      "target": "large sparse graph",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "network sparsity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "local network structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "global network structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "observed edge",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "sparse matrix factorization-style objective",
+      "type": "DOES_NOT_USE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.31528454991013793
+}

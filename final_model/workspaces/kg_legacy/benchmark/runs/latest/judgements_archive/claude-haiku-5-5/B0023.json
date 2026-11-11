@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk treats truncated random walks as sentences and applies the Skip-gram language model (word2vec-style) to maximize neighborhood context likelihood (the evidence mentions neural language models and walks but not explicitly Skip-gram or the objective details)",
+    "The resulting representations capture community and neighborhood similarity (evidence mentions linearly separable portions corresponding to modularity clusters, which loosely supports this but not the phrasing as stated)",
+    "The specific classifier 'one-vs-rest logistic regression' is named, while the evidence only says simple linear classifiers such as logistic regression"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer correctly identifies label-independence as the reason representations can be shared and that simple linear classifiers like logistic regression achieve strong performance, which matches the gold answer. However, it adds details about Skip-gram and the one-vs-rest scheme that are not explicitly stated in the provided evidence, though they are plausible background about DeepWalk.",
+  "judge_model": "claude-haiku-5-5"
+}

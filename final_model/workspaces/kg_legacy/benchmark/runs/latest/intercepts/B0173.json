@@ -1,0 +1,50 @@
+{
+  "answer": "I could not identify the specific paper with confidence. The most likely candidate is Bahmani, Chowdhury and Goel's work on fast incremental PageRank using stored random walks, which reported update speedups over full recomputation of roughly one to two orders of magnitude on large real-world graphs such as Twitter-scale social networks. Treat the exact factor and benchmark details as unverified; please provide the paper title or the method's name for a precise answer.",
+  "confidence": 0.15,
+  "confidence_reasoning": "The question does not name the method or paper, so I am inferring a candidate and cannot verify the specific speedup figure or benchmark conditions.",
+  "triples": [
+    {
+      "source": "Bahmani, Chowdhury and Goel's work",
+      "target": "incremental PageRank using stored random walk",
+      "type": "PROPOSES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walk",
+      "target": "PAGERANK",
+      "type": "APPLIES_TO",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walk",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walk",
+      "target": "full recomputation",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walk",
+      "target": "update speedup of roughly one to two orders of magnitude over full recomputation",
+      "type": "ACHIEVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walk",
+      "target": "large real-world graphs such as Twitter-scale social network",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Twitter-scale social network",
+      "target": "social network",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,56 @@
+{
+  "answer": "LINE is reported to rely on second-order proximity to outperform graph factorization when the graph is sparse and the task benefits from preserving neighborhood similarity rather than only direct edge weights. In that setting, modeling second-order proximity lets LINE capture shared-context information between nodes, which is often more effective than graph factorization\u2019s direct first-order proximity modeling on sparse networks.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is consistent with the LINE paper\u2019s general claim about sparse graphs and second-order proximity, but the exact wording of the condition is somewhat interpretive rather than a verbatim statement.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "graph factorization",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "GRAPH",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GRAPH",
+      "target": "sparse network",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "TASK",
+      "target": "neighborhood similarity",
+      "type": "BENEFITS_FROM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "TASK",
+      "target": "direct edge weight",
+      "type": "NOT_ONLY",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "shared-context information",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "shared-context information",
+      "target": "more effective than graph factorization\u2019s direct first-order proximity modeling on sparse network",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2472495396931966
+}

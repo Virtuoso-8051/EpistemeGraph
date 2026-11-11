@@ -1,0 +1,74 @@
+{
+  "answer": "This comes from the distributional context window used to define proximity in embedding models such as word2vec/skip-gram, as analyzed by Levy and Goldberg (2014) and in work on first- vs. second-order similarity. First-order proximity is the direct co-occurrence relation: two words are close when they appear together within the same local window, so their nearest neighbors are dominated by words that co-occur with them in the same sentence fragments. Because those co-occurring items are typically topically or semantically linked (for example, 'dog' with 'bark' or 'leash'), first-order neighbors tend to be semantically related. Second-order proximity instead compares the context vectors of two words: two words are close when they share similar neighbors, even if they never appear together. Words that fill the same syntactic roles (such as 'Monday' and 'Tuesday', or 'run' and 'walk', or different verbs in the same slot) share contexts of the same grammatical type, so their second-order neighborhoods mix syntactically substitutable words with semantically related ones. In short, the difference lies in whether similarity is driven by direct co-occurrence (semantic/topical) or by shared context distributions (which capture both syntactic substitutability and semantics).",
+  "confidence": 0.5,
+  "confidence_reasoning": "The answer gives a plausible distributional-semantics explanation, but I am reconstructing the intended framing of the question from general knowledge rather than a specific source, so the precise claims may not match the intended reference.",
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "target": "direct co-occurrence relation",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "two words are close when they appear together within the same local window",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "SEMANTIC",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "two words are close when they share similar neighbors even if they never appear together",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "syntactic",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "SEMANTIC",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "WORD2VEC",
+      "target": "distributional context window",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "distributional context window",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "semantically related nearest neighbor",
+      "type": "GENERATES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "neighborhoods mixing syntactically substitutable and semantically related word",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Levy and Goldberg",
+      "target": "analysis of word2vec skip-gram as distributional context window",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

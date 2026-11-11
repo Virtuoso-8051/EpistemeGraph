@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The advantage was most pronounced when only roughly 1% to 10% of nodes were labeled on BlogCatalog, and similarly on Flickr and YouTube (specific percentages not in the evidence)",
+    "Baselines named as spectral clustering, edge-cluster, modularity-based and wvRN, with the gap narrowing as labeled data grows (not stated in the provided evidence)",
+    "The claim that DeepWalk outperforms baselines on sparse social-network graphs in a scalability context is only loosely supported; the evidence says it is scalable and outperforms EdgeCluster",
+    "The answer omits the missing-information condition and the 60% less training data result, and does not give the 10% F1 figure"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that DeepWalk's gains are largest when labeled data is sparse is supported by the abstract's statement of up to 10% higher F1 under sparse labels. However, the answer adds specific label percentages (1% to 10%), a narrowing-gap trend, and baseline lists that the provided evidence does not contain, and it omits the missing-information condition.",
+  "judge_model": "claude-haiku-5-5"
+}

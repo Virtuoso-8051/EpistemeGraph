@@ -1,0 +1,44 @@
+{
+  "answer": "I can't give exact figures with confidence. As far as I recall, the node2vec paper (Grover & Leskovec, 2016) reports link prediction AUC and F1 on Facebook, PPI, and arXiv for Spectral Clustering, DeepWalk, LINE, and node2vec under different binary edge-feature operators, but I don't recall it reporting Common Neighbors, Jaccard's Coefficient, Adamic-Adar, or Preferential Attachment baselines. Those heuristic numbers may come from a different paper. I'd recommend checking the paper's Table 3 (and its supplementary material) directly rather than relying on my memory for the values.",
+  "confidence": 0.2,
+  "confidence_reasoning": "I am fairly unsure whether the node2vec paper includes these heuristic baselines at all, and I cannot reliably recall any exact PPI values, so most specifics here are uncertain.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "Link Prediction",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "PPI",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Spectral Clustering",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Common Neighbor",
+      "type": "EVALUATED_ON",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Common Neighbor",
+      "target": "Jaccard's Coefficient",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

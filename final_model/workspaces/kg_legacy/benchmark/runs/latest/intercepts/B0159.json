@@ -1,0 +1,74 @@
+{
+  "answer": "Node2vec is a static, batch method. It learns embeddings for a fixed graph by running biased random walks (controlled by the return parameter p and in-out parameter q) and then training a skip-gram model with negative sampling. It does not describe how to handle a network that changes over time. Incorporating new nodes or edges means rerunning the walks and retraining on the whole graph. The streaming variant treats the network as a sequence of arriving edges or nodes and updates the existing embeddings incrementally, without full retraining, so new nodes can be embedded and the embeddings kept current as the graph grows. The capability it adds that node2vec does not explicitly mention is this online or incremental updating of embeddings for a growing (streaming) graph, which allows new nodes and edges to be embedded on arrival at much lower cost. I am not certain which specific streaming node2vec paper is meant, so these details are general to that class of method.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The general contrast between static batch node2vec and incremental streaming variants is well-founded, but I could not identify the specific streaming paper, so its exact mechanisms and claimed additions are uncertain.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "static batch method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "return parameter p and in-out parameter q",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram model with negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "rerunning the walks and retraining on the whole graph",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "handling of time-changing network",
+      "type": "DOES_NOT_DESCRIBE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "sequence of arriving edges or node",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "incremental embedding updates without full retraining",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "embedding of new nodes on arrival",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "online or incremental updating of embeddings for a growing graph",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "lower embedding cost for new nodes and edge",
+      "type": "ACHIEVES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

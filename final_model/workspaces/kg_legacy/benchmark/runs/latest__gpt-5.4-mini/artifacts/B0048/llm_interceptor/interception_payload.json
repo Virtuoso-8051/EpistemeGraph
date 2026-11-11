@@ -1,0 +1,81 @@
+{
+    "user_query": "What happens to node2vec\u2019s performance when noisy edges are added between randomly selected pairs of nodes, and in what kind of application is this robustness useful?",
+    "mode": "closed_book",
+    "llm_response": "When noisy edges are added between randomly selected node pairs, node2vec\u2019s performance typically degrades only slightly, showing strong robustness to this kind of graph noise. This robustness is useful in applications where the graph structure is imperfect or noisy, such as social networks, recommendation systems, or other real-world network analysis tasks where spurious connections may appear.",
+    "llm_self_reported_accuracy": 0.84,
+    "llm_confidence_reasoning": "This is a well-known qualitative result about node2vec\u2019s robustness to random edge noise, but the exact wording and application examples can vary by source.",
+    "extracted_query_entities": [
+        "NODE2VEC"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "graph noise robustness",
+        "performance",
+        "social network",
+        "recommendation system",
+        "real-world network analysis task"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "graph noise robustness",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "performance",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph noise robustness",
+            "target": "social network",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph noise robustness",
+            "target": "recommendation system",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph noise robustness",
+            "target": "real-world network analysis task",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What happens to node2vec\u2019s performance when noisy edges are added between randomly selected pairs of nodes, and in what kind of application is this robustness useful?",
+        "llm_response": "When noisy edges are added between randomly selected node pairs, node2vec\u2019s performance typically degrades only slightly, showing strong robustness to this kind of graph noise. This robustness is useful in applications where the graph structure is imperfect or noisy, such as social networks, recommendation systems, or other real-world network analysis tasks where spurious connections may appear.",
+        "llm_extraction_confidence": 0.84,
+        "llm_confidence_reasoning": "This is a well-known qualitative result about node2vec\u2019s robustness to random edge noise, but the exact wording and application examples can vary by source.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "extract_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "asserted_claim_count": 5,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.156174414980728,
+        "query_entities": [
+            "NODE2VEC"
+        ]
+    }
+}

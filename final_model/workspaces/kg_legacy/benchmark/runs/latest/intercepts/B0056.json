@@ -1,0 +1,62 @@
+{
+  "answer": "The LINE (Large-scale Information Network Embedding) model aims to preserve both the first-order proximity and the second-order proximity of the network in the low-dimensional space R^d. First-order proximity is the local pairwise similarity between vertices linked by an observed edge (the joint probability of two directly connected nodes should be high), while second-order proximity captures the similarity of the neighborhood structures of vertices, i.e., two nodes sharing many neighbors should have similar embeddings (their context/neighbor distributions should be close). By jointly preserving both, LINE embeds local and global network structure. The overall problem is defined as follows: given a network G = (V, E), where V is the set of vertices and E the set of weighted edges (directed or undirected), learn a mapping f: V -> R^d with d much smaller than |V| (d << |V|) that represents each vertex as a low-dimensional vector such that the network structure (first- and second-order proximities) is preserved in the embedding space, so that the vectors can be used for downstream tasks such as vertex classification, link prediction, and visualization, and the method scales to very large networks with millions of vertices and billions of edges.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core LINE concepts (first- and second-order proximity, embedding mapping into R^d with d << |V|) are well established from the original paper, but exact wording of the formal definition in the source may differ in details.",
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding (1ST",
+      "target": "first-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST",
+      "target": "second-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "local pairwise similarity between vertices linked by an observed edge",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "similarity of neighborhood structures of vertice",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST",
+      "target": "local and global network structure",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding problem",
+      "target": "learning a mapping f: V -> R^d with d much smaller than |V| that preserves network structure",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network structure",
+      "target": "first-order and second-order proximitie",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "vertex classification, link prediction, and visualization",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "very large networks with millions of vertices and billions of edge",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

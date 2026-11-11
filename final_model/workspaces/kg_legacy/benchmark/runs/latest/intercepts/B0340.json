@@ -1,0 +1,68 @@
+{
+  "answer": "It doesn't. In node2vec, the binary operators (Average, Hadamard, Weighted-L1, Weighted-L2) combine the learned embeddings f(u) and f(v) element-wise to form the pair feature g(u,v). This is a pure function of the two vectors, so it can be computed for any pair of nodes, whether or not an edge exists between them. Edges matter only indirectly: the embeddings are learned from random walks over the graph, which encode neighborhood structure, and during link-prediction training, edges serve as positive labels while sampled non-edges serve as negatives. At inference, g(u,v) is computed for candidate pairs, including non-edges, to predict whether a link exists.",
+  "confidence": 0.8,
+  "confidence_reasoning": "The core fact that the operators are defined for any node pair and are applied to non-edges at prediction time follows directly from the node2vec paper's link-prediction setup, though I am recalling the details from memory.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "binary operator",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary operator",
+      "target": "pair feature g",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pair feature g",
+      "target": "element-wise combination of embeddings f(u) and f",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pair feature g",
+      "target": "pure function of the two vector",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pair feature g",
+      "target": "any pair of nodes regardless of edge existence",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation",
+      "target": "random walk based embedding learned over graph",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EDGE",
+      "target": "positive labels in link-prediction training",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampled non-edge",
+      "target": "negative labels in link-prediction training",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "pair feature g(u,v) computed for candidate pairs including non-edge",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "prediction of whether a link exists between candidate pair",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

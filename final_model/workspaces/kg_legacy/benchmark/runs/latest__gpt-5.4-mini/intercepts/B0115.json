@@ -1,0 +1,38 @@
+{
+  "answer": "In addition to missing edges, the perturbation study examines missing nodes (i.e., removing nodes and their incident edges). This second scenario represents node uncertainty, specifically uncertainty about the presence or absence of vertices in the network rather than just links.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This matches the standard two perturbation settings used in node2vec robustness studies on BlogCatalog: edge deletion and node deletion, with the latter modeling uncertainty in the vertex set.",
+  "triples": [
+    {
+      "source": "perturbation study of node2vec on the BlogCatalog network",
+      "target": "missing edge",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "perturbation study of node2vec on the BlogCatalog network",
+      "target": "missing node",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing node",
+      "target": "removing nodes and their incident edge",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing node",
+      "target": "node uncertainty",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node uncertainty",
+      "target": "uncertainty about the presence or absence of vertices in the network rather than just link",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.21437517146474308
+}

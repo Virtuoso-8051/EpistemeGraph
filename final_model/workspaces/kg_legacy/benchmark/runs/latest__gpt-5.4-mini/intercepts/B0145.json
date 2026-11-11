@@ -1,0 +1,62 @@
+{
+  "answer": "Passage A says the embedding model is designed to scale to very large graphs by learning node embeddings efficiently, so it can handle networks with millions of nodes without needing expensive full-graph computations. Passage B says DeepWalk needs a streaming-style training adjustment when the full graph is not available upfront: it must be trained incrementally as new nodes/edges arrive, rather than assuming the entire graph is present at the start.",
+  "confidence": 0.62,
+  "confidence_reasoning": "I am moderately confident because the answer reflects the standard distinction between scalable embedding methods and DeepWalk\u2019s need for incremental/streaming adaptation, but I do not have the exact passages to verify the wording.",
+  "triples": [
+    {
+      "source": "embedding model",
+      "target": "large graph",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding model",
+      "target": "node embedding",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding model",
+      "target": "efficient learning",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding model",
+      "target": "networks with millions of node",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding model",
+      "target": "expensive full-graph computation",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "streaming-style training adjustment",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "incremental training",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "incremental training",
+      "target": "new nodes and edge",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "entire graph present at the start",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": 0.20953149169030852
+}

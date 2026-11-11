@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI answer claims LINE(1st) alone performs worse than LINE(2nd) alone on Wikipedia classification; the evidence says LINE(2nd) outperforms LINE(1st) and the other text notes LINE(1st) is slightly better than LINE(2nd) in one comparison, which conflicts with the stated 'performs worse than LINE(2nd)' claim for this task."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly identifies LINE(1st+2nd) as the best method from concatenation. However, its claim that LINE(1st) alone performs worse than LINE(2nd) alone conflicts with the evidence, which includes a sentence saying LINE(1st) is slightly better than LINE(2nd) in a related comparison, so that specific claim is not reliably supported.",
+  "judge_model": "claude-haiku-5-5"
+}

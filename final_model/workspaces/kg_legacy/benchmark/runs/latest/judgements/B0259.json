@@ -1,0 +1,11 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "The most likely comparison is node2vec's performance drop versus LINE's smaller drop as the fraction of additional edges grows; the evidence contains no node2vec-LINE comparison in the perturbation analysis.",
+    "LINE is more robust than node2vec to additional edges (implied by the answer going along with the premise)."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise, speculating that node2vec's drop is compared with LINE's smaller drop. The evidence shows only a node2vec-only perturbation analysis on BlogCatalog with no LINE comparison. The hedge about being unverified does not correct the premise.",
+  "judge_model": "claude-sonnet-5-5"
+}

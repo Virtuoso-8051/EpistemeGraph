@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The first-order proximity objective models symmetric (undirected) ties, and the second-order variant with separate vertex and context embeddings is what captures edge direction. The evidence does not describe this distinction.",
+    "LINE's optimization is an edge-sampling method. The evidence does not mention edge sampling."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, since the evidence states LINE handles undirected, directed, and/or weighted networks, and it correctly attributes the unweighted-only restriction to DeepWalk. However, its explanation of how first-order and second-order proximity handle direction, and its claim about edge-sampling optimization, go beyond what the provided evidence states.",
+  "judge_model": "claude-haiku-5-5"
+}

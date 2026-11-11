@@ -1,0 +1,74 @@
+{
+  "answer": "The O(dK|E|) complexity is an analytical result, not one tied to a specific dataset. Here d is the embedding dimension, K the number of negative samples per edge, and |E| the number of edges. It follows from asynchronous SGD with edge sampling and negative sampling, where each update costs O(dK). The paper reports its empirical scalability on large networks (e.g., Tencent Weibo and other datasets), with runtime decreasing roughly linearly as the number of threads grows. I cannot reliably recall exact runtime figures for specific datasets, so I am not giving specific numbers.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The complexity expression and the general scalability claims are consistent with my knowledge of the LINE paper (Tang et al., 2015), but I am unsure of the exact dataset-specific runtime numbers and cannot verify them.",
+  "triples": [
+    {
+      "source": "time complexity",
+      "target": "DK|E|",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DK|E|",
+      "target": "analytical result",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DK|E|",
+      "target": "embedding dimension d, negative samples K per edge, and number of edges |E|",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous SGD",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous SGD",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each update",
+      "target": "DK",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DK|E|",
+      "target": "time complexity of LINE",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "Tencent Weibo",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "large network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "RUNTIME",
+      "target": "number of thread",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "exact runtime figures for specific dataset",
+      "target": "reliable recall",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

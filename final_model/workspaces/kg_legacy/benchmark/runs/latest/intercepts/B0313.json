@@ -1,0 +1,80 @@
+{
+  "answer": "The premise is mistaken. LINE (Tang et al., 2015) does not use random walks, so it does not explore the citation network by walking from node to node. LINE(2nd) is the second-order proximity variant. It learns a vertex embedding and a separate context embedding for each node, and it trains them so that nodes sharing many neighbours get similar representations. It optimises an objective over the observed edges, using edge sampling (with alias tables for efficiency when edges are weighted) and negative sampling. Each training step draws directly from the graph's edges, so the neighbourhood information is used without generating walk sequences. DeepWalk, by contrast, generates truncated random walks and feeds them to a skip-gram model, so it captures multi-hop co-occurrence through sampled paths. The usual argument for LINE's advantages is that it models first-order (direct) and second-order (shared-neighbour) proximity explicitly and scales to large, weighted graphs. Whether it beats DeepWalk depends on the dataset and task, and I cannot confirm the specific citation-network comparison the question implies.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am confident that LINE uses edge sampling rather than random walks and that DeepWalk uses walks, but I am less certain about the exact experimental results on citation networks.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity variant",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "likelihood of preserving network neighborhoods of node",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge-sampling algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "shared-neighbour proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "multi-hop co-occurrence capture",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "large-scale weighted graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

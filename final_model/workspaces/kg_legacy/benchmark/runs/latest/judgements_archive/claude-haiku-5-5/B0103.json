@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Skip-gram-style language model trained with hierarchical softmax or negative sampling (evidence mentions hierarchical sampling only; negative sampling not stated)",
+    "Output is typically a matrix with one row per node (not stated in evidence, though a reasonable reading of a per-node latent representation)",
+    "Embeddings used for link prediction and visualization (evidence mentions classification and 2-dimensional visualization of Karate network, link prediction not mentioned)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "SUPPORTED",
+  "rationale": "The core answer matches the evidence: DeepWalk applies neural language models to a language of randomly generated walks (treating walks as sentences) and outputs a latent representation for a graph input. The extra details about Skip-gram, negative sampling, matrix form, and link prediction go beyond the provided excerpts, but they are peripheral and the central claims are fully supported.",
+  "judge_model": "claude-haiku-5-5"
+}

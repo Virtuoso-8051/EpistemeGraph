@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "In the streaming setting DeepWalk accumulates every edge into one static graph before running its pipeline",
+    "DeepWalk is typically retrained from scratch on each new snapshot rather than updated online in streaming",
+    "The premise that it builds the full graph before training is a reasonable description of DeepWalk's streaming behaviour"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The source says the streaming variant works without knowledge of the entire graph, passing small walks directly to the learner and updating the model online. The answer accepts the false premise and asserts the opposite, with invented details about accumulation and retraining.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,50 @@
+{
+  "answer": "LINE defines the first-order joint probability between vertices v_i and v_j as a sigmoid of the inner product of their low-dimensional embeddings: p1(v_i, v_j) = 1 / (1 + exp(-u_i^T u_j)), where u_i and u_j are the embedding vectors. This is a distribution over vertex pairs, and it is symmetric because the inner product is symmetric. The empirical probability is the normalized edge weight: p\u03021(i, j) = w_ij / W, where w_ij is the weight of the edge between i and j and W is the sum of all edge weights (each undirected edge counted in both directions). LINE then minimizes the KL divergence between p\u03021 and p1 to learn the embeddings.",
+  "confidence": 0.8,
+  "confidence_reasoning": "The sigmoid-of-inner-product form and the w_ij / W normalization match my recollection of Tang et al. (2015), but I am not certain of the exact normalization constant convention for undirected edges.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "first-order joint probability",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order joint probability",
+      "target": "sigmoid of the inner product of low-dimensional embedding",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order joint probability",
+      "target": "distribution over vertex pair",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order joint probability",
+      "target": "SYMMETRY",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "empirical distribution",
+      "target": "normalized edge weight w_ij / W",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "W",
+      "target": "sum of all edge weight",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "KL divergence between empirical distribution and first-order joint probability",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

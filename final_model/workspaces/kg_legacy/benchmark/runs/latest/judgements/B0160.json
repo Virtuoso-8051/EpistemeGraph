@@ -1,0 +1,13 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The answer does not mention that DeepWalk is used in the passage as a feature method for multi-label classification on BlogCatalog with one-vs-rest logistic regression.",
+    "The answer does not mention that LINE(1st+2nd) is applied only to supervised tasks, as the passage states.",
+    "Claim that LINE explicitly handles directed graphs is only partly supported: LINE(1st) applies only to undirected graphs, while LINE(2nd) applies to both.",
+    "DeepWalk being designed for 'typically undirected homogeneous social networks' is not stated in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer's core claims are supported: DeepWalk applies only to unweighted networks, LINE handles weighted and unweighted edges, and LINE's second-order variant handles directed graphs. However, it misses the passage-specific points (supervised-only LINE(1st+2nd), DeepWalk's use in BlogCatalog classification) and adds background not in the evidence, such as the 'typically undirected homogeneous' framing and the claim that LINE handles directed graphs without qualification.",
+  "judge_model": "claude-sonnet-5-5"
+}

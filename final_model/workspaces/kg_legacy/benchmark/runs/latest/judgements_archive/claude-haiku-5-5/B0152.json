@@ -1,0 +1,13 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The papers were not provided (the evidence contains both source texts)",
+    "SkipGram's neighborhood is a 'first-order' sampling of the graph (not stated in the evidence)",
+    "Node2vec's p and q interpolate between BFS-like neighborhoods capturing structural equivalence and DFS-like neighborhoods capturing homophily (not in the evidence excerpts)",
+    "Negative sampling is used to approximate the softmax (only hierarchical softmax is mentioned for paper3)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast is supported: SkipGram learns from co-occurrences in random walks within a window, node2vec uses flexible second-order walks, and both use SGD. However, the answer falsely states the papers were not provided, and it adds details like first-order sampling, the BFS/DFS mapping, and negative sampling that the evidence does not contain.",
+  "judge_model": "claude-haiku-5-5"
+}

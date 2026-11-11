@@ -1,0 +1,50 @@
+{
+  "answer": "I could not verify a specific source in which LINE is run on an unweighted author citation network instead of a weighted one, so I cannot state the exact conditions or reported results with confidence. In general, LINE (Tang et al., 2015) supports both weighted and unweighted graphs. Its edge-sampling procedure samples edges in proportion to their weights, so an unweighted version treats every link equally. The natural conditions for using the unweighted variant are that edge weights are unavailable, that the weights are not meaningful (for example, a binary citation either exists or does not), or that the study is comparing against a baseline that uses binary links. The likely effect is that the unweighted network discards information about citation intensity, which can reduce embedding quality on tasks where stronger ties matter, though the difference is often small and can vary by dataset and task. If you can name the specific paper, I can give a more precise answer.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The general description of LINE's weighted and unweighted handling is reasonably reliable, but I could not identify the specific source or its reported results, so the claims about when and how the choice affects outcomes are uncertain.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "edge-sampling treatment",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "weighted graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "unweighted graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling treatment",
+      "target": "WEIGHT",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unweighted graph",
+      "target": "unweighted edge",
+      "type": "TREATS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unweighted network",
+      "target": "WEIGHTS",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unweighted network",
+      "target": "embedding very large information networks into low-dimensional vector space",
+      "type": "IMPROVES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

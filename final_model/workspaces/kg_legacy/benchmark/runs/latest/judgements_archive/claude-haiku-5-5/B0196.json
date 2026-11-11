@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The answer gives d = 128 as the value used in DeepWalk's reported experiments, though the evidence only says 'for other networks, the dimension is set as 128 by default' and cites [16] for it, and the question is designed to be unanswerable as to the actual dimensionality chosen."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence does state that for non-language networks the dimension is set to 128 by default, so the answer's number is grounded in the text. However, the question is flagged as not answerable, and the answer presents 128 as the dimension used in DeepWalk's experiments rather than saying the papers do not clearly report the specific d used, which overreaches the source.",
+  "judge_model": "claude-haiku-5-5"
+}

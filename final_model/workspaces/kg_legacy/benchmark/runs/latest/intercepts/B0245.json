@@ -1,0 +1,56 @@
+{
+  "answer": "The premise is mistaken. DeepWalk's decaying learning rate does not make a streaming variant faster to train. DeepWalk trains skip-gram with SGD, using a learning rate that decreases (typically linearly) over training, inherited from word2vec. That schedule helps the embeddings converge and reduces noise from late updates, so it affects training stability and quality, not throughput. Any speed advantage of a streaming variant comes from other design choices, such as generating random walks on the fly and processing nodes or edges in a single pass without storing the full walk corpus or graph in memory, and from avoiding repeated passes over the data. I am not aware of a published result that attributes streaming speed to the learning-rate decay.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident DeepWalk uses a linearly decaying learning rate for convergence rather than speed, but I am less certain about the specific details of any particular streaming DeepWalk variant.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "classical stochastic gradient descent",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "learning rate",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learning rate",
+      "target": "WORD2VEC",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learning rate",
+      "target": "embedding convergence",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learning rate",
+      "target": "faster training of the streaming variant",
+      "type": "ENABLES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "full walk corpus and graph are not stored in memory",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

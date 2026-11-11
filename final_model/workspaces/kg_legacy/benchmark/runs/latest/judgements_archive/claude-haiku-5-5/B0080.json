@@ -1,0 +1,12 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "Graph factorization is designed mainly for sparse, large graphs where only edge existence matters (the evidence says only that it handles large networks, not that edge weights are ignored)",
+    "LINE's first-order loss is described as a loss on the joint distribution of connected pairs, and its second-order loss as using context vectors and conditional neighbor distributions (not in the evidence excerpt)",
+    "LINE optimizes the two objectives separately using edge sampling with negative sampling and concatenates the embeddings (not in the evidence excerpt)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast is supported: graph factorization is matrix factorization that intuitively preserves first-order proximity without a network-specific objective, while LINE preserves both first- and second-order proximity. The answer adds implementation details about LINE's loss formulation, edge sampling, and embedding concatenation, plus a claim about graph factorization's suitability, none of which appear in the provided evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

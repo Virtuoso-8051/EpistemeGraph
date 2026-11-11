@@ -1,0 +1,10 @@
+{
+  "claims_checked": 1,
+  "unsupported_claims": [
+    "LINE used an embedding dimension of 128 in its experiments on large-scale networks"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is labeled unanswerable from the passage, so a faithful answer should say the papers don't report it. The evidence does include a sentence saying 'For other networks, the dimension is set as 128 by default,' which gives the answer some plausibility. However, the reference says the passage does not report the dimensionality, and the bare answer '128' gives no hedging and ignores that distinction, so it is unsupported.",
+  "judge_model": "claude-sonnet-5-5"
+}

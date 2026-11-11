@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "BlogCatalog is described as a 'follower network'; the evidence only calls it a network of social relationships of bloggers.",
+    "LINE uses negative sampling and a context-vector objective; the evidence excerpts do not state this explicitly, though it is true of the LINE paper and the answer relies on it.",
+    "LINE learns from structure alone without requiring node attributes or labels; this is not explicitly stated in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim, that LINE suits arbitrary information networks (undirected, directed, weighted) and so applies to all three datasets, is supported. Some details, such as the 'follower network' label, negative sampling, and the 'purely topology-driven' framing, go beyond the provided evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,68 @@
+{
+  "answer": "The LINE paper (Tang et al., 2015, \"LINE: Large-scale Information Network Embedding\") says the method scales to very large networks, with millions of vertices and billions of edges. Its claim rests on the model's cost: the time per update depends on the number of sampled edges, not on the full network size, so total running time is roughly linear in the number of edges and the cost per step is constant. The implementation choices that support this are: (1) edge sampling, where edges are sampled in proportion to their weights and treated as binary, which avoids the high variance and gradient-scaling problems of plain SGD on weighted edges; (2) alias-table sampling, which draws edges and negative vertices in constant time; (3) negative sampling, which replaces the costly full softmax with a few noise samples per edge, so each update touches only a handful of vectors; and (4) asynchronous, lock-free stochastic gradient descent across multiple threads, which allows parallel training on a single machine without a global synchronization bottleneck.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly sure of the paper's general scalability argument and the edge sampling, alias table, negative sampling, and asynchronous SGD choices, but I am recalling the exact wording and emphasis from memory and may be slightly off on details.",
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "very large network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "training time complexity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training time complexity",
+      "target": "linear in number of edge",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "edge-sampling algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm",
+      "target": "classical stochastic gradient descent",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias-table sampling",
+      "target": "constant-time edge and negative vertex sampling",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "full softmax",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "few noise samples per edge",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "asynchronous stochastic gradient algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous stochastic gradient algorithm",
+      "target": "parallel training on a single machine",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

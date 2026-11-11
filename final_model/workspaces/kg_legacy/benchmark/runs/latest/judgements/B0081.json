@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Spectral clustering is considered limiting because results depend heavily on the chosen similarity measure and parameters (kernel width, number of nearest neighbours) - not stated in the source",
+    "It requires the number of clusters k to be specified in advance and performs poorly with unbalanced or differing-density clusters - not in the source",
+    "The answer never identifies the strong homophily assumption (graph cuts useful for classification) or the limitation that it does not generalize across diverse networks"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The source says spectral clustering makes a strong homophily assumption that graph cuts are useful for classification, which fails to generalize across diverse networks. The answer instead describes a generic cluster-density assumption and limitations such as kernel choice and specifying k, none of which appear in the evidence, and it misses the core point.",
+  "judge_model": "claude-sonnet-5-5"
+}

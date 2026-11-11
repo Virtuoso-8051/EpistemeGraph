@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "LINE(1st) and LINE(2nd) are reported to be efficient when they are trained with negative sampling and optimized using asynchronous stochastic gradient descent on large sparse graphs.",
+    "Under these conditions, they scale linearly with the number of edges.",
+    "In the original LINE paper, they are reported to be roughly an order of magnitude faster than graph factorization and several times faster than DeepWalk."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence supports that LINE(1st) and LINE(2nd) are quite efficient on a single machine with 1T memory, 40 CPU cores at 2.0GHz using 16 threads, processing a 2-million-node, billion-edge network in under 3 hours, and that they are at least 10% faster than graph factorization and five times faster than DeepWalk. However, the answer adds unsupported details about negative sampling, asynchronous SGD, large sparse graphs, linear scaling, and an exaggerated speedup over graph factorization.",
+  "judge_model": "gpt-5.4-mini"
+}

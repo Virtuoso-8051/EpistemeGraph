@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The AI answer states that the paper says modeling observable graphs hurts language modeling performance, which accepts the false premise; the evidence says the relationship is mutually beneficial.",
+    "The AI answer asserts the likely finding is that modeling latent structure performs better than observable graphs for language modeling, which the evidence does not report."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise that observable-graph modeling hurts language modeling, when the passage describes the connection as mutually beneficial. Its core claim about a performance comparison is an inference not found in the evidence, though it does hedge by saying it could not verify the paper.",
+  "judge_model": "claude-haiku-5-5"
+}

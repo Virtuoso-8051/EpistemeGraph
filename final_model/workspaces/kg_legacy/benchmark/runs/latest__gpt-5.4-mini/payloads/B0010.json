@@ -1,0 +1,87 @@
+{
+    "user_query": "How does LINE(1st) compare with LINE(2nd) on the Flickr network when the network is very sparse, and what happens as more links are added?",
+    "mode": "closed_book",
+    "llm_response": "On the Flickr network, LINE(1st) tends to perform better than LINE(2nd) when the graph is very sparse, because first-order proximity is easier to preserve from limited link information. As more links are added and the network becomes denser, LINE(2nd) catches up and can become comparable to or better than LINE(1st), since second-order proximity benefits more from richer neighborhood structure.",
+    "llm_self_reported_accuracy": 0.84,
+    "llm_confidence_reasoning": "This matches the typical reported trend for LINE on sparse versus denser graphs, but the exact crossover point and relative margin can vary by experimental setup.",
+    "extracted_query_entities": [
+        "LINE",
+        "Flickr network",
+        "first-order proximity",
+        "second-order proximity",
+        "GRAPH",
+        "NETWORK",
+        "LINKS",
+        "neighborhood structure"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "Flickr network",
+        "first-order proximity",
+        "second-order proximity",
+        "GRAPH",
+        "NETWORK",
+        "LINKS",
+        "neighborhood structure",
+        "limited link information",
+        "richer neighborhood structure"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "Flickr network",
+            "type": "WORKS_WELL_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "limited link information",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "richer neighborhood structure",
+            "type": "BENEFITS_FROM",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does LINE(1st) compare with LINE(2nd) on the Flickr network when the network is very sparse, and what happens as more links are added?",
+        "llm_response": "On the Flickr network, LINE(1st) tends to perform better than LINE(2nd) when the graph is very sparse, because first-order proximity is easier to preserve from limited link information. As more links are added and the network becomes denser, LINE(2nd) catches up and can become comparable to or better than LINE(1st), since second-order proximity benefits more from richer neighborhood structure.",
+        "llm_extraction_confidence": 0.84,
+        "llm_confidence_reasoning": "This matches the typical reported trend for LINE on sparse versus denser graphs, but the exact crossover point and relative margin can vary by experimental setup.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2008.1,
+            "prompt_tokens": 123,
+            "completion_tokens": 132
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1827.0,
+            "prompt_tokens": 697,
+            "completion_tokens": 250
+        },
+        "asserted_claim_count": 3,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.13149161565871464,
+        "query_entities": [
+            "LINE",
+            "Flickr network",
+            "first-order proximity",
+            "second-order proximity",
+            "GRAPH",
+            "NETWORK",
+            "LINKS",
+            "neighborhood structure"
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "node2vec can recover both breadth-first and depth-first neighborhood exploration as special cases of its biased random walks.",
+    "earlier feature learning approaches used a single, rigid neighborhood definition or sampling strategy.",
+    "earlier feature learning approaches were unable to adapt to different structural roles and community patterns in graphs."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence supports that node2vec generalizes prior work by using a flexible notion of neighborhood and a biased random walk procedure, and that earlier feature learning approaches were not expressive enough to capture diverse connectivity patterns. However, the specific claims about breadth-first/depth-first special cases and the exact form of the earlier limitation are not stated in the provided evidence.",
+  "judge_model": "gpt-5.4-mini"
+}

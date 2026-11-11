@@ -1,0 +1,122 @@
+{
+    "user_query": "How does LINE-SGD differ from LINE in the way each model uses edge weights during optimization?",
+    "mode": "closed_book",
+    "llm_response": "LINE-SGD and LINE both learn node embeddings from graph edges, but they use edge weights differently during optimization. In LINE, an edge\u2019s weight is treated as a frequency/probability signal: heavier edges are sampled more often, so they influence training indirectly through the sampling distribution. In LINE-SGD, the edge weight is used directly in the gradient update as a multiplicative importance factor, so each sampled edge contributes proportionally to its weight during optimization rather than only being reflected in how often it is sampled.",
+    "llm_self_reported_accuracy": 0.86,
+    "llm_confidence_reasoning": "This matches the standard distinction between weighted edge sampling in LINE and weight-scaled stochastic gradient updates in LINE-SGD, though exact implementation details can vary by description.",
+    "extracted_query_entities": [
+        "LINE-SGD",
+        "LINE",
+        "edge weight",
+        "gradient update",
+        "sampling distribution",
+        "TRAINING",
+        "optimization"
+    ],
+    "extracted_response_entities": [
+        "LINE-SGD",
+        "LINE",
+        "edge weight",
+        "gradient update",
+        "sampling distribution",
+        "TRAINING",
+        "optimization",
+        "frequency/probability signal",
+        "heavier edge",
+        "multiplicative importance factor",
+        "each sampled edge"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "edge weight",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "edge weight",
+            "target": "frequency/probability signal",
+            "type": "REPRESENTS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "heavier edge",
+            "target": "sampling distribution",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "heavier edge",
+            "target": "TRAINING",
+            "type": "INFLUENCES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE-SGD",
+            "target": "edge weight",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "edge weight",
+            "target": "gradient update",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "edge weight",
+            "target": "multiplicative importance factor",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "each sampled edge",
+            "target": "optimization",
+            "type": "CONTRIBUTES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "each sampled edge",
+            "target": "edge weight",
+            "type": "CONTRIBUTES_PROPORTIONALLY_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does LINE-SGD differ from LINE in the way each model uses edge weights during optimization?",
+        "llm_response": "LINE-SGD and LINE both learn node embeddings from graph edges, but they use edge weights differently during optimization. In LINE, an edge\u2019s weight is treated as a frequency/probability signal: heavier edges are sampled more often, so they influence training indirectly through the sampling distribution. In LINE-SGD, the edge weight is used directly in the gradient update as a multiplicative importance factor, so each sampled edge contributes proportionally to its weight during optimization rather than only being reflected in how often it is sampled.",
+        "llm_extraction_confidence": 0.86,
+        "llm_confidence_reasoning": "This matches the standard distinction between weighted edge sampling in LINE and weight-scaled stochastic gradient updates in LINE-SGD, though exact implementation details can vary by description.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1956.9,
+            "prompt_tokens": 108,
+            "completion_tokens": 154
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1944.0,
+            "prompt_tokens": 655,
+            "completion_tokens": 295
+        },
+        "asserted_claim_count": 9,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.20559328955573006,
+        "query_entities": [
+            "LINE-SGD",
+            "LINE",
+            "edge weight",
+            "gradient update",
+            "sampling distribution",
+            "TRAINING",
+            "optimization"
+        ]
+    }
+}

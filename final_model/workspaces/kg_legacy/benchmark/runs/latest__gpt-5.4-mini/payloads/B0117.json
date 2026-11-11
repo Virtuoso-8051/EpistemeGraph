@@ -1,0 +1,78 @@
+{
+    "user_query": "What kinds of citation networks did LINE evaluate on, and what does the author citation network record?",
+    "mode": "closed_book",
+    "llm_response": "LINE evaluated on two kinds of citation networks: a paper citation network and an author citation network. The author citation network records citation relationships between authors, typically indicating that one author has cited another through their papers.",
+    "llm_self_reported_accuracy": 0.92,
+    "llm_confidence_reasoning": "This matches the standard description of LINE\u2019s citation-network experiments, though wording can vary slightly across sources.",
+    "extracted_query_entities": [
+        "LINE",
+        "paper citation network",
+        "author citation network"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "paper citation network",
+        "author citation network",
+        "citation relationships between author",
+        "one author has cited another through their paper"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "paper citation network",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "author citation network",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "author citation network",
+            "target": "citation relationships between author",
+            "type": "RECORDS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "citation relationships between author",
+            "target": "one author has cited another through their paper",
+            "type": "INDICATES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What kinds of citation networks did LINE evaluate on, and what does the author citation network record?",
+        "llm_response": "LINE evaluated on two kinds of citation networks: a paper citation network and an author citation network. The author citation network records citation relationships between authors, typically indicating that one author has cited another through their papers.",
+        "llm_extraction_confidence": 0.92,
+        "llm_confidence_reasoning": "This matches the standard description of LINE\u2019s citation-network experiments, though wording can vary slightly across sources.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1538.7,
+            "prompt_tokens": 108,
+            "completion_tokens": 81
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1457.5,
+            "prompt_tokens": 621,
+            "completion_tokens": 151
+        },
+        "asserted_claim_count": 4,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.17248743693033855,
+        "query_entities": [
+            "LINE",
+            "paper citation network",
+            "author citation network"
+        ]
+    }
+}

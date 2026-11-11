@@ -1,0 +1,95 @@
+{
+    "user_query": "Under what conditions do DeepWalk\u2019s representations provide the largest reported gains over competing methods?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk\u2019s largest reported gains are on sparse, low-label-rate settings\u2014especially when only a small fraction of nodes are labeled for training. In the original experiments, its advantage over competing methods was biggest on the more challenging datasets and at the lowest training-label percentages, where it could substantially outperform methods that rely more heavily on labeled data or hand-engineered features.",
+    "llm_self_reported_accuracy": 0.84,
+    "llm_confidence_reasoning": "This is consistent with the reported DeepWalk results, but the exact magnitude and dataset-specific details depend on the experimental setup and comparison methods.",
+    "extracted_query_entities": [
+        "DEEPWALK"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "largest reported gain",
+        "sparse, low-label-rate setting",
+        "small fraction of nodes labeled for training",
+        "competing method",
+        "more challenging dataset",
+        "lowest training-label percentage",
+        "methods that rely more heavily on labeled data or hand-engineered feature"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "largest reported gain",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "sparse, low-label-rate setting",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "small fraction of nodes labeled for training",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "competing method",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "more challenging dataset",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "lowest training-label percentage",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "methods that rely more heavily on labeled data or hand-engineered feature",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under what conditions do DeepWalk\u2019s representations provide the largest reported gains over competing methods?",
+        "llm_response": "DeepWalk\u2019s largest reported gains are on sparse, low-label-rate settings\u2014especially when only a small fraction of nodes are labeled for training. In the original experiments, its advantage over competing methods was biggest on the more challenging datasets and at the lowest training-label percentages, where it could substantially outperform methods that rely more heavily on labeled data or hand-engineered features.",
+        "llm_extraction_confidence": 0.84,
+        "llm_confidence_reasoning": "This is consistent with the reported DeepWalk results, but the exact magnitude and dataset-specific details depend on the experimental setup and comparison methods.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2079.1,
+            "prompt_tokens": 106,
+            "completion_tokens": 119
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1696.1,
+            "prompt_tokens": 698,
+            "completion_tokens": 243
+        },
+        "asserted_claim_count": 7,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.3191777794761995,
+        "query_entities": [
+            "DEEPWALK"
+        ]
+    }
+}

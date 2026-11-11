@@ -1,0 +1,56 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding, Tang et al., 2015) was designed for undirected and/or unweighted graphs. Its first-order proximity objective models the joint probability between two vertices using the inner product of their embeddings and assumes symmetry (the edge (i,j) is treated the same as (j,i)), so it cannot represent edge direction. Its second-order proximity relies on the vertex's context embedding and in-/out-role structure only in a limited, undirected sense, and its edge sampling treats edges as unweighted, so weight information is not captured in the objective. In practice, LINE is therefore unsuitable for directed and weighted networks, whereas methods that only handle undirected graphs also lack these capabilities; directed/weighted extensions (e.g., asymmetric proximity models or weight-aware sampling) are needed to preserve direction and edge strength.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The core claim that LINE's original formulation is symmetric and designed for undirected/unweighted graphs is well known, but the exact wording of the expected answer and the specifics about second-order proximity are uncertain.",
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "unweighted graph",
+      "type": "DESIGNED_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity objective",
+      "target": "inner product of vertex embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity objective",
+      "target": "SYMMETRY",
+      "type": "ASSUMES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity objective",
+      "target": "edge direction",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "context embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling treatment",
+      "target": "unweighted edge",
+      "type": "TREATS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "information network",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "directed/weighted extension",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

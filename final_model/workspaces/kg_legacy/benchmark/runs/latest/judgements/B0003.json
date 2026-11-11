@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Speedup is typically near-linear at low thread counts and then saturates because of memory bandwidth, cache contention, and lock or conflict overhead. The paper instead reports consistent speedup up to 8 workers, with no saturation.",
+    "Predictive performance is preserved when the learning rate and number of epochs are kept fixed. The paper does not give this condition."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says parallel DeepWalk uses asynchronous SGD and that sparse updates rarely conflict, which matches the paper. It then asserts speedup saturation and a fixed learning-rate condition that the paper does not report, and it never states the reported consistent speedup up to 8 workers or the absence of any performance loss.",
+  "judge_model": "claude-sonnet-5-5"
+}

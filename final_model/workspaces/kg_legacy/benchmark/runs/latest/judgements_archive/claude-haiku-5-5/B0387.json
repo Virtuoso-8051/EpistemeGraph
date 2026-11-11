@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The answer accepts the false premise that LINE-SGD is faster than graph factorization, explaining why it is faster rather than correcting that LINE-SGD is slightly slower.",
+    "Claims that graph factorization's updates are heavier and less sparse than LINE-SGD's, which the evidence does not state.",
+    "Claims that plain SGD on weighted graphs suffers from variance and learning-rate tuning problems solved by edge sampling; the evidence attributes the SGD problem to diverging edge weights and gradient explosion, not these specifics."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question's false premise is that LINE-SGD is faster than graph factorization, and the answer accepts it and builds its explanation on that premise, when the evidence says LINE-SGDs are slightly slower because of threshold-cutting to prevent exploding gradients. The answer's mechanism (alias sampling, O(1) cost, sparse updates) is not what the papers say explains the speed difference, so the core of the answer is unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

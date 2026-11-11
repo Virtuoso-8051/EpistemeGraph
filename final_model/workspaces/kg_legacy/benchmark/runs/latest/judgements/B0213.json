@@ -1,0 +1,13 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "K = 10 was the sampling budget used for node2vec",
+    "r = 10 walks per source node, walk length l = 80, window k = 10 were the settings in these experiments",
+    "The sampling budget was set to 10 (conflating r with K, contradicting K = r\u00b7l\u00b7|V|)",
+    "Budget matched across DeepWalk with equal sampling effort is supported, but the specific numeric value is invented"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence gives no numerical value for K, only that DeepWalk, LINE and node2vec were set to generate equal numbers of samples. The answer invents K = 10 along with specific r, l, and k values, and it contradicts the stated formula K = r\u00b7l\u00b7|V|, so its core claim is unsupported.",
+  "judge_model": "claude-sonnet-5-5"
+}

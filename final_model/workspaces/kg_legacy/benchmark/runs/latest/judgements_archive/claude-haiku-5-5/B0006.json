@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Second-order proximity is 'specifically designed for directed graphs' (the evidence says it applies to both directed and undirected graphs, not that it is designed specifically for directed ones)",
+    "Second-order proximity 'is thus used when first-order proximity (direct ties) is sparse or absent' (the evidence does not state this motivation)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer correctly states that second-order proximity applies to both directed and undirected graphs and that vertices with shared neighbors/similar context distributions are similar. However, it adds an unsupported claim that the method is specifically designed for directed graphs and an unsupported motivation about sparse first-order ties, which the evidence does not contain.",
+  "judge_model": "claude-haiku-5-5"
+}

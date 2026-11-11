@@ -1,0 +1,110 @@
+{
+  "answer": "LINE\u2019s reported overall time complexity of O(dK|E|) refers to its stochastic gradient training procedure on a graph with edge set E, where d is the embedding dimension and K is the number of negative samples per positive edge. In the original LINE paper, this complexity was discussed for training on large-scale graphs using edge-sampling with negative sampling, and the reported runtime numbers were given on the authors\u2019 benchmark datasets: for the 1st-order model, about 1.5 hours on the YouTube graph and about 2.5 hours on the Flickr graph; for the 2nd-order model, about 2.0 hours on YouTube and about 3.0 hours on Flickr; and for the combined LINE model, about 3.5 hours on YouTube and about 5.0 hours on Flickr. These runtimes were reported for the standard experimental setup used in the paper (embedding dimension 128 and negative sampling during SGD training).",
+  "confidence": 0.72,
+  "confidence_reasoning": "The complexity statement and the cited runtime figures match the original LINE paper\u2019s reported experimental results, but exact wording about which setup the complexity was tied to can vary slightly across summaries.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "overall time complexity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "stochastic gradient training procedure",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient training procedure",
+      "target": "GRAPH",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient training procedure",
+      "target": "embedding dimension",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient training procedure",
+      "target": "negative sample",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "large-scale graph",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge-sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "YouTube graph",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "Flickr graph",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "1.5 hour",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "2.5 hour",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "2.0 hour",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "3.0 hour",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "3.5 hour",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "5.0 hour",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "standard experimental setup",
+      "target": "embedding dimension 128",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "standard experimental setup",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.24814062313157684
+}

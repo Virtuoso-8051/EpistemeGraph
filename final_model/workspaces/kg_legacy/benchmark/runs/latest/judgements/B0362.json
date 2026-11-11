@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "DeepWalk's advantage over baselines tends to shrink as the labeled fraction grows because supervised or attribute-aware baselines gain more from additional labels.",
+    "A stop-outperforming pattern above 20% would likely depend on graphs with informative node attributes or strong label homophily.",
+    "Macro-F1 often shows the gap more clearly than Micro-F1 because it weights minority classes equally."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer never corrects the false premise that DeepWalk stops outperforming baselines above 20% labeled data. It accepts the premise and adds speculative explanations (attribute-aware baselines, homophily, Macro-F1 gap) that the evidence does not contain. The evidence says DeepWalk's strength is with sparse labels, though a narrowing lead is partly consistent with it.",
+  "judge_model": "claude-sonnet-5-5"
+}

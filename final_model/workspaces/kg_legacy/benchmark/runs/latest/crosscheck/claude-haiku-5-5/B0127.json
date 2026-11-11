@@ -1,0 +1,14 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Node2vec uses a skip-gram objective with negative sampling and a return parameter p and in-out parameter q; the evidence does not mention these mechanics.",
+    "Small q yields BFS-like exploration that captures homophily, and large q yields DFS-like exploration that captures structural equivalence; the evidence does not state this mapping.",
+    "LINE's first-order objective uses a sigmoid over inner products and minimizes KL divergence to the empirical edge distribution; the evidence does not contain these details.",
+    "LINE's second-order objective uses separate vertex and context embeddings; the evidence does not describe this.",
+    "LINE is edge-sampling based and handles weighted graphs efficiently; the evidence does not state the sampling method."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims match the evidence: node2vec organizes nodes by roles and communities via flexible neighborhoods, and LINE finds first-order proximity more important in social networks with the two proximities complementary. Many technical specifics (p/q parameters, BFS/DFS mapping, skip-gram, KL objective, edge sampling) are not in the provided excerpts, so they are unsupported by the given evidence even if they reflect the full papers.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,78 @@
+{
+    "user_query": "How do SkipGram in paper3 and node2vec in paper2 differ in the kind of neighborhood structure they use to learn node embeddings, and what shared optimization method do they both rely on?",
+    "mode": "closed_book",
+    "llm_response": "SkipGram in paper3 learns embeddings from local co-occurrence neighborhoods in sequences, i.e., nodes that appear within a fixed context window around a target node. node2vec in paper2 learns embeddings from neighborhoods induced by biased random walks on the graph, which can be tuned to capture either more breadth-first-like or depth-first-like structural neighborhoods. Despite this difference in neighborhood construction, both rely on the Skip-gram objective optimized with negative sampling.",
+    "llm_self_reported_accuracy": 0.95,
+    "llm_confidence_reasoning": "This matches the standard formulations of Skip-gram-based graph embedding methods and node2vec\u2019s biased random-walk neighborhood definition, with only minor uncertainty about the exact paper labels.",
+    "extracted_query_entities": [
+        "SKIPGRAM",
+        "PAPER3",
+        "NODE2VEC",
+        "PAPER2",
+        "Skip-gram objective"
+    ],
+    "extracted_response_entities": [
+        "SKIPGRAM",
+        "PAPER3",
+        "NODE2VEC",
+        "PAPER2",
+        "Skip-gram objective",
+        "local co-occurrence neighborhood",
+        "neighborhoods induced by biased random walks on the graph"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "SKIPGRAM",
+            "target": "local co-occurrence neighborhood",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "neighborhoods induced by biased random walks on the graph",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "Skip-gram objective",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How do SkipGram in paper3 and node2vec in paper2 differ in the kind of neighborhood structure they use to learn node embeddings, and what shared optimization method do they both rely on?",
+        "llm_response": "SkipGram in paper3 learns embeddings from local co-occurrence neighborhoods in sequences, i.e., nodes that appear within a fixed context window around a target node. node2vec in paper2 learns embeddings from neighborhoods induced by biased random walks on the graph, which can be tuned to capture either more breadth-first-like or depth-first-like structural neighborhoods. Despite this difference in neighborhood construction, both rely on the Skip-gram objective optimized with negative sampling.",
+        "llm_extraction_confidence": 0.95,
+        "llm_confidence_reasoning": "This matches the standard formulations of Skip-gram-based graph embedding methods and node2vec\u2019s biased random-walk neighborhood definition, with only minor uncertainty about the exact paper labels.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2268.4,
+            "prompt_tokens": 128,
+            "completion_tokens": 144
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1548.7,
+            "prompt_tokens": 748,
+            "completion_tokens": 163
+        },
+        "asserted_claim_count": 3,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2067130268483922,
+        "query_entities": [
+            "SKIPGRAM",
+            "PAPER3",
+            "NODE2VEC",
+            "PAPER2",
+            "Skip-gram objective"
+        ]
+    }
+}

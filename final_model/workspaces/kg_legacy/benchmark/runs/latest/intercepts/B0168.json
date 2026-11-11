@@ -1,0 +1,38 @@
+{
+  "answer": "Under none. In the model as described, first-order proximity is nonzero only for pairs joined by an observed edge (set by the edge weight, or 1 if unweighted). Pairs without an observed edge get zero first-order proximity. Any nonzero proximity between such non-adjacent pairs comes from higher-order (e.g., second-order or neighborhood-based) proximity instead.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I could not verify the specific paper, so this rests on the standard LINE-style definition of first-order proximity, which is typical but not confirmed for this source.",
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "target": "network embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "weighted network",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "unweighted network",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "network neighborhood",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "second-order neighbor",
+      "target": "network neighborhood",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

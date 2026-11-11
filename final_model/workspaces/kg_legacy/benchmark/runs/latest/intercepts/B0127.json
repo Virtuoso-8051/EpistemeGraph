@@ -1,0 +1,98 @@
+{
+  "answer": "Node2vec (Grover & Leskovec, 2016) learns node embeddings by maximizing the likelihood of neighborhood co-occurrences in random walks, using the skip-gram objective with negative sampling. Its key contribution is a biased second-order random walk controlled by two parameters: return parameter p and in-out parameter q. Small q (BFS-like exploration) yields embeddings that capture homophily, i.e., nodes in the same community or tightly interconnected cluster end up close together. Large q (DFS-like exploration) yields embeddings that capture structural equivalence, so nodes playing similar structural roles (e.g., hubs, bridges, peripheral nodes) get similar representations even when they are far apart in the graph. Thus node2vec explicitly trades off community-style and role-style similarity, and it treats both as tunable aspects of network structure.\n\nLINE (Tang et al., 2015, Large-scale Information Network Embedding) is designed for large, weighted, directed or undirected networks and explicitly defines two separate objectives. First-order proximity models the observed direct ties: for an edge (i,j), the joint probability of the two nodes being connected is defined from their embedding inner product (sigmoid), and the objective minimizes KL divergence to the empirical edge weight distribution, so only directly linked pairs are pulled together. Second-order proximity assumes that nodes sharing many neighbors are similar; each node has a vertex embedding and a separate context embedding, and the conditional probability of a context node given a node is trained to match the empirical neighborhood distribution. LINE concatenates separately trained first-order and second-order embeddings, emphasizing that first-order proximity captures direct social ties (friendship/follow links) while second-order proximity captures shared-neighborhood similarity (people with common friends are alike), and that both are needed for sparse, large social networks. LINE is edge-sampling based, which handles weighted graphs efficiently.\n\nIn short: node2vec emphasizes tunable community versus structural-role similarity via biased random walks, whereas LINE emphasizes an explicit split between direct (first-order) ties and shared-neighborhood (second-order) similarity, with LINE's objectives defined directly over edges and neighborhoods rather than over walk sequences.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core characterizations of both methods (node2vec's p/q biased walks giving homophily vs. structural equivalence; LINE's first- and second-order objectives) are well established, but some specific details and framing may be imprecise.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "likelihood of preserving network neighborhoods of node",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased second-order random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like exploration",
+      "target": "homophily",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like exploration",
+      "target": "structural equivalence",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "KL divergence",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "homophily",
+      "type": "PRESERVE",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "edge-sampling based handling of weighted graph",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "social network",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "direct social ties",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "shared-neighborhood similarity",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

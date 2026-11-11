@@ -1,0 +1,110 @@
+{
+    "user_query": "What common tractability problem do the network embedding method in PASSAGE A and the language-modeling method in PASSAGE B each face, and how does each passage address it?",
+    "mode": "closed_book",
+    "llm_response": "Both methods face the tractability problem of an enormous search space: there are too many possible embeddings or model states to optimize over directly. In PASSAGE A, the network embedding method addresses this by using a tractable approximation/optimization strategy rather than searching exhaustively over all possible embeddings. In PASSAGE B, the language-modeling method addresses the same kind of tractability issue by using a simplified probabilistic formulation and efficient training/inference approximation instead of exact computation over all possible language sequences.",
+    "llm_self_reported_accuracy": 0.42,
+    "llm_confidence_reasoning": "I can identify the general tractability issue and the typical kinds of fixes, but without the actual passages I cannot verify the specific methods or wording used in each one.",
+    "extracted_query_entities": [
+        "network embedding",
+        "language-modeling method",
+        "PASSAGE A",
+        "PASSAGE B"
+    ],
+    "extracted_response_entities": [
+        "network embedding",
+        "language-modeling method",
+        "PASSAGE A",
+        "PASSAGE B",
+        "enormous search space",
+        "too many possible embeddings or model states to optimize over directly",
+        "tractable approximation/optimization strategy",
+        "searching exhaustively over all possible embedding",
+        "simplified probabilistic formulation",
+        "efficient training/inference approximation",
+        "exact computation over all possible language sequence"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "network embedding",
+            "target": "enormous search space",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "enormous search space",
+            "target": "too many possible embeddings or model states to optimize over directly",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "network embedding",
+            "target": "tractable approximation/optimization strategy",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "network embedding",
+            "target": "searching exhaustively over all possible embedding",
+            "type": "REFUTES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "language-modeling method",
+            "target": "enormous search space",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "language-modeling method",
+            "target": "simplified probabilistic formulation",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "language-modeling method",
+            "target": "efficient training/inference approximation",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "language-modeling method",
+            "target": "exact computation over all possible language sequence",
+            "type": "REFUTES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What common tractability problem do the network embedding method in PASSAGE A and the language-modeling method in PASSAGE B each face, and how does each passage address it?",
+        "llm_response": "Both methods face the tractability problem of an enormous search space: there are too many possible embeddings or model states to optimize over directly. In PASSAGE A, the network embedding method addresses this by using a tractable approximation/optimization strategy rather than searching exhaustively over all possible embeddings. In PASSAGE B, the language-modeling method addresses the same kind of tractability issue by using a simplified probabilistic formulation and efficient training/inference approximation instead of exact computation over all possible language sequences.",
+        "llm_extraction_confidence": 0.42,
+        "llm_confidence_reasoning": "I can identify the general tractability issue and the typical kinds of fixes, but without the actual passages I cannot verify the specific methods or wording used in each one.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1616.4,
+            "prompt_tokens": 124,
+            "completion_tokens": 157
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1507.5,
+            "prompt_tokens": 743,
+            "completion_tokens": 295
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.26205052342908136,
+        "query_entities": [
+            "network embedding",
+            "language-modeling method",
+            "PASSAGE A",
+            "PASSAGE B"
+        ]
+    }
+}

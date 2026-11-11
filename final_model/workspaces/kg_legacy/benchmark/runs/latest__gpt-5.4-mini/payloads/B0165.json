@@ -1,0 +1,119 @@
+{
+    "user_query": "Under which exact conditions on the citation networks did the authors find that DeepWalk outperformed LINE(2nd), and what were the corresponding numerical results?",
+    "mode": "closed_book",
+    "llm_response": "The authors reported that DeepWalk outperformed LINE(2nd) on the citation networks when the task was node classification on the Cora and Citeseer graphs using the standard train/test split setup. In their reported results, DeepWalk achieved 81.6% on Cora versus LINE(2nd)\u2019s 78.5%, and 71.1% on Citeseer versus LINE(2nd)\u2019s 70.8%.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "These numbers and the comparison are consistent with the commonly cited DeepWalk paper results, but I cannot verify the exact experimental wording from the prompt alone.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "LINE",
+        "node classification",
+        "CORA",
+        "CITESEER",
+        "standard train/test split setup"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "LINE",
+        "node classification",
+        "CORA",
+        "CITESEER",
+        "standard train/test split setup",
+        "81.6%",
+        "78.5%",
+        "71.1%",
+        "70.8%"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "LINE",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "node classification",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "CORA",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "CITESEER",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "standard train/test split setup",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "81.6%",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "78.5%",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "71.1%",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "70.8%",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which exact conditions on the citation networks did the authors find that DeepWalk outperformed LINE(2nd), and what were the corresponding numerical results?",
+        "llm_response": "The authors reported that DeepWalk outperformed LINE(2nd) on the citation networks when the task was node classification on the Cora and Citeseer graphs using the standard train/test split setup. In their reported results, DeepWalk achieved 81.6% on Cora versus LINE(2nd)\u2019s 78.5%, and 71.1% on Citeseer versus LINE(2nd)\u2019s 70.8%.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "These numbers and the comparison are consistent with the commonly cited DeepWalk paper results, but I cannot verify the exact experimental wording from the prompt alone.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2122.8,
+            "prompt_tokens": 119,
+            "completion_tokens": 140
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2091.8,
+            "prompt_tokens": 716,
+            "completion_tokens": 334
+        },
+        "asserted_claim_count": 9,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2353499398302676,
+        "query_entities": [
+            "DEEPWALK",
+            "LINE",
+            "node classification",
+            "CORA",
+            "CITESEER",
+            "standard train/test split setup"
+        ]
+    }
+}

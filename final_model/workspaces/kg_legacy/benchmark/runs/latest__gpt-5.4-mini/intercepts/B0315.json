@@ -1,0 +1,62 @@
+{
+  "answer": "DeepWalk\u2019s advantage in that comparison is not because node2vec is inherently worse, but because the PPI network is a highly multi-label, densely connected graph where the simple unbiased random walks used by DeepWalk can be a better fit than node2vec\u2019s second-order walk bias when node2vec is run in the uniform setting (p = 1, q = 1). In the reported results, DeepWalk achieves a 23.8% higher Macro-F1 than node2vec under that setting, which is typically explained as a dataset-specific effect: the PPI graph\u2019s structure and label distribution make DeepWalk\u2019s embeddings more effective for the downstream multi-label classification task in that experiment.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a high-level interpretation consistent with the reported benchmark result, but the exact causal explanation is somewhat inferential rather than directly stated in the question.",
+  "triples": [
+    {
+      "source": "PPI network",
+      "target": "multi-label classification",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI network",
+      "target": "dense graph",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unbiased random walk procedure",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk procedure",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "uniform setting",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "NODE2VEC",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "MACRO-F1",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "NODE2VEC",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "multi-label classification",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2798398266667905
+}

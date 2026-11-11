@@ -1,0 +1,82 @@
+{
+    "user_query": "What exact embedding dimensionality did LINE use in its experiments on language, social, and citation networks?",
+    "mode": "closed_book",
+    "llm_response": "LINE used 128-dimensional embeddings in its experiments on language, social, and citation networks.",
+    "llm_self_reported_accuracy": 0.98,
+    "llm_confidence_reasoning": "This dimensionality is explicitly reported in the LINE paper\u2019s experimental setup, so it is highly reliable.",
+    "extracted_query_entities": [
+        "LINE",
+        "language network",
+        "social network",
+        "citation network",
+        "128-dimensional embedding"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "language network",
+        "social network",
+        "citation network",
+        "128-dimensional embedding"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "128-dimensional embedding",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "language network",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "social network",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "citation network",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What exact embedding dimensionality did LINE use in its experiments on language, social, and citation networks?",
+        "llm_response": "LINE used 128-dimensional embeddings in its experiments on language, social, and citation networks.",
+        "llm_extraction_confidence": 0.98,
+        "llm_confidence_reasoning": "This dimensionality is explicitly reported in the LINE paper\u2019s experimental setup, so it is highly reliable.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1451.5,
+            "prompt_tokens": 109,
+            "completion_tokens": 58
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 3449.7,
+            "prompt_tokens": 633,
+            "completion_tokens": 141
+        },
+        "asserted_claim_count": 4,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.07980104593130258,
+        "query_entities": [
+            "LINE",
+            "language network",
+            "social network",
+            "citation network",
+            "128-dimensional embedding"
+        ]
+    }
+}

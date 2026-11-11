@@ -1,0 +1,38 @@
+{
+  "answer": "Three node classification datasets: BlogCatalog, PPI (the Homo sapiens protein-protein interaction network), and Wikipedia (the word co-occurrence network with part-of-speech labels).",
+  "confidence": 0.85,
+  "confidence_reasoning": "I am fairly confident from memory of the node2vec paper's experimental setup, though I have not verified the exact dataset list against the text, so the count and names could contain a detail error.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Homo sapiens protein-protein interaction network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "word co-occurrence network with part-of-speech label",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Homo sapiens protein-protein interaction network",
+      "target": "protein-protein interaction network",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word co-occurrence network with part-of-speech label",
+      "target": "word cooccurrence network",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

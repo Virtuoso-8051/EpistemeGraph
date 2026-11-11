@@ -1,0 +1,86 @@
+{
+  "answer": "The two passages were not included with the question, so I can't quote what they explicitly say. Based on the original papers: DeepWalk (Perozzi et al., 2014) was designed for learning node representations in large, sparse, unweighted, typically undirected homogeneous networks, such as social networks, using truncated random walks fed to a skip-gram model. It captures higher-order neighborhood structure through the walks. LINE (Tang et al., 2015) was designed for large-scale information networks and explicitly handles directed, undirected, and weighted graphs. It preserves first-order proximity (directly connected nodes) and second-order proximity (nodes sharing neighbors) through separate objectives, and it uses edge sampling to optimize weighted edges efficiently. Implication: DeepWalk is typically chosen for unweighted, homogeneous networks where multi-hop structural context matters and simple random-walk sampling suffices. LINE is typically chosen for large weighted or directed networks where explicit control over first- and second-order proximity, or edge weights, is important. If the passages describe different datasets or settings, their explicit usage statements should be taken as authoritative over this general summary.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The general characterizations of DeepWalk and LINE match the original papers, but I could not verify the specific claims in the unprovided passages, so the answer's fit to the question's intended framing is uncertain.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "network embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unweighted graph",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unweighted graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "higher-order neighborhood structure",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "directed graph",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "unweighted graph",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "weighted graph",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge-sampling algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "weighted graph",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

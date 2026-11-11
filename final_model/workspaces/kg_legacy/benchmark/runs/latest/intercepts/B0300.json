@@ -1,0 +1,50 @@
+{
+  "answer": "I could not identify the specific benchmark this question refers to, so I cannot state the exact conditions from its results. The most plausible general answer is that Spectral clustering beats node2vec mainly on graphs with strong, clean community structure, where labels align with the modules that the Laplacian eigenvectors capture, while DeepWalk and LINE, which also capture proximity, stay on top across datasets. This is a reasoned guess from general knowledge, not a reported finding.",
+  "confidence": 0.12,
+  "confidence_reasoning": "I could not identify the source paper, so the answer rests on a general heuristic about community structure rather than the specific reported conditions.",
+  "triples": [
+    {
+      "source": "spectral clustering",
+      "target": "NODE2VEC",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "Community detection",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "eigendecomposition",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "network neighborhood",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "network neighborhood",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "spectral clustering",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "spectral clustering",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

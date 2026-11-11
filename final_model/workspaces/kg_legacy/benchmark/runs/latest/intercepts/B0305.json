@@ -1,0 +1,50 @@
+{
+  "answer": "The premise appears to be incorrect. wvRN (weighted-vote relational neighbor, Macskassy & Provost) does not use a one-vs-rest logistic regression classifier. It is a non-parametric relational method: for each unlabeled node, it estimates class membership as a weighted average of the known or currently estimated labels of its neighbors, normalized by the total edge weight, and often iterates this update until the estimates stabilize. Because it has no learned model, it is not trained the way the logistic regression baselines are. Any statement that wvRN shares a one-vs-rest logistic regression classifier with other baselines would therefore be a mischaracterization, unless a specific paper defined its own variant that does so.",
+  "confidence": 0.72,
+  "confidence_reasoning": "I am fairly confident wvRN is a non-parametric weighted-vote method without a learned logistic regression, but I cannot verify the specific paper the question refers to, which might define a variant differently.",
+  "triples": [
+    {
+      "source": "weighted-vote Relational Neighbor",
+      "target": "one-vs-rest logistic regression classifier",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "weighted-vote Relational Neighbor",
+      "target": "non-parametric relational method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "weighted-vote Relational Neighbor",
+      "target": "weighted average of neighbor label",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "weighted-vote Relational Neighbor",
+      "target": "iterative label update until convergence",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "weighted-vote Relational Neighbor",
+      "target": "weighted average of known or estimated neighbor labels normalized by total edge weight",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "weighted-vote Relational Neighbor",
+      "target": "method without learned model",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "weighted-vote Relational Neighbor",
+      "target": "trained like logistic regression baseline",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

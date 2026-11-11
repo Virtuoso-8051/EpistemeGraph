@@ -1,0 +1,62 @@
+{
+  "answer": "LINE\u2019s use of DeepWalk on the YouTube network is especially fair for large-scale graphs because YouTube is a very large graph, and DeepWalk is one of the few baseline methods that can still be run at that scale. That means the comparison is not biased by choosing a baseline that only works well on small graphs or that cannot feasibly be applied to the same large dataset. In other words, LINE is being compared against a scalable random-walk embedding method on a graph where scalability really matters, so the evaluation better reflects performance on large-scale settings rather than on toy or small graphs.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This is a well-supported interpretation of why a scalable baseline on a large graph makes the comparison fair, though the exact wording depends on the original paper\u2019s framing.",
+  "triples": [
+    {
+      "source": "YOUTUBE",
+      "target": "large graph",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "baseline method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "YOUTUBE",
+      "type": "CAN_BE_RUN_AT_SCALE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison",
+      "target": "fair comparison for large-scale graph",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison",
+      "target": "large-scale setting",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison",
+      "target": "small graph",
+      "type": "NOT_BIASED_BY",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison",
+      "target": "infeasible application to the same large dataset",
+      "type": "NOT_BIASED_BY",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "scalable random-walk embedding method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "evaluation",
+      "target": "large-scale setting",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.1979326883951823
+}

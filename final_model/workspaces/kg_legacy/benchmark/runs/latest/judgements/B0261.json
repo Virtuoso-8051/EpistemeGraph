@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The DBLP data LINE used was a co-authorship network, where authors are vertices and edge weights reflect the number of co-authored papers. The evidence says DBLP was used for author and paper citation networks, not co-authorship.",
+    "Wikipedia language-network edge weights reflect co-occurrence counts. The evidence says the network is weighted but does not state what the weights are, so this is a minor point."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly says the language network comes from Wikipedia. It mischaracterizes the DBLP data as a co-authorship network, when the evidence describes author and paper citation networks.",
+  "judge_model": "claude-sonnet-5-5"
+}

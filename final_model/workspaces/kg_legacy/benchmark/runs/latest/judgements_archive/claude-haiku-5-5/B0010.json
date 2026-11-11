@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Under very sparse conditions LINE(1st) tends to perform comparably to or better than LINE(2nd) is hedged but the evidence says LINE(1st) outperforms LINE(2nd) outright, so 'comparably' understates the reported result.",
+    "The claim that the gap 'generally widens' as more links are added is not stated in the evidence, which only says LINE(2nd) begins to outperform LINE(1st) as link percentage increases.",
+    "The explanation that second-order neighborhood similarity is poorly estimated from few links is a paraphrase of the paper's claim that second-order proximity suffers when the network is extremely sparse, and the mechanism is not spelled out in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly captures the core direction: LINE(1st) leads when very sparse and LINE(2nd) overtakes as links are added, which matches the gold answer. However, it softens the sparse-regime result to 'comparably to or better', adds an unsupported claim that the gap widens, and offers a mechanism not stated in the source.",
+  "judge_model": "claude-haiku-5-5"
+}

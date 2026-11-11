@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The authors chose p and q by grid search over {0.25, 0.5, 1, 2, 4}, scored on a small labeled validation subset for the downstream task.",
+    "Main comparisons are on networks such as Facebook, Wikipedia, and the protein-protein interaction network."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that the paper reports no numerical learned-versus-fixed comparison is supported, and the DeepWalk equivalence (p = q = 1) is consistent with the evidence. However, the specific grid values and the named datasets (Facebook, Wikipedia, PPI) are not in the provided evidence, so they are unsupported even though they may be accurate in the actual paper.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Work on relational/collective classification (Neville & Jensen; Sen et al., 2008) reports that relational classifiers combined with iterative inference such as ICA or Gibbs sampling generally outperform the same relational features in a single non-iterative pass.",
+    "Relational classifiers with iterative inference generally outperform the same features used with a standard non-relational learner.",
+    "The cited literature (Neville & Jensen; Sen et al., 2008) is the source of these comparative findings."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence says the structural features can be used with any classification algorithm, including iterative methods, and that their greatest utility is easy integration with simple machine learning algorithms, which contradicts the premise that the method works best only with iterative methods. The answer never states this correction and instead asserts comparative results from external literature that the evidence does not contain, so its core claim is unsupported and effectively goes along with the false premise.",
+  "judge_model": "claude-haiku-5-5"
+}

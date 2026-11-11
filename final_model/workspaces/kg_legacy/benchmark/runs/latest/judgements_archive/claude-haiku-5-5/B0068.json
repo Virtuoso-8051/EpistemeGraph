@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The AI claims the passage was not included with the question, but the evidence was provided; this misstates the available material and the answer fails to give the passage's actual reasoning (edges based on coappearances, so frequently interacting characters cluster together).",
+    "The answer claims the passage 'likely links the two because the clusters reflect characters who interact often and share attributes', hedging the actual reason and adding 'share attributes' which the passage does not state.",
+    "The answer asserts node2vec with low p and high q performs depth-first-like walks staying within tightly knit neighborhoods; the passage does not contain this explanation of the parameter settings for the community result."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The AI disclaims having the passage even though it was supplied, so it never gives the passage's stated reason: coappearance-based edges make interacting characters cluster together, which aligns with homophily. Its substantive content relies on general reasoning and attributes claims like 'share attributes' and the depth-first walk explanation that the passage does not state, so the core answer is not grounded in the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

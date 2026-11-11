@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Pairs of nodes are represented by combining endpoint vectors with binary operators such as averaging, Hadamard product, or concatenation (the evidence only mentions compositionality, not these operators)",
+    "Link prediction examples are in social or biological networks (not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: the extension goes from nodes to pairs of nodes for edge-based tasks, and the tasks are link prediction plus multi-label classification. The specific binary operators and the social/biological network examples are not in the provided evidence, although the operators are plausibly accurate from the paper itself.",
+  "judge_model": "claude-sonnet-5-5"
+}

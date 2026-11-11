@@ -1,0 +1,38 @@
+{
+  "answer": "Spectral clustering operates under the assumption that the data lie on a low-dimensional manifold embedded in a higher-dimensional space, and that clusters can be separated by the geometry of that manifold. This is considered limiting because it relies on a specific structural assumption about the data; if the data do not actually have that manifold structure, or if the cluster geometry is more complex, the method may not work well.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This answer reflects the standard description of spectral clustering and the common limitation that its manifold assumption may not hold for all datasets.",
+  "triples": [
+    {
+      "source": "spectral clustering",
+      "target": "low-dimensional manifold embedded in a higher-dimensional space",
+      "type": "ASSUMES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "clusters can be separated by the geometry of that manifold",
+      "type": "ASSUMES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "specific structural assumption about the data",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "data with that manifold structure",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "spectral clustering",
+      "target": "complex cluster geometry",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": 0.24420469235151243
+}

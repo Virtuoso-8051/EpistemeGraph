@@ -1,0 +1,74 @@
+{
+  "answer": "The premise is mistaken. node2vec's dot product is symmetric, so it does not provide an asymmetry that helps distinguish the source from its neighbors. node2vec learns a single embedding f: V \u2192 R^d, and the score between nodes u and v is f(u)\u00b7f(v), which equals f(v)\u00b7f(u). The model is trained with a skip-gram objective that maximizes the log-probability of each neighbor n_i in the sampled neighborhood N_S(u) of source u, using P(n | u) = exp(f(n)\u00b7f(u)) / Z_u, where Z_u = \u03a3_v exp(f(v)\u00b7f(u)). Any asymmetry comes from this per-source normalization and from the sampled neighborhoods N_S(u), which come from biased second-order random walks (controlled by return parameter p and in-out parameter q). Because P(n | u) and P(u | n) use different normalizers and different sampled neighborhoods, the conditional probabilities are asymmetric even though the underlying dot product is not. The node2vec paper does not claim that the dot product itself is asymmetric, and it does not argue that such asymmetry improves source-versus-neighbor discrimination. Asymmetric scoring with separate source and context embeddings, as in word2vec-style or directed-graph models, is a different design that node2vec does not use.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am confident node2vec uses a single embedding with a symmetric dot product and that the question's premise is false, though I am less certain about the exact details of how the paper frames the normalization and neighborhood sampling.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "dot product symmetric scoring f(u)\u00b7f",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "neighborhood sampling strategy",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy",
+      "target": "biased second-order random walk",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased second-order random walk",
+      "target": "node2vec parameter",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "conditional probability P",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability P",
+      "target": "per-source normalization Z_u",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability P",
+      "target": "asymmetric conditional probability",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asymmetric conditional probability",
+      "target": "conditional probabilities are asymmetric even though the underlying dot product is not",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "dot product does not provide asymmetry improving source-neighbor discrimination",
+      "type": "DEFINED_AS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "separate source and context embedding",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

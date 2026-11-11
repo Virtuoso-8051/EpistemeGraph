@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Sampling is done over an alias table (not in the evidence).",
+    "Each sampled edge is paired with negative samples drawn from a noise distribution (not in the evidence excerpt).",
+    "The learning rate is decayed linearly (not in the evidence excerpt)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer rejects the false premise and correctly explains that edges are sampled proportionally to weight and then treated as binary, which matches the evidence. It adds details about the alias table, negative sampling, and linear learning-rate decay that the evidence does not contain, and its claim that the weighted objective is preserved 'in expectation' is only loosely supported by the paper's statement that the objective remains the same.",
+  "judge_model": "claude-sonnet-5-5"
+}

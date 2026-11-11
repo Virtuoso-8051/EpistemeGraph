@@ -1,0 +1,62 @@
+{
+  "answer": "Second-order proximity, as used in network embedding (e.g., LINE, Tang et al. 2015), is defined over the neighborhood structure of vertices rather than their direct links. Two vertices u and v have high second-order proximity when their neighborhood network structures are similar: it compares the sets of vertices each one is connected to (their neighbor/context vectors), i.e., whether u and v share many of the same neighbors or have similar distributions over their out-neighbors. Formally, if p_u = (w_{u,1}, ..., w_{u,|V|}) is the vector of u's weights to all vertices (its first-order connections as the 'context' view), then second-order proximity between u and v is measured by the similarity of p_u and p_v (e.g., via conditional probabilities p2(v_j|v_i) = w_{ij}/sum_k w_{ik} and minimizing KL divergence between these distributions). Thus, two vertices are second-order similar if they have shared neighbors and similar neighborhood structure, even when they are not directly linked to each other.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core idea (neighborhood-based similarity, shared neighbors, LINE's conditional distributions) is well established, but the exact wording and formal notation of the definition may vary across papers and I may be slightly imprecise on details.",
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "target": "neighborhood structure of vertice",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "network embedding",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "network structure",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "similarity of neighborhood network structures between vertice",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "KL divergence between conditional neighbor distribution",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "conditional probability p2(v_j|v_i) = w_ij / sum_k w_ik",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "shared neighbors between vertice",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "network neighborhood",
+      "type": "PRESERVE",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

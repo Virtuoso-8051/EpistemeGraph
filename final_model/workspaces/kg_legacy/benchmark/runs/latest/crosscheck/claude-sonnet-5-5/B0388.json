@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Hierarchical softmax reduces per-update cost from O(|V|) to O(log|V|) is attributed to the DeepWalk paper, but the evidence does not contain this.",
+    "The claim that DeepWalk is an online learner updated incrementally is partially supported by 'As an online algorithm', but the incremental-update detail is not in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer rejects the false premise that DeepWalk is described as especially stable, which fits the evidence. However, it adds details the evidence does not contain, such as hierarchical softmax complexity and the skip-gram specifics. It also never makes the key correction that the back-propagation and instability passage refers to older distributed representations, not DeepWalk. Some of these details are accurate background knowledge, but they are not drawn from the provided evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,92 @@
+{
+  "answer": "Because node2vec generates many more distinct random-walk contexts than LINE\u2019s edge-sampling objective, it can expose the classifier to a much richer set of neighborhood patterns on BlogCatalog, where labels are highly overlapping and depend on higher-order proximity. LINE\u2019s samples are effectively one-shot edge observations, so it cannot repeatedly reuse the same local structure to reinforce useful signals. node2vec\u2019s walk-based sampling therefore acts like a stronger data-augmentation mechanism, which helps the downstream classifier separate classes better and yields a much larger Macro-F1 improvement on BlogCatalog.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This explanation matches the standard intuition for node2vec versus LINE on overlapping-label social networks, but the exact causal wording depends on the specific experimental setup and paper interpretation.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "random-walk context",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge-sampling objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "classifier",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classifier",
+      "target": "richer set of neighborhood pattern",
+      "type": "EXPOSED_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "target": "highly overlapping label",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "target": "labels depend on higher-order proximity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "one-shot edge observation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "same local structure",
+      "type": "CANNOT_REUSE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "walk-based sampling",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk-based sampling",
+      "target": "stronger data-augmentation mechanism",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stronger data-augmentation mechanism",
+      "target": "downstream classifier",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "downstream classifier",
+      "target": "separate classes better",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "much larger Macro-F1 improvement",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "BlogCatalog",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.32934239544445953
+}

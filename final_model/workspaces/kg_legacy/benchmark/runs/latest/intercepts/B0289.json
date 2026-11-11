@@ -1,0 +1,68 @@
+{
+  "answer": "The premise is partly mistaken. scikit-learn's SpectralClustering does not use the modularity matrix. It builds a similarity (affinity) graph from the data (RBF kernel, k-nearest-neighbours, or a precomputed matrix) and forms a graph Laplacian from it, typically normalized. It then takes the eigenvectors for the smallest k eigenvalues of that Laplacian, which is equivalent to the largest eigenvectors of the normalized affinity. These eigenvectors form a spectral embedding, with each sample represented by its row of the eigenvector matrix (often row-normalized, as in Ng-Jordan-Weiss). Finally, k-means is run on these embedded points to produce cluster labels. The method is unsupervised clustering, not classification, so it does not directly classify new data. Modularity-matrix eigenvectors are used in a different method, Newman's spectral community detection for maximizing modularity, which is a separate algorithm.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I'm confident about how scikit-learn's SpectralClustering works (affinity, Laplacian, eigenvectors, then k-means) and that it does not use the modularity matrix, but I'm less certain of every implementation detail, such as default parameters and exact normalization choices.",
+  "triples": [
+    {
+      "source": "scikit-learn SpectralClustering",
+      "target": "modularity matrix",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "SpectralClustering",
+      "target": "affinity matrix",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SpectralClustering",
+      "target": "graph Laplacian",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph Laplacian",
+      "target": "eigendecomposition",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SpectralClustering",
+      "target": "spectral embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SpectralClustering",
+      "target": "k-means clustering",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SpectralClustering",
+      "target": "Community detection",
+      "type": "APPLIES_TO",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "SpectralClustering",
+      "target": "unsupervised clustering",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SpectralClustering",
+      "target": "Feature Representation",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "modularity matrix",
+      "target": "Community detection",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The most likely candidate is Bahmani, Chowdhury and Goel's work on fast incremental PageRank using stored random walks; the evidence concerns DeepWalk, not this paper.",
+    "That work reported update speedups over full recomputation of roughly one to two orders of magnitude on large real-world graphs such as Twitter-scale social networks; the evidence reports no measured speedup."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence only claims that updates can be done in sub-linear time and gives no measured speedup or benchmark. The answer invents a speedup of one to two orders of magnitude and attributes it to a different paper, though it hedges that these details are unverified and never says the passage reports no speedup.",
+  "judge_model": "claude-sonnet-5-5"
+}

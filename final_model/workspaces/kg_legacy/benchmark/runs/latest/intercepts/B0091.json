@@ -1,0 +1,44 @@
+{
+  "answer": "LINE (second-order proximity) defines the conditional probability of generating context vertex v_j given vertex v_i as a softmax over inner products: p2(v_j|v_i) = exp(u_j^T u_i) / \u03a3_{k\u2208V} exp(u_k^T u_i), where u_i is the embedding of v_i and u_j is the context embedding of v_j. This distribution is defined over the entire vertex set V, so the denominator sums over all vertices in the network.",
+  "confidence": 0.85,
+  "confidence_reasoning": "I am fairly confident this matches the softmax formulation over all vertices in LINE (Tang et al., 2015), though exact notation may vary across descriptions of the paper.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "softmax probabilitie",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "softmax probabilitie",
+      "target": "conditional probability of generating context vertex v_j given vertex v_i",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability of generating context vertex v_j given vertex v_i",
+      "target": "inner product",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex representation",
+      "target": "embedding of v_i",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability of generating context vertex v_j given vertex v_i",
+      "target": "entire vertex set V",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

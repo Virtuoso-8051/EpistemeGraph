@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Edge feature vectors were built from node embeddings using binary operators (Average, Hadamard, Weighted-L1, Weighted-L2).",
+    "A supervised binary classifier, logistic regression, was trained on the edge features.",
+    "The paper reports AUC and F1 results for link prediction.",
+    "The answer implies there is no 'Table 3' of heuristic scores in node2vec, but the evidence shows Table 3 lists link prediction heuristic scores."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly signals that the papers do not specify the classifier hyperparameters, and the evidence supports that heuristics serve as benchmarks rather than the decision mechanism. However, it attributes specific operators, logistic regression, and AUC/F1 reporting to the paper, none of which appear in the provided evidence, and it wrongly denies that Table 3 exists in node2vec.",
+  "judge_model": "claude-haiku-5-5"
+}

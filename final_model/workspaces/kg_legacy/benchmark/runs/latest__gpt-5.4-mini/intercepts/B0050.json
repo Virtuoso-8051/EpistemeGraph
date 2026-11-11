@@ -1,0 +1,38 @@
+{
+  "answer": "The second-order proximity between two vertices u and v is equal to 0 when they have no common neighbors, meaning their neighborhood vectors have no overlap and the sum over shared neighbors is zero.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This directly matches the standard definition of second-order proximity as being based on shared neighbors, so if there are none, the value is 0.",
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "target": "0",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "0",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertices u and v",
+      "target": "no common neighbor",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood vector",
+      "target": "no overlap",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sum over shared neighbor",
+      "target": "ZERO",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2104066448447145
+}

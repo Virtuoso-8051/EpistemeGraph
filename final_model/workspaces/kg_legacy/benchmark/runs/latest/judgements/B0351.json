@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE and Tang and Liu's latent social dimensions approach are described as learning from the YouTube social graph in an unsupervised way via random walks or edge-based proximity; the evidence does not mention LINE, and the Tang & Liu methods (social dimensions) are not described as unsupervised in the evidence.",
+    "Efficiency is attributed to negative sampling and scalability of random-walk sampling; the evidence does not mention negative sampling."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and says DeepWalk learns from random walks without labels, with labels used only downstream, which matches the evidence. It adds claims about LINE, Tang & Liu, and negative sampling that the evidence does not contain.",
+  "judge_model": "claude-sonnet-5-5"
+}

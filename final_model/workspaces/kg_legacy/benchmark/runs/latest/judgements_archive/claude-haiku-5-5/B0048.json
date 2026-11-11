@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI answer says performance degrades only modestly, but the evidence says performance declines slightly faster initially than in the missing-edges setting, with the rate of decrease slowing over time; 'only modestly' is a loose characterization that omits the faster initial decline.",
+    "The AI answer names biological networks such as protein-protein interaction networks as the application where robustness matters, whereas the paper names sensor networks with noisy measurements as the application for noisy-edge robustness; biological networks are mentioned only in the context of missing edges and expensive construction.",
+    "The AI answer claims embeddings stay useful for node classification or link prediction under noise, which the evidence does not state for this noisy-edge experiment (the evidence reports Macro-F1 on a classification setting)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence says node2vec declines slightly faster initially under noisy edges, then the decline slows, and that the robustness is useful in sensor networks with noisy measurements. The answer misstates the initial decline as merely modest and names biological networks instead of sensor networks as the key application, which is the core of the gold answer.",
+  "judge_model": "claude-haiku-5-5"
+}

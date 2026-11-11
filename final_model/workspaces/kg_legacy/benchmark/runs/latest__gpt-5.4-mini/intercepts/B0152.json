@@ -1,0 +1,26 @@
+{
+  "answer": "SkipGram in paper3 learns embeddings from local co-occurrence neighborhoods in sequences, i.e., nodes that appear within a fixed context window around a target node. node2vec in paper2 learns embeddings from neighborhoods induced by biased random walks on the graph, which can be tuned to capture either more breadth-first-like or depth-first-like structural neighborhoods. Despite this difference in neighborhood construction, both rely on the Skip-gram objective optimized with negative sampling.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This matches the standard formulations of Skip-gram-based graph embedding methods and node2vec\u2019s biased random-walk neighborhood definition, with only minor uncertainty about the exact paper labels.",
+  "triples": [
+    {
+      "source": "SKIPGRAM",
+      "target": "local co-occurrence neighborhood",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "neighborhoods induced by biased random walks on the graph",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Skip-gram objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2067130268483922
+}

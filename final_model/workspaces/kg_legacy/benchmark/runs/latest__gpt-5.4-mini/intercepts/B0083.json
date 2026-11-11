@@ -1,0 +1,80 @@
+{
+  "answer": "node2vec reduces start-node bias by not relying on a single walk from one source node. Instead, it launches many biased random walks from every node in the graph, so each node can appear as a context center and as a context neighbor during training. The learned embeddings are then optimized over these multiple walk samples, which makes the representation learning less dependent on any particular starting point. The random walk sampling is made efficient by using a second-order Markov walk with precomputed transition probabilities and alias sampling, so each step can be sampled in constant time after preprocessing.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This matches the standard node2vec procedure: multiple walks from all nodes reduce dependence on any one start node, and alias tables enable efficient O(1) sampling per step after preprocessing.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "start-node bias",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "many biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "many biased random walk",
+      "target": "every node in the graph",
+      "type": "LAUNCHED_FROM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "each node",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each node",
+      "target": "context center",
+      "type": "APPEARS_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each node",
+      "target": "context neighbor",
+      "type": "APPEARS_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned embedding",
+      "target": "multiple walk sample",
+      "type": "OPTIMIZES_OVER",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "multiple walk sample",
+      "target": "representation learning",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk sampling",
+      "target": "second-order Markov walk",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk sampling",
+      "target": "precomputed transition probabilitie",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk sampling",
+      "target": "alias sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias sampling",
+      "target": "constant time",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2451342249209164
+}

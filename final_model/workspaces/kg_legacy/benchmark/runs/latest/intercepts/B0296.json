@@ -1,0 +1,62 @@
+{
+  "answer": "The question's premise is mistaken. Node2vec does not use pure BFS or DFS sampling, and it is not more time-efficient than ordinary random walks. It uses second-order, biased random walks controlled by two parameters, p (return parameter) and q (in-out parameter). These walks interpolate between BFS-like behavior (local, structural-equivalence neighborhoods, favored by larger q) and DFS-like behavior (wider, homophily-oriented exploration, favored by smaller q). The walks remain random walks, and the bias requires computing transition probabilities that depend on the previous node, which adds cost. Precomputing alias tables for each second-order state can require substantial time and memory on large graphs. Efficiency comes mainly from using alias sampling for O(1) draws after preprocessing, and from tuning p and q to control exploration without changing walk length or count. Later work proposed on-the-fly or rejection-based sampling to reduce this overhead.",
+  "confidence": 0.85,
+  "confidence_reasoning": "I am confident that node2vec uses p/q-biased second-order random walks rather than pure BFS/DFS and that its precomputation cost is higher than that of unbiased walks, though I am less certain about the exact details of every efficiency claim.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "depth-first search",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk procedure",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node2vec parameter",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "breadth-first search",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "depth-first search",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "random walk",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Alias sampling",
+      "target": "O(1) draws after preprocessing",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Alias sampling",
+      "target": "precomputed alias tables for each second-order state",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "control of exploration without changing walk length or count",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

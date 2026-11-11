@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "BFS-like walks correspond to small q, while DFS-like walks correspond to large q / low q favors outward exploration (garbled and contradictory; the evidence contains no parameter conventions)",
+    "Structurally equivalent nodes are placed close together 'even if they are far apart in the network' (not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: BFS yields structural equivalence by sampling local neighborhoods (hubs, bridges), and DFS captures homophily and community structure. However, the answer adds p/q parameter details that the evidence does not give and that are internally inconsistent, plus an unsupported claim about structurally equivalent nodes being far apart in the network.",
+  "judge_model": "claude-sonnet-5-5"
+}

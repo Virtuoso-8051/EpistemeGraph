@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Advances in language modeling help via pretrained transformer encoders like BERT and GPT providing richer semantic encoders for text-attributed nodes and edges",
+    "Graph modeling feeds back into language modeling by supplying explicit structure, knowledge-graph information, and structural inductive biases improving factual consistency, reasoning, and entity-level understanding",
+    "The authors' argument is about transferable, context-aware embeddings (attributed to the authors)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence says language modeling advances yield better latent representations and that language modeling samples from an unobservable language graph, so insights from observable graphs may improve it. The answer instead invents specifics (BERT/GPT, knowledge graphs, factual consistency) and misses the unobservable-language-graph idea, though it does disclaim being a reconstruction.",
+  "judge_model": "claude-sonnet-5-5"
+}

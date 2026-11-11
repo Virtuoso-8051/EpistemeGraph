@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "BFS-like walks (small q) capture structural equivalence while DFS-like walks (large q) capture homophily; this reverses the evidence, where BFS emphasizes immediate-neighbor homophily and DFS captures distant structural-role similarity.",
+    "node2vec's gains over DeepWalk were largest on sparsely labeled graphs such as Flickr and YouTube, with tuned parameters favoring community-oriented exploration; the evidence does not report this.",
+    "Labels in these networks depend mainly on homophilous community structure; the evidence does not state this.",
+    "The BFS/DFS trade-off explains why DeepWalk underperforms on Flickr and YouTube; the evidence shows DeepWalk performing strongly there against its baselines."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer correctly says DeepWalk is node2vec with p=q=1, but it reverses the BFS/DFS similarity mapping and invents node2vec results on Flickr and YouTube. It also claims DeepWalk underperforms there, which contradicts the evidence of strong DeepWalk performance with sparse labels.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The network contains 18,772 nodes (evidence states 18,722 nodes)",
+    "The network covers papers from January 1993 to April 2003 (not stated in the evidence)",
+    "The network is SNAP's ca-AstroPh network (not stated in the evidence)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The node meaning (scientists) and edge meaning (collaboration on a paper) match the evidence, and the edge count of 198,110 is correct. However, the node count is misstated as 18,772 instead of 18,722, and the date range and SNAP attribution are not in the source papers.",
+  "judge_model": "claude-haiku-5-5"
+}

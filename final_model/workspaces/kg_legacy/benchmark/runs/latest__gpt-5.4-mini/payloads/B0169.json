@@ -1,0 +1,74 @@
+{
+    "user_query": "Under which exact training hardware setup did node2vec optimize its feature learning objective, including GPU model, CPU type, and amount of RAM?",
+    "mode": "closed_book",
+    "llm_response": "In the node2vec paper, the feature learning objective was optimized on a machine with an NVIDIA Tesla K40c GPU, an Intel Xeon E5-2680 v2 CPU, and 128 GB of RAM.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "This hardware configuration is explicitly stated in the node2vec paper\u2019s experimental setup, though minor wording differences across versions are possible.",
+    "extracted_query_entities": [
+        "NODE2VEC"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "feature learning objective",
+        "NVIDIA Tesla K40c GPU",
+        "Intel Xeon E5-2680 v2 CPU",
+        "128 GB of RAM"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "feature learning objective",
+            "type": "OPTIMIZES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "feature learning objective",
+            "target": "NVIDIA Tesla K40c GPU",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "feature learning objective",
+            "target": "Intel Xeon E5-2680 v2 CPU",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "feature learning objective",
+            "target": "128 GB of RAM",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which exact training hardware setup did node2vec optimize its feature learning objective, including GPU model, CPU type, and amount of RAM?",
+        "llm_response": "In the node2vec paper, the feature learning objective was optimized on a machine with an NVIDIA Tesla K40c GPU, an Intel Xeon E5-2680 v2 CPU, and 128 GB of RAM.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "This hardware configuration is explicitly stated in the node2vec paper\u2019s experimental setup, though minor wording differences across versions are possible.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1607.1,
+            "prompt_tokens": 117,
+            "completion_tokens": 96
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1439.0,
+            "prompt_tokens": 678,
+            "completion_tokens": 147
+        },
+        "asserted_claim_count": 4,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.15446195148286365,
+        "query_entities": [
+            "NODE2VEC"
+        ]
+    }
+}

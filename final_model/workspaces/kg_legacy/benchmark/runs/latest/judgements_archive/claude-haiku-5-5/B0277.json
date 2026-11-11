@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "DeepWalk is a static method that accumulates every arrived edge into one static graph (union of the stream) before running its pipeline, which the evidence does not describe; the evidence says the streaming variant can be implemented without knowledge of the entire graph and passes small walks directly to the representation learning code.",
+    "To handle new data, DeepWalk is typically retrained from scratch on each new snapshot rather than updated online; the evidence describes the streaming variant as updating the model directly, contradicting this.",
+    "The question's premise that DeepWalk builds the full graph before training is described as a 'reasonable description' of its offline behaviour, thereby accepting the false premise."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise that the full graph must be accumulated before training, whereas the source explicitly says the streaming variant needs no knowledge of the entire graph and feeds small walks directly into the model, updating it online. The claims about retraining from scratch and accumulating a union snapshot are not in the evidence and contradict the streaming description.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,60 @@
+{
+  "run_dir": "final_model\\workspaces\\kg_legacy\\benchmark\\runs\\latest",
+  "n_items": 400,
+  "label_distribution": {
+    "PARTIALLY_SUPPORTED": 222,
+    "SUPPORTED": 78,
+    "UNSUPPORTED": 100
+  },
+  "label_by_category": {
+    "BORDERLINE": 0.225,
+    "CROSS_DOC": 0.2,
+    "FACTUAL": 0.15,
+    "FALSE_PREMISE": 0.2125
+  },
+  "champion": "MonotoneHistGBM",
+  "promoted": true,
+  "test_S_final": {
+    "roc_auc": 0.7282051282051282,
+    "log_loss": 0.4015452741817615,
+    "brier": 0.12284627108751396,
+    "ece": 0.054017511754053754,
+    "f1_at_0.5": 0.35294117647058826,
+    "accuracy_at_0.5": 0.8493150684931506
+  },
+  "test_conformal": {
+    "coverage": 0.9178082191780822,
+    "coverage_supported": 0.9230769230769231,
+    "coverage_hallucinated": 0.9166666666666666,
+    "abstention_rate": 0.6986301369863014,
+    "selective_accuracy": 0.7272727272727273,
+    "n": 73
+  },
+  "llm_self_confidence_baseline": {
+    "roc_auc": 0.7967948717948719,
+    "log_loss": 0.6284028556720637,
+    "brier": 0.21606438356164387,
+    "ece": 0.3236986301369863,
+    "f1_at_0.5": 0.4888888888888889,
+    "accuracy_at_0.5": 0.684931506849315,
+    "ci95": {
+      "roc_auc": [
+        0.6117547123015873,
+        0.9269991789819376
+      ],
+      "log_loss": [
+        0.5196624260715109,
+        0.7614590195267475
+      ],
+      "brier": [
+        0.17164092465753422,
+        0.26828356164383566
+      ],
+      "ece": [
+        0.2558835616438356,
+        0.40068835616438353
+      ]
+    }
+  },
+  "results_csv": "final_model\\workspaces\\kg_legacy\\benchmark\\results.csv"
+}

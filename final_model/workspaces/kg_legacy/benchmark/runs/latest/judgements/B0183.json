@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "BlogCatalog was the network used for the visualization of vertices with similar neighborhoods",
+    "The paper's other datasets, such as the Protein-Protein Interaction network and Wikipedia, were not social networks"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence does support that DeepWalk was demonstrated on BlogCatalog, Flickr, and YouTube for multi-label classification. However, the answer treats the question as answerable, though the reference says the passage names no datasets for this property. It also adds unsupported specifics: BlogCatalog as the visualization network, and PPI and Wikipedia as other datasets that are not social networks.",
+  "judge_model": "claude-sonnet-5-5"
+}

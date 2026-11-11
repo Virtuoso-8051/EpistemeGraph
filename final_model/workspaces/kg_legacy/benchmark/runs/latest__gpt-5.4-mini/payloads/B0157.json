@@ -1,0 +1,85 @@
+{
+    "user_query": "Compare how LINE(2nd) and node2vec each exploit graph structure: which one is evaluated on word analogy using Wikipedia word networks, and which one reuses samples across source nodes to improve sampling efficiency?",
+    "mode": "closed_book",
+    "llm_response": "LINE(2nd) is the method evaluated on word analogy using Wikipedia word networks. node2vec is the method that reuses samples across source nodes to improve sampling efficiency.",
+    "llm_self_reported_accuracy": 0.98,
+    "llm_confidence_reasoning": "This matches the standard descriptions of the two methods in the literature: LINE(2nd) is tested on word analogy tasks with Wikipedia word networks, while node2vec uses biased random walks that can be reused across source nodes for more efficient sampling.",
+    "extracted_query_entities": [
+        "LINE",
+        "NODE2VEC",
+        "word analogy",
+        "Wikipedia word network",
+        "sampling efficiency",
+        "source node"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "NODE2VEC",
+        "word analogy",
+        "Wikipedia word network",
+        "sampling efficiency",
+        "source node"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "word analogy",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "Wikipedia word network",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "sampling efficiency",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "source node",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Compare how LINE(2nd) and node2vec each exploit graph structure: which one is evaluated on word analogy using Wikipedia word networks, and which one reuses samples across source nodes to improve sampling efficiency?",
+        "llm_response": "LINE(2nd) is the method evaluated on word analogy using Wikipedia word networks. node2vec is the method that reuses samples across source nodes to improve sampling efficiency.",
+        "llm_extraction_confidence": 0.98,
+        "llm_confidence_reasoning": "This matches the standard descriptions of the two methods in the literature: LINE(2nd) is tested on word analogy tasks with Wikipedia word networks, while node2vec uses biased random walks that can be reused across source nodes for more efficient sampling.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1666.7,
+            "prompt_tokens": 131,
+            "completion_tokens": 104
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1565.4,
+            "prompt_tokens": 665,
+            "completion_tokens": 160
+        },
+        "asserted_claim_count": 4,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.09336389814104352,
+        "query_entities": [
+            "LINE",
+            "NODE2VEC",
+            "word analogy",
+            "Wikipedia word network",
+            "sampling efficiency",
+            "source node"
+        ]
+    }
+}

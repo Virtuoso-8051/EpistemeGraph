@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "node2vec used r = 10 walks per node (with l = 80, k = 10, d = 128) - specific values are not in the evidence",
+    "The paper did not report a systematic comparison against smaller or larger values of r - contradicted by the evidence, which says the authors examined how the number of walks r affects performance",
+    "Sensitivity analyses focused on p, q, embedding dimensionality, and training-data fraction, implicitly excluding r - the evidence says r, l, and k were also examined"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is unanswerable from the passage, yet the answer invents specific values (r=10, l=80, k=10, d=128) that the evidence does not contain. It also claims no comparison over r was reported, which contradicts the evidence that the authors examined how r affects performance.",
+  "judge_model": "claude-sonnet-5-5"
+}

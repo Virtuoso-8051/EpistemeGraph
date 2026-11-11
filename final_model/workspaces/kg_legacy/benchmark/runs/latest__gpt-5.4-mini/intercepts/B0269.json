@@ -1,0 +1,50 @@
+{
+  "answer": "DeepWalk does not require the vertex frequency distribution to be known ahead of training in the usual setting. It learns embeddings by sampling random walks from the graph and using those walks to generate training pairs, so the vertex visitation frequencies are estimated implicitly during training. The only time you would need the vertex frequency distribution in advance is if you were trying to reproduce or analyze the exact negative-sampling/unigram distribution used by a particular implementation or theoretical derivation, rather than simply train DeepWalk on a graph.",
+  "confidence": 0.86,
+  "confidence_reasoning": "DeepWalk\u2019s standard algorithm does not need the vertex frequency distribution as an input, but implementation-specific details about negative sampling can make the exact distribution relevant.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "vertex frequency distribution",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "training pair",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex visitation frequencie",
+      "target": "vertex frequency distribution",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex frequency distribution",
+      "target": "negative-sampling/unigram distribution",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "negative-sampling/unigram distribution",
+      "target": "particular implementation",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative-sampling/unigram distribution",
+      "target": "theoretical derivation",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.24458155598673786
+}

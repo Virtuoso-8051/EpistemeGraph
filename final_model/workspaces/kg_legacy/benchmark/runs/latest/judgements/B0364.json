@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Second-order similarity depends only on the edge weights (accepts the false premise; the paper says second-order proximity is not determined by observed tie strength but by shared neighborhood structures)",
+    "LINE captures only local structure rather than true global similarity, and its second-order proximity is local, extending about two hops (contradicts the paper's claim that second-order proximity complements first-order proximity to preserve global structure)",
+    "The premise is only 'somewhat imprecise' because LINE is not strictly global (fails to correct the false premise as the paper does)",
+    "Pairs with no observed connection or common neighbors get no training signal, and negative sampling adds no information about unobserved relations (not stated in the evidence)"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer largely goes along with the false premise, saying second-order proximity depends only on edge weights and that LINE is local. The source says second-order proximity comes from shared neighborhood structure rather than observed tie strength, and that it is meant to capture global structure. Some formula details are standard but do not rescue the core claim.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "LINE-SGD requires careful learning-rate tuning (the evidence does not mention learning-rate tuning)",
+    "The original LINE uses alias sampling of edges (the evidence describes sampling proportional to weight but does not name an alias method)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast is well supported: LINE-SGD multiplies edge weights directly into gradients, while LINE samples edges proportionally to weight and treats them as binary. The answer adds two details, learning-rate tuning and alias sampling, that the evidence does not contain, so it is only partially supported.",
+  "judge_model": "claude-haiku-5-5"
+}

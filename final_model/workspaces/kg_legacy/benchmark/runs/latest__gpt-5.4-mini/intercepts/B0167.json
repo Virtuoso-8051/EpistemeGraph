@@ -1,0 +1,56 @@
+{
+  "answer": "In LINE, after simplifying the second-order proximity objective, the authors use the squared Euclidean distance between the context embedding of a vertex and the embedding of its observed context vertex, i.e. \\(d(\\mathbf{u}_i, \\mathbf{u}'_j)=\\|\\mathbf{u}'_j-\\mathbf{u}_i\\|_2^2\\). The resulting objective is\n\\[\nO_2 = -\\sum_{(i,j)\\in E} w_{ij}\\,\\log p_2(v_j\\mid v_i),\n\\]\nwith\n\\[\np_2(v_j\\mid v_i)=\\frac{\\exp(\\mathbf{u}'_j\\cdot \\mathbf{u}_i)}{\\sum_{k=1}^{|V|}\\exp(\\mathbf{u}'_k\\cdot \\mathbf{u}_i)}.\n\\]\nEquivalently, using the negative-sampling approximation, it is optimized via the logistic loss on the dot product between \\(\\mathbf{u}_i\\) and \\(\\mathbf{u}'_j\\).",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the LINE paper\u2019s simplified second-order proximity formulation and the standard softmax objective, though exact notation can vary slightly across presentations.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "squared Euclidean distance",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "squared Euclidean distance",
+      "target": "context embedding",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "squared Euclidean distance",
+      "target": "observed context vertex",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "objective O2",
+      "target": "weighted network",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "objective O2",
+      "target": "conditional probability p2",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability p2",
+      "target": "dot product",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative-sampling approximation",
+      "target": "logistic loss",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "logistic loss",
+      "target": "dot product",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.11871687460444115
+}

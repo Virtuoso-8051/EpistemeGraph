@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "First-order proximity matches homophily-style ties in BlogCatalog, PPI and Wikipedia, and second-order proximity matches structural equivalence; the evidence does not map LINE's first-/second-order proximity onto homophily/structural equivalence, nor say these datasets illustrate first- and second-order proximity.",
+    "The answer says LINE preserves 'first-order and second-order proximity' as the two structure types illustrated by the datasets, whereas the gold answer says the datasets illustrate homophily and structural equivalence, with LINE preserving local and global structure; the answer never states the datasets' mixed homophily/structural-equivalence description precisely."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The definitions of first- and second-order proximity and LINE preserving both are supported by the evidence. The mapping to homophily/structural equivalence and the claim that the datasets illustrate these proximities are the answer's own inference, and it presents PPI and BlogCatalog as purely homophily-style for first-order, which oversimplifies the dataset descriptions.",
+  "judge_model": "claude-sonnet-5-5"
+}

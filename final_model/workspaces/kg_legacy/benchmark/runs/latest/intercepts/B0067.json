@@ -1,0 +1,38 @@
+{
+  "answer": "Increasing gamma (walks per vertex) improves DeepWalk's classification performance, because more random walks give more training co-occurrence samples and better coverage of each vertex's neighborhood. The gains show diminishing returns, and most of the benefit appears at roughly gamma \u2248 10 walks per vertex, with further increases adding comparatively little.",
+  "confidence": 0.4,
+  "confidence_reasoning": "The direction of the effect (improvement with diminishing returns) is well supported, but I am not certain of the specific value (~10) that the paper's sensitivity analysis reports.",
+  "triples": [
+    {
+      "source": "number of walks started per vertex",
+      "target": "DEEPWALK",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "target": "classification performance",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "training co-occurrence sample",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "target": "classification performance",
+      "type": "SHOWS_DIMINISHING_RETURNS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "target": "gamma \u2248 10",
+      "type": "APPROXIMATES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

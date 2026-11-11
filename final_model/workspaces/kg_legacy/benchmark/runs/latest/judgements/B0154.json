@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "LINE(2nd) trains directly on sampled edges and does not generate random walks (not stated in the provided evidence, though true background)",
+    "The answer claims it cannot identify the word analogy experiment or its running times, but the evidence reports 2.55h vs 16.64h"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer fails to give the reported running times (2.55h vs 16.64h) that the evidence clearly contains, so its core is non-responsive. Its general statements about node2vec's random-walk efficiency are loosely supported, but the LINE edge-sampling claim goes beyond the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

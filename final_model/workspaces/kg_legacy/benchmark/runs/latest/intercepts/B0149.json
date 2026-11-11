@@ -1,0 +1,56 @@
+{
+  "answer": "The passages are not included in the prompt, so I can't cite their specifics. In general, the Skip-gram objective predicts surrounding context words from a center (target) word: for each word, it maximizes the probability of each word within a fixed window around it, conditioned only on that center word, and the context words are treated as conditionally independent. A standard language-modeling objective instead predicts the next word from the preceding words (a left-to-right, autoregressive factorization, P(w_t | w_1...w_{t-1})). So Skip-gram goes from a center word to its neighbors in both directions, while language modeling goes from the past sequence to the next token. If Passage A and Passage B define these objectives differently, their specific formulations should take precedence over this general description.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The general descriptions of Skip-gram and language modeling are standard and accurate, but the passages were not provided, so I cannot verify that they match the specific formulations the question intends.",
+  "triples": [
+    {
+      "source": "Skip-gram objective",
+      "target": "probability of context words within a fixed window",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "surrounding context word",
+      "type": "PREDICTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "center word",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "context words conditionally independent",
+      "type": "ASSERTED_INDEPENDENCE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language modeling",
+      "target": "next word from preceding word",
+      "type": "PREDICTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language modeling",
+      "target": "left-to-right autoregressive factorization",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "prediction from center word to neighbors in both direction",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Passage A and Passage B",
+      "target": "specific formulations take precedence over general description",
+      "type": "DEFINED_AS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "For one million nodes the network has tens of millions of edges (the evidence says Erdos-Renyi graphs with average degree 10, so about 5 million edges for 1M nodes, not tens of millions).",
+    "The pipeline was run on a single multi-core machine; the evidence does not state the hardware."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: node2vec scales linearly, and one million nodes took under four hours, with parallelizable phases. However, the answer adds an unsupported edge count of tens of millions (the evidence implies roughly 5 million) and an unsupported single multi-core machine detail.",
+  "judge_model": "claude-sonnet-5-5"
+}

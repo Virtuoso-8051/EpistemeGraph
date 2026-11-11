@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The largest dataset in the LINE paper was a Twitter follower network (the evidence mentions Twitter only as background, not as an evaluated dataset).",
+    "Flickr has about 1.7 million vertices and 22.6 million edges (the evidence's Table 1 gives 80,513 vertices and 5,899,882 edges).",
+    "Flickr is among the largest datasets evaluated (in Table 1 it is smaller than YouTube in vertices, and far smaller than the ~2M-node network the evidence describes)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give exact counts for the largest dataset, which the papers do not clearly specify. However, it asserts a Twitter dataset as the largest and gives Flickr figures that contradict Table 1 of the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

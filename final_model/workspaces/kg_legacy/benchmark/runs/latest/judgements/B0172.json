@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The main multi-label classification experiments used BlogCatalog, Flickr, and YouTube, with Wikipedia (POS tags) as a further task (the evidence does not name these datasets for the DeepWalk paper's main experiments).",
+    "Baselines such as modularity, EdgeCluster, and wvRN were compared on these graphs (not in the evidence).",
+    "The paper reports Micro-F1 and Macro-F1 across varying training ratios, and the exact numbers are in Table 2 (the evidence's Table 2 is from a different paper, node2vec, and covers different datasets)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give exact numbers and does not invent accuracies, and the claim that DeepWalk beat spectral clustering when labeled data is sparse is supported. However, it names datasets and baselines that the evidence does not contain, and it points to a Table 2 that comes from a different paper (node2vec).",
+  "judge_model": "claude-sonnet-5-5"
+}

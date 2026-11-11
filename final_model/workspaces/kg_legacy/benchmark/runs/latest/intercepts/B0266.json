@@ -1,0 +1,38 @@
+{
+  "answer": "I can't see the study you're referring to, so this is a general answer rather than a summary of its specific model. In signed or weighted-graph embedding objectives, negative edge weights usually encode dissimilarity or opposition between nodes. The objective can then pull positively linked nodes together in the embedding space and push negatively linked nodes apart, instead of treating every edge as a similarity signal. This gives a more faithful representation of relational structure, separates nodes that are actively opposed or dissimilar, and can reduce false proximity from noisy or ambiguous links. If you share the paper's text or the relevant section, I can give a precise answer.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The study is not provided, so the answer rests on general knowledge of signed-network embedding methods and may not match this paper's specific mechanism.",
+  "triples": [
+    {
+      "source": "negative edge weight",
+      "target": "dissimilarity between node",
+      "type": "REPRESENTS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "embedding objective",
+      "target": "pulling positively linked nodes together in embedding space",
+      "type": "OPTIMIZES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "embedding objective",
+      "target": "pushing negatively linked nodes apart in embedding space",
+      "type": "OPTIMIZES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "negative edge weight",
+      "target": "relational structure",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "negative edge weight",
+      "target": "false proximity from noisy or ambiguous link",
+      "type": "REDUCES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

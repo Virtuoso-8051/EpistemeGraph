@@ -1,0 +1,194 @@
+{
+  "query_entities": [
+    "future work",
+    "training strategy",
+    "robustness",
+    "efficiency",
+    "DATASETS",
+    "TASKS",
+    "PRACTICE",
+    "improving the method itself",
+    "broadening its application",
+    "more complex or larger-scale scenario",
+    "additional dataset"
+  ],
+  "snapshot_source": "neo4j",
+  "seed_count": 4,
+  "node_count": 8,
+  "edge_count": 4,
+  "nodes": [
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "name": "Large-scale Information Network Embedding",
+      "type": "ALGORITHM",
+      "aliases": [
+        "1ST",
+        "1ST+2ND",
+        "2ND",
+        "LINE",
+        "LINE model",
+        "LINE(2ND",
+        "LSINE",
+        "Large-scale Information Network Embedding",
+        "network embedding model"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:2",
+      "name": "objective function",
+      "type": "CONCEPT",
+      "aliases": [
+        "EQN",
+        "OF",
+        "objective Eqn",
+        "objective function"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:62",
+      "name": "trivial solution",
+      "type": "CONCEPT",
+      "aliases": [
+        "TS",
+        "trivial solution"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:71",
+      "name": "efficiency",
+      "type": "CONCEPT",
+      "aliases": [
+        "efficiency"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:128",
+      "name": "supervised procedure",
+      "type": "CONCEPT",
+      "aliases": [
+        "SP",
+        "supervised procedure"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:129",
+      "name": "training time complexity",
+      "type": "CONCEPT",
+      "aliases": [
+        "TTC",
+        "training time complexity"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:616",
+      "name": "network classification performance",
+      "type": "CONCEPT",
+      "aliases": [
+        "NCP",
+        "network classification performance"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:618",
+      "name": "training data available",
+      "type": "CONCEPT",
+      "aliases": [
+        "TDA",
+        "TR",
+        "training data available"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:71",
+      "type": "EVALUATED_ON",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "We empirically evaluated the effectiveness and efficiency of the LINE.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_014"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:2",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:62",
+      "type": "HAS",
+      "weight": 0.92,
+      "grounding_score": 0.8895188522338867,
+      "evidence_quote": "For the objective function (3), there exists a trivial solution: uik =\u221e, for i=1,..., |V| and k = 1,...,d .",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_012"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:128",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:129",
+      "type": "CAUSES",
+      "weight": 0.92,
+      "grounding_score": 1.0,
+      "evidence_quote": "While this supervised procedure results in good accuracy, it comes at the cost of high training time complexity due to a blowup in the number of parameters that need to be estimated.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_003"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:618",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:616",
+      "type": "IMPROVES",
+      "weight": 0.78,
+      "grounding_score": 0.9136546564102173,
+      "evidence_quote": "We then vary the number of latent dimensions ( d), the number of walks started per vertex (\u03b3), and the amount of training data available (TR) to determine their impact on the network classification performance.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_017"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    }
+  ]
+}

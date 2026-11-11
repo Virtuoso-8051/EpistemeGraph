@@ -1,0 +1,15 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "Network is based on Knuth's Stanford GraphBase encoding (not in evidence)",
+    "Edges are undirected and join characters appearing in the same scene or chapter (specifics not in evidence)",
+    "Edges are commonly weighted by co-appearance frequency (not in evidence)",
+    "Embeddings typically around 128 dimensions - the paper's case study uses d = 16, contradicting the specific setup",
+    "Projection to 2D via PCA or t-SNE for visualization (paper visualizes the original network in 2D with cluster colors, not PCA/t-SNE)",
+    "Clusters correspond to main protagonists' circles (not stated precisely)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core facts (77 nodes, 254 edges, character coappearance, k-means clustering, p/q-biased walks with skip-gram) are supported. However, the answer adds unsupported details (Knuth's GraphBase, weighting, PCA/t-SNE) and says about 128 dimensions instead of the stated d = 16, which is a contradiction.",
+  "judge_model": "claude-sonnet-5-5"
+}

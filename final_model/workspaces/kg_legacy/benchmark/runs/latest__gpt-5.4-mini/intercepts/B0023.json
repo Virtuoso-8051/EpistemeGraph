@@ -1,0 +1,56 @@
+{
+  "answer": "DeepWalk learns node embeddings in an unsupervised way from the graph structure alone, so the representations are not tied to any single downstream task and can be reused across different tasks. With these embeddings, even a simple linear classifier such as logistic regression can achieve strong performance.",
+  "confidence": 0.96,
+  "confidence_reasoning": "This is a well-established property of DeepWalk: it produces task-agnostic graph embeddings, and linear classifiers are commonly reported to work well on top of them.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "node embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unsupervised way",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "graph structure",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "not tied to any single downstream task",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "different task",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "linear classifier",
+      "target": "logistic regression",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "logistic regression",
+      "target": "strong performance",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "logistic regression",
+      "target": "these embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.15378306171681622
+}

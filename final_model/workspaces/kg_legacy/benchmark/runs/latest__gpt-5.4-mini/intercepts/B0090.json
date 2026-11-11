@@ -1,0 +1,98 @@
+{
+  "answer": "In DeepWalk-style modeling, non-random walks are used as the node-sequence generator in place of ordinary unbiased random walks. They can be designed to follow specific rules or external signals\u2014such as node attributes, edge weights, timestamps, labels, or other domain constraints\u2014so the resulting sequences are then fed into the same skip-gram/word2vec-style objective to learn embeddings. Compared with using only ordinary graph structure, these walks can capture additional information beyond connectivity, such as semantic, temporal, weighted, or attribute-based relationships between nodes.",
+  "confidence": 0.88,
+  "confidence_reasoning": "This is a well-established extension of DeepWalk, though the exact kinds of non-random walks vary by method and application.",
+  "triples": [
+    {
+      "source": "DeepWalk-style modeling",
+      "target": "non-random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "ordinary unbiased random walk",
+      "type": "REPLACES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "node-sequence generator",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "node attribute",
+      "type": "FOLLOWS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "edge weight",
+      "type": "FOLLOWS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "timestamp",
+      "type": "FOLLOWS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "LABELS",
+      "type": "FOLLOWS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "domain constraint",
+      "type": "FOLLOWS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node-sequence",
+      "target": "skip-gram/word2vec-style objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram/word2vec-style objective",
+      "target": "embedding",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "semantic relationship",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "temporal relationship",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "weighted relationship",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-random walk",
+      "target": "attribute-based relationship",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "ordinary graph structure",
+      "target": "connectivity",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2430542299411441
+}

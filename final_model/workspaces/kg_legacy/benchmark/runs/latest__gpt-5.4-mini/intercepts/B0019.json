@@ -1,0 +1,74 @@
+{
+  "answer": "Node2vec\u2019s main goal is to learn node embeddings that capture both a node\u2019s local neighborhood and its broader structural role by sampling neighborhoods in a flexible, biased way. It does this by controlling random walks so they can behave more like BFS or more like DFS: BFS-like sampling stays close to the starting node and emphasizes homophily/local similarity, while DFS-like sampling explores farther away and emphasizes structural equivalence or role similarity. By tuning the walk bias, node2vec can interpolate between these two extremes.",
+  "confidence": 0.97,
+  "confidence_reasoning": "This is a standard, well-established description of node2vec\u2019s objective and its BFS/DFS biasing mechanism.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "node embedding",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node embedding",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "local neighborhood",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "structural role",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "flexible, biased neighborhood sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "BFS-like sampling",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "DFS-like sampling",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like sampling",
+      "target": "homophily",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like sampling",
+      "target": "structural equivalence",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "BFS",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "DFS",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.1386049119688624
+}

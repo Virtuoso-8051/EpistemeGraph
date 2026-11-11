@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "If the method uses transition probabilities proportional to w^\u03b3, increasing \u03b3 sharpens bias toward heavier edges (speculative; in the paper \u03b3 is the number of random walks per vertex, not an exponent)",
+    "The effect diminishes when edge weights are near uniform because \u03b3 then has no effect (not in evidence and based on wrong definition of \u03b3)",
+    "The effect levels off at extreme values where the walk becomes nearly deterministic (not in evidence; contradicts the actual finding that it slows after \u03b3 > 10)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The LINE claim (sampling edges proportional to weight) is supported, but the answer misdefines \u03b3 as a weight exponent, whereas the paper defines it as the number of walks per vertex, with diminishing returns beyond \u03b3 > 10. The core explanation of \u03b3's effect and when it diminishes is therefore unsupported and misses the key finding that the effect slows once \u03b3 exceeds 10; the answer also omits the conversion to binary edges.",
+  "judge_model": "claude-sonnet-5-5"
+}

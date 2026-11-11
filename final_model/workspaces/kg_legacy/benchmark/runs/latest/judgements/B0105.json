@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Simple learners (linear models, naive Bayes, shallow trees) reach good accuracy with less tuning, less data, and lower computational cost thanks to the features.",
+    "The benefit is largest with simple algorithms because they cannot learn complex structure from raw inputs on their own; the paper's stated reason is easy integration and scalability, not this."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The papers say the features work with any classifier and that their greatest utility is easy integration with simple ML algorithms, and that they scale to real-world networks. The answer's reasoning about informativeness, less tuning and data, and the limited capacity of simple learners is invented rather than found in the evidence, and it omits the scalability and easy-integration rationale.",
+  "judge_model": "claude-sonnet-5-5"
+}

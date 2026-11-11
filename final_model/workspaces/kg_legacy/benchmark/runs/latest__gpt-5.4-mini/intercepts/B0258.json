@@ -1,0 +1,80 @@
+{
+  "answer": "On the Facebook dataset, node2vec outperforms DeepWalk and LINE for link prediction when the embeddings are learned with biased random walks that preserve both local and more global neighborhood structure, and then combined for edge features using the Hadamard operator. In the reported experiments, this advantage is seen especially when the walk parameters are set to favor either breadth-first or depth-first exploration (i.e., nontrivial p and q settings), rather than the unbiased DeepWalk setting; under those conditions node2vec yields higher link-prediction accuracy than both DeepWalk and LINE.",
+  "confidence": 0.62,
+  "confidence_reasoning": "This is consistent with the known node2vec results on Facebook link prediction, but the exact experimental settings and comparative margins depend on the specific paper/table, so I am moderately confident rather than certain.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "LINE",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "link prediction",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Facebook dataset",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "local neighborhood structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "more global neighborhood structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Hadamard operator",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hadamard operator",
+      "target": "edge feature",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "breadth-first exploration",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "depth-first exploration",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "link-prediction accuracy",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2536556607200986
+}

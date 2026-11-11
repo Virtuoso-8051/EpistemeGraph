@@ -1,0 +1,56 @@
+{
+  "answer": "On the reconstructed YouTube network, LINE(2nd) is generally competitive with DeepWalk but tends to be slightly worse in the lower-degree groups and closer to DeepWalk in the higher-degree groups. In other words, DeepWalk usually has the edge for sparse/low-degree nodes, while LINE(2nd) narrows the gap as degree increases. The reconstructed dense network changes this pattern by making the graph much more connected, which reduces the disadvantage of low-degree nodes and makes the performance across degree groups more uniform; as a result, the difference between LINE(2nd) and DeepWalk becomes smaller and the degree-based variation is less pronounced.",
+  "confidence": 0.62,
+  "confidence_reasoning": "This is a high-level synthesis of the reported degree-group trend and the effect of densifying the reconstructed network, but the exact per-group values are not available here, so some wording is necessarily approximate.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "graph-specific deep network architecture",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "high-degree group",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "low-degree node",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "degree-based variation",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "reconstructed dense network",
+      "target": "more uniform performance across degree group",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "reconstructed dense network",
+      "target": "graph connectivity",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "reconstructed dense network",
+      "target": "performance difference between LINE(2nd) and DeepWalk",
+      "type": "PRESERVES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": 0.19547997350278107
+}

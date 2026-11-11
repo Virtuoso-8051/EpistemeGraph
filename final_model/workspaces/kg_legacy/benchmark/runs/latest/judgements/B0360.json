@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE samples edges using alias tables (the alias table detail is not in the provided evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and accurately describes edge sampling as the fix for weight-induced gradient explosion, and the evidence supports this. The alias-table detail is not in the provided evidence, although it is accurate to the original LINE paper, so it counts as a minor unsupported claim.",
+  "judge_model": "claude-sonnet-5-5"
+}

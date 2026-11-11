@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "node2vec's advantage over DeepWalk on PPI is largest when labeled data is scarce (10% labeled)",
+    "With 10% labeled, node2vec's Micro-F1 is roughly 20% higher than DeepWalk's on PPI, and the gap narrows as training fraction grows",
+    "Goes along with the false premise that the passage compares node2vec with DeepWalk on PPI at 10% labeled data (the 41.1% improvement is versus LINE)"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise and invents a DeepWalk comparison at 10% labeled data on PPI, whereas the source reports the up-to-41.1% PPI gain at 10% labeled data against LINE. The only supported claim is the general description of node2vec's biased walks, which does not address the question.",
+  "judge_model": "claude-sonnet-5-5"
+}

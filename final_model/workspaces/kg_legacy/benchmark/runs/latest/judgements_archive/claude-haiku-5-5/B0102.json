@@ -1,0 +1,13 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The passage isn't included in your message, so I can't quote it (false: the evidence is provided in the message)",
+    "Computing eigendecompositions costs roughly O(n^3) time and O(n^2) memory (not stated in the evidence; the evidence only says the time complexity is at least quadratic)",
+    "The objectives focus on preserving only local neighborhoods or pairwise distances, failing to capture higher-order structure and global properties (not stated; the evidence says the objectives are not robust to diverse patterns such as homophily and structural equivalence, and make assumptions about the network-task relationship)",
+    "They are often unable to embed new nodes without recomputation (not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer wrongly claims the passage is absent, then answers mostly from outside knowledge: scaling difficulty from eigendecomposition is loosely consistent with the evidence, but the specific complexity bounds and the local-neighborhood/new-node limitations are not in the source. The gold limitation (non-robustness to homophily and structural equivalence, and task assumptions) is missed.",
+  "judge_model": "claude-haiku-5-5"
+}

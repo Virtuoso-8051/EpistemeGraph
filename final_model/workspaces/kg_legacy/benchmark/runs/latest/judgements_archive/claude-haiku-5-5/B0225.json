@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The original node2vec paper evaluated on BlogCatalog, PPI, and Wikipedia (not in the provided evidence)",
+    "A rough guess that node2vec beat DeepWalk on Cora by about 2 to 3 percentage points (invented specific figure not in the evidence)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give a definitive figure, which matches the question being unanswerable from the provided passage. However, it adds an unverified numeric guess (2 to 3 points) and attributes specific datasets to the original paper that the evidence does not contain, though the dataset claim is consistent with general knowledge of node2vec.",
+  "judge_model": "claude-haiku-5-5"
+}

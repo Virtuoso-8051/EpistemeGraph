@@ -1,0 +1,44 @@
+{
+  "answer": "DeepWalk can be parallelized with asynchronous stochastic gradient descent because its training objective is a sum of many independent local skip-gram-style updates over random walks, so different workers can process different walk contexts at the same time with little coordination. The key property is that the gradient updates are sparse and only touch a small subset of the embedding parameters for the current node/context pair, which makes parameter conflicts rare and allows lock-free or weakly synchronized updates to work well.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a standard description of DeepWalk\u2019s training and asynchronous SGD; the main uncertainty is in the exact wording of the implementation details across sources.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "asynchronous stochastic gradient descent",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "independent local skip-gram-style update",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "gradient update",
+      "target": "embedding parameter",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "gradient update",
+      "target": "lock-free or weakly synchronized update",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.24801271226671007
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "scikit-learn's SpectralClustering builds an affinity graph with RBF kernel, kNN, or precomputed matrix and uses eigenvectors of its Laplacian (claims about sklearn implementation are textbook background, not from the papers)",
+    "Modularity-matrix eigenvectors are used in Newman's spectral community detection, a separate algorithm (not stated in the evidence, though uncontroversial background)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise: the paper states SpectralClustering uses the d-smallest eigenvectors of the normalized graph Laplacian, not the modularity matrix's top eigenvectors, and it identifies the modularity-based method as a separate baseline. The sklearn implementation details and Newman reference are uncontroversial textbook background rather than attributions to the papers, so they do not count against the answer.",
+  "judge_model": "claude-haiku-5-5"
+}

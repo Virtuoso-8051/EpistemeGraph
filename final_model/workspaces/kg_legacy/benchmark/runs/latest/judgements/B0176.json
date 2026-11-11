@@ -1,0 +1,12 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "About 8,051 labeled nodes were used by DeepWalk in the Flickr experiment at 10% training rate",
+    "The Flickr network has 80,513 nodes",
+    "10% of Flickr's nodes were labeled, as in DeepWalk's Flickr experiments"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is unanswerable from the passage, which only says 1% of Flickr has roughly as many labeled examples as 10% of BlogCatalog and never gives the exact count for Flickr at 10%. The answer invents a specific number and node count (80,513) that the evidence does not contain, rather than saying the papers do not report it.",
+  "judge_model": "claude-sonnet-5-5"
+}

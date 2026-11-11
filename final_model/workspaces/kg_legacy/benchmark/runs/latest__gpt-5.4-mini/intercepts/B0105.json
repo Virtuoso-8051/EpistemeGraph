@@ -1,0 +1,68 @@
+{
+  "answer": "The learned structural features are especially useful with simple machine learning algorithms because they turn complex, high-dimensional structure into a compact, informative representation that is easier for a basic classifier to separate. In other words, the feature learning does much of the hard work, so even a simple model like logistic regression, a linear SVM, or a shallow tree can perform well. They can still be used with any classifier, but they are particularly valuable when you want to avoid relying on a very complex model to discover the structure on its own.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a general machine-learning principle and the explanation is consistent with how learned representations are typically used, though the exact wording may depend on the source context.",
+  "triples": [
+    {
+      "source": "learned structural feature",
+      "target": "compact, informative representation",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "compact, informative representation",
+      "target": "basic classifier",
+      "type": "MAKES_EASIER",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning",
+      "target": "basic classifier",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning",
+      "target": "logistic regression",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning",
+      "target": "linear SVM",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning",
+      "target": "shallow tree",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned structural feature",
+      "target": "any classifier",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned structural feature",
+      "target": "simple machine learning algorithm",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned structural feature",
+      "target": "structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned structural feature",
+      "target": "complex model",
+      "type": "AVOIDS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.16886062622070314
+}

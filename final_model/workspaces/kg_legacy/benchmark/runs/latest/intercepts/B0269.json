@@ -1,0 +1,56 @@
+{
+  "answer": "DeepWalk needs the vertex frequency distribution before training when it uses hierarchical softmax, which is its default output layer. In that setting, the vertices are arranged in a Huffman coding tree built from their occurrence frequencies in the generated random-walk corpus, so the tree shape must be fixed before the skip-gram model is trained. If the model instead used full softmax or negative sampling (which draws from a unigram distribution), this upfront frequency-based tree construction would not be required, though negative sampling still needs frequency counts for its sampling distribution.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The Huffman-tree hierarchical softmax dependence matches the original DeepWalk paper, but the question's exact intended framing and the negative-sampling caveat are less certain.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "HS",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HS",
+      "target": "DEEPWALK",
+      "type": "IS_A",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "VERTEX",
+      "target": "HS",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HS",
+      "target": "VERTEX",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SGM",
+      "target": "HS",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NS",
+      "target": "VERTEX",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NS",
+      "target": "VERTEX",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "HS",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

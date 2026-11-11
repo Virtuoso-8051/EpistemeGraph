@@ -1,0 +1,13 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Optimal dimensionality grows (shifts upward) with the amount of labeled training data; the evidence only says it depends on the number of training examples, not the direction.",
+    "With little training data, lower-dimensional embeddings perform best because higher dimensions overfit; no such trend or overfitting explanation appears in the evidence.",
+    "As training fraction increases, higher dimensions become beneficial; the direction of the shift is not stated in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence supports only that the optimal dimensionality depends on the number of training examples. The answer adds a specific direction (higher dimensions with more data) and an overfitting explanation that the evidence does not contain, though it hedges about verification.",
+  "partial_support_note": "The core dependence claim is supported, but the specifics are not.",
+  "judge_model": "claude-sonnet-5-5"
+}

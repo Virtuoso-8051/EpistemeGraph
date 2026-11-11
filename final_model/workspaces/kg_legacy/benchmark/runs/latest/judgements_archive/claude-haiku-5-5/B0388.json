@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk learns node embeddings by running skip-gram (Word2Vec) over random-walk sequences optimized with SGD, with advantages from hierarchical softmax reducing per-update cost from O(|V|) to O(log|V|) (evidence does not mention skip-gram, Word2Vec, or hierarchical softmax explicitly)",
+    "Older distributed graph representations such as Laplacian eigenmaps were not trained by back-propagation or SGD and used closed-form eigendecompositions (evidence does not contain this; the spectral clustering baseline is described as eigenvectors of the normalized Laplacian, and the evidence actually describes distributed representations as trained by back-propagation and gradient descent)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that DeepWalk's back-propagation training is especially stable, and it correctly notes DeepWalk is an online, scalable method. However, several specifics about skip-gram, hierarchical softmax, and the training method of older graph representations are not in the provided evidence, and the claim that older methods were not trained by back-propagation conflicts with the source's statement that distributed representations were trained by back-propagation and gradient descent.",
+  "judge_model": "claude-haiku-5-5"
+}

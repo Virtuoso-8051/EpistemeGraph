@@ -1,0 +1,110 @@
+{
+    "user_query": "Under what conditions does parallelizing DeepWalk preserve predictive performance, and what speedup behavior is reported for the BlogCatalog and Flickr networks?",
+    "mode": "closed_book",
+    "llm_response": "Parallelizing DeepWalk preserves predictive performance when the parallel implementation generates essentially the same random walks and trains the embeddings with the same objective/optimization setup as the original method, so that the only change is how the work is distributed across threads or machines rather than changing the model itself. In the reported results, the parallel version achieves near-linear speedup on both BlogCatalog and Flickr, with the speedup increasing almost proportionally as more processors are used.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This answer reflects the standard reported claim about parallel DeepWalk and its benchmark behavior, but I am not fully certain of the exact wording or whether the paper reports strictly linear versus near-linear speedup for both datasets.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "BlogCatalog",
+        "FLICKR"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "BlogCatalog",
+        "FLICKR",
+        "Parallelizing DeepWalk",
+        "predictive performance",
+        "parallel implementation",
+        "random walk",
+        "same objective/optimization setup",
+        "work across threads or machine",
+        "parallel version",
+        "near-linear speedup",
+        "SPEEDUP",
+        "processor"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "Parallelizing DeepWalk",
+            "target": "predictive performance",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "parallel implementation",
+            "target": "random walk",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "parallel implementation",
+            "target": "same objective/optimization setup",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "parallel implementation",
+            "target": "work across threads or machine",
+            "type": "DISTRIBUTES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "parallel version",
+            "target": "near-linear speedup",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "parallel version",
+            "target": "BlogCatalog",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "parallel version",
+            "target": "FLICKR",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "SPEEDUP",
+            "target": "processor",
+            "type": "INCREASES_PROPORTIONALLY_WITH",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under what conditions does parallelizing DeepWalk preserve predictive performance, and what speedup behavior is reported for the BlogCatalog and Flickr networks?",
+        "llm_response": "Parallelizing DeepWalk preserves predictive performance when the parallel implementation generates essentially the same random walks and trains the embeddings with the same objective/optimization setup as the original method, so that the only change is how the work is distributed across threads or machines rather than changing the model itself. In the reported results, the parallel version achieves near-linear speedup on both BlogCatalog and Flickr, with the speedup increasing almost proportionally as more processors are used.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This answer reflects the standard reported claim about parallel DeepWalk and its benchmark behavior, but I am not fully certain of the exact wording or whether the paper reports strictly linear versus near-linear speedup for both datasets.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2806.9,
+            "prompt_tokens": 116,
+            "completion_tokens": 151
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1960.0,
+            "prompt_tokens": 717,
+            "completion_tokens": 268
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.27331614001043913,
+        "query_entities": [
+            "DEEPWALK",
+            "BlogCatalog",
+            "FLICKR"
+        ]
+    }
+}

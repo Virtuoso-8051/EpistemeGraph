@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Combining the two orders (concatenating the embeddings) is reported to improve over either alone (evidence only says LINE(1st+2nd) is applied to supervised tasks, not word analogy, and reports no such improvement).",
+    "First-order proximity is a weaker signal for analogy relations, whereas second-order shared contexts better support analogical structure (a mechanistic explanation not stated in the evidence)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly says LINE(2nd) outperforms LINE(1st) (66.10 vs 53.35 overall), but it never states that LINE(1st) uses only first-order proximity. It also adds unsupported claims about the benefit of combining orders and the mechanism behind the gap.",
+  "judge_model": "claude-sonnet-5-5"
+}

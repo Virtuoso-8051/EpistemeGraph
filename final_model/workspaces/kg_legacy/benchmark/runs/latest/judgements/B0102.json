@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Eigendecomposition costs roughly O(n^3) time and O(n^2) memory on dense n\u00d7n matrices (specific complexity not in evidence; evidence says at least quadratic)",
+    "The additional limitation is that objectives preserve only local neighborhoods/pairwise distances/single fixed proximity, failing to capture higher-order and global structure (gold says lack of robustness to diverse patterns like homophily and structural equivalence and assumptions about the structure-task relationship)",
+    "These methods are often unable to embed new nodes without recomputation (not in evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The scalability point (expensive eigendecomposition/matrix computation, not scaling to millions of nodes) is consistent with the evidence. However, the stated additional limitation (local-only preservation, no out-of-sample embedding) differs from the source's limitation (non-robust objectives and assumptions about structure-task relationship), and the specific complexity figures are not supported.",
+  "judge_model": "claude-sonnet-5-5"
+}

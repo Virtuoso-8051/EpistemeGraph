@@ -1,0 +1,10 @@
+{
+  "claims_checked": 1,
+  "unsupported_claims": [
+    "The LINE authors used d = 128 in their main experiments on large-scale information networks."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is not answerable from the provided evidence, which only defines the embedding space R^d with d much smaller than |V| and never fixes a value for the main large-scale experiments. The answer '128' comes from a different sentence about other networks' defaults (citing [16]) and is presented as the authors' choice for the main experiments, which the evidence does not support; a faithful answer would say the papers do not report it.",
+  "judge_model": "claude-haiku-5-5"
+}

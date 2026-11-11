@@ -1,0 +1,98 @@
+{
+  "answer": "node2vec controls the search space by using a second-order biased random walk: when the walk moves from node t to node v, the next step to a neighbor x is weighted by a bias that depends on the distance from x to the previous node t. This bias is governed by two parameters, often described as return and in-out controls: one encourages immediately revisiting the previous node, while the other encourages exploring outward or staying close to the current neighborhood. As a result, node2vec can interpolate between breadth-first-like walks that emphasize local neighborhoods and depth-first-like walks that explore farther parts of the graph.\n\nLINE addresses network sparsity by using truncated random walks to generate additional local co-occurrence information from sparse graphs. In its first-order proximity variant, LINE preserves direct edge relationships between adjacent nodes, while in its second-order proximity variant it preserves similarity between a node and the context distribution of its neighbors. The truncated random walks help alleviate sparsity by sampling short local paths so that nodes that are not directly connected can still appear together in training contexts, providing more robust co-occurrence signals for the second-order model and, more generally, enriching the sparse observed network structure.",
+  "confidence": 0.86,
+  "confidence_reasoning": "The description of node2vec\u2019s biased second-order random walks and LINE\u2019s first- versus second-order proximity objectives is standard and well established, though the exact phrasing about truncated random walks in LINE can vary across summaries of the method.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "second-order biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order biased random walk",
+      "target": "control the search space",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BIAS",
+      "target": "distance from x to the previous node t",
+      "type": "DEPENDS_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return and in-out control",
+      "target": "BIAS",
+      "type": "GOVERNES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return control",
+      "target": "immediately revisiting the previous node",
+      "type": "ENCOURAGES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out control",
+      "target": "exploring outward or staying close to the current neighborhood",
+      "type": "ENCOURAGES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "breadth-first-like walk",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "depth-first-like walk",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "target": "additional local co-occurrence information",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "direct edge relationships between adjacent node",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "similarity between a node and the context distribution of its neighbor",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "target": "nodes that are not directly connected can still appear together in training context",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "target": "robust co-occurrence signals for the second-order model",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "target": "sparse observed network structure",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.22600648867203885
+}

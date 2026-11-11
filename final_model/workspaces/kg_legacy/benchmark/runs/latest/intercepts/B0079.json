@@ -1,0 +1,38 @@
+{
+  "answer": "In the paper's Table 4 case study, first-order proximity tends to return words that are strongly and directly related to the query, such as close synonyms or tight semantic neighbours. Second-order proximity tends to return words that appear in similar contexts, which gives broader or more topical associations. I could not verify the exact entries of the table, so this is a general characterization rather than a line-by-line comparison.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I recall the general distinction the LINE paper draws between first- and second-order proximity, but I cannot reliably recall the exact contents of Table 4, so the specific characterization may be inaccurate.",
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "target": "words strongly and directly related to the query",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "close synonym",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "tight semantic neighbour",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "words that appear in similar context",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "broader or more topical association",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

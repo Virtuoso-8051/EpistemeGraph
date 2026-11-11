@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE is more flexible than DeepWalk in its neighborhood exploration, which answers the question's false premise.",
+    "LINE can reach nodes at a range of distances, including deeper neighborhoods, and its context scope is set by proximity order and edge sampling rather than a fixed walk length.",
+    "LINE uses explicit first- and second-order proximity objectives with weighted edge sampling and negative sampling, which the evidence does not describe."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence states that LINE is a rigid, breadth-first strategy limited to 1-hop and 2-hop neighbors with no flexibility at further depths, yet the answer's core argument affirms that LINE is more flexible and reaches deeper neighborhoods. The closing hedge that the premise is non-standard does not undo the answer's acceptance of the false premise in its main reasoning.",
+  "judge_model": "claude-haiku-5-5"
+}

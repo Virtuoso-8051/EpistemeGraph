@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE fails to scale on a typical single machine when the graph has millions of nodes and very many edges (accepts the false premise as its core conclusion)",
+    "LINE's training relies on alias tables requiring memory proportional to edges and nodes, which strains a single machine for hundreds of millions of edges",
+    "LINE is a shallow, structure-only method that can be inefficient or yield poor quality when many more samples are needed to converge",
+    "The answer characterizes LINE's runtime as prohibitive on one machine, contradicting the paper's claim of learning millions of vertices and billions of edges in a few hours on a typical single machine"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly states that LINE is efficient and can learn embeddings for networks with millions of vertices and billions of edges in a few hours on a typical single machine, so the answer's central claim that it fails in this setting is contradicted. The answer accepts the false premise and invents limitations (alias-table memory, prohibitive runtime) that the papers do not report.",
+  "judge_model": "claude-haiku-5-5"
+}

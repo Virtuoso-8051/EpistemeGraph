@@ -1,0 +1,68 @@
+{
+  "answer": "In node2vec, the source-neighborhood dot product is asymmetric because the model uses two different embedding roles: one vector for a node when it appears as the source/center node, and a separate vector when it appears as a context/neighbor node. So the score is typically computed as the dot product between the source embedding of node u and the context embedding of node v, which is not the same as swapping them if the two embedding sets are different. This asymmetry helps because the model can learn different representations for \u201cbeing the source\u201d versus \u201cbeing a neighbor,\u201d allowing it to capture direction-like or role-specific relationships and avoid forcing a node to look identical in both positions. As a result, the model can better distinguish the source node from its surrounding neighbors and represent their interactions more flexibly than a single shared embedding would.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a standard property of node2vec/skip-gram-style models with separate input and output embeddings, and the explanation follows directly from that design.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "two different embedding role",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "source-neighborhood dot product",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "source embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "context embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "source embedding",
+      "target": "context embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "different representations for being the source versus being a neighbor",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "direction-like or role-specific relationship",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "source node distinction from surrounding neighbor",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "ability to distinguish the source node from its surrounding neighbor",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "more flexible representation of interactions than a single shared embedding",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.19185868749078713
+}

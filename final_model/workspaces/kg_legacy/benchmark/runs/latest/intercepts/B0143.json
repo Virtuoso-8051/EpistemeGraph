@@ -1,0 +1,74 @@
+{
+  "answer": "DeepWalk (Perozzi et al., 2014) reports its advantage when labeled data is sparse. In its BlogCatalog and related classification experiments, it outperforms spectral-clustering and modularity-based baselines most clearly when only a small fraction of nodes (e.g., around 10%) is labeled for training, and its representations also hold up when the network has missing edges. This is a sparsity-of-labels advantage, not a claim about sparse graphs. LINE (Tang et al., 2015) instead emphasizes scalability: it is explicitly designed for very large information networks, with edge sampling and negative sampling that let it handle millions of vertices and billions of edges, and it supports weighted and directed graphs. So DeepWalk's stated strength is performance under scarce supervision, while LINE's stated strength is efficient scaling to large graphs. The two papers stress different axes, and LINE's scalability claim is more explicit than DeepWalk's.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The DeepWalk sparse-label finding and LINE's large-scale design are well known, but exact wording, experimental details, and the characterization of DeepWalk's scalability claims are from memory and may be imprecise.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "Spectral clustering",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Modularity",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "sparse labeled data",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "representations under missing edge",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "very large information network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "Edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "Negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "handling of millions of vertices and billions of edge",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "weighted and directed graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Network Embedding",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,15 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE was designed for undirected and/or unweighted graphs",
+    "LINE's first-order proximity assumes symmetry and so cannot represent edge direction (presented as a limitation making it unsuitable for directed networks)",
+    "LINE's second-order proximity captures in-/out-role structure only in a limited, undirected sense",
+    "LINE's edge sampling treats edges as unweighted, so weight information is not captured",
+    "LINE is unsuitable for directed and weighted networks",
+    "Directed/weighted extensions are needed to make LINE preserve direction and edge strength"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise and asserts that LINE is unsuitable for directed and weighted networks. The source explicitly states LINE suits arbitrary network types (undirected, directed, and/or weighted), and its edge-sampling algorithm handles weighted edges, so the answer contradicts the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

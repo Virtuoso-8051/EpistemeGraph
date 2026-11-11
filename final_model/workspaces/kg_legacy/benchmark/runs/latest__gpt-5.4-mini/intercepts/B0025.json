@@ -1,0 +1,62 @@
+{
+  "answer": "The passage says DeepWalk\u2019s randomness becomes especially noisy when the graph is very sparse, because the random walks have too little structure to learn from. In the visualization results, graph factorization is described as producing a cleaner, more stable embedding than DeepWalk, while DeepWalk\u2019s embedding is more scattered and noisy.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This answer is based on the passage\u2019s stated comparison and condition, but I cannot verify the exact wording without the source text.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "randomness",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "randomness",
+      "target": "NOISY",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "graph very sparse",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "too little structure to learn from",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "DEEPWALK",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "cleaner embedding",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "more stable embedding",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "more scattered embedding",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "noisy embedding",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.20725152044012995
+}

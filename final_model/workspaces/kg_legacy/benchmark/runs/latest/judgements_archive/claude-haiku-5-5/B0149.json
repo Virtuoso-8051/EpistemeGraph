@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI answer claims the passages are not included in the prompt and therefore cannot be cited; the evidence is in fact provided, so the answer fails to use the passages.",
+    "The AI answer describes Skip-gram as predicting context words from a center word, which is general background and not a faithful description of Passage A's node-neighborhood objective conditioned on feature vector f(u).",
+    "The AI answer does not state that Passage A predicts a node's sampled neighborhood conditioned on the node's feature vector, which is the core of the gold answer.",
+    "The AI answer does not state that Passage B predicts the next vertex from preceding vertices in a random walk and then the relaxed formulation of one word predicting its surrounding context, which is the core of the gold answer."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer wrongly claims the passages are absent and gives only generic background rather than the specific paper content. Its core description of the Skip-gram and language-modeling objectives does not match the gold answer's comparison of predicting a sampled neighborhood from a node's features versus predicting the next vertex or context from preceding words.",
+  "judge_model": "claude-haiku-5-5"
+}

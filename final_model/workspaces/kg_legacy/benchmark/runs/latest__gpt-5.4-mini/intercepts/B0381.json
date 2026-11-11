@@ -1,0 +1,74 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding) is designed to scale well, but it can still fail to handle networks with millions of nodes on a typical single machine when the graph is too large to fit comfortably in memory or when the training cost becomes too high. In particular, it becomes problematic if the network has very many edges, high-dimensional embeddings, or requires repeated passes over the data, because the edge list, alias tables/sampling structures, and embedding parameters can exceed RAM and the optimization can become too slow. So, on a single ordinary machine, LINE may fail to scale when the graph is extremely large and dense enough that memory and runtime limits are exceeded.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a high-level summary of LINE\u2019s practical scaling limits; the exact threshold depends on hardware and graph size/density, so the general statement is reliable but not universally precise.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "scales well",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "networks with millions of node",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "typical single machine",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "graphs too large to fit comfortably in memory",
+      "type": "FAILS_TO_SCALE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "training cost becomes too high",
+      "type": "FAILS_TO_SCALE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "networks with very many edge",
+      "type": "BECOMES_PROBLEMATIC_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "high-dimensional embedding",
+      "type": "BECOMES_PROBLEMATIC_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "repeated passes over the data",
+      "type": "BECOMES_PROBLEMATIC_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "RAM",
+      "type": "CAN_EXCEED",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "optimization",
+      "type": "CAN_BECOME_TOO_SLOW_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "graph is extremely large and dense enough that memory and runtime limits are exceeded",
+      "type": "MAY_FAIL_TO_SCALE_WHEN",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2577795018263853
+}

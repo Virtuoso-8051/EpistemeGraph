@@ -1,0 +1,86 @@
+{
+  "answer": "The learned structural features already capture the relevant patterns in the data, so the representation does much of the work that a complex model would otherwise have to do. Because the features are informative and make classes more separable, even simple, low-capacity learners (such as linear models, naive Bayes, or shallow decision trees) can reach good accuracy, with less tuning, less data, and lower computational cost. The features can be used with any classifier, but the benefit is largest with simple algorithms that cannot learn complex structure from raw inputs on their own.",
+  "confidence": 0.4,
+  "confidence_reasoning": "The question refers to a specific source I cannot identify, so this is a general explanation of why good learned features help simple classifiers rather than a verified claim from that source.",
+  "triples": [
+    {
+      "source": "learned structural feature",
+      "target": "relevant patterns in the data",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned structural feature",
+      "target": "simple low-capacity learners reach good accuracy",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned structural feature",
+      "target": "informative",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned structural feature",
+      "target": "class separability",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simple machine learning algorithm",
+      "target": "less tuning",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simple machine learning algorithm",
+      "target": "less data",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simple machine learning algorithm",
+      "target": "lower computational cost",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "linear model",
+      "target": "simple low-capacity learner",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "naive Baye",
+      "target": "simple low-capacity learner",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "shallow decision tree",
+      "target": "simple low-capacity learner",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned structural feature",
+      "target": "any classifier",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simple algorithm",
+      "target": "complex structure learning benefit",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simple algorithm",
+      "target": "learned structural feature",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

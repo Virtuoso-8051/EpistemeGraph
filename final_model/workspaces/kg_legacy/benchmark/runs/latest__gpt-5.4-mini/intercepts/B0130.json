@@ -1,0 +1,92 @@
+{
+  "answer": "In paper 3, SkipGram uses Hierarchical Softmax when the output vocabulary is large and a full softmax would be too expensive; the model replaces the flat normalization over all words with a binary tree, so predicting a target word requires only O(log |V|) decisions along a root-to-leaf path. In the word2vec setting, this is the standard efficiency trick used for training SkipGram on large corpora.\n\nPaper 2 (node2vec) argues that a single notion of neighborhood is not enough for graphs that contain both homophily-based communities and structural-equivalence roles. To address this, it designs a biased random-walk neighborhood sampler that can interpolate between breadth-first-like exploration, which stays near the source and captures community structure, and depth-first-like exploration, which moves outward and captures nodes with similar structural positions. This motivates learning embeddings from neighborhoods that are not fixed a priori, but are adaptively sampled to reflect either local community context or broader structural similarity depending on the walk bias.",
+  "confidence": 0.92,
+  "confidence_reasoning": "These points are standard descriptions of hierarchical softmax in word2vec/SkipGram and of node2vec\u2019s BFS-vs-DFS biased random-walk motivation, so I am highly confident, though exact wording may vary by paper.",
+  "triples": [
+    {
+      "source": "SKIPGRAM",
+      "target": "Hierarchical Softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "target": "efficiency",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "target": "standard efficiency trick",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "WORD2VEC",
+      "target": "SKIPGRAM",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random-walk neighborhood sampler",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random-walk neighborhood sampler",
+      "target": "breadth-first-like exploration",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random-walk neighborhood sampler",
+      "target": "depth-first-like exploration",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first-like exploration",
+      "target": "community structure",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first-like exploration",
+      "target": "nodes with similar structural position",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "single notion of neighborhood is not enough for graphs with both homophily-based communities and structural-equivalence role",
+      "type": "ARGUES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "learning embeddings from neighborhoods that are not fixed a priori",
+      "type": "MOTIVATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "adaptively sampled neighborhood",
+      "type": "MOTIVATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adaptively sampled neighborhood",
+      "target": "local community context",
+      "type": "REFLECT",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adaptively sampled neighborhood",
+      "target": "broader structural similarity",
+      "type": "REFLECT",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.23027837231811066
+}

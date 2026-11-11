@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The original paper used 80 walks per node for these datasets (the evidence shows parameter variation with \u03b3 and a default of \u03b3 = 40 for DeepWalk in other experiments, and the sensitivity analysis focuses on \u03b3 = 30 as sufficient, not 80)",
+    "The paper's sensitivity analyses show that gains flatten beyond a point after more walks and a suitable window (partially supported: the text says most benefit is achieved by starting \u03b3 = 30 walks, but the claim about the window is not clearly shown)",
+    "Skip-gram's behavior depends mainly on window size and number of walks, with walk length mattering only insofar as walks must cover the neighborhood (this is an interpretive claim not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly notes that fixed parameters were t=40 and w=10 in the sensitivity setup. However, it attributes an 80-walks-per-node figure to the original paper and makes interpretive claims about the window and flattening of gains that the evidence does not clearly state.",
+  "judge_model": "claude-haiku-5-5"
+}

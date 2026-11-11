@@ -1,0 +1,104 @@
+{
+  "answer": "DeepWalk learns node embeddings by treating random walks on the graph like sentences and training a skip-gram model to predict nearby nodes from a center node. Its parameters are the embedding vectors (and, in the standard skip-gram formulation, separate input/output embeddings). These parameters are optimized with stochastic gradient descent by repeatedly sampling short random walks, forming center-context pairs from a sliding window, computing the skip-gram loss for each pair, and then updating only the embeddings involved in that sampled training example. Because the objective is a sum over many local prediction terms, SGD uses one sampled pair or a small mini-batch at a time rather than the full graph, which makes training scalable.\n\nThe derivatives are obtained by differentiating the skip-gram objective with respect to the embedding vectors using standard backpropagation and the chain rule. In practice, the gradient for a sampled center-context pair is computed from the chosen output layer approximation, typically hierarchical softmax or negative sampling, so the update depends only on the nodes appearing in that example and any sampled negatives or tree nodes. Thus, DeepWalk does not derive gradients from the graph structure directly; it derives them from the skip-gram prediction loss built from random-walk-generated training pairs.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This is a standard description of DeepWalk\u2019s optimization and gradient computation, and the only minor uncertainty is the exact implementation choice for the output approximation (hierarchical softmax vs. negative sampling).",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "nearby nodes from a center node",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "embedding vector",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding vector",
+      "target": "input/output embedding",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding vector",
+      "target": "stochastic gradient descent",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "target": "short random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "target": "center-context pair",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "center-context pair",
+      "target": "skip-gram loss",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "target": "mini-batch",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram objective",
+      "target": "backpropagation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram objective",
+      "target": "chain rule",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GRADIENT",
+      "target": "hierarchical softmax",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GRADIENT",
+      "target": "negative sampling",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "graph structure",
+      "type": "DOES_NOT_USE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram prediction loss",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.21654366330558242
+}

@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The method precomputes and stores a set of short random walks starting from each node.",
+    "When an edge is added or removed, only the stored walks passing through the affected node(s) are identified and regenerated from the point of change onward.",
+    "The computational benefit is that walk-based embedding or PageRank-style estimates can be kept current at a cost far below recomputing all walks from scratch.",
+    "The paper's mechanism is a generic incremental random-walk approach, with the answer explicitly hedging that it is not based on the specific paper."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The AI answer's core idea (updating only walks in the changed region, with cost sub-linear in graph size) matches the evidence's statement that new random walks from the changed region can update the model in time sub-linear to the entire graph. However, it explicitly disclaims the source paper and adds specifics (stored walks per node, regeneration from the change point, PageRank-style estimates) that the evidence does not contain.",
+  "judge_model": "claude-haiku-5-5"
+}

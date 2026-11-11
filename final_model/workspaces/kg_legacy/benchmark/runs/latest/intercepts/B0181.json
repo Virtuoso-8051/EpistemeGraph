@@ -1,0 +1,44 @@
+{
+  "answer": "DeepWalk used 80 random walks per vertex (\u03b3 = 80), and the walk length was 40 (t = 40). These were the values used across its experiments, alongside a window size of 10 and 128-dimensional embeddings.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I recall these parameter values (\u03b3=80, t=40) from the DeepWalk paper's experimental setup with good but not perfect certainty, and I did not verify them against the text.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "number of walks started per vertex",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "target": "80",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "walk length",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "window size of 10",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "128-dimensional embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "experiments with the above parameter value",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

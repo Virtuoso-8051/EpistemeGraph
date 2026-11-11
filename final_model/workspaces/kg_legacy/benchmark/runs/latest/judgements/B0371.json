@@ -1,0 +1,13 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The answer attributes edge-sampling and binary treatment to LINE-SGD, accepting the false premise; in the paper, LINE-SGD uses direct gradient updates with weights multiplied into the gradients, and edge-sampling belongs to LINE.",
+    "Edge sampling applies when edges are weighted, and for binary networks ordinary gradient updates apply: this conditional framing implicitly goes along with the premise about LINE-SGD.",
+    "Alias sampling is not mentioned in the provided evidence."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly describes the paper's edge-sampling approach (the LINE model) and why direct SGD struggles with weighted edges. But it never corrects the premise that LINE-SGD does edge-sampling; LINE-SGD multiplies edge weights directly into the gradients. Because the answer implicitly accepts the false premise, the core of its response to the question is not faithful to the papers.",
+  "claims_checked_note": "Verdict leans partial because the descriptions of edge sampling itself are supported.",
+  "judge_model": "claude-sonnet-5-5"
+}

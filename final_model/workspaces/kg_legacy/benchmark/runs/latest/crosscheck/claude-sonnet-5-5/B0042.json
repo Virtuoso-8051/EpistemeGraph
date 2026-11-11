@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Multi-label classification is evaluated on BlogCatalog, PPI, and Wikipedia networks (dataset names not in the evidence)",
+    "Link prediction is evaluated on Facebook, PPI, and arXiv collaboration networks (dataset names not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim, multilabel node classification and link prediction, is directly supported by the evidence. The specific dataset names are not in the provided evidence, and the answer admits it relies on outside knowledge. The qualitative visualization claim is supported by the Les Mis\u00e9rables-style network discussion in the passage.",
+  "judge_model": "claude-sonnet-5-5"
+}

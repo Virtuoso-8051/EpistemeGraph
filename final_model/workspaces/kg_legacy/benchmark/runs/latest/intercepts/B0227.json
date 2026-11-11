@@ -1,0 +1,50 @@
+{
+  "answer": "LINE's experiments used K = 5 negative samples per edge (as I recall from the paper's parameter settings). The paper does not describe any effect of changing K beyond the stated per-step cost O(d(K+1)). Per step, the work grows linearly in K (and in the embedding dimension d), since each of the K negative edges adds one more O(d) update. There is no additional complexity term beyond this linear dependence.",
+  "confidence": 0.45,
+  "confidence_reasoning": "I am fairly sure of the O(d(K+1)) per-step complexity and of K=5 from memory, but I am not certain of the exact value or of the paper's wording on K's effects, and the question's premise of a further effect may be false.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "K = 5 negative samples per edge",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "per-step cost O(d(K+1",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "per-step cost O(d(K+1",
+      "target": "linear growth in K",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "per-step cost O(d(K+1",
+      "target": "linear growth in embedding dimension d",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "no additional complexity term beyond O(d(K+1",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "effect of changing K described in paper",
+      "type": "DEFINED_AS",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

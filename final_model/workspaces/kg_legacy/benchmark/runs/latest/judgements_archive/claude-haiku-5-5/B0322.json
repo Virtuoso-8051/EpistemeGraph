@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Relational classification uses the known labels of a node's neighbors and applies 'one shared function applied to every node'; the evidence describes inference over a Markov network to compute the posterior label distribution given structure, not a shared per-node function.",
+    "Relational classification's representation is 'built around the label distribution and is tuned to make label predictions accurate'; the evidence does not describe the classifier's representation in these terms."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer never explicitly corrects the false premise that the relational classification goal is to give each node the same representation, though its label-driven versus label-independent contrast matches the paper's framing. Its description of relational classification as using known neighbor labels through a shared per-node function goes beyond what the evidence states, and it does not clearly state the correction that the goal is learning low-dimensional structural representations.",
+  "judge_model": "claude-haiku-5-5"
+}

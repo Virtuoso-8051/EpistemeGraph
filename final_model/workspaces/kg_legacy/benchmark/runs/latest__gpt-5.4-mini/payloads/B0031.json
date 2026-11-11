@@ -1,0 +1,87 @@
+{
+    "user_query": "Under which condition does the second-order proximity between two vertices become 0, and how is this condition stated in terms of their shared links?",
+    "mode": "closed_book",
+    "llm_response": "The second-order proximity between two vertices becomes 0 when they have no shared links at all. In other words, the condition is that the two vertices share no common neighbors (their shared-link set is empty).",
+    "llm_self_reported_accuracy": 0.98,
+    "llm_confidence_reasoning": "This is a standard definition of second-order proximity: it is zero when there are no common neighbors/shared links between the two vertices.",
+    "extracted_query_entities": [
+        "second-order proximity",
+        "VERTICES",
+        "shared link",
+        "common neighbor",
+        "shared-link set"
+    ],
+    "extracted_response_entities": [
+        "second-order proximity",
+        "VERTICES",
+        "shared link",
+        "common neighbor",
+        "shared-link set",
+        "0",
+        "no shared links at all",
+        "two vertice",
+        "no common neighbor",
+        "empty set"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "second-order proximity",
+            "target": "0",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "no shared links at all",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "two vertice",
+            "target": "no common neighbor",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "shared-link set",
+            "target": "empty set",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which condition does the second-order proximity between two vertices become 0, and how is this condition stated in terms of their shared links?",
+        "llm_response": "The second-order proximity between two vertices becomes 0 when they have no shared links at all. In other words, the condition is that the two vertices share no common neighbors (their shared-link set is empty).",
+        "llm_extraction_confidence": 0.98,
+        "llm_confidence_reasoning": "This is a standard definition of second-order proximity: it is zero when there are no common neighbors/shared links between the two vertices.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2324.3,
+            "prompt_tokens": 117,
+            "completion_tokens": 89
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1383.4,
+            "prompt_tokens": 678,
+            "completion_tokens": 148
+        },
+        "asserted_claim_count": 4,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.16291753929781627,
+        "query_entities": [
+            "second-order proximity",
+            "VERTICES",
+            "shared link",
+            "common neighbor",
+            "shared-link set"
+        ]
+    }
+}

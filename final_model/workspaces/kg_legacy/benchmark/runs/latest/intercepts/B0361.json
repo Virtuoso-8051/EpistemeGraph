@@ -1,0 +1,80 @@
+{
+  "answer": "The question's premise is partly incorrect. Node2vec does not rely only on immediate neighborhoods. It learns embeddings from second-order biased random walks, with parameters p and q interpolating between breadth-first (local, closer to structural equivalence) and depth-first (broader, closer to homophily) exploration. It is also not trained on a dataset chosen specifically to evaluate structural equivalence in citation graphs. It is unsupervised and runs on whatever graph is provided. In the original paper (Grover & Leskovec, 2016), the structural-equivalence illustration used the Les Mis\u00e9rables character co-appearance network. Its experiments used BlogCatalog, PPI (protein-protein interaction), and Wikipedia co-occurrence networks for multi-label node classification, and Facebook, PPI, arXiv collaboration (ASTRO-PH, HEP-TH) networks for link prediction. The arXiv and HEP-TH collaboration networks are the closest citation-like datasets used.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident about node2vec's biased random walk design and the core datasets, but less certain of the exact dataset list and which graph was used for the structural-equivalence illustration.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "second-order biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "immediate neighborhoods only",
+      "type": "DOES_NOT_USE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "unsupervised",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p and q parameter",
+      "target": "breadth-first exploration",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p and q parameter",
+      "target": "depth-first exploration",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables character co-appearance network",
+      "target": "structural equivalence",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "protein-protein interaction",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Wikipedia co-occurrence network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "arXiv collaboration network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "arXiv HEP-TH collaboration network",
+      "target": "citation-like dataset",
+      "type": "REPRESENTS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

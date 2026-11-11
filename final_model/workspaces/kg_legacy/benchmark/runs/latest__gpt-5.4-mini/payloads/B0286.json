@@ -1,0 +1,148 @@
+{
+    "user_query": "How does LINE improve node classification accuracy on citation networks by focusing only on local network structure?",
+    "mode": "closed_book",
+    "llm_response": "LINE (Large-scale Information Network Embedding) improves node classification on citation networks by learning embeddings that preserve local neighborhood structure rather than relying on global graph properties. In practice, it models first-order proximity (directly connected nodes should have similar embeddings) and second-order proximity (nodes with similar neighbors should be close in embedding space). By focusing on these local relationships, LINE captures the most informative citation patterns around each paper, which produces embeddings that are useful as features for downstream node classification and often yields better accuracy than methods that emphasize only global structure or random-walk context.",
+    "llm_self_reported_accuracy": 0.92,
+    "llm_confidence_reasoning": "This is a standard description of LINE and its use of first- and second-order proximity for local-structure-preserving embeddings, so I am highly confident, though exact accuracy gains depend on the specific dataset and setup.",
+    "extracted_query_entities": [
+        "Large-scale Information Network Embedding",
+        "citation network",
+        "node classification",
+        "first-order proximity",
+        "second-order proximity",
+        "local neighborhood structure",
+        "global graph propertie",
+        "random-walk context",
+        "embedding"
+    ],
+    "extracted_response_entities": [
+        "Large-scale Information Network Embedding",
+        "citation network",
+        "node classification",
+        "first-order proximity",
+        "second-order proximity",
+        "local neighborhood structure",
+        "global graph propertie",
+        "random-walk context",
+        "embedding",
+        "directly connected nodes should have similar embedding",
+        "nodes with similar neighbors should be close in embedding space",
+        "citation pattern",
+        "features for downstream node classification",
+        "methods that emphasize only global structure",
+        "methods that emphasize random-walk context"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "node classification",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "local neighborhood structure",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "local neighborhood structure",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "global graph propertie",
+            "type": "DOES_NOT_RELY_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "first-order proximity",
+            "type": "MODELS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "directly connected nodes should have similar embedding",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "second-order proximity",
+            "type": "MODELS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "nodes with similar neighbors should be close in embedding space",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "citation pattern",
+            "type": "CAPTURES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "embedding",
+            "target": "features for downstream node classification",
+            "type": "ARE_USEFUL_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "methods that emphasize only global structure",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Large-scale Information Network Embedding",
+            "target": "methods that emphasize random-walk context",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does LINE improve node classification accuracy on citation networks by focusing only on local network structure?",
+        "llm_response": "LINE (Large-scale Information Network Embedding) improves node classification on citation networks by learning embeddings that preserve local neighborhood structure rather than relying on global graph properties. In practice, it models first-order proximity (directly connected nodes should have similar embeddings) and second-order proximity (nodes with similar neighbors should be close in embedding space). By focusing on these local relationships, LINE captures the most informative citation patterns around each paper, which produces embeddings that are useful as features for downstream node classification and often yields better accuracy than methods that emphasize only global structure or random-walk context.",
+        "llm_extraction_confidence": 0.92,
+        "llm_confidence_reasoning": "This is a standard description of LINE and its use of first- and second-order proximity for local-structure-preserving embeddings, so I am highly confident, though exact accuracy gains depend on the specific dataset and setup.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 6565.5,
+            "prompt_tokens": 107,
+            "completion_tokens": 176
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2711.8,
+            "prompt_tokens": 743,
+            "completion_tokens": 477
+        },
+        "asserted_claim_count": 12,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.20637465084300322,
+        "query_entities": [
+            "Large-scale Information Network Embedding",
+            "citation network",
+            "node classification",
+            "first-order proximity",
+            "second-order proximity",
+            "local neighborhood structure",
+            "global graph propertie",
+            "random-walk context",
+            "embedding"
+        ]
+    }
+}

@@ -1,0 +1,50 @@
+{
+  "answer": "I can't identify the specific paper, so I can't confirm the hardware. Node2vec, DeepWalk, and LINE are CPU-based embedding methods, so the authors most likely ran them on a standard CPU server or workstation rather than a specific GPU model. Please provide the paper or its experimental-setup section for a definitive answer.",
+  "confidence": 0.1,
+  "confidence_reasoning": "I could not identify the source paper, so the claim about its hardware is an inference from typical practice rather than a verified fact.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "CPU-based embedding method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "CPU-based embedding method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "CPU-based embedding method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "standard CPU server or workstation",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "standard CPU server or workstation",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "standard CPU server or workstation",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "GPU model",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

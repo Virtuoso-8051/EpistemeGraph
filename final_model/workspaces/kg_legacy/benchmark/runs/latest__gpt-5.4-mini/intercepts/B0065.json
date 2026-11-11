@@ -1,0 +1,68 @@
+{
+  "answer": "The authors expect the vertex frequencies in short random walks to follow a power-law distribution when the graph has a highly skewed degree distribution, so that a few high-degree vertices are visited much more often than the rest. They draw an analogy to natural language by comparing this to Zipf\u2019s law: just as a small number of words occur very frequently while most words are rare, a small number of vertices dominate the walk counts while most vertices appear infrequently.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard interpretation of random-walk visitation frequencies on scale-free or heavy-tailed graphs and the common Zipf\u2019s-law analogy from language, though the exact wording may vary by source.",
+  "triples": [
+    {
+      "source": "short random walk",
+      "target": "power-law distribution",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walk",
+      "target": "highly skewed degree distribution",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "highly skewed degree distribution",
+      "target": "high-degree vertice",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "high-degree vertice",
+      "target": "walk count",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Zipf\u2019s law",
+      "target": "natural language",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Zipf\u2019s law",
+      "target": "small number of words occur very frequently",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Zipf\u2019s law",
+      "target": "most words are rare",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walk",
+      "target": "Zipf\u2019s law",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small number of vertice",
+      "target": "dominate the walk count",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "most vertice",
+      "target": "appear infrequently",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.16068320804172093
+}

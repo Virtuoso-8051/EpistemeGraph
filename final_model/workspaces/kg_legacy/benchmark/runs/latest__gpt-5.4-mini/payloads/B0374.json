@@ -1,0 +1,192 @@
+{
+    "user_query": "What makes DeepWalk's evaluation on citation networks like Cora and Citeseer so strong relative to methods such as LINE when the graph is fully observed?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk tends to look especially strong on fully observed citation graphs like Cora and Citeseer because its random-walk/skip-gram objective captures higher-order neighborhood structure and community context, which is very useful for homophilous citation networks where nearby nodes often share labels. In contrast, LINE is designed to preserve first- and second-order proximity with a more local, edge-centric objective, so it can be less effective at exploiting the multi-hop structural patterns that matter for node classification on these graphs. Also, when the graph is fully observed, DeepWalk can use all available connectivity to generate many informative contexts, so its unsupervised embeddings align well with the downstream semi-supervised classification benchmark used on Cora/Citeseer. In short, DeepWalk benefits from the strong label homophily and multi-hop context in these citation networks, which makes its embeddings particularly discriminative for the evaluation protocol.",
+    "llm_self_reported_accuracy": 0.86,
+    "llm_confidence_reasoning": "This is consistent with the standard explanation in the DeepWalk literature and the known properties of citation networks, though exact comparative performance can depend on implementation and evaluation details.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "citation network",
+        "CORA",
+        "CITESEER",
+        "LINE",
+        "random-walk/skip-gram objective",
+        "higher-order neighborhood structure",
+        "community context",
+        "homophilous citation network",
+        "first-order proximity",
+        "second-order proximity",
+        "node classification",
+        "multi-hop structural pattern",
+        "semi-supervised classification benchmark",
+        "label homophily",
+        "embedding"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "citation network",
+        "CORA",
+        "CITESEER",
+        "LINE",
+        "random-walk/skip-gram objective",
+        "higher-order neighborhood structure",
+        "community context",
+        "homophilous citation network",
+        "first-order proximity",
+        "second-order proximity",
+        "node classification",
+        "multi-hop structural pattern",
+        "semi-supervised classification benchmark",
+        "label homophily",
+        "embedding",
+        "useful for homophilous citation network",
+        "nearby nodes often share label",
+        "method designed to preserve first-order proximity and second-order proximity",
+        "more local, edge-centric objective",
+        "less effective at exploiting multi-hop structural pattern",
+        "all available connectivity",
+        "many informative context",
+        "unsupervised embedding",
+        "strong label homophily",
+        "multi-hop context",
+        "particularly discriminative for the evaluation protocol"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "random-walk/skip-gram objective",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk/skip-gram objective",
+            "target": "higher-order neighborhood structure",
+            "type": "CAPTURES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk/skip-gram objective",
+            "target": "community context",
+            "type": "CAPTURES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "higher-order neighborhood structure",
+            "target": "useful for homophilous citation network",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "homophilous citation network",
+            "target": "nearby nodes often share label",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "method designed to preserve first-order proximity and second-order proximity",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "method designed to preserve first-order proximity and second-order proximity",
+            "target": "more local, edge-centric objective",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "less effective at exploiting multi-hop structural pattern",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "multi-hop structural pattern",
+            "target": "node classification",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "all available connectivity",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "all available connectivity",
+            "target": "many informative context",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "unsupervised embedding",
+            "target": "semi-supervised classification benchmark",
+            "type": "ALIGNS_WITH",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "strong label homophily",
+            "type": "BENEFITS_FROM",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "multi-hop context",
+            "type": "BENEFITS_FROM",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "embedding",
+            "target": "particularly discriminative for the evaluation protocol",
+            "type": "ARE",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What makes DeepWalk's evaluation on citation networks like Cora and Citeseer so strong relative to methods such as LINE when the graph is fully observed?",
+        "llm_response": "DeepWalk tends to look especially strong on fully observed citation graphs like Cora and Citeseer because its random-walk/skip-gram objective captures higher-order neighborhood structure and community context, which is very useful for homophilous citation networks where nearby nodes often share labels. In contrast, LINE is designed to preserve first- and second-order proximity with a more local, edge-centric objective, so it can be less effective at exploiting the multi-hop structural patterns that matter for node classification on these graphs. Also, when the graph is fully observed, DeepWalk can use all available connectivity to generate many informative contexts, so its unsupervised embeddings align well with the downstream semi-supervised classification benchmark used on Cora/Citeseer. In short, DeepWalk benefits from the strong label homophily and multi-hop context in these citation networks, which makes its embeddings particularly discriminative for the evaluation protocol.",
+        "llm_extraction_confidence": 0.86,
+        "llm_confidence_reasoning": "This is consistent with the standard explanation in the DeepWalk literature and the known properties of citation networks, though exact comparative performance can depend on implementation and evaluation details.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 3117.2,
+            "prompt_tokens": 120,
+            "completion_tokens": 234
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 7438.0,
+            "prompt_tokens": 830,
+            "completion_tokens": 585
+        },
+        "asserted_claim_count": 15,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.251156723290159,
+        "query_entities": [
+            "DEEPWALK",
+            "citation network",
+            "CORA",
+            "CITESEER",
+            "LINE",
+            "random-walk/skip-gram objective",
+            "higher-order neighborhood structure",
+            "community context",
+            "homophilous citation network",
+            "first-order proximity",
+            "second-order proximity",
+            "node classification",
+            "multi-hop structural pattern",
+            "semi-supervised classification benchmark",
+            "label homophily",
+            "embedding"
+        ]
+    }
+}

@@ -1,0 +1,86 @@
+{
+  "answer": "The papers were not provided, so I am assuming paper3 is DeepWalk (Perozzi et al., 2014) and paper2 is node2vec (Grover & Leskovec, 2016). Under that assumption, paper3's SkipGram uses hierarchical softmax when computing the softmax over the full vertex vocabulary is too expensive. Hierarchical softmax replaces the flat softmax with a binary tree over vertices, so each prediction costs roughly O(log |V|) instead of O(|V|). Node2vec motivates a different neighborhood design because a fixed neighborhood, such as DeepWalk's uniform random walk, mixes two kinds of similarity. Breadth-first exploration captures structural equivalence, so nodes with similar local roles are embedded together. Depth-first exploration captures homophily, so nodes in the same community are embedded together. Node2vec therefore uses a biased second-order random walk with return parameter p and in-out parameter q to interpolate between BFS-like and DFS-like sampling, and it can be tuned for communities, roles, or both.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The referenced papers were not supplied, so the identification of paper3 and paper2 is an assumption, though the general descriptions of DeepWalk's hierarchical softmax and node2vec's BFS/DFS bias are well established.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram model",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram model",
+      "target": "Hierarchical Softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "target": "Binary tree",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "target": "Flat softmax",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "target": "O(log |V|) prediction cost",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Uniform random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Breadth-first search",
+      "target": "Structural equivalence",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Depth-first search",
+      "target": "Homophily",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Biased second-order random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Biased second-order random walk",
+      "target": "Return parameter p",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Biased second-order random walk",
+      "target": "In-out parameter q",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Interpolation between BFS-like and DFS-like sampling",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Tuning for communities, roles, or both",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

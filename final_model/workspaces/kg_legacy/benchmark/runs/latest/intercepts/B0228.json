@@ -1,0 +1,92 @@
+{
+  "answer": "I can't verify the premise. In the node2vec paper (Grover & Leskovec, 2016), link prediction was not done by turning heuristic scores into decisions. Node embeddings were computed, then edge feature vectors were built from pairs of node embeddings using binary operators (Average, Hadamard, Weighted-L1, Weighted-L2). A supervised binary classifier, logistic regression, was trained on those edge features, and the paper reports AUC and F1 results. I don't recall a 'Table 3' of heuristic scores in that paper, and I can't reliably recall any specific hyperparameters selected for the classifier, so I can't give those values. The question may refer to a different paper or table, or may contain a false premise.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I'm fairly confident node2vec used logistic regression on binary edge operators, but I'm unsure about the table contents, the heuristic-score premise, and the hyperparameters.",
+  "triples": [
+    {
+      "source": "Link Prediction",
+      "target": "node2vec representation",
+      "type": "APPLIES_TO",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge feature vector",
+      "target": "node embedding",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge feature vector",
+      "target": "binary operator",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "AVERAGE",
+      "target": "binary operator",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HADAMARD",
+      "target": "binary operator",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Weighted-L1",
+      "target": "binary operator",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Weighted-L2",
+      "target": "binary operator",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "logistic regression",
+      "target": "supervised binary classifier",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "logistic regression",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "AUC",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "F1",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "popular heuristic score",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Table 3",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

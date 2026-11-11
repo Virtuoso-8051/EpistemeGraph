@@ -1,0 +1,146 @@
+{
+    "user_query": "Why are classic dimensionality reduction methods such as Principal Component Analysis and Multi-Dimensional Scaling considered expensive for large real-world networks, and what kind of prediction performance do their latent representations achieve?",
+    "mode": "closed_book",
+    "llm_response": "Classic dimensionality reduction methods such as Principal Component Analysis (PCA) and Multi-Dimensional Scaling (MDS) are considered expensive for large real-world networks because they typically require operations on dense matrices and/or pairwise distance information, which leads to high computational and memory costs that scale poorly as the number of nodes grows. In practice, this makes them difficult to apply to very large graphs. Their latent representations are generally useful, but they usually achieve only moderate prediction performance on downstream tasks such as link prediction or node classification, and they are often outperformed by more modern network embedding methods designed specifically for large graphs.",
+    "llm_self_reported_accuracy": 0.84,
+    "llm_confidence_reasoning": "This is a well-established characterization in the network representation learning literature, though exact performance depends on the dataset and task.",
+    "extracted_query_entities": [
+        "Principal Component Analysis",
+        "Multi-Dimensional Scaling",
+        "large real-world network",
+        "dense matrice",
+        "pairwise distance information",
+        "high computational and memory cost",
+        "large graph",
+        "latent representation",
+        "link prediction",
+        "node classification",
+        "prediction performance",
+        "modern network embedding method"
+    ],
+    "extracted_response_entities": [
+        "Principal Component Analysis",
+        "Multi-Dimensional Scaling",
+        "large real-world network",
+        "dense matrice",
+        "pairwise distance information",
+        "high computational and memory cost",
+        "large graph",
+        "latent representation",
+        "link prediction",
+        "node classification",
+        "prediction performance",
+        "modern network embedding method",
+        "moderate prediction performance"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "Principal Component Analysis",
+            "target": "dense matrice",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Multi-Dimensional Scaling",
+            "target": "pairwise distance information",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "dense matrice",
+            "target": "high computational and memory cost",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "pairwise distance information",
+            "target": "high computational and memory cost",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "high computational and memory cost",
+            "target": "large real-world network",
+            "type": "SCALES_POORLY_WITH",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Principal Component Analysis",
+            "target": "large graph",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "Multi-Dimensional Scaling",
+            "target": "large graph",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "latent representation",
+            "target": "moderate prediction performance",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "latent representation",
+            "target": "link prediction",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "latent representation",
+            "target": "node classification",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "latent representation",
+            "target": "modern network embedding method",
+            "type": "OUTPERFORMS",
+            "claim_type": "REFUTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why are classic dimensionality reduction methods such as Principal Component Analysis and Multi-Dimensional Scaling considered expensive for large real-world networks, and what kind of prediction performance do their latent representations achieve?",
+        "llm_response": "Classic dimensionality reduction methods such as Principal Component Analysis (PCA) and Multi-Dimensional Scaling (MDS) are considered expensive for large real-world networks because they typically require operations on dense matrices and/or pairwise distance information, which leads to high computational and memory costs that scale poorly as the number of nodes grows. In practice, this makes them difficult to apply to very large graphs. Their latent representations are generally useful, but they usually achieve only moderate prediction performance on downstream tasks such as link prediction or node classification, and they are often outperformed by more modern network embedding methods designed specifically for large graphs.",
+        "llm_extraction_confidence": 0.84,
+        "llm_confidence_reasoning": "This is a well-established characterization in the network representation learning literature, though exact performance depends on the dataset and task.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2641.8,
+            "prompt_tokens": 126,
+            "completion_tokens": 165
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2455.1,
+            "prompt_tokens": 775,
+            "completion_tokens": 415
+        },
+        "asserted_claim_count": 8,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 3,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.16746715329728037,
+        "query_entities": [
+            "Principal Component Analysis",
+            "Multi-Dimensional Scaling",
+            "large real-world network",
+            "dense matrice",
+            "pairwise distance information",
+            "high computational and memory cost",
+            "large graph",
+            "latent representation",
+            "link prediction",
+            "node classification",
+            "prediction performance",
+            "modern network embedding method"
+        ]
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "user_query": "Compare DeepWalk and LINE in terms of flexibility and the depth of neighborhoods they explore. What trade-off does the passage describe?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk is more flexible because it uses random walks to sample neighborhoods, but it typically explores only relatively shallow local context around each node. LINE is less flexible in how it defines neighborhoods, but it can explicitly model both first-order and second-order proximity, which lets it capture broader neighborhood information. The trade-off described is that DeepWalk offers greater flexibility at the cost of shallower neighborhood exploration, while LINE offers deeper/more explicit neighborhood modeling at the cost of flexibility.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "This comparison matches the standard distinction between the two methods and the trade-off stated in the passage, though exact wording may vary.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "LINE",
+        "random walk",
+        "first-order proximity",
+        "second-order proximity"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "LINE",
+        "random walk",
+        "first-order proximity",
+        "second-order proximity",
+        "flexibility",
+        "shallow local context",
+        "broader neighborhood information",
+        "shallower neighborhood exploration",
+        "deeper neighborhood modeling"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "random walk",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "flexibility",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "shallow local context",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "flexibility",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "first-order proximity",
+            "type": "MODELS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "second-order proximity",
+            "type": "MODELS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "broader neighborhood information",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "flexibility",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "shallower neighborhood exploration",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "deeper neighborhood modeling",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Compare DeepWalk and LINE in terms of flexibility and the depth of neighborhoods they explore. What trade-off does the passage describe?",
+        "llm_response": "DeepWalk is more flexible because it uses random walks to sample neighborhoods, but it typically explores only relatively shallow local context around each node. LINE is less flexible in how it defines neighborhoods, but it can explicitly model both first-order and second-order proximity, which lets it capture broader neighborhood information. The trade-off described is that DeepWalk offers greater flexibility at the cost of shallower neighborhood exploration, while LINE offers deeper/more explicit neighborhood modeling at the cost of flexibility.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "This comparison matches the standard distinction between the two methods and the trade-off stated in the passage, though exact wording may vary.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1866.3,
+            "prompt_tokens": 114,
+            "completion_tokens": 138
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1954.0,
+            "prompt_tokens": 737,
+            "completion_tokens": 315
+        },
+        "asserted_claim_count": 10,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.22305598403468277,
+        "query_entities": [
+            "DEEPWALK",
+            "LINE",
+            "random walk",
+            "first-order proximity",
+            "second-order proximity"
+        ]
+    }
+}

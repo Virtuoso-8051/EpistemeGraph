@@ -1,0 +1,98 @@
+{
+  "answer": "LINE(2nd) models second-order proximity: two nodes are similar when they share many neighbors, so it emphasizes the similarity of their neighborhood distributions. It uses separate vertex and context embeddings and samples edges directly, with no multi-hop random walks. node2vec instead uses biased second-order random walks, with parameters p and q that interpolate between breadth-first exploration (local, structural-equivalence-like neighborhoods) and depth-first exploration (broader, homophily/community-like neighborhoods). So node2vec offers a tunable mix of structural and homophilous proximity, while LINE(2nd) focuses on shared-neighborhood similarity at a fixed order. On word analogy evaluations, node2vec, which builds on skip-gram over walk sequences, is generally reported to score better overall than LINE(2nd). I could not verify the specific study this question refers to, so the exact scores are uncertain.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The descriptions of LINE(2nd) and node2vec are well established, but I could not confirm which paper reports the word analogy comparison or its exact result, so the winner claim is less certain.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "vertex embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "context embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "biased second-order random walk",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased second-order random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "breadth-first search",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "depth-first search",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "structural equivalence",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "homophily",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "LINE",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "word analogy",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "word analogy",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "second-order proximity",
+      "type": "PROPOSES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

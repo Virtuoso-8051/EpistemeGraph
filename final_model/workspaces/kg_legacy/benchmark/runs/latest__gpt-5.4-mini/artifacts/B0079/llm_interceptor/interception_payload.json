@@ -1,0 +1,109 @@
+{
+    "user_query": "How do the most similar words returned by LINE's first-order proximity differ from those returned by its second-order proximity in Table 4?",
+    "mode": "closed_book",
+    "llm_response": "In Table 4, the first-order proximity neighbors are mostly words that are directly connected or very close in the graph, so they tend to be near-synonyms or tightly related terms. The second-order proximity neighbors are more about sharing similar neighborhoods, so they often include words that are related in meaning or usage but are not necessarily direct graph neighbors. In other words, first-order proximity returns more immediate, local similarity, while second-order proximity returns more structural or contextual similarity.",
+    "llm_self_reported_accuracy": 0.62,
+    "llm_confidence_reasoning": "This is a faithful high-level summary of the standard distinction between LINE\u2019s first- and second-order proximity, but I cannot verify the exact Table 4 word lists from the prompt alone.",
+    "extracted_query_entities": [
+        "first-order proximity",
+        "second-order proximity",
+        "Table 4",
+        "GRAPH",
+        "neighborhood",
+        "local similarity",
+        "structural similarity",
+        "contextual similarity"
+    ],
+    "extracted_response_entities": [
+        "first-order proximity",
+        "second-order proximity",
+        "Table 4",
+        "GRAPH",
+        "neighborhood",
+        "local similarity",
+        "structural similarity",
+        "contextual similarity",
+        "words directly connected or very close in the graph",
+        "near-synonyms or tightly related term",
+        "sharing similar neighborhood",
+        "words related in meaning or usage but not necessarily direct graph neighbor",
+        "more immediate, local similarity",
+        "more structural or contextual similarity"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "first-order proximity",
+            "target": "words directly connected or very close in the graph",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "near-synonyms or tightly related term",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "sharing similar neighborhood",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "words related in meaning or usage but not necessarily direct graph neighbor",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "more immediate, local similarity",
+            "type": "RETURNS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "more structural or contextual similarity",
+            "type": "RETURNS",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How do the most similar words returned by LINE's first-order proximity differ from those returned by its second-order proximity in Table 4?",
+        "llm_response": "In Table 4, the first-order proximity neighbors are mostly words that are directly connected or very close in the graph, so they tend to be near-synonyms or tightly related terms. The second-order proximity neighbors are more about sharing similar neighborhoods, so they often include words that are related in meaning or usage but are not necessarily direct graph neighbors. In other words, first-order proximity returns more immediate, local similarity, while second-order proximity returns more structural or contextual similarity.",
+        "llm_extraction_confidence": 0.62,
+        "llm_confidence_reasoning": "This is a faithful high-level summary of the standard distinction between LINE\u2019s first- and second-order proximity, but I cannot verify the exact Table 4 word lists from the prompt alone.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "extract_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "asserted_claim_count": 6,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2104447508511478,
+        "query_entities": [
+            "first-order proximity",
+            "second-order proximity",
+            "Table 4",
+            "GRAPH",
+            "neighborhood",
+            "local similarity",
+            "structural similarity",
+            "contextual similarity"
+        ]
+    }
+}

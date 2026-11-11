@@ -1,0 +1,131 @@
+{
+    "user_query": "What optimization target distinguishes LINE from DeepWalk\u2019s learning procedure when preserving graph information, and how does DeepWalk describe its approach to learning latent representations?",
+    "mode": "closed_book",
+    "llm_response": "LINE is distinguished by explicitly optimizing first-order and second-order proximity in the graph, whereas DeepWalk learns node embeddings by treating random walks as sentences and using a Skip-gram-style objective to predict context nodes from a node\u2019s neighborhood in those walks. DeepWalk describes its approach as learning latent representations of vertices from truncated random walks, analogous to language modeling over sequences of words.",
+    "llm_self_reported_accuracy": 0.96,
+    "llm_confidence_reasoning": "This matches the standard descriptions of LINE and DeepWalk in the original papers and related summaries, with only minor risk of wording differences in how the objectives are phrased.",
+    "extracted_query_entities": [
+        "LINE",
+        "DEEPWALK",
+        "first-order proximity",
+        "second-order proximity",
+        "node embedding",
+        "Skip-gram",
+        "context node",
+        "random walk",
+        "latent representation",
+        "VERTICES",
+        "language modeling"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "DEEPWALK",
+        "first-order proximity",
+        "second-order proximity",
+        "node embedding",
+        "Skip-gram",
+        "context node",
+        "random walk",
+        "latent representation",
+        "VERTICES",
+        "language modeling",
+        "truncated random walk"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "first-order proximity",
+            "type": "OPTIMIZES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "second-order proximity",
+            "type": "OPTIMIZES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "random walk",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "Skip-gram",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "node embedding",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "context node",
+            "type": "PREDICTS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "truncated random walk",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "latent representation",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "language modeling",
+            "type": "BASED_ON",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What optimization target distinguishes LINE from DeepWalk\u2019s learning procedure when preserving graph information, and how does DeepWalk describe its approach to learning latent representations?",
+        "llm_response": "LINE is distinguished by explicitly optimizing first-order and second-order proximity in the graph, whereas DeepWalk learns node embeddings by treating random walks as sentences and using a Skip-gram-style objective to predict context nodes from a node\u2019s neighborhood in those walks. DeepWalk describes its approach as learning latent representations of vertices from truncated random walks, analogous to language modeling over sequences of words.",
+        "llm_extraction_confidence": 0.96,
+        "llm_confidence_reasoning": "This matches the standard descriptions of LINE and DeepWalk in the original papers and related summaries, with only minor risk of wording differences in how the objectives are phrased.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1639.3,
+            "prompt_tokens": 118,
+            "completion_tokens": 127
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1943.8,
+            "prompt_tokens": 704,
+            "completion_tokens": 298
+        },
+        "asserted_claim_count": 9,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.18206052543703188,
+        "query_entities": [
+            "LINE",
+            "DEEPWALK",
+            "first-order proximity",
+            "second-order proximity",
+            "node embedding",
+            "Skip-gram",
+            "context node",
+            "random walk",
+            "latent representation",
+            "VERTICES",
+            "language modeling"
+        ]
+    }
+}

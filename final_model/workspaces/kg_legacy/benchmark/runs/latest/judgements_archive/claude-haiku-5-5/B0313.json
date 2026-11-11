@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The answer claims LINE does not use random walks and 'does not explore the citation network by walking from node to node', which goes beyond the evidence's statement that LINE(2nd) represents each paper with its references; the evidence does not explicitly say LINE never uses walks, though it is consistent with LINE's edge-sampling design.",
+    "The answer's claim that LINE(2nd) learns a separate context embedding for each node and uses alias tables and negative sampling is not stated in the provided evidence excerpts.",
+    "The answer claims 'The usual argument for LINE's advantages is that it ... scales to large, weighted graphs', which is only partly reflected in the evidence (the evidence mentions weighted and unweighted edges support)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that random walks let LINE(2nd) reach other references and notes the paper's core point is that LINE(2nd) represents each paper with its references. However, several method details (context embeddings, alias tables, negative sampling, and the claim that LINE does not use random walks at all) are not in the provided evidence, so some claims are unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE (Tang et al., 2015) does not use either dataset; its experiments use Language, Flickr, YouTube, Twitter, and DBLP.",
+    "The comparison you describe comes from node2vec (Grover & Leskovec, 2016), which uses both BlogCatalog and PPI.",
+    "Node2vec reports that BlogCatalog behaves more homophilous and PPI reflects structural equivalence, with BFS/DFS explanations.",
+    "The answer attributes to node2vec a homophily-vs-structural-equivalence contrast between BlogCatalog and PPI, which the evidence does not state."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, stating BlogCatalog is social and PPI is biological, which the evidence supports. However, it attributes the comparison to other papers (LINE's dataset list and node2vec's results) that are not in the provided evidence, so those specifics are unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

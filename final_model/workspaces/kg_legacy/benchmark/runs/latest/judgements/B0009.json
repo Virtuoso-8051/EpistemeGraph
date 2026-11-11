@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Adaptability is defined as the representation being learned from data rather than fixed in advance; the paper defines it as not needing to repeat learning when new social relations arrive.",
+    "Sparsity (few active dimensions) is listed as one of the four characteristics; the paper's fourth characteristic is continuous, not sparse.",
+    "Dimensionality is listed as a separate characteristic and tied to scalability; the paper says low-dimensional models generalize better with scarce labeled data and speed up convergence and inference, and 'continuous' is missing from the list."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The list of four characteristics is wrong: it replaces 'continuous' with 'sparsity', splits low-dimensional into two items, and misdescribes adaptability. The explanation of why continuous representations help (partial membership, smooth/graded view) largely matches the source, though it omits robust classification and adds overlapping communities and similarity measures that the source does not state.",
+  "judge_model": "claude-sonnet-5-5"
+}

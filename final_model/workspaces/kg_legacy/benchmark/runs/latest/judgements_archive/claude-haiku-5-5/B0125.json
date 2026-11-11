@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The AI answer states the passages were not included and relies on standard published descriptions; the evidence does not contain node2vec's p/q definitions (return and in-out), the BFS/DFS interpretation, LINE's KL-divergence objective, or LINE's first-order/second-order description beyond a passing mention, so these specific method details are not verified by the provided passages.",
+    "LINE(2nd) is described as using separate vertex and context embeddings and sampling edges weighted by edge weight, which the evidence does not state.",
+    "The answer never mentions the key evidence that LINE(2nd) improves by reconstructing the network with second-order neighbors for low-degree vertices (threshold 500 or 200), which is the gold mechanism for LINE(2nd)."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer's core contrast (node2vec via tunable biased random walks with p and q, LINE without random walks) is partly consistent with the evidence, which mentions p, q and the DeepWalk special case. However, many specific method details are drawn from outside the provided passages, and the answer omits the paper-grounded LINE(2nd) reconstruction mechanism that the gold answer identifies.",
+  "judge_model": "claude-haiku-5-5"
+}

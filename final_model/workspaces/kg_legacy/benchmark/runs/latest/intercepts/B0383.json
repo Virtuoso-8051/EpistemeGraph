@@ -1,0 +1,32 @@
+{
+  "answer": "The premise appears to be incorrect. In the LINE paper (Tang et al., 2015), LINE(1st) alone does not give the best Wikipedia classification result. It performs worse than LINE(2nd) alone. The best result comes from concatenating the separately trained first-order and second-order embeddings, LINE(1st+2nd). The gain comes from combining the two proximity orders, not from LINE(1st) by itself.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I recall the paper's general finding that the 1st+2nd concatenation performed best and that LINE(1st) alone was weaker than LINE(2nd), but I am not certain of the exact table values or the specific Wikipedia results.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "best Wikipedia classification result",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "best Wikipedia classification result",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "concatenation of separately trained first-order and second-order embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE paper",
+      "target": "LINE",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

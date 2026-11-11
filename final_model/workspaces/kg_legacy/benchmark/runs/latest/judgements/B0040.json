@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The answer omits the power-law vertex frequency distribution and long tail of infrequent vertices, which the paper gives as the reason updates are sparse; instead it attributes sparsity to each update touching only a few nodes' embeddings.",
+    "Updates include sampled negative nodes - DeepWalk uses hierarchical softmax, not negative sampling (per the evidence).",
+    "Occasional overwritten updates cause negligible harm to convergence - the paper claims ASGD achieves optimal convergence rate, not this specific mechanism; minor elaboration."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim, that sparse updates allow lock-free ASGD, matches the paper. However, the answer leaves out the power-law/long-tail explanation and wrongly mentions negative sampling, whereas DeepWalk uses hierarchical softmax.",
+  "judge_model": "claude-sonnet-5-5"
+}

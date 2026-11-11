@@ -1,0 +1,56 @@
+{
+  "answer": "I could not identify the specific paper this question refers to, so this is an inference rather than a verified result. The most likely answer is that LINE(2nd) performs poorly on low-degree nodes, such as those with only one or two neighbours in the YouTube network. Second-order proximity relies on each node's neighbourhood context, which is sparse for these nodes, so their embeddings are poorly learned. In the grouped results, this would appear as low classification scores (e.g., Micro-F1 or Macro-F1) for the low-degree groups, with much better performance for higher-degree groups.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The general pattern of weak embedding quality for low-degree nodes is plausible and common in the literature, but I could not verify the specific paper, its degree groupings, or the reported numbers, so the details may be wrong.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "poor performance on low-degree node",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "YOUTUBE2",
+      "target": "low-degree nodes with one or two neighbour",
+      "type": "CONTAINS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "neighbourhood context",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighbourhood context",
+      "target": "sparse for low-degree node",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-degree node",
+      "target": "poorly learned embedding",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "grouped result",
+      "target": "low classification scores for low-degree group",
+      "type": "CONTAINS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "classification score",
+      "target": "Micro-F1 and Macro-F1",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "higher-degree group",
+      "target": "low-degree group",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

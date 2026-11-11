@@ -1,0 +1,62 @@
+{
+  "answer": "LINE(2nd) emphasizes second-order proximity: it tries to preserve similarity in nodes\u2019 neighborhood distributions, so two nodes are close if they have similar neighbors even if they are not directly connected. node2vec, by contrast, learns embeddings from biased random walks and captures a mix of local neighborhood structure and broader structural context, balancing breadth-first and depth-first exploration. In the reported comparison, node2vec achieves the better overall word analogy score.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard definitions of LINE(2nd) and node2vec and the commonly reported comparison that node2vec performs better on the overall word analogy task.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "similarity in nodes\u2019 neighborhood distribution",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "nodes with similar neighbors even if they are not directly connected",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "local neighborhood structure",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "broader structural context",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "breadth-first exploration",
+      "type": "BALANCES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "depth-first exploration",
+      "type": "BALANCES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "better overall word analogy score",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.15991107155294979
+}

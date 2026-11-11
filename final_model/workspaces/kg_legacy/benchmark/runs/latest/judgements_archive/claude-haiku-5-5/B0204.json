@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The paper reports empirical scalability on large networks such as Tencent Weibo and other datasets, with runtime decreasing roughly linearly as the number of threads grows (the evidence does not mention Tencent Weibo or thread-scaling results)."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly explains that O(dK|E|) is an analytical result derived from edge sampling with alias tables and negative sampling, and it correctly declines to give specific runtime numbers. However, it attributes to the papers specific datasets (Tencent Weibo) and a thread-scaling runtime result that the provided evidence does not contain.",
+  "judge_model": "claude-haiku-5-5"
+}

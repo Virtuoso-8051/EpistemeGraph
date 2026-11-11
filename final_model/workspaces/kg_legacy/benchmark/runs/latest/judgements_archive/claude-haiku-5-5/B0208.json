@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The answer's core claim that there are zero additional binary operators beyond Table 1 is contradicted by the source, which states that the method 'permits additional binary operators beyond those listed in Table 1'.",
+    "The implied claim that the paper's method supports no operators beyond the four in Table 1 conflicts with that same sentence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The source explicitly says node2vec permits additional binary operators beyond Table 1, so the answer's count of zero contradicts the evidence. The correct response was that the papers acknowledge additional operators but do not enumerate them or give a count; the answer's accurate parts (the four Table 1 operators) do not rescue its core claim.",
+  "judge_model": "claude-haiku-5-5"
+}

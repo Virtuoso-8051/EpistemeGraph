@@ -1,0 +1,74 @@
+{
+    "user_query": "How many random walks per node r did node2vec use in the reported experiments, and did the authors compare that setting against smaller or larger values of r?",
+    "mode": "closed_book",
+    "llm_response": "In the reported node2vec experiments, the authors used r = 10 random walks per node. They did compare this setting against other values of r, including smaller and larger ones, as part of their parameter sensitivity analysis; the reported results indicate performance was fairly robust around that choice rather than showing a strong dependence on a single exact value.",
+    "llm_self_reported_accuracy": 0.86,
+    "llm_confidence_reasoning": "The value r = 10 is directly reported in the node2vec paper, and the paper also includes sensitivity experiments over different r values, though the exact range is less certain from memory than the main setting.",
+    "extracted_query_entities": [
+        "NODE2VEC"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "random walks per node",
+        "parameter sensitivity analysis",
+        "smaller and larger values of random walks per node",
+        "performance robustness"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "random walks per node",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "parameter sensitivity analysis",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "smaller and larger values of random walks per node",
+            "type": "COMPARES_WITH",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "performance robustness",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How many random walks per node r did node2vec use in the reported experiments, and did the authors compare that setting against smaller or larger values of r?",
+        "llm_response": "In the reported node2vec experiments, the authors used r = 10 random walks per node. They did compare this setting against other values of r, including smaller and larger ones, as part of their parameter sensitivity analysis; the reported results indicate performance was fairly robust around that choice rather than showing a strong dependence on a single exact value.",
+        "llm_extraction_confidence": 0.86,
+        "llm_confidence_reasoning": "The value r = 10 is directly reported in the node2vec paper, and the paper also includes sensitivity experiments over different r values, though the exact range is less certain from memory than the main setting.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1968.9,
+            "prompt_tokens": 121,
+            "completion_tokens": 130
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1701.1,
+            "prompt_tokens": 706,
+            "completion_tokens": 159
+        },
+        "asserted_claim_count": 4,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.19733564315303678,
+        "query_entities": [
+            "NODE2VEC"
+        ]
+    }
+}

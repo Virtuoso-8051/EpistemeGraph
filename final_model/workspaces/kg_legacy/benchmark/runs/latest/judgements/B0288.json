@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "LINE applies text features in the cold-start case when a new vertex has no observed edges, as if it were an implemented method",
+    "Text features are used to establish first-order proximity (e.g., text similarity yielding weighted links) between the new vertex and existing vertices",
+    "The new vertex's embedding is then optimized against the first-order objective using text-derived links, which the paper does not describe"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise, claiming LINE combines text with first-order proximity in the no-connection case. The paper only says textual information is future work when no connections are observed, and otherwise it optimizes p1 or p2 using known connections. The text-similarity mechanism is invented, and the closing hedge does not correct the premise.",
+  "judge_model": "claude-sonnet-5-5"
+}

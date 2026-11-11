@@ -1,0 +1,126 @@
+{
+    "user_query": "What are the three phases of node2vec, and how are they executed according to the passage?",
+    "mode": "closed_book",
+    "llm_response": "The passage describes node2vec as having three phases: (1) sampling biased random walks from each node, (2) using those walks to learn node embeddings with a skip-gram model, and (3) using the learned embeddings for downstream tasks such as node classification or link prediction. In execution, node2vec first generates many random walks that are biased by parameters controlling breadth-first versus depth-first exploration, then treats the resulting node sequences like sentences and trains a skip-gram model to produce vector representations, and finally applies those vectors to the target task.",
+    "llm_self_reported_accuracy": 0.86,
+    "llm_confidence_reasoning": "This is a standard description of node2vec and is likely correct, but I cannot verify the exact wording of the unseen passage.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "biased random walk procedure",
+        "Skip-gram model",
+        "node embedding",
+        "node classification",
+        "link prediction"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "biased random walk procedure",
+        "Skip-gram model",
+        "node embedding",
+        "node classification",
+        "link prediction",
+        "random walk",
+        "breadth-first exploration",
+        "depth-first exploration",
+        "node sequence",
+        "vector representation"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "biased random walk procedure",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "Skip-gram model",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "node embedding",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "biased random walk procedure",
+            "target": "random walk",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "biased random walk procedure",
+            "target": "breadth-first exploration",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "biased random walk procedure",
+            "target": "depth-first exploration",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Skip-gram model",
+            "target": "node sequence",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Skip-gram model",
+            "target": "vector representation",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "node embedding",
+            "target": "node classification",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "node embedding",
+            "target": "link prediction",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What are the three phases of node2vec, and how are they executed according to the passage?",
+        "llm_response": "The passage describes node2vec as having three phases: (1) sampling biased random walks from each node, (2) using those walks to learn node embeddings with a skip-gram model, and (3) using the learned embeddings for downstream tasks such as node classification or link prediction. In execution, node2vec first generates many random walks that are biased by parameters controlling breadth-first versus depth-first exploration, then treats the resulting node sequences like sentences and trains a skip-gram model to produce vector representations, and finally applies those vectors to the target task.",
+        "llm_extraction_confidence": 0.86,
+        "llm_confidence_reasoning": "This is a standard description of node2vec and is likely correct, but I cannot verify the exact wording of the unseen passage.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2514.2,
+            "prompt_tokens": 109,
+            "completion_tokens": 158
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2315.4,
+            "prompt_tokens": 739,
+            "completion_tokens": 337
+        },
+        "asserted_claim_count": 10,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.15328994550203023,
+        "query_entities": [
+            "NODE2VEC",
+            "biased random walk procedure",
+            "Skip-gram model",
+            "node embedding",
+            "node classification",
+            "link prediction"
+        ]
+    }
+}

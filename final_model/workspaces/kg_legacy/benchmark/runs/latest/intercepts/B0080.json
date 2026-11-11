@@ -1,0 +1,80 @@
+{
+  "answer": "Graph factorization (Ahmed et al., 2013) embeds nodes by factorizing the graph's adjacency (or similarity) matrix, so it directly preserves first-order proximity: nodes that are linked, or that have high edge weights between them, end up close in the embedding space. It is typically solved with a matrix factorization objective that reconstructs observed edges, and it is designed mainly for sparse, large graphs where only edge existence matters. LINE (Tang et al., 2015), by contrast, is explicitly designed to preserve both first-order proximity (direct ties, via a loss on the joint distribution of connected node pairs) and second-order proximity (nodes sharing similar neighborhoods, via a loss using context vectors and conditional neighbor distributions). LINE optimizes these two objectives separately, using edge sampling with negative sampling, and concatenates the two resulting embeddings. Thus, graph factorization captures only direct adjacency-based (first-order) structure in a single matrix-factorization framework, while LINE explicitly captures higher-order neighborhood similarity as well, and it scales to large weighted, directed, and undirected networks.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core distinction (factorization captures first-order adjacency, LINE captures first and second order) is well established, but some details about graph factorization's objective and scope are stated from memory and could be imprecise.",
+  "triples": [
+    {
+      "source": "graph factorization",
+      "target": "adjacency matrix",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "first-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "matrix factorization",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "sparse, large graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "first-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "second-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "edge-sampling treatment",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "large weighted, directed, and undirected network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "second-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "concatenated embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "network embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

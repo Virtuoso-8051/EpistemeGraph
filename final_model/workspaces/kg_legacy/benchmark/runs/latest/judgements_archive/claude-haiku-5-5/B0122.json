@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "DeepWalk uses hierarchical softmax (not stated in the evidence excerpt)",
+    "The graph is typically undirected (not stated in the evidence)",
+    "The answer says paper1 is unspecified and offers alternative representations (attributed, knowledge graph, adjacency matrix) as possibilities, which the evidence does not establish for paper1; however the evidence clearly indicates paper1 defines an information network with weighted edges, and the answer fails to identify this"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly states DeepWalk's corpus (random walks) and vocabulary (vertices) and that it ignores edge weights, which the evidence supports. However, it fails to state paper1's graph representation (weighted information network with vertices as data objects and weighted edges as relationships), instead speculating, and adds details such as hierarchical softmax and undirectedness not found in the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

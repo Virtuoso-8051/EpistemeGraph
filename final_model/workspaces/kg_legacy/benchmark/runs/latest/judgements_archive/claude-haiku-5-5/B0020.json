@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The answer says LINE(1st+2nd) wins most plausibly on sparser networks or with limited labeled data; the evidence states the advantage holds when the supervised task allows concatenation of embeddings, and does not attribute it to sparsity or label scarcity (the paper's sparse-network remark concerns a different claim about effectiveness across dense and sparse networks)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly conveys that the two proximities are complementary and that LINE(1st+2nd) wins in the supervised setting, but it fails to state the key condition (supervised task permitting concatenation of embeddings) and instead speculates about sparsity or limited labels. The complementarity claim and the description of first- versus second-order proximity are supported by the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

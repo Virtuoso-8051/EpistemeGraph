@@ -1,0 +1,56 @@
+{
+  "answer": "The node2vec paper (Grover & Leskovec, 2016) did not use one fixed training count. It varied the labeled training fraction from 1% to 90% of labeled nodes. Using the dataset sizes (BlogCatalog 10,312 nodes; PPI 3,890 nodes; Wikipedia 4,777 nodes), the approximate absolute training counts are: BlogCatalog about 103 to 9,281; PPI about 39 to 3,501; Wikipedia about 48 to 4,299.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The 1%-90% range and the dataset sizes are from memory of the paper, and the question's phrasing may refer to a different fixed-count setup I cannot verify.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "labeled training fraction",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled training fraction",
+      "target": "multi-label classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "target": "10,312 node",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI network",
+      "target": "3,890 node",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia data",
+      "target": "4,777 node",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "approximate absolute training count",
+      "type": "DEFINED_AS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "one fixed training count",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

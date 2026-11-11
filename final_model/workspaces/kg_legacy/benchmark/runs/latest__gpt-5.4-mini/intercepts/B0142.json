@@ -1,0 +1,56 @@
+{
+  "answer": "DeepWalk explicitly preserves local random-walk co-occurrence structure: it learns embeddings by treating short random walks as sentences and optimizing so nodes that appear in similar walk contexts are close in the embedding space. In contrast, the model in paper1 explicitly exploits the graph\u2019s structural roles/relations rather than only random-walk proximity; it is designed to capture higher-level structural information such as node position or role in the network, so nodes can be similar even if they are not near each other in random-walk neighborhoods. In short, DeepWalk is mainly proximity/community biased, while paper1\u2019s model is more about preserving or exploiting structural equivalence/role-based patterns.",
+  "confidence": 0.62,
+  "confidence_reasoning": "This is a high-level comparison that is generally correct for DeepWalk versus role/structure-focused graph embedding models, but the exact details depend on which specific paper is meant by 'paper1'.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "local-random-walk co-occurrence structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "short random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "embedding space",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PAPER1",
+      "target": "graph\u2019s structural roles/relation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PAPER1",
+      "target": "higher-level structural information",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PAPER1",
+      "target": "node position or role in the network",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "proximity/community biased",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PAPER1",
+      "target": "structural equivalence/role-based pattern",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2673811758718183
+}

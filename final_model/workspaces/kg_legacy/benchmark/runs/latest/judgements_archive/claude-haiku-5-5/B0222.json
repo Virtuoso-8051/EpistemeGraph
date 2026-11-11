@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The answer asserts d = 128 was used for all methods in the main experiments, but the evidence only says 128 is the default for other networks (as in [16]) and that other methods used d = 500, so the claim that 128 applies to all methods in the main experiments is not supported.",
+    "The answer states a single dimension value for the main experiments, which the question is not answerable from the papers for; the passage only gives a default of 128 for some networks."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The question is unanswerable from the provided evidence, and the answer gives a concrete value (d = 128) as the main-experiment setting rather than saying the papers do not report it. The evidence only supports 128 as a default for some networks and notes d = 500 for other baselines, so the 'all methods' claim is unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

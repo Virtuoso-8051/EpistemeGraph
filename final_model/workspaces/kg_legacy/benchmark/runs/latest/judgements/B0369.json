@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "node2vec's objective does not infer the right exploration degree; p and q are set purely outside the embedding step (this contradicts the passage's point that the semi-supervised nature helps infer the appropriate exploration degree)",
+    "The answer does not state that node2vec is semi-supervised and that this helps infer the exploration degree, instead denying any such role"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer rejects the 'supervised objective' premise and correctly describes the unsupervised skip-gram objective, p/q roles, and that best p,q vary by network. But it denies the paper's claim that node2vec's semi-supervised nature helps infer exploration degree, and it omits the 'semi-supervised' correction, though its description of tuning p and q on a small labeled set is consistent with the paper.",
+  "judge_model": "claude-sonnet-5-5"
+}

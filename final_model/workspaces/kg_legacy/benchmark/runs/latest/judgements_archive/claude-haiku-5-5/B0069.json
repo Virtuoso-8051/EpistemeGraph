@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Frequent vertices get short codes and paths in the tree, and the tree is built from early-stream counts, degree-based estimates, or periodic rebuilds (the evidence only says vertex frequency must be estimated a priori; these specific strategies are not in the papers)",
+    "Graph frequency distributions are typically skewed and fairly stable, so codes stay close to optimal (not stated in the evidence)",
+    "Expected code length tracks the entropy of the vertex frequency distribution, and cost per update is roughly O(log|V|) (Huffman optimality and complexity claims are not stated in the source excerpt)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer matches the gold: Huffman coding remains usable if vertex frequency can be estimated a priori, and its purpose is reducing frequent element access time. However, the answer adds several specifics (tree-building strategies, stability of graph distributions, entropy and O(log|V|) cost analysis) that the evidence does not contain.",
+  "judge_model": "claude-haiku-5-5"
+}

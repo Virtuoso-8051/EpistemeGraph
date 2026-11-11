@@ -1,0 +1,11 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "The AI answer states \u03b3 = 80 walks per vertex, which is not stated in the evidence; the evidence gives \u03b3 = 40 for DeepWalk in the default settings and \u03b3 = 30 in another context.",
+    "The AI attributes the value 80 to the DeepWalk paper's standard setup, which the evidence does not support."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is borderline, and a faithful answer would say the passage does not specify the value used in the experiments, but the evidence actually reports \u03b3 = 40 as a default for DeepWalk. The AI instead invents a specific value of 80 and attributes it to the paper's standard setup, which contradicts the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

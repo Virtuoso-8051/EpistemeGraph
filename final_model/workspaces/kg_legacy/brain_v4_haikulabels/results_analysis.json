@@ -1,0 +1,213 @@
+{
+  "run": "final_model\\workspaces\\kg_legacy\\benchmark\\runs\\latest",
+  "n_items": 400,
+  "verdicts": {
+    "PARTIALLY_SUPPORTED": 241,
+    "UNSUPPORTED": 94,
+    "SUPPORTED": 65
+  },
+  "verdicts_by_category": {
+    "BORDERLINE": {
+      "PARTIALLY_SUPPORTED": 46,
+      "SUPPORTED": 13,
+      "UNSUPPORTED": 21
+    },
+    "CROSS_DOC": {
+      "PARTIALLY_SUPPORTED": 24,
+      "SUPPORTED": 5,
+      "UNSUPPORTED": 11
+    },
+    "FACTUAL": {
+      "PARTIALLY_SUPPORTED": 80,
+      "SUPPORTED": 15,
+      "UNSUPPORTED": 25
+    },
+    "FALSE_PREMISE": {
+      "PARTIALLY_SUPPORTED": 91,
+      "SUPPORTED": 32,
+      "UNSUPPORTED": 37
+    }
+  },
+  "supported_rate_by_category": {
+    "BORDERLINE": 0.1625,
+    "CROSS_DOC": 0.125,
+    "FACTUAL": 0.125,
+    "FALSE_PREMISE": 0.2
+  },
+  "false_premise_accepted_rate": 0.24375,
+  "judge_agreement": {
+    "n": 100,
+    "primary": "claude-haiku-5-5",
+    "second": "claude-sonnet-5-5",
+    "kappa": {
+      "supported_vs_rest": {
+        "kappa": 0.3519118600129617,
+        "agreement": 0.8
+      },
+      "unsupported_vs_rest": {
+        "kappa": 0.48060941828254844,
+        "agreement": 0.85
+      },
+      "three_class": {
+        "kappa": 0.3974769346639051,
+        "agreement": 0.68
+      },
+      "ordinal_linear_weighted": {
+        "kappa": 0.41412788751255436
+      }
+    },
+    "confusion_3class[primary_rows x second_cols]": {
+      "PARTIALLY_SUPPORTED": {
+        "PARTIALLY_SUPPORTED": 49,
+        "SUPPORTED": 6,
+        "UNSUPPORTED": 6
+      },
+      "SUPPORTED": {
+        "PARTIALLY_SUPPORTED": 11,
+        "SUPPORTED": 9,
+        "UNSUPPORTED": 1
+      },
+      "UNSUPPORTED": {
+        "PARTIALLY_SUPPORTED": 6,
+        "SUPPORTED": 2,
+        "UNSUPPORTED": 10
+      }
+    }
+  },
+  "confounds": {
+    "answer_length_auroc_for_supported": 0.6434443168771528,
+    "n_claims_auroc_for_supported": 0.6426176808266361,
+    "mean_answer_chars_by_verdict": {
+      "PARTIALLY_SUPPORTED": 822.7,
+      "SUPPORTED": 592.4,
+      "UNSUPPORTED": 632.4
+    }
+  },
+  "oof_auroc": {
+    "EpistemeGraph_v4": 0.7502411021814008,
+    "same_learner_v3_inputs": 0.6897818599311136,
+    "text_nli_checker": 0.7301033295063146,
+    "llm_self_confidence": 0.5480826636050516,
+    "answer_length": 0.6311366245694604
+  },
+  "oof_auroc_by_category": {
+    "BORDERLINE": {
+      "EpistemeGraph_v4": 0.8025258323765786,
+      "same_learner_v3_inputs": 0.8071182548794489,
+      "text_nli_checker": 0.7703788748564868,
+      "llm_self_confidence": 0.25602755453501724,
+      "answer_length": 0.8576349024110218
+    },
+    "CROSS_DOC": {
+      "EpistemeGraph_v4": 0.7371428571428571,
+      "same_learner_v3_inputs": 0.4228571428571428,
+      "text_nli_checker": 0.6742857142857143,
+      "llm_self_confidence": 0.36857142857142855,
+      "answer_length": 0.4857142857142857
+    },
+    "FACTUAL": {
+      "EpistemeGraph_v4": 0.7784126984126984,
+      "same_learner_v3_inputs": 0.6298412698412699,
+      "text_nli_checker": 0.6393650793650794,
+      "llm_self_confidence": 0.781904761904762,
+      "answer_length": 0.6698412698412699
+    },
+    "FALSE_PREMISE": {
+      "EpistemeGraph_v4": 0.72900390625,
+      "same_learner_v3_inputs": 0.699462890625,
+      "text_nli_checker": 0.766845703125,
+      "llm_self_confidence": 0.572265625,
+      "answer_length": 0.5712890625
+    }
+  },
+  "vs_second_judge_labels": {
+    "n": 100,
+    "positives": 21,
+    "auroc_v4_vs_second_judge": 0.7974683544303798,
+    "auroc_v4_vs_primary_judge_same_items": 0.7221828490432317,
+    "auroc_llm_conf_vs_second_judge": 0.62959614225437,
+    "auroc_v4_on_items_where_judges_agree": 0.835680751173709,
+    "n_agree": 80
+  },
+  "conformal_curve_cv": [
+    {
+      "alpha": 0.05,
+      "coverage": 0.945,
+      "coverage_supported": 0.9384615384615383,
+      "coverage_hallucinated": 0.9462686567164178,
+      "abstention_rate": 0.775,
+      "selective_accuracy": 0.7895651080945199
+    },
+    {
+      "alpha": 0.1,
+      "coverage": 0.91,
+      "coverage_supported": 0.923076923076923,
+      "coverage_hallucinated": 0.9074626865671641,
+      "abstention_rate": 0.5975,
+      "selective_accuracy": 0.7929048149917716
+    },
+    {
+      "alpha": 0.15,
+      "coverage": 0.86,
+      "coverage_supported": 0.8769230769230769,
+      "coverage_hallucinated": 0.8567164179104477,
+      "abstention_rate": 0.46,
+      "selective_accuracy": 0.749848167136546
+    },
+    {
+      "alpha": 0.2,
+      "coverage": 0.805,
+      "coverage_supported": 0.8153846153846155,
+      "coverage_hallucinated": 0.8029850746268657,
+      "abstention_rate": 0.2975,
+      "selective_accuracy": 0.7240309541301326
+    },
+    {
+      "alpha": 0.25,
+      "coverage": 0.745,
+      "coverage_supported": 0.7076923076923077,
+      "coverage_hallucinated": 0.7522388059701492,
+      "abstention_rate": 0.125,
+      "selective_accuracy": 0.7087984803854194
+    },
+    {
+      "alpha": 0.3,
+      "coverage": 0.7025,
+      "coverage_supported": 0.7076923076923077,
+      "coverage_hallucinated": 0.7014925373134328,
+      "abstention_rate": 0.05,
+      "selective_accuracy": 0.688711899221794
+    }
+  ],
+  "label_design": {
+    "protocol": "3x5 repeated stratified CV, ExtraTrees, evaluated on the binary target",
+    "binary_auroc": 0.740068886337543,
+    "ordinal_auroc": 0.7274014542671258
+  },
+  "cost": {
+    "this_run_estimate_usd": 0.4434,
+    "ledger_total_usd": 0.8063,
+    "per_model": {
+      "claude-haiku-5-5": {
+        "calls": 400,
+        "input_tokens": 843102,
+        "output_tokens": 180573,
+        "usd": 0.08729834999999997
+      },
+      "claude-sonnet-5-5": {
+        "calls": 101,
+        "input_tokens": 211059,
+        "output_tokens": 28354,
+        "usd": 0.3561420000000001
+      }
+    }
+  },
+  "kg": {
+    "overall_kg_accuracy_score": 0.8442440064991328,
+    "verified_triplets_pushed": 375,
+    "resolved_entity_count": 313,
+    "documents_in_corpus": 3,
+    "total_chunks_processed": 76,
+    "cross_pdf_shared_entities_count": 29
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The main multi-label classification experiments used BlogCatalog, Flickr, and YouTube, with Wikipedia (POS tags) as a further task.",
+    "Baselines included modularity, EdgeCluster, and wvRN.",
+    "DeepWalk generally scored higher than the baselines, especially in sparser labeled-fraction settings.",
+    "The paper reports Micro-F1 and Macro-F1 across varying training ratios."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give exact numbers and says the papers' tables are needed, which is the faithful behavior for this unanswerable question. However, it asserts dataset lists, baseline names, and the YouTube/POS-tag details that are not in the provided evidence, and the evidence only partially supports the claim that DeepWalk outperforms spectral clustering when labels are sparse.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,74 @@
+{
+  "answer": "The premise is mostly mistaken. DeepWalk does not use global network views to beat local random-walk methods. It is itself a random-walk method: it generates truncated random walks from each node, treats each walk as a sentence, and trains a skip-gram model (word2vec-style) so that nodes co-occurring within a small context window get similar embeddings. Its walks are local, but their co-occurrence statistics capture higher-order neighborhood structure, because a walk of length t reaches nodes up to t hops away and the window and many walks aggregate this over the graph. This gives it an advantage over methods that use only direct neighbors or explicit adjacency factorization, and it scales to large graphs.\n\nThe claim about dense graphs and abundant labels is also not supported. In the original DeepWalk paper (Perozzi et al., 2014), the reported gains were most pronounced when labeled data was scarce, for example on BlogCatalog, Flickr, and YouTube with small training fractions. With more labeled data, the advantage over baselines such as spectral clustering or modularity-based embeddings generally narrowed, because a supervised classifier can compensate for weaker embeddings. Dense graphs were not the key condition either. DeepWalk's benefits were tied to sparse labels and to the representation's ability to capture community and neighborhood structure efficiently.",
+  "confidence": 0.75,
+  "confidence_reasoning": "I am fairly confident about DeepWalk's mechanism (truncated random walks plus skip-gram) and that its original evaluation emphasized low labeled-data regimes, though exact experimental details and how later work framed the comparisons add some uncertainty.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "global network view",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "higher-order neighborhood structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "methods using only direct neighbor",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "scalability to large graph",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "spectral clustering",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "sparse labeled data",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "dense graph",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

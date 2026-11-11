@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Representations let standard statistical classifiers perform well on multi-label node classification on BlogCatalog, Flickr, and YouTube, even with as few as ~1% labeled nodes (not in the provided evidence)",
+    "Representations are scalable (not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that the representations capture local neighborhood similarity and community membership is supported by the evidence. However, the specific datasets, the 1% labeled-data figure, and the scalability claim are not in the provided evidence, and the answer omits the stated benefit of generalization on machine learning tasks, though its classification framing is loosely related to it. Online updating is loosely supported by the statement that the method can adapt to changing network topology.",
+  "unsupported_claims_note": "These details may be true of the full paper but are not entailed by the excerpts given.",
+  "judge_model": "claude-sonnet-5-5"
+}

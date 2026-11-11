@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "node2vec's operators are listed as average, Hadamard, weighted L1 and weighted L2; the evidence only names Hadamard, Weighted-L1 and Weighted-L2, and does not mention the average operator.",
+    "The Hadamard product captures pairwise feature interactions, while L1/L2 capture difference or distance; the evidence gives no such interpretation.",
+    "LINE's concatenation preserves local and higher-order structure in a single vector 'without fusing the two signals into a shared space'; the evidence only says the proximities are complementary."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims match the evidence: node2vec composes node embeddings into edge features with binary operators for link prediction, and LINE concatenates its 1st- and 2nd-order embeddings because they are complementary. Some details are not in the evidence, including the average operator, the interpretations of the operators, and the 'shared space' remark.",
+  "judge_model": "claude-sonnet-5-5"
+}

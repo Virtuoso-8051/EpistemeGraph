@@ -1,0 +1,32 @@
+{
+  "answer": "DeepWalk generated 80 random walks per vertex (\u03b3 = 80), with a walk length of 40 (t = 40) in those experiments.",
+  "confidence": 0.7,
+  "confidence_reasoning": "I recall these settings from the DeepWalk paper (Perozzi et al., 2014), but I am not certain whether they were stated specifically for BlogCatalog and Flickr or for all experiments.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "number of walks started per vertex",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "target": "80 random walks per vertex",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "walk length",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length",
+      "target": "40",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

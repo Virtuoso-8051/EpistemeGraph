@@ -1,0 +1,50 @@
+{
+  "answer": "The variants limited to undirected graphs are LINE-1st and LINE-SGD-1st, which use first-order proximity, and LINE-2nd and LINE-SGD-2nd, which use second-order proximity. In contrast, the combined LINE/LINE-SGD formulations are not restricted to undirected graphs in the same way because they can model directed edges via second-order proximity.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This matches the standard description of LINE: first-order proximity is for undirected graphs, while second-order proximity is used for directed graphs; the only uncertainty is the exact naming convention used in the source.",
+  "triples": [
+    {
+      "source": "LINE-1ST",
+      "target": "first-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD-1st",
+      "target": "first-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-2ND",
+      "target": "second-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD-2nd",
+      "target": "second-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "directed edge",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "directed edge",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "directed edge",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.1771358432191791
+}

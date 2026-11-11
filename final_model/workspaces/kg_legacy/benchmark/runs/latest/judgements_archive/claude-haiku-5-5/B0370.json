@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The original node2vec paper used a default dimension of d=128, which the evidence does not state.",
+    "Going much lower than 100 usually costs accuracy, which the evidence does not report.",
+    "Small or simple graphs can saturate at lower dimensions, which the evidence does not mention."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and matches the evidence that performance saturates around 100 dimensions. However, it adds specifics not in the evidence, such as the d=128 default and claims about accuracy loss at lower dimensions and graph-dependent saturation.",
+  "judge_model": "claude-haiku-5-5"
+}

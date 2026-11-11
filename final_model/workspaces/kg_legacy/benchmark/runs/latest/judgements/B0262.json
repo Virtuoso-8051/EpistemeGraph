@@ -1,0 +1,13 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The gap between Flickr and BlogCatalog comes from how well graph structure matches labels, not from the model itself.",
+    "DeepWalk's embeddings on Flickr form clusters aligned with labels, so few labeled examples suffice.",
+    "On BlogCatalog, labels are less aligned with structural communities (weaker homophily), so embeddings are less separable.",
+    "The classifier therefore needs many more labeled examples on BlogCatalog to reach the same accuracy (accepts the false premise)."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise and invents an explanation based on homophily and label alignment that the evidence does not contain. The passage says that 1% of Flickr has about as many labeled examples as 10% of BlogCatalog, and that optimal dimensionality depends on the number of training examples. The answer's disclaimer about not verifying the source does not fix its core claims.",
+  "judge_model": "claude-sonnet-5-5"
+}

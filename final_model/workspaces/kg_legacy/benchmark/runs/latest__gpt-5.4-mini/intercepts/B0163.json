@@ -1,0 +1,56 @@
+{
+  "answer": "In the node2vec multi-label classification experiments, the number of labeled training nodes used in absolute counts was 10% of the nodes for each dataset. Concretely, this corresponds to about 5,196 labeled training nodes for BlogCatalog, about 1,186 for PPI, and about 1,000 for Wikipedia.",
+  "confidence": 0.86,
+  "confidence_reasoning": "These counts follow from the standard node2vec experimental setup using 10% labeled nodes and the commonly reported dataset sizes, but exact counts can vary slightly depending on the specific dataset version used.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "multi-label classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled training node",
+      "target": "10% of the node",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "10% of the node",
+      "target": "BlogCatalog",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "10% of the node",
+      "target": "PPI",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "10% of the node",
+      "target": "Wikipedia",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "target": "about 5,196 labeled training node",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI",
+      "target": "about 1,186 labeled training node",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia",
+      "target": "about 1,000 labeled training node",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.21474800109863282
+}

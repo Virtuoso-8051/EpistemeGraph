@@ -1,0 +1,166 @@
+{
+    "user_query": "Under which conditions does paper3\u2019s SkipGram use Hierarchical Softmax, and how does node2vec in paper2 motivate a different neighborhood-learning design for networks with both communities and structural roles?",
+    "mode": "closed_book",
+    "llm_response": "In paper 3, SkipGram uses Hierarchical Softmax when the output vocabulary is large and a full softmax would be too expensive; the model replaces the flat normalization over all words with a binary tree, so predicting a target word requires only O(log |V|) decisions along a root-to-leaf path. In the word2vec setting, this is the standard efficiency trick used for training SkipGram on large corpora.\n\nPaper 2 (node2vec) argues that a single notion of neighborhood is not enough for graphs that contain both homophily-based communities and structural-equivalence roles. To address this, it designs a biased random-walk neighborhood sampler that can interpolate between breadth-first-like exploration, which stays near the source and captures community structure, and depth-first-like exploration, which moves outward and captures nodes with similar structural positions. This motivates learning embeddings from neighborhoods that are not fixed a priori, but are adaptively sampled to reflect either local community context or broader structural similarity depending on the walk bias.",
+    "llm_self_reported_accuracy": 0.92,
+    "llm_confidence_reasoning": "These points are standard descriptions of hierarchical softmax in word2vec/SkipGram and of node2vec\u2019s BFS-vs-DFS biased random-walk motivation, so I am highly confident, though exact wording may vary by paper.",
+    "extracted_query_entities": [
+        "SKIPGRAM",
+        "Hierarchical Softmax",
+        "WORD2VEC",
+        "NODE2VEC",
+        "biased random-walk neighborhood sampler",
+        "breadth-first-like exploration",
+        "depth-first-like exploration",
+        "homophily-based communitie",
+        "structural-equivalence role",
+        "embedding"
+    ],
+    "extracted_response_entities": [
+        "SKIPGRAM",
+        "Hierarchical Softmax",
+        "WORD2VEC",
+        "NODE2VEC",
+        "biased random-walk neighborhood sampler",
+        "breadth-first-like exploration",
+        "depth-first-like exploration",
+        "homophily-based communitie",
+        "structural-equivalence role",
+        "embedding",
+        "efficiency",
+        "standard efficiency trick",
+        "community structure",
+        "nodes with similar structural position",
+        "single notion of neighborhood is not enough for graphs with both homophily-based communities and structural-equivalence role",
+        "learning embeddings from neighborhoods that are not fixed a priori",
+        "adaptively sampled neighborhood",
+        "local community context",
+        "broader structural similarity"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "SKIPGRAM",
+            "target": "Hierarchical Softmax",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Hierarchical Softmax",
+            "target": "efficiency",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Hierarchical Softmax",
+            "target": "standard efficiency trick",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "WORD2VEC",
+            "target": "SKIPGRAM",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "biased random-walk neighborhood sampler",
+            "type": "PROPOSES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "biased random-walk neighborhood sampler",
+            "target": "breadth-first-like exploration",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "biased random-walk neighborhood sampler",
+            "target": "depth-first-like exploration",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "breadth-first-like exploration",
+            "target": "community structure",
+            "type": "CAPTURES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "depth-first-like exploration",
+            "target": "nodes with similar structural position",
+            "type": "CAPTURES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "single notion of neighborhood is not enough for graphs with both homophily-based communities and structural-equivalence role",
+            "type": "ARGUES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "learning embeddings from neighborhoods that are not fixed a priori",
+            "type": "MOTIVATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "adaptively sampled neighborhood",
+            "type": "MOTIVATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "adaptively sampled neighborhood",
+            "target": "local community context",
+            "type": "REFLECT",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "adaptively sampled neighborhood",
+            "target": "broader structural similarity",
+            "type": "REFLECT",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which conditions does paper3\u2019s SkipGram use Hierarchical Softmax, and how does node2vec in paper2 motivate a different neighborhood-learning design for networks with both communities and structural roles?",
+        "llm_response": "In paper 3, SkipGram uses Hierarchical Softmax when the output vocabulary is large and a full softmax would be too expensive; the model replaces the flat normalization over all words with a binary tree, so predicting a target word requires only O(log |V|) decisions along a root-to-leaf path. In the word2vec setting, this is the standard efficiency trick used for training SkipGram on large corpora.\n\nPaper 2 (node2vec) argues that a single notion of neighborhood is not enough for graphs that contain both homophily-based communities and structural-equivalence roles. To address this, it designs a biased random-walk neighborhood sampler that can interpolate between breadth-first-like exploration, which stays near the source and captures community structure, and depth-first-like exploration, which moves outward and captures nodes with similar structural positions. This motivates learning embeddings from neighborhoods that are not fixed a priori, but are adaptively sampled to reflect either local community context or broader structural similarity depending on the walk bias.",
+        "llm_extraction_confidence": 0.92,
+        "llm_confidence_reasoning": "These points are standard descriptions of hierarchical softmax in word2vec/SkipGram and of node2vec\u2019s BFS-vs-DFS biased random-walk motivation, so I am highly confident, though exact wording may vary by paper.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 3331.3,
+            "prompt_tokens": 128,
+            "completion_tokens": 273
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2798.7,
+            "prompt_tokens": 860,
+            "completion_tokens": 522
+        },
+        "asserted_claim_count": 14,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.23027837231811066,
+        "query_entities": [
+            "SKIPGRAM",
+            "Hierarchical Softmax",
+            "WORD2VEC",
+            "NODE2VEC",
+            "biased random-walk neighborhood sampler",
+            "breadth-first-like exploration",
+            "depth-first-like exploration",
+            "homophily-based communitie",
+            "structural-equivalence role",
+            "embedding"
+        ]
+    }
+}

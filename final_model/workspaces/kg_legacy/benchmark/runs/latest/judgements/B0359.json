@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The passage reports that DeepWalk cannot be run in a streaming setting.",
+    "Hierarchical softmax needs the full vertex set before training, making DeepWalk infeasible or not comparable for streaming.",
+    "DeepWalk is infeasible for streaming unless the vertex count is unknown (accepts the false premise)."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise. The source says that if the vertex cardinality is known or can be bounded, the Hierarchical Softmax tree can be built for the maximum value, so streaming is possible. The answer's claim that the full vertex set is required contradicts this, and the disclaimer that it is inferred does not correct the premise.",
+  "judge_model": "claude-sonnet-5-5"
+}

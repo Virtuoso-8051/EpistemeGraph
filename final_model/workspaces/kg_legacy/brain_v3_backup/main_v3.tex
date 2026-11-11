@@ -1,0 +1,782 @@
+% =============================================================================================
+%  EpistemeGraph -- manuscript
+%  Every quantitative result is a macro defined in generated/results.tex, which is written by
+%  scripts/export_paper_assets.py from the actual run artefacts. Un-run results render as "--".
+%  Compile:  latexmk -pdf main.tex      (or pdflatex -> bibtex -> pdflatex x2)
+%  Overleaf: upload paper/EpistemeGraph_overleaf.zip (New Project -> Upload Project) and press Recompile.
+%            The zip is produced by scripts/export_paper_assets.py or the website's "Export Overleaf bundle".
+% =============================================================================================
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage[margin=0.75in,columnsep=0.28in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\DeclareMathOperator{\logit}{logit}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\SKGq}{S_{\mathrm{KG}}(q)}
+\newcommand{\todo}[1]{\textcolor{red!70!black}{[#1]}}
+
+\IfFileExists{generated/results.tex}{\input{generated/results.tex}}{%
+  \newcommand{\SKG}{--}\newcommand{\PhiProv}{--}\newcommand{\PhiCov}{--}\newcommand{\PhiTopo}{--}\newcommand{\PhiCons}{--}
+  \newcommand{\NDocs}{--}\newcommand{\NChunks}{--}\newcommand{\NRawTriples}{--}\newcommand{\NTriples}{--}
+  \newcommand{\NEntities}{--}\newcommand{\NShared}{--}\newcommand{\AcceptRate}{--}\newcommand{\NItems}{--}
+  \newcommand{\NLabelled}{--}\newcommand{\NTrain}{--}\newcommand{\NCal}{--}\newcommand{\NTest}{--}
+  \newcommand{\SupportedRate}{--}\newcommand{\Champion}{--}\newcommand{\TestAUC}{--}\newcommand{\TestLL}{--}
+  \newcommand{\TestBrier}{--}\newcommand{\TestECE}{--}\newcommand{\TestAcc}{--}\newcommand{\LLMAUC}{--}
+  \newcommand{\LLMECE}{--}\newcommand{\Alpha}{--}\newcommand{\Coverage}{--}\newcommand{\CoverageSup}{--}
+  \newcommand{\CoverageHal}{--}\newcommand{\AbstainRate}{--}\newcommand{\SelAcc}{--}\newcommand{\TauVer}{--}
+  \newcommand{\TauHal}{--}\newcommand{\PoolBzero}{--}\newcommand{\PoolBq}{--}\newcommand{\PoolBkg}{--}
+  \newcommand{\JudgeKappa}{--}\newcommand{\JudgeN}{--}
+  \newcommand{\PrimaryJudge}{--}\newcommand{\CrossJudge}{--}\newcommand{\CrossJudgeN}{--}\newcommand{\CrossJudgeKappa}{--}\newcommand{\CrossJudgeAgree}{--}
+  \newcommand{\KGPrec}{--}\newcommand{\KGPrecLo}{--}\newcommand{\KGPrecHi}{--}\newcommand{\KGPrecLenient}{--}
+  \newcommand{\KGAuditN}{--}\newcommand{\KGAuditor}{--}\newcommand{\ExtentHal}{--}\newcommand{\ExtentSup}{--}\newcommand{\ExtentAUC}{--}
+  \newcommand{\TestAUCLo}{--}\newcommand{\TestAUCHi}{--}\newcommand{\LLMAUCLo}{--}\newcommand{\LLMAUCHi}{--}
+  \newcommand{\DeltaLLM}{--}\newcommand{\PvalLLM}{--}\newcommand{\DeltaText}{--}\newcommand{\PvalText}{--}
+  \newcommand{\DeltaTopo}{--}\newcommand{\PvalTopo}{--}\newcommand{\KGAccLearned}{--}\newcommand{\KGAccLo}{--}\newcommand{\KGAccHi}{--}
+  \newcommand{\SensDefault}{--}\newcommand{\SensMaxDev}{--}\newcommand{\SensRange}{--}
+  \newcommand{\TableLeaderboard}{}\newcommand{\TableAblation}{}\newcommand{\TableFeatures}{}\newcommand{\TablePercat}{}\newcommand{\TableKgprec}{}
+  \newcommand{\TableSens}{}\newcommand{\TableTripleweights}{}}
+
+\title{\textbf{EpistemeGraph: Knowledge-Graph-Grounded Hallucination Auditing\\with Sheaf, Curvature and Spectral Evidence and Conformal Guarantees}}
+\author{Anurag Raj\\
+  \small Indian Institute of Technology \todo{department, campus}\\
+  \small \texttt{\todo{email}}\quad \url{https://github.com/Virtuoso-8051/EpistemeGraph}}
+\date{}
+
+\begin{document}
+\maketitle
+
+% =============================================================================================
+\begin{abstract}
+Large language models (LLMs) answer questions about specialised scientific literature fluently, and with high
+verbalised confidence, even when they invent mechanisms, misattribute results across papers or accept a false
+premise. We present \emph{EpistemeGraph}, an auditing system that decides whether an LLM answer is supported by a
+document collection, how likely it is to be hallucinated, how much of it is unsupported, and which claims are at
+fault. EpistemeGraph (i)~builds a provenance-verified knowledge graph (KG) from PDFs and measures it twice: with a
+decomposable intrinsic fidelity index $S_{\mathrm{KG}}$, and with a \emph{learned}, model-assisted estimate of KG
+accuracy with a confidence interval; (ii)~converts each answer into a polarity-annotated claim graph through a call
+decoupled from answer generation; (iii)~describes the answer by a 13-dimensional vector that combines three
+topological measurements of the claim graph against the KG (the Dirichlet energy of a translational knowledge sheaf,
+the Wasserstein shift of the Forman--Ricci curvature distribution when the claims are grafted onto the KG, and a
+spectral divergence of normalised Laplacians) with graph provenance, natural-language-inference consistency,
+out-of-corpus novelty and model-side uncertainty, and by a 15-dimensional vector per claim; and (iv)~learns the
+decision end to end, with no hand-set weight or threshold: a ten-model nested-CV tournament, including an
+attention-based multiple-instance network that localises unsupported claims from answer-level labels only, selects a
+calibrated scorer; a learned log-linear opinion pool adds the local KG reliability; and Mondrian split-conformal
+prediction returns \textsc{verified}, \textsc{abstain} or \textsc{hallucinated} with class-conditional coverage. On a
+\NItems-question benchmark over the LINE, node2vec and DeepWalk papers (factual, cross-document, unanswerable and
+false-premise questions, labelled at the answer level), the audit reaches AUROC \TestAUC{}
+(95\% CI [\TestAUCLo, \TestAUCHi]) on held-out answers against \LLMAUC{} for the LLM's own confidence (DeLong
+$p$ = \PvalLLM), with empirical conformal coverage of \Coverage\% at $\alpha=\Alpha$. The KG fidelity index is stable
+under perturbation of every Phase-1 design constant (maximum change \SensMaxDev). Code, data, prompts and every
+intermediate artefact are public.
+\end{abstract}
+
+% =============================================================================================
+\section{Introduction}
+\label{sec:intro}
+
+Hallucination, i.e.\ content that is fluent but unsupported by the relevant source, is the central obstacle to
+deploying LLMs in technical domains~\cite{ji2023survey,huang2025survey}. Two facts make it hard to manage in practice.
+First, LLM self-assessment is an unreliable safety signal: verbalised confidence is typically high and weakly
+discriminative on specialised material~\cite{xiong2024uncertainty,kadavath2022know}. Second, most reference-based
+verifiers compare text with text, which cannot distinguish a claim that \emph{uses} the corpus vocabulary from one that
+is \emph{supported} by the corpus. For example, ``node2vec optimises a genetic fitness function'' shares many tokens
+with the node2vec paper and is still false.
+
+Knowledge graphs offer a structured alternative~\cite{kim2023factkg,sansford2024grapheval}. If the source documents are
+distilled into a graph of typed relations with evidence, an answer can be distilled into a claim graph and the two
+graphs compared. This raises four questions that we address directly.
+\textbf{(Q1)} The reference graph is itself LLM-extracted. How accurate is it, measured rather than assumed, and how
+should its reliability enter the decision? \textbf{(Q2)} Which quantities expose an unsupported claim beyond counting
+missing edges? \textbf{(Q3)} How should many such signals be turned into a decision without hand-tuned weights and
+thresholds, and with a statistical guarantee? \textbf{(Q4)} Can the system say \emph{which} claim is wrong when it is
+only ever told whether a whole answer is wrong?
+
+\paragraph{Contributions.}
+\begin{enumerate}\itemsep0pt
+\item \textbf{Measured KG quality.} A provenance-verified, corpus-namespaced KG construction with an intrinsic
+  fidelity index $S_{\mathrm{KG}}$ whose aggregation rule is derived, not tuned (\cref{prop:gm}); an identifiability
+  argument for why its weights cannot be learned from one corpus; and a \emph{learned} model-assisted estimator of KG
+  accuracy that is design-unbiased and tighter than the plain sample proportion (\cref{sec:phase1}).
+\item \textbf{Decoupled interception}, so the audited model cannot omit its own fabrications from the claim graph
+  (\cref{sec:phase2}).
+\item \textbf{Geometric evidence.} Three topological measurements of a claim graph against a reference graph,
+  with stated properties: knowledge-sheaf energy, Forman--Ricci curvature shift under grafting (zero exactly for
+  answers that add nothing new), and a bounded spectral divergence against the reference's $k$-hop shadow. They are
+  combined with graph provenance, NLI consistency and model-side uncertainty, all computed on the \emph{answer}
+  (\cref{sec:phase3}).
+\item \textbf{A fully learned decision layer} with claim-level localisation: a nested-CV tournament under a proper
+  scoring rule whose contenders include a gated-attention multiple-instance network trained with a noisy-OR
+  constraint; a log-linear pool that strictly nests fixed weightings; and Mondrian conformal prediction for a
+  three-way decision with class-conditional coverage (\cref{sec:phase4}).
+\item \textbf{Evaluation protocol.} A \NItems-question benchmark with evidence-validated items and answer-level
+  labels, bootstrap confidence intervals, DeLong tests against the LLM's own confidence and against a text-only NLI
+  checker, family ablations, and a robustness analysis of every Phase-1 design constant
+  (\cref{sec:setup,sec:results}).
+\end{enumerate}
+
+\paragraph{What is new, and what is not.}
+The individual instruments are established: cellular and knowledge sheaves~\cite{hansen2019sheaves,gebhart2023knowledge},
+Forman curvature~\cite{forman2003bochner,samal2018comparative}, Laplacian spectra~\cite{chung1997spectral}, NLI-based
+consistency~\cite{laban2022summac}, attention-based multiple-instance learning~\cite{ilse2018attention}, log-linear
+pooling~\cite{genest1986combining}, model-assisted survey estimation~\cite{sarndal1992model} and conformal
+prediction~\cite{vovk2005algorithmic,vovk2012conditional}. Our contribution is (a)~their use as \emph{measurement
+instruments} for the agreement between an answer's claim graph and a fallible reference graph, with new definitions
+for the two graft-based quantities ($\Delta\kappa$, $D_{\mathrm{spec}}$) and their properties
+(\cref{prop:curv,lem:spec}); (b)~the identifiability analysis that makes the KG reliability a learnable,
+per-question quantity (\cref{prop:pool}); (c)~treating an answer as a bag of claims, so that answer-level labels
+supervise claim-level hallucination localisation; and (d)~an end-to-end protocol in which every weight and threshold
+is estimated from data and every remaining design constant is shown not to drive the conclusions.
+
+% =============================================================================================
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Hallucination detection.}
+Reference-free detectors use the model itself: sampling consistency~\cite{manakul2023selfcheckgpt}, semantic
+entropy over meaning clusters~\cite{farquhar2024semantic}, or elicited confidence~\cite{kadavath2022know,xiong2024uncertainty}.
+Reference-based methods decompose text into atomic facts and verify them against a knowledge
+source~\cite{min2023factscore}. Benchmarks such as HaluEval~\cite{li2023halueval} and RAGTruth~\cite{niu2024ragtruth}
+established response-level and span-level annotation. Our labels follow the response-level convention, and our
+false-premise and unanswerable categories target the failure modes most relevant to literature QA.
+
+\paragraph{Graphs for grounding and verification.}
+Retrieval augmentation~\cite{lewis2020rag} and graph-structured retrieval~\cite{edge2024graphrag} reduce
+hallucination at generation time. FactKG~\cite{kim2023factkg} verifies claims by reasoning over a KG, and
+GraphEval~\cite{sansford2024grapheval} represents an output as a KG and checks each triple with an NLI model.
+EpistemeGraph differs in three ways: it treats the reference graph as fallible and measures its quality; it uses
+graph-\emph{geometric} rather than purely per-triple evidence; and it attaches a distribution-free guarantee to the
+final decision.
+
+\paragraph{Sheaves, curvature and spectra.}
+Cellular sheaves generalise graph Laplacians by attaching vector spaces and linear restriction maps to vertices and
+edges~\cite{hansen2019sheaves}. They underlie sheaf neural networks~\cite{bodnar2022sheaf} and knowledge-graph
+embedding, where TransE~\cite{bordes2013transe} is a special case of a knowledge sheaf~\cite{gebhart2023knowledge}.
+Forman's combinatorial Ricci curvature~\cite{forman2003bochner} and its network
+adaptations~\cite{sreejith2016forman,samal2018comparative} identify bridge-like edges, which are linked to
+bottlenecks in message passing~\cite{topping2022oversquashing}. Laplacian spectra summarise global
+shape~\cite{chung1997spectral}. We use all three as measurement instruments for claim graphs, not as learning
+architectures.
+
+\paragraph{Calibration and conformal prediction.}
+Proper scoring rules~\cite{gneiting2007scoring} and post-hoc calibration~\cite{platt1999probabilistic,guo2017calibration}
+make scores interpretable as probabilities. Conformal prediction~\cite{vovk2005algorithmic,lei2018distribution,angelopoulos2023gentle}
+gives finite-sample coverage under exchangeability, and its Mondrian variant gives class-conditional
+validity~\cite{vovk2012conditional}. Pooling probabilities from several sources has a long history in
+statistics~\cite{genest1986combining}. We use logarithmic pooling with learned weights.
+
+\paragraph{Corpus.}
+Our experimental corpus consists of three representation-learning papers: DeepWalk~\cite{perozzi2014deepwalk},
+LINE~\cite{tang2015line} and node2vec~\cite{grover2016node2vec}. Their overlapping vocabulary (random walks, proximity,
+Skip-gram, negative sampling) with different mechanisms creates realistic opportunities for cross-paper
+confabulation.
+
+% =============================================================================================
+\section{Problem Formulation}
+\label{sec:problem}
+
+Let $\mathcal D$ be a document collection and $q$ a user query. An LLM $M$ returns an answer $a=M(q)$ and a verbalised
+confidence $c_{\mathrm{LLM}}\in[0,1]$. Let $\mathcal C^{+}(a)$ be the set of factual claims that $a$ asserts. We call
+$a$ \emph{supported} ($y=1$) if every claim in $\mathcal C^{+}(a)$ is stated in or entailed by $\mathcal D$ (or is
+uncontroversial background), and \emph{hallucinated} ($y=0$) otherwise. Correctly rejecting a false premise, or
+stating that $\mathcal D$ does not contain an answer, is supported behaviour.
+
+\emph{Goal:} a map $(q,a)\mapsto\Gamma\subseteq\{0,1\}$ such that
+$\Pr\big(y\in\Gamma\mid y=c\big)\ge 1-\alpha$ for each class $c$, with $|\Gamma|=1$ as often as possible. The
+three-way decision follows from $\Gamma$: $\{1\}\mapsto$\textsc{verified}, $\{0\}\mapsto$\textsc{hallucinated},
+otherwise \textsc{abstain}.
+
+% =============================================================================================
+\section{Method}
+\label{sec:method}
+
+\subsection{Phase 1: Incremental KG Construction and Fidelity}
+\label{sec:phase1}
+
+\paragraph{Extraction with verified provenance.}
+Each PDF receives a content hash. Its text is normalised (NFKC, de-hyphenation, bibliography removal) and packed into
+sentence-aligned chunks of about 2{,}200 characters with one sentence of overlap. An LLM extracts entities and then
+triples whose endpoints must come from the entity list. Each triple carries a verbatim evidence sentence. A triple
+is \emph{accepted} only if (a)~its quote matches the chunk verbatim (fuzzy ratio $\ge0.82$) or anchors to a chunk
+sentence by embedding similarity, and (b)~both entities occur in that sentence. Every extracted triple $c$ receives a
+grounding score $g_c\in[0,1]$, the product of an evidence-match score and a blend of entity support and semantic
+support. Rejected triples are logged.
+
+\paragraph{Incremental entity resolution and storage.}
+Mentions are resolved to canonical entities by exact match, acronym$\leftrightarrow$expansion match, and type-aware
+cosine similarity $\ge0.85$ on sentence embeddings~\cite{reimers2019sbert}. When new documents arrive, the resolver
+is \emph{pre-seeded} with all existing canonical entities, so a new surface form merges into an existing node and
+existing names are never renamed. The delta is written to Neo4j with \texttt{MERGE} keyed on a normalised name, with
+list properties unioned and evidence replaced only by better-grounded evidence (\cref{app:cypher}). Chunk identifiers
+are content-addressed, which makes ingestion idempotent and keeps support counts exact.
+
+\paragraph{Fidelity $S_{\mathrm{KG}}$.}
+Let $\mathcal C$ be all extracted triples, $\mathcal C^{+}\subseteq\mathcal C$ the accepted ones, $G=(V,E)$ the
+resulting graph and $\mathcal K$ the chunks. We define four pillars in $[0,1]$:
+\begin{align}
+\Phi_{\mathrm{prov}} &= \tfrac{1}{|\mathcal C|}\textstyle\sum_{c\in\mathcal C} g_c, \\
+\Phi_{\mathrm{cov}}  &= \frac{\sum_{k} w_k\,\mathrm{cov}(k)}{\sum_k w_k},\quad w_k=\log(1+|k|),\\
+\Phi_{\mathrm{topo}} &= 1-\frac{\kappa(G)-1}{|V|-1}, \\
+\Phi_{\mathrm{cons}} &= 1-\frac{\#\{\text{functional violations}\}}{|\mathcal C^{+}|},
+\end{align}
+where $\mathrm{cov}(k)=\frac{1}{m_k}\sum_{i}\min\!\big(1,\max_{t\in T_k}\cos(\phi(s_i),\phi(t))/\tau\big)$ measures how
+well the triples $T_k$ extracted from chunk $k$ cover its $m_k$ sentences, and $\kappa(G)$ counts connected
+components. $\Phi_{\mathrm{prov}}$ is a precision proxy, $\Phi_{\mathrm{cov}}$ a recall proxy, $\Phi_{\mathrm{topo}}$
+equals $1$ for a connected graph and $0$ for isolated triples, and $\Phi_{\mathrm{cons}}$ penalises a subject with two
+objects under a functional relation. We aggregate with the unweighted geometric mean
+\begin{equation}
+S_{\mathrm{KG}}=\big(\Phi_{\mathrm{prov}}\Phi_{\mathrm{cov}}\Phi_{\mathrm{topo}}\Phi_{\mathrm{cons}}\big)^{1/4},
+\label{eq:skg}
+\end{equation}
+the symmetric, scale-invariant mean that vanishes if any pillar does. All pillars are sums over chunks and triples,
+so $S_{\mathrm{KG}}$ is recomputed exactly over the whole corpus after every incremental upload without
+re-processing earlier documents.
+
+\paragraph{Why the exponent $1/4$ is derived, not tuned.}
+Consider the weighted power means $M_p^{\bm w}(\Phi)=\big(\sum_j w_j\Phi_j^{\,p}\big)^{1/p}$ ($M_0^{\bm w}=\prod_j\Phi_j^{w_j}$),
+the family of homogeneous quasi-arithmetic means~\cite{hardy1934inequalities}. We require three properties of a
+quality index: \emph{symmetry} (no pillar is privileged a priori, hence $w_j=1/4$), \emph{homogeneity}
+(rescaling every pillar rescales the index), and \emph{veto} (a failed pillar cannot be compensated: $\Phi_j=0\Rightarrow
+S=0$).
+\begin{proposition}\label{prop:gm}
+Among symmetric power means $M_p$ with the veto property, the geometric mean $M_0$ is the pointwise largest, i.e.\ the
+least pessimistic aggregator that still vetoes.
+\end{proposition}
+\begin{proof}
+For $p>0$, $M_p(\Phi)\ge(\tfrac14\Phi_j^{\,p})^{1/p}>0$ whenever some $\Phi_j>0$, so the veto fails. For $p\le0$ the veto
+holds (with the convention $0^{p}=\infty$ for $p<0$). By the power-mean inequality $M_p$ is non-decreasing in
+$p$~\cite{hardy1934inequalities}, so $\sup_{p\le0}M_p=M_0$.
+\end{proof}
+Learning the weights instead is not possible at this level: $S_{\mathrm{KG}}$ is one number per corpus, so with one
+corpus there is one observation and the weights are unidentifiable (the same argument as \cref{prop:pool}(b)). The
+learnable quantity lives one level down, at the level of individual triples, which we exploit next.
+
+\paragraph{Measured, learned accuracy of the KG.}
+$S_{\mathrm{KG}}$ is an index; it does not state how often a stored triple is \emph{correct}. We therefore audit a
+uniform random sample of $n$ of the $N$ accepted triples: an auditor sees each triple with its full source passage
+and labels it \textsc{correct}, \textsc{partially correct} or \textsc{incorrect}. With $k$ correct triples,
+$\hat p=k/n$ has the 95\% Wilson interval~\cite{wilson1927probable} ($z=1.96$)
+\begin{equation}
+\mathrm{CI}_{95}(\hat p)=\frac{\hat p+\frac{z^2}{2n}\pm z\sqrt{\frac{\hat p(1-\hat p)}{n}+\frac{z^2}{4n^2}}}{1+\frac{z^2}{n}}.
+\label{eq:wilson}
+\end{equation}
+The unaudited $N-n$ triples carry information too: every triple has evidence signals $\bm v_t$ (grounding score,
+verbatim match, extraction confidence, support count, endpoint degrees, relation frequency, cross-paper status,
+quote length). We learn $\hat m(\bm v)=\hat P(\text{correct}\mid\bm v)$ with a regularised logistic model on the audited
+sample and use the model-assisted difference estimator of survey sampling~\cite{sarndal1992model}
+\begin{equation}
+\hat p_{\mathrm{MA}}=\frac1N\sum_{t=1}^{N}\hat m(\bm v_t)+\frac1n\sum_{t\in s}\big(y_t-\hat m^{(-t)}(\bm v_t)\big),
+\qquad
+\widehat{\mathrm{SE}}=\sqrt{\Big(1-\frac nN\Big)\frac{\widehat{\mathrm{Var}}(y_t-\hat m^{(-t)}(\bm v_t))}{n}},
+\label{eq:ma}
+\end{equation}
+where $\hat m^{(-t)}$ are cross-fitted predictions. Under simple random sampling $\hat p_{\mathrm{MA}}$ is unbiased for
+the KG accuracy \emph{whatever} the model, and its variance falls as the model explains more of the label variance:
+the learned weights (\cref{tab:tripleweights}) buy precision, never bias. On our corpus the learned accuracy is
+\KGAccLearned\% (95\% CI [\KGAccLo\%, \KGAccHi\%]).
+
+\paragraph{Robustness of the remaining constants.}
+Phase~1 still contains design constants that are not mathematical definitions (quote-match ratio, entity-support
+level, coverage normaliser $\tau$, minimum extractor confidence, entity-merge cosine). Instead of tuning them, we
+perturb each one at a time and re-run verification, entity resolution and $S_{\mathrm{KG}}$ on the cached extractions
+(\cref{tab:sens}). $S_{\mathrm{KG}}$ changes by at most \SensMaxDev{} (default \SensDefault). The most influential
+constant is $\tau$, which by construction rescales $\Phi_{\mathrm{cov}}$; the quote-match ratio and the extractor
+confidence threshold have essentially no effect, because accepted quotes are near-verbatim and extractor confidences
+are concentrated above both thresholds.
+
+\paragraph{Corpus workspaces.}
+Every uploaded set of documents defines a \emph{workspace}: a corpus with its own graph, written to Neo4j under a
+dedicated namespace (a \texttt{kg\_id} property with a composite uniqueness constraint on
+$(\texttt{kg\_id},\texttt{name\_key})$). Uploading a new set therefore builds a fresh graph from scratch without
+modifying earlier ones, while an explicit \emph{extend} operation merges new documents into an existing corpus.
+Because the decision layer (\cref{sec:phase4}) is calibrated per corpus, the workspace is also the unit of
+calibration.
+
+\subsection{Phase 2: Decoupled Interception}
+\label{sec:phase2}
+
+The audited model first answers $q$ as it would in deployment and states $c_{\mathrm{LLM}}$ (\emph{closed-book}
+mode; a \emph{grounded} mode adds retrieved corpus sentences and audits a RAG system). A \emph{separate} extraction
+call then converts $a$ into the claim graph $G'=(V',E')$. Each edge carries a relation type and a polarity in
+$\{$\textsc{asserted}, \textsc{speculative}, \textsc{refuted}$\}$. Decoupling matters: if a single call answers
+\emph{and} lists its claims, the model controls which of its statements are audited. The extraction prompt is
+assembled dynamically. Its relation vocabulary is mined from the live KG, and its naming hints are the KG entities
+nearest to $q\oplus a$ in embedding space. All calls are cached by a hash of prompt version, model and input.
+
+\subsection{Phase 3: Retrieval, Alignment and the CASSE Vector}
+\label{sec:phase3}
+
+\paragraph{Retrieval and alignment.}
+Seed vertices are KG entities matched by name, alias, acronym or a distinctive token of the claim entities. The
+ground-truth (GT) subgraph $G=(V,E)$ contains the seeds, their neighbours, and every shortest path of length $\le3$
+between two seeds. Each response entity is aligned to at most one GT vertex (exact form, acronym, then cosine $\ge0.85$,
+the Phase~1 merge threshold). Let $E'_{+}$ be the asserted and speculative claim edges and
+$x_v=\phi(\mathrm{name}(v))\in\R^{d}$ unit embeddings. All features are computed on the response, and none uses the
+query text.
+
+\paragraph{(1) Sheaf Laplacian energy.}
+Consider the translational knowledge sheaf $\mathcal F$ on a graph whose vertex and edge stalks are $\R^d$, with
+identity restriction maps and a relation-specific affine shift $t_r$. Its coboundary on $e=(u\xrightarrow{r}v)$ is
+$(\delta x)_e=x_v-x_u-t_r$, and $\sum_e\|(\delta x)_e\|^2$ is the Dirichlet energy of the affine sheaf
+Laplacian~\cite{hansen2019sheaves,gebhart2023knowledge}. TransE~\cite{bordes2013transe} is precisely the model that
+makes this energy small on true triples. We estimate $t_r$ on the GT subgraph by maximum likelihood under an
+isotropic Gaussian residual, shrunk towards the global mean shift $\bar t$ with one pseudo-observation:
+\begin{equation}
+t_r=\frac{\sum_{(u,v)\in E_r}(x_v-x_u)+\bar t}{|E_r|+1}.
+\end{equation}
+The feature is the response's mean edge energy relative to the GT baseline:
+\begin{equation}
+\mathcal E_{\mathcal F}=\frac{\frac1{|E'_+|}\sum_{e\in E'_+}\|x_v-x_u-t_r\|^2}{\frac1{|E|}\sum_{e\in E}\|x_v-x_u-t_r\|^2}.
+\end{equation}
+$\mathcal E_{\mathcal F}=1$ means the claims are as relationally consistent as the ground truth. Large values indicate
+relations whose endpoints do not stand in the semantic offset that the relation usually induces.
+
+\paragraph{(2) Forman--Ricci curvature shift.}
+For an unweighted graph, the augmented Forman curvature of an edge is~\cite{samal2018comparative}
+\begin{equation}
+F(u,v)=4-d_u-d_v+3\,|\triangle(u,v)|,
+\end{equation}
+where $|\triangle(u,v)|$ counts the triangles containing the edge. Bridges between otherwise unrelated regions are
+strongly negatively curved, while edges with shared context gain curvature through triangles. We \emph{graft} the
+response onto the ground truth and measure how far the curvature distribution moves:
+\begin{equation}
+\Delta\kappa=\log\Big(1+W_1\big(\mu_{G},\,\mu_{G\cup E'_+}\big)\Big),
+\end{equation}
+where $\mu_H$ is the empirical distribution of $\{F_H(e)\}_{e\in E(H)}$ and $W_1$ the 1-Wasserstein
+distance~\cite{villani2009optimal}.
+
+\begin{proposition}\label{prop:curv}
+$\Delta\kappa\ge0$, and $\Delta\kappa=0$ whenever $E'_+\subseteq E$.
+\end{proposition}
+\begin{proof}
+$W_1\ge0$. If $E'_+\subseteq E$, then $G\cup E'_+=G$, so the two empirical measures coincide and $W_1=0$.
+\end{proof}
+Thus a response that only restates GT edges incurs no distortion. Every novel claim edge raises endpoint degrees
+and, unless it closes triangles, adds a negatively curved edge.
+
+\paragraph{(3) Spectral divergence.}
+Let $V'$ be the vertices touched by $E'_+$ and $H$ the \emph{$k$-hop shadow} of $G$ on $V'$: $(u,v)\in E(H)$ iff
+$d_G(u,v)\le k$ (we use $k=2$, the retrieval depth). With
+$L_{\mathrm{sym}}=I-D^{-1/2}AD^{-1/2}$,
+\begin{equation}
+D_{\mathrm{spec}}=\tfrac12\,W_1\big(\spec L_{\mathrm{sym}}(G'_+),\ \spec L_{\mathrm{sym}}(H)\big).
+\end{equation}
+\begin{lemma}\label{lem:spec}
+$D_{\mathrm{spec}}\in[0,1]$, and $D_{\mathrm{spec}}=0$ if $G'_+$ and $H$ are isomorphic on $V'$.
+\end{lemma}
+\begin{proof}
+All eigenvalues of $L_{\mathrm{sym}}$ lie in $[0,2]$~\cite{chung1997spectral}. Both spectra are uniform measures on
+$|V'|$ points of $[0,2]$, so $W_1\le2$. Isomorphic graphs are cospectral.
+\end{proof}
+Whereas $\Delta\kappa$ is local (edge neighbourhoods), $D_{\mathrm{spec}}$ compares the global shape of the claim
+graph with what the KG says the same entities look like.
+
+\paragraph{(4) Bayesian provenance support.}
+For each claim edge, let $s_e=g(u,v)$ if a GT edge exists, $s_e=\max_w g(u,w)g(w,v)$ if only two-hop paths exist (the
+probability that both independent hops are genuine), and $s_e=0$ otherwise or if an endpoint is unaligned. With a
+uniform prior on the support rate,
+\begin{equation}
+\pi_{\mathrm{prov}}=\E\big[\mathrm{Beta}\big(1+\textstyle\sum_e s_e,\ 1+\sum_e(1-s_e)\big)\big]=\frac{1+\sum_e s_e}{2+|E'_+|}.
+\end{equation}
+
+\paragraph{(5) Evidence similarity.}
+$\sigma_{\mathrm{sim}}=\frac{1}{|C|}\sum_{c\in C}\max_{s\in\mathcal S}\cos(\phi(c),\phi(s))$ over verbalised claims $C$
+and all corpus sentences $\mathcal S$. It compensates for KG recall: a true claim that Phase~1 missed can still find
+its sentence.
+
+\paragraph{(6, 7) NLI consistency.}
+Embedding similarity measures topical closeness, not support: ``X uses Y'' and ``X does not use Y'' are near
+neighbours. For each claim $c$ we retrieve its $k=3$ nearest corpus sentences $\mathcal S_c$ and score each pair with a
+cross-encoder NLI model~\cite{he2023debertav3} fine-tuned on SNLI and MultiNLI~\cite{bowman2015snli,williams2018mnli}.
+Following the zero-shot SummaC score~\cite{laban2022summac}, the consistency of a claim is
+\begin{equation}
+\gamma(c)=\max_{s\in\mathcal S_c}\big[P_{\mathrm{ent}}(s\Rightarrow c)-P_{\mathrm{con}}(s\Rightarrow c)\big]\in[-1,1].
+\end{equation}
+Subtracting \emph{per premise} before maximising matters: a separate maximum of contradiction lets any unrelated
+sentence that happens to contradict a short claim dominate. We use the mean $\bar\gamma_{\mathrm{NLI}}$ over asserted
+claims (how much of the answer is stated) and the minimum $\gamma^{\min}_{\mathrm{NLI}}$ (its weakest claim).
+
+\paragraph{(8) Out-of-corpus novelty.}
+Over the content stems $T$ of the asserted claims, with smoothed inverse document frequency
+$\mathrm{idf}(t)=\log\frac{1+N}{1+\mathrm{df}(t)}+1$ over $N$ chunks and corpus vocabulary $\mathcal V$:
+\begin{equation}
+\nu_{\mathrm{ooc}}=\frac{\sum_{t\in T}\mathrm{idf}(t)\,\mathbb 1[t\notin\mathcal V]}{\sum_{t\in T}\mathrm{idf}(t)}.
+\end{equation}
+Restricting to asserted claims is essential. An answer that \emph{refutes} ``genetic algorithms'' mentions an
+out-of-corpus term without asserting it.
+
+\paragraph{(9) Contradiction rate.}
+$\kappa_{\mathrm{con}}$ is the fraction of claims that (i)~are \textsc{refuted} by the answer although a grounded GT
+edge exists, (ii)~give a second object to a subject under a relation marked functional in the KG, or (iii)~invert an
+asymmetric relation (e.g.\ \textsc{outperforms}, \textsc{part\_of}, \textsc{is\_a}) whose reverse is in the KG.
+
+\paragraph{(10) Entity alignment.}
+$\rho_{\mathrm{align}}$ is the fraction of the answer's entities that align to a KG entity: an answer built on
+entities the papers never mention is unlikely to be supported by them.
+
+\paragraph{(11--13) Model-side signals.}
+The verbalised confidence $c_{\mathrm{LLM}}$; the mean negative log-likelihood of the generated tokens,
+$\bar u_{\mathrm{NLL}}=-\frac1L\sum_{\ell}\log p(w_\ell\mid w_{<\ell})$, an intrinsic uncertainty
+signal~\cite{kadavath2022know,farquhar2024semantic} obtained from the same API call at no extra cost (zero when the
+model does not expose token probabilities); and the hedging ratio $h_{\mathrm{spec}}$, the share of claims the answer
+itself marks as speculative. None of them is trusted a priori: their direction and weight are learned.
+
+\paragraph{Claim-level vectors.}
+Besides the answer vector $\bm x\in\R^{13}$, every claim $c_i$ of an answer receives a vector $\bm z_i\in\R^{15}$:
+provenance strength and support tier (direct edge, two-hop path), conflict flag, polarity, endpoint alignment,
+NLI entailment, contradiction and consistency, embedding similarity to the nearest sentence, out-of-corpus rate, the
+claim's own normalised sheaf residual $\log(1+\|\delta_e\|^2/\bar\delta^2)$ and the signed log Forman curvature of the
+grafted edge. An answer is thus a \emph{bag} $\{\bm z_i\}$, which \cref{sec:phase4} exploits.
+
+\paragraph{Hallucination extent.}
+A binary verdict does not say \emph{how much} of an answer is unsupported. We therefore also report the claim-level
+extent
+\begin{equation}
+\eta(a)=\frac{\big|\{e\in E'_+:\ \text{no grounded GT path, or } e \text{ is in conflict}\}\big|}{|E'_+|}\in[0,1],
+\end{equation}
+which is available for every answer, including before any calibration data exist. $\eta$ is a descriptive measure
+reported alongside the calibrated probability $1-S_{\mathrm{final}}$; it is not an input to the learned scorer.
+
+\paragraph{Local KG fidelity.}
+The retrieved subgraph inherits its own reliability,
+$\SKGq=\big(\sum_{e\in E}g_e+S_{\mathrm{KG}}\big)/(|E|+1)$, which is the mean grounding shrunk towards the global
+score with one prior pseudo-edge.
+
+\subsection{Phase 4: Learned Scoring and Conformal Decisions}
+\label{sec:phase4}
+
+\paragraph{Data and splits.}
+Each labelled response contributes $(\bm x\in\R^{13},\{\bm z_i\}\subset\R^{15},\SKGq,y)$. A deterministic hash of the query identifier assigns 60\% /
+20\% / 20\% to train, calibration and test. Because a query never changes split, models trained at different times
+are compared on an identical test set without leakage.
+
+\paragraph{Tournament.}
+Ten families span the main inductive biases for small tabular data and for sets: logistic regression; gradient
+boosting with \emph{monotone constraints} encoding the expected direction of each feature (\cref{tab:features});
+random forest; extra trees; gradient boosting; RBF-SVM; MLP; a stacking ensemble; a feature-attention residual network;
+and the multiple-instance network below. Hyper-parameters are tuned by inner 3-fold CV, and generalisation is
+estimated by outer 5-fold CV to avoid selection bias~\cite{cawley2010overfitting}. The champion minimises
+out-of-fold log-loss, a strictly proper scoring rule that rewards calibrated probabilities rather than ranking
+alone~\cite{gneiting2007scoring}. It is refitted on the training split, and Platt scaling~\cite{platt1999probabilistic}
+is fitted on its \emph{nested out-of-fold} logits, which are honest by construction, giving
+$S_{\mathrm{query}}=\sigma(a\,\ell(\bm x)+b)$. For interpretability we also report the standardised logistic surrogate
+$\logit P(y=1\mid\bm x)=b+\sum_j w_j z_j$, whose coefficients $w_j$ are the \emph{learned multipliers} of the features.
+
+\paragraph{Claim-level localisation by multiple-instance learning.}
+Labels exist only for whole answers, yet an answer is hallucinated if and only if \emph{at least one} of its claims is
+unsupported: precisely the standard multiple-instance assumption~\cite{dietterich1997mil}. We therefore model an
+answer as the bag $\{\bm z_i\}_{i=1}^{n}$ of its claim vectors. Each claim is encoded as $\bm h_i=f_\theta(\bm z_i)$ and
+pooled with gated attention~\cite{ilse2018attention},
+\begin{equation}
+a_i=\operatorname{softmax}_i\!\Big(\bm w^\top\big[\tanh(V\bm h_i)\odot\operatorname{sigm}(U\bm h_i)\big]\Big),\qquad
+\bm b=\sum_i a_i\bm h_i,
+\end{equation}
+and the answer logit is $\ell=g\big([\bm b;\,A\bm x]\big)$, so the network sees both the bag and the 13 answer-level
+features. A second head gives each claim a probability $r_i=\operatorname{sigm}(\bm c^\top\bm h_i)$ of being
+unsupported, tied to the answer label through a noisy-OR,
+\begin{equation}
+\mathcal L=\mathrm{BCE}\big(\sigma(\ell),y\big)+\lambda\,\mathrm{BCE}\Big(\textstyle\prod_i(1-r_i),\,y\Big),
+\end{equation}
+which encodes the multiple-instance assumption ($P(\text{supported})=\prod_i P(\text{claim } i \text{ supported})$ under
+independence) and is what turns $r_i$ into a \emph{claim-level hallucination detector} trained without any
+claim-level label. $\lambda$ and the width are tuned in the inner CV. If another family wins the tournament, the
+network is still fitted as a companion localiser, so claim-level scores are always reported.
+
+\paragraph{Learned log-linear pool.}
+Earlier versions combined scores as $0.2\,S_{\mathrm{KG}}+0.8\,S_{\mathrm{query}}$. We instead learn
+\begin{equation}
+\logit S_{\mathrm{final}}=b_0+b_1\logit S_{\mathrm{query}}+b_2\logit\SKGq
+\label{eq:pool}
+\end{equation}
+by maximum likelihood (Newton--Raphson with a weak $L_2$ prior) on \emph{out-of-fold} $S_{\mathrm{query}}$, so the pool
+never sees in-sample over-confidence.
+
+\begin{proposition}\label{prop:pool}
+(a) The normalised geometric pool $p\propto S_{\mathrm{query}}^{\eta}S_{\mathrm{KG}}^{1-\eta}$ is the special case
+$b_0=0$, $b_1=\eta$, $b_2=1-\eta$ of \cref{eq:pool}. (b) If the KG term is constant across queries, $b_2$ is not
+identifiable.
+\end{proposition}
+\begin{proof}
+(a) Normalising $p\propto\prod_i p_i^{w_i}$ over $\{0,1\}$ gives
+$\frac{p}{1-p}=\prod_i\big(\frac{p_i}{1-p_i}\big)^{w_i}$, i.e.\ $\logit p=\sum_i w_i\logit p_i$. (b) If
+$\logit S_{\mathrm{KG}}\equiv\lambda$, then $b_0+b_2\lambda$ enters the likelihood only through their sum, so any
+$(b_0-\delta\lambda,\,b_2+\delta)$ yields the same likelihood.
+\end{proof}
+\Cref{prop:pool}(b) explains why a \emph{global} $S_{\mathrm{KG}}$ weight can never be learned from one corpus, and why
+we pool the per-query $\SKGq$. If $\SKGq$ is nonetheless constant, the implementation drops $b_2$.
+
+\paragraph{Mondrian conformal decision.}
+On the calibration split ($n_c$ examples of class $c$), compute the non-conformity scores
+$r_i=1-\hat p_{y_i}(x_i)$, where $\hat p_1=S_{\mathrm{final}}$ and $\hat p_0=1-S_{\mathrm{final}}$, separately per class.
+Let $q_c$ be the $\lceil(n_c+1)(1-\alpha)\rceil$-th smallest score of class $c$ (or $1$ if that index exceeds $n_c$),
+and set
+\begin{equation}
+\Gamma(x)=\{c\in\{0,1\}:\ 1-\hat p_c(x)\le q_c\}.
+\end{equation}
+\begin{proposition}[class-conditional validity~\cite{vovk2012conditional}]
+If the calibration examples of class $c$ and a test example of class $c$ are exchangeable, then
+$\Pr\big(c\in\Gamma(x)\mid y=c\big)\ge1-\alpha$.
+\end{proposition}
+\begin{proof}[Proof sketch]
+Conditionally on $y=c$, the test score is exchangeable with the $n_c$ calibration scores. Its rank among the $n_c+1$
+scores is therefore uniform, so it is at most the $\lceil(n_c+1)(1-\alpha)\rceil$-th smallest with probability at
+least $1-\alpha$~\cite{lei2018distribution,angelopoulos2023gentle}.
+\end{proof}
+The \textsc{abstain} rate is the price of the guarantee. It shrinks as the scorer separates the classes, and its
+magnitude is itself an evaluation metric. The only free parameter is the risk level $\alpha$.
+
+\paragraph{Champion--challenger promotion.}
+Retraining produces a challenger that replaces the production model only if its test log-loss is lower on the
+\emph{same} test split. Unlabelled production traffic is logged for drift monitoring and is never self-labelled.
+
+% =============================================================================================
+\section{Experimental Setup}
+\label{sec:setup}
+
+\paragraph{Corpus and KG.}
+The KG is built from DeepWalk, LINE and node2vec (\NDocs{} documents, \NChunks{} chunks). Of \NRawTriples{} extracted
+triples, \NTriples{} pass evidence verification (\AcceptRate\%). They resolve to \NEntities{} entities, \NShared{} of
+which are shared across papers. The fidelity pillars are $\Phi_{\mathrm{prov}}=\PhiProv\%$,
+$\Phi_{\mathrm{cov}}=\PhiCov\%$, $\Phi_{\mathrm{topo}}=\PhiTopo\%$ and $\Phi_{\mathrm{cons}}=\PhiCons\%$, giving
+$S_{\mathrm{KG}}=\SKG\%$. On a uniform sample of $n=\KGAuditN$ triples checked by \KGAuditor, strict precision is
+\KGPrec\% (95\% Wilson CI [\KGPrecLo\%, \KGPrecHi\%]) and lenient precision \KGPrecLenient\% (\cref{tab:kgprec}).
+
+\paragraph{Benchmark.}
+We generate \NItems{} questions from the corpus in four categories: \textsc{factual} (30\%, answerable from one
+chunk), \textsc{cross-doc} (10\%, requiring chunks from two papers), \textsc{borderline} (20\%, on-topic but not
+answerable from the papers) and \textsc{false-premise} (40\%, presupposing something a chunk contradicts). Each item
+stores a gold evidence quote that must fuzzy-match its source chunk, and items without one are discarded. Premises are
+phrased naturally, and questions beginning with ``Assume'' are rejected so a detector cannot learn a template.
+Near-duplicates are removed (cosine $\ge0.92$), and papers are balanced within categories.
+
+\paragraph{Response-level labels.}
+An LLM judge~\cite{zheng2023judging} receives the question and its type, the gold reference (answer, premise
+correction or reason for unanswerability), the gold chunk(s), six retrieved corpus passages and the answer. It
+returns \textsc{supported}, \textsc{partially supported} or \textsc{unsupported}, and $y=1$ iff the verdict is
+\textsc{supported}. The primary judge is \texttt{\PrimaryJudge}. Because it sees the gold evidence it verifies
+claims against a source rather than grading its own fluency; to quantify residual judge error, a second, stronger judge
+(\texttt{\CrossJudge}) independently re-labels a fixed, category-stratified sample of \CrossJudgeN{} responses with the
+identical prompt, giving inter-judge agreement $\kappa=\CrossJudgeKappa$ (raw agreement \CrossJudgeAgree\%).
+Training uses the primary labels only. On a stratified sample of \JudgeN{} responses annotated by the authors,
+binary human--judge agreement is Cohen's $\kappa=\JudgeKappa$.
+\todo{report judge model and annotator protocol}. Overall, \SupportedRate\% of responses are supported.
+
+\paragraph{Protocol and metrics.}
+The splits contain \NTrain{} / \NCal{} / \NTest{} responses. We report AUROC, log-loss, Brier score and expected
+calibration error (ECE, 10 bins) of $S_{\mathrm{final}}$ on the test split, together with empirical coverage (overall
+and per class), abstention rate and selective accuracy (accuracy on non-abstained decisions) at $\alpha=\Alpha$.
+\textbf{Uncertainty and tests:} every test metric carries a 95\% percentile bootstrap interval
+(1{,}000 resamples)~\cite{efron1993bootstrap}, and AUROC differences are tested with the paired DeLong
+test~\cite{delong1988comparing,sun2014fast}. \textbf{Baselines:} the LLM's verbalised confidence $c_{\mathrm{LLM}}$;
+every single feature with its expected sign; and a \emph{text-only NLI checker}, the same learner on
+$\{\sigma_{\mathrm{sim}},\bar\gamma_{\mathrm{NLI}},\gamma^{\min}_{\mathrm{NLI}},\nu_{\mathrm{ooc}}\}$, which stands for the
+literature's NLI-based verifiers~\cite{laban2022summac,min2023factscore}. \textbf{Ablations:} the same standardised
+logistic learner on each family (topological, evidential, model-side), on the graph-only features, and on all
+features without the topological or without the model-side family.
+
+\paragraph{Implementation.}
+Embeddings come from \texttt{all-MiniLM-L6-v2}~\cite{reimers2019sbert}. Graph computations use NetworkX and SciPy,
+learning uses scikit-learn~\cite{pedregosa2011sklearn} and PyTorch, and the graph is stored in Neo4j AuraDB with a
+local JSON mirror. API calls run in an I/O thread pool with disk caching (optionally through a batch API).
+CPU-bound stages run single-process with two BLAS threads at reduced priority. The full pipeline is resumable from
+checkpoints. The system is exposed as a REST service with an interactive web interface for corpus ingestion, single
+and batch auditing, benchmark execution and inspection of the calibration layer; all results are persisted per
+workspace and restored on reload.
+
+% =============================================================================================
+\section{Results}
+\label{sec:results}
+
+\TableLeaderboard
+\TableAblation
+
+\paragraph{Detection and calibration.}
+On the held-out test split ($n=\NTest$), the champion (\Champion) yields $S_{\mathrm{final}}$ with AUROC \TestAUC,
+log-loss \TestLL, Brier \TestBrier{} and ECE \TestECE. The LLM's verbalised confidence reaches AUROC \LLMAUC{} with
+ECE \LLMECE{} (\cref{fig:roc,fig:rel}). The 95\% bootstrap interval of the audit's AUROC is
+[\TestAUCLo, \TestAUCHi] against [\LLMAUCLo, \LLMAUCHi] for the LLM's confidence; the paired DeLong test gives
+$\Delta\mathrm{AUC}=\DeltaLLM$ ($p$ = \PvalLLM). Against the text-only NLI checker the difference is
+$\Delta\mathrm{AUC}=\DeltaText$ ($p$ = \PvalText). \Cref{tab:leaderboard} lists the out-of-fold tournament.
+% TODO(after run): interpret the gap between S_final and c_LLM; note which families are competitive
+% and whether the monotone-constrained model is within noise of the champion.
+
+\TableKgprec
+\TableTripleweights
+\TableSens
+
+\paragraph{How much is unsupported.}
+The claim-level extent $\eta$ averages \ExtentHal\% on answers the judge labels hallucinated and \ExtentSup\% on
+supported answers; used alone as a score ($1-\eta$), it reaches AUROC \ExtentAUC.
+% TODO(after run): comment on cases where eta is high but the answer is supported (KG recall gaps).
+
+\paragraph{What each family contributes.}
+\Cref{tab:ablation} isolates the feature families, and \cref{tab:features} reports single-feature AUROC, the learned
+weights $w_j$ and permutation importance (\cref{fig:imp}). Whether the topological family adds information
+beyond the evidential and model-side features is tested directly: all features versus all-but-topological gives
+$\Delta\mathrm{AUC}=\DeltaTopo$ ($p$ = \PvalTopo).
+% TODO(after run): discuss (i) topological-only vs evidential-only, (ii) the drop when removing the
+% topological family (the paper's central hypothesis), (iii) the weight learned for c_LLM.
+
+\TableFeatures
+
+\paragraph{Learned pool.}
+The fitted pool is $\logit S_{\mathrm{final}}=\PoolBzero+\PoolBq\logit S_{\mathrm{query}}+\PoolBkg\logit\SKGq$.
+% TODO(after run): compare b_query / b_kg with the discarded fixed 0.8 / 0.2 split.
+
+\paragraph{Conformal decisions.}
+At $\alpha=\Alpha$, empirical coverage on the test split is \Coverage\% overall, \CoverageSup\% on supported and
+\CoverageHal\% on hallucinated responses, with an abstention rate of \AbstainRate\% and selective accuracy of
+\SelAcc\%. For display, the implied score cut-offs are $\tau_{\mathrm{ver}}=\TauVer$ and $\tau_{\mathrm{hal}}=\TauHal$;
+these are \emph{outputs} of calibration, not inputs. \Cref{tab:percat} breaks the decisions down by category.
+% TODO(after run): comment on false-premise answers that correctly reject the premise vs. those that accept it.
+
+\TablePercat
+
+\begin{figure}[t]\centering
+\IfFileExists{figures/roc.pdf}{\includegraphics[width=0.92\columnwidth]{figures/roc.pdf}}{\fbox{\parbox{0.85\columnwidth}{\centering ROC figure pending: run \texttt{scripts/export\_paper\_assets.py}}}}
+\caption{ROC on held-out responses: learned audit score $S_{\mathrm{final}}$, pre-pool $S_{\mathrm{query}}$ and the
+LLM's verbalised confidence.}\label{fig:roc}
+\end{figure}
+
+\begin{figure}[t]\centering
+\IfFileExists{figures/reliability.pdf}{\includegraphics[width=0.92\columnwidth]{figures/reliability.pdf}}{\fbox{\parbox{0.85\columnwidth}{\centering Reliability figure pending}}}
+\caption{Reliability diagram (10 equal-width bins). The diagonal is perfect calibration.}\label{fig:rel}
+\end{figure}
+
+\begin{figure}[t]\centering
+\IfFileExists{figures/importance.pdf}{\includegraphics[width=0.92\columnwidth]{figures/importance.pdf}}{\fbox{\parbox{0.85\columnwidth}{\centering Importance figure pending}}}
+\caption{Permutation importance of the champion: increase in test log-loss when a feature is shuffled (mean $\pm$
+s.d., 20 repeats).}\label{fig:imp}
+\end{figure}
+
+% =============================================================================================
+\section{Discussion and Limitations}
+\label{sec:limits}
+
+\paragraph{What the guarantee does and does not say.}
+Coverage holds marginally within each class and assumes exchangeability between calibration and deployment
+responses. A change of corpus, audited model, prompt or question distribution breaks this assumption. The
+champion--challenger loop with fresh labels is the remedy, and unlabelled telemetry is retained to detect drift.
+
+\paragraph{Labels.}
+Response-level labels from an LLM judge are scalable but imperfect. We therefore report agreement with human
+annotation and with a second, stronger judge, and judge bias remains a threat to validity. When the primary judge
+shares a model family with the audited model, self-preference is possible; giving the judge the gold evidence and
+reporting inter-judge agreement (\S\ref{sec:setup}) bound its effect.
+
+\paragraph{KG recall.}
+A true claim absent from the KG looks unsupported to the graph features. The text-level features
+$\sigma_{\mathrm{ent}}$ and $\nu_{\mathrm{ooc}}$, and the learned weighting, partially compensate. $S_{\mathrm{KG}}$ and
+$\SKGq$ make the remaining dependence explicit rather than hidden.
+
+\paragraph{Scope.}
+Three papers form a narrow, homogeneous domain. Entity-name embeddings are a coarse stalk for the sheaf. Richer
+restriction maps (e.g.\ learned orthogonal maps per relation~\cite{gebhart2023knowledge}) and larger, multi-domain
+corpora are natural next steps.
+
+\paragraph{Ethics.}
+The corpus consists of published papers used for research reproducibility. The system is designed to \emph{flag}
+unsupported content for human review, and the \textsc{abstain} outcome exists to avoid over-confident automated
+judgements.
+
+% =============================================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+EpistemeGraph treats hallucination auditing as calibrated measurement. It builds a fallible but quantified reference
+graph, extracts the claim graph of an answer independently of its generation, measures the mismatch with sheaf,
+curvature, spectral and evidential instruments, and learns, rather than prescribes, how these measurements become a
+decision with a stated error rate. The full system, benchmark, prompts and every intermediate artefact are released
+to make each number in this paper reproducible.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+% =============================================================================================
+\appendix
+\onecolumn
+\section{Algorithms}
+\label{app:alg}
+
+\begin{algorithm}[h]
+\caption{Audit of one query (inference)}
+\begin{algorithmic}[1]
+\Require query $q$; KG snapshot; production scorer $\hat p$; pool $(b_0,b_1,b_2)$; quantiles $(q_0,q_1)$
+\State $a, c_{\mathrm{LLM}} \gets \textsc{Answer}(q)$ \Comment{stage A}
+\State $G'\gets\textsc{ExtractClaims}(q,a;\ \text{KG relation vocabulary, nearest KG entities})$ \Comment{stage B}
+\State $G\gets\textsc{Retrieve}(\text{entities of }G')$; align $V'\to V$
+\State $x\gets(\mathcal E_{\mathcal F},\Delta\kappa,D_{\mathrm{spec}},\pi_{\mathrm{prov}},\sigma_{\mathrm{ent}},\nu_{\mathrm{ooc}},\kappa_{\mathrm{con}},c_{\mathrm{LLM}})$
+\State $S_{\mathrm{query}}\gets\hat p(x)$;\quad $S_{\mathrm{final}}\gets\sigma\big(b_0+b_1\logit S_{\mathrm{query}}+b_2\logit\SKGq\big)$
+\State $\Gamma\gets\{c:1-\hat p_c\le q_c\}$ with $\hat p_1=S_{\mathrm{final}}$, $\hat p_0=1-S_{\mathrm{final}}$
+\State \Return \textsc{verified} if $\Gamma=\{1\}$; \textsc{hallucinated} if $\Gamma=\{0\}$; else \textsc{abstain}
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[h]
+\caption{Phase 4 training}
+\begin{algorithmic}[1]
+\Require labelled set $\{(x_i,\SKGq_i,y_i)\}$, risk level $\alpha$
+\State split by $\mathrm{hash}(\text{query id})$ into train / cal / test
+\For{each model family $m$ in the tournament}
+  \State OOF$_m\gets$ outer 5-fold CV of (inner 3-fold grid search of $m$) on train
+\EndFor
+\State $m^\star\gets\argmin_m \mathrm{LogLoss}(\text{OOF}_m)$; fit Platt-calibrated $m^\star$ on train
+\State fit pool \cref{eq:pool} on out-of-fold calibrated $S_{\mathrm{query}}$ of train
+\State $q_c\gets$ class-$c$ conformal quantile of $1-\hat p_{y}(x)$ on cal
+\State evaluate on test; promote if test log-loss improves on production
+\end{algorithmic}
+\end{algorithm}
+
+\section{Incremental Neo4j schema}
+\label{app:cypher}
+\begin{footnotesize}
+\begin{verbatim}
+CREATE CONSTRAINT entity_key_unique IF NOT EXISTS FOR (e:Entity) REQUIRE e.name_key IS UNIQUE;
+
+UNWIND $batch AS row
+MERGE (e:Entity {name_key: row.name_key})
+  ON CREATE SET e.name = row.name, e.type = row.type, e.aliases = row.aliases, e.source_pdfs = row.source_pdfs
+  ON MATCH  SET e.aliases     = coalesce(e.aliases,[]) + [a IN row.aliases WHERE NOT a IN coalesce(e.aliases,[])],
+                e.source_pdfs = coalesce(e.source_pdfs,[]) + [p IN row.source_pdfs WHERE NOT p IN coalesce(e.source_pdfs,[])];
+
+UNWIND $batch AS row
+MATCH (u:Entity {name_key: row.subj_key}), (v:Entity {name_key: row.obj_key})
+MERGE (u)-[r:RELATED_TO {type: row.rel}]->(v)
+WITH r, row, (r.grounding_score IS NULL OR row.grounding >= r.grounding_score) AS better
+SET r.grounding_score = CASE WHEN better THEN row.grounding  ELSE r.grounding_score END,
+    r.evidence_quote  = CASE WHEN better THEN row.best_quote ELSE r.evidence_quote  END,
+    r.chunk_ids       = coalesce(r.chunk_ids,[]) + [c IN row.chunk_ids WHERE NOT c IN coalesce(r.chunk_ids,[])]
+SET r.support_count = size(r.chunk_ids);
+\end{verbatim}
+\end{footnotesize}
+
+\section{Prompts}
+\label{app:prompts}
+Full prompts are versioned in the repository: KG extraction (\texttt{kg\_builder.py}, \texttt{PROMPT\_VERSION}),
+answering and claim extraction (\texttt{llm\_interceptor.py}), benchmark generation
+(\texttt{scripts/generate\_benchmark.py}) and judging (\texttt{scripts/run\_benchmark.py}).
+
+\end{document}

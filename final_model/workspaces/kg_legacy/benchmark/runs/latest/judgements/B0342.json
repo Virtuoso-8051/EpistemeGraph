@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "LINE-SGD would plausibly beat graph factorization on Wikipedia page classification when edge weights are consistent (accepts the false premise; the paper says LINE-SGD performs worse due to divergence of edge weights)",
+    "Graph factorization of the adjacency matrix is more sensitive to noisy or inconsistent weighting and scale than LINE-SGD (not in the evidence)",
+    "The advantage depends on homophilous labels (not in the evidence)"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise, claiming LINE-SGD would beat graph factorization under consistent weights. The source says LINE-SGD performs worse than graph factorization because the edge weights diverge, and it does not support the other speculative claims.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,74 @@
+{
+  "answer": "Classic dimensionality reduction methods such as Principal Component Analysis (PCA) and Multi-Dimensional Scaling (MDS) are considered expensive for large real-world networks because they typically require operations on dense matrices and/or pairwise distance information, which leads to high computational and memory costs that scale poorly as the number of nodes grows. In practice, this makes them difficult to apply to very large graphs. Their latent representations are generally useful, but they usually achieve only moderate prediction performance on downstream tasks such as link prediction or node classification, and they are often outperformed by more modern network embedding methods designed specifically for large graphs.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This is a well-established characterization in the network representation learning literature, though exact performance depends on the dataset and task.",
+  "triples": [
+    {
+      "source": "Principal Component Analysis",
+      "target": "dense matrice",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Multi-Dimensional Scaling",
+      "target": "pairwise distance information",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "dense matrice",
+      "target": "high computational and memory cost",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pairwise distance information",
+      "target": "high computational and memory cost",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "high computational and memory cost",
+      "target": "large real-world network",
+      "type": "SCALES_POORLY_WITH",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "target": "large graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Multi-Dimensional Scaling",
+      "target": "large graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "latent representation",
+      "target": "moderate prediction performance",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representation",
+      "target": "link prediction",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representation",
+      "target": "node classification",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representation",
+      "target": "modern network embedding method",
+      "type": "OUTPERFORMS",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": 0.16746715329728037
+}

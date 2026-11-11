@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The optimal DeepWalk dimensionality grows with the amount of labeled training data.",
+    "With little training data, lower-dimensional embeddings perform best because higher dimensions overfit.",
+    "As the training fraction increases, higher dimensions become beneficial and the performance-maximizing dimension shifts upward."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence supports that the optimal dimensionality depends on the number of training examples, but it gives no direction for that relationship. The AI's specific claims that the optimum rises with more data and that high dimensions overfit at low data are not in the passage, so they are unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

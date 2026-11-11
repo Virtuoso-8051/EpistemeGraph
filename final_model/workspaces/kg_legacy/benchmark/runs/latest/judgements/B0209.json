@@ -1,0 +1,11 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "DeepWalk generated 80 random walks per vertex (\u03b3 = 80) on BlogCatalog and Flickr",
+    "Walk length of 40 (t = 40) used in the BlogCatalog and Flickr experiments"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is unanswerable from the passage, and the answer invents specifics instead of saying the papers don't report them. The \u03b3 = 80 figure appears nowhere in the evidence, and the only related setting (t = 40, \u03b3 = 40) comes from a different paper's comparison setup, not the BlogCatalog/Flickr evaluation.",
+  "judge_model": "claude-sonnet-5-5"
+}

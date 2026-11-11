@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "DeepWalk uses skip-gram to capture indirect, multi-hop co-occurrence relations that can reveal connections not directly observed (the evidence mentions truncated random walks and language-modeling ideas but not skip-gram or multi-hop mechanics explicitly)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The core claims match the evidence: DeepWalk is said to outperform baselines especially with missing information, and LINE models first-order proximity (observed ties) and second-order proximity (shared neighborhoods). The mechanism detail about skip-gram and multi-hop co-occurrence is a minor elaboration consistent with the evidence (random walks enriching neighbors/contexts) and standard background on DeepWalk.",
+  "judge_model": "claude-sonnet-5-5"
+}

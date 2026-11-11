@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI answer claims DeepWalk can build the Hierarchical Softmax tree when vertex frequencies follow a power-law distribution, but the evidence says the tree can be built if the cardinality of V is known or can be bounded.",
+    "The AI answer attributes to the passages a limitation of needing the whole graph and costly eigen-decompositions, whereas Passage A specifically emphasizes quadratic time complexity in the number of vertices, not eigen-decomposition or power-law frequency.",
+    "The AI answer says the Huffman-coded tree is built from observed frequencies online, which is not what the evidence says; the evidence only mentions estimating frequency a priori as an optional refinement."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The core answer to the second part (power-law vertex frequencies) contradicts the evidence, which states the condition is that the cardinality of V is known or can be bounded. The first part is only loosely aligned, since the passage's stated limitation is quadratic time complexity in the number of vertices, which the answer does not state.",
+  "judge_model": "claude-haiku-5-5"
+}

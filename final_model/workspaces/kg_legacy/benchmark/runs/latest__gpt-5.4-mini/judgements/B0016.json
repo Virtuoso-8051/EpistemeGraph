@@ -1,0 +1,16 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "DeepWalk learns embeddings by running random walks and treating the resulting node sequences like sentences.",
+    "DeepWalk mainly captures higher-order, context-based proximity: nodes that co-occur in short random-walk windows are embedded similarly.",
+    "LINE explicitly preserves first-order proximity (direct edge relationships) and second-order proximity (similarity of neighborhood distributions), so it models both direct and neighborhood-based similarity more explicitly.",
+    "DeepWalk is designed primarily for homogeneous networks, where nodes are of the same type and edges are untyped.",
+    "LINE is also commonly used for large-scale homogeneous networks.",
+    "LINE was introduced to scale efficiently to very large graphs.",
+    "LINE can be extended more naturally to handle weighted graphs and, with variants, heterogeneous settings."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly states the paper-supported distinction that DeepWalk emphasizes second-order proximity while LINE preserves both first- and second-order proximities, and that DeepWalk applies only to unweighted/binary-edge networks while LINE handles both weighted and unweighted edges. However, it adds several extra claims about random-walk sentence analogies, homogeneous/heterogeneous settings, and scalability/extension properties that are not supported by the provided evidence.",
+  "judge_model": "gpt-5.4-mini"
+}

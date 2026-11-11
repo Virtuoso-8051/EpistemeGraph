@@ -1,0 +1,92 @@
+{
+  "answer": "Node2vec (Grover & Leskovec, 2016) is a semi-supervised feature learning framework that learns continuous node representations via biased random walks and skip-gram. It demonstrates efficacy over existing state-of-the-art techniques (such as DeepWalk, LINE, and spectral/matrix-factorization methods) in multi-label node classification tasks (e.g., predicting labels of nodes like protein or article/category labels in BlogCatalog, PPI, and Wikipedia) and in link prediction tasks (predicting missing or future edges, using Hadamard and other binary operators over node embeddings). The authors report these gains across diverse networks, including biological networks (protein-protein interaction networks), social networks (e.g., BlogCatalog, Facebook, and other social graphs), and information/communication networks (e.g., Wikipedia co-occurrence and arXiv collaboration networks). Its advantage stems from the flexible, tunable walk parameters p and q, which let it interpolate between breadth-first (homophily/community-like structure) and depth-first (structural equivalence/role-like) exploration. Gains are generally most pronounced when the network's labels or links reflect such mixed homophily and structural equivalence, and the paper reports improvements in scalability as well as accuracy relative to baselines.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The core claims (multi-label node classification and link prediction; biological, social, and information networks; p/q interpolation between BFS and DFS) match the original paper, but details like specific dataset names and the exact scope of claimed gains are recalled from memory and may be imprecise.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "semi-supervised feature learning framework",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "continuous node representation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "LINE",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Node Classification",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Link Prediction",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Hadamard operator",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "social network",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "scalability",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "walk parameters p and q",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk parameters p and q",
+      "target": "interpolation between breadth-first and depth-first exploration",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "mixed homophily and structural equivalence",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

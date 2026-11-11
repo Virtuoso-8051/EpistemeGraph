@@ -1,0 +1,44 @@
+{
+  "answer": "LINE says second-order proximity is applicable when the graph is directed or when the graph is undirected but the first-order proximity is sparse. It assumes that vertices with similar neighborhood distributions are similar to each other, even if they are not directly connected.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This matches LINE\u2019s definition of second-order proximity and its stated assumption about vertex similarity based on neighborhood context.",
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "target": "directed graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "undirected graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "first-order proximity",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "SPARSE",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "vertices with similar neighborhood distribution",
+      "type": "ASSUMES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertices with similar neighborhood distribution",
+      "target": "similarity",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2238233657110305
+}

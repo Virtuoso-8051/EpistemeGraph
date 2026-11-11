@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI answer accepts the false premise that LINE uses edge sampling for weighted networks in contrast to direct gradient updates on sampled edges, framing LINE-SGD as the direct-gradient alternative only for unweighted networks; the papers state LINE-SGD directly multiplies edge weights into gradients rather than avoiding weights.",
+    "Claim that directly applying SGD to weighted edges makes the learning rate hard to choose and causes unstable training is partly supported by the paper's intuition, but the answer frames it as the reason the LINE-SGD approach was rejected for weighted networks, which the evidence does not say; the answer also asserts the sampling step is unnecessary for binary networks, which the paper's intuition implies but the answer ties to a false framing.",
+    "Claim that the answer's mechanism corresponds to LINE-SGD being an alternative used only for unweighted networks is contradicted by the evidence, which describes LINE-SGD as applying to weighted edges with weights multiplied into gradients."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question's false premise is that LINE-SGD uses edge sampling and treats edges as binary, and the answer accepts this, describing edge sampling as the mechanism for weighted networks. The evidence states that LINE-SGD optimizes the objective directly with SGD with edge weights multiplied into gradients, while the edge-sampling treatment is the separate LINE method, so the core of the answer is unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

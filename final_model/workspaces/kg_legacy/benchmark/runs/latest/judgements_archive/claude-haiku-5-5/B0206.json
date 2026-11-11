@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The walk length t was set to 40 in DeepWalk (the evidence does contain 'walk length t = 40', so this is supported)",
+    "The answer claims 80 walks were started per vertex; the evidence says walks per vertex \u03b3 = 40 in the default settings, which contradicts the 80 figure"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence explicitly gives walk length t = 40 as a default setting, so the core answer of 40 steps is grounded in the source, though the question was framed as unanswerable. The answer's claim of 80 walks per vertex contradicts the evidence, which states \u03b3 = 40, making the response partially unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,92 @@
+{
+    "user_query": "How many labeled edge examples did node2vec use for link prediction on the Facebook network after removing half of its edges, and what was the final train-test split?",
+    "mode": "closed_book",
+    "llm_response": "In the Facebook link-prediction experiment, node2vec used 1,000 labeled edge examples in total after removing half of the network\u2019s edges, with a final 50/50 train-test split (500 training and 500 test examples).",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This matches the commonly reported node2vec Facebook link-prediction setup, but the exact wording can vary across summaries of the paper.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "Link Prediction",
+        "Facebook network"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "Link Prediction",
+        "Facebook network",
+        "labeled edge example",
+        "1,000 labeled edge example",
+        "half of the network\u2019s edge",
+        "50/50 train-test split"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "labeled edge example",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "Link Prediction",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "1,000 labeled edge example",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "half of the network\u2019s edge",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "50/50 train-test split",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "Facebook network",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How many labeled edge examples did node2vec use for link prediction on the Facebook network after removing half of its edges, and what was the final train-test split?",
+        "llm_response": "In the Facebook link-prediction experiment, node2vec used 1,000 labeled edge examples in total after removing half of the network\u2019s edges, with a final 50/50 train-test split (500 training and 500 test examples).",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This matches the commonly reported node2vec Facebook link-prediction setup, but the exact wording can vary across summaries of the paper.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2346.9,
+            "prompt_tokens": 122,
+            "completion_tokens": 104
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1966.6,
+            "prompt_tokens": 674,
+            "completion_tokens": 216
+        },
+        "asserted_claim_count": 6,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.16726514567499576,
+        "query_entities": [
+            "NODE2VEC",
+            "Link Prediction",
+            "Facebook network"
+        ]
+    }
+}

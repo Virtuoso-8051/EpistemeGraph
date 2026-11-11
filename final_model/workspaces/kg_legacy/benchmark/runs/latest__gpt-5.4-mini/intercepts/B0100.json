@@ -1,0 +1,56 @@
+{
+  "answer": "Short random walks make the graph representation depend only on local neighborhoods rather than the entire graph, so when the graph changes slightly, only the embeddings or statistics for nodes near the change need to be updated instead of recomputing everything. The computational benefit is that this yields much cheaper incremental updates: the method avoids expensive full-graph recomputation and can be updated in time proportional to the affected local region rather than the whole graph.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This is a standard property of local random-walk-based graph methods, but the exact wording and complexity claim can vary by the specific paper or algorithm.",
+  "triples": [
+    {
+      "source": "short random walk",
+      "target": "graph representation",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph representation",
+      "target": "local neighborhood",
+      "type": "DEPENDS_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph representation",
+      "target": "entire graph",
+      "type": "DOES_NOT_DEPEND_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph changes slightly",
+      "target": "embedding",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph changes slightly",
+      "target": "statistics",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "target": "nodes near the change",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "statistics",
+      "target": "nodes near the change",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walk",
+      "target": "incremental update",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.20581681598988613
+}

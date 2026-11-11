@@ -1,0 +1,56 @@
+{
+  "answer": "The passage says node2vec scales well computationally: its main cost is generating biased random walks and then training the skip-gram model, and both are described as highly parallelizable. In particular, the random-walk generation can be parallelized across nodes/walks, and the skip-gram training can also be parallelized, so the method is considered scalable to large graphs.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This answer closely follows the passage\u2019s stated claims about node2vec\u2019s computational cost and the parallelizability of its two major phases, with only minimal risk of wording differences.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "scales well computationally",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram model",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "highly parallelizable",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "highly parallelizable",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk generation",
+      "target": "parallelized across nodes/walk",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram training",
+      "target": "parallelized",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "scalable to large graph",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.20804595947265625
+}

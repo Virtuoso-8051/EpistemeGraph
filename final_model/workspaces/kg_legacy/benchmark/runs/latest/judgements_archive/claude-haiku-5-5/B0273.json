@@ -1,0 +1,14 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "Its objective is a skip-gram-style (word2vec-inspired) objective approximated with negative sampling, maximizing log-probability of the sampled neighborhood given embedding f(u): not stated in the provided evidence excerpts, though it is consistent with the broader node2vec paper's known method.",
+    "Parameters p (return) and q (in-out) interpolate between breadth-first-like and depth-first-like exploration with homophily/structural-role interpretations: the evidence only mentions BFS/DFS in Figure 1 and the (p,q) settings in Table 2, not the interpretations.",
+    "Claim that random walks and skip-gram cost roughly linear in the number of sampled walks: not in the evidence.",
+    "Claim that asynchronous SGD updates are used for parallelization: evidence says only that phases are trivially parallelizable and optimized with SGD.",
+    "Claim that one embedding can serve many labels without retraining per label: not stated in the evidence, though it follows from unsupervised embedding design."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that node2vec is hand-engineered and correctly notes the scalable SGD-based neighborhood-preserving objective and the multi-label gains. However, several specific technical details (skip-gram/negative sampling formulation, homophily/structural-role interpretations, asynchronous SGD, linear cost) are not supported by the provided evidence excerpts.",
+  "judge_model": "claude-haiku-5-5"
+}

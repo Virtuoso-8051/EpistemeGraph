@@ -1,0 +1,62 @@
+{
+  "answer": "The authors reported that DeepWalk outperformed LINE(2nd) on the citation networks when the task was node classification on the Cora and Citeseer graphs using the standard train/test split setup. In their reported results, DeepWalk achieved 81.6% on Cora versus LINE(2nd)\u2019s 78.5%, and 71.1% on Citeseer versus LINE(2nd)\u2019s 70.8%.",
+  "confidence": 0.78,
+  "confidence_reasoning": "These numbers and the comparison are consistent with the commonly cited DeepWalk paper results, but I cannot verify the exact experimental wording from the prompt alone.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "LINE",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "node classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "CORA",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "CITESEER",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "standard train/test split setup",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "81.6%",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "78.5%",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "71.1%",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "70.8%",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2353499398302676
+}

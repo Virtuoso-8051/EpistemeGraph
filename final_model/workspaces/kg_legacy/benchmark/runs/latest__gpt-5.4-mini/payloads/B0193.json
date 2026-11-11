@@ -1,0 +1,70 @@
+{
+    "user_query": "How many walks per vertex \u03b3 did DeepWalk set when training the vertex representations described in the passage?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk set \u03b3 = 80 walks per vertex when training the vertex representations.",
+    "llm_self_reported_accuracy": 0.98,
+    "llm_confidence_reasoning": "This is a standard parameter reported in the DeepWalk paper and is directly stated in the passage context.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "number of walks started per vertex",
+        "vertex representation"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "number of walks started per vertex",
+        "vertex representation"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "number of walks started per vertex",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "number of walks started per vertex",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "vertex representation",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How many walks per vertex \u03b3 did DeepWalk set when training the vertex representations described in the passage?",
+        "llm_response": "DeepWalk set \u03b3 = 80 walks per vertex when training the vertex representations.",
+        "llm_extraction_confidence": 0.98,
+        "llm_confidence_reasoning": "This is a standard parameter reported in the DeepWalk paper and is directly stated in the passage context.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1156.7,
+            "prompt_tokens": 109,
+            "completion_tokens": 62
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2198.3,
+            "prompt_tokens": 650,
+            "completion_tokens": 145
+        },
+        "asserted_claim_count": 3,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.09982192993164063,
+        "query_entities": [
+            "DEEPWALK",
+            "number of walks started per vertex",
+            "vertex representation"
+        ]
+    }
+}

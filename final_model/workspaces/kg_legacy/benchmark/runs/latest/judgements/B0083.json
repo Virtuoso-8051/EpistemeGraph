@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Alias setup costs roughly O(a^2 |V|) for second-order transitions (with a the average degree), and the claim of \"O(1)-per-edge preprocessing\" is not in the provided evidence and is internally inconsistent.",
+    "Transition probabilities are stored as alias tables per (previous node, current node) pair, and can be reduced further by on-the-fly computation or approximations; these details are not in the evidence.",
+    "Walks are repeated over multiple passes so each node appears as a start equally often, with no region of the graph favored; this elaboration is not in the evidence beyond r walks per node."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: r walks of length l from every node, precomputed second-order transition probabilities, and O(1) alias sampling. The answer adds preprocessing complexity figures and approximation details that the evidence does not contain, and the \"O(1)-per-edge\" figure conflicts with its own O(a^2|V|) figure.",
+  "judge_model": "claude-sonnet-5-5"
+}

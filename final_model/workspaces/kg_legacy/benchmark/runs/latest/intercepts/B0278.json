@@ -1,0 +1,62 @@
+{
+  "answer": "Node2vec does not rely on graph convolution layers under any condition. It learns embeddings with a skip-gram objective over second-order biased random walks, and it handles the intractable softmax partition function with negative sampling (or, optionally, hierarchical softmax). Graph convolution is not part of node2vec; it is the mechanism of GCN-style models such as GCN and GraphSAGE. The question's premise is therefore incorrect.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The node2vec paper (Grover and Leskovec, 2016) clearly uses skip-gram with negative sampling or hierarchical softmax and no convolution layers, though I am recalling this from memory rather than checking the source.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "graph convolution layer",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "second-order biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "negative sampling",
+      "target": "partition function",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph convolution",
+      "target": "GCN-style mechanism",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GCN",
+      "target": "graph convolution",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GraphSAGE",
+      "target": "graph convolution",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

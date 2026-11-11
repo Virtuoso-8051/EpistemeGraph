@@ -1,0 +1,11 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The answer says the paper reports strong performance on graphs such as BlogCatalog, Flickr, and YouTube with a small fraction of labeled nodes; the evidence only mentions BlogCatalog, PPI, and Wikipedia (with 50% labeled nodes), not Flickr or YouTube or small label fractions.",
+    "The answer attributes to the papers a claim that the graph kernel approach has quadratic kernel matrix scaling and sparse high-dimensional feature spaces; the evidence only says graph kernels are quite slow unless approximated, so these specifics are not in the source."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast is supported: the evidence states DeepWalk learns a representation usable as features for any classifier rather than encoding structure in a kernel, and that kernels are slow. However, the answer adds unsupported specifics about datasets (Flickr, YouTube, small label fractions) and about the scaling mechanics of kernel matrices that the evidence does not state.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,68 @@
+{
+  "answer": "The passage itself was not provided, so this answer draws on the node2vec paper (Grover & Leskovec, 2016). node2vec runs in two main phases: (1) generating biased second-order random walks, and (2) learning embeddings by optimizing a skip-gram objective with stochastic gradient descent, as in word2vec. Its cost is roughly linear in the number of walks, the walk length, and the embedding dimensionality. Preprocessing the transition probabilities (alias tables for each edge) adds overhead that grows with the sum of squared node degrees, and it is a memory cost. The paper describes the walk-simulation phase as parallelizable, since walks from different start nodes are independent and can run concurrently. The optimization phase is parallelized with asynchronous SGD (Hogwild-style updates, as in word2vec), which lets many threads update the embedding matrix with little locking. Thus both major phases can be parallelized, and the authors report that this keeps the method scalable to large networks.",
+  "confidence": 0.45,
+  "confidence_reasoning": "I could not see the passage, so the answer relies on my recollection of the node2vec paper's scalability discussion, which may not match the passage's exact wording or emphasis.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "biased second-order random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram objective",
+      "target": "stochastic gradient descent",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "linear computational cost in number of walks, walk length, and embedding dimensionality",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "transition probability preprocessing",
+      "target": "alias table",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "transition probability preprocessing",
+      "target": "overhead growing with sum of squared node degree",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk-simulation phase",
+      "target": "parallelizable",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimization phase",
+      "target": "asynchronous SGD",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous SGD",
+      "target": "embedding matrix",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "scalable to large network",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

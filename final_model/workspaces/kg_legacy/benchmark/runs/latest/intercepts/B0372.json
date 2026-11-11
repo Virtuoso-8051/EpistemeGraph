@@ -1,0 +1,86 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding, Tang et al., 2015) does not actually use random walks. It is a graph embedding method that learns node representations by directly optimizing two objective functions: a first-order proximity objective, which models the joint probability of two directly linked nodes being similar (using their embedding inner products passed through a sigmoid, trained against edge weights), and a second-order proximity objective, which models the conditional distribution of context nodes given a node, so that nodes sharing many neighbors get similar embeddings. Second-order proximity is captured by treating each node's neighbor distribution as its 'context' and minimizing the KL divergence between the empirical and model conditional distributions, using separate vertex and context embedding vectors.\n\nTo make optimization feasible on large weighted networks, LINE uses edge sampling rather than random walks: edges are sampled with probability proportional to their weights, and each sampled edge is treated as a binary training instance. This avoids the problem that raw weights would vary greatly in scale and cause high-variance stochastic gradient updates. Edge sampling with alias tables gives O(1) sampling per edge, so training time scales linearly with the number of edges, and negative sampling (drawing noise nodes from a degree-based distribution) keeps each update cheap.\n\nSecond-order proximity is preserved because the context-based objective pushes together nodes whose neighborhoods overlap, even when they are not directly connected. Random-walk methods such as DeepWalk and node2vec approximate a similar higher-order co-occurrence structure, but LINE's distinctive contribution is achieving it through explicit first- and second-order objectives with weighted edge sampling, not random walks. The original LINE approach concatenates embeddings learned separately for first- and second-order proximity in its final representation.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am confident that LINE uses edge sampling with explicit first- and second-order objectives rather than random walks, though the question's false premise and minor details of the formulation carry some uncertainty.",
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "random walk",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "Graph Embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "first-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "second-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "target": "weighted network",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias table",
+      "target": "O(1) sampling per edge",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "linear training time in number of edge",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "degree-based distribution",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "neighborhood overlap between node",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "higher-order co-occurrence structure",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "higher-order co-occurrence structure",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "concatenation of first- and second-order embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

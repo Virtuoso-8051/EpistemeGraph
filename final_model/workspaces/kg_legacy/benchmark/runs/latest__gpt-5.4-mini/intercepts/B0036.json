@@ -1,0 +1,38 @@
+{
+  "answer": "LINE(1st) and LINE(2nd) are reported to be efficient when they are trained with negative sampling and optimized using asynchronous stochastic gradient descent on large sparse graphs. Under these conditions, they scale linearly with the number of edges and are much faster than both graph factorization and DeepWalk; in the original LINE paper, they are reported to be roughly an order of magnitude faster than graph factorization and several times faster than DeepWalk.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This matches the commonly reported efficiency claims in the LINE paper, but the exact speedup factors can vary by dataset and implementation, so I am moderately confident rather than certain.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "asynchronous stochastic gradient descent",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "large sparse graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "graph factorization",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "DEEPWALK",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.15432288681251416
+}

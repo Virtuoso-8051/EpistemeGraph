@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The method optimizes its skip-gram objective with stochastic gradient descent, as in word2vec (supported by evidence: SGD with negative sampling, Skip-gram)",
+    "The reference implementations are CPU-based, so no GPU was needed (not stated in the evidence; this is an unsupported claim about implementation and hardware)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer correctly states that the hardware setup is not reported in the provided passage, which is the faithful response to this unanswerable question. However, the claim that the reference implementations are CPU-based and that no GPU was needed is not contained in the evidence and goes beyond what the papers say.",
+  "judge_model": "claude-haiku-5-5"
+}

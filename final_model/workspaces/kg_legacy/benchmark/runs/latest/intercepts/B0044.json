@@ -1,0 +1,32 @@
+{
+  "answer": "I can't tell which perturbation experiment this refers to, because the question gives no paper, dataset, or setup. In many network-perturbation studies, missing edges are chosen uniformly at random from the observed edges, often at a fixed fraction, with a common constraint that the perturbed graph stays connected or that no node is isolated. If you share the source paper or describe the setup, I can give the specific conditions and constraint.",
+  "confidence": 0.2,
+  "confidence_reasoning": "The answer is a generic description of common practice rather than a verified account of the specific experiment the question names, so it is likely not accurate for that study.",
+  "triples": [
+    {
+      "source": "missing edge selection",
+      "target": "uniform random sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing edge selection",
+      "target": "observed link",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing edge selection",
+      "target": "fraction of missing edge",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "perturbed graph",
+      "target": "graph connectivity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

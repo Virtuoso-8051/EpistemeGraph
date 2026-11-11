@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The answer says performance 'improves' with dimensionality and has 'diminishing returns' - the evidence says only performance saturates around 100 dimensions, not explicitly the diminishing-returns shape, though this is a reasonable reading of 'saturate'.",
+    "The parenthetical '(about 100 to 128)' attributes a specific range to the paper that the evidence does not contain; the paper only says around 100."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "SUPPORTED",
+  "rationale": "The core claim that performance saturates around 100 dimensions matches the evidence directly ('performance tends to saturate once the dimensions of the representations reaches around 100'). The added '128' upper bound and the 'diminishing returns' phrasing are minor embellishments that do not contradict the source and do not change the core answer.",
+  "judge_model": "claude-haiku-5-5"
+}

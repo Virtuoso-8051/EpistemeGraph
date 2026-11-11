@@ -1,0 +1,13 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The LINE paper reports wall-clock training times for the second-order model on large graphs such as Twitter",
+    "The cost scales roughly linearly with the number of edge samples",
+    "LINE uses asynchronous SGD with edge sampling",
+    "It was run on a single multi-core machine with many threads rather than a cluster"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give the exact runtime, memory, or specs, which the evidence does not provide. However, it asserts several details not in the evidence, such as a Twitter timing, linear scaling, and asynchronous SGD; the excerpt does mention a single machine with 40 cores and 16 threads and a few-hours runtime, so the hardware claim is partly grounded but the Twitter and scaling claims are not.",
+  "judge_model": "claude-haiku-5-5"
+}

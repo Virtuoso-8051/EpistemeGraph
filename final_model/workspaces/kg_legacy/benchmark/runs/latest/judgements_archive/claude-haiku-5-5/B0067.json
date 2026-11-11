@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "most of the benefit appears at roughly gamma \u2248 10 walks per vertex",
+    "the gains show diminishing returns, with further increases adding comparatively little (stated without support as to magnitude; evidence only says most benefit is achieved by \u03b3=30)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly states that most of the benefit is accomplished by starting \u03b3 = 30 walks per node in both graphs, but the AI answer gives \u03b3 \u2248 10 as the point where most benefit appears, which contradicts the source. The mechanism claim (more walks give more co-occurrence samples) is only loosely consistent with the paper's statement that performance depends on the number of random walks seen, but the core numerical answer is wrong.",
+  "judge_model": "claude-haiku-5-5"
+}

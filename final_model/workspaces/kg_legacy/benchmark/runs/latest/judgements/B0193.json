@@ -1,0 +1,11 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "DeepWalk used 80 walks per vertex (\u03b3 = 80)",
+    "80 is the standard setup value in the DeepWalk paper"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is unanswerable from the passage, and the answer invents a specific value (80) instead of saying it is not reported. The evidence mentions \u03b3 = 40 in one setting and \u03b3 = 30 in another, but never 80, so the core claim contradicts the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

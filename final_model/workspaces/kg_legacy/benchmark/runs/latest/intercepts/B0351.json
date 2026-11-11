@@ -1,0 +1,62 @@
+{
+  "answer": "The premise appears to be mistaken, or at least unsupported as stated. Methods that learn social representations from the YouTube social graph, such as DeepWalk, LINE, and the latent social dimensions approach of Tang and Liu, learn their low-dimensional embeddings in an unsupervised way from graph structure, typically via random walks or edge-based proximity objectives. The YouTube group-membership labels are used only downstream, to train and evaluate a separate classifier on the learned embeddings, not to learn the embeddings themselves. So the method does not rely on supervised labels to learn its embeddings efficiently. Its efficiency comes from the structure-based, label-free training objective and from the scalability of techniques such as random-walk sampling and negative sampling. I could not identify the specific paper referenced, so if it describes a semi-supervised variant that does use labels in training, that would change this answer.",
+  "confidence": 0.5,
+  "confidence_reasoning": "I am fairly sure that the standard YouTube social-graph embedding methods (DeepWalk, LINE, Tang and Liu) are unsupervised with labels used only for evaluation, but I could not identify the specific paper the question refers to, so it may describe a variant that differs.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unsupervised representation learning",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge-based proximity objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent social representation",
+      "target": "unsupervised representation learning",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "YouTube group-membership label",
+      "target": "separate classifier",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "supervised label",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "random-walk sampling",
+      "target": "scalability",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "scalability",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "semi-supervised method",
+      "target": "supervised label",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

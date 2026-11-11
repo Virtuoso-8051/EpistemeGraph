@@ -1,0 +1,13 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Spectral clustering assumes data can be represented by a similarity graph in which clusters appear as densely connected groups weakly linked to each other (the passage only says it makes a homophily assumption that graph cuts will be useful for classification).",
+    "The assumption is limiting because results depend heavily on the similarity measure and its parameters such as kernel width or number of nearest neighbours.",
+    "Spectral clustering requires the number of clusters k to be specified in advance, and performs poorly on non-graph-like, unbalanced, or varying-density clusters.",
+    "The AI answer says the passage is not included, so it does not answer from the evidence, which is actually present in the evidence provided."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly provides the answer: spectral clustering makes a strong homophily assumption that graph cuts are useful for classification, which is limiting because it does not generalize across diverse networks. The AI answer incorrectly claims the passage is missing and instead gives generic textbook details (similarity graphs, kernel width, choice of k) that the papers do not state, so its core answer is unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

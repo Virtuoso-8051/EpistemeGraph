@@ -1,0 +1,74 @@
+{
+  "answer": "It doesn't. The premise is incorrect. Node2vec's second-order walk does not avoid storing neighborhood information beyond immediate neighbors. Its bias depends on the previous node t, so the transition from current node v to next node x uses the unnormalized weight \u03b1(t,x)\u00b7w(v,x), where \u03b1 is 1/p if x = t, 1 if x is a neighbor of t, and 1/q otherwise. Computing this requires knowing t's neighbors, which is information beyond v's immediate neighbors. The precomputed alias tables for every directed edge (t\u2192v) also make storage grow with the sum of squared degrees, which is much larger than storing first-order transition probabilities. Node2vec trades extra memory and computation for the ability to interpolate between BFS-like and DFS-like exploration, controlled by p and q. Some implementations reduce cost by computing transitions on the fly, but that still needs the previous node's adjacency, so the walk does not eliminate that dependency.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The node2vec transition definition (p, q, distance d_tx, alias tables per edge pair) is well established, so the claim that the premise is false is well supported, though I am recalling implementation details from memory.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "second-order random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order random walk",
+      "target": "previous node t's neighbor",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "unnormalized transition weight \u03b1(t,x)\u00b7w",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "precomputed alias tables for every directed edge",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "precomputed alias tables for every directed edge",
+      "target": "storage grows with the sum of squared degree",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "first-order transition probability storage",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "interpolation between BFS-like and DFS-like exploration",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "interpolation between BFS-like and DFS-like exploration",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "some implementation",
+      "target": "on-the-fly transition computation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "on-the-fly transition computation",
+      "target": "previous node's adjacency",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "second-order random walk scheme eliminates neighborhood storage",
+      "type": "DEFINED_AS",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

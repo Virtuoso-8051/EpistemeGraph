@@ -1,0 +1,134 @@
+{
+    "user_query": "What is the overall time complexity of LINE, and how does it scale with the number of edges and vertices?",
+    "mode": "closed_book",
+    "llm_response": "LINE (Large-scale Information Network Embedding) is designed to scale roughly linearly with the size of the graph. Its overall training time is typically O(|E|) per epoch for first-order or second-order proximity objectives, and with negative sampling the cost is proportional to the number of sampled negatives as well. In practice, this means the runtime grows approximately linearly with the number of edges, and also linearly with the number of vertices only through the cost of maintaining/updating embeddings and sampling; the dominant factor is usually the number of edges. So, for a fixed embedding dimension and fixed number of negative samples, LINE scales about linearly in both |E| and |V|, with |E| being the main driver.",
+    "llm_self_reported_accuracy": 0.86,
+    "llm_confidence_reasoning": "This matches the standard description of LINE as a linear-time method for large graphs, though exact complexity can vary with implementation details such as negative sampling and epochs.",
+    "extracted_query_entities": [
+        "LINE",
+        "Large-scale Information Network Embedding",
+        "first-order proximity objective",
+        "second-order proximity objective",
+        "negative sampling",
+        "number of edge",
+        "number of vertice",
+        "embedding dimension"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "Large-scale Information Network Embedding",
+        "first-order proximity objective",
+        "second-order proximity objective",
+        "negative sampling",
+        "number of edge",
+        "number of vertice",
+        "embedding dimension",
+        "scales roughly linearly with the size of the graph",
+        "O(|E|) per epoch",
+        "cost proportional to the number of sampled negative",
+        "RUNTIME",
+        "approximately linearly with the number of edge",
+        "approximately linearly with the number of vertice",
+        "dominant factor"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE",
+            "target": "scales roughly linearly with the size of the graph",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "O(|E|) per epoch",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "first-order proximity objective",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "second-order proximity objective",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "negative sampling",
+            "target": "cost proportional to the number of sampled negative",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "RUNTIME",
+            "target": "approximately linearly with the number of edge",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "RUNTIME",
+            "target": "approximately linearly with the number of vertice",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "number of edge",
+            "target": "dominant factor",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "number of edge",
+            "type": "SCALES_WITH",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "number of vertice",
+            "type": "SCALES_WITH",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What is the overall time complexity of LINE, and how does it scale with the number of edges and vertices?",
+        "llm_response": "LINE (Large-scale Information Network Embedding) is designed to scale roughly linearly with the size of the graph. Its overall training time is typically O(|E|) per epoch for first-order or second-order proximity objectives, and with negative sampling the cost is proportional to the number of sampled negatives as well. In practice, this means the runtime grows approximately linearly with the number of edges, and also linearly with the number of vertices only through the cost of maintaining/updating embeddings and sampling; the dominant factor is usually the number of edges. So, for a fixed embedding dimension and fixed number of negative samples, LINE scales about linearly in both |E| and |V|, with |E| being the main driver.",
+        "llm_extraction_confidence": 0.86,
+        "llm_confidence_reasoning": "This matches the standard description of LINE as a linear-time method for large graphs, though exact complexity can vary with implementation details such as negative sampling and epochs.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2712.1,
+            "prompt_tokens": 111,
+            "completion_tokens": 199
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2345.8,
+            "prompt_tokens": 771,
+            "completion_tokens": 406
+        },
+        "asserted_claim_count": 10,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.16832231116418395,
+        "query_entities": [
+            "LINE",
+            "Large-scale Information Network Embedding",
+            "first-order proximity objective",
+            "second-order proximity objective",
+            "negative sampling",
+            "number of edge",
+            "number of vertice",
+            "embedding dimension"
+        ]
+    }
+}

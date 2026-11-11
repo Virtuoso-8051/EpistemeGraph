@@ -1,0 +1,62 @@
+{
+  "answer": "Feature learning in networks faces a trade-off between expressiveness/representational power and tractability (computational cost and optimization difficulty) when choosing the objective: objectives that capture the data's structure richly (such as reconstruction or generative likelihood objectives) can be harder to optimize and slower to train, while simpler objectives are easier to optimize but may learn features less useful for the task. Comparing the two procedures: a supervised procedure (e.g., training with labeled targets and backpropagation on the task loss) typically has lower training-time complexity per task because its objective is directly aligned with prediction and needs no separate pretraining stage, and it usually achieves higher predictive accuracy when sufficient labeled data is available. An unsupervised procedure (e.g., autoencoders, RBMs, or other reconstruction/generative objectives) generally requires more training time, often with a layer-wise or two-stage pipeline, and its learned features are not tailored to a specific label, so its predictive accuracy is often lower on the downstream task, though it can exploit abundant unlabeled data and can serve as a useful initialization or regularizer, sometimes narrowing or reversing the gap when labels are scarce.",
+  "confidence": 0.4,
+  "confidence_reasoning": "The answer gives a general, plausible characterization drawn from common knowledge of representation learning, but the question seems to reference a specific source's framing that I could not verify, so specific claims about relative training time and accuracy may not match it exactly.",
+  "triples": [
+    {
+      "source": "feature learning in network",
+      "target": "tractability",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "reconstruction or generative likelihood objective",
+      "target": "slower training",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simpler objective",
+      "target": "easier optimization",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised procedure",
+      "target": "training time complexity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised procedure",
+      "target": "classification performance",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised procedure",
+      "target": "more training time",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised procedure",
+      "target": "lower predictive accuracy",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised procedure",
+      "target": "exploitation of abundant unlabeled data",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unsupervised procedure",
+      "target": "initialization or regularizer role",
+      "type": "APPLIES_TO",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

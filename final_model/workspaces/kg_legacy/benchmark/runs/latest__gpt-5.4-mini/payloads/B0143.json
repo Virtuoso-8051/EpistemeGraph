@@ -1,0 +1,84 @@
+{
+    "user_query": "Under what data-sparsity conditions does DeepWalk report an advantage, and how does that compare with LINE\u2019s stated ability to scale to large graphs?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk reports an advantage when labeled data are sparse, i.e., in low-supervision / semi-supervised settings where only a small fraction of nodes have labels. In contrast, LINE states that it is designed to scale to very large graphs, emphasizing efficiency and scalability to graphs with billions of edges rather than specifically claiming an advantage under sparse labels.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "This answer reflects the commonly stated claims in the original DeepWalk and LINE papers, though exact wording can vary by source and I cannot verify the papers verbatim here.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "LINE"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "LINE",
+        "labeled data are sparse",
+        "large graph",
+        "efficiency",
+        "scalability",
+        "sparse label"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "labeled data are sparse",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "large graph",
+            "type": "IS_A",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "efficiency",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "scalability",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "sparse label",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "REFUTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under what data-sparsity conditions does DeepWalk report an advantage, and how does that compare with LINE\u2019s stated ability to scale to large graphs?",
+        "llm_response": "DeepWalk reports an advantage when labeled data are sparse, i.e., in low-supervision / semi-supervised settings where only a small fraction of nodes have labels. In contrast, LINE states that it is designed to scale to very large graphs, emphasizing efficiency and scalability to graphs with billions of edges rather than specifically claiming an advantage under sparse labels.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "This answer reflects the commonly stated claims in the original DeepWalk and LINE papers, though exact wording can vary by source and I cannot verify the papers verbatim here.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1732.5,
+            "prompt_tokens": 119,
+            "completion_tokens": 122
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1661.7,
+            "prompt_tokens": 701,
+            "completion_tokens": 186
+        },
+        "asserted_claim_count": 4,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 1,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.22573165235848264,
+        "query_entities": [
+            "DEEPWALK",
+            "LINE"
+        ]
+    }
+}

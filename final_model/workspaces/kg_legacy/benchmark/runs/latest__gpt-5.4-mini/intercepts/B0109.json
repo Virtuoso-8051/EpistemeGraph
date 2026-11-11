@@ -1,0 +1,68 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding) is designed to scale roughly linearly with the size of the graph. Its overall training time is typically O(|E|) per epoch for first-order or second-order proximity objectives, and with negative sampling the cost is proportional to the number of sampled negatives as well. In practice, this means the runtime grows approximately linearly with the number of edges, and also linearly with the number of vertices only through the cost of maintaining/updating embeddings and sampling; the dominant factor is usually the number of edges. So, for a fixed embedding dimension and fixed number of negative samples, LINE scales about linearly in both |E| and |V|, with |E| being the main driver.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard description of LINE as a linear-time method for large graphs, though exact complexity can vary with implementation details such as negative sampling and epochs.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "scales roughly linearly with the size of the graph",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "O(|E|) per epoch",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity objective",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity objective",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "cost proportional to the number of sampled negative",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "RUNTIME",
+      "target": "approximately linearly with the number of edge",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "RUNTIME",
+      "target": "approximately linearly with the number of vertice",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of edge",
+      "target": "dominant factor",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "number of edge",
+      "type": "SCALES_WITH",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "number of vertice",
+      "type": "SCALES_WITH",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.16832231116418395
+}

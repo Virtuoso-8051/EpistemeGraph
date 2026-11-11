@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The answer states DeepWalk used random walk length 40 and window size 10 as the answer to the question, but the question is unanswerable from the passage; the evidence contains a sentence listing 'window size win = 10, walk length t = 40, walks per vertex \u03b3 = 40 for DeepWalk' as default settings in a comparison experiment, so these values are partially attributed by the source.",
+    "The answer claims 80 walks per vertex, which contradicts the evidence stating walks per vertex \u03b3 = 40 for DeepWalk.",
+    "The answer claims 128-dimensional embeddings in its main experiments, which the evidence does not state."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The passage does contain default settings (window 10, walk length 40) for DeepWalk in one experimental comparison, so those values are grounded, though the question was framed as unanswerable from the stated context. The claimed 80 walks per vertex contradicts the evidence's \u03b3 = 40, and the 128-dimension figure is not in the evidence, making the answer partially unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

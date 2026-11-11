@@ -1,0 +1,56 @@
+{
+  "answer": "K = 10. In the node2vec experiments (multilabel classification and link prediction), the sampling budget was set to 10 (r = 10 walks per source node, walk length l = 80, window k = 10), with the same budget used for DeepWalk so the random-walk methods were compared on equal sampling effort. LINE was given a comparable sample budget (as I recall, matched to the same number of samples), but I am not certain of the exact LINE setting.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I recall the walk parameters (r=10, l=80, k=10) and that the budget was matched across methods, but I am unsure whether the question's K refers to the walk count or a different parameter and I cannot verify the LINE detail.",
+  "triples": [
+    {
+      "source": "sampling budget",
+      "target": "NODE2VEC",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampling budget",
+      "target": "multilabel classification",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampling budget",
+      "target": "link prediction",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks per source",
+      "target": "NODE2VEC",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "walk length l = 80",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "window k = 10",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "sampling budget",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "number of sample",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

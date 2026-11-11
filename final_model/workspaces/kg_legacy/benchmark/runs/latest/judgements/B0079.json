@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "First-order proximity returns words strongly and directly related to the query, such as close synonyms or tight semantic neighbours (the paper says it returns a mixture of syntactically and semantically related words).",
+    "Second-order proximity gives broader or more topical associations (the paper says its words are all semantically related)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer mischaracterizes first-order results as tight semantic neighbours, whereas the paper says they mix syntactic and semantic relations, and it omits that second-order results are all semantically related. Only the claim that second-order uses similar contexts is supported.",
+  "judge_model": "claude-sonnet-5-5"
+}

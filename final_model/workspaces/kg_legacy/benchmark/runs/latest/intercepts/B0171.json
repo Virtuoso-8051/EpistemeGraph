@@ -1,0 +1,62 @@
+{
+  "answer": "The premise is not supported. In Tang et al. (2015), LINE does not switch from first-order to second-order proximity during training. The two models are trained separately: LINE(1st) optimizes the first-order objective and LINE(2nd) optimizes the second-order objective, each with its own embeddings. The two resulting embeddings are then concatenated (LINE(1st+2nd)) for downstream tasks. The paper does not define a switching condition. Training is also not organized in epochs. Each objective is optimized by edge sampling with asynchronous SGD for a fixed total number of sampled edges (on the order of billions for large networks), so no per-objective epoch count is given.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I'm fairly confident LINE trains the two orders separately and concatenates them with no switching, but I'm less certain about the exact sample-count details and whether the paper mentions epochs at all.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "DOES_NOT_SWITCH",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "concatenated embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "switching condition",
+      "type": "DOES_NOT_DEFINE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "EPOCHS",
+      "type": "DOES_NOT_USE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge-sampling algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "asynchronous stochastic gradient algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm",
+      "target": "asynchronous stochastic gradient algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

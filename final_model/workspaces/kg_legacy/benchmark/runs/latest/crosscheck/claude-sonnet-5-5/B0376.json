@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Training is typically done with hierarchical softmax (not stated in the evidence, though it is true of DeepWalk in general)",
+    "\u03a6 maps v to R^{|V|\u00d7d}, a detail not stated in the evidence",
+    "The context (output) side of skip-gram is auxiliary and the vertex embeddings are the only parameters of interest, which the evidence does not state"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, stating that the vocabulary is the set of graph vertices (V = V) and that random walks form the corpus. It adds details such as hierarchical softmax, the \u03a6 dimensions, and the auxiliary context side, which the evidence does not contain, though they are mostly accurate background.",
+  "judge_model": "claude-sonnet-5-5"
+}

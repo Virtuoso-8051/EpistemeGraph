@@ -1,0 +1,13 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "DeepWalk is designed for unweighted, undirected graphs (the evidence only says DeepWalk applies to unweighted networks; directedness is not stated)",
+    "Both DeepWalk and LINE are for homogeneous networks; metapath2vec or heterogeneous LINE variants are needed for heterogeneous networks (not in the evidence)",
+    "LINE's proximity is restricted to first- and second-order neighborhoods whereas DeepWalk's random walks reach beyond (not stated; the evidence says DeepWalk expects second-order proximity)",
+    "DeepWalk captures higher-order neighborhood structure up to the window size (contrasts with the paper's statement that DeepWalk targets second-order proximity)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: LINE preserves first- and second-order proximity, handles weighted and unweighted networks, and DeepWalk only applies to unweighted ones. The answer adds unsupported specifics, including that DeepWalk is undirected-only, the homogeneous-network and metapath2vec remarks, and the framing of DeepWalk as higher-order versus LINE as limited.",
+  "judge_model": "claude-sonnet-5-5"
+}

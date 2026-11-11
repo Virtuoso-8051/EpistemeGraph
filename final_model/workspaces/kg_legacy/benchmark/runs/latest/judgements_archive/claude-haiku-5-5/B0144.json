@@ -1,0 +1,12 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "LINE models the joint distribution of connected nodes to be similar to the empirical distribution, and uses edge-sampling stochastic gradient descent \u2013 the evidence excerpt does not mention the joint distribution formulation or edge sampling SGD",
+    "DeepWalk applies Skip-gram with hierarchical softmax to maximize likelihood of neighborhood context within a window \u2013 the evidence only mentions hierarchical sampling approximating softmax with an objective similar to node2vec, not Skip-gram explicitly",
+    "DeepWalk does not define an explicit graph-structure objective \u2013 the evidence does not state this directly"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims (LINE preserves first- and second-order proximity; DeepWalk treats random walks as sentences, generalizing language modeling from words to graphs, learning from local random-walk information) are supported by the evidence. However, several technical specifics (joint/empirical distribution formulation, edge-sampling SGD, explicit Skip-gram with hierarchical softmax, and the absence of an explicit DeepWalk objective) go beyond what the provided excerpts state, though they are largely consistent with the broader papers.",
+  "judge_model": "claude-haiku-5-5"
+}

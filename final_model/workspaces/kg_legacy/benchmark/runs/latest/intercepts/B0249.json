@@ -1,0 +1,56 @@
+{
+  "answer": "Skip-gram is equivalent to optimizing a classification (matrix factorization) loss over adjacency matrices when the negative-sampling approximation is replaced by the full softmax/exact objective: i.e., when every (word, context) pair in the entire vocabulary is treated as a training example, with the full co-occurrence (adjacency) matrix of the graph or corpus used as the target, rather than sampling a few negative words per positive pair. In that setting the loss is a weighted cross-entropy over all node pairs (a dense classification of whether each pair is connected), which is the form studied in graph embedding analyses such as the connection between DeepWalk/skip-gram and matrix factorization of the random-walk co-occurrence matrix (Qiu et al., 2018). Negative sampling is used in practice for computational tractability, since the full softmax over a large vocabulary is expensive.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The core idea (full softmax over all pairs versus negative sampling, linking to adjacency/co-occurrence matrix factorization) is well grounded, but the question's exact framing is ambiguous and I may not match the specific source's intended conditions.",
+  "triples": [
+    {
+      "source": "Skip-gram model",
+      "target": "classification (matrix factorization) loss over adjacency matrice",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "full softmax over all word-context pair",
+      "type": "OPTIMIZES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "adjacency matrix",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "full softmax",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "computational tractability",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "weighted cross-entropy over all node pair",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "target": "matrix factorization of random-walk co-occurrence matrix",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph embedding",
+      "target": "Skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

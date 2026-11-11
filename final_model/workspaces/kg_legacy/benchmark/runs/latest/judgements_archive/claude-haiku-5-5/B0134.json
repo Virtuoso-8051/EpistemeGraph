@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Negative sampling is mentioned as the other common SkipGram trick (not stated in the evidence, though it is uncontroversial background about SkipGram)",
+    "Node2vec's BFS-like and DFS-like biased random walks are described as controlling the neighborhood notion (the evidence only says it uses a 2nd order random walk and a flexible neighborhood notion, without naming BFS/DFS)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The core answer, hierarchical softmax on a binary tree reducing cost from O(|V|) to O(log|V|) and node2vec's objective preserving network neighborhoods in a d-dimensional space, is directly supported by the DOC_003 and DOC_002 evidence. The extra details (negative sampling as background, BFS/DFS characterization) are either uncontroversial background or minor elaborations not stated in the excerpts, so they do not undermine the core answer.",
+  "judge_model": "claude-haiku-5-5"
+}

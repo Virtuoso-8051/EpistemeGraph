@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The answer specifies that the random walks are 'biased second-order' and that p is the return parameter and q the in-out parameter; the provided evidence excerpt does not define p, q, or the second-order walk details, though these are consistent with the paper's broader method and not contradicted by the evidence.",
+    "The answer states the optimization uses negative sampling; the evidence excerpt only says SGD is used and does not mention negative sampling."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "SUPPORTED",
+  "rationale": "The core claims (learning low-dimensional embeddings by maximizing the likelihood of preserving network neighborhoods, and optimizing with SGD via a skip-gram/word2vec-style objective) are directly supported by the evidence. The remaining details about p, q, biased walks, and negative sampling go beyond the excerpt but are not contradicted and are standard node2vec method description, so they are minor rather than core unsupported claims.",
+  "judge_model": "claude-haiku-5-5"
+}

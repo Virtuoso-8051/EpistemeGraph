@@ -1,0 +1,44 @@
+{
+  "answer": "DeepWalk used random walks of length 40 (t = 40) with a context window size of 10 (w = 10). It also used 80 walks per vertex and 128-dimensional embeddings in its main experiments.",
+  "confidence": 0.85,
+  "confidence_reasoning": "I recall these values from the DeepWalk paper (Perozzi et al., 2014) as its default parameters, but I am reciting from memory and have not verified them against the source.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "RANDOM WALK",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "RANDOM WALK",
+      "target": "walk length of 40",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "context window size of 10",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "NUMBER OF WALKS STARTED PER VERTEX",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NUMBER OF WALKS STARTED PER VERTEX",
+      "target": "80 walks per vertex",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "128-dimensional embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

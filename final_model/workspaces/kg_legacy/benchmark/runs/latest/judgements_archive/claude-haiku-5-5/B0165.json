@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The answer asserts that comparisons on Cora, Citeseer, or DBLP are typically reported as micro/macro-F1 at varying labeled-training ratios, which is general background not drawn from the papers and framed as a general pattern rather than a paper finding.",
+    "The answer says the winner 'can depend on network density, label sparsity, and embedding dimension', which is speculation not present in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer correctly declines to supply the exact conditions or numerical results, which the provided passage does not report (Table 7 values are absent). Its general remarks are explicitly labeled as a general pattern rather than findings from the paper, so no paper-specific fabrication is made.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,140 @@
+{
+    "user_query": "Why does the passage say a desirable embedding model for real-world information networks must satisfy multiple requirements, and what are those requirements for LINE?",
+    "mode": "closed_book",
+    "llm_response": "The passage says a desirable embedding model for real-world information networks must satisfy multiple requirements because such networks are large, sparse, and often contain both local and global structural information, so a useful model has to preserve different kinds of relationships at once rather than only one. For LINE, the requirements are that it should preserve first-order proximity (direct pairwise connections), second-order proximity (similarity of neighborhood distributions for nodes that are not directly connected), and it should be scalable to very large networks while handling sparsity effectively.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "This answer matches the standard description of LINE in the cited context, though exact wording may vary slightly across versions of the passage.",
+    "extracted_query_entities": [
+        "real-world information network",
+        "LINE",
+        "first-order proximity",
+        "second-order proximity",
+        "direct pairwise connection",
+        "neighborhood distribution",
+        "large network",
+        "SPARSITY"
+    ],
+    "extracted_response_entities": [
+        "real-world information network",
+        "LINE",
+        "first-order proximity",
+        "second-order proximity",
+        "direct pairwise connection",
+        "neighborhood distribution",
+        "large network",
+        "SPARSITY",
+        "LARGE",
+        "SPARSE",
+        "local and global structural information",
+        "desirable embedding model for real-world information network",
+        "different kinds of relationship",
+        "similarity of neighborhood distribution",
+        "nodes that are not directly connected"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "real-world information network",
+            "target": "LARGE",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "real-world information network",
+            "target": "SPARSE",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "real-world information network",
+            "target": "local and global structural information",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "desirable embedding model for real-world information network",
+            "target": "different kinds of relationship",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "first-order proximity",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "direct pairwise connection",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "second-order proximity",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "similarity of neighborhood distribution",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "nodes that are not directly connected",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "large network",
+            "type": "REQUIRES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "SPARSITY",
+            "type": "REQUIRES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why does the passage say a desirable embedding model for real-world information networks must satisfy multiple requirements, and what are those requirements for LINE?",
+        "llm_response": "The passage says a desirable embedding model for real-world information networks must satisfy multiple requirements because such networks are large, sparse, and often contain both local and global structural information, so a useful model has to preserve different kinds of relationships at once rather than only one. For LINE, the requirements are that it should preserve first-order proximity (direct pairwise connections), second-order proximity (similarity of neighborhood distributions for nodes that are not directly connected), and it should be scalable to very large networks while handling sparsity effectively.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "This answer matches the standard description of LINE in the cited context, though exact wording may vary slightly across versions of the passage.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2124.7,
+            "prompt_tokens": 116,
+            "completion_tokens": 148
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2540.1,
+            "prompt_tokens": 733,
+            "completion_tokens": 401
+        },
+        "asserted_claim_count": 11,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.22352237432775363,
+        "query_entities": [
+            "real-world information network",
+            "LINE",
+            "first-order proximity",
+            "second-order proximity",
+            "direct pairwise connection",
+            "neighborhood distribution",
+            "large network",
+            "SPARSITY"
+        ]
+    }
+}

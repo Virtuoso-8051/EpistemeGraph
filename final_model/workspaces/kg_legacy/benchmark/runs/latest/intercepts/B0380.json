@@ -1,0 +1,50 @@
+{
+  "answer": "In the node2vec paper (Grover & Leskovec, 2016), node2vec's advantage over DeepWalk on the PPI protein-interaction network is largest when labeled data is scarce. With only 10% of nodes labeled for multi-label classification, node2vec's Micro-F1 is roughly 20% higher (relative) than DeepWalk's, and the gap narrows as the training fraction grows. This suggests that node2vec's biased random walks, which balance BFS-style (structural/local-role) and DFS-style (community/homophily) exploration, learn more informative embeddings that generalize better from few labels than DeepWalk's uniform random walks. I am not certain of the exact percentage reported.",
+  "confidence": 0.4,
+  "confidence_reasoning": "I recall the qualitative finding (larger gains at low label fractions) with moderate confidence, but the exact improvement figure and table values are uncertain from memory.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "PPI",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk procedure",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "uniform random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "structural/local-role",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "community/homophily",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

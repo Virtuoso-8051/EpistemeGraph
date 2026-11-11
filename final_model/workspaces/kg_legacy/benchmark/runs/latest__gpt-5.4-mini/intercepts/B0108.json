@@ -1,0 +1,68 @@
+{
+  "answer": "LINE can obtain an embedding for a newly arrived vertex as long as the new vertex has at least one observed edge to existing vertices, because its embedding can then be inferred from its local neighborhood and the learned embeddings of adjacent nodes. The recommended optimization objective is to preserve first-order and second-order proximity in the network, typically by minimizing the KL-divergence between the empirical edge distributions and the model distributions for these two proximities (often optimized with negative sampling).",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard LINE formulation and its inductive use for new vertices with observed neighbors, though exact wording can vary across descriptions of the method.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "embedding",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "newly arrived vertex",
+      "target": "at least one observed edge to existing vertice",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "target": "local neighborhood",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "target": "learned embeddings of adjacent node",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "recommended optimization objective",
+      "target": "first-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "recommended optimization objective",
+      "target": "second-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "recommended optimization objective",
+      "target": "KL-divergence",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "KL-divergence",
+      "target": "empirical edge distribution",
+      "type": "BETWEEN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "KL-divergence",
+      "target": "model distribution",
+      "type": "BETWEEN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "recommended optimization objective",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.22498533460828993
+}

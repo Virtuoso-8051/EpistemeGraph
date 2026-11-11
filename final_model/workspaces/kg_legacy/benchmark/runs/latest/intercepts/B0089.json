@@ -1,0 +1,38 @@
+{
+  "answer": "The LINE authors (Tang et al., 2015) indicate that future work will extend the model beyond the first- and second-order proximities it uses, mainly by investigating higher-order (multi-hop) proximity and how to incorporate it into the embedding in a scalable way. I could not verify the exact wording of their stated future directions, so this is a best-effort reconstruction rather than a quotation.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I am reasonably sure the paper is LINE and that higher-order proximity is the natural extension, but I cannot confirm the exact future-work statements from memory, and the question's source paper is not certain.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order neighbor",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "future work",
+      "target": "higher-order (multi-hop) proximity",
+      "type": "PROPOSES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "higher-order (multi-hop) proximity",
+      "target": "LINE",
+      "type": "APPLIES_TO",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "future work",
+      "target": "scalable incorporation of higher-order proximity into embedding",
+      "type": "PROPOSES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

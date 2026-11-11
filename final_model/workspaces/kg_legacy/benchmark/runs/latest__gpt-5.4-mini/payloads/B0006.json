@@ -1,0 +1,103 @@
+{
+    "user_query": "Under which conditions does LINE say second-order proximity is applicable, and what similarity assumption does it make about vertices?",
+    "mode": "closed_book",
+    "llm_response": "LINE says second-order proximity is applicable when the graph is directed or when the graph is undirected but the first-order proximity is sparse. It assumes that vertices with similar neighborhood distributions are similar to each other, even if they are not directly connected.",
+    "llm_self_reported_accuracy": 0.95,
+    "llm_confidence_reasoning": "This matches LINE\u2019s definition of second-order proximity and its stated assumption about vertex similarity based on neighborhood context.",
+    "extracted_query_entities": [
+        "LINE",
+        "second-order proximity",
+        "directed graph",
+        "undirected graph",
+        "first-order proximity",
+        "VERTICES",
+        "neighborhood distribution"
+    ],
+    "extracted_response_entities": [
+        "LINE",
+        "second-order proximity",
+        "directed graph",
+        "undirected graph",
+        "first-order proximity",
+        "VERTICES",
+        "neighborhood distribution",
+        "SPARSE",
+        "vertices with similar neighborhood distribution",
+        "similarity"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "second-order proximity",
+            "target": "directed graph",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "undirected graph",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "first-order proximity",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "SPARSE",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "vertices with similar neighborhood distribution",
+            "type": "ASSUMES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "vertices with similar neighborhood distribution",
+            "target": "similarity",
+            "type": "MAPS_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which conditions does LINE say second-order proximity is applicable, and what similarity assumption does it make about vertices?",
+        "llm_response": "LINE says second-order proximity is applicable when the graph is directed or when the graph is undirected but the first-order proximity is sparse. It assumes that vertices with similar neighborhood distributions are similar to each other, even if they are not directly connected.",
+        "llm_extraction_confidence": 0.95,
+        "llm_confidence_reasoning": "This matches LINE\u2019s definition of second-order proximity and its stated assumption about vertex similarity based on neighborhood context.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2160.6,
+            "prompt_tokens": 111,
+            "completion_tokens": 90
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1779.1,
+            "prompt_tokens": 678,
+            "completion_tokens": 225
+        },
+        "asserted_claim_count": 6,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2238233657110305,
+        "query_entities": [
+            "LINE",
+            "second-order proximity",
+            "directed graph",
+            "undirected graph",
+            "first-order proximity",
+            "VERTICES",
+            "neighborhood distribution"
+        ]
+    }
+}

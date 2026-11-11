@@ -1,0 +1,74 @@
+{
+  "answer": "The passage wasn't included with your question, so this answer draws on general knowledge of graph-based spectral methods (e.g., Laplacian Eigenmaps, diffusion maps, and related approaches), not on the specific text. Such methods scale mainly by (1) building a sparse k-nearest-neighbour graph, which costs roughly O(n log n) with tree-based search and keeps storage at O(nk); (2) working with sparse graph matrices (Laplacian or affinity) instead of dense n\u00d7n matrices; (3) computing only a few extreme eigenvectors with iterative solvers (Lanczos/Arnoldi, LOBPCG, or power-type methods), which cost roughly matrix-vector products rather than a full eigendecomposition; and (4) optionally using Nystr\u00f6m or landmark extensions, random projections, or polynomial/Chebyshev filters to approximate the embedding. By contrast, PCA needs the eigendecomposition or SVD of a d\u00d7d covariance matrix or a dense data matrix. Its cost is O(min(nd\u00b2, n\u00b2d)), though truncated or randomized SVD can reduce this. Classical IsoMap is the least scalable: it computes all-pairs geodesic distances (roughly O(n\u00b2 log n) via Dijkstra), stores a dense n\u00d7n doubly centred kernel, and performs a dense eigendecomposition costing about O(n\u00b3). Landmark IsoMap mitigates this by computing geodesics only to a subset of landmarks and triangulating the rest.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The specific passage was not provided, so the answer relies on general knowledge of these methods' complexity and may not match the passage's particular claims or framing.",
+  "triples": [
+    {
+      "source": "graph-based spectral method",
+      "target": "sparse k-nearest-neighbour graph",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sparse k-nearest-neighbour graph",
+      "target": "O(n log n) cost with tree-based search",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graph-based spectral method",
+      "target": "sparse graph matrice",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph-based spectral method",
+      "target": "iterative eigenvector solver",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "iterative eigenvector solver",
+      "target": "few extreme eigenvector",
+      "type": "COMPUTES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph-based spectral method",
+      "target": "embedding",
+      "type": "APPROXIMATES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "target": "eigendecomposition",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "target": "singular value decomposition",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Classical IsoMap",
+      "target": "all-pairs geodesic distance",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Classical IsoMap",
+      "target": "eigendecomposition",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Landmark IsoMap",
+      "target": "LANDMARK",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "LINE(2nd) is described as limited to direct and two-hop neighborhood similarity, without mentioning the reconstruction of the network by adding second-order neighbors for low-degree vertices, which the evidence identifies as the key mechanism behind its improvement",
+    "The claim that node2vec's walks reach broader multi-hop structure than LINE is a comparison the evidence does not state"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The node2vec description (p, q, homophily vs. structural equivalence, skip-gram with negative sampling) is standard background and matches the evidence. The answer misses the evidence-specific LINE(2nd) improvement mechanism, reconstruction by adding neighbors of neighbors for low-degree vertices, and it adds an unsupported comparative claim about multi-hop reach.",
+  "judge_model": "claude-sonnet-5-5"
+}

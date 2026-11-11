@@ -1,0 +1,44 @@
+{
+  "answer": "DeepWalk used a representation (embedding) size of d = 128 dimensions by default. Its Skip-gram model has a single linear hidden layer of that size, which maps each node to a 128-dimensional vector. The paper's parameter study also varied this size, but 128 is the default used in its main experiments.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am fairly sure the paper's default representation size is 128, but I am not certain of every detail of its experimental settings or the exact wording about the hidden layer.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "embedding size d = 128",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram",
+      "target": "single linear hidden layer",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "single linear hidden layer",
+      "target": "128-dimensional vector",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "parameter study varying embedding size",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding size d = 128",
+      "target": "default setting",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

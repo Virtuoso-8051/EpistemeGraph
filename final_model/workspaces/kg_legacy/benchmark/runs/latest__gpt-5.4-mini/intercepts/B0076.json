@@ -1,0 +1,74 @@
+{
+  "answer": "LINE outperformed node2vec in the operator-wise comparison when the task used a simple linear classifier/operator rather than a more complex nonlinear one. The operators involved were the standard embedding-combination operators used for link prediction/classification, such as Hadamard, average, weighted-L1, and weighted-L2; LINE\u2019s advantage was observed specifically in the simpler operator setting.",
+  "confidence": 0.62,
+  "confidence_reasoning": "I\u2019m moderately confident because the answer matches the typical operator-wise comparison setup, but the exact wording and which operator was best can vary by paper and dataset.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "NODE2VEC",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "operator-wise comparison",
+      "target": "simple linear classifier/operator",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simple linear classifier/operator",
+      "target": "more complex nonlinear operator",
+      "type": "CONTRASTS_WITH",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "operator-wise comparison",
+      "target": "HADAMARD",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "operator-wise comparison",
+      "target": "AVERAGE",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "operator-wise comparison",
+      "target": "weighted-L1",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "operator-wise comparison",
+      "target": "weighted-L2",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HADAMARD",
+      "target": "link prediction/classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "AVERAGE",
+      "target": "link prediction/classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "weighted-L1",
+      "target": "link prediction/classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "weighted-L2",
+      "target": "link prediction/classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.26544952392578125
+}

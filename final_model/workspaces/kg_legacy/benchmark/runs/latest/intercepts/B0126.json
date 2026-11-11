@@ -1,0 +1,62 @@
+{
+  "answer": "DeepWalk is the method presented as exploiting missing information well. It uses truncated random walks and skip-gram to capture indirect, multi-hop co-occurrence relations, which can reveal connections that are not directly observed. LINE is the method that explicitly models both observed ties (first-order proximity, the direct edges between nodes) and shared-neighborhood similarity (second-order proximity, where nodes with similar neighbor distributions get similar embeddings).",
+  "confidence": 0.45,
+  "confidence_reasoning": "The LINE characterization (first-order and second-order proximity) is well established, but I could not verify the specific source's wording that credits DeepWalk with exploiting missing information, so that attribution is uncertain.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "Truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Indirect multi-hop co-occurrence relation",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Exploiting missing information",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "First-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "Second-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "First-order proximity",
+      "target": "Direct edges between node",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Second-order proximity",
+      "target": "Shared-neighborhood similarity",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Second-order proximity",
+      "target": "Nodes with similar neighbor distribution",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

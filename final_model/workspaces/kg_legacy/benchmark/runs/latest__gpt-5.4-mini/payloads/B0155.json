@@ -1,0 +1,67 @@
+{
+    "user_query": "Under what conditions does node2vec outperform the other benchmark algorithms in PASSAGE A, and what kind of network reconstruction improves LINE(2nd) in PASSAGE B?",
+    "mode": "closed_book",
+    "llm_response": "I\u2019m missing PASSAGE A and PASSAGE B, so I can\u2019t determine the specific conditions or reconstruction type from the provided prompt alone. If you share the two passages, I can answer precisely.",
+    "llm_self_reported_accuracy": 0.12,
+    "llm_confidence_reasoning": "The question depends on information from passages that were not included, so any specific factual answer would be a guess.",
+    "extracted_query_entities": [
+        "PASSAGE A",
+        "PASSAGE B",
+        "NODE2VEC",
+        "LINE"
+    ],
+    "extracted_response_entities": [
+        "PASSAGE A",
+        "PASSAGE B",
+        "NODE2VEC",
+        "LINE"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "PASSAGE A",
+            "type": "REQUIRES",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "LINE",
+            "target": "PASSAGE B",
+            "type": "REQUIRES",
+            "claim_type": "REFUTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under what conditions does node2vec outperform the other benchmark algorithms in PASSAGE A, and what kind of network reconstruction improves LINE(2nd) in PASSAGE B?",
+        "llm_response": "I\u2019m missing PASSAGE A and PASSAGE B, so I can\u2019t determine the specific conditions or reconstruction type from the provided prompt alone. If you share the two passages, I can answer precisely.",
+        "llm_extraction_confidence": 0.12,
+        "llm_confidence_reasoning": "The question depends on information from passages that were not included, so any specific factual answer would be a guess.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1647.9,
+            "prompt_tokens": 123,
+            "completion_tokens": 88
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1571.1,
+            "prompt_tokens": 681,
+            "completion_tokens": 160
+        },
+        "asserted_claim_count": 0,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 2,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.1120321374190481,
+        "query_entities": [
+            "PASSAGE A",
+            "PASSAGE B",
+            "NODE2VEC",
+            "LINE"
+        ]
+    }
+}

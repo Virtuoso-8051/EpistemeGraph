@@ -1,0 +1,68 @@
+{
+  "answer": "LINE(1st+2nd) learns node embeddings from the language network without labels. It trains one embedding that preserves first-order proximity (the direct, weighted co-occurrence or edge strength between two words) and another that preserves second-order proximity (similarity of neighborhood distributions, using context vectors). Both are optimized with edge sampling and negative sampling. Because the objective depends only on the graph structure, the method is fully unsupervised. When the two embeddings are combined, the relative weight of each dimension or view can be tuned from unlabeled data, for example by using a structural proxy such as held-out edge reconstruction or link prediction, rather than downstream labeled performance. I could not verify the specific paper or its exact weighting procedure, so the details of that tuning step are a general description rather than a confirmed account.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The general description of LINE's first- and second-order objectives is well established, but I could not identify the specific source paper, so the claim about how the dimension weights are tuned from unlabeled data is uncertain.",
+  "triples": [
+    {
+      "source": "1ST+2ND",
+      "target": "node embedding",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "first-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "second-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "1ST+2ND",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "1ST+2ND",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "1ST+2ND",
+      "target": "unsupervised representation learning",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "1ST+2ND",
+      "target": "language network",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relative weight of each dimension or view",
+      "target": "unlabeled data",
+      "type": "OPTIMIZES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "structural proxy such as held-out edge reconstruction or link prediction",
+      "target": "tuning of combined embedding weight",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "1ST+2ND",
+      "target": "labeled data",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

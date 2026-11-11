@@ -1,0 +1,62 @@
+{
+  "answer": "The premise is incorrect. Node2vec does not optimize with Adam, and nothing about it makes Adam preferable. Grover and Leskovec (2016) extend the skip-gram model from word2vec, using biased second-order random walks to generate node neighborhoods. They optimize the skip-gram objective, approximated with negative sampling or hierarchical softmax, using stochastic gradient descent with a linearly decaying learning rate, as in word2vec. Common implementations such as the reference C code and gensim follow the same approach. Skip-gram is a shallow, essentially linear embedding model (a lookup table feeding an output softmax or sigmoid scorer) rather than a deep feedforward network trained with adaptive optimizers.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am confident the original node2vec paper and its standard implementations use SGD on the skip-gram objective and not Adam, though I am less certain about every detail of later variants or third-party reimplementations.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "ADAM",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Skip-gram model",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased second-order random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "classical stochastic gradient descent",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "negative sampling",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "hierarchical softmax",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classical stochastic gradient descent",
+      "target": "linearly decaying learning rate",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "target": "shallow, essentially linear embedding model",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "target": "deep feedforward network trained with adaptive optimizer",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

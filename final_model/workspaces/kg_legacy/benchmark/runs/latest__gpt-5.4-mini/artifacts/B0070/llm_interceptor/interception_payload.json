@@ -1,0 +1,101 @@
+{
+    "user_query": "How does DeepWalk characterize its search strategy over networks, and what limitation does the passage identify for that strategy?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk characterizes its search strategy as a set of short, truncated random walks over the network, which are used to sample local neighborhoods in a way analogous to sentences in language modeling. The passage identifies a limitation of this strategy: because the walks are local and finite, they may fail to capture broader, more global structural relationships in the network.",
+    "llm_self_reported_accuracy": 0.93,
+    "llm_confidence_reasoning": "This is a standard description of DeepWalk and the stated limitation is consistent with its use of short random walks, though the exact wording may vary by source.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "truncated random walk",
+        "NETWORK",
+        "local neighborhood",
+        "language modeling",
+        "broader structural relationship",
+        "global structural relationship"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "truncated random walk",
+        "NETWORK",
+        "local neighborhood",
+        "language modeling",
+        "broader structural relationship",
+        "global structural relationship",
+        "local and finite"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "truncated random walk",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "truncated random walk",
+            "target": "NETWORK",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "truncated random walk",
+            "target": "local neighborhood",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "local neighborhood",
+            "target": "language modeling",
+            "type": "MAPS_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "truncated random walk",
+            "target": "local and finite",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "truncated random walk",
+            "target": "global structural relationship",
+            "type": "FAILS_TO_CAPTURE",
+            "claim_type": "SPECULATIVE"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does DeepWalk characterize its search strategy over networks, and what limitation does the passage identify for that strategy?",
+        "llm_response": "DeepWalk characterizes its search strategy as a set of short, truncated random walks over the network, which are used to sample local neighborhoods in a way analogous to sentences in language modeling. The passage identifies a limitation of this strategy: because the walks are local and finite, they may fail to capture broader, more global structural relationships in the network.",
+        "llm_extraction_confidence": 0.93,
+        "llm_confidence_reasoning": "This is a standard description of DeepWalk and the stated limitation is consistent with its use of short random walks, though the exact wording may vary by source.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "extract_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "asserted_claim_count": 5,
+        "speculative_claim_count": 1,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.1667,
+        "token_nll": 0.24443900794313664,
+        "query_entities": [
+            "DEEPWALK",
+            "truncated random walk",
+            "NETWORK",
+            "local neighborhood",
+            "language modeling",
+            "broader structural relationship",
+            "global structural relationship"
+        ]
+    }
+}

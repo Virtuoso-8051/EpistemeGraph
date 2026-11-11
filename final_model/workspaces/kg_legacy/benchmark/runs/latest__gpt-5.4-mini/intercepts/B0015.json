@@ -1,0 +1,74 @@
+{
+  "answer": "The streaming variant of DeepWalk learns embeddings incrementally as new nodes and edges arrive, rather than requiring the full graph to be available up front. It updates the model online from the observed stream, so it can adapt to evolving graphs without retraining from scratch on the entire network. One tradeoff is that, because it only sees a partial graph at any moment, the learned embeddings can be less globally consistent or slightly less accurate than those from a batch method that has access to the full graph.",
+  "confidence": 0.9,
+  "confidence_reasoning": "This is a standard description of streaming DeepWalk and its main limitation, though exact performance tradeoffs can vary by implementation and dataset.",
+  "triples": [
+    {
+      "source": "streaming variant",
+      "target": "DEEPWALK",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "embedding",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "continually evolving network",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "full graph",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "model online",
+      "type": "UPDATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "adapt to evolving graph",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "target": "retraining from scratch",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "learned embedding",
+      "target": "less globally consistent",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned embedding",
+      "target": "slightly less accurate",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned embedding",
+      "target": "batch method",
+      "type": "OUTPERFORMS",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": 0.16610734239756633
+}

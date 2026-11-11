@@ -1,0 +1,174 @@
+{
+    "user_query": "Why does the paper claim that the LINE inference algorithm is quite scalable, and what implementation choices support that claim?",
+    "mode": "closed_book",
+    "llm_response": "The paper calls the LINE inference algorithm quite scalable because its per-iteration cost is linear in the number of observed edges and it avoids expensive global operations such as full matrix factorization or repeated passes over all possible node pairs. In practice, the algorithm only needs local computations on sampled edges and their negative samples, so it can be trained efficiently even on very large graphs. The implementation choices that support this claim include using stochastic gradient descent with edge sampling, negative sampling to approximate the normalization term, asynchronous or parallel updates to the embeddings, and a simple embedding lookup/update structure that keeps memory and computation overhead low. Together, these choices make the method suitable for large-scale networks and allow it to scale roughly linearly with graph size in the number of edges processed.",
+    "llm_self_reported_accuracy": 0.84,
+    "llm_confidence_reasoning": "This is consistent with the standard LINE paper description and its implementation strategy, though exact wording and some details may vary by version or summary.",
+    "extracted_query_entities": [
+        "LINE inference algorithm",
+        "stochastic gradient descent",
+        "edge sampling",
+        "negative sampling",
+        "asynchronous update",
+        "parallel update",
+        "embedding",
+        "large-scale network"
+    ],
+    "extracted_response_entities": [
+        "LINE inference algorithm",
+        "stochastic gradient descent",
+        "edge sampling",
+        "negative sampling",
+        "asynchronous update",
+        "parallel update",
+        "embedding",
+        "large-scale network",
+        "linear per-iteration cost",
+        "number of observed edge",
+        "avoids expensive global operation",
+        "expensive global operation",
+        "full matrix factorization",
+        "repeated passes over all possible node pair",
+        "local computations on sampled edges and negative sample",
+        "normalization term",
+        "simple embedding lookup/update structure",
+        "low memory and computation overhead",
+        "roughly linear scaling with graph size in the number of edges processed"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "LINE inference algorithm",
+            "target": "linear per-iteration cost",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "linear per-iteration cost",
+            "target": "number of observed edge",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "avoids expensive global operation",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "expensive global operation",
+            "target": "full matrix factorization",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "expensive global operation",
+            "target": "repeated passes over all possible node pair",
+            "type": "CONTAINS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "local computations on sampled edges and negative sample",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "stochastic gradient descent",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "edge sampling",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "negative sampling",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "negative sampling",
+            "target": "normalization term",
+            "type": "APPROXIMATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "asynchronous update",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "parallel update",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "simple embedding lookup/update structure",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "simple embedding lookup/update structure",
+            "target": "low memory and computation overhead",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "large-scale network",
+            "type": "APPLICABLE_FOR",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE inference algorithm",
+            "target": "roughly linear scaling with graph size in the number of edges processed",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why does the paper claim that the LINE inference algorithm is quite scalable, and what implementation choices support that claim?",
+        "llm_response": "The paper calls the LINE inference algorithm quite scalable because its per-iteration cost is linear in the number of observed edges and it avoids expensive global operations such as full matrix factorization or repeated passes over all possible node pairs. In practice, the algorithm only needs local computations on sampled edges and their negative samples, so it can be trained efficiently even on very large graphs. The implementation choices that support this claim include using stochastic gradient descent with edge sampling, negative sampling to approximate the normalization term, asynchronous or parallel updates to the embeddings, and a simple embedding lookup/update structure that keeps memory and computation overhead low. Together, these choices make the method suitable for large-scale networks and allow it to scale roughly linearly with graph size in the number of edges processed.",
+        "llm_extraction_confidence": 0.84,
+        "llm_confidence_reasoning": "This is consistent with the standard LINE paper description and its implementation strategy, though exact wording and some details may vary by version or summary.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2703.2,
+            "prompt_tokens": 111,
+            "completion_tokens": 197
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2705.0,
+            "prompt_tokens": 789,
+            "completion_tokens": 547
+        },
+        "asserted_claim_count": 16,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.29518089494155964,
+        "query_entities": [
+            "LINE inference algorithm",
+            "stochastic gradient descent",
+            "edge sampling",
+            "negative sampling",
+            "asynchronous update",
+            "parallel update",
+            "embedding",
+            "large-scale network"
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "answer": "DeepWalk used 2 dimensions (d = 2) for the latent representation in the Zachary's Karate network example, shown in Figure 1 of Perozzi, Al-Rfou, and Skiena (2014). The reported embedding size is the value 2.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I recall the figure and text using a 2-dimensional embedding, but I am not fully certain of the exact wording or value from memory.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "latent representation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representation",
+      "target": "d-dimensional space",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Zachary's Karate network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Zachary's Karate network",
+      "target": "latent representation",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

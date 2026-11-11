@@ -1,0 +1,76 @@
+{
+    "overall_kg_accuracy_score": 0.8442440064991328,
+    "provenance_grounding_score": 0.8679439895284764,
+    "semantic_coverage_score": 0.6980741015207028,
+    "topological_coherence_score": 0.842948717948718,
+    "internal_consistency_score": 0.9946666666666667,
+    "formula": "S_KG = (Phi_prov * Phi_cov * Phi_topo * Phi_cons)^(1/4)",
+    "documents_in_corpus": 3,
+    "documents": [
+        "paper1.pdf",
+        "paper2.pdf",
+        "paper3.pdf"
+    ],
+    "total_chunks_processed": 76,
+    "raw_triplets_extracted": 613,
+    "verified_triplets_pushed": 375,
+    "resolved_entity_count": 313,
+    "cross_pdf_shared_entities_count": 29,
+    "cross_pdf_shared_entities": [
+        "BlogCatalog",
+        "CLUSTERS",
+        "DEEPWALK",
+        "FLICKR",
+        "ISOMAP",
+        "Large-scale Information Network Embedding",
+        "Link Prediction",
+        "Node Classification",
+        "Optimization Problem",
+        "SKIPGRAM",
+        "asynchronous stochastic gradient algorithm",
+        "classical stochastic gradient descent",
+        "depth-first search",
+        "embedding",
+        "hierarchical softmax",
+        "low-dimensional space",
+        "mapping function",
+        "matrix factorization",
+        "multi-label classification",
+        "objective function",
+        "one-vs-rest logistic regression classifier",
+        "random walk",
+        "representation",
+        "representation learning",
+        "social network",
+        "social relationship",
+        "truncated random walk",
+        "unsupervised feature learning",
+        "vertex representation"
+    ],
+    "latest_extracted_kg_path": "final_model\\workspaces\\kg_legacy\\artifacts\\11_10_2026_22_34_30\\kg_builder\\extracted_knowledge_graph.json",
+    "last_run": {
+        "new_documents": [],
+        "skipped_documents": [
+            "paper1.pdf",
+            "paper2.pdf",
+            "paper3.pdf"
+        ],
+        "new_chunks": 0,
+        "new_raw_claims": 0,
+        "new_verified_claims": 0,
+        "new_or_updated_entities": 0
+    },
+    "diagnostics": {
+        "claim_acceptance_rate": 0.6117455138662317,
+        "rejected_by_reason": {},
+        "accepted_by_evidence_match": {
+            "verbatim": 371,
+            "paraphrase_anchored": 4
+        },
+        "llm_calls": 0,
+        "llm_prompt_tokens": 0,
+        "llm_completion_tokens": 0,
+        "prompt_version": "v4"
+    },
+    "timestamp": "2026-11-10T17:04:36.303151+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk is flexible in how far it looks, because window size and walk length let it control depth; the passage says DeepWalk gives no control over explored neighborhoods and is a rigid strategy.",
+    "The trade-off is depth and flexibility versus efficiency and explicit control, with DeepWalk at higher sampling cost and LINE cheaper and more interpretable; the passage describes no efficiency trade-off.",
+    "The answer implies that LINE's fixed, shallow scope comes with explicit control. The passage says LINE is easier to characterize but restrictive."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says LINE covers only 1-hop and 2-hop neighbors and is limited. It contradicts the passage by calling DeepWalk flexible, when the passage says DeepWalk offers no control over explored neighborhoods, and it invents an efficiency trade-off.",
+  "judge_model": "claude-sonnet-5-5"
+}

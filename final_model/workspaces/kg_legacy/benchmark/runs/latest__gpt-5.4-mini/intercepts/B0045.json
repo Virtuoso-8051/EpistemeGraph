@@ -1,0 +1,80 @@
+{
+  "answer": "node2vec uses a second-order random walk because it wants the walk to be biased by the *previous step*, not just by the current node\u2019s outgoing edge weights. The parameters p and q let it control the search behavior: p adjusts the likelihood of immediately revisiting the previous node, and q adjusts whether the walk behaves more like a breadth-first search (staying near the current neighborhood) or a depth-first search (moving outward to more distant nodes). This makes the sampled node sequences capture both local and more global graph structure, which a purely static, first-order walk based only on w_vx cannot do. In other words, w_vx alone encodes only edge strength from v to x, while node2vec\u2019s second-order transition probability can depend on the edge (t, v) that brought the walk to v, allowing richer and more informative embeddings.",
+  "confidence": 0.98,
+  "confidence_reasoning": "This is a standard and well-established description of node2vec\u2019s biased second-order random walk and the roles of p and q.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "second-order random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order random walk",
+      "target": "biased by the previous step",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p",
+      "target": "likelihood of immediately revisiting the previous node",
+      "type": "ADJUSTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "q",
+      "target": "breadth-first search",
+      "type": "ADJUSTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "q",
+      "target": "depth-first search",
+      "type": "ADJUSTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "sampled node sequence",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampled node sequence",
+      "target": "local graph structure",
+      "type": "CAPTURE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampled node sequence",
+      "target": "more global graph structure",
+      "type": "CAPTURE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "static, first-order walk",
+      "target": "capture both local and more global graph structure",
+      "type": "CANNOT_DO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "W_VX",
+      "target": "edge strength from v to x",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order transition probability",
+      "target": "EDGE",
+      "type": "CAN_DEPEND_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order transition probability",
+      "target": "richer and more informative embedding",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.20642545833144077
+}

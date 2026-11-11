@@ -1,0 +1,32 @@
+{
+  "answer": "LINE(2nd) is the method evaluated on word analogy using Wikipedia word networks. node2vec is the method that reuses samples across source nodes to improve sampling efficiency.",
+  "confidence": 0.98,
+  "confidence_reasoning": "This matches the standard descriptions of the two methods in the literature: LINE(2nd) is tested on word analogy tasks with Wikipedia word networks, while node2vec uses biased random walks that can be reused across source nodes for more efficient sampling.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "word analogy",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "Wikipedia word network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "sampling efficiency",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "source node",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.09336389814104352
+}

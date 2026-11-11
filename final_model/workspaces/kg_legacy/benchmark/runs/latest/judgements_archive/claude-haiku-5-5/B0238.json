@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "LINE's advantage over DeepWalk on directed graphs is usually small and dataset-dependent.",
+    "LINE performs comparably to or modestly better than DeepWalk on directed graphs in Micro-F1 as a general tendency."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give an exact dataset-specific Micro-F1 figure, which the papers do not provide for a comparison beyond the directed network they evaluate. However, it generalizes beyond the evidence: the passage reports that LINE(2nd) outperforms DeepWalk on the directed network, and says nothing about the size or variability of that gap across datasets.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "DeepWalk used 80 random walks per vertex (\u03b3 = 80)",
+    "128-dimensional embeddings were used",
+    "These values were used across its experiments, with window size 10"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is framed as unanswerable from the passage, yet the answer invents specifics instead of saying the papers do not report them. The evidence in the 'relevant sentences' gives \u03b3 = 40 (not 80) with t = 40 and window 10 in a comparison setting, and nothing about 128 dimensions, so the core claim of \u03b3 = 80 contradicts it.",
+  "judge_model": "claude-sonnet-5-5"
+}

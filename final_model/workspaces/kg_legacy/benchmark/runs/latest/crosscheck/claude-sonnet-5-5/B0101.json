@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The paper's future-work example is heterogeneous networks with multiple node and edge types, such as authors, papers, and venues (the evidence only says vertices with multiple types, with no mention of edge types or academic networks)",
+    "The method was designed for homogeneous networks with a single node type and a single edge type (the evidence does not state this; LINE handles directed, undirected and weighted edges)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer hedges and never identifies the paper, but it guesses heterogeneous networks, which partly matches the gold answer of vertices with multiple types. It adds unsupported specifics (multiple edge types, an academic-network example, a single node and edge type assumption) and does not commit to the actual example from the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

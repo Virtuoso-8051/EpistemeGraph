@@ -1,0 +1,62 @@
+{
+  "answer": "Node2vec uses a second-order random walk because a plain first-order walk (sampling the next node x from neighbors of the current node v with probability proportional to the static weight w_vx) cannot distinguish between the two structural regimes node embeddings need to capture: homophily (BFS-like, staying in the same tight community) and structural equivalence (DFS-like, moving outward to nodes that play similar structural roles). The walk's transition probability is instead conditioned on the previous node t, so that the unnormalized probability of moving from v to x is alpha_pq(t,x) * w_vx, where alpha_pq(t,x) = 1/p if d_tx = 0 (x is the previous node t, i.e., a return), 1 if d_tx = 1 (x is a common neighbor of t and v, a BFS-like local move), and 1/q if d_tx = 2 (x is farther from t, a DFS-like outward move). The return parameter p controls the likelihood of immediately revisiting the previous node (low p encourages backtracking, keeping the walk local), and the in-out parameter q controls whether the walk explores inward/BFS-like (q > 1) or outward/DFS-like (q < 1). Because the bias depends on the distance between the candidate x and the previous node t, the walk can interpolate between BFS and DFS exploration, which a static first-order transition based only on w_vx cannot do; this gives a flexible, tunable trade-off between capturing communities and structural roles. Edge weights still multiply the bias, so weighted graphs are handled as well.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The description of the search bias alpha_pq with its three cases and the BFS/DFS interpretation matches the node2vec paper (Grover & Leskovec, 2016), though the explanation of the motivation is somewhat interpretive.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "2nd order random walk approach",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order walk",
+      "target": "homophily",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "transition probability",
+      "target": "unnormalized probability of moving from v to x",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "ALPHA_PQ",
+      "target": "1/p if d_tx = 0",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "target": "likelihood of immediately revisiting the previous node",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "target": "walk explores inward/BFS-like (q > 1) or outward/DFS-like",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "interpolation between BFS and DFS exploration",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "static first-order transition based only on w_vx",
+      "target": "interpolation between BFS and DFS exploration",
+      "type": "REFUTED",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "edge weights multiply the bias",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

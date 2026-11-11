@@ -1,0 +1,109 @@
+{
+    "user_query": "Why is BFS considered suitable for characterizing structural equivalences in a network, according to the passage?",
+    "mode": "closed_book",
+    "llm_response": "BFS is considered suitable because it explores a network level by level from a starting node, so nodes that are structurally similar tend to be discovered in the same order or at similar distances. This makes it useful for identifying and characterizing structural equivalences, since it captures the local neighborhood patterns and layered structure around nodes rather than just direct connections.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "I am fairly confident because this is a standard reason BFS is used in network analysis, but I do not have the exact passage text to verify the wording.",
+    "extracted_query_entities": [
+        "BFS",
+        "structural equivalence",
+        "NETWORK",
+        "starting node",
+        "local neighborhood pattern",
+        "layered structure"
+    ],
+    "extracted_response_entities": [
+        "BFS",
+        "structural equivalence",
+        "NETWORK",
+        "starting node",
+        "local neighborhood pattern",
+        "layered structure",
+        "level by level exploration",
+        "structurally similar node",
+        "same order or similar distance",
+        "identifying structural equivalence",
+        "characterizing structural equivalence",
+        "layered structure around node"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "BFS",
+            "target": "level by level exploration",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "BFS",
+            "target": "starting node",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "structurally similar node",
+            "target": "same order or similar distance",
+            "type": "ARE_DISCOVERED_IN",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "BFS",
+            "target": "identifying structural equivalence",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "BFS",
+            "target": "characterizing structural equivalence",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "BFS",
+            "target": "local neighborhood pattern",
+            "type": "CAPTURES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "BFS",
+            "target": "layered structure around node",
+            "type": "CAPTURES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why is BFS considered suitable for characterizing structural equivalences in a network, according to the passage?",
+        "llm_response": "BFS is considered suitable because it explores a network level by level from a starting node, so nodes that are structurally similar tend to be discovered in the same order or at similar distances. This makes it useful for identifying and characterizing structural equivalences, since it captures the local neighborhood patterns and layered structure around nodes rather than just direct connections.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "I am fairly confident because this is a standard reason BFS is used in network analysis, but I do not have the exact passage text to verify the wording.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "extract_call": {
+            "cache_hit": true,
+            "latency_ms": 0.0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+        },
+        "asserted_claim_count": 7,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.23995834484434964,
+        "query_entities": [
+            "BFS",
+            "structural equivalence",
+            "NETWORK",
+            "starting node",
+            "local neighborhood pattern",
+            "layered structure"
+        ]
+    }
+}

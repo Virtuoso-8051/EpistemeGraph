@@ -1,0 +1,56 @@
+{
+  "answer": "LINE(1st) and LINE(2nd) are reported to be efficient on large-scale, sparse information networks, scaling to millions of vertices and billions of edges. This efficiency comes from optimizing the first-order and second-order proximity objectives with edge sampling and asynchronous stochastic gradient descent, with running time roughly linear in the number of edges, and it avoids the costly matrix factorization used by graph factorization. Relative to graph factorization and DeepWalk, the reported result is that LINE is substantially faster, with DeepWalk's random-walk generation and skip-gram training being slower and graph factorization's matrix decomposition being the most expensive at scale.",
+  "confidence": 0.35,
+  "confidence_reasoning": "I could not verify the exact source or its specific comparative timing claims, so the general characterization (large-scale efficiency, linear scaling via edge sampling, faster than GF and DeepWalk) is from memory and may not match the precise wording or conditions the question expects.",
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "large network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "edge-sampling treatment",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "asynchronous stochastic gradient algorithm",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "matrix factorization",
+      "type": "AVOIDS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "matrix factorization",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "network embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "graph factorization",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

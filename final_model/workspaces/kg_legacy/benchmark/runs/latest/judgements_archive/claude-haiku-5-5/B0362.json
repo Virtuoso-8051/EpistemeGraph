@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "A reported stop-outperforming pattern above 20% labeled data would most likely depend on the dataset (for example, graphs with informative node attributes or strong label homophily) and on the metric, with Macro-F1 often showing the gap more clearly than Micro-F1 because it weights minority classes equally."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly does not accept the false premise and says it cannot identify the exact conditions, which is supported since the evidence shows DeepWalk outperforming baselines at sparse label rates. However, it speculates that a stop-outperforming pattern above 20% likely exists and attributes it to dataset properties and metric differences, which the evidence does not contain and which runs counter to the reported finding that DeepWalk remains strong with sparse labels.",
+  "judge_model": "claude-haiku-5-5"
+}

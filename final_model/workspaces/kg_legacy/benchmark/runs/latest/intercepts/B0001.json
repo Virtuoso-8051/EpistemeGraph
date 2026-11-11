@@ -1,0 +1,62 @@
+{
+  "answer": "The passage itself was not included, so I can't cite its exact wording. Based on the standard node2vec method (Grover & Leskovec, 2016), the usual three phases are: (1) Compute transition probabilities: for each edge, set a second-order biased transition probability, using return parameter p and in-out parameter q, so the walk can interpolate between BFS-like and DFS-like exploration. (2) Generate random walks: from each node, run a fixed number of biased random walks of a set length, repeated over many iterations, to produce a corpus of node sequences. (3) Learn embeddings: feed the walks to a skip-gram model (word2vec-style, typically with negative sampling, optimized by stochastic gradient descent) so that nodes co-occurring in walks get similar vectors. If the passage describes the phases differently, its description should take precedence.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I did not have the passage, so the answer relies on my knowledge of the standard node2vec method, and the passage may frame the three phases differently.",
+  "triples": [
+    {
+      "source": "Grover & Leskovec",
+      "target": "NODE2VEC",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk procedure",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "node2vec parameter",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "BFS-like and DFS-like exploration",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "random walk",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "classical stochastic gradient descent",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "node embedding",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

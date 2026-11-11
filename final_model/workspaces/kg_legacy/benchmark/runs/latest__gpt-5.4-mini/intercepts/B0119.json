@@ -1,0 +1,104 @@
+{
+  "answer": "The paper calls the LINE inference algorithm quite scalable because its per-iteration cost is linear in the number of observed edges and it avoids expensive global operations such as full matrix factorization or repeated passes over all possible node pairs. In practice, the algorithm only needs local computations on sampled edges and their negative samples, so it can be trained efficiently even on very large graphs. The implementation choices that support this claim include using stochastic gradient descent with edge sampling, negative sampling to approximate the normalization term, asynchronous or parallel updates to the embeddings, and a simple embedding lookup/update structure that keeps memory and computation overhead low. Together, these choices make the method suitable for large-scale networks and allow it to scale roughly linearly with graph size in the number of edges processed.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This is consistent with the standard LINE paper description and its implementation strategy, though exact wording and some details may vary by version or summary.",
+  "triples": [
+    {
+      "source": "LINE inference algorithm",
+      "target": "linear per-iteration cost",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "linear per-iteration cost",
+      "target": "number of observed edge",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "avoids expensive global operation",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "expensive global operation",
+      "target": "full matrix factorization",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "expensive global operation",
+      "target": "repeated passes over all possible node pair",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "local computations on sampled edges and negative sample",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "stochastic gradient descent",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "normalization term",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "asynchronous update",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "parallel update",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "simple embedding lookup/update structure",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simple embedding lookup/update structure",
+      "target": "low memory and computation overhead",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "large-scale network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "target": "roughly linear scaling with graph size in the number of edges processed",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.29518089494155964
+}

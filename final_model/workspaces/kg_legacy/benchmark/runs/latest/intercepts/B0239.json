@@ -1,0 +1,38 @@
+{
+  "answer": "128 dimensions (the embedding dimensionality d was set to 128 in LINE's experiments on the language, social, and citation networks).",
+  "confidence": 0.6,
+  "confidence_reasoning": "I recall the LINE paper (Tang et al., WWW 2015) using d = 128 for its experiments, but I am not fully certain of the exact value from memory and did not verify it against the paper.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "embedding dimensionality d",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding dimensionality d",
+      "target": "128 dimension",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "language network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "social network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "citation network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

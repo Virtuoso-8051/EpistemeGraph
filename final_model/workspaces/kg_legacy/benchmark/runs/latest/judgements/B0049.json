@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Representations should be stable with gradual or local changes and temporal smoothness of embeddings; the paper does not state this.",
+    "For community awareness, latent dimensions should be non-negative and sparse; the paper does not state this.",
+    "Each dimension behaves like a community membership, allowing soft or overlapping community assignments; the paper does not say this, and it conflicts with the stated property that distance between latent dimensions is a metric of social similarity."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The paper says representations should stay useful as networks evolve, so new relations do not require relearning from scratch. The answer gets only this part (no retraining) right. Its community-awareness property (non-negative, sparse dimensions) is invented, since the paper requires distance between latent dimensions to act as a social-similarity metric.",
+  "judge_model": "claude-sonnet-5-5"
+}

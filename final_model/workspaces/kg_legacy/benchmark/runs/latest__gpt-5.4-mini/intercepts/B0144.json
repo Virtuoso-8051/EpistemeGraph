@@ -1,0 +1,62 @@
+{
+  "answer": "LINE is distinguished by explicitly optimizing first-order and second-order proximity in the graph, whereas DeepWalk learns node embeddings by treating random walks as sentences and using a Skip-gram-style objective to predict context nodes from a node\u2019s neighborhood in those walks. DeepWalk describes its approach as learning latent representations of vertices from truncated random walks, analogous to language modeling over sequences of words.",
+  "confidence": 0.96,
+  "confidence_reasoning": "This matches the standard descriptions of LINE and DeepWalk in the original papers and related summaries, with only minor risk of wording differences in how the objectives are phrased.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "node embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "context node",
+      "type": "PREDICTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "latent representation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "language modeling",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.18206052543703188
+}

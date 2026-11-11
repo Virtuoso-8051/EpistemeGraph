@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Negative sampling is the other common SkipGram trick (not in the evidence, though hedged as general background)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The hierarchical softmax claim (binary tree, O(|V|) to O(log|V|)) and the node2vec claim (preserving network neighborhoods in d-dimensional space, flexible neighborhoods, homophily and structural equivalence) match the evidence. The negative sampling remark is hedged, uncontroversial background and does not contradict the papers.",
+  "judge_model": "claude-sonnet-5-5"
+}

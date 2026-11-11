@@ -1,0 +1,80 @@
+{
+  "answer": "The premise is incorrect. LINE (Large-scale Information Network Embedding, Tang et al., 2015) does not rely on random walks. It preserves structure directly from the edges. First-order proximity is modeled by making the embeddings of directly connected vertices similar, and second-order proximity by making vertices that share neighbors have similar context representations. Both objectives are optimized with edge sampling, using weighted edges sampled via alias tables, together with negative sampling, which makes training efficient on large weighted graphs. The first-order and second-order embeddings are trained separately and then concatenated. Random-walk-based methods such as DeepWalk and node2vec are the ones that generate node sequences by walking the graph and then apply skip-gram to them.",
+  "confidence": 0.85,
+  "confidence_reasoning": "I am confident from knowledge of the LINE paper that it uses explicit first- and second-order proximity objectives with edge sampling rather than random walks, though I am recalling details from memory and not checking the paper.",
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "random walk",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "first-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "second-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "target": "alias table",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "embedding very large information networks into low-dimensional vector space",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

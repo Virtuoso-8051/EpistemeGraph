@@ -1,0 +1,13 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "LINE does not take a logarithm of co-occurrence counts as an explicit step (the evidence does not describe LINE's edge-weighting procedure in detail, so this negative is not established)",
+    "The log of co-occurrence counts is an implicit property of the factorization view for both methods, not an explicit design choice in LINE (not stated in the evidence)",
+    "Matrix-factorization analyses (Qiu et al., 2018, NetMF) show LINE implicitly factorizes a shifted log-ratio/PMI matrix, with the formula log(A_ij/d_i) - log(b) (external claim not contained in the provided evidence)",
+    "Node2vec's implicit matrix factorization is a shifted PMI matrix built from walk-based counts (external claim not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence confirms that node2vec/DeepWalk use random-walk-generated contexts and that graph factorization uses log co-occurrence weights, but it does not describe LINE's edge weighting or the LINE/NetMF matrix-factorization derivations the answer relies on. The answer's core contrast (walk-based sampling for node2vec) is supported, while its key claim that LINE never explicitly uses a log of counts conflicts with the gold answer and is not established by the papers.",
+  "judge_model": "claude-haiku-5-5"
+}

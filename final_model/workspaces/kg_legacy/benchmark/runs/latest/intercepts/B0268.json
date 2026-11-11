@@ -1,0 +1,80 @@
+{
+  "answer": "The premise is incorrect. DeepWalk's training objective is not supervised. It learns vertex embeddings without any labels by treating truncated random walks over the graph as sentences and applying the Skip-gram model (with hierarchical softmax) to maximize the likelihood of each vertex's neighbors within a context window. Labels enter only afterward, when a standard classifier such as one-vs-rest logistic regression is trained on the frozen embeddings for node classification. DeepWalk is also not a deep learning method in the usual sense; it uses a shallow, word2vec-style model. The original paper (Perozzi, Al-Rfou, and Skiena, 2014) compared it against unsupervised baselines such as spectral clustering, edge-clustering, and modularity-based embeddings, reporting gains in Micro-F1 on datasets like BlogCatalog, Flickr, and YouTube. It did not show that a supervised objective improves its embeddings over deep methods, and later supervised graph neural networks such as GCN were not part of that comparison.",
+  "confidence": 0.85,
+  "confidence_reasoning": "I am confident DeepWalk is unsupervised Skip-gram on random walks, but I am less certain of the exact set of baselines and datasets reported in the original paper.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "unsupervised network embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "likelihood of preserving network neighborhoods of node",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "one-vs-rest logistic regression",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "deep learning method",
+      "type": "IS_A",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "FLICKR",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "YOUTUBE",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "spectral clustering",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "modularity-based embedding",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

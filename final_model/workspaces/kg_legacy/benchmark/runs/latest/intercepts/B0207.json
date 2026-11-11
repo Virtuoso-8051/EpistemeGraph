@@ -1,0 +1,74 @@
+{
+  "answer": "The node2vec paper (Grover & Leskovec, 2016) does not report an experiment isolating how much learning p and q from data improves over fixed hand-tuned values. The authors instead chose p and q by a grid search over {0.25, 0.5, 1, 2, 4}, scored on a small labeled validation subset for the downstream task. Their main comparisons are node2vec with tuned parameters against DeepWalk, which corresponds to p = q = 1, across networks such as Facebook, Wikipedia, and the protein-protein interaction network. I cannot identify a specific learned-versus-fixed numerical result, so the premise of the question may be mistaken.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I am fairly confident the paper used grid search over p and q and compared against DeepWalk (p = q = 1), but I cannot recall an exact learned-versus-fixed result or its numbers, so I am unsure whether such an experiment exists.",
+  "triples": [
+    {
+      "source": "Grover & Leskovec 2016 node2vec paper",
+      "target": "experiment isolating improvement from learning p and q",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "grid search",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grid search",
+      "target": "{0.25, 0.5, 1, 2, 4}",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "target": "downstream task performance",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small labeled validation subset",
+      "target": "grid search",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "p = q = 1",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Facebook network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Wikipedia network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "protein-protein interaction network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "premise of the question",
+      "target": "learned-versus-fixed numerical result",
+      "type": "REFUTED",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

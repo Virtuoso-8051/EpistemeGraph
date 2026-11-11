@@ -1,0 +1,12 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The AI answer asserts p = 1 as a value, which the evidence does not report as optimal for any dataset.",
+    "The AI answer claims the parameter grid is {0.25, 0.5, 1, 2, 4}, which does not appear in the provided evidence.",
+    "The AI answer attributes a 'default/neutral' setting of p = 1 to the node2vec work, which the evidence does not state."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly admits it cannot recall a statement from the paper, which is faithful to the unanswerable nature of the question. However, it then offers p = 1 as a guess and attributes a grid of values and a default setting to the paper, none of which the evidence contains.",
+  "judge_model": "claude-haiku-5-5"
+}

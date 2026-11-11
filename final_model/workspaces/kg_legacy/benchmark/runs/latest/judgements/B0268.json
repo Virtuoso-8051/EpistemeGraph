@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "DeepWalk is not a deep learning method in the usual sense; it uses a shallow word2vec-style model (the evidence frames DeepWalk as part of deep learning/unsupervised feature learning)",
+    "The original paper compared against baselines such as spectral clustering, edge-clustering, and modularity-based embeddings (not stated in the evidence)",
+    "Later supervised GNNs such as GCN were not part of that comparison (not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and accurately describes DeepWalk as unsupervised, using truncated random walks as sentences with Skip-gram. However, it adds details about baselines and GCN, and a claim about DeepWalk not being deep learning, that the evidence does not contain or partly contradicts.",
+  "judge_model": "claude-sonnet-5-5"
+}

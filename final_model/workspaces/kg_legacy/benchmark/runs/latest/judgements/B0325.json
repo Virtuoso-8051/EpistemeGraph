@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Spectral methods such as Laplacian eigenmaps or matrix factorization appear in the node2vec paper only as related-work baselines and comparison points (the evidence shows spectral clustering as an experimental benchmark, not Laplacian eigenmaps in related work; the 'only' claim is not verifiable from the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and accurately describes node2vec's biased random walks plus skip-gram, which is standard background, and the Wikipedia word co-occurrence network with POS tags matches the evidence. The one slightly off claim is that spectral methods appear 'only' as related-work baselines, whereas the evidence shows spectral clustering as an experimental benchmark and does not mention Laplacian eigenmaps in related work.",
+  "judge_model": "claude-sonnet-5-5"
+}

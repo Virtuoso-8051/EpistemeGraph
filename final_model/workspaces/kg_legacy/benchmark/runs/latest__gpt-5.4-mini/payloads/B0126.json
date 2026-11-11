@@ -1,0 +1,74 @@
+{
+    "user_query": "Compare the types of network properties emphasized by DeepWalk and LINE: which method is presented as exploiting missing information well, and which method explicitly models both observed ties and shared-neighborhood similarity?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk is the method presented as exploiting missing information well, while LINE is the method that explicitly models both observed ties (first-order proximity) and shared-neighborhood similarity (second-order proximity).",
+    "llm_self_reported_accuracy": 0.98,
+    "llm_confidence_reasoning": "This matches the standard descriptions of the two methods in the network embedding literature, and the distinction is explicit and well-established.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "LINE",
+        "first-order proximity",
+        "second-order proximity"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "LINE",
+        "first-order proximity",
+        "second-order proximity",
+        "missing information"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "missing information",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "first-order proximity",
+            "type": "MODELS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "second-order proximity",
+            "type": "MODELS",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Compare the types of network properties emphasized by DeepWalk and LINE: which method is presented as exploiting missing information well, and which method explicitly models both observed ties and shared-neighborhood similarity?",
+        "llm_response": "DeepWalk is the method presented as exploiting missing information well, while LINE is the method that explicitly models both observed ties (first-order proximity) and shared-neighborhood similarity (second-order proximity).",
+        "llm_extraction_confidence": 0.98,
+        "llm_confidence_reasoning": "This matches the standard descriptions of the two methods in the network embedding literature, and the distinction is explicit and well-established.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1220.6,
+            "prompt_tokens": 126,
+            "completion_tokens": 83
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1253.3,
+            "prompt_tokens": 673,
+            "completion_tokens": 120
+        },
+        "asserted_claim_count": 3,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.0963339867529931,
+        "query_entities": [
+            "DEEPWALK",
+            "LINE",
+            "first-order proximity",
+            "second-order proximity"
+        ]
+    }
+}

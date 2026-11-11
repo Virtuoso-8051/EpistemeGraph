@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "DeepWalk kept its advantage even with as little as about 1% of nodes labeled on BlogCatalog",
+    "the roughly 5% level at which some competitors need to match DeepWalk",
+    "roughly 4-5 times less labeled data than competitors require"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence states DeepWalk can outperform competitors with 60% less training data and shows improvements of 5%-10% MicroF1 in label-sparse settings, but it does not mention a 1% labeled-node regime or a 5% competitor threshold. The answer's core quantitative claim (roughly 4-5x less data) therefore contradicts the source's 60% figure and is not supported by the provided text.",
+  "judge_model": "claude-haiku-5-5"
+}

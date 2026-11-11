@@ -1,0 +1,68 @@
+{
+  "answer": "I can't reliably identify the specific study this question refers to, so I can't give its exact findings. The general pattern in this literature is that parallel DeepWalk (typically Hogwild-style asynchronous SGD on skip-gram, with walks generated in parallel) preserves predictive performance, such as node-classification Micro/Macro-F1, when the graph is large and sparse, so that concurrent updates to embedding vectors rarely conflict, and when the learning rate and number of epochs are kept fixed. Speedup is typically near-linear at low thread counts and then saturates because of memory bandwidth, cache contention, and lock or conflict overhead. I can't confirm the exact speedup figures for BlogCatalog and Flickr, so please check the source paper for those numbers.",
+  "confidence": 0.2,
+  "confidence_reasoning": "The answer describes general, plausible patterns for parallel skip-gram embedding methods, but I could not recall the specific paper or its reported BlogCatalog and Flickr results, so the particular claims are uncertain.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "node classification Micro/Macro-F1",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Hogwild-style asynchronous SGD",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large sparse graph",
+      "target": "rare conflicts between concurrent embedding update",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "learning rate",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "fixed number of epoch",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel DeepWalk speedup",
+      "target": "near-linear at low thread count",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel DeepWalk speedup",
+      "target": "saturation at higher thread count",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "saturation of parallel DeepWalk speedup",
+      "target": "memory bandwidth limit",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "saturation of parallel DeepWalk speedup",
+      "target": "cache contention and lock or conflict overhead",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

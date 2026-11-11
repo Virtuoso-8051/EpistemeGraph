@@ -1,0 +1,10 @@
+{
+  "claims_checked": 1,
+  "unsupported_claims": [
+    "node2vec feature vectors used 128 dimensions for link prediction on Facebook, PPI, and arXiv ASTRO-PH"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is marked unanswerable from the passage, which gives dataset sizes and relative performance but no node2vec embedding dimensionality. The answer states 128 as a specific figure. The retrieved sentences mention 128 only as a default for other networks and for DeepWalk, so they do not support it for node2vec on these datasets, and the answer should have said the papers do not report it.",
+  "judge_model": "claude-sonnet-5-5"
+}

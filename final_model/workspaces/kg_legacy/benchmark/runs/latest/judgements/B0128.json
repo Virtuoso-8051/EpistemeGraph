@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "LINE's edge sampling samples edges in proportion to their weights using alias tables (not in the provided evidence)",
+    "Each sampled edge is treated as a binary training example (not in the evidence)",
+    "The cost of each update is constant regardless of network size or weight scale, so runtime depends on the number of sampled edges rather than graph structure (not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The scalability claim and the dataset sizes match the evidence, and the evidence also says edge sampling addresses SGD's limitation (diverging edge weights). The specific mechanism details (alias tables, binary edges, constant per-update cost) are not in the evidence, though they are plausibly accurate from the LINE paper itself.",
+  "judge_model": "claude-sonnet-5-5"
+}

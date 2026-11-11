@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "First-order proximity neighbors are semantically related (only semantic/topical), accepting the false premise; the source says first-order returns a mixture of syntactic and semantic words.",
+    "Second-order proximity neighbors mix syntactically substitutable and semantically related words; the source says second-order returns all semantically related words.",
+    "Attribution to Levy and Goldberg (2014) and word2vec/skip-gram context window framing is not in the evidence."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise and reverses the source's findings: the paper says second-order proximity returns semantically related words and first-order returns a mixture. Its explanation therefore contradicts the evidence, and the added citation is not supported by it.",
+  "judge_model": "claude-sonnet-5-5"
+}

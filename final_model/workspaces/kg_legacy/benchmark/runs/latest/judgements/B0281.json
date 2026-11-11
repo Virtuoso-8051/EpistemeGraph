@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "DeepWalk has weaker Macro-F1 than EdgeCluster at 3% training ratio on Flickr (accepts false premise); the paper says DeepWalk outperforms the baselines.",
+    "DeepWalk's embeddings favor hub-centered structure and fail to separate minority-label groups, so EdgeCluster is more discriminative for small classes and gets higher Macro-F1.",
+    "EdgeCluster's edge-centric community features align better with group structure, giving it higher Macro-F1 than DeepWalk."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise and invents a mechanism for EdgeCluster beating DeepWalk in Macro-F1 on Flickr. The evidence shows DeepWalk outperforms EdgeCluster and the other baselines there, starting close to SpectralClustering in Macro-F1 and then pulling ahead. The generic point about Macro-F1 weighting classes equally is background, but it does not rescue the core claim.",
+  "judge_model": "claude-sonnet-5-5"
+}

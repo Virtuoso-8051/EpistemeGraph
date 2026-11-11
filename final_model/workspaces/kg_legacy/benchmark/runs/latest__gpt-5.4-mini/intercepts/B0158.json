@@ -1,0 +1,74 @@
+{
+  "answer": "In PASSAGE A, LINE is said to perform worse than expected because it is a first-order proximity method, so it mainly preserves direct edge relationships and does not capture the richer higher-order structure that helps on the evaluated tasks. In PASSAGE B, LINE(2nd) outperforms DeepWalk on DBLP(PaperCitation) because the paper-citation graph is a directed, weighted network where second-order proximity better preserves the asymmetric neighborhood/citation context, while DeepWalk is designed for unweighted, undirected random-walk co-occurrence and is less suited to that setting.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This answer reflects the standard explanations given for LINE\u2019s first-order limitation and LINE(2nd)\u2019s advantage on directed weighted citation graphs, but I cannot verify the exact wording of the two passages.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "direct edge relationship",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "higher-order structure",
+      "type": "DOES_NOT_CAPTURE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher-order structure",
+      "target": "evaluated task",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "PaperCitation",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PaperCitation",
+      "target": "paper-citation graph",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper-citation graph",
+      "target": "directed, weighted network",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "asymmetric neighborhood/citation context",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unweighted, undirected random-walk co-occurrence",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "less suited to that setting",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2434443529914407
+}

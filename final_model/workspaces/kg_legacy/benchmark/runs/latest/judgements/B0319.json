@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk's original paper evaluated node classification on BlogCatalog, Flickr, and YouTube, not Wikipedia page classification, and its Wikipedia experiment used a word co-occurrence network (outside the evidence)",
+    "The claim that the Wikipedia page-classification setting cannot be verified and that later cross-paper comparisons give mixed results contradicts the evidence, which directly reports Wikipedia page classification results (Table 3)",
+    "The answer does not state that the graph factorization outperforms DeepWalk, and that LINE(2nd) is slightly better than the graph factorization, which the evidence reports",
+    "The answer says LINE's edge sampling is for weighted graphs, which is only loosely supported; the evidence says only that edge sampling performs much better than direct SGD"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer rejects the false premise and correctly notes that edge sampling does not remove the need for weighted edges. However, it relies on outside claims about DeepWalk's original experiments and wrongly says the Wikipedia page-classification setting cannot be verified, when the evidence directly reports those results and the correction that graph factorization outperforms DeepWalk because DeepWalk ignores edge weights.",
+  "judge_model": "claude-sonnet-5-5"
+}

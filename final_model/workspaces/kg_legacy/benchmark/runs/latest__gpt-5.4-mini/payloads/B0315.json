@@ -1,0 +1,120 @@
+{
+    "user_query": "What explains DeepWalk's 23.8% Macro-F1 gain over node2vec on the PPI network when node2vec uses the uniform setting (p = 1, q = 1)?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk\u2019s advantage in that comparison is not because node2vec is inherently worse, but because the PPI network is a highly multi-label, densely connected graph where the simple unbiased random walks used by DeepWalk can be a better fit than node2vec\u2019s second-order walk bias when node2vec is run in the uniform setting (p = 1, q = 1). In the reported results, DeepWalk achieves a 23.8% higher Macro-F1 than node2vec under that setting, which is typically explained as a dataset-specific effect: the PPI graph\u2019s structure and label distribution make DeepWalk\u2019s embeddings more effective for the downstream multi-label classification task in that experiment.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This is a high-level interpretation consistent with the reported benchmark result, but the exact causal explanation is somewhat inferential rather than directly stated in the question.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "NODE2VEC",
+        "PPI network",
+        "MACRO-F1",
+        "biased random walk procedure",
+        "unbiased random walk procedure",
+        "multi-label classification"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "NODE2VEC",
+        "PPI network",
+        "MACRO-F1",
+        "biased random walk procedure",
+        "unbiased random walk procedure",
+        "multi-label classification",
+        "dense graph",
+        "uniform setting"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "PPI network",
+            "target": "multi-label classification",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "PPI network",
+            "target": "dense graph",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "unbiased random walk procedure",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "biased random walk procedure",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "uniform setting",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "NODE2VEC",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "MACRO-F1",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "NODE2VEC",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "multi-label classification",
+            "type": "WORKS_WELL_FOR",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What explains DeepWalk's 23.8% Macro-F1 gain over node2vec on the PPI network when node2vec uses the uniform setting (p = 1, q = 1)?",
+        "llm_response": "DeepWalk\u2019s advantage in that comparison is not because node2vec is inherently worse, but because the PPI network is a highly multi-label, densely connected graph where the simple unbiased random walks used by DeepWalk can be a better fit than node2vec\u2019s second-order walk bias when node2vec is run in the uniform setting (p = 1, q = 1). In the reported results, DeepWalk achieves a 23.8% higher Macro-F1 than node2vec under that setting, which is typically explained as a dataset-specific effect: the PPI graph\u2019s structure and label distribution make DeepWalk\u2019s embeddings more effective for the downstream multi-label classification task in that experiment.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This is a high-level interpretation consistent with the reported benchmark result, but the exact causal explanation is somewhat inferential rather than directly stated in the question.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2505.5,
+            "prompt_tokens": 131,
+            "completion_tokens": 190
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 4122.7,
+            "prompt_tokens": 798,
+            "completion_tokens": 322
+        },
+        "asserted_claim_count": 9,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.2798398266667905,
+        "query_entities": [
+            "DEEPWALK",
+            "NODE2VEC",
+            "PPI network",
+            "MACRO-F1",
+            "biased random walk procedure",
+            "unbiased random walk procedure",
+            "multi-label classification"
+        ]
+    }
+}

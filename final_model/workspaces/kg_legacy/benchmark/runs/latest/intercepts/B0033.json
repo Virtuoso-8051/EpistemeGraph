@@ -1,0 +1,74 @@
+{
+  "answer": "The passage itself was not included, so this answer is based on the general account of node2vec (Grover & Leskovec, 2016). It likely claims node2vec generalizes prior work because its sampling framework reduces to earlier methods under particular settings. DeepWalk is the special case with uniform random walks (return parameter p = 1 and in-out parameter q = 1), and LINE corresponds to a neighborhood limited to immediate neighbors. The limitation it addresses is the rigidity of earlier feature learning approaches. DeepWalk's uniform random walks offer no way to tune the neighborhood exploration, so they cannot flexibly balance homophily (community-like, DFS-style exploration) with structural equivalence (role-like, BFS-style exploration). Node2vec's biased second-order random walks, controlled by p and q, let it interpolate between these two notions. If the passage makes a different claim, the answer would change accordingly.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The passage was not provided, so I am inferring its claims from my general knowledge of node2vec, which is likely but not certain to match what it says.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "DEEPWALK",
+      "type": "GENERALIZES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "special case of node2vec with uniform random walk",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "uniform random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "return parameter p = 1 and in-out parameter q = 1",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "special case of node2vec limited to immediate neighbor",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "uniform random walk offers no way to tune neighborhood exploration",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased second-order random walk",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC PARAMETER",
+      "target": "return parameter p and in-out parameter q",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "homophily",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "structural equivalence",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "interpolation between homophily and structural equivalence",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

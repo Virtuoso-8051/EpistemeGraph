@@ -1,0 +1,56 @@
+{
+  "answer": "node2vec extends feature learning methods by learning low-dimensional vector representations not only for nodes, but also for edges and entire graphs. The prediction tasks mentioned are link prediction and node classification, and the broader idea is that these learned features can support prediction tasks beyond just node-level ones.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This matches the standard description of node2vec and the tasks explicitly associated with it in the literature, though wording can vary slightly by source.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "feature learning method",
+      "type": "EXTENDS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "low-dimensional vector representation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional vector representation",
+      "target": "NODES",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional vector representation",
+      "target": "EDGES",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional vector representation",
+      "target": "entire graph",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "link prediction",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node classification",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned feature",
+      "target": "prediction tasks beyond node-level ones",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.26308779813805405
+}

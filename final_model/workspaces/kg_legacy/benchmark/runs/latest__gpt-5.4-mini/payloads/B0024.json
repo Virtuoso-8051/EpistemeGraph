@@ -1,0 +1,140 @@
+{
+    "user_query": "Why is DeepWalk described as suitable for real-world applications such as network classification and anomaly detection?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk is described as suitable for real-world applications because it learns useful low-dimensional node representations directly from graph structure using truncated random walks, without requiring expensive feature engineering or full graph processing. This makes it scalable, efficient, and able to capture local and community-based relationships in large networks. Those learned embeddings can then be used as input to standard machine-learning methods for tasks like network classification and anomaly detection, where nodes or subgraphs with similar structural roles tend to have similar vectors and unusual nodes can stand out as outliers.",
+    "llm_self_reported_accuracy": 0.92,
+    "llm_confidence_reasoning": "This explanation matches the standard description of DeepWalk\u2019s purpose and properties, though exact wording can vary across sources.",
+    "extracted_query_entities": [
+        "DEEPWALK"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "truncated random walk",
+        "low-dimensional node representation",
+        "graph structure",
+        "expensive feature engineering",
+        "full graph processing",
+        "scalability",
+        "efficiency",
+        "local and community-based relationship",
+        "learned embedding",
+        "standard machine-learning method",
+        "network classification",
+        "anomaly detection",
+        "nodes or subgraphs with similar structural role",
+        "similar vector",
+        "unusual node",
+        "OUTLIERS"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "truncated random walk",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "low-dimensional node representation",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "graph structure",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "expensive feature engineering",
+            "type": "REQUIRES",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "full graph processing",
+            "type": "REQUIRES",
+            "claim_type": "REFUTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "scalability",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "efficiency",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "local and community-based relationship",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "learned embedding",
+            "target": "standard machine-learning method",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "learned embedding",
+            "target": "network classification",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "learned embedding",
+            "target": "anomaly detection",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "nodes or subgraphs with similar structural role",
+            "target": "similar vector",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "unusual node",
+            "target": "OUTLIERS",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why is DeepWalk described as suitable for real-world applications such as network classification and anomaly detection?",
+        "llm_response": "DeepWalk is described as suitable for real-world applications because it learns useful low-dimensional node representations directly from graph structure using truncated random walks, without requiring expensive feature engineering or full graph processing. This makes it scalable, efficient, and able to capture local and community-based relationships in large networks. Those learned embeddings can then be used as input to standard machine-learning methods for tasks like network classification and anomaly detection, where nodes or subgraphs with similar structural roles tend to have similar vectors and unusual nodes can stand out as outliers.",
+        "llm_extraction_confidence": 0.92,
+        "llm_confidence_reasoning": "This explanation matches the standard description of DeepWalk\u2019s purpose and properties, though exact wording can vary across sources.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2232.1,
+            "prompt_tokens": 108,
+            "completion_tokens": 146
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2289.8,
+            "prompt_tokens": 732,
+            "completion_tokens": 407
+        },
+        "asserted_claim_count": 11,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 2,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.21997637067522322,
+        "query_entities": [
+            "DEEPWALK"
+        ]
+    }
+}

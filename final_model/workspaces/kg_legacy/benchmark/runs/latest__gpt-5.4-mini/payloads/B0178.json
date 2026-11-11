@@ -1,0 +1,58 @@
+{
+    "user_query": "In node2vec, what exact value of the return parameter p did the authors find to be optimal on their largest benchmark graph?",
+    "mode": "closed_book",
+    "llm_response": "In the node2vec paper, the authors report that the optimal return parameter on their largest benchmark graph was p = 1.0.",
+    "llm_self_reported_accuracy": 0.86,
+    "llm_confidence_reasoning": "This matches the paper\u2019s reported best setting for the largest benchmark graph, though I cannot verify the exact benchmark name from memory alone.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "return parameter",
+        "largest benchmark graph"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "return parameter",
+        "largest benchmark graph"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "return parameter",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "In node2vec, what exact value of the return parameter p did the authors find to be optimal on their largest benchmark graph?",
+        "llm_response": "In the node2vec paper, the authors report that the optimal return parameter on their largest benchmark graph was p = 1.0.",
+        "llm_extraction_confidence": 0.86,
+        "llm_confidence_reasoning": "This matches the paper\u2019s reported best setting for the largest benchmark graph, though I cannot verify the exact benchmark name from memory alone.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1478.2,
+            "prompt_tokens": 115,
+            "completion_tokens": 74
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1129.5,
+            "prompt_tokens": 636,
+            "completion_tokens": 63
+        },
+        "asserted_claim_count": 1,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.1518837984870462,
+        "query_entities": [
+            "NODE2VEC",
+            "return parameter",
+            "largest benchmark graph"
+        ]
+    }
+}

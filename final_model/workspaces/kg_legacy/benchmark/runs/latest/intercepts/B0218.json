@@ -1,0 +1,44 @@
+{
+  "answer": "Approximately 88,234 labeled edge examples: about 44,117 true (removed) edges as positives and an equal number of sampled non-edges as negatives. The data was split 50/50 into training and test sets. I could not verify these exact figures against the paper.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The numbers are inferred from the Facebook network's standard edge count and the balanced-sampling setup I recall, not verified against the node2vec paper's text, so the exact counts and split may be wrong.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "Link Prediction",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "labeled edge example",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled edge example",
+      "target": "true removed edges as positive",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled edge example",
+      "target": "sampled non-edges as negative",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "train-test split of 50/50",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Facebook network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

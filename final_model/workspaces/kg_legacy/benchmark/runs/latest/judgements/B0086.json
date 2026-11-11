@@ -1,0 +1,12 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The embeddings can feed standard statistical learners such as logistic regression for classification (not stated in the evidence)",
+    "It learns from graph structure alone with no labels needed (not explicitly stated in the evidence)",
+    "The method encodes community structure and homophily-like regularities (not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported by the evidence: DeepWalk builds robust representations suited to statistical modeling, learns from short random walks, and walk frequencies follow a power law like word frequencies. Several details are not in the provided evidence, namely logistic regression, community/homophily regularities, and the 'no labels needed' claim. Some of these are plausible background rather than contradicted claims.",
+  "judge_model": "claude-sonnet-5-5"
+}

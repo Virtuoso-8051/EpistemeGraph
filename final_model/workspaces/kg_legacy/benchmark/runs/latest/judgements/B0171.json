@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Training is not organized in epochs; each objective is optimized for a fixed total number of sampled edges (on the order of billions for large networks) - the evidence does not describe the number of samples or the absence of epochs."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported by the evidence: there is no switching, the models are trained separately, and their embeddings are concatenated. However, the specifics about the training schedule (a fixed total number of sampled edges, on the order of billions, and no epochs) are not in the provided evidence, so they count as unsupported additions.",
+  "judge_model": "claude-sonnet-5-5"
+}

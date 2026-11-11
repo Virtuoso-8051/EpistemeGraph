@@ -1,0 +1,162 @@
+{
+    "user_query": "Why does the passage say DeepWalk is suitable for statistical modeling of graphs, and what kind of graph regularities does it learn from?",
+    "mode": "closed_book",
+    "llm_response": "The passage says DeepWalk is suitable for statistical modeling of graphs because it turns a graph into a collection of short random-walk sequences, which makes the graph look like a corpus of \u201csentences\u201d that can be modeled with standard language-modeling ideas. In that form, it can learn latent representations from observed co-occurrence patterns rather than relying on hand-designed graph features. It learns graph regularities such as local neighborhood structure and higher-order proximity: nodes that tend to appear near each other in random walks, communities or clusters, and other structural similarities captured by repeated walk contexts.",
+    "llm_self_reported_accuracy": 0.86,
+    "llm_confidence_reasoning": "This answer matches the standard description of DeepWalk and its learned regularities, though exact wording may vary depending on the passage.",
+    "extracted_query_entities": [
+        "DEEPWALK",
+        "random walk",
+        "GRAPH",
+        "language-modeling idea",
+        "latent representation",
+        "observed co-occurrence pattern",
+        "hand-designed graph feature",
+        "local neighborhood structure",
+        "higher-order proximity",
+        "communitie",
+        "CLUSTERS",
+        "structural similaritie",
+        "repeated walk context"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "random walk",
+        "GRAPH",
+        "language-modeling idea",
+        "latent representation",
+        "observed co-occurrence pattern",
+        "hand-designed graph feature",
+        "local neighborhood structure",
+        "higher-order proximity",
+        "communitie",
+        "CLUSTERS",
+        "structural similaritie",
+        "repeated walk context",
+        "short random-walk sequence",
+        "corpus of sentence"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "random walk",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "short random-walk sequence",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "short random-walk sequence",
+            "target": "GRAPH",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "GRAPH",
+            "target": "corpus of sentence",
+            "type": "MAPS_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "corpus of sentence",
+            "target": "language-modeling idea",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "latent representation",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "latent representation",
+            "target": "observed co-occurrence pattern",
+            "type": "BASED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "local neighborhood structure",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "higher-order proximity",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "communitie",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "CLUSTERS",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "structural similaritie",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "repeated walk context",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Why does the passage say DeepWalk is suitable for statistical modeling of graphs, and what kind of graph regularities does it learn from?",
+        "llm_response": "The passage says DeepWalk is suitable for statistical modeling of graphs because it turns a graph into a collection of short random-walk sequences, which makes the graph look like a corpus of \u201csentences\u201d that can be modeled with standard language-modeling ideas. In that form, it can learn latent representations from observed co-occurrence patterns rather than relying on hand-designed graph features. It learns graph regularities such as local neighborhood structure and higher-order proximity: nodes that tend to appear near each other in random walks, communities or clusters, and other structural similarities captured by repeated walk contexts.",
+        "llm_extraction_confidence": 0.86,
+        "llm_confidence_reasoning": "This answer matches the standard description of DeepWalk and its learned regularities, though exact wording may vary depending on the passage.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2111.4,
+            "prompt_tokens": 116,
+            "completion_tokens": 161
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2626.8,
+            "prompt_tokens": 762,
+            "completion_tokens": 448
+        },
+        "asserted_claim_count": 13,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.21851580219884073,
+        "query_entities": [
+            "DEEPWALK",
+            "random walk",
+            "GRAPH",
+            "language-modeling idea",
+            "latent representation",
+            "observed co-occurrence pattern",
+            "hand-designed graph feature",
+            "local neighborhood structure",
+            "higher-order proximity",
+            "communitie",
+            "CLUSTERS",
+            "structural similaritie",
+            "repeated walk context"
+        ]
+    }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": "The premise appears to be incorrect. The node2vec paper (Grover & Leskovec, KDD 2016) does not report experiments on heterogeneous information networks, networks with explicit node or edge domain features, or signed-edge networks. Its evaluations use networks such as BlogCatalog, PPI, Wikipedia, and Facebook, mainly for multi-label node classification and link prediction on standard unlabeled or simply labeled graphs. Extensions to richer network types are discussed only as possible future work. I cannot reliably state the hardware used, and I would not want to guess at specific machine specifications.",
+  "confidence": 0.5,
+  "confidence_reasoning": "I am fairly confident the paper did not test these extensions, but my recall of the exact datasets and the absence of any hardware details is imperfect.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "heterogeneous information network",
+      "type": "EVALUATED_ON",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "networks with explicit node or edge domain feature",
+      "type": "EVALUATED_ON",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "signed-edge network",
+      "type": "EVALUATED_ON",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "PPI",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Wikipedia",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "FACEBOOK",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "Node Classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "link prediction",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "richer network type",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

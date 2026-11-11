@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The first-order and second-order proximity details (edge-based objective, neighbor-sharing nodes having similar embeddings) are not in the provided evidence, though they are accurate background about LINE.",
+    "On Cora and Citeseer LINE is competitive with DeepWalk-style methods but typically below GCN; the evidence does not mention these datasets or comparisons.",
+    "LINE's classification accuracy comes from training a separate classifier such as logistic regression on learned vectors; the evidence does not say this.",
+    "The original paper's main claims concern scalability rather than a specific accuracy gain on citation networks; the evidence only partly supports this."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, consistent with the abstract's statement that LINE preserves both local and global structure. However, it adds several specifics, such as Cora/Citeseer results and comparisons with GCN, that the provided evidence does not contain.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,10 @@
+{
+  "claims_checked": 1,
+  "unsupported_claims": [
+    "The answer states 128 dimensions for node2vec on Facebook, PPI, and arXiv ASTRO-PH, but the evidence does not state the embedding dimensionality used for node2vec in the link prediction experiments; the only 128 references are a generic 'default' dimension for other networks and a DeepWalk setting."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is not answerable from the provided passages, which give dataset sizes and AUC results but no node2vec embedding dimension for link prediction. The answer's '128' is inferred from a generic default and a DeepWalk setting, so attributing it to node2vec on these datasets is unsupported.",
+  "judge_model": "claude-haiku-5-5"
+}

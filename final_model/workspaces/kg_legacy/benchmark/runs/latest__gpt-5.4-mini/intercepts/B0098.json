@@ -1,0 +1,62 @@
+{
+  "answer": "LINE-SGD and LINE both learn node embeddings from graph edges, but they use edge weights differently during optimization. In LINE, an edge\u2019s weight is treated as a frequency/probability signal: heavier edges are sampled more often, so they influence training indirectly through the sampling distribution. In LINE-SGD, the edge weight is used directly in the gradient update as a multiplicative importance factor, so each sampled edge contributes proportionally to its weight during optimization rather than only being reflected in how often it is sampled.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard distinction between weighted edge sampling in LINE and weight-scaled stochastic gradient updates in LINE-SGD, though exact implementation details can vary by description.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "edge weight",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weight",
+      "target": "frequency/probability signal",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "heavier edge",
+      "target": "sampling distribution",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "heavier edge",
+      "target": "TRAINING",
+      "type": "INFLUENCES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "target": "edge weight",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weight",
+      "target": "gradient update",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weight",
+      "target": "multiplicative importance factor",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each sampled edge",
+      "target": "optimization",
+      "type": "CONTRIBUTES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each sampled edge",
+      "target": "edge weight",
+      "type": "CONTRIBUTES_PROPORTIONALLY_TO",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.20559328955573006
+}

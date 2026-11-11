@@ -1,0 +1,13 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI claims the passages were not included in the message, which is false: the passages (DOC_002 and DOC_003 content) are provided in the evidence, so the AI failed to answer an answerable question.",
+    "The AI says the likely shared problem is softmax normalization cost over nodes or vocabulary, but then declines to answer rather than grounding it in the papers; the claim that remedies include hierarchical softmax and noise-contrastive estimation is not stated in the evidence for these papers.",
+    "The AI's suggestion that the passages are 'skin-of-the-text descriptions' is an unsupported characterization of the source material.",
+    "The AI does not identify the papers' specific approaches (negative sampling for the partition function in PASSAGE A; relaxed one-word-predicts-context prediction in PASSAGE B), which the evidence states."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The AI wrongly claims the passages were missing when the evidence contains both, and it therefore gives no grounded answer about the shared intractability of the likelihood objective. The core of the answer (the passages' methods and how each addresses the problem) is absent and the few generalities offered are not tied to the papers' content.",
+  "judge_model": "claude-haiku-5-5"
+}

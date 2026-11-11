@@ -1,0 +1,173 @@
+{
+    "user_query": "How does graph factorization differ from LINE in terms of the network properties each method preserves?",
+    "mode": "closed_book",
+    "llm_response": "Graph factorization and LINE both learn low-dimensional node embeddings, but they preserve different network properties. Graph factorization methods typically factorize a graph adjacency or similarity matrix, so they aim to preserve the overall pairwise proximity structure encoded by edge weights or similarities, often emphasizing first-order relationships in a single matrix. LINE, by contrast, is designed to explicitly preserve two kinds of network proximity: first-order proximity, which captures direct edge connections, and second-order proximity, which captures similarity of neighborhood distributions for nodes that may not be directly connected. In short, graph factorization focuses on reconstructing the graph matrix, while LINE separately models local edge strength and shared neighborhood context.",
+    "llm_self_reported_accuracy": 0.92,
+    "llm_confidence_reasoning": "This is a standard distinction in network embedding literature, though exact formulations vary across specific graph factorization variants.",
+    "extracted_query_entities": [
+        "graph factorization",
+        "LINE",
+        "node embedding",
+        "graph adjacency matrix",
+        "similarity matrix",
+        "pairwise proximity structure",
+        "edge weight",
+        "first-order relationship",
+        "first-order proximity",
+        "second-order proximity",
+        "neighborhood distribution",
+        "local edge strength",
+        "shared neighborhood context"
+    ],
+    "extracted_response_entities": [
+        "graph factorization",
+        "LINE",
+        "node embedding",
+        "graph adjacency matrix",
+        "similarity matrix",
+        "pairwise proximity structure",
+        "edge weight",
+        "first-order relationship",
+        "first-order proximity",
+        "second-order proximity",
+        "neighborhood distribution",
+        "local edge strength",
+        "shared neighborhood context",
+        "direct edge connection"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "graph factorization",
+            "target": "node embedding",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "node embedding",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "pairwise proximity structure",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "pairwise proximity structure",
+            "target": "edge weight",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "pairwise proximity structure",
+            "target": "similarity matrix",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "first-order relationship",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "first-order proximity",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "first-order proximity",
+            "target": "direct edge connection",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "second-order proximity",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "second-order proximity",
+            "target": "neighborhood distribution",
+            "type": "DEFINED_AS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "graph adjacency matrix",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "similarity matrix",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "graph factorization",
+            "target": "graph adjacency matrix",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "local edge strength",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "LINE",
+            "target": "shared neighborhood context",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does graph factorization differ from LINE in terms of the network properties each method preserves?",
+        "llm_response": "Graph factorization and LINE both learn low-dimensional node embeddings, but they preserve different network properties. Graph factorization methods typically factorize a graph adjacency or similarity matrix, so they aim to preserve the overall pairwise proximity structure encoded by edge weights or similarities, often emphasizing first-order relationships in a single matrix. LINE, by contrast, is designed to explicitly preserve two kinds of network proximity: first-order proximity, which captures direct edge connections, and second-order proximity, which captures similarity of neighborhood distributions for nodes that may not be directly connected. In short, graph factorization focuses on reconstructing the graph matrix, while LINE separately models local edge strength and shared neighborhood context.",
+        "llm_extraction_confidence": 0.92,
+        "llm_confidence_reasoning": "This is a standard distinction in network embedding literature, though exact formulations vary across specific graph factorization variants.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1965.9,
+            "prompt_tokens": 107,
+            "completion_tokens": 174
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2681.6,
+            "prompt_tokens": 766,
+            "completion_tokens": 491
+        },
+        "asserted_claim_count": 15,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.20137954893566312,
+        "query_entities": [
+            "graph factorization",
+            "LINE",
+            "node embedding",
+            "graph adjacency matrix",
+            "similarity matrix",
+            "pairwise proximity structure",
+            "edge weight",
+            "first-order relationship",
+            "first-order proximity",
+            "second-order proximity",
+            "neighborhood distribution",
+            "local edge strength",
+            "shared neighborhood context"
+        ]
+    }
+}

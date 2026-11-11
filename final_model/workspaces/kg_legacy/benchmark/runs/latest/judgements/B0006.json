@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Second-order proximity is \"specifically designed for directed graphs\" - the evidence only says it is applicable to both directed and undirected graphs, and treats undirected edges as two directed edges.",
+    "Second-order proximity is used when first-order proximity is sparse or absent, and captures similarity \"even if they are not directly linked\" - this motivation is not in the provided evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: applicable to both directed and undirected graphs, and vertices with shared neighbors or similar context distributions are similar, with separate context embeddings. The \"specifically designed for directed graphs\" framing and the sparse-first-order motivation go beyond the evidence.",
+  "unsupported_claims_note": "See unsupported_claims list.",
+  "judge_model": "claude-sonnet-5-5"
+}

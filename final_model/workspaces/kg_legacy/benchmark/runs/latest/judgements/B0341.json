@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE(2nd) beats LINE(1st) on social network classification (e.g., Flickr and YouTube)",
+    "For these datasets, neighborhood-overlap information carries more useful signal than direct adjacency",
+    "Second-order proximity explanation: shared-neighbor similarity explains LINE(2nd)'s advantage on social networks"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise and asserts that LINE(2nd) beats LINE(1st) on social networks (Flickr, YouTube). The paper reports the opposite: LINE(1st) is slightly better, because first-order proximity (strong ties) matters more and sparsity makes second-order proximity inaccurate. Only the closing remark that the two proximities are complementary is supported.",
+  "judge_model": "claude-sonnet-5-5"
+}

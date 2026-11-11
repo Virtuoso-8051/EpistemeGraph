@@ -1,0 +1,62 @@
+{
+  "answer": "The premise is incorrect, so the experiments provide no such evidence. In Grover and Leskovec's 2016 node2vec paper, the link prediction (edge-based) experiments were run on real-world networks: a Facebook social network, a protein-protein interaction (PPI) network from the Stanford/BioGRID data, and arXiv collaboration networks (ASTRO-PH and HEP-PH). The edge feature operators (average, Hadamard, weighted-L1, weighted-L2) were evaluated on these graphs. Their node classification experiments also used real datasets, including BlogCatalog, Wikipedia word co-occurrence, and PPI. Synthetic data appears only in the paper's illustrative analyses, not as the basis for the reported edge prediction benchmarks.",
+  "confidence": 0.85,
+  "confidence_reasoning": "I am fairly confident of the datasets used in node2vec's link prediction experiments (Facebook, PPI, arXiv collaboration networks), though I am recalling them from memory without checking the paper.",
+  "triples": [
+    {
+      "source": "Link Prediction",
+      "target": "Facebook social network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "protein-protein interaction (PPI) network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "target": "arXiv collaboration network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "average, Hadamard, weighted-L1, weighted-L2",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification",
+      "target": "Wikipedia word co-occurrence",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification",
+      "target": "protein-protein interaction (PPI) network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "synthetic data",
+      "type": "EVALUATED_ON",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "synthetic data",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

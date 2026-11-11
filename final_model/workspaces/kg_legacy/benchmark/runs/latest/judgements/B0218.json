@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Approximately 88,234 labeled edge examples in total (the paper does not report the number of labeled examples; 88,234 is the original edge count)",
+    "About 44,117 positive examples and an equal number of negatives (derived from the 50% removal, but the paper does not state these counts)",
+    "The data was split 50/50 into training and test sets (the paper gives no train-test split in the evidence)"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence gives only the network size (4,039 nodes, 88,234 edges) and the 50% edge removal with equal negative sampling. It reports no example count or train-test split, and the answer invents these specifics instead of saying they are unreported; the closing hedge does not fix this.",
+  "judge_model": "claude-sonnet-5-5"
+}

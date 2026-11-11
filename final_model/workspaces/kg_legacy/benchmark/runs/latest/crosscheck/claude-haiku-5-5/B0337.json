@@ -1,0 +1,11 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The answer claims node2vec is unsupervised and uses no class labels in training, which the evidence does not state (the evidence describes node2vec as semisupervised in the sense of learning parameters with little labeled data, and the Table 2 setup uses labeled nodes for training a classifier).",
+    "The answer's claim that the return parameter p and in-out parameter q interpolate between breadth-first (structural equivalence) and depth-first (homophily) sampling is not contained in the provided evidence excerpts, though it is a known node2vec property from the full paper."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly describes the objective as maximizing log Pr(N_S(u) | f(u)) with softmax approximated by negative sampling, which matches the evidence. However, it overstates by calling node2vec 'unsupervised with no labels' and adds p/q interpretation details not present in the provided excerpts.",
+  "judge_model": "claude-haiku-5-5"
+}

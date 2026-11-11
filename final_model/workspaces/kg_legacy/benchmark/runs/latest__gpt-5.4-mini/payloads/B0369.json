@@ -1,0 +1,118 @@
+{
+    "user_query": "How does node2vec's supervised training objective help it infer the right exploration degree for feature learning across the networks?",
+    "mode": "closed_book",
+    "llm_response": "Node2vec\u2019s supervised training objective helps it learn the exploration degree indirectly by treating the walk parameters as learnable choices that are judged by downstream prediction performance. In practice, node2vec generates random walks with two key biases: a return parameter p and an in-out parameter q. These control whether walks stay close to the source node or explore farther away. When the embeddings are trained in a supervised or task-driven setting, the model can be evaluated on how well the resulting features support the target labels or prediction task. That feedback tells the method which balance of local versus broader neighborhood exploration produces the most useful representations for the network at hand. So, instead of fixing a single exploration depth manually, node2vec uses the supervised objective to favor the walk bias that best captures the structural patterns relevant to the task, effectively inferring the right exploration degree for feature learning across different graphs.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "The core idea is correct, but node2vec is primarily an unsupervised embedding method and the exact phrasing about a supervised objective learning p and q directly is somewhat interpretive rather than literal.",
+    "extracted_query_entities": [
+        "NODE2VEC"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "supervised training objective",
+        "random walk",
+        "return parameter p",
+        "in-out parameter q",
+        "stay close to the source node",
+        "explore farther away",
+        "downstream prediction performance",
+        "embedding",
+        "supervised or task-driven setting",
+        "supervised objective",
+        "walk bias",
+        "best captures the structural patterns relevant to the task"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "supervised training objective",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "random walk",
+            "type": "GENERATES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random walk",
+            "target": "return parameter p",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random walk",
+            "target": "in-out parameter q",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "return parameter p",
+            "target": "stay close to the source node",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "in-out parameter q",
+            "target": "explore farther away",
+            "type": "ENABLES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "NODE2VEC",
+            "target": "downstream prediction performance",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "embedding",
+            "target": "supervised or task-driven setting",
+            "type": "USES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "supervised objective",
+            "target": "walk bias",
+            "type": "PRESERVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "walk bias",
+            "target": "best captures the structural patterns relevant to the task",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "How does node2vec's supervised training objective help it infer the right exploration degree for feature learning across the networks?",
+        "llm_response": "Node2vec\u2019s supervised training objective helps it learn the exploration degree indirectly by treating the walk parameters as learnable choices that are judged by downstream prediction performance. In practice, node2vec generates random walks with two key biases: a return parameter p and an in-out parameter q. These control whether walks stay close to the source node or explore farther away. When the embeddings are trained in a supervised or task-driven setting, the model can be evaluated on how well the resulting features support the target labels or prediction task. That feedback tells the method which balance of local versus broader neighborhood exploration produces the most useful representations for the network at hand. So, instead of fixing a single exploration depth manually, node2vec uses the supervised objective to favor the walk bias that best captures the structural patterns relevant to the task, effectively inferring the right exploration degree for feature learning across different graphs.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "The core idea is correct, but node2vec is primarily an unsupervised embedding method and the exact phrasing about a supervised objective learning p and q directly is somewhat interpretive rather than literal.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 3077.9,
+            "prompt_tokens": 112,
+            "completion_tokens": 235
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 5650.9,
+            "prompt_tokens": 830,
+            "completion_tokens": 330
+        },
+        "asserted_claim_count": 10,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.27091930006268766,
+        "query_entities": [
+            "NODE2VEC"
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "DeepWalk can still build a Hierarchical Softmax tree as long as the graph is being processed in a way that allows the vocabulary/tree to be updated incrementally rather than requiring a full rebuild from scratch.",
+    "In practice, this means the method can continue using hierarchical softmax when new vertices arrive and the model can extend the tree to include them.",
+    "New vertices are handled by inserting them into the existing structure and assigning them a place in the tree, so the tree grows to accommodate the new nodes instead of discarding the old one and rebuilding everything."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The paper only says that if |V| is known or bounded, the Hierarchical Softmax tree can be built for the maximum value and vertices assigned to remaining leaves when first seen. The answer adds unsupported details about incremental tree updates and insertion into an existing structure, which are not stated in the source.",
+  "judge_model": "gpt-5.4-mini"
+}

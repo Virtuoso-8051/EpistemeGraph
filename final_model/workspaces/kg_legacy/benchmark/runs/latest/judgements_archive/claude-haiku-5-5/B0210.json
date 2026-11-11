@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI says node2vec tunes p and q on held-out validation data rather than by 10-fold cross-validation. The evidence states that the best in-out and return hyperparameters were learned using 10-fold cross-validation on 10% labeled data, which contradicts this."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give the exact seed-averaged macro-F1 values, which the papers do not report, and its claims about Micro/Macro-F1 reporting and the labeled-fraction settings are supported. However, it wrongly says the paper tunes p and q without 10-fold cross-validation, when the evidence explicitly describes 10-fold cross-validation.",
+  "judge_model": "claude-haiku-5-5"
+}

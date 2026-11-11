@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The 8-worker asynchronous version differed from serial DeepWalk by well under one percentage point.",
+    "The difference was measured as node-classification Micro-F1 (or Macro-F1), presented as the most likely reported result."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence says only that there was no loss of predictive performance, with no numeric difference or named metric. The answer correctly says it cannot give the exact figure and that its specifics are unverified guesses, but it still offers a specific magnitude (under one percentage point) and metric (Micro-F1/Macro-F1) that the evidence does not contain. The parity claim itself is supported.",
+  "judge_model": "claude-sonnet-5-5"
+}

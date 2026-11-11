@@ -1,0 +1,80 @@
+{
+  "answer": "The premise is mistaken. DeepWalk does not use a lock on shared parameters. As described by Perozzi, Al-Rfou and Skiena (2014), it trains Skip-gram with hierarchical softmax using multiple workers that perform asynchronous, lock-free SGD on the shared embedding matrices, in the style of Hogwild!. Its avoidance of the sparse-update problem comes from that lock-free design, not from locking. Each training step (a walk's context window) touches only a few embedding rows, so concurrent workers rarely write to the same parameters at once. Those occasional overwrites are benign noise that SGD tolerates, and skipping locks avoids the serialization and contention that locking would cause.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am fairly confident DeepWalk uses lock-free asynchronous SGD in the Hogwild style, but I am reciting the paper's implementation details from memory and could be slightly off on specifics.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "lock on shared parameter",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "lock-free SGD",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "lock-free SGD",
+      "target": "HOGWILD!",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "lock-free SGD",
+      "target": "shared embedding matrice",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "lock-free SGD",
+      "target": "avoidance of sparse-update problem",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training step",
+      "target": "walk context window",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training step",
+      "target": "few embedding rows",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "concurrent worker",
+      "target": "same parameter",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "overwrite",
+      "target": "benign noise",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LOCKING",
+      "target": "serialization and contention",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

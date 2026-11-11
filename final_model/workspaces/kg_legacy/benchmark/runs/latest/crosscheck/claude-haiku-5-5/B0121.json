@@ -1,0 +1,11 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "LINE trains the first-order and second-order objectives separately and concatenates the results (not in the provided evidence excerpts)",
+    "LINE handles weighted edges via edge sampling rather than random walks (not stated in the provided evidence excerpts)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer is supported: DeepWalk treats truncated random walks as sentences, and LINE optimizes first-order proximity from observed links plus second-order proximity from shared neighborhoods. Two implementation details about LINE (separate training with concatenation, and edge sampling for weighted edges) are not in the provided excerpts, though they may be accurate for the full LINE paper.",
+  "judge_model": "claude-haiku-5-5"
+}

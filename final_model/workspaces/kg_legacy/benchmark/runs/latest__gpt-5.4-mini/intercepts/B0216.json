@@ -1,0 +1,44 @@
+{
+  "answer": "In the reported node2vec grid search, the only tested values for the return and in-out parameters were p,q \u2208 {0.25, 0.50, 1, 2, 4}. I\u2019m not aware of any published evaluation on that same multi-label classification task that expanded the grid beyond those values, so there were no additional tested hyperparameter values and no corresponding macro-F1 results to report from that experiment.",
+  "confidence": 0.78,
+  "confidence_reasoning": "I\u2019m confident about the stated grid values, but I cannot verify any beyond them from the information available, so the claim that none were tested is based on absence of evidence rather than a directly cited result.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "multi-label classification",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "grid search",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grid search",
+      "target": "p,q \u2208 {0.25, 0.50, 1, 2, 4}",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grid search",
+      "target": "only tested values for the return and in-out parameters were p,q \u2208 {0.25, 0.50, 1, 2, 4}",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "published evaluation",
+      "target": "expanded grid beyond p,q \u2208 {0.25, 0.50, 1, 2, 4}",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "expanded grid beyond p,q \u2208 {0.25, 0.50, 1, 2, 4}",
+      "target": "Macro-F1 score",
+      "type": "GENERATES",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": 0.15926729308234322
+}

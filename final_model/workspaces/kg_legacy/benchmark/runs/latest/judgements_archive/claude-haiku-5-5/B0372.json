@@ -1,0 +1,12 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The answer states LINE uses alias tables for O(1) sampling and that training time scales linearly with the number of edges; the provided evidence does not mention alias tables or the O(1) per-edge sampling cost.",
+    "The answer states the original LINE concatenates separately learned first- and second-order embeddings in its final representation; the evidence excerpt does not state this.",
+    "The answer describes the second-order objective as minimizing a KL divergence between empirical and model conditional distributions and uses negative sampling from a degree-based distribution; these specifics are not stated in the provided evidence excerpts."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that LINE uses random walks and correctly describes the edge-sampling method and the first- and second-order proximity objectives, which the evidence supports. However, it adds several specific technical details (alias tables, O(1) cost, concatenation of embeddings, degree-based negative sampling, KL formulation) that the provided evidence does not contain.",
+  "judge_model": "claude-haiku-5-5"
+}

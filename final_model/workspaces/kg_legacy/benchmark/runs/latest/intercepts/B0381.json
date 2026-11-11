@@ -1,0 +1,68 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding, Tang et al. 2015) is designed to scale to very large networks, but its practical scalability breaks down in a few situations. First, its memory footprint: it stores two embedding matrices (first-order and second-order proximity) of size |V| x d in memory, plus the adjacency/edge list, so with millions of nodes and typical dimensions (e.g., 128 or more) the parameter matrices and graph structures can exceed the RAM of a typical single machine. Second, its training cost: it relies on edge sampling with negative sampling via asynchronous SGD, and the number of samples needed grows with the number of edges (often billions of samples for large graphs), so runtime becomes prohibitive on one CPU/machine unless multithreading and many epochs are reduced. Third, its reliance on the alias table for edge and negative sampling requires memory proportional to the number of edges and nodes, which further strains a single machine for graphs with hundreds of millions of edges. Fourth, LINE is a shallow, structure-only method, so it does not exploit node attributes and can be inefficient when the graph is dense or when many more samples are needed to converge, leading to poor quality or excessive time. In short, LINE fails to scale on a typical single machine when the graph has millions of nodes and very many edges, the embedding dimension is large, and available RAM and time are limited; distributed or disk-based/out-of-core training, or sampling-reduction and partitioning strategies, are then needed.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The general memory and sampling-cost reasoning is plausible and consistent with LINE's design, but the question's specific expected conditions are not verifiable from a single source and some details (alias tables, thresholds) are my reconstruction rather than confirmed facts.",
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "embedding of very large network",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "two embedding matrices of size |V| x d in memory",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "edge sampling with negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "asynchronous SGD",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "billions of samples for large graph",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "alias table",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias table",
+      "target": "memory proportional to number of edges and node",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "shallow structure-only method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "node attribute",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "distributed or out-of-core training",
+      "target": "scaling LINE to millions of node",
+      "type": "REQUIRED_FOR",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

@@ -1,0 +1,49 @@
+{
+  "primary_judge": "claude-sonnet-5-5",
+  "second_judge": "claude-haiku-5-5",
+  "n": 100,
+  "cohen_kappa_binary": 0.3519118600129617,
+  "cohen_kappa_3class": 0.3974769346639051,
+  "raw_agreement_binary": 0.8,
+  "supported_rate_primary": 0.21,
+  "supported_rate_second": 0.17,
+  "confusion_binary[primary x second]": [
+    [
+      71,
+      8
+    ],
+    [
+      12,
+      9
+    ]
+  ],
+  "agreement_by_category": {
+    "BORDERLINE": 0.8,
+    "CROSS_DOC": 0.9,
+    "FACTUAL": 0.9333,
+    "FALSE_PREMISE": 0.675
+  },
+  "disagreements": [
+    "B0216",
+    "B0168",
+    "B0174",
+    "B0177",
+    "B0129",
+    "B0021",
+    "B0118",
+    "B0350",
+    "B0376",
+    "B0308",
+    "B0304",
+    "B0379",
+    "B0337",
+    "B0333",
+    "B0389",
+    "B0302",
+    "B0334",
+    "B0264",
+    "B0383",
+    "B0272"
+  ],
+  "note": "Measures label reliability only; training labels come from the primary judge."
+}

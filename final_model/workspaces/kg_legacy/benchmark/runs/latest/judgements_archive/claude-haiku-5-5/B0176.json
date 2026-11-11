@@ -1,0 +1,12 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The answer states Flickr has 80,513 nodes, a figure not present in the evidence (the evidence gives 4,777 nodes for the network it describes).",
+    "The answer computes approximately 8,051 labeled nodes at 10% and attributes this to DeepWalk's Flickr experiments, which the passage does not report.",
+    "The answer presents a specific number for a question the passage explicitly cannot answer, instead of stating the papers do not report it."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is unanswerable from the provided evidence, and the answer instead invents a specific count (8,051) based on an unsupported node total of 80,513. The evidence actually gives 4,777 nodes for the Flickr network, which contradicts the answer's basis.",
+  "judge_model": "claude-haiku-5-5"
+}

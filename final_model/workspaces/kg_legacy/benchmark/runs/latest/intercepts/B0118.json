@@ -1,0 +1,44 @@
+{
+  "answer": "Performance (classification F1 on BlogCatalog) improves as the embedding dimensionality increases, with diminishing returns. Gains level off, saturating at roughly 100 dimensions (about 100 to 128), beyond which adding dimensions yields little further improvement.",
+  "confidence": 0.4,
+  "confidence_reasoning": "I am recalling the node2vec paper's dimensionality sensitivity result from memory without verifying the exact saturation point or the specific study, so the ~100-dimension figure is uncertain.",
+  "triples": [
+    {
+      "source": "classification performance",
+      "target": "embedding dimensionality",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding dimensionality",
+      "target": "diminishing return",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding dimensionality",
+      "target": "saturation at roughly 100 dimension",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "saturation at roughly 100 dimension",
+      "target": "BlogCatalog network",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "saturation at roughly 100 dimension",
+      "target": "100 to 128 dimension",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adding dimensions beyond saturation",
+      "target": "little further improvement",
+      "type": "PRESERVES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

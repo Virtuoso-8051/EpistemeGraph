@@ -1,0 +1,68 @@
+{
+  "answer": "Huffman coding is used in DeepWalk's skip-gram training with hierarchical softmax. It assigns each vertex a binary code, with frequent vertices (those that appear often in the random walks) getting short codes and paths in the tree. In a streaming setting, the true vertex frequencies are only known approximately and change over time, so the tree can be built from early-stream counts, degree-based estimates, or periodic rebuilds. It remains usable because hierarchical softmax defines a valid probability distribution for any tree shape, so an approximate or somewhat stale tree only affects efficiency, not correctness. Graph frequency distributions are typically skewed and fairly stable, so the codes stay close to optimal. The purpose is computational: it reduces the cost of each training update from O(|V|) for a full softmax to roughly O(log|V|), with the expected code length tracking the entropy of the vertex frequency distribution.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The general mechanism of Huffman-based hierarchical softmax in DeepWalk is well established, but I could not identify the specific streaming DeepWalk paper, so the streaming-specific justification is an inference.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "Huffman coding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Huffman coding",
+      "target": "binary code to vertex",
+      "type": "ASSIGNS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Huffman coding",
+      "target": "expected code length",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "expected code length",
+      "target": "entropy of vertex frequency distribution",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "tree built from early-stream count",
+      "target": "streaming setting",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "valid probability distribution",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "approximate or stale tree",
+      "target": "correctness",
+      "type": "PRESERVE",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "graph frequency distribution",
+      "target": "skewed and fairly stable",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "per-update cost from O(|V|) to O",
+      "type": "REDUCES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

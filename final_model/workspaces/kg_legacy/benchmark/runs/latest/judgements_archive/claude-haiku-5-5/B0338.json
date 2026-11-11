@@ -1,0 +1,12 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "Node2vec's embeddings can encode centrality-like quantities such as node degree and PageRank-style centrality rather than learning latent social representations (the evidence says node2vec learns latent social representations instead of computing centrality statistics; it does not say embeddings encode degree or PageRank)",
+    "The answer implicitly accepts the false premise that node2vec computes centrality-based statistics instead of learning representations",
+    "Node2vec's embeddings encode centrality-like quantities as an outcome of the method"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The source explicitly states node2vec learns latent social representations instead of computing statistics related to centrality or partitioning, so the question's premise is false. The AI answer does not correct this and instead asserts, without support in the papers, that node2vec embeddings encode degree and PageRank-style centrality, which is the core of its answer.",
+  "judge_model": "claude-haiku-5-5"
+}

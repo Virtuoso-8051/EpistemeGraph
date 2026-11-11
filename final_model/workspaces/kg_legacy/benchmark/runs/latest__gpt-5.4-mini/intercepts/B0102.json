@@ -1,0 +1,56 @@
+{
+  "answer": "They struggle to scale because their optimization typically requires expensive computations over the whole graph, such as pairwise relationships or matrix factorizations, which become costly for large networks. One additional limitation is that their objectives are often not directly aligned with preserving the network\u2019s community structure or other downstream tasks, so the learned embeddings may be less useful for those purposes.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This answer reflects the standard scalability and objective-mismatch limitations described for many linear and non-linear network embedding methods, though exact wording may vary by passage.",
+  "triples": [
+    {
+      "source": "linear dimensionality reduction method",
+      "target": "expensive computations over the whole graph",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-linear dimensionality reduction method",
+      "target": "expensive computations over the whole graph",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimization",
+      "target": "pairwise relationship",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimization",
+      "target": "matrix factorization",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "expensive computations over the whole graph",
+      "target": "large network",
+      "type": "IMPROVES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "objective",
+      "target": "network's community structure",
+      "type": "NOT_DIRECTLY_ALIGNED_WITH",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "objective",
+      "target": "downstream task",
+      "type": "NOT_DIRECTLY_ALIGNED_WITH",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned embedding",
+      "target": "less useful for those purpose",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.29262485838772956
+}

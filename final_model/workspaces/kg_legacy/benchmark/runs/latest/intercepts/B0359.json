@@ -1,0 +1,38 @@
+{
+  "answer": "The passage most likely reports that DeepWalk cannot be run in a streaming setting. Because it uses hierarchical softmax, which needs the full vertex set (for example, a Huffman tree built from vertex frequencies) before training, it is treated as infeasible or not comparable for streaming embedding, unless the vertex count is unknown. I could not see the passage, so this is inferred from the question's wording rather than quoted from it.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The question's wording strongly suggests DeepWalk was marked as not streamable, but I did not have the passage, so the exact comparison result and its phrasing are uncertain.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "hierarchical softmax",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "full vertex set",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "target": "Huffman tree",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Huffman tree",
+      "target": "vertex frequency-based tree",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "streaming embedding",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

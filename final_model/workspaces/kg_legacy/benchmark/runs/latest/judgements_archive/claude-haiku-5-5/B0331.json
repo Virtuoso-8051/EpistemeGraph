@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The AI answer says the relative weight of each dimension/view can be tuned from unlabeled data, for example via held-out edge reconstruction or link prediction, which accepts the false premise that LINE(1st+2nd) is applied to unsupervised tasks with automatic weight tuning from unlabeled data.",
+    "The claim that the dimension weighting for LINE(1st+2nd) can be tuned from unlabeled data via a structural proxy is not stated in the papers; the evidence says that in unsupervised tasks it is more difficult to set the weights, so LINE(1st+2nd) is only applied to supervised tasks."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly states that weights are found automatically only in supervised tasks and that LINE(1st+2nd) is applied only to supervised tasks because setting weights is hard without labels. The AI answer accepts the false premise and invents an unsupervised weight-tuning procedure, which the papers do not contain.",
+  "judge_model": "claude-haiku-5-5"
+}

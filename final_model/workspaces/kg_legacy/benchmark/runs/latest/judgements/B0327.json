@@ -1,0 +1,14 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Modularity tends to outperform EdgeCluster when the graph has strong assortative community structure matching labels; the evidence reports no such comparison.",
+    "Modularity tends to win with modest embedding dimensions and small-to-medium graphs; this is not in the evidence.",
+    "EdgeCluster tends to be competitive or better on very large sparse networks or where community structure is weak; the evidence does not say this (it only says EdgeCluster performs comparably to Modularity and scales to larger graphs).",
+    "EdgeCluster runs k-means on an 'edge-centric clustering' of the adjacency structure; the evidence only says k-means clusters the adjacency matrix.",
+    "The answer accepts a performance ordering and gives conditions for it, instead of saying the passage reports no such outperformance."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly describes Modularity as using top eigenvectors of the modularity matrix and EdgeCluster as using k-means. However, it goes along with the presupposed performance ordering and invents conditions for it that the evidence does not contain, only hedging them as general patterns from the literature.",
+  "judge_model": "claude-sonnet-5-5"
+}

@@ -1,0 +1,92 @@
+{
+  "answer": "node2vec does not extend collective classification with graph kernels. Instead, node2vec is a node-embedding method that learns low-dimensional vector representations of nodes by simulating biased random walks and training a skip-gram model on the resulting node sequences. Those embeddings can then be used as features in a downstream classifier, including a collective classification pipeline, but the collective classification procedure itself is not modified by node2vec. If graph kernels are used in collective classification, they are a separate family of methods that compare graph neighborhoods or substructures directly; node2vec is not one of them. So the accurate answer is that node2vec improves inference indirectly by providing better node features, not by extending collective classification with graph kernels.",
+  "confidence": 0.96,
+  "confidence_reasoning": "I am highly confident because node2vec is well-established as an embedding method rather than a graph-kernel-based collective classification extension, though the exact wording of the question may reflect a conflation of different methods.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "collective classification",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "graph kernel",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node-embedding method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "low-dimensional vector representations of node",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "node sequence",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional vector representations of node",
+      "target": "downstream classifier",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional vector representations of node",
+      "target": "collective classification pipeline",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "collective classification procedure",
+      "type": "PRESERVES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "graph kernel",
+      "target": "collective classification",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph kernel",
+      "target": "graph neighborhood",
+      "type": "COMPARES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph kernel",
+      "target": "substructure",
+      "type": "COMPARES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "inference",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.15871528625488282
+}

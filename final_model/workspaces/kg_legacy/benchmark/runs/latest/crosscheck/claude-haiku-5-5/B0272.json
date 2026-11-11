@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Alias tables are used to sample weighted edges (not stated in the provided evidence)",
+    "Negative sampling is used together with edge sampling (not stated in the provided evidence)",
+    "First- and second-order embeddings are trained separately and then concatenated (not stated in the provided evidence)",
+    "Second-order proximity is modeled by making vertices that share neighbors have similar context representations (not stated in the provided evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, which the abstract supports: LINE optimizes a designed objective with an edge-sampling algorithm rather than relying on random walks. Several specific implementation details (alias tables, negative sampling, separate training with concatenation, and the second-order definition) are accurate LINE facts but are not stated in the provided excerpts, so they cannot be verified from the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

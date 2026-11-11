@@ -1,0 +1,86 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding; Tang et al., 2015) learns node embeddings from network structure alone, without requiring node attributes, labels, or any domain-specific semantics. It is designed for large-scale graphs and preserves both first-order proximity (directly connected nodes have similar embeddings, via an edge-based objective over observed edges) and second-order proximity (nodes sharing many neighbors have similar embeddings, via a context-vector objective). It optimizes these with edge sampling and negative sampling, which makes it efficient on large, weighted, and directed or undirected graphs. The BlogCatalog (social follower network), PPI (protein-protein interaction network), and Wikipedia (word co-occurrence network) datasets are all graphs whose informative signal lies in their edge structure and neighborhood overlap. Because LINE is model-agnostic about what the nodes and edges represent, it can be applied to all three regardless of whether the graph is social, biological, or linguistic. Its key property is therefore that it is a domain-agnostic, purely topology-driven, scalable embedding method that handles arbitrary (including weighted) networks, which is why it is used for multi-label node classification on these benchmarks.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The description of LINE's first- and second-order proximity, edge sampling, and domain-agnostic structure-only nature is well established, but the question's framing about the specific datasets and their use is somewhat interpretive and may not match the intended answer exactly.",
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "network structure",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "first-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "second-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "information network",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog network",
+      "target": "social network",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "network embedding",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "BlogCatalog network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "word cooccurrence network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "domain-agnostic",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "SCALABLE",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "target": "multi-label node classification",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

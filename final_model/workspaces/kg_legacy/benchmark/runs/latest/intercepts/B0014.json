@@ -1,0 +1,68 @@
+{
+  "answer": "The passage does not appear to be included with the question, so this answer draws on the LINE paper (Tang et al., 2015). Real-world information networks are very large (often millions of vertices and billions of edges) and varied (directed or undirected, weighted or unweighted, and often heterogeneous). A useful embedding model therefore has to handle this scale and variety while still capturing the network's structure well enough for downstream tasks such as classification, link prediction, and visualization. For LINE, the stated requirements are: (1) scalability to very large networks; (2) applicability to arbitrary network types, namely directed, undirected, and/or weighted; and (3) preservation of both first-order proximity (direct ties between vertices, i.e., observed edges) and second-order proximity (vertices sharing similar neighborhoods). LINE meets these with an objective that models first- and second-order proximity separately and is optimized with edge sampling and negative sampling.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The LINE requirements (scalability, arbitrary directed/undirected/weighted networks, first- and second-order proximity) are well recalled from the original paper, but the passage itself was not provided, so its exact wording and emphasis may differ.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "directed network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "undirected network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "weighted network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "scalability to very large network",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Real-world information network",
+      "target": "very large scale",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Real-world information network",
+      "target": "heterogeneity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

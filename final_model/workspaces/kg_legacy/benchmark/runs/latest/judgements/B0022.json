@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The question's premise may not match the standard results / the answer cannot identify a Wikipedia page-classification comparison where graph factorization beats DeepWalk (the evidence explicitly reports this result in Table 3).",
+    "In commonly cited benchmarks, DeepWalk usually outperforms explicit graph factorization on label classification because random-walk co-occurrence captures higher-order proximity (not supported by the evidence, which says graph factorization outperforms DeepWalk here).",
+    "Implies the paper's reported ordering is a reversal of a standard result, contradicting the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The source states graph factorization outperforms DeepWalk because DeepWalk ignores edge weights, but the answer disputes the premise, claims it cannot find the result, and never gives this reason. Its general claims about DeepWalk typically beating factorization are not backed by the evidence and conflict with the reported result.",
+  "judge_model": "claude-sonnet-5-5"
+}

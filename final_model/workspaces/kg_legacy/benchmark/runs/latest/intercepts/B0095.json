@@ -1,0 +1,62 @@
+{
+  "answer": "First-order proximity only captures the direct, observed links between a pair of vertices (i.e., whether an edge exists between them). Real-world information networks are sparse and noisy, so many genuinely similar nodes never connect directly, and observed edges can be missing or incomplete. Relying on first-order proximity alone therefore fails to capture the broader structural similarity between nodes that share neighborhoods or occupy similar positions (second-order proximity, which compares neighbor distributions, and higher-order proximity, which reflects longer-range connectivity). Embedding methods such as LINE combine first- and second-order proximity to preserve both local and global network structure, because the direct-link signal alone is too sparse and incomplete to represent the full structure of the network.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core idea (first-order proximity only reflects direct links, which are sparse and incomplete, so higher-order proximity is needed) is well established in network embedding literature like LINE, but the exact wording of the expected answer is uncertain and I may be adding details beyond the intended answer.",
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "target": "direct observed links between a pair of vertice",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information network",
+      "target": "sparse and noisy",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "observed edge",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "broader structural similarity between node",
+      "type": "PRESERVES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "comparison of neighbor distributions between node",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher-order proximity",
+      "target": "longer-range connectivity",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity and second-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "local and global network structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "direct-link signal",
+      "target": "too sparse and incomplete to represent full network structure",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

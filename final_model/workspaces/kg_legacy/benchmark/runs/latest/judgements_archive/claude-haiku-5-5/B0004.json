@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The passage attributes BFS's suitability to recording each node's distance profile and layer patterns for grouping structurally equivalent nodes; the evidence only says BFS explores limited neighborhoods, making it suitable for structural equivalences that rely on immediate local structure, not that it groups nodes by matching layer patterns."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer's core idea that BFS is suited to structural equivalence through local neighborhood exploration is consistent with the passage, which says BFS explores only limited neighborhoods and relies on immediate local structure. However, the answer adds unsupported specifics about distance profiles and grouping nodes by matching layer patterns that the evidence does not state, and it omits the explicit limited-neighborhood rationale the gold answer highlights.",
+  "judge_model": "claude-haiku-5-5"
+}

@@ -1,0 +1,56 @@
+{
+  "answer": "Graph factorization maps each author to a low-dimensional latent vector chosen so that the inner products of these vectors approximate the co-authorship adjacency matrix. Authors in the same community share many co-authors and have dense links among themselves, so the factorization must give them similar vectors to reconstruct those links. The low-rank constraint forces the model to capture shared structure rather than memorize individual edges, which pulls community members together. Sparse links between communities push their vectors apart. When the embedding is projected to 2D for display, these latent similarities appear as tight clusters. I don't know which specific paper or visualization the question refers to, so this explanation is based on the general mechanism of matrix factorization for graph embedding.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The general mechanism is well established, but the question refers to an unspecified visualization, so I cannot verify the specific claims it is meant to elicit.",
+  "triples": [
+    {
+      "source": "graph factorization",
+      "target": "low-dimensional latent vector",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "adjacency matrix",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Authors in the same community",
+      "target": "dense links among themselve",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-rank constraint",
+      "target": "capture of shared structure",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-rank constraint",
+      "target": "memorization avoidance of individual edge",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Sparse links between communitie",
+      "target": "separation of community vector",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix factorization",
+      "target": "Graph Embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "co-author network",
+      "target": "co-authorship adjacency matrix",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

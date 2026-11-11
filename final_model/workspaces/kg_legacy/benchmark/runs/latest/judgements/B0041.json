@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The context is treated as ordered by position relative to v_i in the original formulation, and removing the constraint factorizes probability independently over context vertices: Pr(C|\u03a6(v_i)) = \u220f Pr(u|\u03a6(v_i)) (the factorization is not stated in the evidence shown).",
+    "Claim that removal yields a single shared prediction per context vertex via hierarchical softmax and that it discards positional information is not in the evidence (though plausibly implied)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims match the evidence: the context is a window of w vertices on both sides of v_i, and removing the ordering constraint means the model predicts any context vertex without knowing its offset. The independent product factorization and hierarchical-softmax details are not in the evidence, and the answer does not mention the speed and nearness benefits the paper gives.",
+  "note": "The speed claim (simpler and cheaper) is supported by the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

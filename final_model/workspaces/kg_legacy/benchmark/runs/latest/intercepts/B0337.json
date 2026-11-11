@@ -1,0 +1,92 @@
+{
+  "answer": "The premise is mistaken. node2vec does not maximize the probability of reconstructing a node's class label from its embedding. It is an unsupervised method that uses no class labels in training. Its objective comes from the skip-gram word2vec model applied to random walks on the graph. For each source node u, it samples neighborhoods N_S(u) with biased second-order random walks and maximizes the log-probability of observing those neighborhood nodes given u's embedding f(u). This is approximated with negative sampling, and the objective is max over f of the sum over u of log Pr(N_S(u) | f(u)), with the softmax partition function approximated by negative samples. Labels enter only downstream: after embeddings are learned, a separate classifier (for example, logistic regression) is trained on the embeddings to predict labels, and that is how node2vec is evaluated for node classification.\n\nBecause the target is co-occurrence in walks rather than labels, the learned features reflect graph context. The return parameter p and in-out parameter q interpolate between breadth-first sampling, which captures structural equivalence (nodes with similar roles or local structure end up with similar embeddings), and depth-first sampling, which captures homophily (nodes in the same densely connected community end up close together). Whether the embeddings are useful for a given class label therefore depends on whether that label aligns with homophily or structural roles in the graph.",
+  "confidence": 0.85,
+  "confidence_reasoning": "I am confident from the original node2vec paper (Grover and Leskovec, 2016) that the objective is unsupervised skip-gram over random-walk neighborhoods and that labels are used only downstream, though I have not checked the exact wording of every detail.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "class labels in training",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "unsupervised method",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram word2vec model",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased second-order random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "log-probability of observing neighborhood nodes given embedding",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "target": "softmax partition function",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "logistic regression",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node classification",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "target": "breadth-first sampling",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "target": "depth-first sampling",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first sampling",
+      "target": "structural equivalence",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first sampling",
+      "target": "homophily",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned feature",
+      "target": "graph context",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "usefulness of embeddings for a class label",
+      "target": "alignment of label with homophily or structural role",
+      "type": "DEFINED_AS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

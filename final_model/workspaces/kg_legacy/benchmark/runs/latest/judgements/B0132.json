@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "LINE does not take a logarithm of co-occurrence counts as an explicit step; the evidence says the log-count edge weights were used in the word-analogy experiment (applied to graph factorization, not specifically LINE), so this contradicts the gold framing that the log applies to edge weights when constructing the network for embedding.",
+    "Qiu et al. 2018 NetMF shows LINE implicitly factorizes a shifted log matrix, with the formula log(A_ij/d_i) - log(b); this is not in the evidence.",
+    "Node2vec's implicit factorization is a shifted PMI matrix built from walk-based counts; not in the evidence.",
+    "LINE's edge weight sets sampling frequency and uses log-sigmoid objective with negative sampling; not stated in the evidence beyond negative sampling being used by LINE."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The node2vec description (random walks, sample generation) is supported, but the answer denies the condition (log of co-occurrence counts as edge weights in the word network) and relies on external NetMF claims not in the evidence. The core contrast is partly right but the LINE side is largely unsupported or misframed.",
+  "judge_model": "claude-sonnet-5-5"
+}

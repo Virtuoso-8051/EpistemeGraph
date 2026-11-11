@@ -1,0 +1,68 @@
+{
+  "answer": "The premise is incorrect. node2vec does not use a pure DFS traversal, and its learned representations are not restricted to DFS-style equivalence. It generates second-order biased random walks controlled by two parameters, the return parameter p and the in-out parameter q. Small q lets walks move outward, which is DFS-like and captures homophily (communities). Large q keeps walks local, which is BFS-like and captures structural equivalence (roles). Because p and q are tunable, the walks interpolate between the two regimes rather than committing to one. The resulting embeddings are fed to skip-gram (word2vec-style) training, so they can reflect both kinds of similarity depending on the chosen parameters.",
+  "confidence": 0.9,
+  "confidence_reasoning": "The description of node2vec's p and q biased walks interpolating BFS and DFS behavior is well established from the original 2016 paper by Grover and Leskovec, though I am recalling it from memory rather than checking the source.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "pure DFS traversal",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "second-order biased random walk",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order biased random walk",
+      "target": "return parameter p",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order biased random walk",
+      "target": "in-out parameter q",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small q",
+      "target": "communitie",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large q",
+      "target": "structural equivalence",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "target": "biased random walk procedure",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "interpolation between DFS and BFS regime",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram training",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "target": "both homophily and structural equivalence similarity",
+      "type": "REPRESENTS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

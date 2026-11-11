@@ -1,0 +1,68 @@
+{
+  "answer": "The passage says node2vec generalizes prior work because it can recover both breadth-first and depth-first neighborhood exploration as special cases of its biased random walks, rather than committing to only one fixed notion of a node\u2019s neighborhood. It addresses the limitation of earlier feature learning approaches that used a single, rigid neighborhood definition or sampling strategy, which made them unable to adapt to different structural roles and community patterns in graphs.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a standard description of node2vec\u2019s contribution and limitation addressed, and it matches the commonly cited formulation in the original paper.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "breadth-first neighborhood exploration",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "depth-first neighborhood exploration",
+      "type": "GENERALIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "breadth-first neighborhood exploration",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "depth-first neighborhood exploration",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning approache",
+      "target": "neighborhood definition",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning approache",
+      "target": "sampling strategy",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning approache",
+      "target": "single, rigid neighborhood definition",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning approache",
+      "target": "single, rigid sampling strategy",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "single, rigid neighborhood definition",
+      "target": "adaptation to different structural roles and community patterns in graph",
+      "type": "PREVENTS",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.21772738200862232
+}

@@ -1,0 +1,50 @@
+{
+  "answer": "DeepWalk treats the graph as a corpus of random walks: each walk is like a sentence, and the nodes visited in those walks are the vocabulary. In other words, the \u201cwords\u201d are graph vertices, and co-occurrence comes from nodes appearing near each other along random walks. Compared with the graph representation assumed in paper1, DeepWalk uses an explicit graph-structured input and converts it into a sequence corpus for learning, rather than assuming the kind of flat text/document representation that paper1 uses for its graph data.",
+  "confidence": 0.78,
+  "confidence_reasoning": "The DeepWalk description is standard and well-established, but the comparison to paper1 is less certain because paper1 is not identified here, so that part may depend on the specific paper.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "CORPUS",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "SENTENCE",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph vertice",
+      "target": "vocabulary",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "graph-structured input",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "sequence corpus",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PAPER1",
+      "target": "flat text/document representation",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2567750490628756
+}

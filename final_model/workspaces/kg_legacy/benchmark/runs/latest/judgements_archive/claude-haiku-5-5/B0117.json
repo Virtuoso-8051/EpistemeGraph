@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The author citation network has edges linking authors 'whose papers cite each other', which implies mutual citation. The evidence describes a directed count of one author's papers cited by another, not reciprocal citation."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly names the two citation networks (author and paper) built from DBLP and correctly says the author network records citation counts between authors, with the edge weight being that count. However, the phrase 'cite each other' misdescribes the directed, one-way relationship the paper reports, and the paper-network description is a generic but reasonable paraphrase.",
+  "judge_model": "claude-haiku-5-5"
+}

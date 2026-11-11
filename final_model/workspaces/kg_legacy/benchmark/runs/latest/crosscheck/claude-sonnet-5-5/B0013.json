@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Edge sampling avoids gradient explosion and high-variance updates caused by large or widely varying edge weights (the evidence does not state this mechanism)",
+    "It makes each update cheap and the optimization more stable (stability and cheap updates are not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence supports that edges are sampled in proportion to their weight and treated as binary in SGD, and that this improves efficiency. The gradient explosion, variance and stability claims go beyond the evidence, and the answer never directly says the core point that it improves SGD effectiveness without compromising efficiency.",
+  "judge_model": "claude-sonnet-5-5"
+}

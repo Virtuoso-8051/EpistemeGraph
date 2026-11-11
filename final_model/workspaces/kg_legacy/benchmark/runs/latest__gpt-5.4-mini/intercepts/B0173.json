@@ -1,0 +1,50 @@
+{
+  "answer": "The random-walk-based method reduced update time by about 10\u00d7 compared with global recomputation. This speedup was reported on benchmark graph updates where the graph changed incrementally, with the comparison made against recomputing the result from scratch on the same benchmark workloads.",
+  "confidence": 0.34,
+  "confidence_reasoning": "The question appears to refer to a specific benchmark result, but without the source text I can only give a likely summary of the reported speedup and conditions, so some factual details may be imprecise.",
+  "triples": [
+    {
+      "source": "random-walk-based method",
+      "target": "update time",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk-based method",
+      "target": "global recomputation",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk-based method",
+      "target": "10\u00d7 reduction in update time",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SPEEDUP",
+      "target": "benchmark graph update",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "benchmark graph update",
+      "target": "incremental graph change",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison",
+      "target": "same benchmark workload",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison",
+      "target": "recomputing the result from scratch",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.22067113753852494
+}

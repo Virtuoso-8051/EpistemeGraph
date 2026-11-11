@@ -1,0 +1,50 @@
+{
+  "answer": "I could not reliably recall the specific passage. The most likely comparison is how much node2vec's classification performance (e.g., Micro-F1/Macro-F1 on BlogCatalog) drops as the fraction of added random edges grows, relative to LINE's smaller drop. This is unverified and may not match the source.",
+  "confidence": 0.2,
+  "confidence_reasoning": "I do not recall the source passage, so the stated comparison (node2vec's performance degradation versus LINE's under added edges) is a plausible guess rather than a verified fact.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "LINE",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "BlogCatalog network",
+      "type": "EVALUATED_ON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "network classification performance",
+      "target": "MICRO-F1",
+      "type": "REPRESENTS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "network classification performance",
+      "target": "MACRO-F1",
+      "type": "REPRESENTS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "fraction of missing edge",
+      "target": "fraction of added random edge",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "larger performance drop as fraction of added random edges grow",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "smaller performance drop as fraction of added random edges grow",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

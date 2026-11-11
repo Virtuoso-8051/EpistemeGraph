@@ -1,0 +1,56 @@
+{
+  "answer": "The premise is incorrect. node2vec (Grover & Leskovec, 2016, assuming paper3 is this work) does not learn only a probability distribution of node co-occurrences in place of latent vectors. It learns a d-dimensional latent feature representation f: V -> R^d for every vertex. It borrows the DeepWalk/word2vec skip-gram training scheme, but the trainable parameters are the node embeddings (plus output-side context embeddings in the softmax or negative-sampling layer). Node co-occurrence statistics serve only as the training signal. The method samples neighborhoods N_S(u) for each node u using second-order biased random walks, controlled by a return parameter p and an in-out parameter q, and then maximizes the skip-gram log-likelihood sum over u of log Pr(N_S(u) | f(u)). Under the conditional independence and symmetry assumptions, the softmax form is Pr(n_i | f(u)) = exp(f(n_i)\u00b7f(u)) / sum over v in V of exp(f(v)\u00b7f(u)). The output is therefore a latent vector per vertex, which is then used for downstream tasks.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The core claim that node2vec learns embeddings per node via skip-gram with biased walks is well established, though the identity of 'paper3' is unspecified and I am assuming it is the node2vec paper.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "node representation",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node embedding",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "DEEPWALK",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "second-order biased random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "target": "NODE2VEC",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "target": "SOFTMAX",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node co-occurrence statistics",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

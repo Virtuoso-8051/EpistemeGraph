@@ -1,0 +1,50 @@
+{
+  "answer": "Graph factorization (Ahmed et al., 2013) is described as scalable because it learns node embeddings by factorizing the graph's adjacency matrix using stochastic gradient descent that updates only on observed edges. Its cost and memory therefore grow with the number of edges rather than with the square of the number of nodes, which avoids forming or decomposing a dense n\u00d7n matrix. The optimization can also be parallelized or distributed across machines, which suits very large, sparse, real-world networks. Its restriction is that it is designed for undirected graphs, so it assumes a symmetric adjacency relationship and does not natively model edge direction. It is also primarily an approach that preserves first-order proximity (direct edge connections) and is typically applied to unweighted graphs.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The scalability rationale (SGD over edges, distributed) is well established, but I am less certain about the exact graph-type restriction stated in the literature (undirected, possibly unweighted) and the details of the wording.",
+  "triples": [
+    {
+      "source": "graph factorization",
+      "target": "adjacency matrix",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "stochastic gradient descent",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "large network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "undirected graph",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "first-order proximity",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "undirected graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "target": "directed graph",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    }
+  ],
+  "token_nll": null
+}

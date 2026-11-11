@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The operators are listed as Average, Hadamard, Weighted-L1, Weighted-L2 and said to combine embeddings element-wise; the provided evidence only mentions Table 1 without listing them (though this is accurate background from the paper).",
+    "During link-prediction training, edges serve as positive labels and sampled non-edges as negatives; the evidence only says the test set contains true and false edges, not how training negatives are sampled."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, stating that the operator is defined for any pair of nodes, including non-edges, which matches the evidence. The remaining details (operator names, training negatives) are accurate background from node2vec and do not contradict the evidence.",
+  "judge_model": "claude-sonnet-5-5"
+}

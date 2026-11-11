@@ -1,0 +1,74 @@
+{
+  "answer": "LINE is typically trained in an unsupervised way, but it requires supervised data when the goal is to evaluate or tune it for a downstream classification task: a labeled subset of nodes is used to train a classifier on the learned embeddings and test on held-out labels. In contrast, DeepWalk on BlogCatalog is usually evaluated by first learning embeddings without labels and then measuring their quality on node classification using the BlogCatalog labels only for the evaluation step, not for embedding training; the standard protocol is to train a classifier on a fraction of labeled nodes and report performance on the rest.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This matches the standard evaluation setups for LINE and DeepWalk, though exact protocol details can vary by paper or implementation.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "supervised data",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "downstream classification task",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled subset of node",
+      "target": "classifier",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classifier",
+      "target": "learned embedding",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "embeddings without label",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog label",
+      "target": "evaluation step",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog label",
+      "target": "embedding training",
+      "type": "NOT_USED_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "standard protocol",
+      "target": "classifier",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classifier",
+      "target": "fraction of labeled node",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "standard protocol",
+      "target": "performance",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.22635136152568616
+}

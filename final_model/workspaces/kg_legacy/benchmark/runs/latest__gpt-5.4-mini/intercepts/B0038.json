@@ -1,0 +1,80 @@
+{
+  "answer": "On BlogCatalog, node2vec performance generally improves as you increase the number of walks per source and the walk length, because both give the model more sampled context from the graph. The reported effect is that performance rises with more walks and longer walks up to a point, after which gains become small or saturate. The tradeoff mentioned for the context size k is that a larger k captures broader, more global neighborhood information, but it can also include less relevant nodes and make the embeddings less focused on local structure; a smaller k does the opposite, emphasizing local proximity but missing wider context.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This matches the standard qualitative findings reported for node2vec on BlogCatalog, but I am not fully certain of the exact wording or all numerical details from the specific source.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "BlogCatalog",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks per source",
+      "target": "NODE2VEC",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length",
+      "target": "NODE2VEC",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks per source",
+      "target": "more sampled context from the graph",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length",
+      "target": "more sampled context from the graph",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "performance",
+      "target": "more walks and longer walk",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "performance",
+      "target": "small gains or saturation",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context size k",
+      "target": "broader, more global neighborhood information",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context size k",
+      "target": "less relevant node",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context size k",
+      "target": "less focused on local structure",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context size k",
+      "target": "local proximity",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context size k",
+      "target": "wider context",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.1980827974985881
+}

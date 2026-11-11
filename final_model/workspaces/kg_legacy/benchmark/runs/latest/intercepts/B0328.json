@@ -1,0 +1,80 @@
+{
+  "answer": "The premise is mistaken. DeepWalk (Perozzi et al., 2014) did not use the PPI network to predict blogger interests. The blogger-interest task used BlogCatalog, a social network of bloggers with interest-group labels. The PPI network (a protein-protein interaction graph) was a separate benchmark, used for multi-label classification of protein biological states or roles. DeepWalk was evaluated on several networks, including BlogCatalog, Flickr, YouTube, and PPI, to show that its learned node embeddings generalize across domains.\n\nOn social relationships, DeepWalk's performance rests on its use of random walks to capture local neighbourhood structure. Because social networks show homophily, where connected users tend to share interests and communities, short random walks yield embeddings that place similar users close together. That is why DeepWalk performed well on BlogCatalog, Flickr, and YouTube, and it was reported to beat several baseline embedding methods, including spectral-style approaches, especially when labelled data was scarce. The PPI network is a biological graph with different structure and label semantics, so it tests generality rather than social-relationship modelling.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly sure that BlogCatalog, not PPI, was the blogger-interest dataset and that PPI was a separate biological benchmark, but I am less certain of the exact reported comparisons and performance details.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "PPI network",
+      "type": "USES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "target": "social network",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI network",
+      "target": "multi-label classification of protein biological states or role",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "FLICKR",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "YOUTUBE",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "PPI network",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social network",
+      "target": "homophily",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "spectral-style embedding baseline",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI network",
+      "target": "biological graph",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "local neighbourhood structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

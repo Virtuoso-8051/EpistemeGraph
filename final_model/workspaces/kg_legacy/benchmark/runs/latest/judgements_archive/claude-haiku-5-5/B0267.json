@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE is reported to outperform DeepWalk on multi-label node classification and link prediction across language, Flickr, and YouTube graphs (the evidence only shows LINE outperforming DeepWalk in one comparison with combined proximities and the reconstructed-network setting, and does not list these datasets or tasks)",
+    "LINE uses alias tables so each SGD step costs O(1), and edge sampling avoids high-variance gradients from weighted edges (not stated in the evidence)",
+    "The paper's reported runtimes show LINE scaling to large networks and not being markedly slower than DeepWalk (no runtime comparison with DeepWalk appears in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the premise that edge sampling hurts efficiency, consistent with the source saying it improves effectiveness without compromising efficiency. However, it introduces DeepWalk comparison details, datasets, alias-table mechanics, and runtime claims that the provided evidence does not contain, and it does not clearly note that the passage itself never mentions DeepWalk comparison results at all.",
+  "judge_model": "claude-haiku-5-5"
+}

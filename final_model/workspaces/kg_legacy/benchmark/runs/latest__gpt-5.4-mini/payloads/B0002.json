@@ -1,0 +1,88 @@
+{
+    "user_query": "Under which conditions does DeepWalk outperform its competitors, and by how much less training data can it still do so?",
+    "mode": "closed_book",
+    "llm_response": "DeepWalk tends to outperform its competitors when the graph is sparse and the available labeled training data is limited, especially in the low-label regime where only a small fraction of nodes are used for supervision. In those settings, it can still match or beat competing methods with roughly 10x less training data, and in some reported cases even with about 100x less labeled data.",
+    "llm_self_reported_accuracy": 0.78,
+    "llm_confidence_reasoning": "This answer reflects the commonly reported DeepWalk result from the original paper, but the exact comparison set and multiplier can vary by dataset and experimental setup.",
+    "extracted_query_entities": [
+        "DEEPWALK"
+    ],
+    "extracted_response_entities": [
+        "DEEPWALK",
+        "competitor",
+        "sparse graph",
+        "limited available labeled training data",
+        "low-label regime",
+        "match or beat competing methods with roughly 10x less training data",
+        "match or beat competing methods with about 100x less labeled data"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "DEEPWALK",
+            "target": "competitor",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "sparse graph",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "limited available labeled training data",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "low-label regime",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "match or beat competing methods with roughly 10x less training data",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "DEEPWALK",
+            "target": "match or beat competing methods with about 100x less labeled data",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Under which conditions does DeepWalk outperform its competitors, and by how much less training data can it still do so?",
+        "llm_response": "DeepWalk tends to outperform its competitors when the graph is sparse and the available labeled training data is limited, especially in the low-label regime where only a small fraction of nodes are used for supervision. In those settings, it can still match or beat competing methods with roughly 10x less training data, and in some reported cases even with about 100x less labeled data.",
+        "llm_extraction_confidence": 0.78,
+        "llm_confidence_reasoning": "This answer reflects the commonly reported DeepWalk result from the original paper, but the exact comparison set and multiplier can vary by dataset and experimental setup.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2526.3,
+            "prompt_tokens": 112,
+            "completion_tokens": 130
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1771.6,
+            "prompt_tokens": 710,
+            "completion_tokens": 215
+        },
+        "asserted_claim_count": 6,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.22290152210300251,
+        "query_entities": [
+            "DEEPWALK"
+        ]
+    }
+}

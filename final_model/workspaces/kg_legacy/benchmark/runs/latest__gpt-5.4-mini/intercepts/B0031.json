@@ -1,0 +1,32 @@
+{
+  "answer": "The second-order proximity between two vertices becomes 0 when they have no shared links at all. In other words, the condition is that the two vertices share no common neighbors (their shared-link set is empty).",
+  "confidence": 0.98,
+  "confidence_reasoning": "This is a standard definition of second-order proximity: it is zero when there are no common neighbors/shared links between the two vertices.",
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "target": "0",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "no shared links at all",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "two vertice",
+      "target": "no common neighbor",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "shared-link set",
+      "target": "empty set",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.16291753929781627
+}

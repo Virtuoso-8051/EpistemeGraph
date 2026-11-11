@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Spectral methods such as Laplacian eigenmaps appear in the node2vec paper as related-work baselines. The evidence names only Spectral Clustering as a benchmark and never mentions Laplacian eigenmaps."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, since the evidence lists Spectral Clustering only as a benchmark compared against node2vec, and it correctly describes the Wikipedia word co-occurrence network with POS-tag labels used for multilabel classification. Its description of the random-walk method (p/q parameters, skip-gram) is general knowledge of the node2vec method rather than something the excerpts spell out, and its mention of Laplacian eigenmaps goes beyond the evidence.",
+  "judge_model": "claude-haiku-5-5"
+}

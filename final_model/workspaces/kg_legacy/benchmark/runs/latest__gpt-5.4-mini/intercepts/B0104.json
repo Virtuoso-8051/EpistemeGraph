@@ -1,0 +1,56 @@
+{
+  "answer": "DeepWalk learns latent vertex representations (embeddings) from a graph by treating random walks like sentences and using a skip-gram-style objective. The learned representation for each vertex is typically a low-dimensional vector, and its coordinates are not directly human-interpretable; instead, the vector encodes the vertex\u2019s graph context/structural similarity so that nearby or similarly situated vertices have similar representations.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This is a standard, well-established description of DeepWalk\u2019s output and how it is characterized in the original paper and follow-up literature.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram-style objective",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "latent vertex representation",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representation",
+      "target": "low-dimensional vector",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representation",
+      "target": "not directly human-interpretable coordinate",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representation",
+      "target": "graph context",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representation",
+      "target": "structural similarity",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representation",
+      "target": "nearby or similarly situated vertices have similar representation",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.20714921710871848
+}

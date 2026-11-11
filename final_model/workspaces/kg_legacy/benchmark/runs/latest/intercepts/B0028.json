@@ -1,0 +1,44 @@
+{
+  "answer": "In both the Flickr and BlogCatalog experiments, the optimal DeepWalk embedding dimensionality grows with the amount of labeled training data. With little training data, lower-dimensional embeddings perform best because higher dimensions overfit. As the training fraction increases, higher dimensions become beneficial and the performance-maximizing dimension shifts upward. I could not verify the exact source paper or its specific dimension values, so this reflects my best recollection of the reported trend.",
+  "confidence": 0.45,
+  "confidence_reasoning": "I recall the general trend (more training data favors higher dimensionality) but cannot confirm the specific paper's findings or exact values, so the claim may be imprecise.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "latent dimension",
+      "type": "OPTIMIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent dimension",
+      "target": "network classification performance",
+      "type": "IMPROVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "lower-dimensional embedding",
+      "target": "small labeled training data",
+      "type": "WORKS_WELL_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher dimension",
+      "target": "larger training fraction",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimal DeepWalk dimensionality",
+      "target": "increasing trend with training data",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher dimension",
+      "target": "lower-dimensional embedding",
+      "type": "OUTPERFORMS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

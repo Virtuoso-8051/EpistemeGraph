@@ -1,0 +1,44 @@
+{
+  "answer": "I can't tell which paper is meant by \"paper3\", since no document was provided, so I can't cite its stated rationale. Two general reasons such methods often give for global recomputation over local updates are: (1) skip-gram-style embeddings (e.g., DeepWalk/node2vec) are trained with a global softmax or negative-sampling objective, so fitting new walks from a changed region alone can shift the shared embedding space and misalign or degrade vectors for unchanged nodes; and (2) walks started only in the changed region give a biased sample of the co-occurrence statistics, so the updated model may not match the full graph's distribution, and recomputation keeps the embeddings consistent and reproducible. If you share the paper's text or section, I can give its actual justification.",
+  "confidence": 0.2,
+  "confidence_reasoning": "I could not identify the referenced paper, so the answer relies on general reasoning about random-walk embedding methods rather than the paper's stated justification.",
+  "triples": [
+    {
+      "source": "Skip-gram model",
+      "target": "global softmax or negative-sampling objective",
+      "type": "USES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "skip-gram-style embedding",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node2vec representation",
+      "target": "skip-gram-style embedding",
+      "type": "IS_A",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk",
+      "target": "co-occurrence statistics of the full graph",
+      "type": "PRESERVE",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk",
+      "target": "walks started only in the changed region produce biased sample",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node embedding",
+      "target": "vectors of unchanged node",
+      "type": "PRESERVE",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

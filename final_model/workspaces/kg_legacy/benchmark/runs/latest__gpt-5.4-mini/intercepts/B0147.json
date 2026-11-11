@@ -1,0 +1,56 @@
+{
+  "answer": "DeepWalk\u2019s reported performance suggests that, under sparse supervision, **homophily-based similarity**\u2014that is, nodes being similar because they are close in the graph and tend to share labels or community membership\u2014is especially useful. In contrast, node2vec\u2019s BFS/DFS bias is meant to trade off between local homophily and more structural/role-based similarity, but DeepWalk\u2019s strong results indicate that simple random-walk neighborhoods capturing local proximity are often enough when labeled data are scarce.",
+  "confidence": 0.92,
+  "confidence_reasoning": "This is a well-established interpretation of DeepWalk versus node2vec: DeepWalk emphasizes local neighborhood homophily, and the question directly asks for that contrast under sparse supervision.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "reported performance",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "homophily-based similarity",
+      "type": "SUGGESTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "homophily-based similarity",
+      "target": "nodes being similar because they are close in the graph and tend to share labels or community membership",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "BFS",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "DFS",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "local homophily",
+      "type": "TRADE_OFFS_BETWEEN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "structural/role-based similarity",
+      "type": "TRADE_OFFS_BETWEEN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "simple random-walk neighborhoods capturing local proximity are often enough when labeled data are scarce",
+      "type": "INDICATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.21494316410373998
+}

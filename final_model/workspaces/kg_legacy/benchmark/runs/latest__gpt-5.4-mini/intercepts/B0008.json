@@ -1,0 +1,74 @@
+{
+  "answer": "LINE avoided comparing itself with MDS, IsoMap, and Laplacian eigenmap because those methods are not designed to scale to the very large graphs LINE targets; they are computationally too expensive for the network sizes LINE was evaluating. The evaluated datasets were large-scale networks, ranging from tens of thousands to millions of nodes (with millions of edges in some cases).",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard explanation in the LINE paper and the reported dataset scale, though exact dataset-by-dataset sizes are not reproduced here.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "MDS",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "ISOMAP",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "Laplacian eigenmap",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "MDS",
+      "target": "not designed to scale to very large graph",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "ISOMAP",
+      "target": "not designed to scale to very large graph",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "not designed to scale to very large graph",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "MDS",
+      "target": "computationally too expensive for the network sizes LINE was evaluating",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "ISOMAP",
+      "target": "computationally too expensive for the network sizes LINE was evaluating",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap",
+      "target": "computationally too expensive for the network sizes LINE was evaluating",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large-scale network",
+      "target": "ranging from tens of thousands to millions of node",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large-scale network",
+      "target": "millions of edges in some case",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.20198841924252717
+}

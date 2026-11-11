@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI claims that LINE and the latent social dimensions approach of Tang and Liu learn embeddings from the YouTube social graph in an unsupervised way via edge-based proximity objectives, which the evidence does not state.",
+    "The AI claims that YouTube group-membership labels are used only downstream to train and evaluate a separate classifier, a detail not stated in the evidence.",
+    "The AI claims that efficiency comes from negative sampling and scalability techniques, which the evidence does not mention."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The AI correctly rejects the false premise that embeddings are learned from supervised YouTube labels, consistent with the evidence that DeepWalk learns from a stream of short random walks. However, it adds specific claims about LINE, Tang and Liu's method, the downstream classifier role, and negative sampling that the provided evidence does not contain.",
+  "judge_model": "claude-haiku-5-5"
+}

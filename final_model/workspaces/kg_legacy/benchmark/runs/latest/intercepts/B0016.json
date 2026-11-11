@@ -1,0 +1,86 @@
+{
+  "answer": "DeepWalk (Perozzi et al., 2014) learns node embeddings by running truncated random walks over the network and feeding the resulting node sequences to a Skip-gram language model (word2vec-style). Proximity is therefore captured indirectly and multi-hop: nodes that co-occur within a fixed window along random walks are treated as similar, so it models higher-order neighborhood structure up to the window size. It is designed for unweighted, undirected graphs (its random-walk formulation does not naturally handle edge weights or directions without modification), and it is typically applied to homogeneous networks.\n\nLINE (Large-scale Information Network Embedding, Tang et al., 2015) instead defines two explicit objectives: first-order proximity (directly connected node pairs should have similar embeddings, modeled by the joint probability of an edge) and second-order proximity (nodes sharing many neighbors should have similar embeddings, using a context/neighbor vector formulation). It optimizes these with edge sampling and negative sampling, which allows it to handle weighted graphs (including large weighted and directed edges, since the edge-sampling scheme uses edge weights directly) and scales to very large networks. LINE does not explicitly sample multi-hop paths, so its proximity is restricted to first- and second-order neighborhoods, whereas DeepWalk's random walks reach beyond these. Both are for homogeneous networks; extensions such as metapath2vec or heterogeneous LINE variants are needed for heterogeneous networks.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core descriptions of DeepWalk (random walks plus Skip-gram) and LINE (first- and second-order proximity, edge sampling, weighted and directed support) are well established, but some claims about DeepWalk's handling of weights and directions and the exact scope of LINE are less certain and I did not verify specifics.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "Skip-gram language model",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "truncated random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "higher-order neighborhood structure",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unweighted graph",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "unweighted graph",
+      "type": "REQUIRES",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PROPOSES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "edge sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "negative sampling",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "weighted network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "DEFINED_AS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "target": "multi-hop path sampling",
+      "type": "REFUTED",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "metapath2vec",
+      "target": "embedding of heterogeneous information network",
+      "type": "APPLICABLE_FOR",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

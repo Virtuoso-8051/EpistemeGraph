@@ -1,0 +1,62 @@
+{
+  "answer": "The relational classifier uses the network's label distribution as a feature when the nodes' neighbors carry usable label information. This applies when (1) the network shows label autocorrelation or homophily, so linked nodes tend to share labels; (2) some neighbors' labels are known, either from training data or from earlier inference steps; and (3) node attributes alone are insufficient to classify accurately. In that case each node's feature vector combines its own attribute features with aggregated neighbor-label features, such as counts or proportions of each class among its neighbors. Mixing the two is necessary because attributes capture a node's intrinsic characteristics, while the neighbor label distribution captures the dependence between linked nodes that attributes miss. Using both generally yields better performance than either alone. When neighbor labels are unknown, methods such as collective classification estimate them iteratively, using the current label estimates as the relational features until they stabilize.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The answer reflects the standard relational/collective classification framing (homophily, attribute plus neighbor-label features), but I am unsure which specific paper or method the question targets, so some details may not match its intended answer.",
+  "triples": [
+    {
+      "source": "relational classifier",
+      "target": "network label distribution",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network label distribution",
+      "target": "label autocorrelation or homophily",
+      "type": "APPLIES_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature vector",
+      "target": "aggregated neighbor-label feature",
+      "type": "CONTAINS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "aggregated neighbor-label feature",
+      "target": "counts or proportions of each class among neighbor",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node attribute",
+      "target": "intrinsic characteristics of a node",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighbor label distribution",
+      "target": "dependence between linked node",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "combining attributes and neighbor label distribution",
+      "target": "using attributes or neighbor labels alone",
+      "type": "OUTPERFORMS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "collective classification problem",
+      "target": "iterative estimation of unknown neighbor label",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational data",
+      "target": "known neighbor labels from training data or earlier inference step",
+      "type": "REQUIRES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

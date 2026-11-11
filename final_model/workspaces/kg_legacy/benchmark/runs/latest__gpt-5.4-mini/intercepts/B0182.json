@@ -1,0 +1,38 @@
+{
+  "answer": "In network embedding methods such as LINE, second-order proximity between two vertices is quantified by comparing their conditional neighborhood distributions, typically using the similarity of their outgoing or incoming neighbor distributions. If two vertices share no common in-neighbors or out-neighbors, their second-order proximity is taken to be zero, so the numerical value used in that case is 0.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard definition of second-order proximity in LINE, though the exact wording can vary across descriptions of the method.",
+  "triples": [
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "conditional neighborhood distribution",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "outgoing neighbor distribution",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "incoming neighbor distribution",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "0",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.18245592029816513
+}

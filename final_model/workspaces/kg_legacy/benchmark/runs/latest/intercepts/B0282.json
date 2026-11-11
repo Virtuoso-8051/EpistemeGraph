@@ -1,0 +1,56 @@
+{
+  "answer": "I can't verify the specific study this question refers to, so this is a plausible explanation rather than a confirmed finding. Node2vec generates embeddings from random walks, which never leave the connected component where they start. When added or missing edges split the graph into more components, each component becomes a more self-contained neighborhood, and the walks sample a smaller, more homogeneous set of nodes. Components often align with label communities (homophily), so the embeddings separate classes more cleanly, and the model's sensitivity to the specific perturbed edges drops. This would tend to make Macro-F1 stable or rise under such perturbations, though the gain depends on how well components match class labels. Macro-F1 can also fall if small, isolated components contain minority classes that the walks rarely reach, so the direction of the trend depends on the dataset.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The mechanism is reasonable based on how random walks work, but I could not identify the source study, so the specific claimed robustness trend and Macro-F1 direction are unverified.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "node embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "target": "never leave the connected component where they start",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "connected component",
+      "target": "label communitie",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "label communitie",
+      "target": "homophily",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "connected component",
+      "target": "class separation in node embedding",
+      "type": "ENABLES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "increased number of connected component",
+      "target": "MACRO-F1",
+      "type": "IMPROVES",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "small isolated component",
+      "target": "minority classe",
+      "type": "CONTAINS",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

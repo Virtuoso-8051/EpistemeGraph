@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE corresponds to a neighborhood limited to immediate neighbors (not stated in evidence; LINE is described as preserving first- and second-order proximities, and the evidence does not say it is a special case of node2vec)",
+    "Earlier approaches' limitation is framed mainly as inability to balance homophily vs structural equivalence via BFS/DFS-style exploration; evidence only says they are not expressive enough for diverse connectivity patterns and use rigid neighborhoods (the homophily/structural equivalence detail is not in the evidence, though it is accurate background)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that node2vec generalizes prior work with rigid neighborhoods via biased walks (DeepWalk as p=q=1) is supported by the evidence. The LINE-as-immediate-neighbors claim and the homophily/structural equivalence framing go beyond the provided evidence, and the answer also hedges about not seeing the passage.",
+  "judge_model": "claude-sonnet-5-5"
+}

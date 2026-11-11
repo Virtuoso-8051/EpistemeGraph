@@ -1,0 +1,70 @@
+{
+    "user_query": "What dataset does node2vec train on to evaluate structural equivalence in citation graphs, given that it relies on only immediate neighborhoods?",
+    "mode": "closed_book",
+    "llm_response": "In the node2vec paper, structural equivalence in citation graphs is evaluated on the Cora citation network dataset (often referred to simply as Cora).",
+    "llm_self_reported_accuracy": 0.97,
+    "llm_confidence_reasoning": "This is a well-known detail from the node2vec paper, and the citation-graph structural-equivalence evaluation is commonly reported on Cora.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "structural equivalence",
+        "citation graph",
+        "Cora citation network dataset",
+        "CORA"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "structural equivalence",
+        "citation graph",
+        "Cora citation network dataset",
+        "CORA"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "Cora citation network dataset",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "structural equivalence",
+            "target": "citation graph",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "What dataset does node2vec train on to evaluate structural equivalence in citation graphs, given that it relies on only immediate neighborhoods?",
+        "llm_response": "In the node2vec paper, structural equivalence in citation graphs is evaluated on the Cora citation network dataset (often referred to simply as Cora).",
+        "llm_extraction_confidence": 0.97,
+        "llm_confidence_reasoning": "This is a well-known detail from the node2vec paper, and the citation-graph structural-equivalence evaluation is commonly reported on Cora.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2606.5,
+            "prompt_tokens": 115,
+            "completion_tokens": 81
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 3670.9,
+            "prompt_tokens": 651,
+            "completion_tokens": 104
+        },
+        "asserted_claim_count": 2,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.17026947021484376,
+        "query_entities": [
+            "NODE2VEC",
+            "structural equivalence",
+            "citation graph",
+            "Cora citation network dataset",
+            "CORA"
+        ]
+    }
+}

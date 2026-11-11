@@ -1,0 +1,109 @@
+{
+    "user_query": "Compared with global recomputation, by how much did the random-walk-based method reduce update time when the graph changed, and under what benchmark conditions was this speedup reported?",
+    "mode": "closed_book",
+    "llm_response": "The random-walk-based method reduced update time by about 10\u00d7 compared with global recomputation. This speedup was reported on benchmark graph updates where the graph changed incrementally, with the comparison made against recomputing the result from scratch on the same benchmark workloads.",
+    "llm_self_reported_accuracy": 0.34,
+    "llm_confidence_reasoning": "The question appears to refer to a specific benchmark result, but without the source text I can only give a likely summary of the reported speedup and conditions, so some factual details may be imprecise.",
+    "extracted_query_entities": [
+        "random-walk-based method",
+        "global recomputation",
+        "update time",
+        "benchmark graph update",
+        "GRAPH",
+        "benchmark workload"
+    ],
+    "extracted_response_entities": [
+        "random-walk-based method",
+        "global recomputation",
+        "update time",
+        "benchmark graph update",
+        "GRAPH",
+        "benchmark workload",
+        "10\u00d7 reduction in update time",
+        "SPEEDUP",
+        "incremental graph change",
+        "comparison",
+        "same benchmark workload",
+        "recomputing the result from scratch"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "random-walk-based method",
+            "target": "update time",
+            "type": "IMPROVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk-based method",
+            "target": "global recomputation",
+            "type": "OUTPERFORMS",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "random-walk-based method",
+            "target": "10\u00d7 reduction in update time",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "SPEEDUP",
+            "target": "benchmark graph update",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "benchmark graph update",
+            "target": "incremental graph change",
+            "type": "HAS_CHARACTERISTIC",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "comparison",
+            "target": "same benchmark workload",
+            "type": "APPLIES_TO",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "comparison",
+            "target": "recomputing the result from scratch",
+            "type": "BASED_ON",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "Compared with global recomputation, by how much did the random-walk-based method reduce update time when the graph changed, and under what benchmark conditions was this speedup reported?",
+        "llm_response": "The random-walk-based method reduced update time by about 10\u00d7 compared with global recomputation. This speedup was reported on benchmark graph updates where the graph changed incrementally, with the comparison made against recomputing the result from scratch on the same benchmark workloads.",
+        "llm_extraction_confidence": 0.34,
+        "llm_confidence_reasoning": "The question appears to refer to a specific benchmark result, but without the source text I can only give a likely summary of the reported speedup and conditions, so some factual details may be imprecise.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 2439.1,
+            "prompt_tokens": 124,
+            "completion_tokens": 121
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 2020.9,
+            "prompt_tokens": 670,
+            "completion_tokens": 259
+        },
+        "asserted_claim_count": 7,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.22067113753852494,
+        "query_entities": [
+            "random-walk-based method",
+            "global recomputation",
+            "update time",
+            "benchmark graph update",
+            "GRAPH",
+            "benchmark workload"
+        ]
+    }
+}

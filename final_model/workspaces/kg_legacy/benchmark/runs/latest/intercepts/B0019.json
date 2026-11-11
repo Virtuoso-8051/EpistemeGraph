@@ -1,0 +1,68 @@
+{
+  "answer": "The main goal of node2vec's flexible neighborhood sampling strategy is to learn continuous node feature representations (embeddings) that capture a flexible mix of two complementary kinds of network similarity: homophily (nodes in the same community or tightly interconnected are close in embedding space) and structural equivalence (nodes that play similar structural roles, such as hubs or bridges, are close regardless of whether they are directly connected or far apart). It does this by using biased second-order random walks controlled by two parameters, the return parameter p and the in-out parameter q, which together define the transition probabilities from the current node, conditioned on the previous node. The strategy relates BFS and DFS as the two extremes of this search space: Breadth-first sampling draws neighbors mostly from the immediate neighborhood of the source node, which tends to capture structural equivalence (local role-based similarity), while Depth-first sampling makes longer excursions through the network, which tends to capture homophily (community-level similarity). By tuning p and q, node2vec interpolates between BFS-like local exploration (q large, or p small to stay near the start) and DFS-like outward exploration (q small), so the walks can be adapted to the desired balance between the two types of similarity.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The core description of node2vec (p and q biased walks, BFS capturing structural equivalence, DFS capturing homophily) matches the original Grover and Leskovec 2016 paper, though minor parameter-direction details could be slightly misstated.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "node embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy",
+      "target": "homophily",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy",
+      "target": "structural equivalence",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "return parameter p",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "in-out parameter q",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "target": "second-order random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first sampling",
+      "target": "structural equivalence",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first sampling",
+      "target": "homophily",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy",
+      "target": "breadth-first sampling",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy",
+      "target": "depth-first sampling",
+      "type": "APPROXIMATES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

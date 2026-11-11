@@ -1,0 +1,104 @@
+{
+  "answer": "node2vec frames its embedding objective around biased random walks that can interpolate between two structural views: a more BFS-like regime that captures local neighborhoods and community membership, and a more DFS-like regime that captures structural roles or equivalence across distant parts of the graph. In other words, node2vec emphasizes that embeddings can be tuned to reflect either community similarity or role similarity, depending on the walk bias. LINE, by contrast, explicitly defines two proximity notions for social networks: first-order proximity is the direct edge relationship between two nodes, while second-order proximity is the similarity of their neighborhood distributions (nodes that share similar neighbors). LINE learns embeddings to preserve first-order proximity, second-order proximity, or both, with the second-order view especially useful for capturing broader neighborhood context in social graphs.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This matches the standard descriptions of node2vec and LINE in the original papers and common summaries, with only minor risk of wording differences in how roles versus communities are described.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "BFS-like regime",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like regime",
+      "target": "local neighborhood",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like regime",
+      "target": "community membership",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk",
+      "target": "DFS-like regime",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like regime",
+      "target": "structural role",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like regime",
+      "target": "equivalence across distant parts of the graph",
+      "type": "CAPTURES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "community similarity",
+      "type": "EMPHASIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "role similarity",
+      "type": "EMPHASIZES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "target": "direct edge relationship between two node",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "similarity of neighborhood distribution",
+      "type": "DEFINED_AS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "first-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "target": "second-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "target": "broader neighborhood context in social graph",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.2126012876922009
+}

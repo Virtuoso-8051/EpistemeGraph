@@ -1,0 +1,11 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The paper reports strong performance on BlogCatalog, Flickr, and YouTube with a small fraction of labeled nodes (the evidence only mentions BlogCatalog, PPI, and Wikipedia in node2vec's table, and says nothing about Flickr or YouTube).",
+    "Graph kernels scale poorly because the kernel matrix is quadratic in the number of examples and the feature space is sparse and high-dimensional (the evidence only says kernels are slow unless approximated)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast is supported: DeepWalk learns a representation usable as features for any classifier, whereas graph kernels encode structure inside a kernel function. However, the answer adds specifics the evidence does not contain, namely the Flickr and YouTube results and the quadratic-scaling explanation for kernels.",
+  "judge_model": "claude-sonnet-5-5"
+}

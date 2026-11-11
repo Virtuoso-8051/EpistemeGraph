@@ -1,0 +1,56 @@
+{
+  "answer": "node2vec scales roughly linearly with graph size. Its cost is dominated by generating biased random walks (proportional to the number of nodes, walk length, and walks per node) and by skip-gram/SGD optimization, and both stages are embarrassingly parallel. The paper reports that for a network of about one million nodes (with tens of millions of edges), the full pipeline finishes in a few hours on a single multi-core machine (roughly four hours, as I recall). I am not certain of the exact hardware, edge count, or timing figure.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The linear-scaling claim and parallelizability are well grounded in the paper, but the specific one-million-node timing and hardware details are recalled from memory and may be inaccurate.",
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "target": "linear scaling with graph size",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "biased random walk generation",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk generation",
+      "target": "cost proportional to number of nodes, walk length, and walks per node",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "skip-gram SGD optimization",
+      "type": "REQUIRES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "embarrassingly parallel random walk generation and skip-gram optimization",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "network of about one million nodes with tens of millions of edge",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "full pipeline completion in a few hours on a single multi-core machine",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "target": "full pipeline runtime of roughly four hour",
+      "type": "ACHIEVES",
+      "claim_type": "SPECULATIVE"
+    }
+  ],
+  "token_nll": null
+}

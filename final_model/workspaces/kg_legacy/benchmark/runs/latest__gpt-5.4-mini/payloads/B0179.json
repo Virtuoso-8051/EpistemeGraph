@@ -1,0 +1,98 @@
+{
+    "user_query": "For node2vec's link prediction experiments, what were the exact performance numbers for Common Neighbors, Jaccard's Coefficient, Adamic-Adar Score, and Preferential Attachment on the PPI dataset?",
+    "mode": "closed_book",
+    "llm_response": "In the node2vec paper\u2019s link prediction experiments on the PPI dataset, the reported performance numbers were: Common Neighbors = 0.500, Jaccard\u2019s Coefficient = 0.500, Adamic-Adar Score = 0.500, and Preferential Attachment = 0.500 (all as AUC scores).",
+    "llm_self_reported_accuracy": 0.62,
+    "llm_confidence_reasoning": "I am moderately confident because these are the standard reported baseline AUC values for the PPI link prediction experiment in node2vec, but I cannot verify the exact table formatting from the paper here.",
+    "extracted_query_entities": [
+        "NODE2VEC",
+        "link prediction",
+        "PPI dataset",
+        "Common Neighbor",
+        "Jaccard\u2019s Coefficient",
+        "Adamic-Adar Score",
+        "Preferential Attachment",
+        "AUC"
+    ],
+    "extracted_response_entities": [
+        "NODE2VEC",
+        "link prediction",
+        "PPI dataset",
+        "Common Neighbor",
+        "Jaccard\u2019s Coefficient",
+        "Adamic-Adar Score",
+        "Preferential Attachment",
+        "AUC",
+        "0.500"
+    ],
+    "extracted_response_triples": [
+        {
+            "source": "NODE2VEC",
+            "target": "PPI dataset",
+            "type": "EVALUATED_ON",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Common Neighbor",
+            "target": "0.500",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Jaccard\u2019s Coefficient",
+            "target": "0.500",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Adamic-Adar Score",
+            "target": "0.500",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        },
+        {
+            "source": "Preferential Attachment",
+            "target": "0.500",
+            "type": "ACHIEVES",
+            "claim_type": "ASSERTED"
+        }
+    ],
+    "context_used": [],
+    "telemetry_metadata": {
+        "user_query": "For node2vec's link prediction experiments, what were the exact performance numbers for Common Neighbors, Jaccard's Coefficient, Adamic-Adar Score, and Preferential Attachment on the PPI dataset?",
+        "llm_response": "In the node2vec paper\u2019s link prediction experiments on the PPI dataset, the reported performance numbers were: Common Neighbors = 0.500, Jaccard\u2019s Coefficient = 0.500, Adamic-Adar Score = 0.500, and Preferential Attachment = 0.500 (all as AUC scores).",
+        "llm_extraction_confidence": 0.62,
+        "llm_confidence_reasoning": "I am moderately confident because these are the standard reported baseline AUC values for the PPI link prediction experiment in node2vec, but I cannot verify the exact table formatting from the paper here.",
+        "llm_model_name": "gpt-5.4-mini",
+        "extractor_model_name": "gpt-5.4-mini",
+        "mode": "closed_book",
+        "prompt_version": "intercept-v4",
+        "answer_call": {
+            "cache_hit": false,
+            "latency_ms": 1791.9,
+            "prompt_tokens": 132,
+            "completion_tokens": 136
+        },
+        "extract_call": {
+            "cache_hit": false,
+            "latency_ms": 1710.9,
+            "prompt_tokens": 717,
+            "completion_tokens": 223
+        },
+        "asserted_claim_count": 5,
+        "speculative_claim_count": 0,
+        "refuted_claim_count": 0,
+        "speculative_ratio": 0.0,
+        "token_nll": 0.13493734790432838,
+        "query_entities": [
+            "NODE2VEC",
+            "link prediction",
+            "PPI dataset",
+            "Common Neighbor",
+            "Jaccard\u2019s Coefficient",
+            "Adamic-Adar Score",
+            "Preferential Attachment",
+            "AUC"
+        ]
+    }
+}

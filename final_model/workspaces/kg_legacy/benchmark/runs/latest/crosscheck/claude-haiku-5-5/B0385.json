@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The dataset is sparse for cooccurrence edges because an edge exists only when two words appear within the context window; the evidence actually states the word cooccurrence network is fairly dense, so the sparsity premise is accepted and contradicted.",
+    "Labels are part-of-speech tags assigned by the Stanford POS-Tagger, which the evidence supports, but the answer accepts the false premise that the dataset is especially sparse.",
+    "The claim that the resulting graph has low average degree and weak local structure contradicts the evidence describing the network as fairly dense with high homophily.",
+    "The claim that many words are rare or occur in few contexts is not stated in the evidence and is invented to support the false sparsity premise."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly describes Wikipedia as a word cooccurrence network with POS-tag labels from the Stanford POS-Tagger, but it accepts the false premise that the dataset is especially sparse. The evidence explicitly says the word cooccurrence network is fairly dense, so the sparsity explanation and low-degree claim are unsupported and the answer fails to correct the premise.",
+  "judge_model": "claude-haiku-5-5"
+}

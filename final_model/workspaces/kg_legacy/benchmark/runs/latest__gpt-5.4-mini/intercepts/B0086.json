@@ -1,0 +1,86 @@
+{
+  "answer": "The passage says DeepWalk is suitable for statistical modeling of graphs because it turns a graph into a collection of short random-walk sequences, which makes the graph look like a corpus of \u201csentences\u201d that can be modeled with standard language-modeling ideas. In that form, it can learn latent representations from observed co-occurrence patterns rather than relying on hand-designed graph features. It learns graph regularities such as local neighborhood structure and higher-order proximity: nodes that tend to appear near each other in random walks, communities or clusters, and other structural similarities captured by repeated walk contexts.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This answer matches the standard description of DeepWalk and its learned regularities, though exact wording may vary depending on the passage.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "random walk",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "short random-walk sequence",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random-walk sequence",
+      "target": "GRAPH",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GRAPH",
+      "target": "corpus of sentence",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "corpus of sentence",
+      "target": "language-modeling idea",
+      "type": "USES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "latent representation",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representation",
+      "target": "observed co-occurrence pattern",
+      "type": "BASED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "local neighborhood structure",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "higher-order proximity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "communitie",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "CLUSTERS",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "structural similaritie",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "repeated walk context",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": 0.21851580219884073
+}

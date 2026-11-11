@@ -1,0 +1,68 @@
+{
+  "answer": "DeepWalk's vertex representations capture neighborhood (local structural) similarity: vertices that co-occur in short random walks, and so tend to share neighborhoods and community membership in the graph, are embedded close together in the latent space. The downstream benefit is that these features let standard statistical classifiers perform well on graph tasks such as multi-label node classification (e.g., community or group membership in social networks like BlogCatalog, Flickr, and YouTube), even when only a small fraction of nodes (as few as about 1%) are labeled. The representations are also scalable and can be updated online.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core claim about neighborhood/community similarity and sparse-label classification matches the DeepWalk paper, but the exact wording of the expected answer and specific figures like the 1% labeled-data level are from memory and could differ.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "neighborhood similarity",
+      "type": "PRESERVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex representation",
+      "target": "neighborhood similarity",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood similarity",
+      "target": "structural similarity",
+      "type": "IS_A",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex representation",
+      "target": "community detection",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "multi-label node classification",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "BlogCatalog",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "FLICKR",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "YOUTUBE",
+      "type": "EVALUATED_ON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "classification with few labeled node",
+      "type": "ACHIEVES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "online update",
+      "type": "ENABLES",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}

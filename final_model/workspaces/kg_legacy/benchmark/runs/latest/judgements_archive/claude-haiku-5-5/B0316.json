@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The AI accepts the false premise that LINE preserves only first-order proximity and ignores global structure; the evidence states the objective preserves both local and global network structures, with second-order proximity serving as the complement capturing global structure.",
+    "The claim that the first-order objective 'never looks at paths, multi-hop neighborhoods, or the global topology' and that LINE ignores global structure contradicts the source's statement that the model preserves both local and global structures.",
+    "The claim that first-order proximity alone is considered sufficient for real-world graphs is contradicted by the source, which says observed first-order proximity is not sufficient for preserving global network structure and that the combination is used.",
+    "The claim that restricting to edges avoids computing global structure such as multi-hop random walks is not stated in the evidence and mischaracterizes the paper's motivation."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise that LINE preserves only first-order proximity and ignores global structure, whereas the paper explicitly states the objective preserves both local and global structures via first- and second-order proximity. The justification that first-order alone is sufficient is contradicted by the source's explicit statement that observed first-order proximity is insufficient for global structure.",
+  "judge_model": "claude-haiku-5-5"
+}

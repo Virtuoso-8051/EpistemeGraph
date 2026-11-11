@@ -1,0 +1,2194 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "neural language model",
+    "random walks on a graph",
+    "skip-gram",
+    "word embedding",
+    "word co-occurrence",
+    "sentence",
+    "graph vertice",
+    "WORDS"
+  ],
+  "snapshot_source": "neo4j",
+  "seed_count": 22,
+  "node_count": 67,
+  "edge_count": 84,
+  "nodes": [
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "name": "Large-scale Information Network Embedding",
+      "type": "ALGORITHM",
+      "aliases": [
+        "1ST",
+        "1ST+2ND",
+        "2ND",
+        "LINE",
+        "LINE model",
+        "LINE(2ND",
+        "LSINE",
+        "Large-scale Information Network Embedding",
+        "network embedding model"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:7",
+      "name": "real-world information network",
+      "type": "CONCEPT",
+      "aliases": [
+        "RWIN",
+        "real-world information network"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:8",
+      "name": "language network",
+      "type": "CONCEPT",
+      "aliases": [
+        "LN",
+        "language network"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:10",
+      "name": "citation network",
+      "type": "CONCEPT",
+      "aliases": [
+        "CN",
+        "citation network",
+        "paper citation network"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:29",
+      "name": "embedding",
+      "type": "CONCEPT",
+      "aliases": [
+        "embedding"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:30",
+      "name": "word analogy",
+      "type": "TASK",
+      "aliases": [
+        "WA",
+        "word analogy"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:32",
+      "name": "graph factorization",
+      "type": "ALGORITHM",
+      "aliases": [
+        "GF",
+        "graph factorization"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "name": "DEEPWALK",
+      "type": "MODEL",
+      "aliases": [
+        "DEEPWALK"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:35",
+      "name": "truncated random walk",
+      "type": "ALGORITHM",
+      "aliases": [
+        "TRW",
+        "truncated random walk"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "name": "random walk",
+      "type": "ALGORITHM",
+      "aliases": [
+        "RW",
+        "random walk",
+        "random walk method"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:37",
+      "name": "unweighted edge",
+      "type": "CONCEPT",
+      "aliases": [
+        "UE",
+        "unweighted edge"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:38",
+      "name": "unweighted network",
+      "type": "CONCEPT",
+      "aliases": [
+        "UN",
+        "unweighted network"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:69",
+      "name": "number of vertice",
+      "type": "CONCEPT",
+      "aliases": [
+        "NV",
+        "number of vertice"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:72",
+      "name": "word cooccurrence network",
+      "type": "DATASET",
+      "aliases": [
+        "WCN",
+        "word cooccurrence network"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:73",
+      "name": "EnglishWikipedia page",
+      "type": "DATASET",
+      "aliases": [
+        "EP",
+        "EnglishWikipedia page"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:74",
+      "name": "FLICKR",
+      "type": "DATASET",
+      "aliases": [
+        "FLICKR"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:81",
+      "name": "social network embedding",
+      "type": "CONCEPT",
+      "aliases": [
+        "SNE",
+        "social network embedding"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:82",
+      "name": "binary edge",
+      "type": "CONCEPT",
+      "aliases": [
+        "BE",
+        "binary edge"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:87",
+      "name": "Wikipedia data",
+      "type": "DATASET",
+      "aliases": [
+        "WD",
+        "Wikipedia data"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:88",
+      "name": "two million node",
+      "type": "CONCEPT",
+      "aliases": [
+        "TMN",
+        "two million node"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:89",
+      "name": "SEMANTIC",
+      "type": "CONCEPT",
+      "aliases": [
+        "SEMANTIC"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:90",
+      "name": "syntactic",
+      "type": "CONCEPT",
+      "aliases": [
+        "syntactic"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:91",
+      "name": "SKIPGRAM",
+      "type": "MODEL",
+      "aliases": [
+        "SKIPGRAM"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:94",
+      "name": "word vector",
+      "type": "CONCEPT",
+      "aliases": [
+        "WV",
+        "word vector"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:95",
+      "name": "document representation",
+      "type": "CONCEPT",
+      "aliases": [
+        "DR",
+        "document representation"
+      ],
+      "source_pdfs": [
+        "paper1.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "name": "depth-first search",
+      "type": "ALGORITHM",
+      "aliases": [
+        "DFS",
+        "depth-first search",
+        "depth-first strategy"
+      ],
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "name": "NODE2VEC",
+      "type": "ALGORITHM",
+      "aliases": [
+        "NODE2VEC"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:114",
+      "name": "continuous feature representation",
+      "type": "CONCEPT",
+      "aliases": [
+        "CFR",
+        "continuous feature representation"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:130",
+      "name": "2 nd order random walk approach",
+      "type": "ALGORITHM",
+      "aliases": [
+        "2 nd order random walk approach",
+        "2NORWA"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:131",
+      "name": "network neighborhood",
+      "type": "CONCEPT",
+      "aliases": [
+        "NN",
+        "NS(U",
+        "network neighborhood"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:144",
+      "name": "representation learning",
+      "type": "CONCEPT",
+      "aliases": [
+        "RL",
+        "representation learning"
+      ],
+      "source_pdfs": [
+        "paper2.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:145",
+      "name": "unsupervised feature learning",
+      "type": "CONCEPT",
+      "aliases": [
+        "UFL",
+        "unsupervised feature learning"
+      ],
+      "source_pdfs": [
+        "paper2.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:156",
+      "name": "Skip-gram model",
+      "type": "MODEL",
+      "aliases": [
+        "SGM",
+        "Skip-gram model"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:157",
+      "name": "neighborhood preserving likelihood objective",
+      "type": "CONCEPT",
+      "aliases": [
+        "NPLO",
+        "neighborhood preserving likelihood objective"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:158",
+      "name": "word feature representation",
+      "type": "CONCEPT",
+      "aliases": [
+        "WFR",
+        "word feature representation"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:159",
+      "name": "likelihood objective",
+      "type": "CONCEPT",
+      "aliases": [
+        "LO",
+        "likelihood objective"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:160",
+      "name": "negative sampling",
+      "type": "ALGORITHM",
+      "aliases": [
+        "NS",
+        "negative sampling"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:161",
+      "name": "Skip-gram objective",
+      "type": "CONCEPT",
+      "aliases": [
+        "SGO",
+        "Skip-gram objective"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:162",
+      "name": "distributional hypothesis",
+      "type": "CONCEPT",
+      "aliases": [
+        "DH",
+        "distributional hypothesis"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:174",
+      "name": "BFS",
+      "type": "ALGORITHM",
+      "aliases": [
+        "BFS",
+        "breadth-first strategy"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:175",
+      "name": "biased random walk procedure",
+      "type": "ALGORITHM",
+      "aliases": [
+        "BRWP",
+        "biased random walk procedure"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:177",
+      "name": "2nd order Markovian",
+      "type": "CONCEPT",
+      "aliases": [
+        "2OM",
+        "2nd order Markovian"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:492",
+      "name": "graph connectivity",
+      "type": "CONCEPT",
+      "aliases": [
+        "GC",
+        "graph connectivity"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:493",
+      "name": "effective sampling rate",
+      "type": "CONCEPT",
+      "aliases": [
+        "ESR",
+        "effective sampling rate"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:507",
+      "name": "uniform random walk",
+      "type": "CONCEPT",
+      "aliases": [
+        "URW",
+        "uniform random walk"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:513",
+      "name": "hierarchical sampling",
+      "type": "ALGORITHM",
+      "aliases": [
+        "HS",
+        "hierarchical sampling"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:518",
+      "name": "BlogCatalog",
+      "type": "DATASET",
+      "aliases": [
+        "BlogCatalog"
+      ],
+      "source_pdfs": [
+        "paper2.pdf",
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:528",
+      "name": "sampling procedure",
+      "type": "ALGORITHM",
+      "aliases": [
+        "SP",
+        "sampling procedure"
+      ],
+      "source_pdfs": [
+        "paper2.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:547",
+      "name": "latent representation",
+      "type": "CONCEPT",
+      "aliases": [
+        "LR",
+        "latent representation"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:548",
+      "name": "language modeling",
+      "type": "CONCEPT",
+      "aliases": [
+        "LM",
+        "language modeling"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:549",
+      "name": "YOUTUBE",
+      "type": "DATASET",
+      "aliases": [
+        "YOUTUBE"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:550",
+      "name": "F1 score",
+      "type": "METRIC",
+      "aliases": [
+        "F1 score",
+        "FS"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:558",
+      "name": "neural language model",
+      "type": "MODEL",
+      "aliases": [
+        "NLM",
+        "neural language model"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:559",
+      "name": "randomly-generated walk",
+      "type": "CONCEPT",
+      "aliases": [
+        "RGW",
+        "randomly-generated walk"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:583",
+      "name": "Optimization techniques originally designed for language modeling",
+      "type": "ALGORITHM",
+      "aliases": [
+        "OTODLM",
+        "Optimization techniques originally designed for language modeling"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:584",
+      "name": "Similarity measure",
+      "type": "CONCEPT",
+      "aliases": [
+        "SM",
+        "Similarity measure"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:585",
+      "name": "Content recommendation",
+      "type": "CONCEPT",
+      "aliases": [
+        "CR",
+        "Content recommendation"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:586",
+      "name": "Community detection",
+      "type": "CONCEPT",
+      "aliases": [
+        "CD",
+        "Community detection"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:589",
+      "name": "stream of short random walk",
+      "type": "CONCEPT",
+      "aliases": [
+        "SSRW",
+        "stream of short random walk"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:590",
+      "name": "NETWORK",
+      "type": "CONCEPT",
+      "aliases": [
+        "NETWORK"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:591",
+      "name": "probabilistic neural network",
+      "type": "MODEL",
+      "aliases": [
+        "PNN",
+        "probabilistic neural network"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:596",
+      "name": "random walk generator",
+      "type": "ALGORITHM",
+      "aliases": [
+        "RWG",
+        "random walk generator"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:597",
+      "name": "GRAPH",
+      "type": "CONCEPT",
+      "aliases": [
+        "GRAPH",
+        "GRAPHS"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:598",
+      "name": "language model",
+      "type": "MODEL",
+      "aliases": [
+        "LM",
+        "language model"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:599",
+      "name": "cooccurrence probability",
+      "type": "CONCEPT",
+      "aliases": [
+        "CP",
+        "cooccurrence probability"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:617",
+      "name": "number of walks started per vertex",
+      "type": "CONCEPT",
+      "aliases": [
+        "GAMMA",
+        "NWSPV",
+        "number of walks started per vertex"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    },
+    {
+      "id": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:626",
+      "name": "unobservable language graph",
+      "type": "CONCEPT",
+      "aliases": [
+        "ULG",
+        "unobservable language graph"
+      ],
+      "source_pdfs": [
+        "paper3.pdf"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:7",
+      "type": "EVALUATED_ON",
+      "weight": 0.96,
+      "grounding_score": 0.8578700733184814,
+      "evidence_quote": "Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:8",
+      "type": "EVALUATED_ON",
+      "weight": 0.95,
+      "grounding_score": 0.8020934295654296,
+      "evidence_quote": "We evaluate the performance of the LINE with various real-world information networks, including language networks, social networks, and citation networks.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_005"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:10",
+      "type": "EVALUATED_ON",
+      "weight": 0.95,
+      "grounding_score": 0.9721740913391113,
+      "evidence_quote": "We evaluate the performance of the LINE with various real-world information networks, including language networks, social networks, and citation networks.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_005"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:32",
+      "type": "OUTPERFORMS",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "The LINE(2nd) outperforms LINE(1st) and is slightly better than the graph factorization.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_020",
+        "DOC_001_CH_021"
+      ],
+      "support_count": 2,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "type": "OUTPERFORMS",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "LINE(2nd) outperforms DeepWalk, indicating a better capability of modeling the second-order proximity.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_021",
+        "DOC_001_CH_022",
+        "DOC_001_CH_023",
+        "DOC_001_CH_025",
+        "DOC_001_CH_026"
+      ],
+      "support_count": 5,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "type": "CONVERGES_FASTER_THAN",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "The LINE(2nd) consistently outperforms LINE(1st) and DeepWalk, and both the LINE(1st) and LINE(2nd) converge much faster than DeepWalk.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_026"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "type": "USES",
+      "weight": 0.74,
+      "grounding_score": 1.0,
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_021"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:69",
+      "type": "DOES_NOT_DEPEND_ON",
+      "weight": 0.93,
+      "grounding_score": 0.802100260257721,
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_013"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:91",
+      "type": "OUTPERFORMS",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "We can see that LINE(2nd) outperforms all other methods, including the graph embedding methods and the SkipGram.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_018"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:160",
+      "type": "USES",
+      "weight": 0.95,
+      "grounding_score": 0.8310568523406983,
+      "evidence_quote": "Hence, keeping everything else the same, we switch to negative sampling in DeepWalk which is also the de facto approximation in node2vec and LINE.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_019"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:174",
+      "type": "USES",
+      "weight": 0.97,
+      "grounding_score": 0.9909122180938721,
+      "evidence_quote": "LINE [28] proposes primarily a breadth-first strategy, sampling nodes and optimizing the likelihood independently over only 1-hop and 2-hop neighbors.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_028"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:7",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:8",
+      "type": "CONTAINS",
+      "weight": 0.93,
+      "grounding_score": 0.9406180095672607,
+      "evidence_quote": "Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:7",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:10",
+      "type": "CONTAINS",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:8",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:88",
+      "type": "CONTAINS",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "We start with the results on the language network, which contains two million nodes and a billion edges.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_017"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:29",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:30",
+      "type": "EVALUATED_ON",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "The effectiveness of the learned embeddings is evaluated within multiple data mining tasks, including word analogy, text classification, and node classification.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_005"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:30",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:87",
+      "type": "EVALUATED_ON",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "Table 2: Results of word analogy on Wikipedia data.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_017"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:30",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:89",
+      "type": "CONTAINS",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Two categories of word analogy are used in this task: semantic and syntactic.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_018"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:30",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:90",
+      "type": "CONTAINS",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Two categories of word analogy are used in this task: semantic and syntactic.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_018"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:32",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "type": "OUTPERFORMS",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "The graph factorization outperforms DeepWalk as DeepWalk ignores the weights of the edges.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_020"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "type": "OUTPERFORMS",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "As this network is also very sparse, DeepWalk outperforms LINE(2nd).",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_023"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "type": "COMPARES_WITH",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "Both DeepWalk and LINE can be seen as rigid search strategies over networks.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_028"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:8",
+      "type": "USES",
+      "weight": 0.94,
+      "grounding_score": 1.0,
+      "evidence_quote": "For DeepWalk, different cutoff thresholds are tried to convert the language network into a binary network, and the best performance is achieved when all the edges are kept in the network.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_018"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:35",
+      "type": "DEPLOYS",
+      "weight": 0.98,
+      "grounding_score": 0.8573143911361694,
+      "evidence_quote": "The most recent work related with ours is DeepWalk [16], which deploys a truncated random walk for social network embedding.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_006"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:35",
+      "type": "USES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "It is interesting to observe how DeepWalk tackles the network sparsity through truncated random walks, which enrich the neighbors or contexts of each vertex.",
+      "source_pdfs": [
+        "paper1.pdf",
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_021",
+        "DOC_003_CH_001"
+      ],
+      "support_count": 2,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "type": "USES",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "DeepWalk uses random walks to expand the neighborhood of a vertex, which is analogical to a depth-first search.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_006",
+        "DOC_001_CH_024"
+      ],
+      "support_count": 2,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:37",
+      "type": "APPLIES_TO",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "Practically, DeepWalk only applies to unweighted networks, while our model is applicable for networks with both weighted and unweighted edges.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_006"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:38",
+      "type": "APPLIES_TO",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Practically, DeepWalk only applies to unweighted networks, while our model is applicable for networks with both weighted and unweighted edges.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_007"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:74",
+      "type": "EVALUATED_ON",
+      "weight": 0.98,
+      "grounding_score": 0.864381332397461,
+      "evidence_quote": "We demonstrate DeepWalk\u2019s latent representations on several multi-label network classification tasks for social networks such as BlogCatalog, Flickr, and YouTube.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:81",
+      "type": "IS_A",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "DeepWalk is an approach recently proposed for social network embedding, which is only applicable for networks with binary edges.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_016"
+      ],
+      "support_count": 1,
+      "is_functional": true
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:82",
+      "type": "REQUIRES",
+      "weight": 0.98,
+      "grounding_score": 0.882350845336914,
+      "evidence_quote": "DeepWalk is an approach recently proposed for social network embedding, which is only applicable for networks with binary edges.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_016"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "type": "COMPARED_WITH",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "DeepWalk and node2vec give comparable performance on PPI.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_021"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:145",
+      "type": "GENERALIZES",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "DeepWalk generalizes recent advancements in language modeling and unsupervised feature learning (or deep learning ) from sequences of words to graphs.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:160",
+      "type": "USES",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "Hence, keeping everything else the same, we switch to negative sampling in DeepWalk which is also the de facto approximation in node2vec and LINE.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_019"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:507",
+      "type": "USES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "DeepWalk [24] proposes search using uniform random walks.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_018",
+        "DOC_002_CH_028"
+      ],
+      "support_count": 2,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:513",
+      "type": "USES",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "First, DeepWalk uses hierarchical sampling to approximate the softmax probabilities with an objective similar to the one use by node2vec.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_019"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:518",
+      "type": "EVALUATED_ON",
+      "weight": 0.98,
+      "grounding_score": 0.8281138610839844,
+      "evidence_quote": "We demonstrate DeepWalk\u2019s latent representations on several multi-label network classification tasks for social networks such as BlogCatalog, Flickr, and YouTube.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:547",
+      "type": "PROPOSES",
+      "weight": 0.99,
+      "grounding_score": 0.6789086353007663,
+      "evidence_quote": "DeepWalk: Online Learning of Social Representations Bryan Perozzi Stony Brook University Department of Computer Science Rami Al-Rfou Stony Brook University Department of Computer Science Steven Skiena Stony Brook University Department of Computer Science {bperozzi, ralrfou, skiena}@cs.stonybrook.edu ABSTRACT We present DeepW alk, a novel approach for learning latent representations of vertices in a network. These latent representations encode social relations in a continuous vector space, which is easily exploited by statistical models.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:548",
+      "type": "GENERALIZES",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "DeepWalk generalizes recent advancements in language modeling and unsupervised feature learning (or deep learning ) from sequences of words to graphs.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:549",
+      "type": "EVALUATED_ON",
+      "weight": 0.98,
+      "grounding_score": 0.7757519912719726,
+      "evidence_quote": "We demonstrate DeepWalk\u2019s latent representations on several multi-label network classification tasks for social networks such as BlogCatalog, Flickr, and YouTube.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:550",
+      "type": "ACHIEVES",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "DeepWalk\u2019s representations can provide F1 scores up to 10% higher than competing methods when labeled data is sparse.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:35",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "type": "BASED_ON",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "The random walk approach acts like a depth-first search.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_021"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:35",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:558",
+      "type": "COMBINED_WITH",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "By combining both truncated random walks and neural language models we formulate a method which satisfies all Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_009"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:10",
+      "type": "USES",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "This is because the random walk on the paper citation network can only reach papers along the citing path (i.e., older papers) and cannot reach other references.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_023"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "type": "ALSO_USED_IN",
+      "weight": 0.92,
+      "grounding_score": 1.0,
+      "evidence_quote": "We showed how random walks, also used in DeepWalk [24], allow the sampled nodes to be reused as neighborhoods for different source nodes appearing in the walk.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_025"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "type": "USES",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "We showed how random walks, also used in DeepWalk [24], allow the sampled nodes to be reused as neighborhoods for different source nodes appearing in the walk.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_026"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:177",
+      "type": "ARE",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "Note that by setting \u03c0v,x to be a function of the preceeding node in the walk t, the random walks are 2nd order Markovian.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_013"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:492",
+      "type": "USES",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "In particular, by imposing graph connectivity in the sample generation process, random walks provide a convenient mechanism to increase the effective sampling rate by reusing samples across different source nodes.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_014"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:493",
+      "type": "INCREASES",
+      "weight": 0.92,
+      "grounding_score": 1.0,
+      "evidence_quote": "In particular, by imposing graph connectivity in the sample generation process, random walks provide a convenient mechanism to increase the effective sampling rate by reusing samples across different source nodes.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_014"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:584",
+      "type": "USED_AS",
+      "weight": 0.93,
+      "grounding_score": 0.9806610298156738,
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_006"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:584",
+      "type": "USES",
+      "weight": 0.98,
+      "grounding_score": 0.9531063032150269,
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_007"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:585",
+      "type": "USES",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_006"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:586",
+      "type": "USES",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "Random walks have been used as a similarity measure for a variety of problems in content recommendation [11] and community detection [1].",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_006"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:72",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:73",
+      "type": "BASED_ON",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "We constructed a word cooccurrence network from the entire set of EnglishWikipedia pages.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_015"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:91",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:598",
+      "type": "IS_A",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "SkipGram is a language model that maximizes the cooccurrence probability among the words that appear within a window, w, in a sentence [26].",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_011"
+      ],
+      "support_count": 1,
+      "is_functional": true
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:94",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:95",
+      "type": "USES",
+      "weight": 0.94,
+      "grounding_score": 1.0,
+      "evidence_quote": "Another way to evaluate the quality of the word embeddings is to use the word vectors to compute document representation, which can be evaluated with document classification tasks.",
+      "source_pdfs": [
+        "paper1.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_001_CH_019"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "type": "OUTPERFORMS",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Amongst the feature learning algorithms, node2vec outperforms both DeepWalk and LINE in all networks with gain up to 3.8% and 6.5% respectively in the AUC scores for the best possible choices of the binary operator for each algorithm.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_027"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "type": "OUTPERFORMS",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_022",
+        "DOC_002_CH_027"
+      ],
+      "support_count": 2,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "type": "USES",
+      "weight": 0.96,
+      "grounding_score": 1.0,
+      "evidence_quote": "The three phases of node2vec, i.e., preprocessing to compute transition probabilities, random walk simulations and optimization using SGD, are executed sequentially.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_015"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:114",
+      "type": "PROPOSES",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "Here we propose node2vec, an algorithmic framework for learning continuous feature representations for nodes in networks.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_001"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:160",
+      "type": "USES",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "Hence, keeping everything else the same, we switch to negative sampling in DeepWalk which is also the de facto approximation in node2vec and LINE.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_019"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:113",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:518",
+      "type": "EVALUATED_ON",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "the node2vec algorithm involves a number of parameters and in Figure 5a, we examine how the different choices of parameters affect the performance of node2vec on the BlogCatalog dataset using a 50-50 split between labeled and unlabeled data.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_023"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:130",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:131",
+      "type": "GENERATES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "We use a 2 nd order random walk approach to generate (sample) network neighborhoods for nodes.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_004"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:144",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:591",
+      "type": "USES",
+      "weight": 0.84,
+      "grounding_score": 1.0,
+      "evidence_quote": "Recent work in representation learning has focused on using probabilistic neural networks to build general representations of words which extend the scope of language modeling beyond its original goals.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:156",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:114",
+      "type": "GENERATES",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "In particular, the Skip-gram model [21] aims to learn continuous feature representations for words by optimizing a neighborhood preserving likelihood objective.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_007"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:156",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:157",
+      "type": "OPTIMIZES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "In particular, the Skip-gram model [21] aims to learn continuous feature representations for words by optimizing a neighborhood preserving likelihood objective.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_007"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:158",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:159",
+      "type": "ARE_LEARNED_BY",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "The word feature representations are learned by optmizing the likelihood objective using SGD with negative sampling [22].",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:159",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:160",
+      "type": "USES",
+      "weight": 0.97,
+      "grounding_score": 0.6969286990165711,
+      "evidence_quote": "The word feature representations are learned by optmizing the likelihood objective using SGD with negative sampling [22].",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:161",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:162",
+      "type": "BASED_ON",
+      "weight": 0.99,
+      "grounding_score": 1.0,
+      "evidence_quote": "The Skip-gram objective is based on the distributional hypothesis which states that words in similar contexts tend to have similar meanings [9].",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:174",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:29",
+      "type": "LEADS_TO",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "In particular, the neighborhoods sampled by BFS lead to embeddings that correspond closely to structural equivalence.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_011"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:175",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:98",
+      "type": "ENABLES",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "We achieve this by developing a flexible biased random walk procedure that can explore neighborhoods in a BFS as well as DFS fashion.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_012"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:175",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:174",
+      "type": "ENABLES",
+      "weight": 0.97,
+      "grounding_score": 0.9750617218017578,
+      "evidence_quote": "We achieve this by developing a flexible biased random walk procedure that can explore neighborhoods in a BFS as well as DFS fashion.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_012"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:507",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:0",
+      "type": "OUTPERFORMS",
+      "weight": 0.88,
+      "grounding_score": 0.8843137216567993,
+      "evidence_quote": "As we can see in the Wikipedia word cooccurrence network, uniform walks cannot guide the search procedure towards the best samples and hence, we achieve a gain of 21.8% over DeepWalk and 33.2% over LINE.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_022"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:507",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:34",
+      "type": "OUTPERFORMS",
+      "weight": 0.88,
+      "grounding_score": 1.0,
+      "evidence_quote": "As we can see in the Wikipedia word cooccurrence network, uniform walks cannot guide the search procedure towards the best samples and hence, we achieve a gain of 21.8% over DeepWalk and 33.2% over LINE.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_022"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:528",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "type": "CONTAINS",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "The sampling procedure comprises of preprocessing for computing transition probabilities for our walk (negligibly small) and simulation of random walks.",
+      "source_pdfs": [
+        "paper2.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_002_CH_025"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:548",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "type": "GENERALIZED_TO",
+      "weight": 0.95,
+      "grounding_score": 1.0,
+      "evidence_quote": "In this work, we present a generalization of language modeling to explore the graph through a stream of short random walks.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:548",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:547",
+      "type": "GENERATES",
+      "weight": 0.89,
+      "grounding_score": 1.0,
+      "evidence_quote": "Advances in language modeling may continue to generate improved latent representations for networks.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_020"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:548",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:591",
+      "type": "USES",
+      "weight": 0.88,
+      "grounding_score": 1.0,
+      "evidence_quote": "Recent work in representation learning has focused on using probabilistic neural networks to build general representations of words which extend the scope of language modeling beyond its original goals.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_008"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:548",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:626",
+      "type": "APPROXIMATES",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "In our view, language modeling is actually sampling from an unobservable language graph.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_020"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:558",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:559",
+      "type": "USES",
+      "weight": 0.93,
+      "grounding_score": 1.0,
+      "evidence_quote": "DeepW alkgeneralizes neural language models to process a special language composed of a set of randomly-generated walks.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_003"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:583",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "type": "USES",
+      "weight": 0.9,
+      "grounding_score": 1.0,
+      "evidence_quote": "Our method for satisfying these requirements learns representation for vertices from a stream of short random walks, using optimization techniques originally designed for language modeling.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_006"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:589",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:590",
+      "type": "USES",
+      "weight": 0.97,
+      "grounding_score": 1.0,
+      "evidence_quote": "It is this connection to local structure that motivates us to use a stream of short random walks as our basic tool for extracting information from a network.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_007"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:596",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:597",
+      "type": "USES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "The random walk generator takes a graph G and samples uniformly a random vertex vi as the root of the random walkWvi.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_010"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:598",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:599",
+      "type": "OPTIMIZES",
+      "weight": 0.96,
+      "grounding_score": 0.850186653137207,
+      "evidence_quote": "SkipGram is a language model that maximizes the cooccurrence probability among the words that appear within a window, w, in a sentence [26].",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_011"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    },
+    {
+      "source": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:617",
+      "target": "4:e700d408-5423-4ed7-8a72-a4bd4e89f8b5:36",
+      "type": "DEFINES",
+      "weight": 0.98,
+      "grounding_score": 1.0,
+      "evidence_quote": "Figure 5a shows the effects of increasing \u03b3, the number of random walks that we start from each vertex.",
+      "source_pdfs": [
+        "paper3.pdf"
+      ],
+      "chunk_ids": [
+        "DOC_003_CH_018"
+      ],
+      "support_count": 1,
+      "is_functional": false
+    }
+  ]
+}

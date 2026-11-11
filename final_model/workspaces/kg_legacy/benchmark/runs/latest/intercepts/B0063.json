@@ -1,0 +1,38 @@
+{
+  "answer": "DeepWalk's 2-dimensional embedding of the Karate network reflects the graph's community structure: vertices that are closely connected in the original graph (for example, members of the same faction of the karate club) are placed close together in the latent space, so the communities appear as distinguishable clusters in the 2D representation.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly sure the paper's Figure 1 shows community-based clustering of the Karate network in 2D, but I am recalling the exact wording of the caption and text from memory and may be imprecise on details.",
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "target": "Karate network 2-dimensional embedding",
+      "type": "GENERATES",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Karate network 2-dimensional embedding",
+      "target": "community structure",
+      "type": "REPRESENTS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "target": "community structure",
+      "type": "PRESERVE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertices closely connected in original graph",
+      "target": "nearby points in latent space",
+      "type": "MAPS_TO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community structure",
+      "target": "distinguishable clusters in 2D representation",
+      "type": "HAS_CHARACTERISTIC",
+      "claim_type": "ASSERTED"
+    }
+  ],
+  "token_nll": null
+}
