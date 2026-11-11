@@ -1,0 +1,128 @@
+{
+  "entities": [
+    {
+      "name": "Geometric amoebot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Original amoebot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Joint movement extension",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Infinite regular triangular grid graph",
+      "alias": "G\u2206",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Connectivity graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Bonds",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Sequential activation model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Locomotion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "High probability",
+      "alias": "w.h.p.",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Geometric amoebot model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Original amoebot model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "We slightly deviate from the original model to make it more suitable to our extension.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Joint movement extension",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Geometric amoebot model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "In this section, we introduce the geometric amoebot model (Daymude et al., 2023).",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Geometric amoebot model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Infinite regular triangular grid graph",
+      "object_alias": "G\u2206",
+      "object_type": "CONCEPT",
+      "evidence_quote": "A set of n amoebots is placed on the infinite regular triangular grid graph G\u2206 =( V\u2206,E \u2206) (see Fig. 1).",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Amoebot structure",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Connectivity graph",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We define graph S = G\u2206|V induced by V to be the connectivity graph of the amoebot structure.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Sequential activation model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Amoebot structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The sequential activation model only allows a single active amoebot at a time.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Joint movement extension",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Bonds",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the joint movement extension, we will strengthen the role of the bonds and make them important for the connectivity of the amoebot structure.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "entities": [
+    {
+      "name": "DDR-coin",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Distributed Trigger Counting",
+      "alias": "DTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "CoinRand",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "RingRand",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "TreeFill",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Cascading Thresholds",
+      "alias": "CT",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "message complexity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Maximum messages received per node",
+      "alias": "MaxRcv",
+      "type": "METRIC"
+    },
+    {
+      "name": "KT 0 model",
+      "alias": "KT 0",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "KT 1 model",
+      "alias": "KT 1",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "f-resilient network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "fully-connected graph",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "DDR-coin",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Distributed Trigger Counting",
+      "object_alias": "DTC",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Kim et al. [8] introduced DDR-coin, a probabilistic Distributed Trigger Counting (DTC) algorithm based on the Monte Carlo paradigm\u2014 meaning the system may occasionally fail to raise an alert upon receiving w signals.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DDR-coin",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "message complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Compared to earlier approaches such as CoinRand, RingRand, and TreeFill, DDR-coin achieves lower message complexity and reduced maximum messages received per node (MaxRcv) for larger values of n.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Cascading Thresholds",
+      "subject_alias": "CT",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "message complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "CT improves overall message complexity while remaining sub-optimal in terms of MaxRcv.",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Cascading Thresholds",
+      "subject_alias": "CT",
+      "subject_type": "ALGORITHM",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "TreeFill",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Compared to the previously optimal TreeFill algorithm, CT offers several advantages: it is easier to implement, requires less code, and eliminates the need for distributed locking mechanisms.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Cascading Thresholds",
+      "subject_alias": "CT",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "CoinRand",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Experimental results show that CT outperforms earlier algorithms such as CoinRand and RingRand in both message complexity and MaxRcv, while delivering performance comparable to TreeFill.",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Cascading Thresholds",
+      "subject_alias": "CT",
+      "subject_type": "ALGORITHM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "RingRand",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Experimental results show that CT outperforms earlier algorithms such as CoinRand and RingRand in both message complexity and MaxRcv, while delivering performance comparable to TreeFill.",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "KT 1 model",
+      "subject_alias": "KT 1",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "fully-connected graph",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The distributed network is modeled as a fully-connected (i.e., complete) graph with n nodes.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "KT 0 model",
+      "subject_alias": "KT 0",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "f-resilient network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "A network is termed f -resilient if at most f nodes can fail due to crashes.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

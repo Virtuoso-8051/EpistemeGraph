@@ -1,0 +1,130 @@
+{
+  "entities": [
+    {
+      "name": "Locally Stable Reconfiguration",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Reverse Reconfiguration",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombical Meta-Module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Connectivity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Stability",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Stable Reconfiguration Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Bonds",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Remark 3.2",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Reverse Reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "There are locally stable reconfigurations (S0,...,S F ) such that the reverse reconfiguration (SF ,...,S 0) is not locally stable.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Amoebot Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Connectivity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "The weak - est point of a reconfiguration (S0,...,S F ) is the amoe - bot structure Si with the lowest connectivity.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Stability",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Connectivity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "In the following, we propose two measures for stability.",
+      "extraction_confidence": 0.45
+    },
+    {
+      "subject": "Stability",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Connectivity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "It is therefore desirable to maintain the connectivity between the amoe - bots as much as possible.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Locally Stable Reconfiguration",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Stability",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We call a reconfiguration (S0,...,S F ) locally stable if and only if \u2200i \u2208{ 0,...,F \u2212 1} : |\u0393S0i (U )| = \u0398(|\u0393Si (U )|) for all connected components U \u2286 Si.",
+      "extraction_confidence": 0.35
+    },
+    {
+      "subject": "Rhombical Meta-Module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Amoebot Structure",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "For example, consider the second step of the second last phase of our algorithm that forms a line of r rhombical meta-modules of side length l \u2212 1 from a line of n = r \u00b7 l2/2 amoebots (see Theorem 3.1 and Fig. 20).",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Stable Reconfiguration Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "Bonds",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The reconfigura - tion only removes a constant fraction of the bonds between two groups and adds O(\u221an) bonds afterwards.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "entities": [
+    {
+      "name": "Candidate Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger Token",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rank",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Threshold Value",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Token Counter",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Token",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Committee",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Phase 1",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Chernoff Bound",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Alert",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Token Counter",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Each processor x maintains a counter T (x), referred to as a token counter, which tracks the number of triggers received by x.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Token",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "Trigger Token",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "A single token is defined as the receipt of \u03c4 triggers, i.e., a token is accumulated every time the count reaches a multiple of \u03c4.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Threshold Value",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Trigger Token",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Each processor computes a threshold value \u03c4 = \u230a w2n\u230b, where w is the total number of triggers required to raise the alert.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Committee",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "All the candidate processors form a committee.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Rank",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "Candidate Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The rank becomes the ID of the processor.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Chernoff Bound",
+      "subject_alias": "",
+      "subject_type": "METRIC",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Rank",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The range is chosen such that all n ranks are distinct with high probability, which follows from a standard Chernoff bound analysis [13].",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Phase 1",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Threshold Value",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "In that case, each processor calculates the threshold value (\u03c4 = \u230aw1\u22152n\u230b) where w1 is the number of triggers left to count after which the alert should be raised.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Alert",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "At last, the non-faulty processors raise the alert (see Lemma 2).",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Trigger Token",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Whenever a candidate processor gets to know about any trigger token, that candidate processor broadcasts the message to all other candidate processors.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

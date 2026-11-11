@@ -1,0 +1,157 @@
+{
+  "entities": [
+    {
+      "name": "Joint Movement Extension",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot Model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Modular Robot System",
+      "alias": "MRS",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Reconfiguration Problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Locomotion Problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Crystalline Atom Model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Nubot Model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Spanning Tree Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Reconfiguration Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Centralized Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Natural Lower Bound",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Joint Movement Extension",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Amoebot Model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "In the joint movement extension, the way amoebots move is altered.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Joint Movement Extension",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Reconfiguration Algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We will show that in the joint movement extension, the amoebots are able to simulate the reconfiguration algorithm for the crystalline atom model, and with that break the lower bound of the original amoebot model.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Reconfiguration Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Crystalline Atom Model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "We will show that in the joint movement extension, the amoebots are able to simulate the reconfiguration algorithm for the crystalline atom model, and with that break the lower bound of the original amoebot model.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Reconfiguration Problem",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Centralized Algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "we develop centralized algorithms\u2014in contrast to the majority of literature on the amoebot model that considers distrib - uted algorithms\u2014for two fundamental problems of modular robot systems (MRS): reconfiguration and locomotion.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Locomotion Problem",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Spanning Tree Primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In the original amoebot model, one would use the spanning tree primitive to move along the surface (Daymude et al., 2019).",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Spanning Tree Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Locomotion Problem",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "However, we only obtain a constant velocity with that.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Crystalline Atom Model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Natural Lower Bound",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To our knowledge, polylogarithmic time solutions were found for two types of MRSs: in the nubot model (Woods et al., 2013) and crystalline atom model (Aloupis et al., 2008).",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Nubot Model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Natural Lower Bound",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "To our knowledge, polylogarithmic time solutions were found for two types of MRSs: in the nubot model (Woods et al., 2013) and crystalline atom model (Aloupis et al., 2008).",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

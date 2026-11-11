@@ -1,0 +1,169 @@
+{
+  "entities": [
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Centralized Scheduler",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Reconfiguration",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Handover Movement",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Joint Movement Extension",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Crystalline Atoms",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Telecubes",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Prismatic Cubes",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Modular Robotic Systems",
+      "alias": "MRSs",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Distributed Solutions",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Centralized Scheduler",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this paper, we assume that we have a centralized scheduler.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Centralized Scheduler",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "At the beginning of each synchronous round, it decides for each amoebot (i) which bonds to release, (ii) which movements to perform, and (iii) which bonds to reestablish.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Meta-module",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Joint Movement Extension",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our meta-modules implement all aforementioned movement primitives without any constraints, i.e., they perform them in place.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Crystalline Atoms",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Joint Movement Extension",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "From all aforementioned models, crystalline atoms (Rus & V ona, 1999), telecubes (Suh et al., 2002; Vassilvitskii et al., 2002b), and prismatic cubes (Weller et al., 2009) are the closest to our joint movement extension.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Telecubes",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Joint Movement Extension",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "From all aforementioned models, crystalline atoms (Rus & V ona, 1999), telecubes (Suh et al., 2002; Vassilvitskii et al., 2002b), and prismatic cubes (Weller et al., 2009) are the closest to our joint movement extension.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Prismatic Cubes",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Joint Movement Extension",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "From all aforementioned models, crystalline atoms (Rus & V ona, 1999), telecubes (Suh et al., 2002; Vassilvitskii et al., 2002b), and prismatic cubes (Weller et al., 2009) are the closest to our joint movement extension.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Amoebot",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Modular Robotic Systems",
+      "object_alias": "MRSs",
+      "object_type": "SYSTEM",
+      "evidence_quote": "In contrast to amoebots, a line of robots cannot reconfigure to any other shape since each pair of robots can only have a single point of contact (Aloupis et al., 2009).",
+      "extraction_confidence": 0.35
+    },
+    {
+      "subject": "Distributed Solutions",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We leave the design of distrib - uted solutions for future work.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Reconfiguration",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "Reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The reversibility of valid movements immediately implies that each reconfiguration is reversible, i.e., if there is a reconfiguration (S0 ,..., SF ), then there is also a recon - figuration (SF ,..., S0 ).",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

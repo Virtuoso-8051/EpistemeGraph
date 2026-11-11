@@ -1,0 +1,135 @@
+{
+  "entities": [
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Amoebot Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Structural Conflict",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Collision",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Undefined State",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Bond",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Forbidden Intersection",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Expansion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Contraction",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Amoebot Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Valid Structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We require that Sti is valid for all t \u2208 [0, 1].",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Structural Conflict",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Undefined State",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Hence, the expansions cause a structural conflict and the amoebot structure transitions into an undefined state Fig. 3 Movements in the extension.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Collision",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Undefined State",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Hence, the amoebot structure transitions into an undefined state Fig. 4 Structural conflict.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Collision",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Forbidden Intersection",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Second, we say that a collision occurs if and only if we can embed Sti in the plane, but there is a forbidden intersection, i.e., two non-adjacent Fig. 5 Collision.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Amoebot",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Expansion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "A contracted amoebot may expand on one of the axes as follows (see blue amoebot in Fig. 3a).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Amoebot",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Contraction",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An expanded amoebot may contract analogously by reversing the contraction (see green amoebot in Fig. 3b).",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Expansion",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Bond",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As a result, the expanding amoe - bot pushes all connected amoebots.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

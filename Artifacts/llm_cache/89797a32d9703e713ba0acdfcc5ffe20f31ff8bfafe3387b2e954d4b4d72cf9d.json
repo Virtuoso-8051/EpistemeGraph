@@ -1,0 +1,169 @@
+{
+  "entities": [
+    {
+      "name": "k-tunnel primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Akitaya et al. (2021)",
+      "alias": "",
+      "type": "PERSON"
+    },
+    {
+      "name": "leapfrog primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "monkey primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "rhombical meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "hexagonal meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "rotation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "slide primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "amoebot structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "line of rhombical meta-modules",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Di Luna et al. (2020)",
+      "alias": "",
+      "type": "PERSON"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "k-tunnel primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "k + 1 rounds",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Lemma 3.6 Our implementation of the k-tunnel primitive requires k + 1 rounds.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Akitaya et al. (2021)",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "leapfrog primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Akitaya et al. (2021) have introduced two further move - ment primitives for rectangular MRSs: the leapfrog and the monkey primitive (see Fig. 7f\u2013h).",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Akitaya et al. (2021)",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "monkey primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Akitaya et al. (2021) have introduced two further move - ment primitives for rectangular MRSs: the leapfrog and the monkey primitive (see Fig. 7f\u2013h).",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Lemma 3.7",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "O(1) rounds",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Lemma 3.7 Our implementation of the leapfrog and monkey primitives requires O(1) rounds, respectively.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "2 rounds",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Lemma 3.9 Our implementation of the rotation primitive requires 2 rounds.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "hexagonal meta-module",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "rhombical meta-module",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Our hexagonal metamodule consists of three rhombical meta-modules of side Fig. 15 k-tunnel primitive.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "line of rhombical meta-modules",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "amoebot structure",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "In this section, we consider the transformation of a line of amoebots to a line of rhombical and hexagonal metamodules, respectively.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Di Luna et al. (2020)",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "amoebot structure",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "The formation of a line of amoebots from an arbitrary amoebot structure has been considered in previous work (e.g., Di Luna et al. (2020)).",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "slide primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The idea is to divide the metamodules into submodules and then build a bridge between the start and target position of the moving meta-module by applying slide and k-tunnel primitives (see Fig. 16).",
+      "extraction_confidence": 0.5
+    }
+  ]
+}

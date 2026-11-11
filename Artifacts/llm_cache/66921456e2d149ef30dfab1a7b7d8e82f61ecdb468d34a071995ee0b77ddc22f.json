@@ -1,0 +1,135 @@
+{
+  "entities": [
+    {
+      "name": "Slide primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hexagonal meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Globally stable reconfiguration",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Stable reconfiguration",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Vertex expansion measure \u03b1(G)",
+      "alias": "\u03b1(G)",
+      "type": "METRIC"
+    },
+    {
+      "name": "Centralized algorithm of Theorem 4.1",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Submodule",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Slide primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Rhombical meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the first round, we utilize the submodules adjacent to the start and target position of R1 to move R1 to the center position.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Centralized algorithm of Theorem 4.1",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Globally stable reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Corollary 3.2 The centralized algorithm of Theorem 4.1 that forms a line of r rhombical meta-modules of side length l \u2212 1 from a line of n = r \u00b7 l2 /2 amoebots within 12 rounds is stable.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Stable reconfiguration",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Globally stable reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We call a reconfiguration (S0,...,S F ) stable if and only if it is locally and globally stable.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Globally stable reconfiguration",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Vertex expansion measure \u03b1(G)",
+      "object_alias": "\u03b1(G)",
+      "object_type": "METRIC",
+      "evidence_quote": "Definition 3.2 We call a reconfiguration (S0,...,S F ) globally stable if and only if min i\u2208{0,...,F } \u03b1(GSi ) = \u03a9(min {\u03b1(GS0 ),\u03b1 (GSF )}).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Stable reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that only the construction of rhombical meta-modules in Sect. 3.3 is stable.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Hexagonal meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Stable reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We will show how to make the con - struction of hexagonal meta-modules stable later in this section.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Submodule",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We assume that all expanded amoebots are orien - tated into the movement direction.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

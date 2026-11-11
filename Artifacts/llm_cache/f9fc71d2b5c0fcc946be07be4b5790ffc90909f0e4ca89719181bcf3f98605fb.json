@@ -1,0 +1,145 @@
+{
+  "entities": [
+    {
+      "name": "Rhombical Meta-Module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Centralized Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Line of Amoebots",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Realignment Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Reorientation Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Rotation Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Hexagonal Meta-Module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Handover",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Feldmann et al. (2022)",
+      "alias": "",
+      "type": "PERSON"
+    },
+    {
+      "name": "Rhombus",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Theorem 3.1",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Theorem 3.1",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Centralized Algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Theorem 3.1 There is a centralized algorithm that forms a line of r rhombical meta-modules of side length l \u2212 1 from a line of n = r \u00b7 l2 /2 amoebots within 12 rounds.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Centralized Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Line of Amoebots",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Theorem 3.1 There is a centralized algorithm that forms a line of r rhombical meta-modules of side length l \u2212 1 from a line of n = r \u00b7 l2 /2 amoebots within 12 rounds.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Realignment Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "Rhombical Meta-Module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the second type, we apply the realign - ment primitive to rotate the parallelograms by 60\u25e6 (second, fourth, and sixth phase).",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Theorem 3.1",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Feldmann et al. (2022)",
+      "object_alias": "",
+      "object_type": "PERSON",
+      "evidence_quote": "Remark 3.1 Theorem 3.1 also improves a result by Feld - mann et al. (2022).",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Feldmann et al. (2022)",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Handover",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "With the help of handovers, they showed how to reconfigure a line of amoebots into a rhombus within O(log n) rounds.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Rotation Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Hexagonal Meta-Module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the first step, we apply the rotation primitive to rotate the first meta-module around the second one.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Reorientation Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Hexagonal Meta-Module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the second step, we apply the reorientation primitive to the first and third meta-module such that in the third step, we can apply the realignment primitive to the them to form a hexagonal meta-module.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

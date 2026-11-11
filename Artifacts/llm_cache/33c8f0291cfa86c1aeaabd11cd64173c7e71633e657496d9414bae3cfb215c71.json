@@ -1,0 +1,128 @@
+{
+  "entities": [
+    {
+      "name": "Crystalline Robot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Caterpillar-like Crawling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Walking Locomotion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Chain-type Modular Robotic System",
+      "alias": "MRS",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "M-TRAN",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Polybot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Amoebot Model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Simple Line Amoebot Structure",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Earthworm-like Locomotion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Contraction and Expansion Movement",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Kotay et al. (2000) proposal",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Walking Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Kotay et al. (2000) also propose a \u2018walking\u2019 structure (see Fig. 30).",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Walking Locomotion",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Caterpillar-like Crawling",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "So, it is rather a caterpillar-like crawling than a walking movement.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Walking Structures",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Chain-type Modular Robotic System",
+      "object_alias": "MRS",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Walking structures have been built for chaintype MRSs, e.g., M-TRAN (Yoshida et al., 2003; Kurokawa et al., 2006) and polybot (Yim et al., 2003; Zhang et al., 2003).",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Simple Line Amoebot Structure",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "APPROXIMATES",
+      "is_functional": false,
+      "object": "Earthworm-like Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The simplest amoebot structure that imitates an earth - worm is a simple line of n expanded amoebots along the surface (see Fig. 28).",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Simple Line Amoebot Structure",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Contraction and Expansion Movement",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Instead of propagating waves of con - tractions and expansions, we contract and expand the whole structure at once.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Contraction and Expansion Movement",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Earthworm-like Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As a result, the contraction (expansion) pulls (pushes) the structure to the front.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

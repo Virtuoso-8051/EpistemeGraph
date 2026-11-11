@@ -1,0 +1,116 @@
+{
+  "entities": [
+    {
+      "name": "Candidate Processor",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Non-faulty Candidate Processor",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Token",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Threshold Value",
+      "alias": "\u03c4",
+      "type": "METRIC"
+    },
+    {
+      "name": "Round Number",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Message Broadcast",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Phase 2",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Counting Trigger",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Alert",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Message Broadcast",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "To ensure that any message received by at least one non-faulty candidate is eventually delivered to all nonfaulty candidates, we require each candidate to broadcast every newly received message to all other candidate processors.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Token",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Threshold Value",
+      "object_alias": "\u03c4",
+      "object_type": "METRIC",
+      "evidence_quote": "In case, for some updated \u03c4, |T (x)| > \u03c4 then \u230a|T (x)|\u2215\u03c4\u230b number of tokens are sent as a message one by one from the processor x.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Message Broadcast",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Round Number",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "As |T (x)| becomes more than or equal to \u03c4, x sends a message to all the candidate processors containing the round number in which x sent the message to candidate processors, ID of x and \u03c4.",
+      "extraction_confidence": 0.35
+    },
+    {
+      "subject": "Phase 2",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Counting Trigger",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Phase 2: This phase gets activated when the number of counting triggers is less than 2n.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Trigger",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Alert",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Consequently, this phase requires at most lg w updation of \u03c4, where w is the overall triggers that occur before the alert is raised.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

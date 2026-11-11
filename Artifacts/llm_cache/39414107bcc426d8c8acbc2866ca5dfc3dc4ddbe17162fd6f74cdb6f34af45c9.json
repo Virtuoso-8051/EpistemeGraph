@@ -1,0 +1,111 @@
+{
+  "entities": [
+    {
+      "name": "Fault-Tolerant Distributed Trigger Counting",
+      "alias": "FTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Explicit Fault-Tolerant Distributed Trigger Counting",
+      "alias": "eFTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Implicit Fault-Tolerant Distributed Trigger Counting",
+      "alias": "iFTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Candidate processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Committee",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Referee processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger counting threshold",
+      "alias": "\u03c4",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Token",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Anonymous network",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Implicit Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "Message complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "This architectural shift aims to reduce message complexity but requires alternative mechanisms for trigger notification.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Implicit Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Referee processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Unlike the explicit version (eFTDTC) discussed in Section 4.1, iFTDTC introduces an intermediate layer of referee processors to relay messages instead of direct broadcasts.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Implicit Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Explicit Fault-Tolerant Distributed Trigger Counting",
+      "object_alias": "eFTDTC",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Unlike the explicit version (eFTDTC) discussed in Section 4.1, iFTDTC introduces an intermediate layer of referee processors to relay messages instead of direct broadcasts.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Implicit Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Anonymous network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Designing such coordination is particularly challenging in anonymous networks.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Implicit Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Fault-Tolerant Distributed Trigger Counting",
+      "object_alias": "FTDTC",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Our approach is inspired by techniques from [12].",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

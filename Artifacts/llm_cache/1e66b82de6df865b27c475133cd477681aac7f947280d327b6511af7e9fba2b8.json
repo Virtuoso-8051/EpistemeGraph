@@ -1,0 +1,140 @@
+{
+  "entities": [
+    {
+      "name": "Simple line of amoebots",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Line of rhombical meta-modules",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Millipede structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Worm structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Continuous track",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Transportation of objects",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Locomotion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Structure stability",
+      "alias": "",
+      "type": "METRIC"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Simple line of amoebots",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Theorem 5.2 A simple line of n expanded amoebots moves a distance of n every 2 rounds.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Millipede structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Structure stability",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Theorem 5.4 Our millipede structure composed of rhom - bical meta-modules of side length l \u2212 1 with p legs com - posed of q rhombical meta-modules moves a distance of 2 \u00b7 q \u00b7 l every 4 rounds. Furthermore, the structure is stable.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Line of rhombical meta-modules",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Worm structure",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Each module can be seen as a segment of the worm structure.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Line of rhombical meta-modules",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Consider a line of r rhombical meta-modules of side length l \u2212 1 (see Fig. 29).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Continuous track",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Transportation of objects",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The continuous track and worm structure are unsuitable for the transportation of objects due to their unstable top.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Worm structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Structure stability",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "This increases the expansion of the structure and with that its stability.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Millipede structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In practice, we can reduce the friction by additionally lifting the legs moving forwards (see Fig. 32).",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

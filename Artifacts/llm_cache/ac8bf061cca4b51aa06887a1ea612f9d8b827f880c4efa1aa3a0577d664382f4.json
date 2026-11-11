@@ -1,0 +1,133 @@
+{
+  "entities": [
+    {
+      "name": "Nubot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Crystalline atom model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Polylogarithmic time solutions",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "k-tunnel primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Rotation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Alternative implementation of the rotation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Hexagonal meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Switching primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Locally stable",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Alternative implementation of the rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Locally stable",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Corollary 3.5 Our alternative implementation of the rota - tion primitive is locally stable and requires 6 rounds.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Alternative implementation of the rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Rotation primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Corollary 3.5 Our alternative implementation of the rota - tion primitive is locally stable and requires 6 rounds.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "k-tunnel primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Locally stable",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 3.11 Our alternative implementation of the k-tunnel primitive is locally stable and requires 3 \u00b7 (k + 1 ) rounds.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Hexagonal meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We can utilize our alternative implementation of the rotation primitive to make the algorithms that form a line of hexagonal meta-modules locally stable (see Theorem 3.2 and corollary 3.1).",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Nubot model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Polylogarithmic time solutions",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In particular, we consider the polylogarithmic time solutions for the nubot model (Woods et al., 2013) and the crystalline atom model (Aloupis et al., 2008).",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Crystalline atom model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Polylogarithmic time solutions",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In particular, we consider the polylogarithmic time solutions for the nubot model (Woods et al., 2013) and the crystalline atom model (Aloupis et al., 2008).",
+      "extraction_confidence": 0.5
+    }
+  ]
+}

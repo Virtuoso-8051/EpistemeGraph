@@ -1,0 +1,166 @@
+{
+  "entities": [
+    {
+      "name": "Slide primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Rotation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Reorientation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "k-tunnel primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Contraction primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "2 rounds",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 3.5 Our implementation of the rotation primitive requires 2 rounds.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Slide primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "2 rounds",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 3.4 Our implementation of the slide primitive requires 2 rounds.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the rotation primitive, we move a meta-module R1 around another meta-module R2 (see Fig. 7b).",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Reorientation primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We assume that all amoebots are orientated towards each other. Otherwise, we apply the reorientation primitive.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "K-tunnel primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Reorientation primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Otherwise, we apply the reorientation primitive.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Rhombical meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The resulting contracted meta-modules form a rhombus consisting of l2 contracted amoebots.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Contraction primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "Rhombical meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The yellow rhombus resp. parallelogram indicates the (contracted) rhombical meta-module.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "K-tunnel primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the k-tunnel primitive , we move a meta-module R through a simple path of meta-modules with k corners to the other end (see Fig. 7e).",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "We assume that all amoebots are orientated towards each other.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "K-tunnel primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Slide primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We will not move R directly through the path. Instead, we will make use of pull and push operations (see Fig. 14).",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

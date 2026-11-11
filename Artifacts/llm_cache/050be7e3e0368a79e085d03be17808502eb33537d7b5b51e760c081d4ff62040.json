@@ -1,0 +1,165 @@
+{
+  "entities": [
+    {
+      "name": "Rolling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Crawling",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Walking",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Rolling Amoebot Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Chain-type Modular Robotic Systems",
+      "alias": "MRSs",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Polypod",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Polybot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "CKBot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "M-TRAN",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "SMORES",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Continuous Track Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Hexagonal Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Substrate Structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Closed Chain of Meta-modules",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Rolling Amoebot Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Continuous Track Structure",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Our rolling amoebot structure imitates a continuous track that rotates around a set of wheels.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Continuous Track Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Hexagonal Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We build our continuous track structure from hexagonal meta-modules of alternating side lengths l and l \u2212 1 (see Fig. 27).",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Continuous Track Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Substrate Structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The structure consists of two parts: a connected substrate structure (green meta-modules), and a closed chain of meta-modules rotating along the outer boundary of the substrate (blue meta-modules).",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Continuous Track Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Closed Chain of Meta-modules",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The structure consists of two parts: a connected substrate structure (green meta-modules), and a closed chain of meta-modules rotating along the outer boundary of the substrate (blue meta-modules).",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Chain-type Modular Robotic Systems",
+      "subject_alias": "MRSs",
+      "subject_type": "SYSTEM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Rolling",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An example of a robot system rolling as a whole are chain-type MRSs that can roll by forming a loop, e.g., Polypod (Yim, 1994), Polybot (Yim et al., 2000, 2003), CKBot (Mellinger et al., 2009; Sastra et al., 2009), M-TRAN (Yoshida et al., 2003; Kurokawa et al., 2006), and SMORES (Jing et al., 2016, 2018).",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Polybot",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Chain-type Modular Robotic Systems",
+      "object_alias": "MRSs",
+      "object_type": "SYSTEM",
+      "evidence_quote": "An example of a robot system rolling as a whole are chain-type MRSs that can roll by forming a loop, e.g., Polypod (Yim, 1994), Polybot (Yim et al., 2000, 2003), CKBot (Mellinger et al., 2009; Sastra et al., 2009), M-TRAN (Yoshida et al., 2003; Kurokawa et al., 2006), and SMORES (Jing et al., 2016, 2018).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Rolling",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Walking",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "There are three basic types of terrestrial locomotion: rolling, crawling, and walking (Hirose, 1991; Kehoe & Piovesan, 2019).",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

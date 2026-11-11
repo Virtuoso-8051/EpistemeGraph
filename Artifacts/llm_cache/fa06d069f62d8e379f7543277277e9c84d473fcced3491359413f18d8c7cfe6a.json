@@ -1,0 +1,174 @@
+{
+  "entities": [
+    {
+      "name": "Millipede Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Realignment Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Rhombical Meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Caterpillar Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Amoebot Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Joint Movement Extension",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Reconfigurable Circuit Extension",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot Model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Simulation Environment",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Leg-density Wave",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Kotay et al. (2000) Caterpillar Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Millipede Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Meta-module",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Altogether, the millipede structure consists of (2p \u2212 1) \u00b7 q + p meta-modules.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Realignment Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Meta-module",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "In order to move the legs back and forth, we simply apply the realignment primitive (see Fig. 11) on all meta-modules within the legs (see Fig. 31).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Millipede Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Leg-density Wave",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "By continuously repeating these leg movements, we achieve a motion similar to the leg-density waves of millipedes.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Caterpillar Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Kotay et al. (2000) Caterpillar Structure",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "This structure is a replication of the structure by Kotay et al. (2000) in the joint movement extension 1 3 22 Page 22 of 26 Autonomous Robots (2025) 49:22",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Simulation Environment",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "SUPPORTS",
+      "is_functional": false,
+      "object": "Joint Movement Extension",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Recently, Artmann et al. (2025) introduced a simulation environment that supports both the joint movement exten - sion and the reconfigurable circuit extension to the amoebot model.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Simulation Environment",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "SUPPORTS",
+      "is_functional": false,
+      "object": "Reconfigurable Circuit Extension",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Recently, Artmann et al. (2025) introduced a simulation environment that supports both the joint movement exten - sion and the reconfigurable circuit extension to the amoebot model.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Simulation Environment",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Amoebot Model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Recently, Artmann et al. (2025) introduced a simulation environment that supports both the joint movement exten - sion and the reconfigurable circuit extension to the amoebot model.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Rhombical Meta-module",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Millipede Structure",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Fig. 31 Millipede structure. The yellow and blue rhombi indicate rhombical meta-modules.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Meta-module",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Simulation Environment",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "However, our meta-modules are more flexible, e.g., we can move a hexagonal meta-module through two others (see Fig. 34).",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

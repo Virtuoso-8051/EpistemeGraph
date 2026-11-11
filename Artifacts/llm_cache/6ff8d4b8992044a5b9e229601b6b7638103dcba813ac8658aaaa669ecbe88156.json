@@ -1,0 +1,121 @@
+{
+  "entities": [
+    {
+      "name": "Sequential Activation Model",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Semi-synchronous Activation Model",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Asynchronous Activation Model",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Asynchronous Round",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Expansion Movement",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Contraction Movement",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Handover Movement",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Collision Resolution Mechanism",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Joint Movement Extension",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Bond",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Sequential Activation Model",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "The sequential activation model only allows a single active amoebot at a time.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Semi-synchronous Activation Model",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "The semi-synchronous activation model allows any subset of the amoebots to be active at the same time while synchronizing their actions, e.g., movements.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Asynchronous Activation Model",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Asynchronous Round",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In any of these cases, time is divided into asyn - chronous rounds.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Joint Movement Extension",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Collision Resolution Mechanism",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In the joint movement extension, we will not make such an assumption.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Amoebot",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Handover Movement",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These amoebots can perform a handover where x expands into v and y contracts into w simultaneously (see Fig. 2c).",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

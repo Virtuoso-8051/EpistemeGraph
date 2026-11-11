@@ -1,0 +1,126 @@
+{
+  "entities": [
+    {
+      "name": "Theorem 3.2",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Corollary 3.1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Corollary 3.6",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Corollary 3.7",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "stable centralized algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "hexagonal meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "rhombical meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "switching primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "reorientation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Lemma 3.12",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "reconfiguration algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "stable centralized algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "hexagonal meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "There is a stable centralized algorithm that forms a line of h = r3 hexagonal meta-modules of alternating side lengths l and l \u2212 1 from a line of r rhombical metamodules of side length l \u2212 1 within 10 rounds.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Corollary 3.7",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "amoebot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Corollary 3.7 There is a stable centralized algorithm that forms a line of h hexagonal meta-modules of alternating side lengths l and l \u2212 1 from a line of n = 3 \u00b7 h \u00b7 l2 /2 amoebots within 22 rounds.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "switching primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "rhombical meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Recall that we need to switch between the two possibilities to arrange the rhombical meta-modules in a hexagonal meta-module (see Fig. 17).",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "reorientation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "rhombical meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The idea is to apply a similar technique as in the reorientation primitive for rhombical meta-modules.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Lemma 3.12",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "switching primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Lemma 3.12 Our alternative implementation of the switching primitive is locally stable and requires 4 rounds.",
+      "extraction_confidence": 0.6
+    }
+  ]
+}

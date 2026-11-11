@@ -1,0 +1,111 @@
+{
+  "entities": [
+    {
+      "name": "Amoebot Model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Amoebot Structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Triangular Amoebot Structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Handover",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Expansion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Contraction",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Structural Conflict",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Collision",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Bond",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Handover",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Amoebot Model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "We have to include the handover to ensure compatibility with algorithms for the original model and universality of the model since otherwise, it would not be possible to move through a narrow tunnel.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Handover",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Structural Conflict",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This may result in structural conflicts or collisions.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Handover",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Collision",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This may result in structural conflicts or collisions.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Amoebot Structure",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Triangular Amoebot Structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "At t =1 , we obtain an amoebot structure S1i which is triangular since each amoebot in A has length 0 or 1 again.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Expansion",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Triangular Amoebot Structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that for all t \u2208 (0, 1), Sti is no longer triangular if there is at least one expansion or contraction.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

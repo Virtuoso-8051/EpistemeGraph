@@ -1,0 +1,140 @@
+{
+  "entities": [
+    {
+      "name": "Distributed Trigger Counting",
+      "alias": "DTC",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Garg et al. tree-based and centralized algorithms",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "LayeredRand algorithm",
+      "alias": "LayeredRand",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "CoinRand algorithm",
+      "alias": "CoinRand",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "RingRand algorithm",
+      "alias": "RingRand",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Controller problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "(M, M/2)-controller model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "DDR-coin",
+      "alias": "DDR-coin",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Monte Carlo paradigm",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Probabilistic threshold detection",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Kim et al.",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "DDR-coin",
+      "object_alias": "DDR-coin",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Kim et al. [8] introduced DDR-coin, a probabilistic Distributed Trigger Counting (DTC) algorithm based on the Monte Carlo paradigm\u2014 meaning the system may occasionally fail to raise an alert upon receiving w signals.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "DDR-coin",
+      "subject_alias": "DDR-coin",
+      "subject_type": "ALGORITHM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Monte Carlo paradigm",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Kim et al. [8] introduced DDR-coin, a probabilistic Distributed Trigger Counting (DTC) algorithm based on the Monte Carlo paradigm\u2014 meaning the system may occasionally fail to raise an alert upon receiving w signals.",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "CoinRand algorithm",
+      "subject_alias": "CoinRand",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Randomized message aggregation",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The approach was further extended by introducing the CoinRand and RingRand algorithms [3], where CoinRand enhances randomized message aggregation efficiency, and RingRand ensures a bounded number of messages sent per node.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "LayeredRand algorithm",
+      "subject_alias": "LayeredRand",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Distributed Trigger Counting",
+      "object_alias": "DTC",
+      "object_type": "CONCEPT",
+      "evidence_quote": "M. Kumar and M. Kumar [2] proposed the LayeredRand algorithm, a distributed and randomized solution for tree topologies, where nodes communicate across adjacent layers.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Korman and Kutten",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "(M, M/2)-controller model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Korman and Kutten [6] introduced the (M, M/2)-controller model, addressing dynamic changes such as leaf insertions, internal node additions, and node deletions.",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Emek and Korman",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Probabilistic threshold detection",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Emek and Korman [4] studied probabilistic threshold detection in a more general setting, achieving low message complexity, albeit with unbounded message sizes.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Controller problem",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Controller problem",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The controller problem, initially explored by Afek et al. [5], abstracts the management of global resource consumption in dynamic distributed networks.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

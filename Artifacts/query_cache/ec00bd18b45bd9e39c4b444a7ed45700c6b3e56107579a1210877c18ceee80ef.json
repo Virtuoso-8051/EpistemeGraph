@@ -1,0 +1,68 @@
+{
+  "query_entities": [
+    "Fault-Tolerant Distributed Trigger Counting (DTC)",
+    "Trigger Count Threshold",
+    "Message Complexity",
+    "Candidate Processor",
+    "Referee processor",
+    "Non-faulty Processor"
+  ],
+  "triples": [
+    {
+      "source": "Implicit Fault-Tolerant Distributed Trigger Counting (iFTDTC)",
+      "source_alias": "iFTDTC",
+      "type": "DEFINED_AS",
+      "target": "subset of processors counting triggers and raising an alert when the count reaches a threshold w",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Implicit Fault-Tolerant Distributed Trigger Counting (iFTDTC)",
+      "source_alias": "iFTDTC",
+      "type": "ACHIEVES",
+      "target": "O(n^{1/2} log^{5/2} n log w / \u03b1^{5/2}) message bound w.h.p.",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Message Complexity",
+      "source_alias": "",
+      "type": "MEASURED_BY",
+      "target": "O(n^{1/2} log^{5/2} n log w / \u03b1^{5/2}) message bound w.h.p.",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Implicit Fault-Tolerant Distributed Trigger Counting (iFTDTC)",
+      "source_alias": "iFTDTC",
+      "type": "REFUTED",
+      "target": "Candidate Processor",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Implicit Fault-Tolerant Distributed Trigger Counting (iFTDTC)",
+      "source_alias": "iFTDTC",
+      "type": "REFUTED",
+      "target": "Referee processor",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Candidate Processor",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "pairwise probability that two candidate processors share a non-faulty referee",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Candidate Processor",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "Phase 1 locking mechanism for simultaneous triggers",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

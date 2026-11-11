@@ -1,0 +1,116 @@
+{
+  "entities": [
+    {
+      "name": "Explicit Fault-Tolerant Distributed Trigger Counting",
+      "alias": "eFTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Explicit setting",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Implicit setting",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Faulty processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Anonymous network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Candidate processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger counting",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Message complexity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Rank",
+      "alias": "ID",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Fraction of non-faulty processors",
+      "alias": "\u03b1",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Explicit Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "eFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Candidate processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The fundamental idea is to designate a subset of processors, termed candidate processors, which are responsible for counting the triggers.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Candidate processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Trigger counting",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The core responsibility of the candidate processors is to maintain a count of all triggers.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Explicit Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "eFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "Message complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Therefore, the primary objective is to ensure a correct and consistent decision while minimizing message complexity.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Faulty processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Trigger counting",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Consequently, different sets of processors within the network may maintain inconsistent states or views regarding the same message, which can result in erroneous trigger-counting decisions.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Explicit setting",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Trigger counting",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the explicit setting, the algorithm accounts for all triggers across the entire graph, whereas in the implicit setting, a subset of processors is responsible for counting the triggers.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

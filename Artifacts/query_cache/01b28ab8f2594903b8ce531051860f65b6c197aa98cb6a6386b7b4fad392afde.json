@@ -1,0 +1,67 @@
+{
+  "query_entities": [
+    "Fault-Tolerant Distributed Trigger Counting (DTC)",
+    "Candidate Processor",
+    "Referee processor",
+    "Non-faulty Processor",
+    "Distributed System"
+  ],
+  "triples": [
+    {
+      "source": "Candidate Processor",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Referee processor",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Referee sampling approach",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "Candidate Processor",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Candidate Processor",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "sqrt(n)\u00b7log n referees",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Birthday-style argument",
+      "source_alias": "",
+      "type": "COMPUTES",
+      "target": "1 - 1/poly(n) probability of shared referee",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Non-faulty Processor",
+      "source_alias": "",
+      "type": "PART_OF",
+      "target": "Referee processor",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Fault-Tolerant Distributed Trigger Counting (DTC)",
+      "source_alias": "iFTDTC",
+      "type": "PROPOSED_BY",
+      "target": "iFTDTC paper",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Phase 1 locking mechanism",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "Candidate Processor",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

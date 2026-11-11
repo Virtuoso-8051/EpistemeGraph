@@ -1,0 +1,101 @@
+{
+  "entities": [
+    {
+      "name": "k-tunnel primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "submodule",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "slide primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "rotation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Theorem 3.2",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "corollary 3.1",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "slide primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "4 rounds",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Our alternative implementation of the slide primitive is locally stable and requires 4 rounds.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "k-tunnel primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Since the rotation primitive is a special case of the k-tunnel primitive, we will constrain the explanation to the latter.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "k-tunnel primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "submodule",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the first round, we contract or expand all submodules that we would have in the original version of the k-tunnel primitive\u2013 except for the ones at the two ends of the line.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "submodule",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the second round, we swap the states of the submod - ules of the meta-module at both ends.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Theorem 3.2",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "corollary 3.1",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Therefore, the required number of rounds of Theorem 3.2 and corollary 3.1 increases by 2 to 10 and 22, respectively.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

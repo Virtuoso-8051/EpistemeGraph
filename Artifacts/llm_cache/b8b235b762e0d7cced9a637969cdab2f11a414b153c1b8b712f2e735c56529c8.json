@@ -1,0 +1,174 @@
+{
+  "entities": [
+    {
+      "name": "Nubot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Woods et al. (2013) self-assembly",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Amoebot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Reconfiguration algorithm for m rhombical meta-modules",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Aloupis et al. (2008) reconfiguration algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Divide and conquer approach",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Contraction primitive",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Slide primitive",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Tunnel primitive",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Switching primitive",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Lattice-type modular robotic systems",
+      "alias": "MRSs",
+      "type": "SYSTEM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Woods et al. (2013) self-assembly",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Nubot model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Woods et al. (2013) showed that in the nubot model, the robots are able to self-assemble arbitrary shapes/patterns in an amount of time equal to the worst-case running time for a Turing machine to compute a pixel in the shape/pattern plus an additional factor which is polylogarithmic in its size.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Aloupis et al. (2008) reconfiguration algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Divide and conquer approach",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The idea is to trans - form the initial structure to a canonical structure using a divide and conquer approach.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Aloupis et al. (2008) reconfiguration algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Contraction primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The algorithm utilizes the contraction, slide and tunnel primitives which our rhombical meta-modules are capable of (see Sect. 3.1).",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Aloupis et al. (2008) reconfiguration algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Slide primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The algorithm utilizes the contraction, slide and tunnel primitives which our rhombical meta-modules are capable of (see Sect. 3.1).",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Aloupis et al. (2008) reconfiguration algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Tunnel primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The algorithm utilizes the contraction, slide and tunnel primitives which our rhombical meta-modules are capable of (see Sect. 3.1).",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Reconfiguration algorithm for m rhombical meta-modules",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Switching primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that we have to apply the switching primitive between the rotations.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Reconfiguration algorithm for m rhombical meta-modules",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Lattice-type modular robotic systems",
+      "object_alias": "MRSs",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Naturally, our meta-modules allow us to simulate recon - figuration algorithms for lattice-type MRSs of similar shape if we can implement the same movement primitives.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Amoebot model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Woods et al. (2013) self-assembly",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "While we are able to perform the translations, we do not have the means to let amoebots appear and disappear in the amoebot model.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Contraction primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The algorithm utilizes the contraction, slide and tunnel primitives which our rhombical meta-modules are capable of (see Sect. 3.1).",
+      "extraction_confidence": 0.5
+    }
+  ]
+}

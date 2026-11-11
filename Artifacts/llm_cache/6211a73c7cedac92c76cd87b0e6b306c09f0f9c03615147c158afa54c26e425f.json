@@ -1,0 +1,138 @@
+{
+  "entities": [
+    {
+      "name": "Algorithm 2",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Fault-Tolerant Distributed Trigger Counting",
+      "alias": "FTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "implicit Fault-Tolerant Distributed Trigger Counting",
+      "alias": "iFTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Message Complexity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "CONGEST communication model",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Referee Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Committee Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Threshold",
+      "alias": "\u03c4",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Non-faulty Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Phase 1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Phase 2",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "iFTDTC",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "CONGEST communication model",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Consider a complete network of n processors with at least \u2308\u03b1n\u2309 non-faulty processors and CONGEST communication model.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Algorithm 2",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Lemma 6. The message complexity of the Algorithm 2 is O(n1\u22152 ln5\u22152 n lg w\u2215\u03b15\u22152).",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "iFTDTC",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Then there is an implicit Fault-Tolerant Distributed Trigger Counting (iFTDTC) algorithm which raises an alert when the triggers received by the non-faulty processors are at least w in O(n1\u22152 log5\u22152 n log w\u2215\u03b15\u22152) messages with high probability.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Phase 1",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Threshold",
+      "object_alias": "\u03c4",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Phase 1 performs O(log w) iterations as the threshold \u03c4 is halved each time.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Committee Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Referee Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In each iteration, the committee processor sends the message to other Information Processing Letters 192 (2026) 106612 5 M. Kumar and M. Kumar committee processors via the referee processor when \u03c4 triggers occur; therefore, this may take at most O((n ln n\u2215\u03b1)1\u22152(ln n\u2215\u03b1)) messages.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Phase 2",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Trigger",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the case of phase 2, whenever a processor receives the trigger, the committee processor sends the trigger to the other committee processors via referee processors, which may take O((n ln n\u2215\u03b1)1\u22152(ln n\u2215\u03b1)) messages.",
+      "extraction_confidence": 0.5
+    }
+  ]
+}

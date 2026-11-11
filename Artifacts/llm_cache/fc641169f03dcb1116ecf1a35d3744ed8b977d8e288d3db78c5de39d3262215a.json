@@ -1,0 +1,106 @@
+{
+  "entities": [
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hexagonal meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Reorientation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Realignment primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Rotation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "k-tunnel primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Rotation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "k-tunnel primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Note that the rotation primitive is a special case of the k-tunnel primitive.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "k-tunnel primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 3.6 Our implementation of the k-tunnel primitive requires k + 1 rounds.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Hexagonal meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "There are two possibilities to arrange the rhombical metamodules in a hexagonal meta-module (see Fig. 17).",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Reorientation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Otherwise, we apply the reorientation primitive.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Realignment primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The idea is to apply a similar technique as in the realignment primitive for rhombical meta-modules.",
+      "extraction_confidence": 0.5
+    }
+  ]
+}

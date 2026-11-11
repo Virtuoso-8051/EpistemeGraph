@@ -1,0 +1,118 @@
+{
+  "entities": [
+    {
+      "name": "Joint movement extension",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Connectivity graph",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Triangular grid",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Valid amoebot structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Triangular amoebot structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Bond",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Joint movement extension",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The idea behind the extension is to allow amoebots to push and pull other amoebots.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Connectivity graph",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Amoebot structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We define the connectivity graph of an amoebot structure as the graph S =( V, A \u222a B).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Connectivity graph",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the graph, we represent each amoebot and bond by an edge.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Valid amoebot structure",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Triangular grid",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We call a valid amoebot structure triangular if and only if the embedding can be aligned with the triangular grid.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Triangular amoebot structure",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Valid amoebot structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We call a valid amoebot structure triangular if and only if the embedding can be aligned with the triangular grid.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Amoebot",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Connectivity graph",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Each amoebot contributes one edge to A and two nodes to V even if it is in a contracted state.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

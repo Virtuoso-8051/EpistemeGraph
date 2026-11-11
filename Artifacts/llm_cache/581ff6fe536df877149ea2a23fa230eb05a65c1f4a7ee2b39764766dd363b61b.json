@@ -1,0 +1,128 @@
+{
+  "entities": [
+    {
+      "name": "Fault-Tolerant Distributed Trigger Counting",
+      "alias": "FTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Explicit Fault-Tolerant Distributed Trigger Counting",
+      "alias": "eFTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "CONGEST communication model",
+      "alias": "CONGEST",
+      "type": "MODEL"
+    },
+    {
+      "name": "complete network of n processors",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "non-faulty processors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "candidate processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "committee processors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "message complexity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "trigger",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "threshold value",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "FTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "CONGEST communication model",
+      "object_alias": "CONGEST",
+      "object_type": "MODEL",
+      "evidence_quote": "Consider a complete network of n processors with at least \u2308\u03b1n\u2309 non-faulty processors and CONGEST communication model.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "FTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "message complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Then there is a Fault-Tolerant Distributed Trigger Counting (FTDTC) algorithm which raises an alert when the triggers received by the non-faulty processors are w in O(n log2 n log w\u2215\u03b12) messages with high probability.",
+      "extraction_confidence": 0.75
+    },
+    {
+      "subject": "Explicit Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "eFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "non-faulty processors",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Input: A complete n processor anonymous network where at least \u2308\u03b1n\u2309 processors are non-faulty, where \u03b1 is a real number in the range [ln2 n\u2215n, 1].",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "candidate processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "committee processors",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Each candidate processor u informs other processors about their candidature. All the candidate processors form a committee.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "committee processors",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "trigger",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the case of phase 2, whenever a processor receives the trigger, the processor sends the message to the committee processors and the committee processors further send the message to all the committee processors (if not sent earlier), which requires O(n(ln n\u2215\u03b1)2) messages.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Each processor computes a threshold value",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": true,
+      "object": "threshold value",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Each processor computes a threshold value \u03c4 = \u230a w12n\u230b.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

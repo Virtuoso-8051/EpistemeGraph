@@ -1,0 +1,176 @@
+{
+  "entities": [
+    {
+      "name": "Candidate Processor Selection",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Chernoff bound",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Lemma 1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Lemma 2",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Candidate Set",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Non-faulty Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger Count",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Alert Mechanism",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Committee Processors",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "High Probability",
+      "alias": "",
+      "type": "METRIC"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Alert Mechanism",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Trigger Count",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "The candidate processors raise an alert when the number of triggers reaches w1 and the algorithm terminates.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Lemma 1",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Chernoff bound",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Thus, by using the Chernoff bound [13], Pr[X \u2265 (1 + \u03b4)E[X]] \u2264 e\u2212\u03b42E[x]\u22153 for \u03b4 = 1 we get, Pr[X \u2265 12 ln n\u2215\u03b1] \u2264 e\u22126 ln n\u22153\u03b1 < e \u22122 ln n\u2215\u03b1 = 1n2\u2215\u03b1 .",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Lemma 2",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Candidate Set",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 2. The set of candidate processors  contains at least one non-faulty processor with high probability.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Candidate Set",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Non-faulty Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Thus, with high probability  contains at least one non-faulty processor.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Candidate Processor Selection",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "High Probability",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Consider a n-processor network with at least \u03b1n non-faulty processors, where \u03b1 is a real number in the range [ln2 n\u2215n, 1].",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Lemma 1",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "High Probability",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "If each processor selects itself with probability 6 ln n\u2215(\u03b1n) to become a candidate processor then with high probability, i.e., with probability \u2265 (1 \u2212 1\u2215n), the number of selected candidate processors is || = \u0398(ln n\u2215\u03b1).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Committee Processors",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Trigger Count",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "The alert triggers once the count meets the specified threshold, as committee processors monitor the trigger count and there exists at least one non-faulty processor within the committee.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Lemma 2",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Non-faulty Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 2. The set of candidate processors  contains at least one non-faulty processor with high probability.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Candidate Processor Selection",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PRODUCES",
+      "is_functional": false,
+      "object": "Candidate Set",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Thus, the size of the candidate set is 2 ln n\u2215\u03b1 \u2264 || \u2264 12 ln n\u2215\u03b1 with high probability for any value of \u03b1 \u2264 1.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Alert Mechanism",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Candidate Processor Selection",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "In this, each processor sends the message to candidate processors as they encounter a trigger.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

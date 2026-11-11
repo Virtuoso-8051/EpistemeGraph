@@ -1,0 +1,116 @@
+{
+  "entities": [
+    {
+      "name": "Reconfiguration Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Hexagonal Meta-modules",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Hurtado et al. 2015 Reconfiguration Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Spanning Tree",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rotation Primitive",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Crawling Locomotion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Earthworm-like Locomotion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Crawling Amoebot Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Continuous Track Structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Modular Reconfigurable Systems",
+      "alias": "MRSs",
+      "type": "SYSTEM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Hurtado et al. 2015 Reconfiguration Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Spanning Tree",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The idea is to compute a spanning tree and to move the robots along the boundary of the tree to a leader module where the robots form a canonical structure, e.g., a line.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Hurtado et al. 2015 Reconfiguration Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Rotation Primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The algorithm utilizes the rotation primitive which our hexagonal meta-modules 1 3 Page 19 of 26 22 Autonomous Robots (2025) 49:22 5.2 Crawling Crawling locomotion is used by limbless animals.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Continuous Track Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Hexagonal Meta-modules",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Theorem 5.1 Our continuous track structure composed of hexagonal meta-modules of alternating side lengths l and l \u2212 1 moves a distance of 2 \u00b7 l within each period of con - stant length.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Crawling Amoebot Structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Crawling Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our crawling amoebot structure imitates earthworms.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Earthworm-like Locomotion",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Crawling Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We will explain the earthworm-like locomotion below and refer to Juh\u00e1sz and Zelei (2013) for the other two types.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

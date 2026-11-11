@@ -1,0 +1,118 @@
+{
+  "entities": [
+    {
+      "name": "Algorithm 1",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Message Complexity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Candidate Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Non-candidate Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Updated Value of w1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Committee Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Phase 1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Phase 2",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Algorithm 1",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": true,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Lemma 4. The message complexity of the Algorithm 1 is O(n log2 n log w\u2215\u03b12).",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Updated Value of w1",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "When a candidate processor learns about an update to the value of w1, it broadcasts this information to all other candidate processors.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Committee Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Before updating \u03c4, the committee processors may receive O(n) tokens that require O(n(ln n\u2215\u03b1)2) messages taken by the committee processors.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Phase 1",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "As a consequence, O(n(ln n\u2215\u03b1)2) \u22c5 O(lg w) messages are taken by the phase 1.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Phase 2",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "In the case of phase 2, whenever a processor receives the trigger, the processor sends the message to the committee processors and the committee processors further send the message to all the committee processors (if not sent earlier), which requires O(n(ln n\u2215\u03b1)2) messages.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Non-candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "RECEIVES",
+      "is_functional": false,
+      "object": "Updated Value of w1",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 3. Suppose a non-candidate processor x receives the updated value of w1 in the t-th round, and another processor y receives it in the (t + 1)-th round from candidate processors.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

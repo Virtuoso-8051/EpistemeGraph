@@ -1,0 +1,99 @@
+{
+  "entities": [
+    {
+      "name": "Fault-Tolerant Distributed Trigger Counting",
+      "alias": "FTDTC",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Distributed Trigger Counting",
+      "alias": "DTC",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Message Complexity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Crash Fault",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Randomized Monte Carlo Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Implicit Setting",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Explicit Setting",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Fault-Tolerant Distributed Trigger Counting Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Sensor Network",
+      "alias": "",
+      "type": "SYSTEM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "FTDTC",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Distributed Trigger Counting",
+      "object_alias": "DTC",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this paper, we address the Fault-Tolerant Distributed Trigger Counting (FTDTC) problem under the presence of crash faults, exploring both explicit and implicit settings.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "FTDTC",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Crash Fault",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this paper, we address the Fault-Tolerant Distributed Trigger Counting (FTDTC) problem under the presence of crash faults, exploring both explicit and implicit settings.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Randomized Monte Carlo Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "We present randomized (Monte Carlo) algorithms that achieve sublinear and subquadratic message complexity in the socalled implicit version and explicit version, respectively, when tolerating more than a constant fraction of the faulty nodes.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Distributed Trigger Counting",
+      "subject_alias": "DTC",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Sensor Network",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "For instance, consider a sensor network deployed to monitor potential flooding.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

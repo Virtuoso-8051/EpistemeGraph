@@ -1,0 +1,150 @@
+{
+  "entities": [
+    {
+      "name": "Modular Robotic System",
+      "alias": "MRS",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Amoebot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rotation primitive",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Slide primitive",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Contraction primitive",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Tunnel primitive",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Sliding cube model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Nubot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Line pushing model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Connectivity constraint",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPLEMENTS",
+      "is_functional": false,
+      "object": "Rotation primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our rhombical meta-modules can implement all these movement primitives.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Slide primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "the robots are combined into meta-mod - ules of square shape that are capable of various movement primitives, e.g., the rotation, slide, contraction, and tunnel primitives (see Fig. 7b\u2013e).",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Line pushing model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Connectivity constraint",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "and for the third category the nubot model (Woods et al., 2013) and the line pushing model (Almethen et al., 2023).",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Sliding cube model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Connectivity constraint",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Examples for the second category are the sliding cube model (Butler et al., 2004; Fitch & Butler, 2008), rectangular (Dumitrescu et al., 2004) and hexagonal metamor - phic robots (Chirikjian, 1994), and for the third category the nubot model (Woods et al., 2013) and the line pushing model (Almethen et al., 2023).",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Modular Robotic System",
+      "subject_alias": "MRS",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Rotation primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The most common movement primitives for MRSs on the Cartesian grid are the rotation and slide primitives (see Fig. 7b and c), and for MRSs on the triangular grid the rotation primitive (see Fig. 7a).",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Modular Robotic System",
+      "subject_alias": "MRS",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Slide primitive",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The most common movement primitives for MRSs on the Cartesian grid are the rotation and slide primitives (see Fig. 7b and c), and for MRSs on the triangular grid the rotation primitive (see Fig. 7a).",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Amoebot model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Connectivity constraint",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "An example for the last category is the variant of the amoebot model considered by Dufoulon et al. (2021).",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "entities": [
+    {
+      "name": "Amoebot structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Connected component",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Translation",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Lemma 4.1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Remark 4.1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Reconfiguration algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Bond",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Translation",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Lemma 4.1",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that both movements are possible due to Lemma 4.1.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Translation",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Translation",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Note that in general, the translation is not locally stable since we remove all bonds between each connected component C and M except for one bond.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Reconfiguration algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Meta-module",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "The while the second subsection deals with reconfiguration algorithms for our meta-modules including the one for the latter model.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Translation",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Connected component",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that in general, the translation is not locally stable since we remove all bonds between each connected component C and M except for one bond.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Amoebot structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Connected component",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that M divides the remain - ing amoebot structure into connected components.",
+      "extraction_confidence": 0.5
+    }
+  ]
+}

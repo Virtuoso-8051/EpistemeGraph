@@ -1,0 +1,191 @@
+{
+  "entities": [
+    {
+      "name": "Amoebot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Reconfigurable circuit extension",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Joint movement extension",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Reconfiguration",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Locomotion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombus",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hexagonal meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Spanning tree computation",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Symmetry detection",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Shortest path computation",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Modular robot system",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Amoebot structure",
+      "alias": "",
+      "type": "SYSTEM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Joint movement extension",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Amoebot model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Feldmann et al. (Computat Biol 29(4):317\u2013343, 2022) have proposed the reconfigurable circuit extension and the joint movement extension of the amoebot model with the goal of breaking this lower bound.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Joint movement extension",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Rhombus",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Feldmann et al. (Computat Biol 29(4):317\u2013343, 2022) demonstrated the power of joint movements by transforming a line of amoebots into a rhombus within O(log n) rounds.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We approach these problems by defining meta-modules of rhombical and hexagonal shape, respectively.",
+      "extraction_confidence": 0.45
+    },
+    {
+      "subject": "Hexagonal meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We approach these problems by defining meta-modules of rhombical and hexagonal shape, respectively.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This allows us to simulate reconfiguration algorithms of various modular robot systems.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Amoebot structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Finally, we construct three amoebot structures capable of locomotion by rolling, crawling, and walking, respectively.",
+      "extraction_confidence": 0.45
+    },
+    {
+      "subject": "Padalkin et al. (2024)",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Spanning tree computation",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Afterwards, Padalkin et al. (2024), Padalkin and Scheideler ( 2024) proposed poly - logarithmic time algorithms to various problems including spanning tree computation, symmetry detection, and short - est path computation.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Padalkin and Scheideler (2024)",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Symmetry detection",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Afterwards, Padalkin et al. (2024), Padalkin and Scheideler ( 2024) proposed poly - logarithmic time algorithms to various problems including spanning tree computation, symmetry detection, and short - est path computation.",
+      "extraction_confidence": 0.35
+    },
+    {
+      "subject": "Padalkin and Scheideler (2024)",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Shortest path computation",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Afterwards, Padalkin et al. (2024), Padalkin and Scheideler ( 2024) proposed poly - logarithmic time algorithms to various problems including spanning tree computation, symmetry detection, and short - est path computation.",
+      "extraction_confidence": 0.35
+    },
+    {
+      "subject": "Joint movement extension",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Reconfiguration",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "These problems will be important to coordinate the joint movements.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "entities": [
+    {
+      "name": "Centralized Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Hexagonal Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Line of Hexagonal Meta-modules",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombical Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rotation Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Switching Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Locally Stable Reconfiguration",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Centralized Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "Line of Hexagonal Meta-modules",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "There is a centralized algorithm that forms a line of h = r3 hexagonal meta-modules of alternating side Fig. 18 Hexagonal tesselation.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Centralized Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "There is a centralized algorithm that forms a line of h hexagonal meta-modules of alternating side lengths l and l \u2212 1 from a line of n = 3 \u00b7 h \u00b7 l2 /2 amoebots within 20 rounds.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Hexagonal Meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Rhombical Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The yellow rhombi indicate the rhom - bical submodules of the hexagonal meta-module.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Switching Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Rhombical Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Fig. 17 Switching primitive. The yellow rhombi indicate the rhom - bical submodules of the hexagonal meta-module.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Rotation Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Hexagonal Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Fig. 19 Rotation primitive for hexagonal meta-modules.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Centralized Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "Rhombical Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "lengths l and l \u2212 1 from a line of r rhombical meta-modules of side length l \u2212 1 within 8 rounds.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Locally Stable Reconfiguration",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Definition 3.1 We call a reconfiguration (S0,...,S F ) locally stable if and only if \u2200i \u2208{ 0,...,F \u2212 1} : |\u0393S0i (U )| = \u0398(|\u0393Si (U )|) for all connected components U \u2286 Si.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "entities": [
+    {
+      "name": "Fault-Tolerant Distributed Trigger Counting",
+      "alias": "FTDTC",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Distributed Trigger Counting",
+      "alias": "DTC",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Randomized trigger counting algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "explicit Fault-Tolerant Distributed Trigger Counting algorithm",
+      "alias": "eFTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "implicit Fault-Tolerant Distributed Trigger Counting algorithm",
+      "alias": "iFTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Message complexity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Maximum number of messages received per device",
+      "alias": "MaxRcv",
+      "type": "METRIC"
+    },
+    {
+      "name": "Faulty nodes",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Complete network",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "explicit Fault-Tolerant Distributed Trigger Counting algorithm",
+      "subject_alias": "eFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Message complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Then there is an explicit Fault-Tolerant Distributed Trigger Counting (eFTDTC) algorithm which raises an alert when the trigger received by the non-faulty nodes is at least w in O(n log2 n log w\u2215\u03b12) messages.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "implicit Fault-Tolerant Distributed Trigger Counting algorithm",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Message complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "(2) A randomized implicit Fault-Tolerant Distributed Trigger Counting (iFTDTC) algorithm which raises an alert when the trigger received by the non-faulty nodes is at least w in O(n1\u22152 log5\u22152 n log w\u2215\u03b15\u22152) messages w.h.p.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Maximum number of messages received per device",
+      "subject_alias": "MaxRcv",
+      "subject_type": "METRIC",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "Message complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "In our algorithms, the maximum number of messages received per device (MaxRcv) remains the same as message complexity.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "FTDTC",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Distributed Trigger Counting",
+      "object_alias": "DTC",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this work, we address a Fault-Tolerant version of the DTC problem.",
+      "extraction_confidence": 0.7
+    }
+  ]
+}

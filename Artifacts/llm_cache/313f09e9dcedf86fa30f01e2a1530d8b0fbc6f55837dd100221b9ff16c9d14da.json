@@ -1,0 +1,106 @@
+{
+  "entities": [
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Cartesian grid",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Expanded amoebot",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Contraction and expansion primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Reorientation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Sliding model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Pivoting model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Movement primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Expanded amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Our rhombical meta-module consists of l2/2 uniformly oriented expanded amoebots that we arrange into a rhombus of side length l \u2212 1 (see the left side of Fig. 9).",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Reorientation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Expanded amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 3.2 Our implementation of the reorientation primitive requires 4 rounds.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Pivoting model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Sliding model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Both primitives have the same result while the pivoting model requires more free space than the sliding model Fig. 7 Examples of movement primitives.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Cartesian grid",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Models that utilize the Cartesian grid usually assume square modules.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Contraction and expansion primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Expanded amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 3.1 Our implementation of the contraction and expansion primitive requires a single round, respectively.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "entities": [
+    {
+      "name": "Sliding-cube model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Rolling structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Continuous track structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Hexagonal meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Worm structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Amoebot structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Crystalline robot construction",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Stalling time",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Local stability",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Locomotion",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Theorem 5.3",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Continuous track structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "OUTPERFORMS",
+      "is_functional": false,
+      "object": "Rolling structure",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "However, due to stalling times, this structure is slower than our continuous track structure.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Rolling structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Stalling time",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "However, due to stalling times, this structure is slower than our continuous track structure.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Worm structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "Locomotion",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The worm structure is therefore poorly scalable in its length such that other types for locomotion are more suitable for large amounts of amoebots.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Crystalline robot construction",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Rhombical meta-module",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "The construction for crystalline robots is the closest one.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Amoebot structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Local stability",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that unless the number of amoebots resp. metamodules is constant, neither amoebot structure in the subsection is locally stable since we have to remove almost all bonds between the structure and the surface.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

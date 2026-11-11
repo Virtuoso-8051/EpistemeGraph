@@ -1,0 +1,106 @@
+{
+  "entities": [
+    {
+      "name": "Realignment Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Switching Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Rotation Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Hexagonal Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombical Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Leapfrog Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Monkey Jump Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Switching Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Rounds",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 3.8 Our implementation of the switching primitive requires 2 rounds.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Rotation Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Rounds",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "This movement primitive requires two rounds.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Rotation Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Rhombical Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We contract R1 and R2, and then expand them into the direction of the new position of H1 (compare to Lemma 3.5).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Rotation Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Hexagonal Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the following, we introduce the rotation primitive for hexagonal meta-modules.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Realignment Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "First, we divide the line of amoebots into groups of l amoebots.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

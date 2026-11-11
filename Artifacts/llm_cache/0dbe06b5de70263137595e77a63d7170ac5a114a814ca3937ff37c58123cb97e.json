@@ -1,0 +1,140 @@
+{
+  "entities": [
+    {
+      "name": "Fault-Tolerant Distributed Trigger Counting",
+      "alias": "iFTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Algorithm 2",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Algorithm 1",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Candidate Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Referee Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Committee",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger Counting Threshold",
+      "alias": "\u03c4",
+      "type": "METRIC"
+    },
+    {
+      "name": "Token",
+      "alias": "T(u)",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Alert",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Phase 1",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Algorithm 1",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "The algorithm takes place in two phases, like the Algorithm 1 but with a different set of processors.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Referee Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Communication between the committee processors takes place via referee processors, and all other processors remain inactive.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Committee",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "All the candidate processors form a committee.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Alert",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Trigger Counting Threshold",
+      "object_alias": "\u03c4",
+      "object_type": "METRIC",
+      "evidence_quote": "An alert is raised by the candidate processors once the total number of triggers reaches a predefined threshold.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Token",
+      "subject_alias": "T(u)",
+      "subject_type": "CONCEPT",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Trigger Counting Threshold",
+      "object_alias": "\u03c4",
+      "object_type": "METRIC",
+      "evidence_quote": "Every candidate processor u maintains a token T (u) that keeps the account of the number of triggers received by the processor u.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Token",
+      "object_alias": "T(u)",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Every candidate processor u maintains a token T (u) that keeps the account of the number of triggers received by the processor u.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Phase 1",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Candidate Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Phase 1: This phase gets activated when the number of counting triggers is more than 12 ln n\u2215\u03b1.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

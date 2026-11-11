@@ -1,0 +1,171 @@
+{
+  "entities": [
+    {
+      "name": "Reorientation primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Realignment primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Rhombus",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Triangular grid",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hexagonal meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Contraction primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Reorientation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "4 rounds",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Our implementation of the reorientation primitive requires 4 rounds.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Realignment primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "2 rounds",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Our implementation of the realignment primi - tive requires 2 rounds.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Reorientation primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Rhombus",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that in combination with the reorientation primitive, we are able to align a rhombus with any two axes of the triangular grid.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "In this section, we will combine multiple amoebots to meta-modules.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the first two subsections, we will present meta-mod - ules of rhombical and hexagonal shape, respectively.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Hexagonal meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the first two subsections, we will present meta-mod - ules of rhombical and hexagonal shape, respectively.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Rhombus",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Second, we can utilize rhombical meta-modules as a basis for hexagonal meta-modules.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Contraction primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "The black edges indicate expanded amoebots.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Rhombical meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Triangular grid",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We can arrange the meta-modules on a rhombical tes - selation of the plane if they are all aligned to the same axes (see Fig. 12).",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Realignment primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Rhombical meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Fig. 11 Realignment primitive. The yellow rhombi resp. rectangle indicate the rhombical meta-module.",
+      "extraction_confidence": 0.5
+    }
+  ]
+}

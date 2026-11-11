@@ -1,0 +1,148 @@
+{
+  "entities": [
+    {
+      "name": "Graph",
+      "alias": "G",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Connected Component",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot Structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hexagonal Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombical Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Contraction Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Expansion Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Reorientation Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Realignment Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Leapfrog Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Rotation Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Slide Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Switching Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Local Stability",
+      "alias": "",
+      "type": "METRIC"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Rotation Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Hexagonal Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Corollary 3.4 Our implementation of the rotation primitive for hexagonal meta-modules is locally stable (see Lemma 3.9).",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Contraction Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Local Stability",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Corollary 3.3 Our implementations of the contraction, expansion, reorientation, realignment, leapfrog, and mon - key primitives for rhombical meta-modules are locally sta - ble (see Lemmas 3.1 to 3.3 and 3.7).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Expansion Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Local Stability",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Corollary 3.3 Our implementations of the contraction, expansion, reorientation, realignment, leapfrog, and mon - key primitives for rhombical meta-modules are locally sta - ble (see Lemmas 3.1 to 3.3 and 3.7).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Slide Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Rhombical Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Recall that we need to slide a meta-module R1 along two meta-modules R2 and R3 (see Fig. 7c).",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Rhombical Meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Slide Primitive",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "far presented movement primitives are locally stable except for the slide, rotation and k-tunnel primitives for rhombical meta-modules, and the switching primitive for hexagonal meta-modules.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Switching Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Hexagonal Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "far presented movement primitives are locally stable except for the slide, rotation and k-tunnel primitives for rhombical meta-modules, and the switching primitive for hexagonal meta-modules.",
+      "extraction_confidence": 0.15
+    }
+  ]
+}

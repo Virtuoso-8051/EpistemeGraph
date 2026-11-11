@@ -1,0 +1,167 @@
+{
+  "entities": [
+    {
+      "name": "Fault-tolerant Distributed Trigger Counting",
+      "alias": "FTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Distributed Trigger Counting",
+      "alias": "DTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Implicit Fault-tolerant Distributed Trigger Counting",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Explicit Fault-tolerant Distributed Trigger Counting",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Message Complexity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Crash Fault",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Omission Failure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Byzantine Fault",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger Threshold",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Self-Stabilizing Counting",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Firing Squad Problem",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Fault-tolerant Consensus",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Synchronous Counting",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Implicit Fault-tolerant Distributed Trigger Counting",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "We showed that implicit fault-tolerant distributed trigger counting achieves sublinear message complexity for a constant fraction of fault, while the explicit variant exhibits subquadratic message complexity.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Explicit Fault-tolerant Distributed Trigger Counting",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "ACHIEVES",
+      "is_functional": false,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "We showed that implicit fault-tolerant distributed trigger counting achieves sublinear message complexity for a constant fraction of fault, while the explicit variant exhibits subquadratic message complexity.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Distributed Trigger Counting",
+      "subject_alias": "DTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Crash Fault",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The current work addresses the fault-tolerant distributed trigger counting problem with crash-faults, several important avenues remain open for future exploration: DTC with other fault models (Omission Failure and Byzantine Fault).",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Distributed Trigger Counting",
+      "subject_alias": "DTC",
+      "subject_type": "ALGORITHM",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "Omission Failure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Extending the DTC problem to other fault models such as omission failures, where nodes may fail to send or receive triggers, and Byzantine faults, where faulty nodes may exhibit arbitrary behavior, will provide a more comprehensive fault-tolerant solution.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Dynamic Distributed Trigger Counting",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Trigger Threshold",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Future work could explore dynamic distributed trigger counting, where the threshold w can increment or decrement over time-based on system requirements.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Fault-tolerant Distributed Trigger Counting",
+      "subject_alias": "FTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "IMPROVES",
+      "is_functional": false,
+      "object": "Self-Stabilizing Counting",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "There is a potential connection between FTDTC and self-stabilizing counting and firing squad problems.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Self-Stabilizing Counting",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Fault-tolerant Consensus",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Prior work by Lenzen and Rybicki [14] transformed non-self-stabilizing consensus algorithms into self-stabilizing synchronous counting and firing squad algorithms.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Synchronous Counting",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Fault-tolerant Consensus",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Another area for future investigation is the relationship between synchronous counting mechanisms and fault-tolerant consensus protocols.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

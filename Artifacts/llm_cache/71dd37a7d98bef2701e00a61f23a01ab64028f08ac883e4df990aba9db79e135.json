@@ -1,0 +1,118 @@
+{
+  "entities": [
+    {
+      "name": "Nubot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Amoebot model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Joint movement extension",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rigid bond",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Structural conflict",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Lemma 4.1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Translation of robots by joint movements",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Polylogarithmic time reconfiguration algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Nubot model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "IS_A",
+      "is_functional": false,
+      "object": "Amoebot model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Similar to the amoebot model, the nubot model (Woods et al., 2013) considers robots on the triangular grid where at most one robot can be positioned on each node.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Nubot model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Rigid bond",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Adjacent robots can be connected by rigid bonds.2 In the joint movement extension, the rigid bonds correspond to the edge set B.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Nubot model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Structural conflict",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "However, a movement may not be performed due to structural conflicts.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Nubot model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Joint movement extension",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In contrast to the joint movement extension, there are no collisions by definition of the set.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Lemma 4.1",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Translation of robots by joint movements",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 4.1 An amoebot structure of contracted amoebots is able to translate a set of robots in a constant number of joint movements if the translation is possible in the nubot model.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Polylogarithmic time reconfiguration algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Rigid bond",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We ignore that since the flexible bonds are not necessary to achieve the polylogarithmic time reconfiguration algorithm.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

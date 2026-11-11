@@ -1,0 +1,140 @@
+{
+  "entities": [
+    {
+      "name": "Geometric Amoebot Model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Reconfigurable Circuit Extension",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Joint Movement Extension",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Leader Election Problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Compass Alignment Problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Chirality Agreement Problem",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Lower Bound",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Diameter",
+      "alias": "D",
+      "type": "METRIC"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Programmable Matter",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Feldmann et al. (2022)",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Reconfigurable Circuit Extension",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Inspired by the nervous and muscular system, Feldmann et al. (2022) proposed the reconfigurable circuit extension and the joint movement extension with the goal of breaking this lower bound.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Feldmann et al. (2022)",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Joint Movement Extension",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Inspired by the nervous and muscular system, Feldmann et al. (2022) proposed the reconfigurable circuit extension and the joint movement extension with the goal of breaking this lower bound.",
+      "extraction_confidence": 0.9
+    },
+    {
+      "subject": "Feldmann et al. (2022)",
+      "subject_alias": "",
+      "subject_type": "PERSON",
+      "relation": "SOLVES",
+      "is_functional": false,
+      "object": "Leader Election Problem",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Among others, Feldmann et al. (2022) solved the leader election problem, compass align - ment problem, and chirality agreement problem within 1 Introduction Programmable matter consists of homogeneous nano-robots that are able to change the properties of the matter in a programmable fashion, e.g., the shape, the color, or the den - sity (Toffoli & Margolus, 1993).",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Most problems",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Lower Bound",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Since amoebots and infor - mation can only travel node by node, most problems have a natural lower bound of \u03a9(D) where D denotes the diameter of the structure.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Lower Bound",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Diameter",
+      "object_alias": "D",
+      "object_type": "METRIC",
+      "evidence_quote": "Since amoebots and infor - mation can only travel node by node, most problems have a natural lower bound of \u03a9(D) where D denotes the diameter of the structure.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Amoebot",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Geometric Amoebot Model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "We are considering the geometric amoebot model (Daymude et al., 2019, 2023; Andreas Padalkin andreas.padalkin@upb.de Manish Kumar manishk@iitrpr.ac.in Christian Scheideler scheideler@upb.de 1 Department of Computer Science, Paderborn University, F\u00fcrstenallee 11, 33102 Paderborn, Germany 2 Department of Computer Science and Engineering, Indian Institute of Technology Ropar, Rupnagar, Punjab 140001, India Abstract We are considering the geometric amoebot model where a set of n amoebots is placed on the triangular grid.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Programmable Matter",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Programmable matter consists of homogeneous nano-robots that are able to change the properties of the matter in a programmable fashion, e.g., the shape, the color, or the den - sity (Toffoli & Margolus, 1993).",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

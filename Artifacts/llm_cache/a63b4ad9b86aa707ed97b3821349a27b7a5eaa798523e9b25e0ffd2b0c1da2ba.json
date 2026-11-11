@@ -1,0 +1,140 @@
+{
+  "entities": [
+    {
+      "name": "Crash Fault",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Static Adversary",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Adaptive Adversary",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "CONGEST Communication Model",
+      "alias": "CONGEST",
+      "type": "MODEL"
+    },
+    {
+      "name": "Message Complexity",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Distributed Trigger Counting with Crash-Fault",
+      "alias": "DTC",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Fault-Tolerant Distributed Trigger Counting",
+      "alias": "FTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Complete Network",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Explicit Setting",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Implicit Setting",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Static Adversary",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESELECTS",
+      "is_functional": false,
+      "object": "Crash Fault",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We assume the presence of a static adversary, which pre-selects the faulty nodes before the algorithm begins1 While the adversary cannot change which nodes are faulty once the execution starts, it can decide when and how these nodes crash.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Adaptive Adversary",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "DEFINED_AS",
+      "is_functional": false,
+      "object": "Crash Fault",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In contrast, an adaptive adversary determines faulty nodes during the algorithm\u2019s execution.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Distributed Trigger Counting with Crash-Fault",
+      "subject_alias": "DTC",
+      "subject_type": "CONCEPT",
+      "relation": "MEASURED_BY",
+      "is_functional": false,
+      "object": "Message Complexity",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "The message complexity of an algorithm is the total number of messages sent by all the nodes throughout the execution of the algorithm.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "CONGEST Communication Model",
+      "subject_alias": "CONGEST",
+      "subject_type": "MODEL",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Crash Fault",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We consider CONGEST communication model [10], where a node is allowed to send a message of size O(log n) bits through an edge per round.",
+      "extraction_confidence": 0.1
+    },
+    {
+      "subject": "Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "FTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "EVALUATED_ON",
+      "is_functional": false,
+      "object": "Complete Network",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Consider a complete network with n nodes, in which at most f nodes could be faulty and the remaining (n \u2212 f ) nodes are non-faulty.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "FTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Explicit Setting",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the explicit setting, the algorithm accounts for all triggers across the entire graph, whereas in the implicit setting, a subset of processors is responsible for counting the triggers.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "FTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Implicit Setting",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the explicit setting, the algorithm accounts for all triggers across the entire graph, whereas in the implicit setting, a subset of processors is responsible for counting the triggers.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

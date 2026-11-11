@@ -1,0 +1,135 @@
+{
+  "entities": [
+    {
+      "name": "Leader Election Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Candidate Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Referee Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Committee",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Token",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Threshold Value",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Trigger",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Phase 1",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Phase 2",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Referee Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Each candidate processor u randomly samples 2((n ln n)\u2215\u03b1)1\u22152 neighbors (called the referee processors of u, u) and sends its rank to the referee processors.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "MAINTAINS",
+      "is_functional": false,
+      "object": "Token",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Every candidate processor u maintains a token T (u).",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "COMPUTES",
+      "is_functional": false,
+      "object": "Threshold Value",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Each candidate processor computes a threshold value \u03c4 = \u230a w1\u03b112 ln n\u230b.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Phase 1",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Leader Election Algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Phase 1: w1 \u2265 12 ln n\u2215\u03b1",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Phase 2",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Leader Election Algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Phase 2: w1 < 12 ln n\u2215\u03b1.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Trigger",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "if candidate u receives the trigger then",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Committee",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Candidate Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "All the candidate processors form a committee.",
+      "extraction_confidence": 0.7
+    }
+  ]
+}

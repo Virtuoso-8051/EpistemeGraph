@@ -1,0 +1,65 @@
+{
+  "entities": [
+    {
+      "name": "Distributed Counting",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Fault-tolerant Consensus Protocol",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Consensus Algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Distributed Systems",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "DTC Problem",
+      "alias": "DTC",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Synchronous Setting",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Distributed Counting Protocol",
+      "alias": "",
+      "type": "ALGORITHM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Consensus Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Distributed Systems",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Since consensus algorithms are fundamental in distributed systems, examining how they intersect with the DTC problem in a synchronous setting could lead to insights for developing more efficient and resilient distributed counting protocols.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Consensus Algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "DTC Problem",
+      "object_alias": "DTC",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Since consensus algorithms are fundamental in distributed systems, examining how they intersect with the DTC problem in a synchronous setting could lead to insights for developing more efficient and resilient distributed counting protocols.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

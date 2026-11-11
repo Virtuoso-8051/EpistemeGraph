@@ -1,0 +1,101 @@
+{
+  "entities": [
+    {
+      "name": "Implicit Fault-Tolerant Distributed Trigger Counting",
+      "alias": "iFTDTC",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Candidate Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Referee Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger Count Threshold",
+      "alias": "\u03c4",
+      "type": "METRIC"
+    },
+    {
+      "name": "Token",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Alert",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Non-faulty Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Trigger Count Threshold",
+      "object_alias": "\u03c4",
+      "object_type": "METRIC",
+      "evidence_quote": "In that case, each candidate processor calculates the threshold value (\u03c4 = \u230aw1\u03b1\u221512 ln n\u230b) where w1 is the number of triggers left to count after which the alert would be raised.",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Token",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Whenever a candidate processor u receives a trigger it increases the size of the token by one.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "GENERATES",
+      "is_functional": false,
+      "object": "Alert",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "where w1 is the number of triggers left to count after which the alert would be raised.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Referee Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "ENABLES",
+      "is_functional": false,
+      "object": "Candidate Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "u sends a message to all the candidate processors via referee processors containing the round number in which u sent the message to candidate processors, the ID of u and \u03c4.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Implicit Fault-Tolerant Distributed Trigger Counting",
+      "subject_alias": "iFTDTC",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Non-faulty Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Input: A complete n processor anonymous network where at least \u2308\u03b1n\u2309 processors are non-faulty, where \u03b1 is a real number in the range [ln2 n\u2215n, 1].",
+      "extraction_confidence": 0.6
+    }
+  ]
+}

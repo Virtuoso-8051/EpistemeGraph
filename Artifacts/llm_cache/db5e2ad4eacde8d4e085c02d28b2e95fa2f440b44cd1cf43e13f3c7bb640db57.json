@@ -1,0 +1,106 @@
+{
+  "entities": [
+    {
+      "name": "Phase 2 counting trigger algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Candidate Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Referee Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Committee Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Alert",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Trigger Count",
+      "alias": "",
+      "type": "METRIC"
+    },
+    {
+      "name": "Non-faulty Processor",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Lemma 5",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Phase 2 counting trigger algorithm",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Referee Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In this, each candidate processor sends the message to other candidate processors via referee processors as they encounter a trigger.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Referee Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Recall that each candidate processor samples 2(n ln n\u2215\u03b1)1\u22152 referee processors independently and uniformly among n processors.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Candidate Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Alert",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The candidate processors raise an alert when the number of triggers reaches w1 and the algorithm terminates.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Committee Processor",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "OPTIMIZES",
+      "is_functional": false,
+      "object": "Trigger Count",
+      "object_alias": "",
+      "object_type": "METRIC",
+      "evidence_quote": "Correctness. The alert is triggered once the count reaches the specified threshold, provided that committee processors monitor the trigger count and at least one non-faulty processor exists within the committee.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Lemma 5",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "Non-faulty Processor",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Lemma 5. Any pair of candidate processors has at least one common nonfaulty referee processor with high probability.",
+      "extraction_confidence": 0.4
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "entities": [
+    {
+      "name": "Modular Robotic System",
+      "alias": "MRS",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Triangular Grid",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Cartesian Grid",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hexagonal Metamorphic Robot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "HexBots",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Fractal Machine",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Catoms",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "CHOBIE II",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "EM-Cubes",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Amoebot Structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Valid Movement",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Reconfiguration",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Handover",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Modular Robotic System",
+      "subject_alias": "MRS",
+      "subject_type": "SYSTEM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Triangular Grid",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Examples for MRSs using the triangular grid are hexagonal metamorphic robots (Chirikjian, 1994), HexBots (Sadjadi et al., 2012), fractal machines (Murata et al., 1994), and catoms (Kirby et al., 2005).",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Modular Robotic System",
+      "subject_alias": "MRS",
+      "subject_type": "SYSTEM",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Cartesian Grid",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Examples for MRSs using the Cartesian grid are CHOBIE II (Suzuki et al., 2008), EM-Cubes (An, an independent movement, and they would intersect during the movement (see Fig. 6b).",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Cartesian Grid",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We will build meta-modules for the Cartesian and triangular grid.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "BASED_ON",
+      "is_functional": false,
+      "object": "Triangular Grid",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We will build meta-modules for the Cartesian and triangular grid.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Valid Movement",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Amoebot Structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We call a movement valid if and only if we are able to perform all three steps, i.e., the amoebot structure did not transition into an undefined state.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Reconfiguration",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Valid Movement",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We call a sequence of valid movements a reconfiguration.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Valid Movement",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "Amoebot Structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Observation 2.1 Each valid movement is reversible, i.e., if there is a valid movement from Si to Si+1 , then there is also a valid movement from Si+1 to Si.",
+      "extraction_confidence": 0.2
+    },
+    {
+      "subject": "Handover",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REDUCES",
+      "is_functional": false,
+      "object": "Valid Movement",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Since all these definitions of handovers are breaking our previous assumptions, we have decided to not include handovers as a movement.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}

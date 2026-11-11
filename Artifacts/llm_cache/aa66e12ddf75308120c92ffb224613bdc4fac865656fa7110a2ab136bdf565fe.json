@@ -1,0 +1,145 @@
+{
+  "entities": [
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Slide Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Rotation Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "k-tunnel Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Reorientation Primitive",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Crystalline Robot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Teletube",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Rhombical Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Rhombical Tesselation",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Bond",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Slide Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the slide primitive, we move a meta-module R1 along two adjacent substrate meta-modules R2 and R3 (see Fig. 7c).",
+      "extraction_confidence": 0.8
+    },
+    {
+      "subject": "Slide Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "We assume that all amoebots are orientated into the movement direction.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Slide Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Bond",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "In the first round, we contract all amoebots in L1 after removing all bonds between L1 and R1 except the last one in the movement direction, and all bonds between L1 and L2 except the last one in the opposite direction.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Rotation Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Rhombical Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Fig. 14 Rotation primitive for rhombical meta-modules.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Slide Primitive",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "COMPARED_WITH",
+      "is_functional": false,
+      "object": "Crystalline Robot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Our implementations of these primitives are similar to the ones for crystalline robots (e.g., Aloupis et al. ( 2009)) and teletubes (e.g., Vassilvitskii et al. (2002b)).",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Rhombical Tesselation",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Rhombical Meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Fig. 12 Rhombical tesselation. The yellow rhombi indicate the rhombical meta-modules.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Amoebot",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Bond",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "The red edges indicate bonds Fig. 13 Slide primitive.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

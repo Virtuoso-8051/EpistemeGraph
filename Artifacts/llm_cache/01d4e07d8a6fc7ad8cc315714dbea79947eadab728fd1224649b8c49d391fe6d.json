@@ -1,0 +1,150 @@
+{
+  "entities": [
+    {
+      "name": "Valid Amoebot Structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Complete Amoebot Structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Fully Synchronous Activation Model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Connected Amoebot Structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Triangular Amoebot Structure",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Joint Movement",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Bond Removal Step",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Connectivity Conflict",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Undefined State",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Classical Model",
+      "alias": "",
+      "type": "MODEL"
+    },
+    {
+      "name": "Expanded Amoebot",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Bond",
+      "alias": "",
+      "type": "CONCEPT"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Fully Synchronous Activation Model",
+      "subject_alias": "",
+      "subject_type": "MODEL",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Joint Movement",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "We assume the fully synchronous activation model, i.e., the time is divided into synchronous rounds, and every amoebot is active in each round.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Joint Movement",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Bond Removal Step",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Joint movements are performed in three steps. In the first step, the amoebots remove bonds from Si as follows.",
+      "extraction_confidence": 0.7
+    },
+    {
+      "subject": "Bond Removal Step",
+      "subject_alias": "",
+      "subject_type": "ALGORITHM",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Connected Amoebot Structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "We require that S0i is connected since otherwise, disconnected parts might float apart.",
+      "extraction_confidence": 0.6
+    },
+    {
+      "subject": "Connectivity Conflict",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "CAUSES",
+      "is_functional": false,
+      "object": "Undefined State",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Whenever a connectivity conflict occurs, the amoebot structure transitions into an undefined state such that we become unable to make any statements about the structure.",
+      "extraction_confidence": 0.85
+    },
+    {
+      "subject": "Valid Amoebot Structure",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PRESERVES",
+      "is_functional": false,
+      "object": "Triangular Amoebot Structure",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Note that S0i is still valid and triangular since S0i is a subgraph of Si.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Bond",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Bond Removal Step",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "A bond is removed if and only if either of the amoebots at the endpoints releases the bond.",
+      "extraction_confidence": 0.4
+    },
+    {
+      "subject": "Expanded Amoebot",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "PART_OF",
+      "is_functional": false,
+      "object": "Classical Model",
+      "object_alias": "",
+      "object_type": "MODEL",
+      "evidence_quote": "Fig. 2 Movements in the classical model. The nodes indicate (the endpoints of) the amoebots. The black edges indicate expanded amoebots.",
+      "extraction_confidence": 0.3
+    }
+  ]
+}

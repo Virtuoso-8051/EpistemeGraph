@@ -1,0 +1,99 @@
+{
+  "entities": [
+    {
+      "name": "Meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Hexagonal meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Reconfiguration algorithm",
+      "alias": "",
+      "type": "ALGORITHM"
+    },
+    {
+      "name": "Amoebot structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Millipede structure",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Rhombical meta-module",
+      "alias": "",
+      "type": "CONCEPT"
+    },
+    {
+      "name": "Amoebot",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Cube-style modular robots",
+      "alias": "",
+      "type": "SYSTEM"
+    },
+    {
+      "name": "Lattice-based modular robots",
+      "alias": "",
+      "type": "SYSTEM"
+    }
+  ],
+  "claims": [
+    {
+      "subject": "Hexagonal meta-module",
+      "subject_alias": "",
+      "subject_type": "CONCEPT",
+      "relation": "REQUIRES",
+      "is_functional": false,
+      "object": "Reconfiguration algorithm",
+      "object_alias": "",
+      "object_type": "ALGORITHM",
+      "evidence_quote": "Such new movement primitives may lead to faster reconfiguration algorithms, e.g., sublinear solutions for hexagonal meta-modules or even arbitrary amoebot structures.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Millipede structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "CONTAINS",
+      "is_functional": false,
+      "object": "Rhombical meta-module",
+      "object_alias": "",
+      "object_type": "CONCEPT",
+      "evidence_quote": "Fig. 33 Transportation of objects by the millipede structure. The yel - low and blue rhombi indicate rhombical meta-modules.",
+      "extraction_confidence": 0.5
+    },
+    {
+      "subject": "Millipede structure",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "USES",
+      "is_functional": false,
+      "object": "Amoebot",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "The nodes indicate (the endpoints of) the amoebots.",
+      "extraction_confidence": 0.3
+    },
+    {
+      "subject": "Aloupis et al. cube-style work",
+      "subject_alias": "",
+      "subject_type": "SYSTEM",
+      "relation": "PROPOSES",
+      "is_functional": false,
+      "object": "Cube-style modular robots",
+      "object_alias": "",
+      "object_type": "SYSTEM",
+      "evidence_quote": "Aloupis, G., Collette, S., Demaine, E. D., Langerman, S., Sacrist\u00e1n, V ., & Wuhrer, S. (2008). Reconfiguration of cube-style modular robots using O(log n) parallel moves.",
+      "extraction_confidence": 0.2
+    }
+  ]
+}
