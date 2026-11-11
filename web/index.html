@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EpistemeGraph · Hallucination Observatory</title>
+<meta name="description" content="Knowledge-graph-grounded hallucination auditing with sheaf, curvature and spectral evidence and conformal guarantees.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%230e0e0c' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%232a78d6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<!-- ============================================================== entrance (real loading progress, then a portal opens) -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-portal"></div>
+  <div class="intro-center">
+    <svg class="intro-mark" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="27" fill="none" stroke="#0e0e0c" stroke-width="2.2" pathLength="1"/>
+      <path d="M12 36c8-18 32-18 40 0M16 24c10 12 22 12 32 0" fill="none" stroke="#0e0e0c" stroke-width="1.8" pathLength="1"/>
+      <circle cx="32" cy="32" r="6" fill="#2a78d6"/>
+    </svg>
+    <div class="intro-word">EPISTEMEGRAPH</div>
+    <div class="intro-load"><span data-msg>Loading the observatory</span><span><b data-pct>00</b> %</span></div>
+    <div class="intro-bar"><i data-bar></i></div>
+  </div>
+  <div class="intro-corner l">Hallucination observatory · KG-grounded</div>
+  <div class="intro-corner r">Explore the page</div>
+</div>
+<div class="hero-stage" aria-hidden="true"><canvas id="hero-canvas"></canvas></div>
+
+<!-- ============================================================== top bar -->
+<header class="topbar" id="topbar">
+  <a class="brand" href="#top" aria-label="EpistemeGraph home">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="13.5" fill="none" stroke="#0e0e0c" stroke-width="1.6"/>
+      <path d="M6 18c4-9 16-9 20 0M8 12c5 6 11 6 16 0" fill="none" stroke="#0e0e0c" stroke-width="1.2"/>
+      <circle cx="16" cy="16" r="3.2" fill="#2a78d6"/>
+    </svg>
+    <div>EpistemeGraph<small>OBSERVATORY</small></div>
+  </a>
+  <div class="telemetry" id="telemetry">
+    <span>KG.STATE: <b id="t-state">—</b></span>
+    <span>S<sub>KG</sub>: <b id="t-skg">—</b></span>
+    <span>BRAIN: <b id="t-brain">—</b></span>
+    <span><b id="t-clock">--:--:--</b></span>
+  </div>
+  <nav class="nav" id="nav">
+    <a href="#corpus">corpus</a><a href="#graph">graph</a><a href="#audit">audit</a><a href="#batch">batch</a>
+    <a href="#benchmark">benchmark</a><a href="#brain">brain</a><a href="#method">method</a>
+  </nav>
+  <button class="ws-btn" id="settings-btn" title="Access settings" aria-label="settings" style="padding:6px 10px">⚙</button>
+  <div class="ws-switch">
+    <button class="ws-btn" id="ws-btn" aria-haspopup="true"><i class="ws-dot"></i><span id="ws-name">loading…</span><span aria-hidden="true">▾</span></button>
+    <div class="ws-menu" id="ws-menu" hidden></div>
+  </div>
+</header>
+
+<nav class="rail" id="rail" aria-label="sections">
+  <a href="#top" data-sec="top"><span>000 · origin</span></a>
+  <a href="#manifesto" data-sec="manifesto"><span>000 · premise</span></a>
+  <a href="#corpus" data-sec="corpus"><span>001 · corpus</span></a>
+  <a href="#graph" data-sec="graph"><span>002 · graph</span></a>
+  <a href="#audit" data-sec="audit"><span>003 · audit</span></a>
+  <a href="#batch" data-sec="batch"><span>004 · batch</span></a>
+  <a href="#benchmark" data-sec="benchmark"><span>005 · benchmark</span></a>
+  <a href="#brain" data-sec="brain"><span>006 · brain</span></a>
+  <a href="#method" data-sec="method"><span>007 · method</span></a>
+</nav>
+
+<main>
+<div id="opening">
+<!-- ============================================================== 000 hero -->
+<section class="hero" id="top" data-sec="top">
+  <div class="hero-inner">
+    <div class="hero-meta" id="hero-meta">
+      <span>OBS.MODE: <b>ACTIVE AUDIT</b></span>
+      <span>CORPUS: <b id="h-corpus">—</b></span>
+      <span>REFERENCE: <b id="h-ref">—</b></span>
+      <span>DECISION LAYER: <b id="h-brain">—</b></span>
+    </div>
+    <h1 class="hero-title"><span class="line"><span>Episteme</span></span><span class="line"><span><em>Graph</em></span></span></h1>
+    <p class="hero-sub">An observatory for machine belief. Every answer becomes a graph of claims, measured against
+      the knowledge graph of your papers: curvature, sheaf energy, spectra, provenance.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#audit">Audit an answer <span class="arrow">→</span></a>
+      <a class="btn ghost" href="#corpus">Explore the graph</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="scroll-hint">SCROLL DOWN<br>TO DISCOVER MORE</div>
+    <div class="hero-stats">
+      <div>KG fidelity<b id="hs-skg">—</b></div>
+      <div>Verified triples<b id="hs-tri">—</b></div>
+      <div>Entities<b id="hs-ent">—</b></div>
+      <div>Audits<b id="hs-aud">—</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== premise (scroll-lit manifesto over the morphing attractor) -->
+<section class="manifesto" id="manifesto" data-sec="manifesto">
+  <div class="m-block m-left">
+    <div class="kicker">premise</div>
+    <p class="scrub">Fluent is not the same as true. We stopped trusting confident answers. We started measuring them.</p>
+  </div>
+  <div class="m-block m-right">
+    <p class="scrub">We do not ask the model whether it is right. We observe where its claims land on the knowledge of your papers.</p>
+    <p class="m-small">EpistemeGraph turns every answer into a graph of claims and measures it against a knowledge graph built from your
+      own PDFs: provenance, entailment, curvature, sheaf energy and spectra. A model trained on labelled answers decides,
+      and a conformal layer bounds how often it is wrong.</p>
+    <ul class="m-list">
+      <li>we extract every claim</li><li>we trace it to a source sentence</li><li>we measure the geometry it bends</li>
+      <li>we learn the decision from labels</li><li>we bound the error rate</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================== signal conditions (light, interactive ridge fields) -->
+<section class="signals" id="signals">
+  <div class="sig-head">
+    <div class="kicker">signal conditions</div>
+    <p>A hallucination rarely announces itself in the words. It shows up as <b>tension in the geometry</b>: claims that disagree on
+      an overlap, edges that bend the graph, a spectrum that drifts. Move the pointer through each field.</p>
+  </div>
+  <div class="sig-grid">
+    <figure><figcaption><b>Sheaf<br>Energy</b><span>E<sub>sheaf</sub></span></figcaption><canvas data-field="sheaf"></canvas>
+      <p>Two claims about the same entity that cannot be glued together create a local peak of disagreement.</p></figure>
+    <figure><figcaption><b>Curvature<br>Shift</b><span>ΔK</span></figcaption><canvas data-field="curvature"></canvas>
+      <p>Grafting a claim onto the knowledge graph changes its Forman-Ricci curvature; unsupported claims bend it.</p></figure>
+    <figure><figcaption><b>Spectral<br>Divergence</b><span>D<sub>spec</sub></span></figcaption><canvas data-field="spectral"></canvas>
+      <p>The Laplacian spectrum of the local graph drifts when an answer adds structure the papers never had.</p></figure>
+  </div>
+</section>
+</div>
+
+<!-- ============================================================== 001 corpus -->
+<section class="section" id="corpus" data-sec="corpus">
+  <div class="sec-head reveal">
+    <div class="sec-num"><b>001</b>/ 007</div>
+    <h2 class="sec-title">The Corpus<span class="tag">PHASE 1</span></h2>
+    <p class="sec-lede">PDFs become a provenance-verified knowledge graph. A triple enters only if its evidence quote is found in the source chunk.
+      The graph's fidelity <span class="mono">S<sub>KG</sub></span> is computed automatically and audited for precision with a confidence interval.</p>
+  </div>
+
+  <div class="grid g-wide reveal">
+    <div class="card corner">
+      <h4>Knowledge-graph fidelity · intrinsic</h4>
+      <div class="skg-hero"><div class="v" id="skg-v">—</div><div class="muted mono" id="skg-sub"></div></div>
+      <div class="formula" id="skg-formula"></div>
+      <div class="rings" id="rings"></div>
+      <div class="grid g2" style="gap:10px 22px;margin-top:18px;font-size:12.5px;color:var(--ink-2)">
+        <div><b class="mono" style="color:var(--blue)">Φ<sub>prov</sub></b> precision proxy: mean evidence-grounding score of every extracted triple, rejected ones included.</div>
+        <div><b class="mono">Φ<sub>cov</sub></b> recall proxy: how well the accepted triples cover the sentences of each chunk.</div>
+        <div><b class="mono">Φ<sub>topo</sub></b> connectivity: 1 for one connected graph, 0 for isolated facts.</div>
+        <div><b class="mono">Φ<sub>cons</sub></b> consistency: share of triples that break no functional relation.</div>
+      </div>
+    </div>
+    <div class="grid" style="gap:16px">
+      <div class="card">
+        <h4>Add documents</h4>
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose PDF files">
+          <div class="big">Drop PDFs here</div>
+          <div class="muted" style="font-size:13px">or click to choose · any number of .pdf / .txt files</div>
+          <input type="file" id="file-input" accept=".pdf,.txt" multiple hidden>
+        </div>
+        <div class="file-list" id="file-list"></div>
+        <div style="display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:12px;flex-wrap:wrap">
+          <div class="seg" id="upload-mode">
+            <button data-v="new" class="on" title="A fresh knowledge graph built from scratch; previous corpora are kept untouched">New corpus</button>
+            <button data-v="append" title="Merge these PDFs into the active corpus">Add to current</button>
+          </div>
+          <button class="btn blue" id="upload-btn" disabled>Build graph <span class="arrow">→</span></button>
+        </div>
+        <input type="text" id="corpus-name" placeholder="Corpus name (optional)" style="margin-top:10px">
+        <p class="muted" style="font-size:12px;margin:10px 0 0" id="upload-note">A new corpus starts a fresh graph from scratch in its own Neo4j namespace; earlier graphs are preserved and you can switch back any time.</p>
+      </div>
+      <div class="card">
+        <h4>Accuracy · extrinsic audit</h4>
+        <div id="kgprec"></div>
+        <div style="display:flex;gap:8px;align-items:center;margin-top:10px">
+          <input type="number" id="kgprec-n" value="100" min="10" max="1000" style="width:100px">
+          <button class="btn small ghost" id="kgprec-btn">Audit a random sample</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid g4 reveal" style="margin-top:16px" id="kg-tiles"></div>
+  <div class="card reveal" style="margin-top:16px" id="sens-card"><h4>Robustness · S<sub>KG</sub> under perturbed design constants (free, from cached extractions)</h4><div class="chart" id="ch-sens"></div><div id="sens-note" class="muted" style="font-size:12.5px"></div></div>
+
+</section>
+
+<!-- ============================================================== 002 graph observatory (pinned 3D graph + scrolling chapters) -->
+<section class="band-dark observatory" id="graph" data-sec="graph">
+  <div class="obs-grid">
+    <div class="obs-chapters">
+      <div class="chapter" data-ch="corpus">
+        <div class="ch-kicker">chapter i</div>
+        <h2 class="ch-title">The Corpus</h2>
+        <div class="ch-big"></div>
+        <p class="ch-lede">Each colour is one paper. Every edge you see was accepted only because its evidence sentence was found in the source chunk.</p>
+        <ol class="ch-list"></ol>
+        <p class="ch-note"></p>
+        <details class="ch-more"><summary>document details</summary><div id="doc-table"></div></details>
+      </div>
+      <div class="chapter" data-ch="hubs">
+        <div class="ch-kicker">chapter ii</div>
+        <h2 class="ch-title">The Hubs</h2>
+        <p class="ch-lede">The entities the papers keep returning to. The number is the degree: how many verified relations meet there. Hover one to fly to it.</p>
+        <ol class="ch-list"></ol>
+      </div>
+      <div class="chapter" data-ch="bridges">
+        <div class="ch-kicker">chapter iii</div>
+        <h2 class="ch-title">The Bridges</h2>
+        <div class="ch-big"></div>
+        <p class="ch-lede">Gold entities appear in more than one paper. Cross-paper questions travel across them, and so do cross-paper hallucinations.</p>
+        <ol class="ch-list"></ol>
+        <div class="chips" id="shared" style="margin-top:14px"></div>
+      </div>
+      <div class="chapter" data-ch="evidence">
+        <div class="ch-kicker">chapter iv</div>
+        <h2 class="ch-title">The Evidence</h2>
+        <p class="ch-lede">The best-grounded relations, with the verbatim sentence that licenses them. The number is the grounding score.</p>
+        <ol class="ch-list"></ol>
+      </div>
+      <div class="chapter" data-ch="explore">
+        <div class="ch-kicker">chapter v</div>
+        <h2 class="ch-title">Explore</h2>
+        <p class="ch-lede">The graph is yours now: drag to orbit, scroll to zoom, search an entity, filter by paper, and click any node for every evidence-backed relation it takes part in.</p>
+      </div>
+    </div>
+    <div class="obs-stage">
+  <div class="kg-wrap" id="kg-wrap">
+    <div id="kg-canvas"></div>
+    <div class="kg-tools">
+      <input type="text" id="kg-search" placeholder="Search an entity… (Enter to focus)" list="kg-names" autocomplete="off">
+      <datalist id="kg-names"></datalist>
+      <button class="btn small ghost" id="kg-fit">Fit</button>
+      <button class="btn small ghost" id="kg-3d" title="Start / stop the slow orbit">Orbit</button>
+      <button class="btn small ghost" id="kg-sync" title="Push the whole graph of this corpus to Neo4j">Sync to Neo4j</button>
+      <div class="chips" id="kg-pdfs"></div>
+    </div>
+    <div class="kg-legend">
+      <span><i class="dot" style="background:#e6e0d0"></i>entity from one paper</span>
+      <span><i class="dot" style="background:#f2b347"></i>shared across papers</span>
+      <span>drag · scroll · click for evidence</span>
+    </div>
+    <aside class="drawer" id="kg-drawer" aria-live="polite"></aside>
+  </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== 002 audit -->
+<section class="section" id="audit" data-sec="audit">
+  <div class="sec-head reveal">
+    <div class="sec-num"><b>003</b>/ 007</div>
+    <h2 class="sec-title">Audit an Answer<span class="tag">PHASES 2–3</span></h2>
+    <p class="sec-lede">Ask anything about your corpus. The LLM answers, a separate extractor turns the answer into a claim graph, and EpistemeGraph
+      measures it against the knowledge graph: whether it hallucinates, with what probability, and how much of it is unsupported.</p>
+  </div>
+  <div class="grid g-side">
+    <div>
+      <div class="card corner reveal">
+        <div class="ask">
+          <label class="field">Your question
+            <textarea id="q" placeholder="e.g. How does node2vec's biased random walk interpolate between BFS and DFS?"></textarea>
+          </label>
+          <div style="display:grid;gap:10px;justify-items:end">
+            <div class="seg" id="audit-mode"><button data-v="closed_book" class="on">Closed-book</button><button data-v="grounded">Grounded</button></div>
+            <button class="btn" id="audit-btn">Intercept &amp; audit <span class="arrow">→</span></button>
+          </div>
+        </div>
+        <div class="examples" id="examples"></div>
+        <div class="pipeline" id="pipeline" hidden>
+          <div data-step="0"><b>01</b>LLM answers</div><div data-step="1"><b>02</b>claims → G′</div>
+          <div data-step="2"><b>03</b>retrieve G</div><div data-step="3"><b>04</b>x ∈ ℝ¹³ + claims</div><div data-step="4"><b>05</b>decide</div>
+        </div>
+      </div>
+      <div id="audit-result" style="margin-top:16px"></div>
+    </div>
+    <aside class="card reveal" style="align-self:start;position:sticky;top:80px">
+      <h4>History <span class="muted" id="hist-count"></span></h4>
+      <input type="text" id="hist-filter" placeholder="Filter…" style="margin-bottom:10px">
+      <div class="history" id="history"></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================================================== 003 batch -->
+<section class="section" id="batch" data-sec="batch">
+  <div class="sec-head reveal">
+    <div class="sec-num"><b>004</b>/ 007</div>
+    <h2 class="sec-title">Batch Queries<span class="tag">.TXT</span></h2>
+    <p class="sec-lede">Save any number of questions in a .txt file (one per line), drop it here, and audit them all in one go. Runs in the background;
+      leave and come back, and the last batch re-opens from cache.</p>
+  </div>
+  <div class="grid g2 reveal">
+    <div class="card corner">
+      <h4>Queries</h4>
+      <div class="dropzone" id="batch-drop" tabindex="0" role="button" aria-label="Choose a text file">
+        <div class="big">Drop a .txt file</div>
+        <div class="muted" style="font-size:13px">one question per line · lines starting with # are ignored</div>
+        <input type="file" id="batch-file" accept=".txt,.jsonl" hidden>
+      </div>
+      <div class="muted mono" id="batch-file-name" style="font-size:12px;margin:8px 0"></div>
+      <textarea id="batch-text" rows="5" placeholder="…or paste questions here, one per line"></textarea>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:10px;flex-wrap:wrap">
+        <div class="seg" id="batch-mode"><button data-v="closed_book" class="on">Closed-book</button><button data-v="grounded">Grounded</button></div>
+        <button class="btn" id="batch-btn">Run batch <span class="arrow">→</span></button>
+      </div>
+    </div>
+    <div class="card" id="batch-status"><h4>Status</h4><div class="empty">No batch yet.</div></div>
+  </div>
+  <div id="batch-results" class="reveal" style="margin-top:16px"></div>
+</section>
+
+<!-- ============================================================== 004 benchmark -->
+<section class="section" id="benchmark" data-sec="benchmark">
+  <div class="sec-head reveal">
+    <div class="sec-num"><b>005</b>/ 007</div>
+    <h2 class="sec-title">Research Benchmark<span class="tag">LABELLED</span></h2>
+    <p class="sec-lede">Curated, evidence-validated questions (factual, cross-paper, unanswerable, false-premise). Each answer is labelled by a judge that
+      sees the gold evidence; the labels train and calibrate the decision layer and produce every number in the paper.</p>
+  </div>
+  <div class="grid g3 reveal">
+    <div class="card">
+      <h4>1 · Generate from the corpus</h4>
+      <label class="field">Questions<input type="number" id="gen-n" value="500" min="20" max="5000" step="10"></label>
+      <label class="check" style="margin:10px 0"><input type="checkbox" id="gen-batch"> Batch API (≈50% cheaper, slower)</label>
+      <button class="btn small" id="gen-btn">Generate</button>
+    </div>
+    <div class="card">
+      <h4>…or bring your own</h4>
+      <p class="muted" style="font-size:13px;margin:0 0 10px">.jsonl from the generator, or .txt with one question per line (optionally <span class="mono">ID | CATEGORY | … | question</span>).</p>
+      <label class="btn small ghost" for="bench-file" style="cursor:pointer">Choose question file ↑</label>
+      <input type="file" id="bench-file" accept=".txt,.jsonl" hidden>
+      <div id="bench-items" class="muted mono" style="font-size:12px;margin-top:10px"></div>
+    </div>
+    <div class="card">
+      <h4>2 · Run · judge · train</h4>
+      <div class="grid g2" style="gap:10px">
+        <label class="field">Limit (0 = all)<input type="number" id="run-limit" value="0" min="0"></label>
+        <label class="field">API concurrency<input type="number" id="run-workers" value="6" min="1" max="16"></label>
+        <label class="field">CPU threads<input type="number" id="run-cpu" value="2" min="1" max="16"></label>
+        <label class="field">Mode<select id="run-mode"><option value="closed_book">closed-book</option><option value="grounded">grounded</option></select></label>
+      </div>
+      <label class="field" style="margin-top:10px">Judge model (use a different model than the audited one)<input type="text" id="run-judge" placeholder="defaults to JUDGE_MODEL in .env (claude-haiku-5-5)"></label>
+      <div style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap">
+        <button class="btn" id="run-btn">Run benchmark <span class="arrow">→</span></button>
+        <label class="check"><input type="checkbox" id="run-batch" checked> Batch judging (50% cheaper, usually under 1 h)</label>
+      </div>
+      <div class="grid g2" style="gap:10px;margin-top:12px">
+        <label class="field">Cross-check sample (0 = off)<input type="number" id="run-xn" value="100" min="0" max="1000" step="10"></label>
+        <label class="field">Second judge<input type="text" id="run-xm" value="claude-sonnet-5-5"></label>
+      </div>
+      <p class="muted" style="font-size:12px;margin:8px 0 0">The second judge re-labels a fixed, category-stratified sample to measure label reliability
+        (Cohen's κ). It does not change the training labels. ~$0.3–0.5 for 100 with Sonnet in batch mode.</p>
+    </div>
+  </div>
+  <div class="card reveal" id="bench-status" style="margin-top:16px"><h4>Run status</h4><div class="empty">Not started.</div></div>
+  <div id="bench-results" class="reveal" style="margin-top:16px"></div>
+</section>
+
+<!-- ============================================================== 005 brain -->
+<section class="section" id="brain" data-sec="brain">
+  <div class="sec-head reveal">
+    <div class="sec-num"><b>006</b>/ 007</div>
+    <h2 class="sec-title">The Calibration Brain<span class="tag">PHASE 4</span></h2>
+    <p class="sec-lede">Ten model families, including a multiple-instance network that pinpoints the unsupported claim, compete under nested cross-validation on a proper scoring rule. The champion's probabilities are pooled with
+      the local KG fidelity, and a conformal predictor turns them into decisions with a guaranteed error rate. Nothing is hand-tuned.</p>
+  </div>
+  <div id="brain-body" class="reveal"></div>
+</section>
+
+<!-- ============================================================== 006 method -->
+<section class="section" id="method" data-sec="method">
+  <div class="sec-head reveal">
+    <div class="sec-num"><b>007</b>/ 007</div>
+    <h2 class="sec-title">Method<span class="tag">MATHEMATICS</span></h2>
+    <p class="sec-lede">The full derivations are in the paper. Export the manuscript, with every number filled in from your runs, as an Overleaf bundle that compiles in one go.</p>
+  </div>
+  <div class="grid g3 reveal" id="math"></div>
+  <div class="card corner reveal" style="margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <div><h3>Research paper</h3><div class="muted" style="font-size:13.5px">LaTeX + bibliography + auto-generated tables &amp; figures → upload the zip to Overleaf (New Project → Upload Project).</div></div>
+    <button class="btn" id="paper-btn">Export Overleaf bundle <span class="arrow">↓</span></button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>EpistemeGraph · KG-grounded hallucination auditing</span>
+  <span id="foot-sys"></span>
+  <a href="https://github.com/Virtuoso-8051/EpistemeGraph" target="_blank" rel="noopener">github ↗</a>
+</footer>
+
+<div class="modal" id="settings" hidden>
+  <div class="card corner modal-card">
+    <h3>Access</h3>
+    <p class="muted" style="font-size:13px;margin:0 0 12px" id="settings-mode"></p>
+    <label class="field">Admin token (needed for uploads, batches, benchmark, retraining when the site is public)<input type="text" id="set-admin" autocomplete="off"></label>
+    <label class="field" style="margin-top:10px">Your own Claude API key (optional, sk-ant-…; used only for your audits, kept in this browser)<input type="text" id="set-key" autocomplete="off" placeholder="sk-..."></label>
+    <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:14px"><button class="btn ghost small" id="set-cancel">Close</button><button class="btn small" id="set-save">Save</button></div>
+  </div>
+</div>
+<div class="tray" id="tray"></div>
+<div id="tooltip" role="tooltip"></div>
+
+<script src="vendor/d3.min.js"></script>
+<script src="vendor/force-graph.min.js"></script>
+<script src="vendor/3d-force-graph.min.js"></script>
+<script src="vendor/vanilla-tilt.min.js"></script>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/katex/katex.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

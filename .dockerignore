@@ -1,0 +1,16 @@
+# never ship secrets or local environments
+.env
+*.env
+venv/
+.venv/
+__pycache__/
+**/__pycache__/
+*.egg-info/
+.git/
+mlruns/
+mlflow.db
+logs/
+notebooks/
+paper/*.zip
+final_model/workspaces/*/artifacts/
+final_model/workspaces/*/benchmark/runs/*/artifacts/
