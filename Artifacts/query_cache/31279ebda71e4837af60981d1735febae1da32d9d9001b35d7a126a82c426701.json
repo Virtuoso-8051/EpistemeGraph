@@ -1,0 +1,95 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "social network",
+    "Node Classification (NC)",
+    "graph structure",
+    "Labels of Node (LN)",
+    "random walks",
+    "node representations",
+    "node embeddings",
+    "classifier"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "Node Classification (NC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification (NC)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Labels of Node (LN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "node representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "higher-order proximity information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Labels of Node (LN)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "",
+      "type": "USES",
+      "target": "classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph structure",
+      "source_alias": "",
+      "type": "PROVIDES",
+      "target": "features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Labels of Node (LN)",
+      "source_alias": "",
+      "type": "PROVIDES",
+      "target": "supervision signal",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

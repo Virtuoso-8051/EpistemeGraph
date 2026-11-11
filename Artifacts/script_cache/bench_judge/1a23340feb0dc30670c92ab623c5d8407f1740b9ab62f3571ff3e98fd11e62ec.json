@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Graph factorization is designed mainly for sparse, large graphs where only edge existence matters (the evidence says it handles large networks, not that it only considers edge existence).",
+    "LINE optimizes the two objectives separately and concatenates the resulting embeddings, using edge sampling with negative sampling (not in the provided evidence).",
+    "Graph factorization captures only first-order structure (the evidence says it expects higher first-order proximity to be close, but does not say it captures nothing else)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says graph factorization focuses on first-order proximity via matrix factorization and that LINE preserves both first- and second-order proximities. It omits the key point that the matrix factorization objective is not designed for networks and so does not necessarily preserve global structure, and it adds details the evidence does not contain, such as the concatenation and negative sampling, and the 'only edge existence' claim."
+}

@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "Skip-gram model (SGM)",
+    "random walk (RW)",
+    "language modeling (LM)",
+    "Graph Embedding (GE)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "Skip-gram model (SGM)",
+      "target_alias": "SGM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "language modeling (LM)",
+      "target_alias": "LM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "SGM",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "Graph Embedding (GE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "IS_A",
+      "target": "word sequence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "structural neighborhood information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "frequency distribution of vertices visited by short random walks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "power law",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "unsupervised",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "scalable",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

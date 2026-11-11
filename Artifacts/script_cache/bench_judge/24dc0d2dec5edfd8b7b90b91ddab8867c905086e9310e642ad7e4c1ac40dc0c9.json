@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk's multi-label classification experiments used BlogCatalog with 10,312 nodes, about 333,983 edges, and 39 labels",
+    "Flickr with 80,513 nodes, about 5.9 million edges, and 195 labels",
+    "YouTube with 1,138,499 nodes, about 4.9 million edges, and 47 labels",
+    "The Wikipedia co-occurrence graph has 4,777 nodes",
+    "The Wikipedia network was used in a separate part of the paper rather than the large-graph experiments"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is not answerable from the provided evidence, which names no datasets or node counts for the large-graph evaluation; the AI answer instead supplies specific datasets and statistics that do not appear in the passages. The only grounded evidence is a mention of a network with 3,890 nodes and 50 labels and a Wikipedia co-occurrence network, so the answer's core specifics are invented rather than flagged as unreported."
+}

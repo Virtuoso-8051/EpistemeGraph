@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Both methods start from the adjacency matrix (EdgeCluster clusters the adjacency matrix, but Modularity is described via the modularity matrix B; the evidence does not state B is derived from A in this framing, though it is uncontroversial background)",
+    "Modularity tends to outperform EdgeCluster when the graph has strong assortative community structure matching labels, when dimensions are modest, and graph is small-to-medium",
+    "EdgeCluster tends to be competitive or better on very large, sparse networks where eigendecomposition is too costly, or where community structure is weak",
+    "The conditions are 'general patterns from the literature' not reported by the source excerpt, and the answer presents performance conditions the papers do not report"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly notes that Modularity and EdgeCluster differ in how they process the adjacency structure, but it then accepts the presupposed performance ordering and gives detailed conditions under which Modularity wins, none of which appear in the evidence. The excerpt only describes the methods and never reports that Modularity outperforms EdgeCluster, so those conditional claims are unsupported."
+}

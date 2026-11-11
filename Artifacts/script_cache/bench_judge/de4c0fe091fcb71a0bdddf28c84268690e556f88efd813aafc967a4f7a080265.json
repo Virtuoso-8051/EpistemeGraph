@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Reusing sampled transitions avoids bias only when each reused sample follows the exact biased transition distribution and reuse does not correlate successive walk steps.",
+    "Reuse restricted to identical transition states (e.g., alias tables per (previous, current) edge pair) is what makes the approach avoid bias while improving efficiency.",
+    "Rejection-sampling outcomes reused within the same state yield exact node2vec draws without bias."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly says sample reuse can introduce some bias while greatly improving efficiency, and the answer does not clearly reject the false premise that bias is avoided. Instead it invents conditions under which bias is avoided, none of which appear in the source, though it does admit it could not find a supporting source."
+}

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How is first-order proximity defined for two vertices in a network, and what value does it take when no edge is observed between the two vertices?",
+      "gold_answer": "First-order proximity is the local pairwise proximity between two vertices, represented by the edge weight wuv for a linked pair (u,v). If no edge is observed between u and v, their first-order proximity is 0. It is usually interpreted as the similarity of the two nodes in a real-world network.",
+      "evidence_quote": "If no edge is observed betweenu and v, their first-order proximity is 0.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why is first-order proximity alone considered insufficient for preserving network structure in a real-world information network?",
+      "gold_answer": "The passage says that observed links are only a small proportion of the edges in a real-world information network, so many links are missing. As a result, two nodes can have zero first-order proximity even when they are intrinsically very similar, which means first-order proximity alone cannot fully preserve the network structure.",
+      "evidence_quote": "Therefore, first-order proximity alone is not sufficient for preserving the network structures, and it is important to seek an alternative notion of proximity that addresses the problem of sparsity.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How is second-order proximity defined, and what network information does it compare between two vertices such as u and v?",
+      "gold_answer": "Second-order proximity is defined as the similarity between the neighborhood network structures of two vertices. Mathematically, it compares the vectors pu and pv, where each vector contains the first-order proximity of a vertex with all other vertices. Thus, it measures how similar the neighborhoods of u and v are, rather than whether u and v are directly connected.",
+      "evidence_quote": "Definition 3. (Second-order Proximity)The secondorder proximity between a pair of vertices (u,v ) in a network is the similarity between their neighborhood network structures.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which condition does the second-order proximity between two vertices become 0, and how is this condition stated in terms of their shared links?",
+      "gold_answer": "The second-order proximity between two vertices becomes 0 if no vertex is linked from or to both of them. In other words, if the two vertices do not share any common linked neighbors, their second-order proximity is zero.",
+      "evidence_quote": "If no vertex is linked from/to both u and v, the second-order proximity betweenu and v is 0.",
+      "difficulty": "medium"
+    }
+  ]
+}

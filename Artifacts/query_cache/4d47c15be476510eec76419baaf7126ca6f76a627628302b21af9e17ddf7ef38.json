@@ -1,0 +1,6 @@
+{
+  "answer": "LINE does not use truncated random walks for first-order proximity, so the question's premise is mistaken. Truncated random walks are the core of DeepWalk, not LINE. LINE (Tang et al., 2015) models first-order proximity directly on observed edges: it defines a joint probability distribution over vertex pairs, p1(vi, vj) = sigmoid(ui \u00b7 uj), matches it to the empirical edge distribution by minimizing KL divergence, and trains with edge sampling (weighted edges sampled via alias tables) and negative sampling. Edge sampling is used instead of random walks so that weighted edges are handled well and the stochastic gradient variance is reduced. LINE was evaluated on several networks, including a YouTube social network, but the random-walk mechanism is not part of its method.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am fairly confident that LINE uses edge sampling rather than random walks and that truncated random walks belong to DeepWalk, though I am less certain of the exact dataset details and experimental claims.",
+  "_token_nll": null
+}

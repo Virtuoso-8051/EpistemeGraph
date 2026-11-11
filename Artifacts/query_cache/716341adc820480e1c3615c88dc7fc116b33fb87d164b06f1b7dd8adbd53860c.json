@@ -1,0 +1,55 @@
+{
+  "query_entities": [
+    "spectral clustering (SC)"
+  ],
+  "triples": [
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SC",
+      "type": "REQUIRES",
+      "target": "similarity graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "similarity graph",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "clusters appear as densely connected groups",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SC",
+      "type": "USES",
+      "target": "graph Laplacian eigenvectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SC",
+      "type": "REQUIRES",
+      "target": "number of clusters k specified in advance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SC",
+      "type": "APPLIES_TO",
+      "target": "non-graph-like clusters",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SC",
+      "type": "PRESERVE",
+      "target": "cluster structure revealed by eigenvectors",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

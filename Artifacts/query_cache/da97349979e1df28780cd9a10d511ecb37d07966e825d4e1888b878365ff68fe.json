@@ -1,0 +1,6 @@
+{
+  "answer": "In node2vec, the source-neighborhood dot product is asymmetric because the model uses two different embedding roles: one vector for a node when it appears as the source/center node, and a separate vector when it appears as a context/neighbor node. So the score is typically computed as the dot product between the source embedding of node u and the context embedding of node v, which is not the same as swapping them if the two embedding sets are different. This asymmetry helps because the model can learn different representations for \u201cbeing the source\u201d versus \u201cbeing a neighbor,\u201d allowing it to capture direction-like or role-specific relationships and avoid forcing a node to look identical in both positions. As a result, the model can better distinguish the source node from its surrounding neighbors and represent their interactions more flexibly than a single shared embedding would.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a standard property of node2vec/skip-gram-style models with separate input and output embeddings, and the explanation follows directly from that design.",
+  "_token_nll": 0.19185868749078713
+}

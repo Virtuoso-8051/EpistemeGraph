@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec extends random walks to pairs of nodes so it can learn embeddings that capture not just a node\u2019s local neighborhood, but also the relationship between two nodes as they appear together in sampled walks. This lets it model pairwise context and structural similarity more flexibly than methods that only consider single-node neighborhoods. As an example of a downstream task, it is used for link prediction, where the goal is to predict whether an edge should exist between two nodes.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This matches the standard description of node2vec\u2019s pairwise skip-gram-style training and its common example application of link prediction.",
+  "_token_nll": 0.22876863768606476
+}

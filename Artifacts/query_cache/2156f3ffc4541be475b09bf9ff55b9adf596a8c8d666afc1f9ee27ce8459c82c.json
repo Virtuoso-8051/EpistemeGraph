@@ -1,0 +1,105 @@
+{
+  "query_entities": [
+    "LINE(2nd)",
+    "DeepWalk",
+    "citation network"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk",
+      "target_alias": "RW",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "second-order proximity variant",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "likelihood of preserving network neighborhoods of node",
+      "target_alias": "LPNNN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling algorithm",
+      "target_alias": "ESA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "shared-neighbour proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walk",
+      "target_alias": "TRW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "multi-hop co-occurrence capture",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "large-scale weighted graphs",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

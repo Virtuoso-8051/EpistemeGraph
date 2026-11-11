@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk\u2019s supervised feature learning objective make it especially strong at node classification on sparse networks?",
+      "false_premise": "DeepWalk uses a supervised feature learning objective for node classification.",
+      "correction": "DeepWalk is an unsupervised feature learning method that learns vertex representations from random walks, not a supervised classifier.",
+      "evidence_quote": "In this paper we introduce deep learning (unsupervised feature learning) [2] techniques, which have proven successful in natural language processing, into network analysis for the first time.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does DeepWalk\u2019s use of content recommendation data help it generalize to missing link prediction tasks?",
+      "false_premise": "DeepWalk is described as using content recommendation data.",
+      "correction": "The passage lists content recommendation as an application area of networks, not as data used by DeepWalk.",
+      "evidence_quote": "Machine learning applications in networks (such as network classification [15, 37], content recommendation [11], anomaly detection [5], and missing link prediction [22]) must be able to deal with this sparsity in order to survive.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What makes DeepWalk\u2019s matrix factorization step preserve community structure in the learned embeddings?",
+      "false_premise": "DeepWalk uses matrix factorization as part of its method.",
+      "correction": "The passage says DeepWalk learns representations by modeling a stream of short random walks, not by matrix factorization.",
+      "evidence_quote": "We develop an algorithm ( DeepW alk) that learns social representations of a graph\u2019s vertices, by modeling a stream of short random walks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does DeepWalk outperform standard classification methods by directly predicting labels from the graph?",
+      "false_premise": "DeepWalk directly predicts labels and is compared as outperforming standard classification methods.",
+      "correction": "DeepWalk learns latent representations that can be exploited by standard classification methods; it does not directly predict labels in the described formulation.",
+      "evidence_quote": "The learned representation encodes community structure so it can be easily exploited by standard classification methods.",
+      "difficulty": "medium"
+    }
+  ]
+}

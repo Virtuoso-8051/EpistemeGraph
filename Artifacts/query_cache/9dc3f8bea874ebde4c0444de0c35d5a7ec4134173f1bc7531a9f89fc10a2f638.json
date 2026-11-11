@@ -1,0 +1,6 @@
+{
+  "answer": "LINE-SGD is faster because, on the language network, it uses a much simpler objective and update rule than graph factorization: it optimizes only local pairwise edge information with negative sampling, avoids expensive matrix-factorization-style computations over the whole graph, and can be trained efficiently with ordinary SGD using sparse, edge-based updates. This makes each iteration cheaper and the optimization more scalable on large networks.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a well-established explanation of why LINE-style methods are faster, but the exact wording depends on the specific paper and implementation details, so I am not fully certain every phrasing matches the source.",
+  "_token_nll": 0.32206891187980996
+}

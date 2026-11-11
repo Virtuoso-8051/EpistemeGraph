@@ -1,0 +1,13 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The node2vec paper reports link prediction F1 scores alongside AUC, which the evidence does not mention.",
+    "The node2vec paper's link prediction comparisons include Spectral Clustering as a baseline, which the evidence does not mention.",
+    "The heuristic baseline numbers 'may come from a different paper', which contradicts the evidence that node2vec evaluates against these popular heuristic scores.",
+    "The AI says it does not recall node2vec reporting Common Neighbors, Jaccard, Adamic-Adar, or Preferential Attachment baselines, but the evidence says it does, and it names Adamic-Adar as the best baseline.",
+    "Table 3 is presented as the place to find the values, but the evidence shows Table 3 only defines the heuristic scores and contains no results."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give exact numbers, which matches the unanswerable framing. However, it wrongly suggests the heuristic baselines are not in the node2vec paper, which the evidence contradicts, and it points to Table 3 as a results table when that table only defines the scores."
+}

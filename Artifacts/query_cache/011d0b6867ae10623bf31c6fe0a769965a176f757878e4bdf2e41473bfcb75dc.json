@@ -1,0 +1,100 @@
+{
+  "query_entities": [
+    "node2vec",
+    "node embedding",
+    "BFS",
+    "DFS",
+    "homophily",
+    "structural equivalence"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "node embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "node embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "structural role",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "flexible, biased neighborhood sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "BFS-like sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "DFS-like sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like sampling",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "homophily",
+      "target_alias": "local similarity",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like sampling",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "structural equivalence",
+      "target_alias": "role similarity",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "BFS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "DFS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

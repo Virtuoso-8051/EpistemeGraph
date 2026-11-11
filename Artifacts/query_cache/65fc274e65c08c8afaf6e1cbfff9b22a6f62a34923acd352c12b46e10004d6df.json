@@ -1,0 +1,62 @@
+{
+  "query_entities": [
+    "node2vec",
+    "random walks",
+    "embeddings",
+    "local neighborhood",
+    "pairwise context",
+    "structural similarity",
+    "link prediction",
+    "edge"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embeddings",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "local neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "pairwise context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "structural similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "link prediction",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

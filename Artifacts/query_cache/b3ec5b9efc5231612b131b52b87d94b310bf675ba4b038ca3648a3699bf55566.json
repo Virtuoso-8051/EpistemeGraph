@@ -1,0 +1,83 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "transition probability (TP)",
+    "node2vec parameter (NP)",
+    "biased random walk procedure (BRWP)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "2nd order random walk approach (2NORWA)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order walk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "transition probability (TP)",
+      "source_alias": "TP",
+      "type": "OPTIMIZES",
+      "target": "unnormalized probability of moving from v to x",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alpha_pq(t,x)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "1/p if d_tx = 0",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "likelihood of immediately revisiting the previous node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "walk explores inward/BFS-like (q > 1) or outward/DFS-like (q < 1)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "NP",
+      "type": "ENABLES",
+      "target": "interpolation between BFS and DFS exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "static first-order transition based only on w_vx",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "interpolation between BFS and DFS exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "BRWP",
+      "type": "PRESERVES",
+      "target": "edge weights multiply the bias",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "LINE",
+    "second-order proximity",
+    "softmax",
+    "context vertex",
+    "vertex embedding"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "softmax probabilitie",
+      "target_alias": "SP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "softmax probabilitie",
+      "source_alias": "SP",
+      "type": "DEFINED_AS",
+      "target": "conditional probability of generating context vertex v_j given vertex v_i",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability of generating context vertex v_j given vertex v_i",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "inner products",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex representation",
+      "source_alias": "UI",
+      "type": "REPRESENTS",
+      "target": "embedding of v_i",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability of generating context vertex v_j given vertex v_i",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "entire vertex set V",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "query_entities": [
+    "DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "structural similarity",
+      "target_alias": "nodes having similar roles or positions in the graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "random-walk contexts",
+      "target_alias": "vertices that appear in similar random-walk contexts can end up close in the embedding space even if they are far apart in the network",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "learned representations",
+      "target_alias": "features for machine-learning tasks such as node classification, clustering, and link prediction",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "machine-learning tasks",
+      "target_alias": "node classification, clustering, and link prediction",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "compact, informative representation of the graph",
+      "target_alias": "providing a compact, informative representation of the graph",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

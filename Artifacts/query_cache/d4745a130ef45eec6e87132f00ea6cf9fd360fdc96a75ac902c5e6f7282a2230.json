@@ -1,0 +1,112 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "LINE"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram language model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "higher-order neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "unweighted graph",
+      "target_alias": "UG",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "unweighted graph",
+      "target_alias": "UG",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "PROPOSES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "PROPOSES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "APPLICABLE_FOR",
+      "target": "weighted network",
+      "target_alias": "WN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "DEFINED_AS",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "REFUTED",
+      "target": "multi-hop path sampling",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "metapath2vec",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "embedding of heterogeneous information network",
+      "target_alias": "EHIN",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is mistaken. DeepWalk does not use SpectralClustering. In Perozzi et al. (2014), DeepWalk generates truncated random walks over the graph, treats each walk as a sentence, and trains a skip-gram (Word2Vec-style) model to learn low-dimensional node embeddings. A one-vs-rest logistic regression classifier is then trained on those embeddings using the labeled nodes. SpectralClustering was one of the baselines it was compared against, alongside EdgeCluster, Modularity, and wvRN. Any advantage DeepWalk showed, including in low-label regimes such as a few percent of nodes labeled on Flickr, is generally attributed to its learned representations. Random walks capture local and community-level neighborhood structure, and the embeddings are learned without labels, so a simple classifier needs few labeled examples. I cannot confirm the exact figure of 3% for Flickr from memory, so treat that specific number with caution.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am confident DeepWalk uses random walks with skip-gram and that SpectralClustering was a baseline rather than the method, but I am less certain of the exact labeled-percentage results on Flickr.",
+  "_token_nll": null
+}

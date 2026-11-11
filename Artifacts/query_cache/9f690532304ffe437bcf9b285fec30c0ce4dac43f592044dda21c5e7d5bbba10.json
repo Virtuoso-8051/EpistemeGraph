@@ -1,0 +1,85 @@
+{
+  "query_entities": [
+    "BlogCatalog",
+    "node2vec",
+    "Macro-F1",
+    "return parameter p",
+    "in-out parameter q",
+    "non-edges",
+    "neighborhood structure"
+  ],
+  "triples": [
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "node2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Macro-F1",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adding missing edges",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "Macro-F1",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "adding a relatively large fraction of non-edges",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "Macro-F1",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "low return parameter p",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "more local/biased node2vec settings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low in-out parameter q",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "more local/biased node2vec settings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "added edges",
+      "source_alias": "",
+      "type": "DISTORTS",
+      "target": "neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adding missing edges",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "removing edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

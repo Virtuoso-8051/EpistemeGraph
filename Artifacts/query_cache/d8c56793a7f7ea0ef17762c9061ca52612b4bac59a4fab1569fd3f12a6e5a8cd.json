@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "node2vec",
+    "neighborhood sampling strategy",
+    "biased random walk procedure",
+    "breadth-first sampling",
+    "depth-first sampling"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "node embedding",
+      "target_alias": "embeddings",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy",
+      "source_alias": "NSS",
+      "type": "PRESERVES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy",
+      "source_alias": "NSS",
+      "type": "PRESERVES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "source_alias": "BRWP",
+      "type": "USES",
+      "target": "return parameter p",
+      "target_alias": "p",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "source_alias": "BRWP",
+      "type": "USES",
+      "target": "in-out parameter q",
+      "target_alias": "q",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "source_alias": "BRWP",
+      "type": "USES",
+      "target": "second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first sampling",
+      "source_alias": "BFS",
+      "type": "PRESERVES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first sampling",
+      "source_alias": "DFS",
+      "type": "PRESERVES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy",
+      "source_alias": "NSS",
+      "type": "APPROXIMATES",
+      "target": "breadth-first sampling",
+      "target_alias": "BFS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy",
+      "source_alias": "NSS",
+      "type": "APPROXIMATES",
+      "target": "depth-first sampling",
+      "target_alias": "DFS",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

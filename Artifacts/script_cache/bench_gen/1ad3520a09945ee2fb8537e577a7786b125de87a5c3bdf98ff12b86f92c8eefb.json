@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How do LINE and DeepWalk differ in the graph types or problem settings they are explicitly used for in the two passages, and what does that imply about when each method is applied?",
+      "gold_answer": "LINE(2nd) is used on both undirected and directed graphs, while LINE(1st+2nd) is only applied to supervised tasks because weighting concatenated embeddings is difficult in unsupervised settings; DeepWalk is evaluated as a feature method for multi-label classification on the BlogCatalog network, using a one-vs-rest logistic regression classifier. So LINE is described in terms of graph directionality and supervised/unsupervised applicability, whereas DeepWalk is used in a supervised node-classification pipeline.",
+      "evidence_quote": "LINE(2nd) and LINESGD(2nd) apply to both undirected and directed graphs.",
+      "evidence_quote_b": "For all models we use a one-vs-rest logistic regression implemented by LibLinear [10] for classification.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compared with LINE's treatment of embeddings, how is DeepWalk configured in the experiments, and what common goal do both methods serve across the two passages?",
+      "gold_answer": "LINE concatenates first-order and second-order embeddings and then re-weights the dimensions, while DeepWalk is configured with window size 10, walk length 40, and 40 walks per vertex. In both passages, the learned representations are ultimately used as features for downstream evaluation tasks, such as word analogy/document classification for LINE and multi-label classification for DeepWalk.",
+      "evidence_quote": "After concatenation, the dimensions should be re-weighted to balance the two representations.",
+      "evidence_quote_b": "For all models we use a one-vs-rest logistic regression implemented by LibLinear [10] for classification.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does LINE require supervised data, and how does that contrast with the way DeepWalk is evaluated on BlogCatalog?",
+      "gold_answer": "LINE(1st+2nd) is only applied to supervised tasks because the dimension weights after concatenating LINE(1st) and LINE(2nd) are hard to set in unsupervised tasks. DeepWalk, by contrast, is evaluated on BlogCatalog by varying the training ratio from 10% to 90% and measuring Macro-F1 and Micro-F1, which shows it is used in a supervised classification setting rather than for choosing embedding weights.",
+      "evidence_quote": "Therefore we only apply LINE (1st+2nd) to the scenario of supervised tasks.",
+      "evidence_quote_b": "In this experiment we increase the training ratio ( TR) on the BlogCatalog network from 10% to 90%.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What do LINE and DeepWalk each use as the basis for their evaluation, and how do the reported results show that they are being assessed on different kinds of tasks?",
+      "gold_answer": "LINE is evaluated on word analogy and document classification for a language network, with reported semantic, syntactic, and overall analogy accuracy. DeepWalk is evaluated on multi-label classification, using Macro-F1 and Micro-F1 on BlogCatalog. Thus, LINE is assessed with analogy and classification metrics, while DeepWalk is assessed only through classification performance on labeled nodes.",
+      "evidence_quote": "Two applications are used to evaluate the effectiveness of the learned embeddings: word analogy [12] and document classification.",
+      "evidence_quote_b": "We thoroughly evaluate it on a number of multilabel classification tasks, and analyze its sensitivity across several parameters.",
+      "difficulty": "easy"
+    }
+  ]
+}

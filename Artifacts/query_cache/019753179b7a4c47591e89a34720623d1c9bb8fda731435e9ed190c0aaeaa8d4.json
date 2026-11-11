@@ -1,0 +1,78 @@
+{
+  "query_entities": [
+    "LINE",
+    "DEEPWALK",
+    "first-order proximity (FOP)",
+    "second-order neighbor (SON)",
+    "random walk (RW)",
+    "citation network (CN)",
+    "LINE(2nd)",
+    "DBLP"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "FOP",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order neighbor (SON)",
+      "target_alias": "SON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "global structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "PRESERVES",
+      "target": "global structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "second-order neighbor (SON)",
+      "target_alias": "SON",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DBLP",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "citation network (CN)",
+      "target_alias": "CN",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "citation network (CN)",
+      "source_alias": "CN",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparsity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

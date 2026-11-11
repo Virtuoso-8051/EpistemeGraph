@@ -1,0 +1,103 @@
+{
+  "query_entities": [
+    "node2vec",
+    "DFS-biased sampling",
+    "random walk",
+    "neighborhood window",
+    "sliding window",
+    "effective sampling rate",
+    "depth-first exploration",
+    "graph",
+    "neighborhoods"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "DFS-biased sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-biased sampling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "avoid repeatedly sampling many highly overlapping, near-duplicate neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "long random walk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "training pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sliding window",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "training pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training pairs",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "nearby positions that are strongly correlated and mostly reflect the same local region",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "depth-first exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first exploration",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "move outward to new parts of the graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhoods extracted from the walk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "less redundant",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "effective sampling rate",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "reduced",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-biased sampling",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "capture broader structural context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-biased sampling",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "broader structural context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "random walk (RW)",
+    "Skip-gram model (SGM)",
+    "node2vec parameter (NP)",
+    "biased random walk procedure (BRWP)",
+    "2 nd order random walk approach (2NORWA)",
+    "number of walks started per vertex (GAMMA)",
+    "number of walks per source (NWPS)",
+    "node representation (NR)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "number of walks started per vertex (GAMMA)",
+      "target_alias": "r",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "uniform random walk (URW)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "biased second-order random walk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "p and q",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased second-order random walk",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "2 nd order random walk approach (2NORWA)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased second-order random walk",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "BFS-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased second-order random walk",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "DFS-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias tables",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "O(1) sampling per walk step",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "stochastic gradient descent",
+      "target_alias": "SGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "scalability to large graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "start-node choice",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "node representation (NR)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

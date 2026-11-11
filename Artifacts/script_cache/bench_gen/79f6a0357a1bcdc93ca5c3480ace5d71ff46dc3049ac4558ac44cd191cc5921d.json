@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does LINE(1st) outperform LINE(2nd) on the Wikipedia word analogy task when it combines both first-order and second-order proximity?",
+      "false_premise": "LINE(1st) combines both first-order and second-order proximity and outperforms LINE(2nd) on the Wikipedia word analogy task.",
+      "correction": "LINE(1st) uses only first-order proximity, and LINE(2nd) achieves the higher word analogy score on Wikipedia.",
+      "evidence_quote": "LINE(2nd) 73.79 59.72 66.10 2.55h",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE(1st+2nd) handle unsupervised tasks in the language network, given that it is applied there to tune the dimension weights automatically from unlabeled data?",
+      "false_premise": "LINE(1st+2nd) is applied to unsupervised tasks in the language network and automatically tunes dimension weights from unlabeled data.",
+      "correction": "LINE(1st+2nd) is only applied to supervised tasks, because weighting dimensions is difficult to set in unsupervised tasks.",
+      "evidence_quote": "Therefore we only apply LINE (1st+2nd) to the scenario of supervised tasks.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions do LINE(1st) and LINE-SGD(1st) apply to directed graphs, and how does that affect their performance on the language network?",
+      "false_premise": "LINE(1st) and LINE-SGD(1st) apply to directed graphs.",
+      "correction": "LINE(1st) and LINE-SGD(1st) only apply to undirected graphs.",
+      "evidence_quote": "Like the graph factorization, both LINE(1st) and LINE-SGD(1st) only apply to undirected graphs.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes LINE-SGD(2nd) slower than LINE(2nd) on the Wikipedia word analogy benchmark, since LINE-SGD(2nd) is reported to reach the best overall accuracy?",
+      "false_premise": "LINE-SGD(2nd) reaches the best overall accuracy on the Wikipedia word analogy benchmark and is slower than LINE(2nd).",
+      "correction": "LINE(2nd) has the best overall accuracy, while LINE-SGD(2nd) performs substantially worse.",
+      "evidence_quote": "LINE-SGD(2nd) 20.42 9.56 14.49 3.94h",
+      "difficulty": "hard"
+    }
+  ]
+}

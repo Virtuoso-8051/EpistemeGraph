@@ -1,0 +1,6 @@
+{
+  "answer": "The node2vec paper (Grover & Leskovec, 2016) does not report an exact parameter count for its embedding model on the PPI network. Its PPI network has about 3,890 nodes, and it uses 128-dimensional embeddings by default. Under that setup the embedding matrix would have 3,890 \u00d7 128 = 497,920 parameters, and DeepWalk uses the same dimensionality in the paper's comparisons, so the count would be identical for both. This is an inferred figure, not one the paper states.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I am fairly sure the paper gives no explicit parameter count and the node and dimension figures are from memory, but the exact details of the setup could be misremembered.",
+  "_token_nll": null
+}

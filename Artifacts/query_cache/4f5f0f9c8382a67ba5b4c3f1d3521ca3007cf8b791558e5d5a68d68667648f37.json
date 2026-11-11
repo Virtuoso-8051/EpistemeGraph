@@ -1,0 +1,104 @@
+{
+  "query_entities": [
+    "SkipGram",
+    "Wikipedia word network",
+    "Skip-gram model (SGM)",
+    "Word analogy (WA)",
+    "Graph Embedding (GE)",
+    "DeepWalk",
+    "node2vec",
+    "Negative sampling",
+    "Hierarchical softmax",
+    "Wikipedia data (WD)"
+  ],
+  "triples": [
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "Wikipedia word graph",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "neural language model (NLM)",
+      "target_alias": "NLM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "dense word vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Word analogy (WA)",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "SkipGram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Graph-based methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "Graph-based methods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "Graph-based methods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "distributional statistics of the text corpus",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "sequential text windows",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

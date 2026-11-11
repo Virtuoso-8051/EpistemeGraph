@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does LINE use random walks to optimize its embeddings for large weighted networks, and how does that help preserve second-order proximity?",
+      "false_premise": "LINE uses random walks to optimize its embeddings for large weighted networks.",
+      "correction": "LINE does not use random walks; it proposes a novel edge-sampling method and preserves first-order and second-order proximities with carefully designed objectives.",
+      "evidence_quote": "To address this, we propose a novel edge-sampling method, which improves both the effectiveness and efficiency of the inference.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does LINE's edge-sampling scheme change the objective function so that edge weights directly scale the gradients without causing instability?",
+      "false_premise": "LINE's edge-sampling scheme changes the objective function and makes edge weights directly scale the gradients.",
+      "correction": "LINE keeps the objective function the same, and the sampled edges are treated as binary edges so the weights no longer affect the gradients.",
+      "evidence_quote": "With this sampling process, the objective function remains the same and the weights of the edges no longer affect the gradients.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What makes LINE especially effective on unweighted graphs, given that its sampling strategy is designed for binary edges rather than weighted ones?",
+      "false_premise": "LINE is especially effective on unweighted graphs and its sampling strategy is designed for binary edges rather than weighted ones.",
+      "correction": "LINE works well for directed or undirected, weighted or unweighted graphs, and its edge-sampling method samples edges proportionally to their weights.",
+      "evidence_quote": "The LINE is very general, which works well for directed or undirected, weighted or unweighted graphs.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does LINE rely on directly deploying stochastic gradient descent to avoid gradient explosion in word co-occurrence networks?",
+      "false_premise": "LINE relies on directly deploying stochastic gradient descent to avoid gradient explosion in word co-occurrence networks.",
+      "correction": "Directly deploying stochastic gradient descent is described as problematic because high-variance edge weights can explode the gradients, so LINE proposes edge sampling instead.",
+      "evidence_quote": "However, we show that directly deploying the stochastic gradient descent is problematic for real world information networks.",
+      "difficulty": "medium"
+    }
+  ]
+}

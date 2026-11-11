@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Alias-table sampling draws edges and negative vertices in constant time is not stated in the provided evidence.",
+    "Negative sampling replaces the full softmax, so each update touches only a handful of vectors, is not in the provided evidence.",
+    "Total running time is roughly linear in the number of edges and per-step cost is constant is not in the evidence.",
+    "The answer omits the paper's actual support for scalability, which is the near-linear speedup and stable Micro-F1 across threads, and instead presents implementation reasoning the evidence does not contain."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly cites edge sampling and asynchronous SGD with multiple threads, and the scale to millions of vertices and billions of edges. But it adds alias tables, negative sampling, and complexity claims absent from the evidence, and it never mentions the empirical speedup and Micro-F1 stability results that the paper uses as support."
+}

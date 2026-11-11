@@ -1,0 +1,65 @@
+{
+  "query_entities": [
+    "LINE",
+    "first-order proximity (FOP)",
+    "empirical distribution (ED)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "first-order joint probability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order joint probability",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "sigmoid of the inner product of low-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order joint probability",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "distribution over vertex pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order joint probability",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "symmetry",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "empirical distribution (ED)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "normalized edge weight w_ij / W",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "W",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "sum of all edge weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "KL divergence between empirical distribution and first-order joint probability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

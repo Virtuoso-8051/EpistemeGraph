@@ -1,0 +1,73 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "truncated random walk (TRW)",
+    "citation network (CN)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "stochastic gradient descent",
+      "target_alias": "SGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "TRW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "one-hop neighborhood per update",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP PaperCitation",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "citation network (CN)",
+      "target_alias": "CN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "multi-hop co-occurrence training signal",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(2nd)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

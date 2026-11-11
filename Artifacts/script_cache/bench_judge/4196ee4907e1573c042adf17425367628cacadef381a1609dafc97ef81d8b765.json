@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The AI answer states the passages were not included with the question and then answers from general literature; the evidence actually contains both passages, so this claim about missing passages is contradicted by the provided evidence.",
+    "Claims that real-world networks are heterogeneous, noisy, and evolving over time are attributed to the standard literature rather than the papers, and the papers' stated reason is scale (millions of nodes, billions of edges, and quadratic complexity of classical methods), which the answer does not cite.",
+    "The answer says DeepWalk uses uniform random walks and that it captures higher-order co-occurrence and community structure; the evidence describes DeepWalk as using truncated random walks and does not say 'uniform' or mention community structure.",
+    "The answer's correction that DeepWalk does not use non-random walks contradicts Passage B, which explicitly says non-random walks from sequences like web navigation can be fed to the modeling phase, capturing both structure and traversal frequency.",
+    "The answer omits the core point that Passage B says non-random walks capture the frequency with which paths are traversed, which is the central requested mechanism."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer wrongly claims the passages were absent and rejects the question's premise about non-random walks, which Passage B (Section 4.4.2) explicitly describes as a variant of DeepWalk. Its account of the scalability problem is generic background rather than the papers' stated argument, so the core of the answer is unsupported."
+}

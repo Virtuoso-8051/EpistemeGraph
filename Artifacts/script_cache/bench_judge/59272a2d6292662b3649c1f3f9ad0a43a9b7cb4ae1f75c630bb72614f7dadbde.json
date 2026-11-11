@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "node2vec used r = 10 walks per node",
+    "walk length l = 80",
+    "context size k = 10",
+    "d = 128 dimensions",
+    "the paper fixed these values across its experiments"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence only states that r random walks are simulated per node and never gives a numeric value for r, walk length, context size, or dimensionality, so the AI's specific numbers are invented. The answer does correctly say no systematic comparison across r is reported, but its core claim of r = 10 is unsupported by the source."
+}

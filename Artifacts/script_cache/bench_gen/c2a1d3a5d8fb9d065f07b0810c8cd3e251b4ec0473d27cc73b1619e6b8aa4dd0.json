@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk's use of global network views help it beat local random-walk methods on dense social graphs, especially when plenty of labeled data is available?",
+      "false_premise": "DeepWalk uses global network views and is especially strong when labeled data is plentiful.",
+      "correction": "DeepWalk uses local information from truncated random walks, and it is especially effective when labeled data is sparse.",
+      "evidence_quote": "DeepWalk uses local information obtained from truncated random walks to learn latent representations by treating walks as the equivalent of sentences.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does DeepWalk's supervised training objective improve its latent vertex embeddings for node classification compared with other deep learning methods?",
+      "false_premise": "DeepWalk is trained with a supervised objective.",
+      "correction": "DeepWalk is an unsupervised method that generalizes unsupervised feature learning from sequences of words to graphs.",
+      "evidence_quote": "DeepWalk generalizes recent advancements in language modeling and unsupervised feature learning (or deep learning ) from sequences of words to graphs.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes DeepWalk's evaluation on citation networks like Cora and Citeseer so strong relative to methods such as LINE when the graph is fully observed?",
+      "false_premise": "DeepWalk is evaluated on citation networks like Cora and Citeseer, and its advantage is described relative to LINE under full observation.",
+      "correction": "DeepWalk is demonstrated on BlogCatalog, Flickr, and YouTube, and it is compared against challenging baselines that are allowed a global view of the network, especially in the presence of missing information.",
+      "evidence_quote": "We demonstrate DeepW alk\u2019s latent representations on several multi-label network classification tasks for social networks such as BlogCatalog, Flickr, and YouTube.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does DeepWalk require a non-parallelized batch procedure rather than incremental online updates to scale to large graphs?",
+      "false_premise": "DeepWalk requires a non-parallelized batch procedure rather than incremental online updates.",
+      "correction": "DeepWalk is an online learning algorithm that builds useful incremental results and is trivially parallelizable.",
+      "evidence_quote": "It is an online learning algorithm which builds useful incremental results, and is trivially parallelizable.",
+      "difficulty": "easy"
+    }
+  ]
+}

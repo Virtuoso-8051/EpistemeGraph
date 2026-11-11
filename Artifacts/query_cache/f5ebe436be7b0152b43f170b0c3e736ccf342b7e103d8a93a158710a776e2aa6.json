@@ -1,0 +1,84 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "NWPS",
+    "NR",
+    "CP",
+    "Link Prediction",
+    "Node Classification"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "walk length l=80",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Link Prediction",
+      "target_alias": "LP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Node Classification",
+      "target_alias": "NC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "NWPS",
+      "target_alias": "number of walks per source",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "context size k=10",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "NR",
+      "target_alias": "node representation",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "CP",
+      "target_alias": "classification performance",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "walk length",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "CP",
+      "target_alias": "classification performance",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "walk length l=80",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "accuracy-cost trade-off",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

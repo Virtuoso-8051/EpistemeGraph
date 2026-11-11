@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "In the commonly cited benchmarks, DeepWalk usually outperforms explicit graph factorization on label classification",
+    "Random-walk co-occurrence captures higher-order proximity that factorization of the adjacency or Laplacian matrix tends to miss"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly states that graph factorization outperforms DeepWalk because DeepWalk ignores edge weights, and the AI answer contradicts this by claiming DeepWalk usually beats factorization, which the source does not say. The AI also wrongly suggests the question's premise is false, when the passage directly supports it and gives the reason the user asked about."
+}

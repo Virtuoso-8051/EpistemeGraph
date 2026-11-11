@@ -1,0 +1,66 @@
+{
+  "query_entities": [
+    "spectral clustering (SC)",
+    "NODE2VEC",
+    "DEEPWALK",
+    "LINE"
+  ],
+  "triples": [
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SC",
+      "type": "OUTPERFORMS",
+      "target": "NODE2VEC",
+      "target_alias": "node2vec",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SC",
+      "type": "WORKS_WELL_FOR",
+      "target": "Community detection (CD)",
+      "target_alias": "community structure",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SC",
+      "type": "USES",
+      "target": "eigendecomposition",
+      "target_alias": "Laplacian eigenvectors",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "PRESERVES",
+      "target": "network neighborhood (NN)",
+      "target_alias": "proximity",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "LINE",
+      "type": "PRESERVES",
+      "target": "network neighborhood (NN)",
+      "target_alias": "proximity",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "OUTPERFORMS",
+      "target": "spectral clustering (SC)",
+      "target_alias": "SC",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "LINE",
+      "type": "OUTPERFORMS",
+      "target": "spectral clustering (SC)",
+      "target_alias": "SC",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

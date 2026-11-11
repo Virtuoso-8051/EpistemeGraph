@@ -1,0 +1,120 @@
+{
+  "query_entities": [
+    "affinity-graph embedding methods",
+    "Laplacian Eigenmaps",
+    "LLE",
+    "Isomap",
+    "spectral embeddings",
+    "affinity matrix (AM)",
+    "eigendecomposition",
+    "sparse graphs",
+    "landmarks",
+    "randomized eigensolvers"
+  ],
+  "triples": [
+    {
+      "source": "Affinity-graph embedding methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "affinity matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "affinity matrix (AM)",
+      "source_alias": "AM",
+      "type": "REQUIRES",
+      "target": "O(n^2) memory",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "eigendecomposition",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "O(n^3) time",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "eigendecomposition",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "main computational bottleneck",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Affinity-graph embedding methods",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "Laplacian Eigenmaps",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Affinity-graph embedding methods",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "LLE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Affinity-graph embedding methods",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "Isomap",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Affinity-graph embedding methods",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "spectral embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Affinity-graph embedding methods",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "pairwise affinity construction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Affinity-graph embedding methods",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "shortest-path computation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sparse graphs",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "affinity-graph embedding methods",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "randomized eigensolvers",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "eigendecomposition",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Affinity-graph embedding methods",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "scalability on large-scale networks",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

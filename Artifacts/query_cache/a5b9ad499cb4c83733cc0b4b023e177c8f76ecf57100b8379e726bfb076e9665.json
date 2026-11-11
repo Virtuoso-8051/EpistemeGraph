@@ -1,0 +1,6 @@
+{
+  "answer": "There are no such conditions. The premise is incorrect. Node2vec does not multiply the gradient by the edge weight, and it does not clip gradients to prevent explosions on high-variance graphs. Edge weights enter node2vec only in the random-walk stage, where they scale the transition probabilities (multiplied by the search bias factors set by the return parameter p and in-out parameter q). The embeddings are then learned by a skip-gram model with negative sampling, trained with standard stochastic gradient descent on the sampled (node, context) pairs. Gradient clipping is not part of the standard node2vec method.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The standard node2vec formulation (Grover and Leskovec, 2016) uses p/q-biased weighted random walks feeding skip-gram with negative sampling and has no gradient-clipping or gradient-weighting step, though some third-party implementations could add such details.",
+  "_token_nll": null
+}

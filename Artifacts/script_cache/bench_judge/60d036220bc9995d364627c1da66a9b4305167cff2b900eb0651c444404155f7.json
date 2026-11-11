@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "BlogCatalog embeddings are evaluated across a range of labeled-training fractions (the evidence only shows a 50% split in Table 2 and the sensitivity study)",
+    "The parameter-sensitivity analysis reports Micro-F1 as well as Macro-F1 (the evidence only mentions Macro-F1)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer rejects the 10% premise and correctly says the sensitivity study varies p, q and related parameters, but it never states the actual 50-50 split. It also adds unsupported details about a range of labeled fractions and Micro-F1 reporting."
+}

@@ -1,0 +1,85 @@
+{
+  "query_entities": [
+    "LINE",
+    "first-order proximity",
+    "second-order proximity",
+    "KL divergence",
+    "edge sampling",
+    "negative sampling",
+    "weighted out-degree"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "KL divergence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "shared neighbors in the adjacency",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "",
+      "type": "DOES_NOT_ADD",
+      "target": "information about unobserved relations",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "local structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "true global similarity",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "local neighborhood extending about two hops",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

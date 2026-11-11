@@ -1,0 +1,56 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "LINE",
+    "random walks",
+    "sentences",
+    "nodes",
+    "words",
+    "first-order proximity",
+    "directly observed links",
+    "second-order proximity",
+    "similarity in nodes\u2019 neighborhood distributions"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "sentences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "first-order proximity",
+      "target_alias": "directly observed links",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "second-order proximity",
+      "target_alias": "similarity in nodes\u2019 neighborhood distributions",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "query_entities": [
+    "first-order proximity (FOP)",
+    "second-order neighbor (SON)"
+  ],
+  "triples": [
+    {
+      "source": "first-order objective",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "FOP",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "first-order objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "direct edge similarity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order neighbor (SON)",
+      "source_alias": "SON",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "degenerate when vertices have no shared neighbors",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "SOFTMAX PROBABILITIE",
+    "HIERARCHICAL SOFTMAX",
+    "CLASSICAL STOCHASTIC GRADIENT DESCENT",
+    "TRUNCATED RANDOM WALK",
+    "SKIP-GRAM MODEL",
+    "LEARNING RATE"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "latent representation \u03a6: V \u2192 R^d",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "TRUNCATED RANDOM WALK",
+      "target_alias": "TRW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SKIP-GRAM MODEL",
+      "target_alias": "SGM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "negative log-likelihood of context vertices J",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "HIERARCHICAL SOFTMAX",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HIERARCHICAL SOFTMAX",
+      "source_alias": "",
+      "type": "REDUCES",
+      "target": "computational cost to O(log|V|)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HIERARCHICAL SOFTMAX",
+      "source_alias": "",
+      "type": "USES",
+      "target": "binary tree with vertices at leaves",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "CLASSICAL STOCHASTIC GRADIENT DESCENT",
+      "target_alias": "CSGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "CLASSICAL STOCHASTIC GRADIENT DESCENT",
+      "source_alias": "",
+      "type": "USES",
+      "target": "LEARNING RATE",
+      "target_alias": "LR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LEARNING RATE",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "decaying learning rate starting around 0.025",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "random walks generated online",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "backpropagation through hierarchical softmax path",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "backpropagation through hierarchical softmax path",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "per-path gradients accumulated into a single SGD update per pair",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "stochastic gradient descent with analytic gradients",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SOFTMAX PROBABILITIE",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "Pr(u_k | \u03a6(v_j)) over whole vertex set",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

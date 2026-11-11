@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "Why do the affinity-graph embedding methods described in the passage become inefficient on large-scale networks, and what is the main computational bottleneck?",
+      "gold_answer": "They become inefficient because they usually rely on solving the leading eigenvectors of the affinity matrices. The passage says this computation has complexity at least quadratic in the number of nodes, which makes it hard to handle large-scale networks.",
+      "evidence_quote": "However, these algorithms usually rely on solving the leading eigenvectors of the affinity matrices, the complexity of which is at least quadratic to the number of nodes, making them inefficient to handle large-scale networks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does graph factorization differ from LINE in terms of the network properties each method preserves?",
+      "gold_answer": "Graph factorization is based on matrix factorization and its objective is not designed specifically for networks, so it does not necessarily preserve the global network structure. LINE, by contrast, uses an objective designed for networks and preserves both first-order and second-order proximities.",
+      "evidence_quote": "Instead, the LINE model uses an objective that is particularly designed for networks, which preserves both the first-order and the second-order proximities.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions is graph factorization applicable, and how does that compare with the applicability of LINE?",
+      "gold_answer": "Graph factorization only applies to undirected graphs. LINE is more general because it is applicable to both undirected and directed graphs.",
+      "evidence_quote": "Practically, the graph factorization method only applies to undirected graphs while the proposed model is applicable for both undirected and directed graphs.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the difference between DeepWalk and LINE in how they treat proximity and in the type of networks they can handle?",
+      "gold_answer": "DeepWalk expects nodes with higher second-order proximity to have similar low-dimensional representations, while LINE preserves both first-order and second-order proximities. DeepWalk only applies to unweighted networks, whereas LINE is applicable to networks with both weighted and unweighted edges.",
+      "evidence_quote": "Practically, DeepWalk only applies to unweighted networks, while our model is applicable for networks with both weighted and unweighted edges.",
+      "difficulty": "hard"
+    }
+  ]
+}

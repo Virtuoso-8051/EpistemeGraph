@@ -1,0 +1,71 @@
+{
+  "query_entities": [
+    "node2vec",
+    "node embeddings",
+    "network\u2019s neighborhood structure",
+    "random-walk contexts",
+    "biased random walks",
+    "graph",
+    "sequences of nodes",
+    "skip-gram-style objective",
+    "likelihood of predicting a node\u2019s neighborhood"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "node embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "network\u2019s neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes appearing in similar random-walk contexts",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "similar vector representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "sequences of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "skip-gram-style objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram-style objective",
+      "source_alias": "",
+      "type": "MAXIMIZES",
+      "target": "likelihood of predicting a node\u2019s neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

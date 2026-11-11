@@ -1,0 +1,6 @@
+{
+  "answer": "Node2vec does not rely on graph convolution layers under any condition. It learns embeddings with a skip-gram objective over second-order biased random walks, and it handles the intractable softmax partition function with negative sampling (or, optionally, hierarchical softmax). Graph convolution is not part of node2vec; it is the mechanism of GCN-style models such as GCN and GraphSAGE. The question's premise is therefore incorrect.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The node2vec paper (Grover and Leskovec, 2016) clearly uses skip-gram with negative sampling or hierarchical softmax and no convolution layers, though I am recalling this from memory rather than checking the source.",
+  "_token_nll": null
+}

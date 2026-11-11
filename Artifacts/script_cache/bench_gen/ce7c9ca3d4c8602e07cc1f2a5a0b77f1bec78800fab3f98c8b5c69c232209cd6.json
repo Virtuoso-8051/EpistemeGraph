@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec's use of only the shortest walks per source improve performance as the sampling budget increases?",
+      "false_premise": "node2vec uses only the shortest walks per source, and increasing them improves performance.",
+      "correction": "node2vec improves performance when the number and length of walks per source increase, not when only the shortest walks are used.",
+      "evidence_quote": "Similarly, we observe that increasing the number and length of walks per source improves performance,",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does node2vec benefit from shrinking the representation dimension well below 100 instead of letting it saturate around that value?",
+      "false_premise": "node2vec benefits from shrinking the representation dimension well below 100.",
+      "correction": "node2vec performance tends to saturate once the representation dimension reaches around 100.",
+      "evidence_quote": "We observe that performance tends to saturate once the dimensions of the representations reaches around 100.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does node2vec's perturbation analysis on the BlogCatalog network show that adding missing edges, rather than removing them, reduces Macro-F1 the most?",
+      "false_premise": "The perturbation analysis studies adding missing edges, and that adding them reduces Macro-F1 the most.",
+      "correction": "The perturbation analysis studies the fraction of missing edges in the BlogCatalog network, not adding missing edges.",
+      "evidence_quote": "In the first scenario, we measure performace as a function of the fraction of missing edges (relative to the full network).",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does node2vec compare against LINE to show that LINE is more robust to the fraction of additional edges in BlogCatalog?",
+      "false_premise": "node2vec is compared against LINE, and LINE is shown to be more robust to additional edges.",
+      "correction": "The passage does not compare node2vec against LINE here; it discusses node2vec's perturbation analysis on BlogCatalog.",
+      "evidence_quote": "We performed a perturbation study where we analyzed the performance of node2vec for two imperfect information scenarios related to the edge structure in the BlogCatalog network.",
+      "difficulty": "medium"
+    }
+  ]
+}

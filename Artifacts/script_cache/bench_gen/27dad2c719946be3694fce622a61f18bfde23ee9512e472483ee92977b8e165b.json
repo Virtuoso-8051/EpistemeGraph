@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk use the PPI network to predict blogger interests, and how does that choice affect its performance on social relationships?",
+      "false_premise": "DeepWalk uses the PPI network to predict blogger interests.",
+      "correction": "DeepWalk is evaluated on BlogCatalog for blogger interests, while PPI is a separate protein network with biological state labels.",
+      "evidence_quote": "\u2022 BlogCatalog [38]: This is a network of social relationships of the bloggers listed on the BlogCatalog website.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec handle the Wikipedia dataset when the labels are inferred from the Stanford POS-Tagger, and why is that dataset especially sparse for cooccurrence edges?",
+      "false_premise": "The Wikipedia labels are inferred from the Stanford POS-Tagger, and the dataset is especially sparse for cooccurrence edges.",
+      "correction": "Wikipedia is a cooccurrence network of words in the first million bytes of the Wikipedia dump, and it is described as fairly dense.",
+      "evidence_quote": "\u2022 Wikipedia [20]: This is a cooccurrence network of words appearing in the first million bytes of the Wikipedia dump.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What comparison does LINE make between the BlogCatalog network and structural equivalence in PPI, given that BlogCatalog is the biological-state dataset and PPI is the social-network dataset?",
+      "false_premise": "BlogCatalog is the biological-state dataset and PPI is the social-network dataset.",
+      "correction": "BlogCatalog is the social network of bloggers, while PPI is the protein network with biological state labels.",
+      "evidence_quote": "\u2022 Protein-Protein Interactions (PPI) [5]: We use a subgraph of the PPI network for Homo Sapiens.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions do DeepWalk and node2vec rely only on structural equivalence in Wikipedia, since the passage says homophily is weak there and same-POS words are hard to find?",
+      "false_premise": "Wikipedia relies only on structural equivalence, with weak homophily and hard-to-find same-POS words.",
+      "correction": "The passage says Wikipedia exhibits a high degree of homophily, and words with the same POS tags are not hard to find.",
+      "evidence_quote": "Hence, words having the same POS tags are not hard to find, lending a high degree of homophily.",
+      "difficulty": "easy"
+    }
+  ]
+}

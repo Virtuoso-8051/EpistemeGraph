@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Node2vec's BFS-like neighborhoods capture structural equivalence and DFS-like capture homophily, tied to p and q (not in provided evidence; the evidence only mentions homophily and structural equivalence generally)",
+    "Both use negative sampling (or hierarchical softmax); the evidence only mentions hierarchical softmax for DeepWalk and does not state negative sampling for node2vec",
+    "DeepWalk's walks are described as first-order and unweighted, which is not stated in the evidence"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: SkipGram uses co-occurrence in a window over random walks, node2vec uses 2nd-order random walks, and both are optimized with SGD. Several extra details (BFS/DFS mapping to equivalences, negative sampling, first-order unweighted) are not in the evidence, though some are common background knowledge about node2vec."
+}

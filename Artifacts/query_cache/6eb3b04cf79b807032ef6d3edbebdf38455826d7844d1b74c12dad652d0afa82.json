@@ -1,0 +1,113 @@
+{
+  "query_entities": [
+    "node2vec",
+    "second-order random walk",
+    "p",
+    "q",
+    "breadth-first search",
+    "depth-first search",
+    "static edge weights",
+    "w_vx",
+    "second-order transition probability",
+    "edge (t, v)",
+    "embeddings"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order random walk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "biased by the previous step",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p",
+      "source_alias": "",
+      "type": "ADJUSTS",
+      "target": "likelihood of immediately revisiting the previous node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "q",
+      "source_alias": "",
+      "type": "ADJUSTS",
+      "target": "breadth-first search",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "q",
+      "source_alias": "",
+      "type": "ADJUSTS",
+      "target": "depth-first search",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "sampled node sequences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampled node sequences",
+      "source_alias": "",
+      "type": "CAPTURE",
+      "target": "local graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampled node sequences",
+      "source_alias": "",
+      "type": "CAPTURE",
+      "target": "more global graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "static, first-order walk",
+      "source_alias": "",
+      "type": "CANNOT_DO",
+      "target": "capture both local and more global graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "w_vx",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "edge strength from v to x",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order transition probability",
+      "source_alias": "",
+      "type": "CAN_DEPEND_ON",
+      "target": "edge (t, v)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order transition probability",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "richer and more informative embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

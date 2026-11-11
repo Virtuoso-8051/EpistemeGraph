@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Attributes the definition to LINE (Tang et al. 2015), which the evidence does not mention.",
+    "Describes the comparison as being over 'out-neighbors' and 'context' vectors, which the evidence does not specify.",
+    "States the second-order proximity is computed via conditional probabilities p2(v_j|v_i) = w_ij / sum_k w_ik and minimizing KL divergence, which does not appear in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer matches the evidence: second-order proximity is the similarity of neighborhood structures, compared via the first-order proximity vectors p_u and p_v, and it is 0 when no vertex is linked from or to both. However, the answer adds implementation details (LINE attribution, out-neighbor/context framing, the conditional-probability formula, and KL divergence) that the source evidence does not contain."
+}

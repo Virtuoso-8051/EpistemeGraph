@@ -1,0 +1,106 @@
+{
+  "query_entities": [
+    "LINE",
+    "first-order proximity",
+    "higher-order structure",
+    "evaluated tasks",
+    "LINE(2nd)",
+    "DeepWalk",
+    "DBLP(PaperCitation)",
+    "paper-citation graph",
+    "directed, weighted network",
+    "second-order proximity",
+    "asymmetric neighborhood/citation context",
+    "unweighted, undirected random-walk co-occurrence"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "direct edge relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DOES_NOT_CAPTURE",
+      "target": "higher-order structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher-order structure",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "evaluated tasks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "DBLP(PaperCitation)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP(PaperCitation)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "paper-citation graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper-citation graph",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "directed, weighted network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "asymmetric neighborhood/citation context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "unweighted, undirected random-walk co-occurrence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "less suited to that setting",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

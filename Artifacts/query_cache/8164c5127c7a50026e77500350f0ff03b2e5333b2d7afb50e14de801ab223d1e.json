@@ -1,0 +1,89 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "language network",
+    "LINE variants",
+    "LINE",
+    "first-order proximity",
+    "second-order proximity",
+    "edge weights",
+    "edge-type structure",
+    "random-walk/skip-gram objective",
+    "network semantics",
+    "embedding"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "random-walk/skip-gram objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk/skip-gram objective",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "local co-occurrence patterns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk/skip-gram objective",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "less effective on graphs with strong edge-weight or edge-type structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "strong edge-weight or edge-type structure",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "network semantics",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE variants",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE variants",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE variants",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "language network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "edge weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weights",
+      "source_alias": "",
+      "type": "ARE_IMPORTANT_FOR",
+      "target": "learning a good embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

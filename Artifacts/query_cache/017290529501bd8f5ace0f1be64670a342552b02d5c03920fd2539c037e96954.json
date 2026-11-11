@@ -1,0 +1,60 @@
+{
+  "query_entities": [
+    "LINE network embedding framework",
+    "Kullback\u2013Leibler divergence",
+    "second-order proximity",
+    "neighborhood vectors p_u and p_v",
+    "empirical neighborhood distribution of a vertex",
+    "distribution predicted by its embedding"
+  ],
+  "triples": [
+    {
+      "source": "LINE network embedding framework",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Kullback\u2013Leibler divergence",
+      "target_alias": "KL divergence",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Kullback\u2013Leibler divergence",
+      "source_alias": "KL divergence",
+      "type": "DEFINED_AS",
+      "target": "D_{KL}(p_u \\| p_v) = \\sum_i p_u(i) \\log \\frac{p_u(i)}{p_v(i)}",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "Kullback\u2013Leibler divergence",
+      "target_alias": "KL divergence",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "empirical neighborhood distribution of a vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "distribution predicted by its embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Kullback\u2013Leibler divergence",
+      "source_alias": "KL divergence",
+      "type": "APPLIES_TO",
+      "target": "neighborhood vectors p_u and p_v",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

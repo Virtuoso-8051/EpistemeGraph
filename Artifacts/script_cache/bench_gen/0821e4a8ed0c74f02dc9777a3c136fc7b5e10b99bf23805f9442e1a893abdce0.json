@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec's performance on BlogCatalog keep improving as the in-out parameter p and the return parameter q increase, and what does that suggest about its walk strategy?",
+      "false_premise": "node2vec improves as p and q increase, rather than decrease.",
+      "correction": "The passage says node2vec performance improves as the in-out parameter p and the return parameter q decrease.",
+      "evidence_quote": "The performance of node2vec improves as the in-out parameter p and the return parameter q decrease.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec use the BlogCatalog dataset to show that its gains come from a 10% labeled-data split in the parameter-sensitivity study?",
+      "false_premise": "the parameter-sensitivity analysis on BlogCatalog uses a 10% labeled-data split.",
+      "correction": "The passage says the parameter-sensitivity analysis on BlogCatalog uses a 50-50 split between labeled and unlabeled data.",
+      "evidence_quote": "we examine how the different choices of parameters affect the performance of node2vec on the BlogCatalog dataset using a 50-50 split between labeled and unlabeled data.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does node2vec's comparison with DeepWalk reveal about its improvement on PPI when training on just 10% labeled data?",
+      "false_premise": "the passage compares node2vec with DeepWalk on PPI using 10% labeled data.",
+      "correction": "The passage compares node2vec to LINE, not DeepWalk, and mentions PPI in that comparison.",
+      "evidence_quote": "Similarly, the improvements are even more striking when compared to LINE, where in addition to drastic gain (over 200%) on BlogCatalog, we observe high magnitude improvements upto 41.1% on other datasets such as PPI while training on just 10% labeled data.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does node2vec's performance keep rising once the representation dimension exceeds around 100, and how does that interact with the walk-length setting?",
+      "false_premise": "performance continues to rise once the representation dimension exceeds around 100.",
+      "correction": "The passage says performance tends to saturate once the dimensions of the representations reaches around 100.",
+      "evidence_quote": "We observe that performance tends to saturate once the dimensions of the representations reaches around 100.",
+      "difficulty": "hard"
+    }
+  ]
+}

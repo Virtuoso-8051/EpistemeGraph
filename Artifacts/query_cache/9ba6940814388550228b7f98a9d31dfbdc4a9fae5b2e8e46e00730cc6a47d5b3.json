@@ -1,0 +1,6 @@
+{
+  "answer": "I could not identify a specific source that states these conditions for node2vec, so this is a best-effort answer. In general, reusing sampled transitions avoids bias only when each reused sample still follows the exact biased transition distribution defined by the return parameter p and in-out parameter q, and when the reuse does not correlate successive walk steps. That typically means reusing precomputed structures (such as alias tables for each (previous, current) edge pair) or rejection-sampling outcomes only within the same state, so that each accepted step is an exact draw from the node2vec distribution. Efficiency gains come from amortizing the cost of building these tables across many walks, provided the reuse is restricted to identical transition states.",
+  "confidence": 0.2,
+  "confidence_reasoning": "The question's wording points to a specific paper's result that I could not confidently recall, so the stated conditions are plausible inferences rather than verified facts.",
+  "_token_nll": null
+}

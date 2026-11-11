@@ -1,0 +1,142 @@
+{
+  "query_entities": [
+    "LINE inference algorithm",
+    "stochastic gradient descent",
+    "edge sampling",
+    "negative sampling",
+    "asynchronous updates",
+    "parallel updates",
+    "embeddings",
+    "large-scale networks"
+  ],
+  "triples": [
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "linear per-iteration cost",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "linear per-iteration cost",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "number of observed edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "avoids expensive global operations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "expensive global operations",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "full matrix factorization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "expensive global operations",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "repeated passes over all possible node pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "USES",
+      "target": "local computations on sampled edges and negative samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "USES",
+      "target": "stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "normalization term",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "USES",
+      "target": "asynchronous updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "USES",
+      "target": "parallel updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "USES",
+      "target": "simple embedding lookup/update structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simple embedding lookup/update structure",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "low memory and computation overhead",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "large-scale networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE inference algorithm",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "roughly linear scaling with graph size in the number of edges processed",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

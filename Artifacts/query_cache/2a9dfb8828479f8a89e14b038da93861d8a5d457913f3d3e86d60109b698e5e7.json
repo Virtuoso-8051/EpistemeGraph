@@ -1,0 +1,74 @@
+{
+  "query_entities": [
+    "node2vec",
+    "node classification",
+    "link prediction",
+    "walk length l"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "walk length l",
+      "target_alias": "80",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length l",
+      "source_alias": "80",
+      "type": "ACHIEVES",
+      "target": "performance",
+      "target_alias": "near the best-performing range",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "shorter walk length l",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "performance",
+      "target_alias": "no",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "shorter walk length l",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "context",
+      "target_alias": "no",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "longer walk length l",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "performance",
+      "target_alias": "no consistent gains",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "longer walk length l",
+      "source_alias": "",
+      "type": "INCREASES",
+      "target": "computation",
+      "target_alias": "unnecessary computation",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

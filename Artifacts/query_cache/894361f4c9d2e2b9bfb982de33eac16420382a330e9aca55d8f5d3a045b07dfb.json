@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk tends to look especially strong on fully observed citation graphs like Cora and Citeseer because its random-walk/skip-gram objective captures higher-order neighborhood structure and community context, which is very useful for homophilous citation networks where nearby nodes often share labels. In contrast, LINE is designed to preserve first- and second-order proximity with a more local, edge-centric objective, so it can be less effective at exploiting the multi-hop structural patterns that matter for node classification on these graphs. Also, when the graph is fully observed, DeepWalk can use all available connectivity to generate many informative contexts, so its unsupervised embeddings align well with the downstream semi-supervised classification benchmark used on Cora/Citeseer. In short, DeepWalk benefits from the strong label homophily and multi-hop context in these citation networks, which makes its embeddings particularly discriminative for the evaluation protocol.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This is consistent with the standard explanation in the DeepWalk literature and the known properties of citation networks, though exact comparative performance can depend on implementation and evaluation details.",
+  "_token_nll": 0.251156723290159
+}

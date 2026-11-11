@@ -1,0 +1,6 @@
+{
+  "answer": "In the node2vec paper, the authors used a walk length l = 80 in their experiments for both node classification and link prediction. They report that performance is generally robust around this setting, and that using much shorter walks tends to hurt performance because the random walks do not capture enough context, while much longer walks do not provide consistent gains and can sometimes slightly degrade results or add unnecessary computation. In other words, l = 80 was their default/selected value and was near the best-performing range in their experiments.",
+  "confidence": 0.78,
+  "confidence_reasoning": "The exact walk length of 80 is well known from the node2vec paper, but the comparative performance summary is a high-level synthesis rather than a verbatim result and may vary by dataset and task.",
+  "_token_nll": 0.21519146325453273
+}

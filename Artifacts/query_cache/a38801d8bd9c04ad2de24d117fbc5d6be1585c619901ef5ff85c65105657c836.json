@@ -1,0 +1,49 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "hierarchical softmax (HS)",
+    "streaming variant (SV)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax (HS)",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax (HS)",
+      "source_alias": "HS",
+      "type": "REQUIRES",
+      "target": "full vertex set",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax (HS)",
+      "source_alias": "HS",
+      "type": "REQUIRES",
+      "target": "Huffman tree",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Huffman tree",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "vertex frequency-based tree",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "streaming embedding",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

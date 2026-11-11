@@ -1,0 +1,68 @@
+{
+  "query_entities": [
+    "LINE",
+    "language network",
+    "DBLP",
+    "word cooccurrence network",
+    "co-author network",
+    "Wikipedia data"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "language network",
+      "target_alias": "LN",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "language network",
+      "source_alias": "LN",
+      "type": "BASED_ON",
+      "target": "Wikipedia data",
+      "target_alias": "WD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language network",
+      "source_alias": "LN",
+      "type": "REPRESENTS",
+      "target": "word cooccurrence network",
+      "target_alias": "WCN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word cooccurrence network",
+      "source_alias": "WCN",
+      "type": "CONTAINS",
+      "target": "weighted undirected edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "co-author network",
+      "target_alias": "CAN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "co-author network",
+      "source_alias": "CAN",
+      "type": "CONTAINS",
+      "target": "edge weights reflecting number of co-authored papers",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "word cooccurrence network",
+      "target_alias": "WCN",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

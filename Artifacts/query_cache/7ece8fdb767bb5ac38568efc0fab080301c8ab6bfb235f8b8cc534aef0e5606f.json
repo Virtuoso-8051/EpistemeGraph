@@ -1,0 +1,138 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "LINE",
+    "Large-scale Information Network Embedding (1ST)",
+    "skip-gram",
+    "negative sampling",
+    "first-order proximity",
+    "second-order proximity",
+    "homophily",
+    "structural equivalence",
+    "social network (SN)",
+    "KL divergence"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OPTIMIZES",
+      "target": "likelihood of preserving network neighborhoods of node (LPNNN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "biased second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small q (BFS-like exploration)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large q (DFS-like exploration)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PROPOSES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PROPOSES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "KL divergence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "ENABLES",
+      "target": "edge-sampling based handling of weighted graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "APPLIES_TO",
+      "target": "social network (SN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "CONTAINS",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "direct social ties",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "shared-neighborhood similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

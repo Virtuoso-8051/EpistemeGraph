@@ -1,0 +1,90 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "social network (SN)",
+    "latent social representation (LSR)",
+    "node embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "social network (SN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "DOES_NOT_REQUIRE",
+      "target": "node attributes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walks",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "skip-gram language model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram language model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent social representation (LSR)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "vertex structural neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent social representation (LSR)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "community and co-occurrence information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent social representation (LSR)",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "multi-label classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "continuous low-dimensional embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

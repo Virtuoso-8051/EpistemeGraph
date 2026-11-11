@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does LINE\u2019s embedding objective relate to the kinds of node relationships that BlogCatalog, PPI, and Wikipedia are described as exhibiting, and what two types of network structure does LINE aim to preserve that are illustrated by those datasets?",
+      "gold_answer": "LINE is designed to preserve both local and global network structures, and the three datasets illustrate both homophily and structural equivalence: BlogCatalog has social homophily with some structurally equivalent \u201cfamiliar strangers,\u201d PPI mixes structural equivalence and homophily, and Wikipedia is dense with strong homophily among words sharing POS tags.",
+      "evidence_quote": "The method optimizes a carefully designed objective function that preserves both the local and global network structures.",
+      "evidence_quote_b": "All these networks exhibit a fair mix of homophilic and structural equivalences.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why would LINE be suitable for the BlogCatalog, PPI, and Wikipedia networks described in the datasets, and what property of LINE makes it applicable to those three networks regardless of whether they are social, biological, or word cooccurrence graphs?",
+      "gold_answer": "LINE is suitable because it can handle arbitrary types of information networks, including the social BlogCatalog graph, the biological PPI graph, and the word cooccurrence Wikipedia graph, regardless of whether they are undirected, directed, or weighted.",
+      "evidence_quote": "In this paper, we propose a novel network embedding method called the \u201cLINE,\u201d which is suitable for arbitrary types of information networks: undirected, directed, and/or weighted.",
+      "evidence_quote_b": "\u2022 BlogCatalog [38]: This is a network of social relationships of the bloggers listed on the BlogCatalog website.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What contrast can be drawn between LINE\u2019s scalability claim and the size characteristics of the BlogCatalog, PPI, and Wikipedia networks, and how does LINE\u2019s edge-sampling algorithm help with that contrast?",
+      "gold_answer": "LINE is presented as scalable to very large networks, and its edge-sampling algorithm improves both effectiveness and efficiency so it can learn embeddings for networks with millions of vertices and billions of edges, which is important given that BlogCatalog, PPI, and Wikipedia already contain thousands of nodes and tens to hundreds of thousands of edges.",
+      "evidence_quote": "An edge-sampling algorithm is proposed that addresses the limitation of the classical stochastic gradient descent and improves both the effectiveness and the efficiency of the inference.",
+      "evidence_quote_b": "\u2022 Wikipedia [20]: This is a cooccurrence network of words appearing in the first million bytes of the Wikipedia dump.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions would LINE\u2019s preservation of local and global structure be especially relevant for the kinds of equivalences described in BlogCatalog and PPI, and how do those examples differ from the Wikipedia network in the way similar nodes are expected to appear?",
+      "gold_answer": "It is especially relevant when a network contains both homophily and structural equivalence, as in BlogCatalog and PPI; BlogCatalog includes bloggers who share interests without interacting, while PPI includes proteins that can be structurally equivalent or homophilic, whereas Wikipedia is described as dense enough that words with the same POS tags are easy to find, making homophily especially strong.",
+      "evidence_quote": "The method optimizes a carefully designed objective function that preserves both the local and global network structures.",
+      "evidence_quote_b": "Hence, words having the same POS tags are not hard to find, lending a high degree of homophily.",
+      "difficulty": "hard"
+    }
+  ]
+}

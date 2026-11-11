@@ -1,0 +1,6 @@
+{
+  "answer": "It is probably not explained by the algorithm. With p = q = 1, node2vec's biased walk reduces to a uniform random walk, which is the same walk DeepWalk uses, and both feed it to skip-gram with negative sampling. Any reported gap therefore most likely comes from implementation and experimental differences rather than from the method: walk length, walks per node, context window size, number of epochs, embedding dimension, learning-rate schedule, negative-sampling settings, random seeds, or the classifier and train/test split used for Macro-F1. I cannot verify the specific 23.8% figure or the paper that reports it, so the exact cause in that source is unknown to me.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The equivalence of node2vec at p = q = 1 to DeepWalk is well established, but I could not verify the 23.8% figure or the source's stated explanation, so the specific attribution is uncertain.",
+  "_token_nll": null
+}

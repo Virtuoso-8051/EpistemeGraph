@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The answer's claims about Skip-gram with hierarchical softmax or negative sampling, treating walks as sentences, and parallelization across walks are standard DeepWalk details not stated in the provided evidence excerpts.",
+    "The claim that Qiu et al. (2018) showed DeepWalk implicitly factorizes a random-walk co-occurrence matrix is attributed to a source not present in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, matching the evidence that DeepWalk creates representations for graphs too large for spectral methods rather than relying on them. However, it adds method details (Skip-gram, hierarchical softmax, SGD, parallelization) and an external Qiu et al. (2018) citation that the provided evidence does not contain, though the core correction is faithful."
+}

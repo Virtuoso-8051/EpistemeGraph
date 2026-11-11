@@ -1,0 +1,6 @@
+{
+  "answer": "LINE does not multiply each edge's gradient by its weight. Its original objective, which sums w_ij log p(v_j|v_i) over edges, would give gradients whose magnitude scales with w_ij. Large or widely varying weights then produce large, high-variance SGD updates that can diverge, and a single learning rate fits edges poorly. LINE instead samples edges with probability proportional to w_ij (sampling is done over an alias table) and treats each sampled edge as a binary edge with unit weight. The weight is therefore absorbed into the sampling distribution: the expected gradient over samples is proportional to the weighted gradient, so heavier edges are visited more often, but every individual update has the same bounded magnitude. Each sampled edge is paired with negative samples drawn from a noise distribution, and the learning rate is decayed linearly. Together these keep the optimization stable while preserving the weighted objective in expectation.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core idea (weights moved into edge sampling, unit-weight gradients per sampled edge, justified as avoiding instability from weight-scaled gradients) matches the LINE paper as I recall it, but I am not certain of every detail such as the exact noise distribution exponent or the precise wording of the unbiasedness argument.",
+  "_token_nll": null
+}

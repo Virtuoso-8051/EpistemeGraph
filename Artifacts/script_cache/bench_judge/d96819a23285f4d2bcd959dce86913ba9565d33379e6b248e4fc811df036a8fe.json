@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI attributes to the node2vec paper a claim that node2vec was 'performed best or near-best on PPI' with 'LINE and spectral methods generally lower'; the evidence shows node2vec's PPI Macro-F1 (0.1791) only slightly above DeepWalk (0.1768) and well above LINE and spectral clustering, so this is roughly consistent, but the 'best or near-best' framing is only partly backed by the excerpt.",
+    "The AI claims that 'some reproductions and later benchmarks show DeepWalk matching or slightly exceeding node2vec' and that this happens when p and q are left at 1; the evidence does not contain reproductions or later benchmarks, and does not state these conditions."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The AI correctly rejects the false premise that node2vec is the weakest method on PPI, consistent with the source saying DeepWalk and node2vec are comparable and node2vec beats LINE and spectral clustering there. However, it introduces unsupported claims about external reproductions and conditions under which DeepWalk exceeds node2vec, which the provided evidence does not contain."
+}

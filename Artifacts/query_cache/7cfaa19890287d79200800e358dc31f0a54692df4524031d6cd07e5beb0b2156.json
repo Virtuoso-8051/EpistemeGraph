@@ -1,0 +1,66 @@
+{
+  "query_entities": [
+    "node2vec",
+    "LINE",
+    "BlogCatalog network",
+    "fraction of missing edge"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "OUTPERFORMS",
+      "target": "LINE",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog network",
+      "target_alias": "BN",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "network classification performance",
+      "source_alias": "NCP",
+      "type": "REPRESENTS",
+      "target": "Micro-F1",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "network classification performance",
+      "source_alias": "NCP",
+      "type": "REPRESENTS",
+      "target": "Macro-F1",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "fraction of missing edge",
+      "source_alias": "FME",
+      "type": "IS_A",
+      "target": "fraction of added random edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "larger performance drop as fraction of added random edges grows",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "smaller performance drop as fraction of added random edges grows",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

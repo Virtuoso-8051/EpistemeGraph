@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec's hand-engineered feature extraction objective make it especially effective for multi-label classification on graphs with millions of nodes?",
+      "false_premise": "node2vec uses hand-engineered feature extraction as its objective.",
+      "correction": "node2vec proposes a network-aware, neighborhood-preserving objective optimized with SGD, not hand-engineered feature extraction.",
+      "evidence_quote": "We propose node2vec, an efficient scalable algorithm for feature learning in networks that efficiently optimizes a novel network-aware, neighborhood preserving objective using SGD.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec rely on a pure DFS traversal strategy to discover representations that conform only to DFS-style equivalence, rather than BFS behavior?",
+      "false_premise": "node2vec relies on pure DFS traversal and only DFS-style equivalence.",
+      "correction": "node2vec is designed to provide flexibility in discovering representations conforming to different equivalences, and it is in accordance with both BFS and DFS principles.",
+      "evidence_quote": "We show how node2vec is in accordance with established u s3 s2 s1 s4 s8 s9 s6 s7 s5 BFS DFS Figure 1: BFS and DFS search strategies from nodeu (k = 3). principles in network science, providing flexibility in discovering representations conforming to different equivalences.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What evidence do the experiments on node2vec's edge-based prediction tasks provide that the method was evaluated only on synthetic benchmarks rather than real-world datasets?",
+      "false_premise": "node2vec was evaluated only on synthetic benchmarks.",
+      "correction": "node2vec was empirically evaluated for multi-label classification and link prediction on several real-world datasets.",
+      "evidence_quote": "We empirically evaluate node2vec for multi-label classification and link prediction on several real-world datasets.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Compared with node2vec, how do the paper's results show that the method is less scalable and requires many days to process large networks with millions of nodes?",
+      "false_premise": "node2vec is less scalable and requires many days to process large networks with millions of nodes.",
+      "correction": "The passage says node2vec is scalable and can handle large networks with millions of nodes in a few hours.",
+      "evidence_quote": "Computationally, the major phases of node2vec are trivially parallelizable, and it can scale to large networks with millions of nodes in a few hours.",
+      "difficulty": "hard"
+    }
+  ]
+}

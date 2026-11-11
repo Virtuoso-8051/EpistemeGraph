@@ -1,0 +1,65 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "number of walks started per vertex (GAMMA)",
+    "random walk (RW)"
+  ],
+  "triples": [
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "DEFINED_AS",
+      "target": "number of walks started per vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "window size (w)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "walk length (t)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "REQUIRES",
+      "target": "fixed total sampling budget",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "fixed total sampling budget",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "reduced number of walks per node",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "reduced number of walks per node",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "large, sparse graphs",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "APPLICABLE_FOR",
+      "target": "small or dense graphs",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

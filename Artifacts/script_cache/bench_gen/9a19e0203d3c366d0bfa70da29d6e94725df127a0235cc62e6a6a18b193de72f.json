@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In node2vec, what exact value of the walk length l did the authors use in their experiments on link prediction or node classification, and how does that choice affect performance relative to other l values?",
+      "why_unanswerable": "The passage defines l as an input to node2vec but does not report any experimental setting or ablation for the walk length, so the exact value and its effect are not given.",
+      "evidence_quote": "LearnFeatures (GraphG = (V,E,W ), Dimensionsd, Walks per noder, Walk lengthl, Context sizek, Returnp, In-outq) \u03c0 = PreprocessModifiedWeights(G,p,q )",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many random walks per node r did node2vec use in the reported experiments, and did the authors compare that setting against smaller or larger values of r?",
+      "why_unanswerable": "The passage states that node2vec simulates r random walks from every node, but it never specifies an experimental number for r or any comparison across different r values.",
+      "evidence_quote": "Since we learn representations for all nodes, we offset this bias by simulating r random walks of fixed length l starting from every node.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What dataset did node2vec evaluate the edge-feature bootstrapping extension on, and what was the exact train-test split used for that evaluation?",
+      "why_unanswerable": "The passage mentions an extension to pairs of nodes for link prediction, but it does not name any dataset or describe any data split used to test that extension.",
+      "evidence_quote": "For instance, in link prediction, we predict whether a link exists between two nodes in a network.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What hardware configuration or runtime environment did node2vec require to run the three sequential phases of preprocessing, random-walk simulation, and SGD optimization?",
+      "why_unanswerable": "The passage discusses scalability and asynchronous execution, but it provides no hardware details, runtime environment, or implementation platform for node2vec.",
+      "evidence_quote": "The three phases of node2vec, i.e., preprocessing to compute transition probabilities, random walk simulations and optimization using SGD, are executed sequentially.",
+      "difficulty": "medium"
+    }
+  ]
+}

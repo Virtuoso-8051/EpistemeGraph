@@ -1,0 +1,42 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE(2nd)",
+    "LINE-SGD (1ST)",
+    "asynchronous stochastic gradient algorithm (ASGA)"
+  ],
+  "triples": [
+    {
+      "source": "LINE paper",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "multi-threaded speedup versus number of threads",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE paper",
+      "source_alias": "",
+      "type": "USES",
+      "target": "asynchronous stochastic gradient algorithm (ASGA)",
+      "target_alias": "ASGA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "multi-threaded speedup evaluation",
+      "source_alias": "",
+      "type": "USES",
+      "target": "single multi-core machine",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "exact CPU model for Fig. 5(a)",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "recalled by the answer",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

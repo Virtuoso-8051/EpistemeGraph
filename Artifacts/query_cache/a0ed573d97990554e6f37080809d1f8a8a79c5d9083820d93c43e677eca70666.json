@@ -1,0 +1,57 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "RANDOM WALK",
+    "NUMBER OF WALKS STARTED PER VERTEX"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "walk length of 40",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "context window size of 10",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "number of walks started per vertex (GAMMA)",
+      "target_alias": "GAMMA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "80 walks per vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "128-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

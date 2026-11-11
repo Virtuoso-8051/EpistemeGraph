@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE uses edge sampling with negative sampling and an objective that does not use class labels (negative sampling and the unsupervised nature of the objective are not stated in the evidence)",
+    "Any classification benefit comes from the embeddings capturing network structure rather than direct optimization (partly inference, not stated)",
+    "Methods that optimize document embeddings for classification, such as supervised document encoders, are different approaches (background, not in evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and accurately describes LINE as a network embedding method with first- and second-order proximity. However, it misses the specific correction (document vectors are averaged word vectors, since the aim is to compare word embeddings) and adds details like negative sampling that the evidence does not contain."
+}

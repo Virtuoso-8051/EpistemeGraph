@@ -1,0 +1,73 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "FLICKR",
+    "BlogCatalog network (BN)"
+  ],
+  "triples": [
+    {
+      "source": "FLICKR",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog network (BN)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "best-performing embedding dimensionality",
+      "source_alias": "",
+      "type": "INCREASES_WITH",
+      "target": "training data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "smaller dimensions",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "less training data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher-dimensional embeddings",
+      "source_alias": "",
+      "type": "OVERFITS",
+      "target": "less training data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "larger dimensions",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "more training data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimal dimensionality",
+      "source_alias": "",
+      "type": "SHIFTS_UPWARD_WITH",
+      "target": "training data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "available training data",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "positive relationship with best DeepWalk dimensionality",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

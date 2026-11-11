@@ -1,0 +1,96 @@
+{
+  "query_entities": [
+    "LINE-SGD (1ST)",
+    "LINE"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "ESA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "unweighted edge (UE)",
+      "target_alias": "UE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "edge-sampling treatment (EST)",
+      "target_alias": "EST",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD",
+      "type": "IS_A",
+      "target": "classical stochastic gradient descent (CSGD)",
+      "target_alias": "CSGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD",
+      "type": "USES",
+      "target": "WEIGHTS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD",
+      "type": "REFUTED_PLACEHOLDER",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "ESA",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD",
+      "type": "REPRESENTS",
+      "target": "raw edge weight w_ij",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sensitivity to edge weight scale",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sensitivity to edge weight scale",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "careful learning-rate tuning",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "gradient magnitude independent of edge weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias-sampling of edges",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "gradient magnitude independent of edge weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

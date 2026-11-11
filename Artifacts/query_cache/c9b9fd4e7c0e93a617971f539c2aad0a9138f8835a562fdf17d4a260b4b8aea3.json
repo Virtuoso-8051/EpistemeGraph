@@ -1,0 +1,132 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "skip-gram word2vec model",
+    "random walks",
+    "negative sampling",
+    "softmax partition function",
+    "logistic regression",
+    "node classification",
+    "return parameter p",
+    "in-out parameter q",
+    "breadth-first sampling",
+    "depth-first sampling",
+    "structural equivalence",
+    "homophily"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "USES",
+      "target": "class labels in training",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "IS_A",
+      "target": "unsupervised method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "BASED_ON",
+      "target": "skip-gram word2vec model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "USES",
+      "target": "biased second-order random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "OPTIMIZES",
+      "target": "log-probability of observing neighborhood nodes given embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "softmax partition function",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "USES",
+      "target": "logistic regression",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "EVALUATED_ON",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "breadth-first sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "depth-first sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first sampling",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first sampling",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned features",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "graph context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "usefulness of embeddings for a class label",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "alignment of label with homophily or structural roles",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

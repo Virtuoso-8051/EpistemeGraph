@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk's stochastic gradient descent optimization make it outperform LINE(2nd) on the DBLP(PaperCitation) network?",
+      "false_premise": "DeepWalk is optimized by stochastic gradient descent and therefore outperforms LINE(2nd) on the DBLP(PaperCitation) network.",
+      "correction": "LINE(2nd) is the model directly optimized by stochastic gradient descent, and on the DBLP(PaperCitation) network LINE(2nd) significantly outperforms DeepWalk.",
+      "evidence_quote": "The LINE model directly optimized by stochastic gradient descent, LINE(2nd), does not perform well as expected.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does DeepWalk become better than LINE(2nd) after the network is reconstructed by adding second-order neighbors for high-degree vertices?",
+      "false_premise": "DeepWalk becomes better than LINE(2nd) after reconstruction that adds second-order neighbors for high-degree vertices.",
+      "correction": "After reconstructing the network by recursively adding neighbors of neighbors for vertices with small degrees, LINE(2nd) significantly increases and outperforms DeepWalk.",
+      "evidence_quote": "However, by reconstructing the network through recursively adding neighbors of neighbors for vertices with small degrees (smaller than 500), the performance of LINE(2nd) significantly increases and outperforms DeepWalk.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE(2nd) use random walks to reach other references in the paper citation network, and why does that help it beat DeepWalk?",
+      "false_premise": "LINE(2nd) uses random walks to reach other references in the paper citation network and that is why it beats DeepWalk.",
+      "correction": "The random walk on the paper citation network can only reach papers along the citing path and cannot reach other references, while LINE(2nd) represents each paper with its references.",
+      "evidence_quote": "This is because the random walk on the paper citation network can only reach papers along the citing path (i.e., older papers) and cannot reach other references.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What explains why DeepWalk significantly outperforms LINE(2nd) on the DBLP(PaperCitation) network, and how does the citation-path limitation of LINE(2nd) contribute to that result?",
+      "false_premise": "DeepWalk significantly outperforms LINE(2nd) on the DBLP(PaperCitation) network because LINE(2nd) is limited by citation paths.",
+      "correction": "On the DBLP(PaperCitation) network, LINE(2nd) significantly outperforms DeepWalk, and the cited limitation is a drawback of random walks rather than of LINE(2nd).",
+      "evidence_quote": "The LINE(2nd) significantly outperforms DeepWalk.",
+      "difficulty": "medium"
+    }
+  ]
+}

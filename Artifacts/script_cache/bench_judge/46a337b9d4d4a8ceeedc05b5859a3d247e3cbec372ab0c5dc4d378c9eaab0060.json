@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE defines p1(vi, vj) = sigmoid(ui \u00b7 uj) and matches it to the empirical edge distribution by minimizing KL divergence (specific formulation not in the provided evidence)",
+    "LINE trains with edge sampling using alias tables and negative sampling (not in the provided evidence)",
+    "Edge sampling is used instead of random walks to handle weighted edges and reduce gradient variance (not in the provided evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and attributes truncated random walks to DeepWalk, which the evidence supports, and it correctly notes LINE was evaluated on YouTube. The LINE technical details (sigmoid form, KL objective, alias-table edge sampling, negative sampling) are accurate background on LINE but are not stated in the provided evidence."
+}

@@ -1,0 +1,88 @@
+{
+  "query_entities": [
+    "node2vec",
+    "streaming variant (SV)"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "fixed graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "graph as it exists at training time",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "DOES_NOT_EXPLICITLY_DESCRIBE",
+      "target": "update embeddings as new nodes or edges arrive",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "growing network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "incrementally incorporates newly arriving nodes/edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "updates the representation without retraining from scratch",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "",
+      "type": "ADDS",
+      "target": "online/streaming embedding updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "dynamic graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "",
+      "type": "HANDLES",
+      "target": "graph growth in real time",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does DeepWalk characterize its search strategy over networks, and what limitation does the passage identify for that strategy?",
+      "gold_answer": "DeepWalk is described as proposing search using uniform random walks, which makes it a rigid search strategy over networks. The limitation is that it gives no control over the neighborhoods that are explored.",
+      "evidence_quote": "DeepWalk [24] proposes search using uniform random walks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What kind of search strategy does LINE primarily use, and over which neighborhood depths does it optimize the likelihood?",
+      "gold_answer": "LINE is described as primarily using a breadth-first strategy. It samples nodes and optimizes the likelihood independently over only 1-hop and 2-hop neighbors.",
+      "evidence_quote": "LINE [28] proposes primarily a breadth-first strategy, sampling nodes and optimizing the likelihood independently over only 1-hop and 2-hop neighbors.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why is BFS considered suitable for characterizing structural equivalences in a network, according to the passage?",
+      "gold_answer": "BFS is suitable because it explores only limited neighborhoods, so it focuses on the immediate local structure of nodes. That local focus is what the passage says structural equivalences rely on.",
+      "evidence_quote": "This makes BFS suitable for characterizing structural equivalences in network that rely on the immediate local structure of nodes.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compare DeepWalk and LINE in terms of flexibility and the depth of neighborhoods they explore. What trade-off does the passage describe?",
+      "gold_answer": "DeepWalk is said to use uniform random walks, which means it explores without control over the neighborhoods visited. LINE is more restrictive: it follows a breadth-first strategy and focuses on 1-hop and 2-hop neighbors, which makes its exploration easier to characterize but less flexible for deeper neighborhoods.",
+      "evidence_quote": "The effect of such an exploration is easier to characterize, but it is restrictive and provides no flexibility in exploring nodes at further depths.",
+      "difficulty": "hard"
+    }
+  ]
+}

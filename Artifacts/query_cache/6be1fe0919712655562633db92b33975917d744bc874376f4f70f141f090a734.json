@@ -1,0 +1,64 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "Low-dimensional Embedding (LDE)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OUTPERFORMS",
+      "target": "shrinking embedding dimension well below 100",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "embedding dimension of 128",
+      "target_alias": "d=128",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding dimension",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "downstream performance rises then plateaus",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Low-dimensional Embedding (LDE)",
+      "source_alias": "embeddings",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "accuracy loss at much lower dimensions due to reduced capacity to separate nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "smaller embedding dimension",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "lower memory use, faster training and inference, and less storage",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small or simple graphs",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "saturation at lower dimensions",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "sufficiency of embedding dimension",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "consideration of graph size and structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

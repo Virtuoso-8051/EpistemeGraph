@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In LINE, what exact distance function is used when minimizing the second-order proximity objective after the authors simplify the formulation, and what is the resulting expression for O2?",
+      "why_unanswerable": "The passage says that KL-divergence is adopted and gives the simplified objective, but it does not provide any alternative distance function comparison or ablation showing what happens with other choices.",
+      "evidence_quote": "In this paper, for simplicity we set\u03bbi as the degree of vertexi, i.e.,\u03bbi =di, and here we also adopt KL-divergence as the distance function.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE perform when the vertex importance weights \u03bbi are estimated with PageRank instead of being set to the degree of each vertex, and what quantitative improvement or drop is reported?",
+      "why_unanswerable": "The passage mentions PageRank only as a possible way to estimate vertex prestige, but it does not report any experiment comparing PageRank-based weights against degree-based weights.",
+      "evidence_quote": "As the importance of the vertices in the network may be different, we introduce \u03bbi in the objective function to represent the prestige of vertex i in the network, which can be measured by the degree or estimated through algorithms such as PageRank [15].",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What exact runtime, memory usage, or training speed does LINE report for optimizing the second-order proximity objective on a large graph, and on what hardware was that measurement taken?",
+      "why_unanswerable": "The passage states that optimizing the objective is computationally expensive, but it does not give any concrete runtime, memory, or hardware details.",
+      "evidence_quote": "Optimizing objective (6) is computationally expensive, which requires the summation over the entire set of vertices when calculating the conditional probability p2(\u00b7|vi).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which experimental conditions does LINE report that jointly training the first-order objective (3) and the second-order objective (6) outperforms concatenating separately trained embeddings, and by how much?",
+      "why_unanswerable": "The passage explicitly says that joint training is left as future work, so it does not contain any results or conditions for such an experiment.",
+      "evidence_quote": "A more principled way to combine the two proximity is to jointly train the objective function (3) and (6), which we leave as future work.",
+      "difficulty": "hard"
+    }
+  ]
+}

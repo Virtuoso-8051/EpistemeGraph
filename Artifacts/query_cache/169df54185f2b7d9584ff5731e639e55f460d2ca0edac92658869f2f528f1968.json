@@ -1,0 +1,52 @@
+{
+  "query_entities": [
+    "LINE",
+    "PAGERANK",
+    "vertex importance weights",
+    "negative sampling",
+    "edge sampling",
+    "degree"
+  ],
+  "triples": [
+    {
+      "source": "Tang et al. (2015)",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "LINE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "vertex importance weights",
+      "target_alias": "\u03bbi",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "",
+      "type": "USES",
+      "target": "vertex distribution proportional to degree raised to the 3/4 power",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "question setup with \u03bbi set to degree versus PAGERANK",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "follow-up or variant paper",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

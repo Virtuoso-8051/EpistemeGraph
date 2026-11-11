@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "random walk (RW)",
+    "node2vec parameter (NP)",
+    "neural language model (NLM)",
+    "graph convolutional networks (GCNs)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "REFUTED",
+      "target": "convolutional filters",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "random walk",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "node2vec parameter",
+      "target_alias": "p (return parameter), q (in-out parameter)",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "RW",
+      "type": "IS_A",
+      "target": "second-order biased random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "RW",
+      "type": "PRESERVE",
+      "target": "network neighborhood",
+      "target_alias": "NN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "RW",
+      "type": "GENERATES",
+      "target": "walk sequences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk sequences",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "sentences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "word2vec-style",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node embedding",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph convolutional networks",
+      "source_alias": "GCNs",
+      "type": "IS_A",
+      "target": "convolutional filters based methods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph convolutional networks",
+      "source_alias": "GCNs",
+      "type": "USES",
+      "target": "learned convolutions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

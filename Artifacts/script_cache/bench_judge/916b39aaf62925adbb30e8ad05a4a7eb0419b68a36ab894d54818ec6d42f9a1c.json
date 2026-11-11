@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Node2vec's link prediction experiments used GrQc/ASTRO-PH arXiv collaboration networks; the evidence does not name these datasets, and GrQc is likely incorrect.",
+    "The Les Mis\u00e9rables graph is described as a 'single weighted co-occurrence graph'; the evidence says only that edges connect co-appearing characters and gives no weighting.",
+    "The link prediction evaluation details (holding out a fraction of edges as positives, sampling non-edges as negatives, and the list of Facebook/PPI datasets) are not stated in the provided evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, since the evidence shows Les Mis\u00e9rables is a case study for clustering and visualization, not a link prediction benchmark. However, it adds specific dataset names, evaluation protocol details, and a weighting claim that the provided evidence does not support, so some claims remain unsupported."
+}

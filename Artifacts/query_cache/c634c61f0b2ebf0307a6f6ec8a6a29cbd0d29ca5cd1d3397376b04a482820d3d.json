@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "node embedding (NE)",
+    "multi-label classification (MLC)",
+    "NSS"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "IS_A",
+      "target": "feature learning in network (FLN)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OPTIMIZES",
+      "target": "likelihood of preserving network neighborhoods of node (LPNNN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram objective",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "biased second-order random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased second-order random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "p and q",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "node embedding (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "Low-dimensional Embedding (LDE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "multi-label classification (MLC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "ENABLES",
+      "target": "Large-scale Information Network Embedding (1ST)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "ACHIEVES",
+      "target": "Node Classification (NC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

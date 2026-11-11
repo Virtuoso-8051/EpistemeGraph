@@ -1,0 +1,63 @@
+{
+  "query_entities": [
+    "node2vec",
+    "BlogCatalog",
+    "Grover & Leskovec 2016",
+    "multi-label node classification",
+    "parameter-sensitivity analysis",
+    "p and q parameters",
+    "Micro-F1",
+    "Macro-F1",
+    "labeled-training fraction"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "BlogCatalog",
+      "target_alias": "BlogCatalog network",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "BN",
+      "type": "APPLICABLE_FOR",
+      "target": "multi-label node classification",
+      "target_alias": "MLC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parameter-sensitivity analysis",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "p and q parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parameter-sensitivity analysis",
+      "source_alias": "",
+      "type": "REPORTS",
+      "target": "Micro-F1",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "baselines",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec's gains",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "10% labeled-data split",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

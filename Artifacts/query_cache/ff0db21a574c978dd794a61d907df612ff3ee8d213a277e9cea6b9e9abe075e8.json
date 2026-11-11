@@ -1,0 +1,6 @@
+{
+  "answer": "Huffman coding is used in DeepWalk's skip-gram training with hierarchical softmax. It assigns each vertex a binary code, with frequent vertices (those that appear often in the random walks) getting short codes and paths in the tree. In a streaming setting, the true vertex frequencies are only known approximately and change over time, so the tree can be built from early-stream counts, degree-based estimates, or periodic rebuilds. It remains usable because hierarchical softmax defines a valid probability distribution for any tree shape, so an approximate or somewhat stale tree only affects efficiency, not correctness. Graph frequency distributions are typically skewed and fairly stable, so the codes stay close to optimal. The purpose is computational: it reduces the cost of each training update from O(|V|) for a full softmax to roughly O(log|V|), with the expected code length tracking the entropy of the vertex frequency distribution.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The general mechanism of Huffman-based hierarchical softmax in DeepWalk is well established, but I could not identify the specific streaming DeepWalk paper, so the streaming-specific justification is an inference.",
+  "_token_nll": null
+}

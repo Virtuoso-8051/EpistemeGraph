@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec's use of a static first-order random walk help it adapt the next step based on the shortest path distance between the previous node and candidate neighbors?",
+      "false_premise": "node2vec uses a static first-order random walk that adapts the next step based on shortest path distance.",
+      "correction": "node2vec uses a flexible biased second-order random walk, not a static first-order one.",
+      "evidence_quote": "We define a 2nd order random walk with two parametersp andq which guide the walk:",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does node2vec rely on unbiased transition probabilities so that it can smoothly interpolate between BFS and DFS?",
+      "false_premise": "node2vec relies on unbiased transition probabilities to smoothly interpolate between BFS and DFS.",
+      "correction": "node2vec uses biased transition probabilities controlled by p and q to interpolate between BFS and DFS.",
+      "evidence_quote": "We achieve this by developing a flexible biased random walk procedure that can explore neighborhoods in a BFS as well as DFS fashion.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What dataset does node2vec evaluate on to show that BFS and DFS are competing structural paradigms that must be chosen exclusively?",
+      "false_premise": "node2vec evaluates on a dataset showing BFS and DFS are competing structural paradigms that must be chosen exclusively.",
+      "correction": "The passage does not mention any dataset, and it says BFS and DFS are not competing or exclusive paradigms.",
+      "evidence_quote": "Additionally, unlike BFS and DFS which are extreme sampling paradigms suited for structural equivalence and homophily respectively, our random walks should accommodate for the fact that these notions of equivalence are not competing or exclusive, and real-world networks commonly exhibit a mixture of both.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does node2vec set the transition weight \u0003b1pq(t,x) to 1/q when the candidate node x is at distance 0 from t?",
+      "false_premise": "node2vec sets \u0003b1pq(t,x) to 1/q when dtx = 0.",
+      "correction": "When dtx = 0, node2vec sets \u0003b1pq(t,x) to 1/p, not 1/q.",
+      "evidence_quote": "We set the unnormalized transition probability to\u0003c0vx =\u0003b1pq(t,x)\u00b7wvx, where \u0003b1pq(t,x) = \u007f",
+      "difficulty": "easy"
+    }
+  ]
+}

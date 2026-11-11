@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk performs poorly on the language network because its random-walk/skip-gram objective mainly captures local co-occurrence patterns and is less effective when the graph has strong edge-weight or edge-type structure that matters for preserving the network\u2019s semantics. In contrast, the LINE variants are designed to model first-order and second-order proximity more directly, so they fit this kind of network better. LINE needs to handle the edges\u2019 weights effectively, since the strength/frequency of connections is important for learning a good embedding.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is consistent with the standard explanation for DeepWalk versus LINE on weighted language networks, though the exact wording depends on the specific paper and experimental setup.",
+  "_token_nll": 0.24690280548513752
+}

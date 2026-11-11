@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The answer says each undirected edge is counted in both directions in W, but the paper only defines W = sum of w_ij over (i,j) in E and does not say this.",
+    "The answer says LINE minimizes the KL divergence between p\u03021 and p1 to learn embeddings; the provided evidence does not mention this objective."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core formulas for p1 and p\u03021 = w_ij/W match the paper exactly. However, the answer adds two claims not in the evidence: that W counts each edge in both directions, and that the training objective is KL divergence minimization."
+}

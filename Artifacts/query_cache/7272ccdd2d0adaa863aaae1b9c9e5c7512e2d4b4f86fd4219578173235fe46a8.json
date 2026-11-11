@@ -1,0 +1,125 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "graph kernel",
+    "Graph Embedding",
+    "Node Classification",
+    "graph structure",
+    "network embedding",
+    "random walk generator"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "randomly-generated walk",
+      "target_alias": "RGW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram language model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "network embedding",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "Node Classification",
+      "target_alias": "NC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph kernel",
+      "source_alias": "GK",
+      "type": "USES",
+      "target": "kernel machine",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph kernel",
+      "source_alias": "GK",
+      "type": "USES",
+      "target": "graph structure",
+      "target_alias": "GS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph kernel",
+      "source_alias": "GK",
+      "type": "REQUIRES",
+      "target": "kernel matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "kernel matrix",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "quadratic in the number of examples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "scalability to large graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "graph kernel",
+      "target_alias": "GK",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "dense latent representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

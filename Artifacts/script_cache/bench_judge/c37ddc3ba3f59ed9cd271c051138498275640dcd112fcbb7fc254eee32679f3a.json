@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The reference implementation builds on gensim's word2vec.",
+    "gensim's default is 5 negative samples."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer correctly says the papers do not report a negative-sampling rate, and the SGD-with-negative-sampling description and Mikolov attribution match the evidence's citation [22]. However, the claims about the reference implementation using gensim and gensim's default of 5 negatives come from outside the provided evidence, though the answer hedges that the default is not in the paper."
+}

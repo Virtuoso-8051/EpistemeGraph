@@ -1,0 +1,72 @@
+{
+  "query_entities": [
+    "language modeling (LM)",
+    "random walk (RW)"
+  ],
+  "triples": [
+    {
+      "source": "Pr(vi | \u03a6(vi+1), \u03a6(vi+2), \u2026)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "future-vertex conditional",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "future-vertex conditional",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "Pr(vi | \u03a6(vi+1), \u03a6(vi+2), \u2026)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language modeling (LM)",
+      "source_alias": "LM",
+      "type": "CONTAINS",
+      "target": "conditioning on previously visited vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "future-vertex conditional",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "language modeling (LM)",
+      "target_alias": "LM",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "paper3 method",
+      "source_alias": "",
+      "type": "USES",
+      "target": "local context as set of neighbouring vertices in both directions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "causal sequence",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "graph edges",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "undirected",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper3 method",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "vertex surrounding context",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

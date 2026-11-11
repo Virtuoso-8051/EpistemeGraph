@@ -1,0 +1,97 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "DEEPWALK",
+    "NODE2VEC PARAMETER"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "special case of node2vec with uniform random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "uniform random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "return parameter p = 1 and in-out parameter q = 1",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "special case of node2vec limited to immediate neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "uniform random walk offers no way to tune neighborhood exploration",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "biased second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC PARAMETER",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "return parameter p and in-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "interpolation between homophily and structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

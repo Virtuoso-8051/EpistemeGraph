@@ -1,0 +1,96 @@
+{
+  "query_entities": [
+    "node2vec",
+    "Node2vec",
+    "biased second-order random walk",
+    "skip-gram objective",
+    "stochastic gradient descent",
+    "word2vec",
+    "alias tables",
+    "asynchronous SGD",
+    "Hogwild",
+    "embedding matrix"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram objective",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "linear computational cost in number of walks, walk length, and embedding dimensionality",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "transition probability preprocessing",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "alias tables",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "transition probability preprocessing",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "overhead growing with sum of squared node degrees",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk-simulation phase",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "parallelizable",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimization phase",
+      "source_alias": "",
+      "type": "USES",
+      "target": "asynchronous SGD",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous SGD",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "embedding matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "scalable to large networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

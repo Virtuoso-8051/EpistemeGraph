@@ -1,0 +1,63 @@
+{
+  "query_entities": [
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "graph size",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "roughly linear scaling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "random-walk generation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "embedding learning",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk generation",
+      "source_alias": "",
+      "type": "USES",
+      "target": "parallelization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding learning",
+      "source_alias": "",
+      "type": "USES",
+      "target": "parallelization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "process a graph with one million nodes in about 10 minutes on a multi-core machine",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

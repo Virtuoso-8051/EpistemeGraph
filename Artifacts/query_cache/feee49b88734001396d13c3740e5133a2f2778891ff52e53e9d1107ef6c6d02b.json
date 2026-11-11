@@ -1,0 +1,94 @@
+{
+  "query_entities": [
+    "LINE",
+    "BlogCatalog network (BN)",
+    "edge-sampling algorithm (ESA)",
+    "large network (LN)",
+    "embedding very large information networks into low-dimensional vector space",
+    "weighted network (WN)",
+    "unweighted edge (UE)",
+    "network embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "embedding very large information networks into low-dimensional vector space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding very large information networks into low-dimensional vector space",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "large network (LN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog network (BN)",
+      "source_alias": "BlogCatalog",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "roughly 10.3K nodes and 334K edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog network (BN)",
+      "target_alias": "BlogCatalog",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "LINE's edge-sampling algorithm",
+      "type": "ADDRESSES",
+      "target": "scalability concern",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "alias tables",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "weighted network (WN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "",
+      "type": "AVOIDS",
+      "target": "high-variance gradients",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "constant per-update cost regardless of network size",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "large network (LN)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

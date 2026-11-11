@@ -1,0 +1,51 @@
+{
+  "query_entities": [
+    "Wikipedia data (WD)",
+    "Skip-gram model (SGM)",
+    "word cooccurrence network (WCN)",
+    "node2vec",
+    "graph embedding"
+  ],
+  "triples": [
+    {
+      "source": "frequency predictions derived from network structure",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "network topological properties",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Wikipedia corpus",
+      "source_alias": "WD",
+      "type": "REQUIRED_FOR",
+      "target": "learning graph embeddings",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "graph embedding method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "source_alias": "SGM",
+      "type": "IS_A",
+      "target": "graph embedding method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word cooccurrence network",
+      "source_alias": "WCN",
+      "type": "BASED_ON",
+      "target": "Wikipedia text",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

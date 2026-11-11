@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The answer states that node2vec evaluated on exactly three node classification datasets, which the reference says is not reported in the passage. The evidence does list BlogCatalog, PPI and Wikipedia, but the 'three' count is the answer's own inference.",
+    "Wikipedia is described as having part-of-speech labels. The evidence only says it is a word co-occurrence network with 50 labels, so the part-of-speech detail is not supported."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The reference marks the question as unanswerable from the passage, yet the answer gives a definite count and names instead of saying the papers do not report them. The retrieved evidence does show the three dataset names (BlogCatalog, PPI, Wikipedia), so the names are supported, but the exact count and the part-of-speech label detail are not."
+}

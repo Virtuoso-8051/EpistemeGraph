@@ -1,0 +1,6 @@
+{
+  "answer": "LINE(1st) preserves only first-order proximity, meaning it tries to keep directly connected nodes close in the embedding space. On an extremely sparse graph like Flickr, many nodes have very few observed edges, so the first-order signal is weak and noisy: there are too few positive links to reliably learn from, and many structurally related nodes are not directly connected. LINE(2nd) also models second-order proximity, which captures similarity of neighborhood context (nodes that share similar neighbors) rather than only direct edges. This gives it many more effective training signals in sparse graphs and lets it exploit indirect structural information, so it is usually more robust and performs better when the graph is extremely sparse.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This explanation matches the standard interpretation of LINE and the known effect that second-order proximity provides richer supervision than first-order proximity in sparse networks.",
+  "_token_nll": 0.1933241263448193
+}

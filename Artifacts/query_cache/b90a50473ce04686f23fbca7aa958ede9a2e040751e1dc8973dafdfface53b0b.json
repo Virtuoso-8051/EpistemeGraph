@@ -1,0 +1,107 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "BlogCatalog",
+    "Node Classification (NC)",
+    "BlogCatalog network (BN)",
+    "NETWORK EMBEDDING (NE)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DOES_NOT_REQUIRE",
+      "target": "supervised data",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification (NC)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "one-vs-rest logistic regression",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification (NC)",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Micro-F1",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification (NC)",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Macro-F1",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

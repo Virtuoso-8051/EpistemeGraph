@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "First-order proximity alone is considered sufficient for real-world graphs because they are sparse/noisy and observed edges are the most reliable signal (the paper says the opposite: first-order is not sufficient because many links are unobserved)",
+    "The answer accepts the false premise that LINE preserves only first-order proximity and ignores global structure, never correcting it",
+    "Restricting to edges avoids the cost of global structure and is the reason for scalability, framed as justification for first-order sufficiency"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise and justifies why first-order alone suffices, whereas the paper states LINE preserves both local and global structure and that first-order proximity is insufficient in real-world networks. Only the technical details of the first-order objective and the mention of the second-order variant are consistent with the source."
+}

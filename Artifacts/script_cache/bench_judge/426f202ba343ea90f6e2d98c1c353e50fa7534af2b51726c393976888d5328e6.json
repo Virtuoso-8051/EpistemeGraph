@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The DBLP data LINE used was a co-authorship network, where authors are vertices and edge weights reflect the number of co-authored papers.",
+    "The language network edges are weighted, undirected connections between words co-occurring within a fixed context window across Wikipedia articles, with weights reflecting co-occurrence counts (partially supported: evidence says 5-word sliding window and frequency filtering, and the network is listed as undirected, weighted)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly identifies that the language network was built from Wikipedia pages, which the evidence states. However, it misdescribes the DBLP data as a co-authorship network, whereas the evidence says DBLP was used to build author and paper citation networks, and it omits the specific 5-word sliding window and frequency-below-5 filtering."
+}

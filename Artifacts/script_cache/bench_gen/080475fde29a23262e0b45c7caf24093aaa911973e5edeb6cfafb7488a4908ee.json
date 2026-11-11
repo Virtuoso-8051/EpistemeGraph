@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec\u2019s inability to reuse samples explain its strong Macro-F1 gains over LINE on BlogCatalog?",
+      "false_premise": "node2vec is unable to reuse samples and therefore its performance gains over LINE are explained by that limitation.",
+      "correction": "The passage says LINE showed worse performance than expected because of its inability to reuse samples, while node2vec outperforms LINE.",
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does DeepWalk outperform node2vec on PPI because node2vec is the weakest method there?",
+      "false_premise": "DeepWalk outperforms node2vec on PPI and node2vec is the weakest method on that dataset.",
+      "correction": "The passage says DeepWalk and node2vec give comparable performance on PPI, and node2vec is not described as the weakest method there.",
+      "evidence_quote": "DeepWalk and node2vec give comparable performance on PPI.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does node2vec use spectral clustering to build its embeddings for the Wikipedia network?",
+      "false_premise": "node2vec uses spectral clustering as part of its embedding method.",
+      "correction": "The passage lists Spectral Clustering as a benchmark compared against node2vec; it does not say node2vec uses spectral clustering.",
+      "evidence_quote": "The node feature representations are input to a one-vs-rest logistic regression classifier with L2 regularization.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What makes node2vec\u2019s high Macro-F1 on BlogCatalog come from setting p and q to high values to suppress homophily?",
+      "false_premise": "node2vec achieves its BlogCatalog gains by setting p and q to high values and suppressing homophily.",
+      "correction": "The passage says node2vec discovers the right mix of homophily and structural equivalence by setting p and q to low values.",
+      "evidence_quote": "In BlogCatalog, we can discover the right mix of homophily and structural equivalence by setting parametersp andq to low values, giving us 22.3% gain over DeepWalk and 229.2% gain over LINE in Macro-F1 scores.",
+      "difficulty": "easy"
+    }
+  ]
+}

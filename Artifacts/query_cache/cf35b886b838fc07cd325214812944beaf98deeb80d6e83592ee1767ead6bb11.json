@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE-SGD(1st)",
+    "directed graph (DG)",
+    "undirected graph (UG)",
+    "first-order proximity (FOP)"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD(1st)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "asymmetric",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "directed graph (DG)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "asymmetric",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "directed graph (DG)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD(1st)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "directed graph (DG)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "directed graph (DG)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "direction-specific relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "directed graph (DG)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "edge direction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "directed graph (DG)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "distinct roles of source and target nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "undirected graph (UG)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "reciprocal edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "undirected graph (UG)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "no asymmetry",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding (1ST)",
+    "random walk (RW)",
+    "Skip-gram model (SGM)",
+    "DEEPWALK",
+    "vertex classification",
+    "negative sampling"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PRESERVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "REFUTED_USES_PLACEHOLDER",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "Skip-gram model (SGM)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram model (SGM)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "local and multi-hop neighborhood structure capture",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "scalability to large graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "APPLICABLE_FOR",
+      "target": "large weighted graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

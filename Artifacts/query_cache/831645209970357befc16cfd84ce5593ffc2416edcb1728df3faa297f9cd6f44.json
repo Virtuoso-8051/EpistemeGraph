@@ -1,0 +1,6 @@
+{
+  "answer": "The question's premise is incorrect. In the social representation method (DeepWalk, Perozzi et al., 2014), short random walks do not pick each next vertex from all vertices in the graph. Each step moves to a neighbor of the current vertex, chosen uniformly at random among its adjacent vertices. Because these walks stay local, they tend to remain inside densely connected groups. Vertices that frequently co-occur within a short window of the same walks therefore receive similar latent representations, and this is how partial community membership is captured. A walk that could jump to any vertex would ignore the graph's local structure and would not reflect community membership. Some other methods add non-local moves, such as PageRank-style teleportation or node2vec's return and in-out parameters, but these are not the mechanism of the social representation method's walks.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am fairly confident that DeepWalk's walks move only to neighbors of the current vertex, though I am recalling the paper from memory and not checking the text directly.",
+  "_token_nll": null
+}

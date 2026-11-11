@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The passage describing the PCA-based objective 'wasn't included in your message' and the answer cannot tell what it describes; the evidence section does contain this material on PCA/MDS, eigendecomposition, and neighborhood-preserving objectives.",
+    "Implicitly, that the PCA-based objective's mechanism cannot be determined, when the evidence explicitly states PCA maximizes variance and invariably requires eigendecomposition."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer does not accept the false premise that PCA preserves local neighborhoods and avoids eigendecomposition, but it wrongly claims the relevant passage is missing when the evidence supplies it. It also fails to make the available correction that PCA maximizes variance and requires eigendecomposition, which the evidence states directly."
+}

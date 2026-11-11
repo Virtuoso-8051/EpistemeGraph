@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does EdgeCluster's spectral decomposition step make it scale to graphs that are too large for k-means clustering, while still matching Modularity's performance?",
+      "false_premise": "EdgeCluster uses spectral decomposition and scales because of it.",
+      "correction": "EdgeCluster uses k-means clustering on the adjacency matrix, and its advantage is that it scales to graphs too large for spectral decomposition.",
+      "evidence_quote": "This method uses k-means clustering to cluster the adjacency matrix of G.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does wvRN use the same one-vs-rest logistic regression classifier as the other baselines when estimating labels from a node's neighborhood?",
+      "false_premise": "wvRN uses one-vs-rest logistic regression for classification.",
+      "correction": "wvRN is a relational classifier that estimates label probabilities from the weighted mean of neighbors, not with logistic regression.",
+      "evidence_quote": "The weighted-vote Relational Neighbor is a relational classifier.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes DeepWalk's BlogCatalog results below EdgeCluster and Modularity once the training ratio is increased from 10% to 90%?",
+      "false_premise": "On BlogCatalog, DeepWalk performs worse than EdgeCluster and Modularity as training ratio increases.",
+      "correction": "On BlogCatalog, DeepWalk performs consistently better than EdgeCluster, Modularity, and wvRN.",
+      "evidence_quote": "DeepW alkperforms consistently better than EdgeCluster, Modularity, and wvRN.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions do SpectralClustering, Modularity, and EdgeCluster use Tang and Liu's preferred dimensionality of d = 128 rather than d = 500?",
+      "false_premise": "SpectralClustering, Modularity, and EdgeCluster use d = 128.",
+      "correction": "For SpectralClustering, Modularity, and EdgeCluster, the experiments use Tang and Liu's preferred dimensionality d = 500.",
+      "evidence_quote": "The results for (SpectralClustering, Modularity, EdgeCluster) use Tang and Liu\u2019s preferred dimensionality, d = 500.",
+      "difficulty": "hard"
+    }
+  ]
+}

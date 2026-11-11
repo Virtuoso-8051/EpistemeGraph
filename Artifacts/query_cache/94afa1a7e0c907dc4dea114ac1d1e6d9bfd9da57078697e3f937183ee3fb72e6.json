@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "Skip-gram model (SGM)",
+    "Skip-gram objective (SGO)",
+    "adjacency matrix (AM)",
+    "negative sampling (NS)",
+    "neural language model (NLM)",
+    "graph embedding"
+  ],
+  "triples": [
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "SGM",
+      "type": "IS_A",
+      "target": "classification (matrix factorization) loss over adjacency matrices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "SGO",
+      "type": "OPTIMIZES",
+      "target": "full softmax over all word-context pairs",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "SGO",
+      "type": "USES",
+      "target": "adjacency matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling (NS)",
+      "source_alias": "NS",
+      "type": "APPROXIMATES",
+      "target": "full softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling (NS)",
+      "source_alias": "NS",
+      "type": "APPLICABLE_FOR",
+      "target": "computational tractability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "SGO",
+      "type": "REPRESENTS",
+      "target": "weighted cross-entropy over all node pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "SGM",
+      "type": "IS_A",
+      "target": "matrix factorization of random-walk co-occurrence matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph embedding",
+      "source_alias": "GE",
+      "type": "USES",
+      "target": "Skip-gram model (SGM)",
+      "target_alias": "SGM",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "query_entities": [
+    "LINE",
+    "truncated random walk (TRW)",
+    "DeepWalk",
+    "first-order proximity (FOP)",
+    "edge-sampling algorithm (ESA)",
+    "negative sampling",
+    "social network (SN)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DOES_NOT_USE",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "TRW",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "truncated random walk (TRW)",
+      "source_alias": "TRW",
+      "type": "IS_A",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "joint probability distribution over vertex pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "KL divergence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "ESA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "ESA",
+      "type": "USES",
+      "target": "alias tables",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "ESA",
+      "type": "ENABLES",
+      "target": "weighted edges handled well",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "ESA",
+      "type": "REDUCES",
+      "target": "stochastic gradient variance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube social network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "YouTube social network",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "social network (SN)",
+      "target_alias": "SN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

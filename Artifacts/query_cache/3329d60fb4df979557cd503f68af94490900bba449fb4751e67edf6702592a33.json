@@ -1,0 +1,114 @@
+{
+  "query_entities": [
+    "network sparsity",
+    "real-world graphs",
+    "negative/non-edge pairs",
+    "large sparse graphs",
+    "LINE",
+    "local network structure",
+    "global network structure",
+    "embeddings",
+    "sparse matrix factorization-style objective",
+    "node pairs",
+    "first-order proximity",
+    "second-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "network sparsity",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "real-world graphs",
+      "target_alias": "have many more non-edges than edges",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PASSAGE A\u2019s method",
+      "source_alias": "",
+      "type": "USES",
+      "target": "network sparsity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PASSAGE A\u2019s method",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative/non-edge pairs",
+      "target_alias": "samples only a small subset during training",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PASSAGE A\u2019s method",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "large sparse graphs",
+      "target_alias": "scaling without enumerating all absent links",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "network sparsity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local network structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "global network structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "observed edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "carefully designed negative sampling",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DOES_NOT_USE",
+      "target": "sparse matrix factorization-style objective",
+      "target_alias": "over all node pairs",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

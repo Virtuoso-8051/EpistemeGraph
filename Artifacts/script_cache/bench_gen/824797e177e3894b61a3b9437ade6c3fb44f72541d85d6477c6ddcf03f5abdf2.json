@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In the network embedding framework that defines second-order proximity, what exact similarity function do the authors use to compare the neighborhood vectors p_u and p_v, and what is the formula for it?",
+      "why_unanswerable": "The passage defines second-order proximity conceptually as similarity between neighborhood structures, but it does not specify any particular similarity metric or formula.",
+      "evidence_quote": "Mathematically, let pu = (wu,1,...,w u,|V|) denote the first-order proximity ofu with all the other vertices, then the second-order proximity between u and v is determined by the similarity between pu and pv.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "For the graph embedding methods discussed alongside first-order proximity, how many datasets did the authors evaluate on, and what were their names?",
+      "why_unanswerable": "The passage mentions existing algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization, but it gives no experimental datasets or evaluation setup.",
+      "evidence_quote": "Because of this importance, many existing graph embedding algorithms such as IsoMap, LLE, Laplacian eigenmap, and graph factorization have the objective to preserve the first-order proximity.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what conditions, if any, do the authors assign a nonzero first-order proximity to a pair of vertices that are not connected by an observed edge in the network embedding model?",
+      "why_unanswerable": "The passage states that missing edges have zero first-order proximity, but it does not describe any exception, threshold, or learned rule that would make a non-edge nonzero.",
+      "evidence_quote": "If no edge is observed betweenu and v, their first-order proximity is 0.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does the network embedding method quantify second-order proximity when two vertices do not share any common in-neighbors or out-neighbors, and what numerical value is used in that case?",
+      "why_unanswerable": "The passage says second-order proximity is zero in that situation, but it does not explain any alternative handling, smoothing, or exact computation beyond that special case.",
+      "evidence_quote": "If no vertex is linked from/to both u and v, the second-order proximity betweenu and v is 0.",
+      "difficulty": "hard"
+    }
+  ]
+}

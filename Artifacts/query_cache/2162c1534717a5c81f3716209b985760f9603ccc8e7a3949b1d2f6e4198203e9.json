@@ -1,0 +1,128 @@
+{
+  "query_entities": [
+    "SkipGram",
+    "Hierarchical Softmax",
+    "word2vec",
+    "node2vec",
+    "biased random-walk neighborhood sampler",
+    "breadth-first-like exploration",
+    "depth-first-like exploration",
+    "homophily-based communities",
+    "structural-equivalence roles",
+    "embeddings"
+  ],
+  "triples": [
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Hierarchical Softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "efficiency",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "standard efficiency trick",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SkipGram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "biased random-walk neighborhood sampler",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random-walk neighborhood sampler",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "breadth-first-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random-walk neighborhood sampler",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "depth-first-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first-like exploration",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first-like exploration",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "nodes with similar structural positions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ARGUES",
+      "target": "single notion of neighborhood is not enough for graphs with both homophily-based communities and structural-equivalence roles",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "MOTIVATES",
+      "target": "learning embeddings from neighborhoods that are not fixed a priori",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "MOTIVATES",
+      "target": "adaptively sampled neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adaptively sampled neighborhoods",
+      "source_alias": "",
+      "type": "REFLECT",
+      "target": "local community context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adaptively sampled neighborhoods",
+      "source_alias": "",
+      "type": "REFLECT",
+      "target": "broader structural similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

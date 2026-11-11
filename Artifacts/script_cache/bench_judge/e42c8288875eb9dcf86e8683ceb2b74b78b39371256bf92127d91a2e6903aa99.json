@@ -1,0 +1,12 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "Its cost and memory grow with the number of edges rather than with the square of the number of nodes.",
+    "It avoids forming or decomposing a dense n\u00d7n matrix.",
+    "The optimization can be parallelized or distributed across machines.",
+    "It is typically applied to unweighted graphs."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: the evidence says graph factorization uses SGD to handle large networks and only applies to undirected networks, and that it preserves first-order proximity. The answer adds complexity, memory, parallelization, and unweighted-graph claims that the evidence does not state."
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The first-order proximity neighbors are mostly words that are directly connected or very close in the graph, so they tend to be near-synonyms or tightly related terms.",
+    "The second-order proximity neighbors are more about sharing similar neighborhoods, so they often include words that are related in meaning or usage but are not necessarily direct graph neighbors.",
+    "In other words, first-order proximity returns more immediate, local similarity, while second-order proximity returns more structural or contextual similarity."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The paper explicitly says second-order proximity returns semantically related words and first-order proximity returns a mixture of syntactically and semantically related words. However, the answer adds extra specifics about direct graph neighbors, near-synonyms, and structural/local similarity that are not stated in the evidence."
+}

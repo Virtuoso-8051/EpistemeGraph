@@ -1,0 +1,6 @@
+{
+  "answer": "The paper describes node2vec as running on a single machine rather than a distributed cluster. Its three sequential phases (preprocessing of transition probabilities, random-walk simulation, and SGD optimization of skip-gram embeddings) were parallelized across the cores of one multi-core, shared-memory machine, with the graph held in RAM. The reference implementation is in Python, using Gensim's word2vec-style SGD. I recall the scalability experiments using a 16-core machine with on the order of 60+ GB of RAM, but I am not certain of those exact figures.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I recall the general single-machine, multi-core, in-memory Python/Gensim setup, but the specific hardware figures and exact wording are uncertain from memory.",
+  "_token_nll": null
+}

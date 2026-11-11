@@ -1,0 +1,9 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Combining the two orders (concatenating the embeddings) is reported to improve over either alone. The paper applies LINE(1st+2nd) only to supervised tasks and explicitly says it does not apply it to unsupervised tasks like word analogy, so no improvement on word analogy is reported."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly states that LINE(2nd) beats LINE(1st) on word analogy (66.10% vs 53.35% overall), which matches Table 2. However, it claims the concatenated LINE(1st+2nd) improves over either alone, which the evidence does not support for this unsupervised analogy task."
+}

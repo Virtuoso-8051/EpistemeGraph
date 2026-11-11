@@ -1,0 +1,6 @@
+{
+  "answer": "The node2vec paper (Grover & Leskovec, 2016) does not state an exact negative-sampling rate or number of negative samples per positive pair. It says only that the skip-gram objective is optimized with stochastic gradient descent using negative sampling, following Mikolov et al. (2013). The reference implementation builds on gensim's word2vec, whose default is 5 negative samples, but that default is not stated in the paper itself.",
+  "confidence": 0.35,
+  "confidence_reasoning": "I am fairly confident the paper gives no explicit negative-sample count, but I am unsure of the exact wording and of the reference code's default setting.",
+  "_token_nll": null
+}

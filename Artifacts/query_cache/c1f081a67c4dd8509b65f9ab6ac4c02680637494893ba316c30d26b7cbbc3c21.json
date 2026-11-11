@@ -1,0 +1,87 @@
+{
+  "query_entities": [
+    "NODE2VEC"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "supervised training objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "return parameter p",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "in-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "stay close to the source node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "explore farther away",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "downstream prediction performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embeddings",
+      "source_alias": "",
+      "type": "USES",
+      "target": "supervised or task-driven setting",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised objective",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "walk bias",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk bias",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "best captures the structural patterns relevant to the task",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "query_entities": [
+    "node2vec",
+    "LINE",
+    "BlogCatalog",
+    "Macro-F1"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "random-walk contexts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classifier",
+      "source_alias": "",
+      "type": "EXPOSED_TO",
+      "target": "richer set of neighborhood patterns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "highly overlapping labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "labels depend on higher-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "one-shot edge observations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "CANNOT_REUSE",
+      "target": "same local structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "walk-based sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk-based sampling",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "stronger data-augmentation mechanism",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stronger data-augmentation mechanism",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "downstream classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "downstream classifier",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "separate classes better",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "much larger Macro-F1 improvement",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

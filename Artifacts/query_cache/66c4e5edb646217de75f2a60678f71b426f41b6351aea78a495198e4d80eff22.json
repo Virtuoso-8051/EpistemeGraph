@@ -1,0 +1,74 @@
+{
+  "query_entities": [
+    "BFS",
+    "DFS",
+    "node2vec",
+    "Les Mis\u00e9rables network"
+  ],
+  "triples": [
+    {
+      "source": "BFS-like walks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like walks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "neighborhood sampling strategy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "neighborhood sampling strategy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "return and in-out parameters (p and q)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables co-appearance network example",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "node2vec",
+      "target_alias": "NODE2VEC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-leaning setting",
+      "source_alias": "",
+      "type": "GROUPS",
+      "target": "characters by community",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-leaning setting",
+      "source_alias": "",
+      "type": "GROUPS",
+      "target": "characters by structural role across communities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

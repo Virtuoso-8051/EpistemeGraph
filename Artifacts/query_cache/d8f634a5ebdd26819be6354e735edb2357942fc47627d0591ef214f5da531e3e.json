@@ -1,0 +1,94 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "TRW",
+    "LM",
+    "NE",
+    "GS",
+    "GC",
+    "RW",
+    "NLM"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "NE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "GS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "TRW",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "NLM",
+      "target_alias": "skip-gram language model",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "GE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "GS",
+      "target_alias": "partially labeled or large networks",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "TRW",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "RW",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "LM",
+      "target_alias": "language-modeling analogy",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "GC",
+      "target_alias": "local neighborhood structure",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "RW",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "GC",
+      "target_alias": "walk frequencies follow a power law",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

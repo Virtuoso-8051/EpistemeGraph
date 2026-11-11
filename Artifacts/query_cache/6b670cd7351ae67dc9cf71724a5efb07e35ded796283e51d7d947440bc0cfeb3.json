@@ -1,0 +1,6 @@
+{
+  "answer": "The question seems to rest on a specific benchmark paper that I can't identify, so this is a plausible explanation rather than a verified one. With only 3% of nodes labeled, the classifier sees very few examples of the smaller classes. Macro-F1 weights every class equally, so poor performance on rare classes drags it down even if overall accuracy or Micro-F1 holds up. DeepWalk's skip-gram embeddings are learned without labels and tend to favor frequently visited, hub-centered structure, so they may not separate minority-label groups cleanly in the embedding space. EdgeCluster instead builds explicit edge-centric community features (clustering-based representations) that align more directly with the group structure behind the labels. That makes its features more discriminative for small classes, which is why it can have higher Macro-F1 despite the smaller amount of labeled data that DeepWalk gets from the same 3% split.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I could not identify the source study, so the explanation rests on general reasoning about Macro-F1, class imbalance, and the two methods rather than on reported results.",
+  "_token_nll": null
+}

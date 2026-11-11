@@ -1,0 +1,72 @@
+{
+  "query_entities": [
+    "BFS",
+    "NODE2VEC"
+  ],
+  "triples": [
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "NN",
+      "target_alias": "network neighborhood",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "lower variance in neighborhood distribution estimate",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local structural roles",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "LGNS",
+      "target_alias": "local and global network structure",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "small overlapping set of nearby nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "LGNS",
+      "target_alias": "local and global network structure",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "longer-range dependencies",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "higher variance in sampled neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

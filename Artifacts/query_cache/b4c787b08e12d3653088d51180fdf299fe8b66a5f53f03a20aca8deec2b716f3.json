@@ -1,0 +1,85 @@
+{
+  "query_entities": [
+    "BlogCatalog",
+    "social network (SN)",
+    "Structural Equivalence (SE)",
+    "LINE",
+    "node2vec",
+    "PPI",
+    "homophily"
+  ],
+  "triples": [
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "social network (SN)",
+      "target_alias": "SN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI",
+      "source_alias": "protein-protein interaction",
+      "type": "IS_A",
+      "target": "biological network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "PPI",
+      "target_alias": "protein-protein interaction",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI",
+      "source_alias": "protein-protein interaction",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Structural Equivalence (SE)",
+      "target_alias": "SE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-biased walks",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "Structural Equivalence (SE)",
+      "target_alias": "SE",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

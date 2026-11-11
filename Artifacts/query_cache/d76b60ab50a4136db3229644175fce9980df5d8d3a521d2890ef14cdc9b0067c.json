@@ -1,0 +1,32 @@
+{
+  "query_entities": [
+    "Principal Component Analysis (PCA)",
+    "eigendecomposition"
+  ],
+  "triples": [
+    {
+      "source": "local-neighborhood-weighted objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "stochastic gradient descent",
+      "target_alias": "SGD",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "source_alias": "SGD",
+      "type": "ENABLES",
+      "target": "avoidance of forming and diagonalizing the full covariance or Laplacian matrix",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "local-neighborhood-weighted objective",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local neighborhoods",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

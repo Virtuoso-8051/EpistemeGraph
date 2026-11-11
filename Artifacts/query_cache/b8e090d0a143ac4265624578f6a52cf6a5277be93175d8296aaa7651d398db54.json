@@ -1,0 +1,87 @@
+{
+  "query_entities": [
+    "LINE",
+    "directed graph",
+    "undirected graph",
+    "weighted network",
+    "first-order proximity",
+    "second-order proximity",
+    "edge-sampling optimization",
+    "DeepWalk",
+    "matrix factorization"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "Tang et al., 2015",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "directed graph",
+      "target_alias": "DG",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling optimization",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "weighted network",
+      "target_alias": "WN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "undirected graph",
+      "target_alias": "UG",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "undirected graph",
+      "target_alias": "UG",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "directed graph",
+      "target_alias": "DG",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "separate vertex and context embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "undirected unweighted restriction",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "matrix factorization",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "undirected unweighted restriction",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

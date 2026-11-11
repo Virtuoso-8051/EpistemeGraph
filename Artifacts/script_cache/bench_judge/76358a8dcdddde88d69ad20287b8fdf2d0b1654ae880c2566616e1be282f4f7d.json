@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The paper's claim rests on the time per update depending only on the number of sampled edges and constant cost per step, with total time roughly linear in edges (not stated explicitly in the evidence)",
+    "Implementation choice (2): alias-table sampling drawing edges and negative vertices in constant time is not mentioned in the provided evidence",
+    "Implementation choice (3): negative sampling replacing full softmax with a few noise samples per edge is not mentioned in the provided evidence",
+    "Implementation choice (4) describes the asynchronous SGD as 'lock-free' and 'without a global synchronization bottleneck', which the evidence does not state",
+    "Claim that edge sampling avoids 'high variance' and 'gradient-scaling problems' goes beyond the evidence, which only says it solves the limitation of SGD on weighted edges"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer (edge sampling plus asynchronous multithreaded SGD, with near-linear speedup and stable Micro-F1) is supported by the evidence. However, the answer adds specifics such as alias tables, negative sampling, lock-free updates, and variance arguments that do not appear in the provided source excerpts."
+}

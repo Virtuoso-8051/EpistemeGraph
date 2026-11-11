@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does LINE(2nd) outperform LINE(1st) on the Flickr network when the graph is extremely sparse?",
+      "false_premise": "LINE(2nd) outperforms LINE(1st) on the Flickr network when the graph is extremely sparse.",
+      "correction": "In the beginning, when the network is very sparse, LINE(1st) outperforms LINE(2nd).",
+      "evidence_quote": "We can see that in the beginning, when the network is very sparse, the LINE(1st) outperforms LINE(2nd).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE(2nd)'s second-order proximity help it on low-degree vertices in the original Youtube network?",
+      "false_premise": "LINE(2nd)'s second-order proximity helps it on low-degree vertices in the original Youtube network.",
+      "correction": "In the original network, LINE(2nd) outperforms LINE(1st) except for the first group, which confirms that the second-order proximity does not work well for nodes with a low degree.",
+      "evidence_quote": "In the original network, the LINE(2nd) outperforms LINE(1st) except for thefirst group, which confirms that the second-order proximity does not work well for nodes with a low degree.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the LINE(2nd) model on the reconstructed Youtube network show about its comparison with DeepWalk across the degree groups?",
+      "false_premise": "The LINE(2nd) model on the reconstructed Youtube network does not outperform DeepWalk across the degree groups.",
+      "correction": "The LINE(2nd) model on the reconstructed network outperforms DeepWalk in all the groups.",
+      "evidence_quote": "We can also see that the LINE(2nd) model on the reconstructed network outperforms DeepWalk in all the groups.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does increasing the dimension d keep improving the performance of LINE(1st) and LINE(2nd)?",
+      "false_premise": "Increasing the dimension d keeps improving the performance of LINE(1st) and LINE(2nd).",
+      "correction": "The performance of the LINE(1st) or LINE(2nd) drops when the dimension becomes too large.",
+      "evidence_quote": "We can see that the performance of the LINE(1st) or LINE(2nd) drops when the dimension becomes too large.",
+      "difficulty": "hard"
+    }
+  ]
+}

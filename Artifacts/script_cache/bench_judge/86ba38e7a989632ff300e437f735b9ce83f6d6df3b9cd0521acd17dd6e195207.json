@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The reported effect is that performance rises with more walks and longer walks up to a point, after which gains become small or saturate.",
+    "The tradeoff mentioned for the context size k is that a larger k captures broader, more global neighborhood information, but it can also include less relevant nodes and make the embeddings less focused on local structure; a smaller k does the opposite, emphasizing local proximity but missing wider context."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The paper evidence supports that increasing the number and length of walks per source improves performance and that these parameters have a relatively high impact. However, the answer adds an unsupported explanation of saturation and an unsupported interpretation of the k tradeoff; the paper only says k improves performance at the cost of increased optimization time, with differences not very large."
+}

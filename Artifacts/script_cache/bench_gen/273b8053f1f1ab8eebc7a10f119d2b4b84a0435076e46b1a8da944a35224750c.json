@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In the reconstructed network used by LINE(1st+2nd), what exact neighborhood size threshold did the authors test beyond which adding more vertices no longer improved performance?",
+      "why_unanswerable": "The passage says that adding more than 1,000 vertices does not further increase performance, but it does not report any finer-grained threshold search, exact comparison points, or alternative tested sizes beyond 1,000.",
+      "evidence_quote": "We find that adding more than 1,000 vertices does not further increase the performance.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "For the reconstructed network evaluation of LINE(2nd), by how much did LINE(2nd) outperform DeepWalk in the best case, and on which dataset or metric was that margin observed?",
+      "why_unanswerable": "The passage only states that LINE(2nd) outperforms DeepWalk in most cases on the reconstructed network; it does not provide a numerical margin, the exact dataset, or the metric for that comparison.",
+      "evidence_quote": "In the reconstructed network, the LINE(2nd) outperforms DeepWalk in most cases.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What are the exact micro-F1 or macro-F1 scores achieved by LINE(1st+2nd) on the DBLP(AuthorCitation) network for the seven conference labels AAAI, CIKM, ICML, KDD, NIPS, SIGIR, and WWW?",
+      "why_unanswerable": "The passage mentions a multi-label classification task with seven conference categories, but it does not provide any per-class or aggregate F1 scores for LINE(1st+2nd) on DBLP(AuthorCitation).",
+      "evidence_quote": "We also evaluate the vertex embeddings through a multi-label classification task.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which exact conditions on the citation networks did the authors find that DeepWalk outperformed LINE(2nd), and what were the corresponding numerical results?",
+      "why_unanswerable": "The passage says the DBLP(AuthorCitation) network is very sparse and that DeepWalk outperforms LINE(2nd), but it does not specify the exact conditions, experimental settings, or numerical results behind that finding.",
+      "evidence_quote": "As this network is also very sparse, DeepWalk outperforms LINE(2nd).",
+      "difficulty": "medium"
+    }
+  ]
+}

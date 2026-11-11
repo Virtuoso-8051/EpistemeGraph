@@ -1,0 +1,121 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "node classification",
+    "social network",
+    "random walks",
+    "Skip-gram",
+    "graph structure",
+    "labels",
+    "one-vs-rest logistic regression",
+    "BlogCatalog",
+    "Flickr",
+    "YouTube"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node classification",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "social network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node representation",
+      "target_alias": "NR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation",
+      "source_alias": "NR",
+      "type": "DEFINED_AS",
+      "target": "graph structure",
+      "target_alias": "GS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labels",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "graph structure",
+      "target_alias": "GS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "one-vs-rest logistic regression",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node representation",
+      "target_alias": "NR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation",
+      "source_alias": "NR",
+      "type": "ACHIEVES",
+      "target": "network classification performance",
+      "target_alias": "NCP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "sparsely labeled networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

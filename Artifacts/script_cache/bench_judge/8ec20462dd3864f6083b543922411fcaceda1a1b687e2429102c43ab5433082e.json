@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The future-vertex conditional Pr(vi | \u03a6(vi+1), \u03a6(vi+2), \u2026) is a deliberate design choice of the method's direct analog of language modeling.",
+    "The method treats the random walk's local context as a set of neighbouring vertices in both directions, not as a causal sequence, as the reason for the direct analog.",
+    "The paper appears to model the vertex's surrounding context from the vertices that follow it, because graph edges are generally undirected."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The paper states that the direct analog conditions on the previous vertices visited so far in the walk, and the answer instead accepts the false premise of future-vertex conditioning and invents a justification for it. Its only partly correct point is the passing remark that the language-modeling analogy would condition on previous vertices, which it then dismisses."
+}

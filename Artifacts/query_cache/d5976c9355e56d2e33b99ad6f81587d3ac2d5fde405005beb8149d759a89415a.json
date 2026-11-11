@@ -1,0 +1,6 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding) primarily uses a stochastic, edge-sampling-based optimization strategy with negative sampling rather than an exhaustive global search. It optimizes the likelihood over local neighborhoods of depth 1 for the first-order proximity objective and depth 2 for the second-order proximity objective.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This matches the standard LINE formulation: it learns embeddings by maximizing local edge-based likelihoods using negative sampling, with first-order and second-order proximity corresponding to 1-hop and 2-hop neighborhood information.",
+  "_token_nll": 0.18691503474142698
+}

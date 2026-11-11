@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk can be parallelized with asynchronous stochastic gradient descent because its training objective is a sum of many independent local skip-gram-style updates over random walks, so different workers can process different walk contexts at the same time with little coordination. The key property is that the gradient updates are sparse and only touch a small subset of the embedding parameters for the current node/context pair, which makes parameter conflicts rare and allows lock-free or weakly synchronized updates to work well.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a standard description of DeepWalk\u2019s training and asynchronous SGD; the main uncertainty is in the exact wording of the implementation details across sources.",
+  "_token_nll": 0.24801271226671007
+}

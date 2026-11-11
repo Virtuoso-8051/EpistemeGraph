@@ -1,0 +1,79 @@
+{
+  "query_entities": [
+    "linear dimensionality reduction methods",
+    "non-linear dimensionality reduction methods",
+    "large networks",
+    "optimization",
+    "pairwise relationships",
+    "matrix factorizations",
+    "network's community structure",
+    "downstream tasks",
+    "learned embeddings"
+  ],
+  "triples": [
+    {
+      "source": "linear dimensionality reduction methods",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "expensive computations over the whole graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-linear dimensionality reduction methods",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "expensive computations over the whole graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimization",
+      "source_alias": "",
+      "type": "USES",
+      "target": "pairwise relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimization",
+      "source_alias": "",
+      "type": "USES",
+      "target": "matrix factorizations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "expensive computations over the whole graph",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "large networks",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "objectives",
+      "source_alias": "",
+      "type": "NOT_DIRECTLY_ALIGNED_WITH",
+      "target": "network's community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "objectives",
+      "source_alias": "",
+      "type": "NOT_DIRECTLY_ALIGNED_WITH",
+      "target": "downstream tasks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned embeddings",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "less useful for those purposes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

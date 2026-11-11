@@ -1,0 +1,9 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Training was done in a word2vec/skip-gram style using multiple worker threads on a single multi-core machine (the evidence does not specify a single multi-core machine or worker threads)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says the paper does not specify a hardware configuration, and that DeepWalk was evaluated on YouTube and is parallelizable, which the evidence supports. However, it adds an unsupported specific that training used multiple worker threads on a single multi-core machine, which the evidence does not state."
+}

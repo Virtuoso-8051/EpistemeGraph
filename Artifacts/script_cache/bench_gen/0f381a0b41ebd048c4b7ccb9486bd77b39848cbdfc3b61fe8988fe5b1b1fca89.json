@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk\u2019s use of edge weights help it outperform LINE on the language network so strongly?",
+      "false_premise": "DeepWalk uses edge weights and therefore outperforms LINE on the language network.",
+      "correction": "DeepWalk has to ignore edge weights, and LINE with edge-sampling performs very well on the language network.",
+      "evidence_quote": "This is because DeepWalk has to ignore the weights (i.e., co-occurrences) of the edges, which is very important in a language network.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE improve document embeddings by optimizing them directly for the best document classification accuracy?",
+      "false_premise": "LINE is used to directly optimize document embeddings for the best classification performance.",
+      "correction": "The document vectors are obtained by averaging word vectors, because the goal is to compare word embeddings rather than find the best document embedding method.",
+      "evidence_quote": "This is because we aim to compare the word embeddings with different approaches instead of finding the best method for document embeddings.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes LINE-SGD faster than graph factorization when it is trained with ordinary SGD on the language network?",
+      "false_premise": "LINE-SGD is trained with ordinary SGD and is faster than graph factorization.",
+      "correction": "LINE optimized by edge-sampling is the efficient variant, LINE-SGDs are slightly slower, and both LINE(1st) and LINE(2nd) are at least 10% faster than graph factorization.",
+      "evidence_quote": "The LINE optimized by the edge-sampling treatment effectively addresses this problem, and performs very well using either first-order or second-order proximity.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does DeepWalk become the faster method, given that it is about five times quicker than LINE on the large language network?",
+      "false_premise": "DeepWalk is faster than LINE on the large language network.",
+      "correction": "LINE is much more efficient than DeepWalk, and DeepWalk is five times slower.",
+      "evidence_quote": "Both are at least 10% faster than graph factorization, and much more efficient than DeepWalk (five times slower).",
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "In the node2vec results, performance continues to improve beyond roughly 100 dimensions mainly on the more complex, larger, and more heterogeneous graphs/tasks, where extra embedding capacity can still capture useful structure. On simpler or smaller graphs, gains usually flatten out around that point. This effect also depends on walk length: longer random walks tend to make higher-dimensional embeddings more beneficial, because they expose more context and structural information for the model to encode. With shorter walks, increasing the dimension past about 100 typically yields little additional benefit.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a high-level summary of the reported trend, but the exact threshold and interaction can vary by dataset and experimental setup, so I am moderately confident rather than certain.",
+  "_token_nll": 0.23832104252833947
+}

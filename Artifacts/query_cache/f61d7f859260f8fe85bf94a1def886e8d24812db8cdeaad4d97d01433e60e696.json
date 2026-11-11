@@ -1,0 +1,49 @@
+{
+  "query_entities": [
+    "network embedding (NE)",
+    "first-order proximity (FOP)",
+    "second-order neighbor (SON)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order neighbor (SON)",
+      "target_alias": "SON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "future work",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "higher-order (multi-hop) proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "higher-order (multi-hop) proximity",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "LINE",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "future work",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "scalable incorporation of higher-order proximity into embedding",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

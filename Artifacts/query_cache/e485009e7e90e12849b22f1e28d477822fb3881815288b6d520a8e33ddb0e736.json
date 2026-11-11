@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is likely false, so I can't give conditions under which DeepWalk beats node2vec on PPI 'because node2vec is the weakest method there.' In the node2vec paper (Grover & Leskovec, 2016), node2vec performed best or near-best on the PPI network for multi-label node classification, with DeepWalk close behind and LINE and spectral methods generally lower. The paper's stated explanation is that node2vec's tunable biased walks (p and q) let it capture both homophily and structural equivalence, which helps on PPI. The paper does not report node2vec as the weakest method on PPI. Some reproductions and later benchmarks show DeepWalk matching or slightly exceeding node2vec on some graphs or settings, usually when hyperparameters are not tuned, p and q are left at 1 (which reduces node2vec to DeepWalk), or evaluation is noisy. Those cases differ from the premise and don't establish that node2vec was the weakest method on PPI. If you have a specific paper or table in mind, I can check its setup.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident node2vec was not reported as weakest on PPI in the original paper, but I am less certain about every detail of its tables and about the full range of later reproduction results.",
+  "_token_nll": null
+}

@@ -1,0 +1,77 @@
+{
+  "query_entities": [
+    "LINE",
+    "breadth-first search",
+    "depth-first search (DFS)",
+    "first-order proximity (FOP)",
+    "second-order neighbor (SON)",
+    "1-hop and 2-hop neighbor (1H2HN)",
+    "likelihood objective (LO)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "breadth-first search",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "depth-first search (DFS)",
+      "target_alias": "DFS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "long random walks",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "likelihood objective (LO)",
+      "source_alias": "LO",
+      "type": "OPTIMIZES",
+      "target": "depth-1 neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "likelihood objective (LO)",
+      "source_alias": "LO",
+      "type": "OPTIMIZES",
+      "target": "depth-2 neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-1 neighborhoods",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-2 neighborhoods",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "second-order neighbor (SON)",
+      "target_alias": "SON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "1-hop and 2-hop neighbor (1H2HN)",
+      "target_alias": "1H2HN",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

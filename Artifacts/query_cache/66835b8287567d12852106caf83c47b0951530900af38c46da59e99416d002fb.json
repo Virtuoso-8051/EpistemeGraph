@@ -1,0 +1,6 @@
+{
+  "answer": "After simplification, LINE measures the distance between the conditional distributions p2(\u00b7|v_i) (the model) and p\u03022(\u00b7|v_i) = w_ij/d_i (the empirical network distribution) with the Kullback-Leibler divergence. Dropping constant terms (the degree-based weights \u03bb_i = d_i and the fixed normalization) gives O2 = -\u03a3_{(i,j)\u2208E} w_ij \u00b7 log p2(v_j|v_i), where p2(v_j|v_i) = exp(u_j^T u_i) / \u03a3_{k\u2208V} exp(u_k^T u_i), with u_i the vertex embedding and u_j the context embedding of vertex j.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I recall the LINE paper's use of KL divergence and the resulting log-likelihood form of O2 with moderate confidence, but exact notation and which constant terms are dropped may differ from the paper.",
+  "_token_nll": null
+}

@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "Hogwild SGD",
+    "asynchronous SGD",
+    "shared embedding parameters",
+    "speedup"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "asynchronous SGD",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous SGD",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "Hogwild SGD",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "shared embedding parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "speedup",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "speedup",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "nearly linear scaling with number of workers",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "20 workers",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

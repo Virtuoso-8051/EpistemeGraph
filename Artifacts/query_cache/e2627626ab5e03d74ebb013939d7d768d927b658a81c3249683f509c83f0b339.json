@@ -1,0 +1,105 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "BlogCatalog",
+    "BLOGCATALOG_NETWORK_PLACEHOLDER"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "PPI network",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "BN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "social network",
+      "target_alias": "SN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI network",
+      "source_alias": "",
+      "type": "USED_FOR",
+      "target": "multi-label classification of protein biological states or roles",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "EVALUATED_ON",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "EVALUATED_ON",
+      "target": "YouTube",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "EVALUATED_ON",
+      "target": "PPI network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social network",
+      "source_alias": "SN",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "OUTPERFORMS",
+      "target": "spectral-style embedding baselines",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI network",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "biological graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "PRESERVES",
+      "target": "local neighbourhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

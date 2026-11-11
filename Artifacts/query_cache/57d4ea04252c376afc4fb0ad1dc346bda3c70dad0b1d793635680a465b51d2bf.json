@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "asynchronous stochastic gradient descent",
+    "skip-gram",
+    "random walks",
+    "embedding parameters"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "asynchronous stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "skip-gram",
+      "target_alias": "skip-gram-style updates",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "independent local skip-gram-style updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "gradient updates",
+      "source_alias": "sparse gradient updates",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "embedding parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sparse gradient updates",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "lock-free or weakly synchronized updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

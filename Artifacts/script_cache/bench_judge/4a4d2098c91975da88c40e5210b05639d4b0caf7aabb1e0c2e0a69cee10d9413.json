@@ -1,0 +1,9 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "Node2vec reuses samples across source nodes \"through precomputed alias tables for its biased second-order transitions\" - the evidence attributes sample reuse to random walks (simulating a walk of length l>k yields samples for multiple nodes), not to alias tables."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The two core attributions (LINE(2nd) for word analogy on the Wikipedia word network, node2vec for sample reuse across source nodes) match the evidence. The stated mechanism, precomputed alias tables, is not in the evidence, which credits random walks, so that detail is unsupported, though the answer hedges it."
+}

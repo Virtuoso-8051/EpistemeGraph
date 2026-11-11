@@ -1,0 +1,82 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "number of walks started per vertex (GAMMA)",
+    "random walk (RW)",
+    "Skip-gram model (SGM)"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "performance can drop",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GAMMA",
+      "source_alias": "number of walks started per vertex",
+      "type": "IMPROVES",
+      "target": "number of random walks started from each node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GAMMA",
+      "source_alias": "number of walks started per vertex",
+      "type": "REDUCES",
+      "target": "number of random walks started from each node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "sparse graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "graphs with limited connectivity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "small graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "fewer walks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "node neighborhoods",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "fewer walks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local and global co-occurrence statistics",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "fewer walks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "reliable training data for the Skip-gram model",
+      "target_alias": "Skip-gram model (SGM)",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

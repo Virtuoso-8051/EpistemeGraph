@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is not accurate. LINE (Tang et al., 2015) does not rely on directly deploying stochastic gradient descent to avoid gradient explosion. The original paper notes that naive SGD on weighted edges can produce gradients that scale with edge weights, which varies widely in networks such as word co-occurrence graphs, making learning unstable. LINE's fix is edge sampling: it samples edges with probability proportional to their weights (using alias tables) and treats each sampled edge as binary, so the gradient magnitude does not depend on the raw weight. It then optimizes with asynchronous SGD over these sampled edges, but the sampling scheme, not SGD itself, is what addresses the weight-induced gradient problem. Plain SGD does not by itself prevent gradient explosion.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident about LINE's edge-sampling and alias-table design and that the question's premise is misattributed, but I am less certain of the exact wording of the paper's motivation for the gradient issue.",
+  "_token_nll": null
+}

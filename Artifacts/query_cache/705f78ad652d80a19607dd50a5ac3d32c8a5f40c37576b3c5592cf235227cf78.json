@@ -1,0 +1,33 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "BlogCatalog",
+    "FLICKR"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "reported speedup",
+      "target_alias": "on BlogCatalog and FLICKR on a machine with 16 CPU cores and 128 GB of RAM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "16-core CPU setup",
+      "target_alias": "with 128 GB memory for multi-worker runs",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "128 GB of RAM",
+      "target_alias": "for the hardware configuration used for the reported speedup",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

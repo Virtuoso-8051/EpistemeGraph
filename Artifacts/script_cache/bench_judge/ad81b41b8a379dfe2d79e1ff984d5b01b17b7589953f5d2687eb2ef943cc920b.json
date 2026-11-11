@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The answer accepts the false premise that DeepWalk outperforms LINE(2nd) on word analogy, offering a rationale for a non-existent result (the evidence shows LINE(2nd) at 66.10% overall vs DeepWalk at 43.65%).",
+    "The answer implies DeepWalk's random walks capture higher-order proximity that explains better analogy performance, which contradicts the paper's finding that DeepWalk ignores edge weights and its random walk introduces noise.",
+    "The answer attributes to LINE(2nd) only direct one-hop modeling and less structure capture as the reason for worse performance, which is an unsupported explanation not stated in the evidence (the paper attributes LINE(2nd)'s advantage to second-order proximity)."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise that DeepWalk beats LINE(2nd) on word analogy, when the table shows LINE(2nd) at 66.10% overall versus DeepWalk's 43.65%. Its proposed mechanism contradicts the paper's explanation that DeepWalk ignores edge weights and random walks add noise, and it never corrects the Wikipedia-corpus premise."
+}

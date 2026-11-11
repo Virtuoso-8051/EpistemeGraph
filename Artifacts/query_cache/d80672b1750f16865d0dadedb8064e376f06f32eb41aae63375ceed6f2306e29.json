@@ -1,0 +1,106 @@
+{
+  "query_entities": [
+    "random walk (RW)",
+    "social representation (SR)",
+    "Community membership (CM)",
+    "social network embedding (SNE)"
+  ],
+  "triples": [
+    {
+      "source": "social representation method",
+      "source_alias": "SR",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "social representation method",
+      "target_alias": "SR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "DEFINED_AS",
+      "target": "neighbor-based walk step chosen uniformly at random among adjacent vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "local structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "densely connected groups",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "vertices co-occurring within a short window",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "similar latent representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "similar latent representations",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "Community membership (CM)",
+      "target_alias": "CM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social representation method",
+      "source_alias": "SR",
+      "type": "DEFINED_AS",
+      "target": "random walk that jumps to any vertex",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "random walk that jumps to any vertex",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "Community membership (CM)",
+      "target_alias": "CM",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "PageRank-style teleportation",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "non-local moves",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "return and in-out parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "non-local moves in other methods",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "social representation method",
+      "target_alias": "SR",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

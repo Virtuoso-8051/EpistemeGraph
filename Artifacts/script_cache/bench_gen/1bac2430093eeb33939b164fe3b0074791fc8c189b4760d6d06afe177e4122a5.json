@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How were the document embeddings evaluated for Wikipedia page classification, and what metrics were reported for that evaluation with LINE and the other methods?",
+      "gold_answer": "All document vectors were used to train a one-vs-rest logistic regression classifier using the LibLinear package, with the labeled documents randomly split into training and evaluation sets. The reported metrics were Micro-F1 and Macro-F1, averaged over 10 different runs with different sampled training data.",
+      "evidence_quote": "All document vectors are used to train a one-vs-rest logistic regression classifier using the LibLinear package 4.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does graph factorization outperform DeepWalk in the Wikipedia page classification results when compared with LINE-based methods?",
+      "gold_answer": "Graph factorization outperforms DeepWalk because DeepWalk ignores the weights of the edges. The passage explicitly says this is the reason for the performance gap in the classification results.",
+      "evidence_quote": "The graph factorization outperforms DeepWalk as DeepWalk ignores the weights of the edges.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what condition does LINE(1st+2nd) perform significantly better than all other methods, and what does this suggest about the two proximities in LINE?",
+      "gold_answer": "When the supervised task allows concatenating the embeddings learned with LINE(1st) and LINE(2nd), the combined LINE(1st+2nd) method performs significantly better than all other methods. This suggests that first-order and second-order proximities are complementary to each other.",
+      "evidence_quote": "As a result, the LINE(1st+2nd) method performs significantly better than all other methods.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do the most similar words returned by LINE's first-order proximity differ from those returned by its second-order proximity in Table 4?",
+      "gold_answer": "The second-order proximity returns words that are all semantically related, because it uses contextual proximity. In contrast, the first-order proximity returns a mixture of syntactically and semantically related words.",
+      "evidence_quote": "We can see that by using the contextual proximity, the most similar words returned by the secondorder proximity are all semantically related words.",
+      "difficulty": "hard"
+    }
+  ]
+}

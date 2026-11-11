@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "BFS corresponds to a small return/in-out parameter q biased toward distance-1 nodes; the excerpt never mentions p, q, or these parameters.",
+    "BFS-sampled nodes are described as 'structurally similar'; the evidence does not say this, and it attributes the variance reduction to nodes repeating many times, which the answer omits."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast is supported: BFS explores a small local portion of the graph with lower variance, while DFS reaches farther, captures macro-level community structure, and has higher variance. However, the answer misses the repetition-based explanation for BFS's variance reduction and adds parameter and 'structurally similar' details that the excerpt does not contain."
+}

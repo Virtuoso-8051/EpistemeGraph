@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the method in paper3 use the right-side context only to predict the left-side words in each random walk, and how does that choice improve its likelihood objective?",
+      "false_premise": "The method predicts only the left-side context from the right-side context, rather than using one word to predict the surrounding context on both sides.",
+      "correction": "The method reverses the usual language-modeling direction by using one word to predict its context, and the context includes words on both the left and right sides.",
+      "evidence_quote": "Secondly, the context is composed of the words appearing to right side of the given word as well as the left side.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does the paper3 approach maximize the probability of an entire word sequence in a corpus, rather than estimating the likelihood of a vertex from its preceding random-walk neighbors?",
+      "false_premise": "The objective is to maximize the probability of whole word sequences in a corpus.",
+      "correction": "The objective is generalized to graphs by estimating the likelihood of observing a vertex given the previous vertices in a random walk.",
+      "evidence_quote": "The goal of language modeling is estimate the likelihood of a specific sequence of words appearing in a corpus.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec in paper3 use DeepWalk-style skip-gram training to learn only a probability distribution of node co-occurrences instead of a latent representation for each vertex?",
+      "false_premise": "The method learns only a probability distribution of node co-occurrences and does not learn latent vertex representations.",
+      "correction": "The method explicitly says its goal is to learn a latent representation, not only a probability distribution of node co-occurrences.",
+      "evidence_quote": "Our goal is to learn a latent representation, not only a probability distribution of node co-occurrences, and so we introduce a mapping function \u03a6: v\u2208 V \u21a6\u2192 R|V|\u00d7d.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What makes the paper3 method's direct analog of language modeling estimate Pr(vi | \u03a6(vi+1), \u03a6(vi+2), \u2026) from future vertices rather than from the previously visited vertices in the walk?",
+      "false_premise": "The method conditions on future vertices instead of the previous vertices in the random walk.",
+      "correction": "The method conditions on the previous vertices visited so far in the random walk.",
+      "evidence_quote": "The direct analog is to estimate the likelihood of observing vertex vi given all the previous vertices visited so far in the random walk.",
+      "difficulty": "medium"
+    }
+  ]
+}

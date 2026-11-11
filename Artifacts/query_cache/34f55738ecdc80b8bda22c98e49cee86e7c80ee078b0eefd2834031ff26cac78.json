@@ -1,0 +1,79 @@
+{
+  "query_entities": [
+    "DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "window size",
+      "target_alias": "w = 10",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "walk length",
+      "target_alias": "t = 40",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "window size",
+      "target_alias": "reasonable default choices",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "walk length",
+      "target_alias": "reasonable default choices",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "fixing window size and walk length",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "study of other parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "holding window size and walk length fixed",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "most influential DeepWalk settings constant",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "holding window size and walk length fixed",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "random-walk context size",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "holding window size and walk length fixed",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "amount of sampled walk data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "holding window size and walk length fixed",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "changes in performance",
+      "target_alias": "attributed more clearly to the parameters being varied",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

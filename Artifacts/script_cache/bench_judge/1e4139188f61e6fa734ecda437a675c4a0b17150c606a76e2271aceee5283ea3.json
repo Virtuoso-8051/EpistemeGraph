@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The tree can be kept only while frequency estimates remain adequate (known or stable vertex-frequency distribution); the paper's condition is that the cardinality of V is known or bounded.",
+    "New vertices are inserted as new leaves by splitting or attaching near low-frequency nodes in the existing tree; the paper assigns them to one of the pre-built remaining leaves.",
+    "The tree is rebuilt periodically or on a threshold when frequencies drift; the paper says nothing about rebuilding."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer misses the actual condition (cardinality of V known or bounded, tree built for the maximum size) and the actual handling of new vertices (assignment to pre-allocated remaining leaves). It instead invents frequency-drift conditions, dynamic leaf insertion, and rebuilding. Only the Huffman-coding background is roughly supported, and the paper ties that to a priori frequency estimates."
+}

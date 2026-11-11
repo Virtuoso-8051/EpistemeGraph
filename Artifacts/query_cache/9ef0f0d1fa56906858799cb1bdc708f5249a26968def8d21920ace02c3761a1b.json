@@ -1,0 +1,117 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "DEEPWALK",
+    "node2vec parameter (NP)",
+    "node representation (NR)",
+    "local and global network structure (LGNS)",
+    "local community structure information (LCSI)",
+    "Community detection (CD)"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "community-based embeddings only",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "IS_A",
+      "target": "DEEPWALK",
+      "target_alias": "DeepWalk",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "unbiased uniform random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERALIZES",
+      "target": "DEEPWALK",
+      "target_alias": "DeepWalk",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "node2vec with p = q = 1",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "return parameter p",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "return parameter p",
+      "type": "CONTROLS",
+      "target": "revisiting of previous node in walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "in-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "breadth-first sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first sampling",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "structural equivalence and similar structural roles",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first sampling",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "homophily and community membership",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "ENABLES",
+      "target": "encoding of structural roles and communities",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "GENERATES",
+      "target": "community-like proximity embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

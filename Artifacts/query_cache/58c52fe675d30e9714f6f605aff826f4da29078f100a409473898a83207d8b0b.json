@@ -1,0 +1,74 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "learning rate (LR)",
+    "stream of short random walk (SSRW)",
+    "streaming approach (SA)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "streaming approach (SA)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "Perozzi et al., 2014",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming approach (SA)",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "stream of short random walk (SSRW)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "learning rate (LR)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learning rate (LR)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "known total number of training steps",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learning rate (LR)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "linearly decaying learning rate",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "linearly decaying learning rate",
+      "source_alias": "",
+      "type": "REPLACED_BY",
+      "target": "fixed learning rate",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Passage A embedding model",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "networks with millions of nodes",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

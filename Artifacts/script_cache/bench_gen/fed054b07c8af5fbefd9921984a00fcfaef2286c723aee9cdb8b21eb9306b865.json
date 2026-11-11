@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What does the LINE model aim to preserve in the low-dimensional space Rd, and how is the overall Large-scale Information Network Embedding problem defined for a network G = (V,E)?",
+      "gold_answer": "LINE aims to preserve both the first-order proximity and the second-order proximity between vertices in the low-dimensional space Rd. More generally, Large-scale Information Network Embedding seeks a function fG: V \u2192 Rd that maps each vertex to a d-dimensional vector with d \u226a |V| while preserving those proximities.",
+      "evidence_quote": "In the space Rd, both the first-order proximity and the second-order proximity between the vertices are preserved.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions is the second-order proximity between two vertices u and v equal to 0, according to the passage?",
+      "gold_answer": "The second-order proximity between u and v is 0 if no vertex is linked from or to both u and v. In other words, there must be no shared in-neighbor or out-neighbor connecting the two vertices through second-order relationships.",
+      "evidence_quote": "If no vertex is linked from/to both u and v, the second-order proximity betweenu and v is 0.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE define the joint probability for an undirected edge when modeling first-order proximity, and what is the empirical probability used in that setting?",
+      "gold_answer": "For each undirected edge (i,j), LINE defines the joint probability as p1(vi,vj) = 1 / (1 + exp(\u2212u\u20d7Ti \u00b7 u\u20d7j)). The empirical probability is given by p\u03021(i,j) = wij / W, where W is the sum of edge weights over all edges in E.",
+      "evidence_quote": "To model the first-order proximity, for each undirected edge (i,j ), we define the joint probability between vertexvi andvj as follows: p1(vi,v j) = 11 + exp(\u2212\u20d7 uTi \u00b7\u20d7 uj), (1) where \u20d7 ui\u2208Rd is the low-dimensional vector representation of vertex vi.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why does the passage say a desirable embedding model for real-world information networks must satisfy multiple requirements, and what are those requirements for LINE?",
+      "gold_answer": "The passage says a desirable model must handle the practical demands of real-world information networks, which can be very large and have different edge types. For LINE, the requirements are to preserve both first- and second-order proximity, scale to networks with millions of vertices and billions of edges, and work with directed, undirected, and weighted edges.",
+      "evidence_quote": "A desirable embedding model for real world information networks must satisfy several requirements: first, it must be able to preserve both the first-order proximity and the second-order proximity between the vertices; second, it must scale for very large networks, say millions of vertices and billions of edges; third, it can deal with networks with arbitrary types of edges: directed, undirected and/or weighted.",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "NEURAL LANGUAGE MODEL",
+    "NODE EMBEDDING"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "neural language model (NLM)",
+      "target_alias": "NLM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "randomly-generated walk (RGW)",
+      "target_alias": "RGW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "randomly-generated walk (RGW)",
+      "source_alias": "RGW",
+      "type": "REPRESENTS",
+      "target": "sentence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram language model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram language model",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram language model",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "likelihood of preserving network neighborhoods of node (LPNNN)",
+      "target_alias": "LPNNN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node embedding (NE)",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "NE",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "low-dimensional continuous vector representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "The method relies on eigendecomposition of the data matrix when the model is being trained in the linear/closed-form regime rather than as a standard nonlinear single-hidden-layer neural network. In particular, if the hidden-layer activation is linear or the network is otherwise reduced to a matrix factorization / least-squares problem, then the optimization can be carried out using the eigendecomposition (or SVD) of the data matrix. By contrast, when the hidden layer uses a nonlinear activation and the network is trained as an ordinary single-hidden-layer feedforward neural network, optimization is done by backpropagation and stochastic gradient descent rather than by eigendecomposition.",
+  "confidence": 0.62,
+  "confidence_reasoning": "This is a generally correct distinction, but the exact condition depends on the specific method and paper, which is not provided, so some details may differ.",
+  "_token_nll": 0.22093244530688758
+}

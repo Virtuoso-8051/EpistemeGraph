@@ -1,0 +1,6 @@
+{
+  "answer": "In the standard node2vec link-prediction setup, 10% of the edges are removed to form the positive test examples. The remaining graph is kept connected by only removing edges whose deletion does not disconnect the network; in practice, this means sampling from non-bridge edges and checking that the residual graph stays connected after each removal.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This matches the commonly described node2vec experimental protocol, though exact implementation details can vary slightly across codebases and datasets.",
+  "_token_nll": 0.17827167151109227
+}

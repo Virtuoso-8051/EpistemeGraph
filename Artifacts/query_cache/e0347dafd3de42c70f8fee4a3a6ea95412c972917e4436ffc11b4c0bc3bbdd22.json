@@ -1,0 +1,74 @@
+{
+  "query_entities": [
+    "LINE",
+    "unweighted author citation network",
+    "weighted network",
+    "unweighted graph",
+    "weighted graph",
+    "unweighted edge",
+    "edge-sampling treatment",
+    "network embedding",
+    "embedding very large information networks into low-dimensional vector space",
+    "author citation network",
+    "WEIGHTS",
+    "WEIGHT"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling treatment",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "weighted graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "unweighted graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling treatment",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "WEIGHT",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unweighted graph",
+      "source_alias": "",
+      "type": "TREATS",
+      "target": "unweighted edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unweighted network",
+      "source_alias": "UN",
+      "type": "REQUIRES",
+      "target": "WEIGHTS",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unweighted network",
+      "source_alias": "UN",
+      "type": "IMPROVES",
+      "target": "embedding very large information networks into low-dimensional vector space",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

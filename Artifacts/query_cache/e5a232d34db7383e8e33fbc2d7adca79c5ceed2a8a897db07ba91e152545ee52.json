@@ -1,0 +1,81 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "CLUSTERS",
+    "Community detection (CD)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "low return parameter p",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "high in-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "depth-first-like walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first-like walks",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "tightly knit neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "NE",
+      "type": "PRESERVES",
+      "target": "densely connected community",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "CLUSTERS",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "Community detection (CD)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Homophily",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "tendency of connected characters to share traits, roles, or group membership",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Homophily",
+      "source_alias": "",
+      "type": "PRODUCES",
+      "target": "densely linked community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "CLUSTERS",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "characters who interact often and share attributes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "query_entities": [
+    "LINE",
+    "DeepWalk",
+    "BlogCatalog",
+    "node classification"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "supervised data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "downstream classification task",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled subset of nodes",
+      "source_alias": "",
+      "type": "USES",
+      "target": "classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classifier",
+      "source_alias": "",
+      "type": "USES",
+      "target": "learned embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embeddings without labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog labels",
+      "source_alias": "",
+      "type": "USES",
+      "target": "evaluation step",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog labels",
+      "source_alias": "",
+      "type": "NOT_USED_FOR",
+      "target": "embedding training",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "standard protocol",
+      "source_alias": "",
+      "type": "USES",
+      "target": "classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classifier",
+      "source_alias": "",
+      "type": "USES",
+      "target": "fraction of labeled nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "standard protocol",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

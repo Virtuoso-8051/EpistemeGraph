@@ -1,0 +1,49 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "number of walks started per vertex (GAMMA)",
+    "classification performance (CP)"
+  ],
+  "triples": [
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "IMPROVES",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "IMPROVES",
+      "target": "classification performance (CP)",
+      "target_alias": "CP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "GENERATES",
+      "target": "training co-occurrence samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "SHOWS_DIMINISHING_RETURNS",
+      "target": "classification performance (CP)",
+      "target_alias": "CP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "APPROXIMATES",
+      "target": "gamma \u2248 10",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

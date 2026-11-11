@@ -1,0 +1,123 @@
+{
+  "query_entities": [
+    "node2vec",
+    "LINE",
+    "random walk",
+    "second-order biased random walk",
+    "return parameter p",
+    "in-out parameter q",
+    "first-order proximity",
+    "second-order proximity",
+    "edge sampling",
+    "alias tables",
+    "skip-gram with negative sampling",
+    "truncated random walk",
+    "DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order biased random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "return parameter p",
+      "target_alias": "p",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "in-out parameter q",
+      "target_alias": "q",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "p",
+      "type": "OPTIMIZES",
+      "target": "random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram with negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small q",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "DFS-like walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "source_alias": "",
+      "type": "USES",
+      "target": "alias tables",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "truncated random walk",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "truncated random walk",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

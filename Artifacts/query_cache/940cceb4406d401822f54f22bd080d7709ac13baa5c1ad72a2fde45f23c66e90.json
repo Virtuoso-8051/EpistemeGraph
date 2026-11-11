@@ -1,0 +1,130 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "biased random walk procedure (BRWP)",
+    "skip-gram model",
+    "negative sampling",
+    "return parameter p",
+    "in-out parameter q",
+    "node classification",
+    "link prediction",
+    "unsupervised feature learning (UFL)",
+    "NP",
+    "NC"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "REFUTED",
+      "target": "supervised training objective",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "unsupervised feature learning (UFL)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "biased random walk procedure (BRWP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OPTIMIZES",
+      "target": "likelihood of preserving network neighborhoods of node (LPNNN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "in-out parameter q",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NP",
+      "source_alias": "node2vec parameter (NP)",
+      "type": "REPRESENTS",
+      "target": "return parameter p",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NP",
+      "source_alias": "node2vec parameter (NP)",
+      "type": "REPRESENTS",
+      "target": "in-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "breadth-first-like local structural-equivalence exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "depth-first-like global homophily exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "grid search",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "REFUTED",
+      "target": "automatic selection of a single transferable exploration degree",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NC",
+      "source_alias": "node classification",
+      "type": "APPLICABLE_FOR",
+      "target": "downstream evaluation of node2vec embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

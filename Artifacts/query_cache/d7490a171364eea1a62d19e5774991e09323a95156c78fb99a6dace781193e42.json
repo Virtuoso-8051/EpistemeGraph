@@ -1,0 +1,6 @@
+{
+  "answer": "I can't see the two passages, so this is a general answer based on the original papers. LINE (Tang et al., 2015) learns separate first-order and second-order proximity embeddings and typically concatenates them into the final node representation, with the embedding treatment depending on edge-sampling optimization. DeepWalk (Perozzi et al., 2014) instead generates truncated random walks over the graph and feeds them to a skip-gram model (word2vec-style) to learn a single node embedding, with settings such as walk length, walks per node, window size, and dimensionality. The common goal is to learn low-dimensional vector representations of network nodes that preserve graph structure and proximity, so they can be used for downstream tasks such as multi-label node classification and link prediction.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The two passages were not provided, so the specific experimental configurations being compared are unverified, though the general descriptions of LINE and DeepWalk and their shared goal are well established.",
+  "_token_nll": null
+}

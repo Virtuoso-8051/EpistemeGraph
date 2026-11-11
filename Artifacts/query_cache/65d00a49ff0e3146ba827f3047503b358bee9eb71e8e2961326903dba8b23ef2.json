@@ -1,0 +1,79 @@
+{
+  "query_entities": [
+    "node2vec",
+    "DeepWalk",
+    "skip-gram model",
+    "node embedding",
+    "node representation",
+    "second-order biased random walk",
+    "softmax",
+    "Skip-gram objective",
+    "neural language model"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "node representation",
+      "target_alias": "NR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "node embedding",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram model",
+      "target_alias": "SGM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order biased random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "SGO",
+      "type": "OPTIMIZES",
+      "target": "node2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "source_alias": "SGM",
+      "type": "USES",
+      "target": "softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "node co-occurrence statistics",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

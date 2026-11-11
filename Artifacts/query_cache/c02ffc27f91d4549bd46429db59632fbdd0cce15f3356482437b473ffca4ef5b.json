@@ -1,0 +1,120 @@
+{
+  "query_entities": [
+    "random walks",
+    "language modeling",
+    "community structure",
+    "node embeddings",
+    "low-dimensional vector representations",
+    "network neighborhoods",
+    "graph",
+    "co-occurrence statistics",
+    "language-model objective",
+    "representation-learning problem"
+  ],
+  "triples": [
+    {
+      "source": "simple, scalable framework",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "low-dimensional node embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "simple, scalable framework",
+      "source_alias": "",
+      "type": "USES",
+      "target": "network neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network neighborhoods",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "sentences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes appearing in similar random-walk contexts",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "similar vector representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "sequences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sequences",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "co-occurrence statistics",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "co-occurrence statistics",
+      "source_alias": "",
+      "type": "CAPTURE",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "maximizing the likelihood of these walk-generated sequences",
+      "source_alias": "",
+      "type": "USES",
+      "target": "language-model objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "maximizing the likelihood of these walk-generated sequences",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "learning embeddings that preserve those local structural relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "PROVIDES",
+      "target": "corpus",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language modeling",
+      "source_alias": "",
+      "type": "PROVIDES",
+      "target": "training objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training objective",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "representation-learning problem",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

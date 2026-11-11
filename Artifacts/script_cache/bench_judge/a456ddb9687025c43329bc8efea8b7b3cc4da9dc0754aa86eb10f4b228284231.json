@@ -1,0 +1,9 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE samples edges with probability proportional to weight using alias sampling (the evidence mentions an edge-sampling treatment but not proportional-to-weight sampling or alias sampling)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, since the evidence states DeepWalk ignores edge weights and only applies to unweighted networks, and that LINE with edge-sampling performs well. The alias-sampling detail about how LINE samples edges is not in the provided evidence, though it is consistent with the LINE paper's known method."
+}

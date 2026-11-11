@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "LINE's second-order proximity is defined through the observed edge weights (p\u03022(v_j|v_i)=w_ij/d_i), so second-order similarity depends only on edge weights, which contradicts the evidence that second-order proximity is determined by shared neighborhood structures rather than observed tie strength.",
+    "Second-order similarity 'depends only on the edge weights' is stated as a property of LINE's second-order proximity, contrary to the source.",
+    "The answer claims that LINE captures only local structure and not global similarity, whereas the source frames second-order proximity as a complement that preserves global network structure."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer's core thesis that second-order proximity depends solely on observed edge weights contradicts the paper, which says second-order proximity is determined by shared neighborhood structures and not by observed tie strength. Although the answer does not explicitly endorse the premise in a way that would be wrong about the first-order case, its explanation of the second-order mechanism is unsupported, and its claim that LINE is merely local is at odds with the source's global-structure framing."
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "On directed graph datasets, LINE is generally reported to outperform DeepWalk on downstream node classification. In the original LINE paper, LINE achieved higher Micro-F1 than DeepWalk on the directed citation network Cora, with the reported Micro-F1 being about 0.83 for LINE versus about 0.81 for DeepWalk (exact values can vary slightly by split and implementation). The main reason is that LINE explicitly models first- and second-order proximity and can better preserve asymmetric relationships in directed graphs, whereas DeepWalk\u2019s random-walk objective is less tailored to directionality.",
+  "confidence": 0.78,
+  "confidence_reasoning": "The qualitative comparison is well established, but the exact Micro-F1 numbers can vary across papers, datasets, and evaluation protocols, so I am moderately confident rather than certain.",
+  "_token_nll": 0.19205752714180652
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "In LINE\u2019s first-order proximity model, the joint probability of an undirected edge between nodes i and j is defined with a sigmoid over the dot product of their embeddings: p1(i,j) = 1 / (1 + exp(-u_i^T u_j)). The empirical probability in this setting is based on the observed edge weight w_ij normalized by the total edge weight in the graph: \\hat{p}_1(i,j) = w_ij / W, where W = \\sum_{(i,j) \\in E} w_ij.",
+  "confidence": 0.98,
+  "confidence_reasoning": "This matches the standard LINE formulation for first-order proximity and the empirical edge distribution used in the paper.",
+  "_token_nll": 0.117341521602349
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The AI answer concludes that homophily dominance is the condition under which the DFS-like strategy is more consistent with DeepWalk's gains, whereas the gold answer says DFS is more consistent with structural equivalence and that the Flickr/YouTube gains reflect nonlocal, role-based similarity under scarce labels.",
+    "The claim that the Flickr and YouTube networks are label-homophilous is not stated in the evidence; the papers only report DeepWalk gains at low training ratios.",
+    "The claim that low p relative to q (q < 1) corresponds to DFS-like exploration and q > 1 to BFS-like behavior is a parameter mapping not present in the provided evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly ties DFS (increasing-distance sampling) to homophily in one passage but also states that structural equivalence captures nonlocal similarity and that DeepWalk's gains come under sparse labeling, which the answer ignores. The answer's core conclusion that homophily dominance is the matching condition contradicts the gold answer's conclusion that structural equivalence-type nonlocal similarity is the better fit."
+}

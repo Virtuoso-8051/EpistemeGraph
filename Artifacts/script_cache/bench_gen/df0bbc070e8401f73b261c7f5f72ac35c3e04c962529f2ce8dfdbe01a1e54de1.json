@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk's use of node labels as supervised targets make the learned embeddings especially effective for community detection?",
+      "false_premise": "DeepWalk uses node labels as supervised targets.",
+      "correction": "DeepWalk learns vertex representations from truncated random walks and a SkipGram objective, not from node labels.",
+      "evidence_quote": "By combining both truncated random walks and neural language models we formulate a method which satisfies all Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does DeepWalk preserve the exact ordering of neighbors within each walk window when constructing vertex embeddings?",
+      "false_premise": "DeepWalk preserves the exact ordering of neighbors within each walk window.",
+      "correction": "DeepWalk removes the ordering constraint and maximizes the probability of any context word without knowing its offset.",
+      "evidence_quote": "Finally, it removes the ordering constraint on the problem.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does DeepWalk outperform methods that rely on cocitation similarity by using global graph statistics instead of local neighborhoods?",
+      "false_premise": "DeepWalk relies on global graph statistics instead of local neighborhoods.",
+      "correction": "DeepWalk builds representations from local graph structure and similar neighborhoods, which encode cocitation similarity.",
+      "evidence_quote": "Solving the optimization problem from Eq. 2 builds representations that capture the shared similarities in local graph structure between vertices.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What role does the binary tree T play in DeepWalk's random walk generation and SkipGram training loop?",
+      "false_premise": "The binary tree T is used in DeepWalk's random walk generation and SkipGram training loop.",
+      "correction": "The binary tree T is only built in the algorithm initialization; the random walks and SkipGram steps operate on the graph and walks, not on T.",
+      "evidence_quote": "2: Build a binary Tree T from V",
+      "difficulty": "hard"
+    }
+  ]
+}

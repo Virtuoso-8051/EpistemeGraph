@@ -1,0 +1,62 @@
+{
+  "query_entities": [
+    "network embedding",
+    "first-order proximity",
+    "second-order proximity",
+    "higher-order proximity",
+    "community structure",
+    "network regularities",
+    "structural properties of networks",
+    "future work"
+  ],
+  "triples": [
+    {
+      "source": "authors",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "higher-order proximity information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "authors",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "structural properties of networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "structural properties of networks",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "structural properties of networks",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "network regularities",
+      "target_alias": "more general network regularities",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher-order proximity information",
+      "source_alias": "",
+      "type": "BEYOND",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher-order proximity information",
+      "source_alias": "",
+      "type": "BEYOND",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

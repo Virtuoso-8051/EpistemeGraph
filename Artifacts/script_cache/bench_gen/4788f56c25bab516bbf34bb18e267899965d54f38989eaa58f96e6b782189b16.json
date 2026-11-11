@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What exact embedding dimensionality did LINE use in its experiments on language, social, and citation networks?",
+      "why_unanswerable": "The passage says LINE was evaluated on several real-world networks and tasks, but it never reports the embedding dimensionality used in those experiments.",
+      "evidence_quote": "We evaluate the performance of the LINE with various real-world information networks, including language networks, social networks, and citation networks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many nodes and edges were in the largest graph used to benchmark LINE on real-world information networks?",
+      "why_unanswerable": "The passage claims LINE can scale to millions of nodes and billions of edges, but it does not give the size of any specific benchmark graph.",
+      "evidence_quote": "It is able to learn the embedding of a network with millions of nodes and billions of edges in a few hours on a single machine.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which exact hyperparameter settings did LINE achieve the best word analogy accuracy compared with its baselines?",
+      "why_unanswerable": "The passage mentions word analogy as one of the evaluation tasks and says LINE outperforms baselines, but it provides no hyperparameter values or best-setting analysis.",
+      "evidence_quote": "The effectiveness of the learned embeddings is evaluated within multiple data mining tasks, including word analogy, text classification, and node classification.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the runtime of LINE on a GPU server, and how did that compare numerically with the single-machine runtime reported in the paper?",
+      "why_unanswerable": "The passage only states that LINE can learn embeddings in a few hours on a single machine; it does not report any GPU-server runtime or a numerical comparison against it.",
+      "evidence_quote": "It is able to learn the embedding of a network with millions of nodes and billions of edges in a few hours on a single machine.",
+      "difficulty": "medium"
+    }
+  ]
+}

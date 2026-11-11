@@ -1,0 +1,126 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding (1ST)",
+    "training time complexity (TTC)",
+    "number of edge (NE)",
+    "time complexity (TC)",
+    "vertex representation (UI)",
+    "large network (LN)",
+    "edge-sampling algorithm (ESA)",
+    "network embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "training time complexity (TTC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training time complexity (TTC)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "O(K\u00b7d\u00b7|E|)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training time complexity (TTC)",
+      "source_alias": "",
+      "type": "SCALES_WITH",
+      "target": "number of edge (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PRESERVES",
+      "target": "number of edge (NE)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "O(|E|) preprocessing",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "O(1) cost per sample",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "REQUIRES",
+      "target": "vertex representation (UI)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "REQUIRES",
+      "target": "time complexity (TC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "APPLICABLE_FOR",
+      "target": "large network (LN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "vertex-side negative sampling table",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex-side negative sampling table",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "O(|V|) memory",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "first-order and second-order proximity models",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "APPLICABLE_FOR",
+      "target": "large sparse networks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

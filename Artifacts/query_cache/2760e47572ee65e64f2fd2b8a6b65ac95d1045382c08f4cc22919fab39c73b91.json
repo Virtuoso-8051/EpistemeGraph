@@ -1,0 +1,100 @@
+{
+  "query_entities": [
+    "LINE",
+    "DeepWalk",
+    "depth-first search (DFS)",
+    "random walk (RW)",
+    "first-order proximity (FOP)",
+    "truncated random walk (TRW)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "REFUTED",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "PRESERVES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "PRESERVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "direct ties between adjacent nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "nodes sharing similar neighbor distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "ENABLES",
+      "target": "reaching nodes at a range of distances including deeper neighborhoods",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding",
+      "type": "IS_A",
+      "target": "deeper-search method",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

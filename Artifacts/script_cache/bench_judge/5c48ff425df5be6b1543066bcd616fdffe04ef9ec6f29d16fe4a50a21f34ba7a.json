@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "LINE-SGD would plausibly beat graph factorization on Wikipedia page classification when edge weights are consistent.",
+    "Graph factorization is more sensitive to noisy or inconsistent weighting and to scale than LINE-SGD, as implied by the explanation of the advantage."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question's false premise (LINESGDs outperform graph factorization because edge weights are consistent) is accepted and elaborated into a speculative conditional answer. The source actually states that LINESGDs perform worse because of the divergence of edge weights, and it gives no support for the claimed sensitivity of graph factorization to weighting."
+}

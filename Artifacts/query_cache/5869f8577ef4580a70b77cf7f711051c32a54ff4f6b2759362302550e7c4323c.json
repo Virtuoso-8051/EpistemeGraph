@@ -1,0 +1,65 @@
+{
+  "query_entities": [
+    "random walk (RW)",
+    "PAGERANK",
+    "Graph Embedding (GE)"
+  ],
+  "triples": [
+    {
+      "source": "incremental random-walk approach",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental random-walk approach",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "update cost",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "stored walks passing through affected nodes",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "regeneration from point of change",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "small graph change",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "small fraction of stored walks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "update cost",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "number of affected walks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental random-walk approach",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "walk-based embedding updates at cost below recomputing all walks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental random-walk approach",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "PAGERANK",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

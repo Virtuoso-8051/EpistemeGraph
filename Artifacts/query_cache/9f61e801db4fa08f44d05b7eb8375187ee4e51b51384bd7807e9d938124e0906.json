@@ -1,0 +1,6 @@
+{
+  "answer": "Increasing the embedding dimension d keeps improving LINE(1st) and LINE(2nd) mainly when the graph is sufficiently large and sparse, so that the model is not yet capacity-limited. In the LINE paper\u2019s reported experiments, performance generally continues to rise with larger d on the larger networks, but the gains become small and eventually saturate once d is high enough. In other words, higher d helps until the embedding has enough capacity to capture the network structure; after that, additional dimensions bring little or no further improvement.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is consistent with the reported trend in LINE experiments, but the exact threshold and wording depend on the specific dataset and evaluation metric.",
+  "_token_nll": 0.25044822692871094
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "The question rests on a flawed premise, so it cannot be answered as posed. DeepWalk's original paper (Perozzi et al., 2014) evaluated node classification on BlogCatalog, Flickr, and YouTube, not Wikipedia page classification. Its Wikipedia experiment used a word co-occurrence network for language modeling. LINE (Tang et al., 2015) reported results on a Wikipedia word co-occurrence network, and later comparisons across papers give mixed results rather than a consistent DeepWalk win. The premise also misreads LINE's edge sampling: it does not remove the need for weighted edges. Instead, it samples edges with probability proportional to their weights so that SGD can be applied to weighted graphs without the variance problems of plain weighted SGD. Edge sampling therefore cannot explain any performance gap between DeepWalk and LINE(2nd). Any observed difference would depend on the specific dataset, the training setup, and the evaluation protocol, which I cannot verify for the stated Wikipedia page-classification setting.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident about the original DeepWalk datasets and LINE's edge-sampling purpose, but less certain whether some later paper reports DeepWalk beating LINE(2nd) on a Wikipedia page classification task.",
+  "_token_nll": null
+}

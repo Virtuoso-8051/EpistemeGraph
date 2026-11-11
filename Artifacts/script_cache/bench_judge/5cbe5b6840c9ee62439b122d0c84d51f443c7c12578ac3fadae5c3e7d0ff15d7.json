@@ -1,0 +1,9 @@
+{
+  "claims_checked": 1,
+  "unsupported_claims": [
+    "LINE used a single embedding dimensionality of 128 across language, social, and citation networks"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence's relevant sentences say the language network used 200 dimensions and the other networks (social, citation) used 128 by default, so the answer's claim that 128 applied to the language network is contradicted. The reference says the passage doesn't report the dimension, but the supplied sentences do give values; the answer is right for social and citation networks and wrong for language, and it fails to note the distinction."
+}

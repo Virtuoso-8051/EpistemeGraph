@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "LINE instead samples individual edges (first-order and second-order proximity, trained separately and then concatenated) using alias sampling, without multi-hop walks.",
+    "The reported advantage of node2vec on BlogCatalog is generally attributed to its tunable search bias ... and to its use of multi-hop context.",
+    "Node2vec generates fixed-length biased random walks ... and feeds them to skip-gram with negative sampling."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly notes that the passage attributes LINE's weaker performance to its inability to reuse samples, while node2vec gains come from tunable p and q. However, several method-description claims about LINE (alias sampling, separate first/second-order training, concatenation) and the attribution of gains to multi-hop context are not stated in the provided evidence, so they are unsupported additions."
+}

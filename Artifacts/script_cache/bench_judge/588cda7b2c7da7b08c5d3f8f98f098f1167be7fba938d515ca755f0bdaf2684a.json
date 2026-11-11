@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The link prediction experiments used unweighted networks (Facebook, PPI, arXiv ASTRO-PH), not weighted graphs.",
+    "The paper tuned p and q over a grid of {0.25, 0.5, 1, 2, 4}.",
+    "The Facebook result with the Hadamard operator was roughly 0.996 AUC."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give a specific (p, q) pair or AUC, which is the right behavior for an unanswerable question, and it does not accept the false premise outright. However, it asserts dataset details (unweighted networks, PPI/ASTRO-PH, a specific parameter grid) and a specific AUC figure that the provided evidence does not contain, even though it hedges the last one."
+}

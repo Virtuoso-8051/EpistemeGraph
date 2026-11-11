@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What is DeepWalk, and how does it learn latent representations of vertices in a network?",
+      "gold_answer": "DeepWalk is a novel approach for learning latent representations of vertices in a network. It learns these representations by using local information from truncated random walks and treating the walks as the equivalent of sentences, which lets it apply ideas from language modeling and unsupervised feature learning to graphs.",
+      "evidence_quote": "We present DeepW alk, a novel approach for learning latent representations of vertices in a network.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does DeepWalk generalize ideas from language modeling to graphs?",
+      "gold_answer": "DeepWalk extends recent advances in language modeling and unsupervised feature learning from sequences of words to graphs. It does this by using truncated random walks as the graph analogue of sentences, so the model can learn continuous vector representations from local graph structure.",
+      "evidence_quote": "DeepW alk generalizes recent advancements in language modeling and unsupervised feature learning (or deep learning ) from sequences of words to graphs.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what conditions do DeepWalk\u2019s representations provide the largest reported gains over competing methods?",
+      "gold_answer": "DeepWalk\u2019s representations are especially strong when labeled data is sparse and when information is missing in the network. The passage says they can yield F1 scores up to 10% higher than competing methods in sparse-label settings and can outperform baselines even with 60% less training data.",
+      "evidence_quote": "DeepW alk\u2019s representations can provide F1 scores up to 10% higher than competing methods when labeled data is sparse.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why is DeepWalk described as suitable for real-world applications such as network classification and anomaly detection?",
+      "gold_answer": "DeepWalk is described as suitable because it is scalable, works as an online learning algorithm, and builds useful incremental results. It is also trivially parallelizable, which makes it practical for broad real-world use.",
+      "evidence_quote": "DeepW alkis also scalable.",
+      "difficulty": "hard"
+    }
+  ]
+}

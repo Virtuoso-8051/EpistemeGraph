@@ -1,0 +1,83 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "uniform random walk (URW)",
+    "random walk (RW)",
+    "truncated random walk (TRW)",
+    "depth-first search (DFS)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "uniform random walk (URW)",
+      "target_alias": "URW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "uniform random walk (URW)",
+      "source_alias": "URW",
+      "type": "GENERATES",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "TRW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk (TRW)",
+      "source_alias": "TRW",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "uniform random walk (URW)",
+      "source_alias": "URW",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "unbiased local exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "uniform random walk (URW)",
+      "source_alias": "URW",
+      "type": "OUTPERFORMS",
+      "target": "depth-first search (DFS)",
+      "target_alias": "DFS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "uniform random walk (URW)",
+      "source_alias": "URW",
+      "type": "REQUIRES",
+      "target": "tunable exploration",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "uniform random walk (URW)",
+      "source_alias": "URW",
+      "type": "PRESERVE",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "depth-first search (DFS)",
+      "source_alias": "DFS",
+      "type": "PRESERVE",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "depth-first search (DFS)",
+      "source_alias": "DFS",
+      "type": "PRESERVE",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Evaluated datasets include Twitter and Sina Weibo-type networks (the paper uses Wikipedia language network, Flickr, YouTube, and DBLP citation networks).",
+    "Datasets include 'some smaller benchmark networks' (the paper says each network has at least half a million nodes).",
+    "Costs are roughly quadratic memory and cubic time (the paper only says time complexity is at least quadratic in the number of vertices and mentions eigendecomposition)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core reason (these methods do not scale to networks of this size) is supported, as is the millions-of-vertices to billions-of-edges scale. However, the answer invents specific datasets (Twitter, Sina Weibo), smaller benchmark networks that contradict 'each at least half a million nodes', and specific memory/time complexities not in the evidence."
+}

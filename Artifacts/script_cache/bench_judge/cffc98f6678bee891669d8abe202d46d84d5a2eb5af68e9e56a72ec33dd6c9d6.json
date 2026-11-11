@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Reports that the speedup scales nearly linearly with the number of workers (evidence only shows a figure on relative time vs workers, no stated linear speedup)",
+    "Experiments used on the order of 20 workers (invented specific; evidence shows worker counts 2^0 to 2^3)",
+    "Describes training as Hogwild-style asynchronous SGD (evidence says ASGD but not Hogwild naming)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly hedges and notes asynchronous SGD with multiple workers, which the evidence supports. However, it invents specifics: a near-linear speedup claim and roughly 20 workers, whereas the evidence shows 1-8 workers and no stated speedup figure; the answer should have said the papers don't specify these.}"
+}

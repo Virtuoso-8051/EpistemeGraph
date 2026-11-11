@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "Papers often attribute LINE's weaker results to its first- and second-order proximity objectives capturing less global structure than random-walk methods (the evidence says the explanation is inability to reuse samples).",
+    "LINE(2nd)'s advantage on DBLP is attributed to its direct modeling of second-order similarity on sparse citation graphs (the evidence says random walks only follow citing paths and miss other references, which LINE(2nd) uses)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer declines to give the passages' explanations, and its hedged general-knowledge guesses do not match the evidence: sample reuse for LINE, and citing-path limits of random walks for DBLP. The guesses are explicitly labeled as not the passages' claims, so the answer is honest but unhelpful and partly inaccurate."
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "In the node2vec experiments, the Wikipedia graph is treated as a word co-occurrence network built from text, and the node labels are not manually annotated but inferred automatically using the Stanford POS-Tagger. In practice, each word node is assigned a part-of-speech label from the tagger, and node2vec is then evaluated on how well its embeddings preserve those labels for downstream classification. The dataset is especially sparse for co-occurrence edges because the graph is constructed from local word-window co-occurrences in a large vocabulary, so only a small fraction of all possible word pairs ever appear together; as a result, the adjacency matrix has very few edges relative to the number of nodes.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This matches the standard description of the Wikipedia node2vec benchmark, though exact preprocessing details can vary slightly across implementations and papers.",
+  "_token_nll": 0.19665662358316144
+}

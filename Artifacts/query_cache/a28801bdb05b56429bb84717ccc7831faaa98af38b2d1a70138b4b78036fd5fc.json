@@ -1,0 +1,64 @@
+{
+  "query_entities": [
+    "Skip-gram objective",
+    "language-modeling objective"
+  ],
+  "triples": [
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "",
+      "type": "PREDICTS",
+      "target": "surrounding context words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "given center word",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language-modeling objective",
+      "source_alias": "",
+      "type": "PREDICTS",
+      "target": "next word",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language-modeling objective",
+      "source_alias": "",
+      "type": "PREDICTS",
+      "target": "target word sequence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language-modeling objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "preceding context words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language-modeling objective",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "next token/word",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

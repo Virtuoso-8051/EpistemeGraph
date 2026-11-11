@@ -1,0 +1,78 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "neural language models",
+    "random walks on a graph",
+    "skip-gram",
+    "word embeddings",
+    "word co-occurrence",
+    "sentences",
+    "graph vertices"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "neural language models",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram",
+      "target_alias": "skip-gram-style idea",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "random walks on a graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks on a graph",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "sentences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph vertices",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neural language models",
+      "source_alias": "",
+      "type": "USES",
+      "target": "word embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neural language models",
+      "source_alias": "",
+      "type": "USES",
+      "target": "word co-occurrence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word co-occurrence",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "sentences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

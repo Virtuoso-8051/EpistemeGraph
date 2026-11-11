@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Edge sampling uses alias tables, so each sample costs O(1) after O(|E|) preprocessing (alias table is not in the provided evidence)",
+    "The vertex-side negative sampling table adds O(|V|) memory (not in the evidence)",
+    "Training first-order and second-order models separately and concatenating them doubles the constant factor but keeps the same order (not stated in the evidence)",
+    "K is the number of negative samples per edge and d the embedding dimension (not defined in the provided evidence)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim O(dK|E|), linear in edges and independent of |V|, is directly supported. The extra details on alias tables, memory, the doubled constant factor, and the definitions of K and d are not in the provided evidence, although they are plausible from the original paper."
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Their latent representations do reasonably well on small networks, achieving competitive results on node classification and link prediction (the evidence says they give poor performance on various prediction tasks).",
+    "Time complexity is roughly cubic in the number of nodes / dense matrix memory issues (evidence only says at least quadratic, and eigendecomposition is expensive).",
+    "They are outperformed by DeepWalk, node2vec, LINE because those capture higher-order proximity and non-linear structure (not stated in the evidence)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The eigendecomposition-based cost explanation is supported, with the quadratic-or-worse complexity partly matching the evidence. However, the claim that the representations perform competitively on small networks contradicts the evidence of poor prediction performance, and the cubic complexity and the explanation for why other methods win go beyond the evidence."
+}

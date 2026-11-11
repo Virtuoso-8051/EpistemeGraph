@@ -1,0 +1,49 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "number of walks started per vertex (GAMMA)",
+    "classification performance (CP)"
+  ],
+  "triples": [
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "gamma",
+      "type": "IMPROVES",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "gamma",
+      "type": "IMPROVES",
+      "target": "classification performance (CP)",
+      "target_alias": "DeepWalk\u2019s classification performance",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "gamma",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "diminishing returns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "gamma",
+      "type": "ACHIEVES",
+      "target": "about 10",
+      "target_alias": "Most of the gain appears by about gamma = 10",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "gamma",
+      "type": "IMPROVES",
+      "target": "small or negligible improvement beyond about 10",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

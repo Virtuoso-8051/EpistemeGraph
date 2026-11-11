@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How did expanding the neighborhood of vertices with degree less than 1,000 affect the embedding methods GF, LINE(1st), and LINE(2nd), and what limit did the authors observe for further expansion?",
+      "gold_answer": "The authors expanded each such vertex\u2019s neighborhood by repeatedly adding neighbors of neighbors until the extended neighborhood reached 1,000 nodes. On this reconstructed network, the performance of GF, LINE(1st), and LINE(2nd) all improved, especially LINE(2nd), but adding more than 1,000 vertices did not further increase performance.",
+      "evidence_quote": "We find that adding more than 1,000 vertices does not further increase the performance.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why do the authors describe LINE(1st+2nd) as a quite effective and efficient network embedding approach, and how did its performance change on the reconstructed network compared with the original network?",
+      "gold_answer": "The authors say LINE(1st+2nd) is effective and efficient because combining first-order and second-order proximity on the original network already captures most of the information. On the reconstructed network, its performance did not improve much compared with the original network, which supports that interpretation.",
+      "evidence_quote": "This implies that the combination of first-order and second-order proximity on the original network has already captured most information and LINE(1st+2nd) approach is a quite effective and efficient way for network embedding, suitable for both dense and sparse networks.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions are GF and LINE methods not applicable for the citation networks, and which methods are compared instead for those directed networks?",
+      "gold_answer": "GF and LINE methods that use first-order proximity are not applicable for directed networks. Therefore, the authors compare only DeepWalk and LINE(2nd) on the citation networks.",
+      "evidence_quote": "Both the GF and LINE methods, which use first-order proximity, are not applicable for directed networks, and hence we only compare DeepWalk and LINE(2nd).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What do the results on the DBLP(AuthorCitation) network indicate about DeepWalk versus LINE(2nd), and what property of the network is given as the reason?",
+      "gold_answer": "On the DBLP(AuthorCitation) network, DeepWalk outperforms LINE(2nd). The authors attribute this to the network being very sparse.",
+      "evidence_quote": "As this network is also very sparse, DeepWalk outperforms LINE(2nd).",
+      "difficulty": "easy"
+    }
+  ]
+}

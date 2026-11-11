@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec uses the Les Mis\u00e9rables network because it is a small, well-known, real-world social network with a clear ground-truth edge set, making it convenient for evaluating whether learned node embeddings can distinguish existing links from non-links. The graph has 77 nodes and 254 edges, so it is large enough to be nontrivial but still small enough to inspect and benchmark easily. It is especially useful for link prediction because the observed edges represent actual co-occurrences/interactions among characters, while the many missing node pairs can be treated as candidate false edges; this gives a natural way to test whether a method ranks true edges above non-edges. In short, the dataset is ideal because it is simple, interpretable, and has enough positive and negative edge candidates to measure link-prediction performance reliably.",
+  "confidence": 0.86,
+  "confidence_reasoning": "The general rationale for using the Les Mis\u00e9rables network in node2vec link-prediction experiments is well established, though exact wording and emphasis can vary across sources.",
+  "_token_nll": 0.22238001577171362
+}

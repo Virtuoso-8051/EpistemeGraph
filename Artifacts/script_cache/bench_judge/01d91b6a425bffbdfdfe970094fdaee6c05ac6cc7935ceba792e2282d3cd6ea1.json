@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "DeepWalk uses uniform random walks, not non-random ones; the answer rejects the question's premise, yet Passage B explicitly describes a non-random-walk variant that captures path-traversal frequency.",
+    "Real-world networks are sparse, heterogeneous, noisy and evolving, making global exact optimization impractical; the evidence does not state this.",
+    "Methods that build or factorize full adjacency or similarity matrices are memory-intensive; the evidence only says the time complexity is at least quadratic."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The scale explanation (millions of nodes, scalability problems) and the description of DeepWalk's truncated walks with Skip-gram are supported. However, the answer wrongly rejects the premise that DeepWalk can exploit non-random walks, missing the point that they capture path-traversal frequency, and it adds unsupported claims about sparsity and noise."
+}

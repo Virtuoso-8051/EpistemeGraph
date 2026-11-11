@@ -1,0 +1,108 @@
+{
+  "query_entities": [
+    "graph factorization (GF)",
+    "matrix factorization (MF)",
+    "Large-scale Information Network Embedding (1ST)",
+    "network embedding (NE)",
+    "adjacency matrix (AM)",
+    "directed graph (DG)"
+  ],
+  "triples": [
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "USES",
+      "target": "adjacency matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "PRESERVE",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "USES",
+      "target": "matrix factorization (MF)",
+      "target_alias": "MF",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "APPLICABLE_FOR",
+      "target": "sparse, large graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PRESERVE",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "edge-sampling treatment (EST)",
+      "target_alias": "EST",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "APPLICABLE_FOR",
+      "target": "large weighted, directed, and undirected networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "GENERATES",
+      "target": "concatenated embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "IS_A",
+      "target": "network embedding (NE)",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

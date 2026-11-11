@@ -1,0 +1,84 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "LINE",
+    "language network (LN)",
+    "truncated random walk (TRW)",
+    "unweighted network (UN)",
+    "LINE-SGD (1ST)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "TRW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "unweighted network (UN)",
+      "target_alias": "UN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "weighted edge strength",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "language network (LN)",
+      "source_alias": "LN",
+      "type": "IS_A",
+      "target": "word co-occurrence graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language network (LN)",
+      "source_alias": "LN",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "edge weights varying widely as co-occurrence counts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "language network (LN)",
+      "target_alias": "LN",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "first-order and second-order proximity objectives",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "alias tables",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "handling of weighted edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

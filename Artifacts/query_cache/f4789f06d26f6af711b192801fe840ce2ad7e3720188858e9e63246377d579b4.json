@@ -1,0 +1,90 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node embedding (NE)",
+    "likelihood of preserving network neighborhoods of node (LPNNN)",
+    "Skip-gram objective (SGO)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OPTIMIZES",
+      "target": "likelihood of preserving network neighborhoods of node (LPNNN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "neighborhood samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "biased second-order random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased second-order random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "return parameter p",
+      "target_alias": "p",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased second-order random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "in-out parameter q",
+      "target_alias": "q",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "Skip-gram objective (SGO)",
+      "target_alias": "skip-gram style word2vec objective",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "node embedding (NE)",
+      "target_alias": "embeddings",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p and q parameters",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "breadth-first-like and depth-first-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

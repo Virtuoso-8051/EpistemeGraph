@@ -1,0 +1,71 @@
+{
+  "query_entities": [
+    "NODE2VEC"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "linear scaling with graph size",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "biased random walk generation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk generation",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "cost proportional to number of nodes, walk length, and walks per node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "skip-gram SGD optimization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "embarrassingly parallel random walk generation and skip-gram optimization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "network of about one million nodes with tens of millions of edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "full pipeline completion in a few hours on a single multi-core machine",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "full pipeline runtime of roughly four hours",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

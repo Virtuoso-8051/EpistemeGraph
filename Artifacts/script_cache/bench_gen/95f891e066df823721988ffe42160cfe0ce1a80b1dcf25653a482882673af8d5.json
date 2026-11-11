@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec\u2019s performance relative to DeepWalk and LINE compare on the BlogCatalog network in PASSAGE A, and how does LINE(2nd) compare to DeepWalk on the sparse Youtube network in PASSAGE B?",
+      "gold_answer": "On BlogCatalog, node2vec performs best and gives a 22.3% Macro-F1 gain over DeepWalk and a 229.2% gain over LINE, while on the sparse Youtube network LINE(2nd) outperforms DeepWalk.",
+      "evidence_quote": "In BlogCatalog, we can discover the right mix of homophily and structural equivalence by setting parametersp andq to low values, giving us 22.3% gain over DeepWalk and 229.2% gain over LINE in Macro-F1 scores.",
+      "evidence_quote_b": "However, by reconstructing the network through recursively adding neighbors of neighbors for vertices with small degrees (smaller than 500), the performance of LINE(2nd) significantly increases and outperforms DeepWalk.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What explanation is given for why LINE performed worse than expected in PASSAGE A, and why does LINE(2nd) outperform DeepWalk on the DBLP(PaperCitation) network in PASSAGE B?",
+      "gold_answer": "LINE is said to perform worse because it cannot reuse samples, whereas LINE(2nd) outperforms DeepWalk on DBLP because random walks can only follow citing paths and LINE(2nd) uses each paper\u2019s references more reasonably.",
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "evidence_quote_b": "This is because the random walk on the paper citation network can only reach papers along the citing path (i.e., older papers) and cannot reach other references.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under what conditions does node2vec outperform the other benchmark algorithms in PASSAGE A, and what kind of network reconstruction improves LINE(2nd) in PASSAGE B?",
+      "gold_answer": "Node2vec outperforms the other benchmarks by using the added flexibility in exploring neighborhoods, and LINE(2nd) improves when the network is reconstructed by adding neighbors of neighbors for low-degree vertices.",
+      "evidence_quote": "From the results, it is evident we can see how the added flexibility in exploring neighborhoods allows node2vec to outperform the other benchmark algorithms.",
+      "evidence_quote_b": "The results in the brackets are on the reconstructed network, which adds second-order neighbors (i.e., neighbors of neighbors) as neighbors for vertices with a low degree.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How do the mechanisms used by node2vec in PASSAGE A and LINE(2nd) in PASSAGE B differ in exploiting graph structure to improve performance?",
+      "gold_answer": "Node2vec exploits graph structure by tuning parameters p and q to balance homophily and structural equivalence through neighborhood exploration, while LINE(2nd) improves by explicitly reconstructing the network with second-order neighbors for low-degree vertices.",
+      "evidence_quote": "Hence, words having the same POS tags are not hard to find, lending a high degree of homophily.",
+      "evidence_quote_b": "The LINE model directly optimized by stochastic gradient descent, LINE(2nd), does not perform well as expected.",
+      "difficulty": "medium"
+    }
+  ]
+}

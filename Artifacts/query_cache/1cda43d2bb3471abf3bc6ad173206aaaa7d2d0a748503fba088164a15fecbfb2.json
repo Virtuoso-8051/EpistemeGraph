@@ -1,0 +1,52 @@
+{
+  "query_entities": [
+    "node2vec",
+    "Hadamard operator",
+    "element-wise product",
+    "evaluated networks",
+    "link prediction",
+    "binary operators"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Hadamard operator",
+      "target_alias": "element-wise product",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "element-wise product",
+      "type": "ACHIEVES",
+      "target": "most successful on average",
+      "target_alias": "across the evaluated networks",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "element-wise product",
+      "type": "OUTPERFORMS",
+      "target": "binary operators",
+      "target_alias": "tested binary operators",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "element-wise product",
+      "type": "WORKS_WELL_FOR",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "element-wise product",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "strongest and most reliable choice",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

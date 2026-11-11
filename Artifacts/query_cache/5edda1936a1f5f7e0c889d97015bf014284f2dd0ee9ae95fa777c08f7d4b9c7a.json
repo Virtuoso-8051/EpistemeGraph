@@ -1,0 +1,62 @@
+{
+  "query_entities": [
+    "first-order proximity",
+    "second-order proximity",
+    "Table 4",
+    "graph",
+    "neighborhoods",
+    "local similarity",
+    "structural similarity",
+    "contextual similarity"
+  ],
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "words directly connected or very close in the graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "near-synonyms or tightly related terms",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sharing similar neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "words related in meaning or usage but not necessarily direct graph neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "RETURNS",
+      "target": "more immediate, local similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "RETURNS",
+      "target": "more structural or contextual similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

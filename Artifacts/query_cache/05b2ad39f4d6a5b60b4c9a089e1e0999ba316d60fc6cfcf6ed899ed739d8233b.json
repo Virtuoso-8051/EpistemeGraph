@@ -1,0 +1,6 @@
+{
+  "answer": "The question's premise doesn't hold up. Node2vec does not have an 'inability to reuse samples' that explains its gains over LINE on BlogCatalog. Node2vec generates fixed-length biased random walks (controlled by return parameter p and in-out parameter q) and feeds them to skip-gram with negative sampling. Each walk supplies many (center, context) pairs within a sliding window, so the walk data is reused heavily rather than discarded. LINE instead samples individual edges (first-order and second-order proximity, trained separately and then concatenated) using alias sampling, without multi-hop walks. The reported advantage of node2vec on BlogCatalog (Grover & Leskovec, 2016) is generally attributed to its tunable search bias, which can capture both homophily (BFS-like, local community structure) and structural equivalence (DFS-like), and to its use of multi-hop context. That is an empirical result that depends on tuned p and q, dataset-specific settings, and evaluation protocol, so it should not be read as a sample-reuse effect.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident the sample-reuse premise is unsupported and that node2vec's gains are attributed to biased walks, but the exact reported numbers and attributions in the original paper are not fully verified from memory.",
+  "_token_nll": null
+}

@@ -1,0 +1,107 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "social representation (SR)",
+    "social network (SN)",
+    "representation learning (RL)",
+    "random walk generator (RWG)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "randomly-generated walk (RGW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "language-modeling objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "randomly-generated walk (RGW)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "online/incremental learning",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "randomly-generated walk (RGW)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "parallelizability",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk co-occurrence statistics",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "scaling to large social networks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "representation learning (RL)",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "classification of partially labeled social nodes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "randomly-generated walk (RGW)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "robustness to missing or noisy edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "relaxations in DeepWalk",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "scalable, online, parallel, and robust learning",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "social network (SN)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "scalable, online, parallel, and robust learning",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

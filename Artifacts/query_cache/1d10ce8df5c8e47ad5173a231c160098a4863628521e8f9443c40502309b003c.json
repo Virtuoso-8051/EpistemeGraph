@@ -1,0 +1,6 @@
+{
+  "answer": "In LINE, the model does not switch objectives during a single training run; instead, the first-order and second-order proximity objectives are trained separately as two different variants of the model. The first-order proximity objective is used in LINE-1st, and the second-order proximity objective is used in LINE-2nd. In the combined LINE approach, embeddings are typically learned by training LINE-1st and LINE-2nd independently and then concatenating their embeddings. Each objective is trained for the same number of epochs specified by the user; the original LINE paper does not define a fixed universal epoch count for one objective before switching to the other, because there is no such switch within the method itself.",
+  "confidence": 0.78,
+  "confidence_reasoning": "I am confident about the conceptual distinction between LINE-1st and LINE-2nd, but the exact epoch count is not fixed by the method and depends on implementation or experimental setup, so the answer is accurate in principle but not tied to a single universal numeric value.",
+  "_token_nll": 0.21946589152018228
+}

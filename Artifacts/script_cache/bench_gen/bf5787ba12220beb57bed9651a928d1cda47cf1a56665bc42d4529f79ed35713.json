@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does LINE's ability to reuse samples make it outperform the random-walk methods in the comparison described for the PPI network?",
+      "false_premise": "LINE can reuse samples and therefore outperforms the random-walk methods.",
+      "correction": "The passage says LINE performed worse than expected because it could not reuse samples, while the random walk methods can do so easily.",
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec's supervised training objective help it infer the right exploration degree for feature learning across the networks?",
+      "false_premise": "node2vec uses a supervised training objective to infer the exploration degree.",
+      "correction": "The passage describes node2vec as semi-supervised, not supervised, and says that this semi-supervised nature helps infer the appropriate degree of exploration.",
+      "evidence_quote": "Even in our other two networks, where we have a mix of equivalences present, the semi-supervised nature of node2vec can help us infer the appropriate degree of exploration necessary for feature learning.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What explains DeepWalk's 23.8% Macro-F1 gain over node2vec on the PPI network when node2vec uses the uniform setting (p = 1, q = 1)?",
+      "false_premise": "DeepWalk gains 23.8% Macro-F1 over node2vec on PPI when node2vec uses the uniform setting.",
+      "correction": "The passage says node2vec achieves a 23.8% gain over LINE on PPI, and its best exploration strategy is virtually indistinguishable from DeepWalk's uniform exploration, with only a slight edge over DeepWalk.",
+      "evidence_quote": "However, in general, the uniform random walks can be much worse than the exploration strategy learned bynode2vec.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does Spectral clustering outperform node2vec while DeepWalk and LINE remain the top two methods across the datasets?",
+      "false_premise": "Spectral clustering outperforms node2vec, and DeepWalk and LINE are the top two methods across the datasets.",
+      "correction": "The passage states that all methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, and node2vec consistently outperforms LINE and achieves large improvement over DeepWalk.",
+      "evidence_quote": "Here we make similar observations.",
+      "difficulty": "medium"
+    }
+  ]
+}

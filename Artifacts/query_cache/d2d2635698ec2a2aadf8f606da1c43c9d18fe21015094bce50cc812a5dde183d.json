@@ -1,0 +1,74 @@
+{
+  "query_entities": [
+    "LINE(2nd)",
+    "co-author network",
+    "second-order proximity",
+    "community structure"
+  ],
+  "triples": [
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "co-neighbor distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "co-author network",
+      "source_alias": "CAN",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparsity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "low-degree nodes",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "poorly determined vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimization in LINE(2nd)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "hub-dominated optimization",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "scattered community layout",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

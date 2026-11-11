@@ -1,0 +1,120 @@
+{
+  "query_entities": [
+    "node2vec",
+    "LINE"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "embeddings learned from the two random-walk contexts",
+      "target_alias": "the p and q settings",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "concatenate the embeddings learned from the two random-walk contexts",
+      "target_alias": "the p and q settings",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "concatenate the embeddings learned from the two random-walk contexts",
+      "source_alias": "the p and q settings",
+      "type": "REPRESENTS",
+      "target": "a richer representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "a richer representation",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "a richer representation",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "global structural context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "concatenate the first-order and second-order embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "concatenate the first-order and second-order embeddings",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "the final representation of a node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "the final representation of a node",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "direct edge proximity",
+      "target_alias": "first-order",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "the final representation of a node",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "neighborhood similarity/distributional context",
+      "target_alias": "second-order",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "two walk-bias views of the graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "two different proximity objectives",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

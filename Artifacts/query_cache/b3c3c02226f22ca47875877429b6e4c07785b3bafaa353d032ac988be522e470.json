@@ -1,0 +1,40 @@
+{
+  "query_entities": [
+    "co-author network (CAN)",
+    "weighted network (WN)"
+  ],
+  "triples": [
+    {
+      "source": "co-author network",
+      "source_alias": "CAN",
+      "type": "CONTAINS",
+      "target": "author nodes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "co-author network",
+      "source_alias": "CAN",
+      "type": "REPRESENTS",
+      "target": "co-authored papers as edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "co-author network",
+      "source_alias": "CAN",
+      "type": "USES",
+      "target": "weighted network",
+      "target_alias": "WN",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "low-degree author removal",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "co-author network",
+      "target_alias": "CAN",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

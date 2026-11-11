@@ -1,0 +1,111 @@
+{
+  "query_entities": [
+    "Laplacian Eigenmaps",
+    "diffusion maps",
+    "k-nearest-neighbour graph",
+    "Laplacian",
+    "Lanczos",
+    "Arnoldi",
+    "LOBPCG",
+    "Nystr\u00f6m",
+    "landmark",
+    "random projections",
+    "Chebyshev filters",
+    "Principal Component Analysis (PCA)",
+    "singular value decomposition (SVD)",
+    "IsoMap",
+    "Dijkstra",
+    "Landmark IsoMap",
+    "eigendecomposition"
+  ],
+  "triples": [
+    {
+      "source": "graph-based spectral methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "sparse k-nearest-neighbour graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sparse k-nearest-neighbour graph",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "O(n log n) cost with tree-based search",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graph-based spectral methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "sparse graph matrices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph-based spectral methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "iterative eigenvector solvers",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "iterative eigenvector solvers",
+      "source_alias": "",
+      "type": "COMPUTES",
+      "target": "few extreme eigenvectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph-based spectral methods",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "embedding",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Principal Component Analysis (PCA)",
+      "source_alias": "PCA",
+      "type": "REQUIRES",
+      "target": "eigendecomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis (PCA)",
+      "source_alias": "PCA",
+      "type": "REQUIRES",
+      "target": "singular value decomposition (SVD)",
+      "target_alias": "SVD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Classical IsoMap",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "all-pairs geodesic distances",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Classical IsoMap",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "eigendecomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Landmark IsoMap",
+      "source_alias": "",
+      "type": "USES",
+      "target": "landmark",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

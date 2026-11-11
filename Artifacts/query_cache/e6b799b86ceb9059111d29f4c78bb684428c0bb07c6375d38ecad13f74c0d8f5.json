@@ -1,0 +1,6 @@
+{
+  "answer": "The question's premise is somewhat muddled. EdgeCluster's scalability does not come from its spectral step replacing k-means. It comes from computing a truncated, sparse eigen-decomposition (e.g., Lanczos-style methods) of the sparse graph or edge-centric matrix. Each iteration needs only sparse matrix-vector products, so the cost scales roughly with the number of edges, and the method never forms the dense n-by-n modularity matrix that Modularity-based embeddings require. The resulting low-dimensional node embedding is then clustered (with k-means) to produce latent social dimensions. Because the spectral features capture much the same community structure as the modularity matrix's leading eigenvectors, EdgeCluster achieves comparable classification performance while remaining tractable on very large graphs.",
+  "confidence": 0.4,
+  "confidence_reasoning": "I am reasonably familiar with the EdgeCluster and Modularity literature (Tang and Liu), but I am unsure of the exact details of how k-means is used in EdgeCluster, so the framing of the answer may be partly inaccurate.",
+  "_token_nll": null
+}

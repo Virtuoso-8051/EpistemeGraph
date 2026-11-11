@@ -1,0 +1,50 @@
+{
+  "query_entities": [
+    "LINE-SGD (1ST)",
+    "graph factorization (GF)",
+    "weighted graph (WG)",
+    "adjacency matrix (AM)"
+  ],
+  "triples": [
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD",
+      "type": "OUTPERFORMS",
+      "target": "graph factorization (GF)",
+      "target_alias": "GF",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD",
+      "type": "WORKS_WELL_FOR",
+      "target": "weighted graph (WG)",
+      "target_alias": "WG",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD",
+      "type": "OPTIMIZES",
+      "target": "first- and second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "USES",
+      "target": "adjacency matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sensitivity to noisy or inconsistent edge weighting",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The reported advantage over graph factorization comes from scalability and from preserving local and higher-order structures without the cost of factorizing the full matrix; the evidence attributes the advantage to LINE(1st) modeling first-order proximity better.",
+    "The answer never states the correction that LINE(1st) itself outperforms graph factorization, indicating better first-order modeling."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer rejects the false premise and describes LINE's first- and second-order objectives and the concatenation correctly, and sparse-graph usefulness of second-order proximity is consistent with the evidence. However, it gives a wrong reason for the advantage over graph factorization (scalability and higher-order structure) and omits the actual correction that LINE(1st) outperforms GF at first-order modeling."
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "DeepWalk's randomness becomes especially noisy when walks are short or few, or when the graph is sparse or has low-degree nodes (evidence says it is especially noisy for higher-degree vertices)",
+    "Graph factorization gives more stable, smoother community structure in the visualization (evidence says it is not very meaningful, with communities not clustered)",
+    "DeepWalk's embeddings look noisier and less cleanly separated than graph factorization's (evidence says DeepWalk's result is much better)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer contradicts the evidence on both parts: noise is worst for high-degree vertices, not low-degree or sparse ones, and graph factorization is described as worse than DeepWalk, not better. The disclaimer about the missing passage does not rescue the incorrect specifics it asserts."
+}

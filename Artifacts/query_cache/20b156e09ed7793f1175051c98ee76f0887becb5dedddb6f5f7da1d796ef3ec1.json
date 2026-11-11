@@ -1,0 +1,54 @@
+{
+  "query_entities": [
+    "Skip-gram model (SGM)",
+    "neural language model (NLM)",
+    "network embedding (NE)",
+    "language modeling (LM)",
+    "Softmax normalization",
+    "Negative sampling",
+    "Hierarchical softmax",
+    "Noise-contrastive estimation"
+  ],
+  "triples": [
+    {
+      "source": "Skip-gram model",
+      "source_alias": "SGM",
+      "type": "REQUIRES",
+      "target": "Softmax normalization",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "neural language model",
+      "source_alias": "NLM",
+      "type": "REQUIRES",
+      "target": "Softmax normalization",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Negative sampling",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "Softmax normalization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical softmax",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "Softmax normalization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Noise-contrastive estimation",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "Softmax normalization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

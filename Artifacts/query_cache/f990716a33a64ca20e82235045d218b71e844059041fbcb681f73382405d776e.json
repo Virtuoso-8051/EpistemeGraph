@@ -1,0 +1,67 @@
+{
+  "query_entities": [
+    "node2vec",
+    "negative sampling",
+    "Skip-gram objective",
+    "stochastic gradient descent",
+    "word2vec"
+  ],
+  "triples": [
+    {
+      "source": "node2vec paper",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "exact negative-sampling rate",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec paper",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "NS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "SGO",
+      "type": "OPTIMIZES",
+      "target": "stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "SGO",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "NS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec reference implementation",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "gensim word2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "gensim word2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "5 negative samples default",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec paper",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "default number of negative samples stated",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "With more labeled data, the advantage over baselines such as spectral clustering or modularity-based embeddings generally narrowed, because a supervised classifier can compensate for weaker embeddings.",
+    "DeepWalk has an advantage over methods that use explicit adjacency factorization.",
+    "Dense graphs were not the key condition, and DeepWalk's benefits were tied to the representation's ability to capture community structure efficiently."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise: the evidence says DeepWalk uses local information from truncated random walks and outperforms global-view baselines especially when labeled data is sparse. However, it adds claims about how the advantage narrows with more labels and about superiority over adjacency factorization, which the evidence does not support and partly contradicts (graph factorization outperforms DeepWalk on weighted graphs)."
+}

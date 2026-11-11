@@ -1,0 +1,6 @@
+{
+  "answer": "T is a binary tree, typically a Huffman tree built from vertex frequencies in the generated random walks, that serves as a hierarchical softmax over the vertices. Its leaves are the graph's vertices, and each internal node carries a learned logistic classifier (weight vector). The random walk generator itself does not use T. Instead, walks are sampled uniformly from the graph and treated as sentences. In the SkipGram step, for each vertex v_j in a walk and each context vertex u_k in its window, the model computes Pr(u_k | \u03a6(v_j)) as the product of binary decisions along the unique root-to-leaf path to u_k in T. It then updates the embedding \u03a6(v_j) and the internal-node weights by SGD to minimize -log of that probability. Because the path length is O(log |V|), this replaces the costly full softmax over all vertices with a much cheaper computation. Frequent vertices get shorter paths, which speeds training further.",
+  "confidence": 0.8,
+  "confidence_reasoning": "The hierarchical softmax with a Huffman-style binary tree over vertices is the well-known DeepWalk design, though I am recalling details of the tree construction and the exact update from memory.",
+  "_token_nll": null
+}

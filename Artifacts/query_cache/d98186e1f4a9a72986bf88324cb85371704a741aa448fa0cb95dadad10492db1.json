@@ -1,0 +1,58 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "Skip-gram",
+    "representation learning",
+    "d-dimensional space"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embedding size d = 128",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "single linear hidden layer",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "single linear hidden layer",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "128-dimensional vector",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "parameter study varying embedding size",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding size d = 128",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "default setting",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

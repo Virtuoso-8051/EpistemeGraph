@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "graph factorization (GF)",
+    "co-author network (CAN)",
+    "adjacency matrix (AM)",
+    "matrix factorization (MF)",
+    "Graph Embedding (GE)",
+    "community detection (CD)"
+  ],
+  "triples": [
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "MAPS_TO",
+      "target": "low-dimensional latent vector",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "APPROXIMATES",
+      "target": "adjacency matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Authors in the same community",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "dense links among themselves",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-rank constraint",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "capture of shared structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-rank constraint",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "memorization avoidance of individual edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Sparse links between communities",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "separation of community vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix factorization (MF)",
+      "source_alias": "MF",
+      "type": "USES",
+      "target": "Graph Embedding (GE)",
+      "target_alias": "GE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "co-author network (CAN)",
+      "source_alias": "CAN",
+      "type": "CONTAINS",
+      "target": "co-authorship adjacency matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The method precomputes and stores a set of short random walks starting from each node.",
+    "When an edge is added or removed, only stored walks passing through affected nodes are identified and regenerated from the point of change onward.",
+    "Update cost scales with the number of affected walks, and the approach applies to PageRank-style estimates."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The general idea that small changes need only local updates and avoid full recomputation matches the evidence. However, the specific mechanism (stored walks, regenerating those through affected nodes, PageRank-style estimates) is invented, while the paper says the model is iteratively updated with new walks from the changed region in time sub-linear to the whole graph."
+}

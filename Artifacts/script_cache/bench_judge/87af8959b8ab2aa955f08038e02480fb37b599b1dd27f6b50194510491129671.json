@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "DeepWalk outperforms LINE(2nd) on DBLP PaperCitation (the paper reports the opposite)",
+    "LINE(2nd) models only direct one-hop citation links and the citation-path limitation belongs to LINE(2nd)",
+    "DeepWalk's windowed walks link indirectly related papers and generalize better to sparsely connected papers on this network",
+    "LINE(2nd) lacks signal for papers with few direct citations as the explanation for the DBLP citation result"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise that DeepWalk beats LINE(2nd) on DBLP(PaperCitation), whereas the paper reports LINE(2nd) significantly outperforming DeepWalk. It also assigns the citation-path limitation to LINE(2nd), when the paper says it is a limitation of random walks, which only reach older papers along the citing path."
+}

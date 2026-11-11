@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "Skip-gram model (SGM)",
+    "Skip-gram objective (SGO)",
+    "language model (LM)",
+    "Low-dimensional Embedding (LDE)",
+    "node embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "SkipGram",
+      "type": "APPLIES_TO",
+      "target": "random walks generated from the graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "SkipGram",
+      "type": "MAPS_TO",
+      "target": "language model (LM) interpretation treating nodes as words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks generated from the graph",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "sentences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "probability of observing a node's context nodes within a window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "co-occurrence likelihood objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "explicit reconstruction of the adjacency matrix",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "explicit reconstruction of the distance matrix",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Low-dimensional Embedding (LDE)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "structural relationships",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Low-dimensional Embedding (LDE)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "neighborhood proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "low-dimensional space",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

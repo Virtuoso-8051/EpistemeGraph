@@ -1,0 +1,97 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "Flickr",
+    "BlogCatalog"
+  ],
+  "triples": [
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "classification problem",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "graph structure",
+      "target_alias": "labels are less directly aligned with the graph structure",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "class separability",
+      "target_alias": "less immediately separable by class",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "many more labeled examples",
+      "target_alias": "on BlogCatalog to learn a good classifier and reach the same accuracy",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "same accuracy",
+      "target_alias": "on Flickr with far fewer labels",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "complex classes",
+      "target_alias": "classes are more complex",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "network topology",
+      "target_alias": "less strongly reflected in the network topology",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised training",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "more labeled data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

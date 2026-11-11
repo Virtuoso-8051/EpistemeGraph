@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "SKIP-GRAM MODEL",
+    "SKIP-GRAM OBJECTIVE",
+    "HIERARCHICAL SOFTMAX",
+    "RANDOM WALK"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "context of a vertex v_i is the set of vertices within a window of size w around v_i in short random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIP-GRAM OBJECTIVE",
+      "source_alias": "SGO",
+      "type": "OPTIMIZES",
+      "target": "log-probability of observing context neighbors given vertex v_i",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "RANDOM WALK",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SKIP-GRAM OBJECTIVE",
+      "target_alias": "SGO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "ordering constraint treats context vertices as ordered by position relative to v_i in the walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "removing ordering constraint",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "context vertices predicted as an unordered set",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unordered context objective",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "probability factorized independently over context vertices as product of Pr(u | \u03a6(v_i))",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unordered context objective",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "order-invariant training objective",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unordered context objective",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "hierarchical softmax",
+      "target_alias": "HS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "removing ordering constraint",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "simpler and cheaper training problem",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "removing ordering constraint",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "discarding positional information within the window",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

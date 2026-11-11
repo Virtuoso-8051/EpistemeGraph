@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk benefits from a global network view because it learns embeddings from many random-walk contexts spread across the whole graph, so it captures broader structural and community-level regularities rather than only very local neighborhoods. On dense social graphs, local random-walk methods can become overly focused on immediate, highly connected neighbors, which makes their signals redundant and less discriminative. DeepWalk\u2019s global training objective aggregates information from many walks and many nodes, producing representations that are more stable and better at separating classes when the graph is dense. When plenty of labeled data is available, those richer embeddings are especially useful because the downstream classifier can exploit the extra structure in the representation instead of relying on sparse supervision to compensate for weak features.",
+  "confidence": 0.88,
+  "confidence_reasoning": "This explanation matches the standard intuition behind DeepWalk versus purely local random-walk approaches on dense graphs, though the exact performance advantage can depend on the dataset and task.",
+  "_token_nll": 0.26443172636486234
+}

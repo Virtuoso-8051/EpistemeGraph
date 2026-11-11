@@ -1,0 +1,90 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "BlogCatalog",
+    "FLICKR",
+    "learning rate (LR)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "predictive performance (node classification Micro/Macro-F1)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Hogwild-style asynchronous SGD",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large sparse graph",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "rare conflicts between concurrent embedding updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "learning rate (LR)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "fixed number of epochs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel DeepWalk speedup",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "near-linear at low thread counts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "parallel DeepWalk speedup",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "saturation at higher thread counts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "saturation of parallel DeepWalk speedup",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "memory bandwidth limits",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "saturation of parallel DeepWalk speedup",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "cache contention and lock or conflict overhead",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

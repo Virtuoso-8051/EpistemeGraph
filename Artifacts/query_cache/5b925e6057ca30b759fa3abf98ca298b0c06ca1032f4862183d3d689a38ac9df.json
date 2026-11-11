@@ -1,0 +1,48 @@
+{
+  "query_entities": [
+    "first-order proximity (FOP)",
+    "second-order neighbor (SON)"
+  ],
+  "triples": [
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "FOP",
+      "type": "GENERATES",
+      "target": "words strongly and directly related to the query",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "FOP",
+      "type": "GENERATES",
+      "target": "close synonyms",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "FOP",
+      "type": "GENERATES",
+      "target": "tight semantic neighbours",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "words that appear in similar contexts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "broader or more topical associations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

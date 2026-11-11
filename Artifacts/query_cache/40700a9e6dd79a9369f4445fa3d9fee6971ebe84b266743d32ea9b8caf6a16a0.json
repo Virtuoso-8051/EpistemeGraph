@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "random walk",
+    "walk length",
+    "number of walks started per vertex",
+    "window size"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "walk length",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "random walk",
+      "target_alias": "RW",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "walk length",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "40 steps",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex",
+      "source_alias": "GAMMA",
+      "type": "APPROXIMATES",
+      "target": "80",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "window size",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "window size",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "10",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

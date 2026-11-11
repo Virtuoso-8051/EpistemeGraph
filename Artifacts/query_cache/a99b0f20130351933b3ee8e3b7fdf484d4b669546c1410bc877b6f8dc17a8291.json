@@ -1,0 +1,75 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node representation (NR)",
+    "Link Prediction (LP)",
+    "node embedding (NE)",
+    "edge-based prediction task (EBPT)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "node representation (NR)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation (NR)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "edge-based prediction task (EBPT)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "node embedding (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "binary operator",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary operator",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "edge feature vector",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge feature vector",
+      "source_alias": "",
+      "type": "USES",
+      "target": "classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "edge-based prediction task (EBPT)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "protein-protein interaction network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

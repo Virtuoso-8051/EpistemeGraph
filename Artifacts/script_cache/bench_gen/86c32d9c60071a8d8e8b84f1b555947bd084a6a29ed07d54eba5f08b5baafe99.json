@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How do SkipGram in paper3 and node2vec in paper2 differ in the kind of neighborhood structure they use to learn node embeddings, and what shared optimization method do they both rely on?",
+      "gold_answer": "SkipGram in paper3 learns from cooccurrences in random walks within a window, while node2vec in paper2 uses a flexible 2nd-order random walk notion of network neighborhoods; both are optimized with stochastic gradient descent (SGD).",
+      "evidence_quote": "SkipGram is a language model that maximizes the cooccurrence probability among the words that appear within a window, w, in a sentence [26].",
+      "evidence_quote_b": "We use a 2 nd order random walk approach to generate (sample) network neighborhoods for nodes.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does paper3\u2019s SkipGram use Hierarchical Softmax, and how does node2vec in paper2 motivate a different neighborhood-learning design for networks with both communities and structural roles?",
+      "gold_answer": "SkipGram uses Hierarchical Softmax when direct computation of Pr(uk| \u03a6(vj)) is infeasible because the normalization over all vertices is expensive, while node2vec is designed to flexibly capture both homophily and structural equivalence in networks.",
+      "evidence_quote": "Given that uk\u2208 V , calculating Pr(uk| \u03a6(vj)) in line 3 is not feasible.",
+      "evidence_quote_b": "Thus, it is essential to allow for a flexible algorithm that can learn node representations obeying both principles: ability to learn representations that embed nodes from the same network community closely together, as well as to learn representations where nodes that share similar roles have similar embeddings.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What computational trick does SkipGram in paper3 use to reduce the cost of predicting a vertex, and how does node2vec in paper2 describe the purpose of its custom graph-based objective?",
+      "gold_answer": "SkipGram uses Hierarchical Softmax with a binary tree to reduce prediction from O(|V|) to O(log|V|), while node2vec uses a custom graph-based objective to preserve network neighborhoods in a d-dimensional feature space.",
+      "evidence_quote": "This reduces the computational complexity of calculating Pr( uk| \u03a6(vj)) from O(|V|) to O(log|V|).",
+      "evidence_quote_b": "Intuitively, our approach returns feature representations that maximize the likelihood of preserving network neighborhoods of nodes in a d-dimensional feature space.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compare how SkipGram in paper3 and node2vec in paper2 use random walks, and explain what each method is trying to maximize from those walks.",
+      "gold_answer": "SkipGram iterates over collocations in random walks within a window to maximize the probability of neighboring vertices, whereas node2vec samples network neighborhoods with 2nd-order random walks to maximize the likelihood of preserving those neighborhoods in the embedding space.",
+      "evidence_quote": "Algorithm 2 iterates over all possible collocations in random walk that appear within the window w (lines 1-2).",
+      "evidence_quote_b": "We use a 2 nd order random walk approach to generate (sample) network neighborhoods for nodes.",
+      "difficulty": "easy"
+    }
+  ]
+}

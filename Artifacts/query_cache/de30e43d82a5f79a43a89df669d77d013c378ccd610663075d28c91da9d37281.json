@@ -1,0 +1,6 @@
+{
+  "answer": "In the LINE paper (Tang et al., 2015), LINE is reported to outperform DeepWalk on the evaluated tasks, such as multi-label node classification and link prediction, on networks including language, Flickr, and YouTube graphs. The premise that edge sampling hurts LINE's efficiency relative to DeepWalk is not supported by the paper, which presents edge sampling as an improvement. LINE samples edges with probability proportional to weight, using alias tables so each SGD step costs O(1), and this avoids the high-variance gradients that weighted edges cause in plain SGD. A plausible efficiency trade-off is that each sampled edge yields only one positive pair, whereas a random-walk window yields many co-occurrence pairs per walk, so LINE may need many samples to cover the same context information. It also avoids the cost of generating walks. The paper's reported runtimes show LINE scaling to large networks, not being markedly slower than DeepWalk.",
+  "confidence": 0.4,
+  "confidence_reasoning": "I am fairly confident about LINE's general claim of outperforming DeepWalk and its alias-table edge sampling, but I am unsure of the exact efficiency comparison the question alludes to and of the precise reported figures.",
+  "_token_nll": null
+}

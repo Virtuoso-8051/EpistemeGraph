@@ -1,0 +1,43 @@
+{
+  "query_entities": [
+    "node2vec",
+    "return parameter p",
+    "node2vec parameter (NP)",
+    "grid search (GS)",
+    "NODE2VEC"
+  ],
+  "triples": [
+    {
+      "source": "return parameter p",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "NP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "p = 1",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "p = 1",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "default neutral setting",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grid search (GS)",
+      "source_alias": "GS",
+      "type": "USES",
+      "target": "parameter grid {0.25, 0.5, 1, 2, 4}",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

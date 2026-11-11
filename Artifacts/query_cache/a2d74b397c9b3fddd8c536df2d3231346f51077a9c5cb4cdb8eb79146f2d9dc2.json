@@ -1,0 +1,66 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "graph factorization (GF)",
+    "random walk (RW)",
+    "graph structure (GS)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "noisy randomness when walks are short or few",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "sufficient walk length and number of walks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graph structure (GS)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparsity and low-degree nodes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "noisier embeddings",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "ACHIEVES",
+      "target": "stable, smoother community structure in visualizations",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "less cleanly separated visualized embeddings",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

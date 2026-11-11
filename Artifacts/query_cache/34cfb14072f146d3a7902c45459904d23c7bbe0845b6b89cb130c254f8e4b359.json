@@ -1,0 +1,97 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "edge-sampling treatment (EST)",
+    "EnglishWikipedia page (EP)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "word co-occurrence network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Wikipedia word co-occurrence network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "weighted graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "stochastic gradient descent (SGD) on weighted graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling treatment (EST)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "weighted edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "weighted SGD",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "variance problems",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "weighted edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "In DeepWalk, the classification problem on a social network is defined as a supervised node-classification task: each node in the graph is treated as an example, and the goal is to predict its class label from a small set of labeled nodes and a larger set of unlabeled nodes. The graph structure provides the relational context used to learn node representations\u2014DeepWalk first uses random walks over the network to capture local neighborhood and higher-order proximity information, then learns embeddings for nodes from those walks. The labels are not used to build the walks or embeddings directly; instead, they are used afterward to train and evaluate a classifier on top of the learned node vectors. In this formulation, the graph supplies the features through connectivity patterns, while the labels supply the supervision signal for the downstream classification task.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This matches the standard DeepWalk setup: unlabeled graph structure is used to learn embeddings, and node labels are used only for downstream supervised classification.",
+  "_token_nll": 0.19103809356689452
+}

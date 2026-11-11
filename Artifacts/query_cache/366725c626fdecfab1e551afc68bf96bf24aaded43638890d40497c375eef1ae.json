@@ -1,0 +1,6 @@
+{
+  "answer": "LINE changes the training objective by sampling edges in proportion to their weights and then using a weighted loss for each sampled edge, so an edge with weight w contributes w times the gradient of the base loss rather than being duplicated w times in the data. In practice, this is done by optimizing a weighted negative-sampling objective such as -w[log \u03c3(u\u00b7v) + k E_{n~P_n} log \u03c3(-u\u00b7n)], where the edge weight multiplies the whole per-edge loss. Because the weight appears as a scalar multiplier on the gradient of a single sampled edge, it preserves the relative importance of heavy edges without making the optimization unstable through repeated identical updates or excessively large step counts from literal edge replication.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard LINE weighted-edge formulation and the usual explanation of why weighting the loss is more stable than duplicating edges, though exact notation can vary across descriptions.",
+  "_token_nll": 0.3008541640840046
+}

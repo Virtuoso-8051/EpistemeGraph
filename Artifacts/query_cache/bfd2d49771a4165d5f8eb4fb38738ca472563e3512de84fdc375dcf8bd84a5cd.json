@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk can be parallelized with asynchronous stochastic gradient descent (Hogwild!-style lock-free SGD) because its training updates are extremely sparse. DeepWalk learns node embeddings with a skip-gram model trained by SGD on (node, context) pairs generated from random walks over the graph. Each stochastic update touches only the embedding vectors of the few nodes appearing in one walk window (the center node and its context nodes, plus sampled negative nodes), so different worker threads working on different walks rarely write to the same parameters. Because conflicting writes are rare, workers can update the shared parameter matrix without locks or synchronization, and the occasional overwritten update causes negligible harm to convergence. This sparsity (low overlap between concurrent updates) is the property that makes asynchronous, lock-free parallel SGD effective for DeepWalk, as described in the original DeepWalk paper by Perozzi, Al-Rfou and Skiena (2014).",
+  "confidence": 0.72,
+  "confidence_reasoning": "The core explanation (sparse, low-conflict updates enabling Hogwild-style lock-free SGD, as stated in the DeepWalk paper) is well established, though exact paper wording and minor details about which parameters are touched are less certain.",
+  "_token_nll": null
+}

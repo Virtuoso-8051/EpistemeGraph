@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk feeds walks to a skip-gram model with hierarchical softmax (evidence mentions SkipGram and hierarchical sampling, so this is supported)",
+    "DeepWalk does not explicitly model global structure, node attributes, edge weights, or community labels (evidence says DeepWalk only applies to unweighted networks, which supports the edge-weight point; the other exclusions are not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The AI correctly flags that paper1 was not provided and declines to invent its content, which the evidence cannot support, so that is acceptable. Its description of DeepWalk (random walks, SkipGram, hierarchical softmax, co-occurrence within a window, only unweighted networks) is consistent with the evidence, with only minor unstated exclusions about global structure, attributes, and communities that do not change the core answer."
+}

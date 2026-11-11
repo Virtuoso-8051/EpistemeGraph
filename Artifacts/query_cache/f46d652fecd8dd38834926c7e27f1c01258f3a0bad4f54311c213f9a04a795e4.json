@@ -1,0 +1,67 @@
+{
+  "query_entities": [
+    "LINE",
+    "second-order proximity",
+    "training time complexity (TTC)",
+    "number of edge (NE)",
+    "edge-sampling algorithm (ESA)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "wall-clock training time on large graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Twitter",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training time complexity",
+      "source_alias": "TTC",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "roughly linear scaling with number of edge samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "asynchronous SGD",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling algorithm",
+      "target_alias": "ESA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "single multi-core machine",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "cluster",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

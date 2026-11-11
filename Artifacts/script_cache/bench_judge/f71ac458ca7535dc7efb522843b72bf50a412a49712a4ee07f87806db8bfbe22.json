@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "LINE does not require supervised data at all; the answer omits that LINE(1st+2nd) is applied only to supervised tasks because the concatenated dimension weights are hard to set without supervision.",
+    "LINE's original paper used Flickr, YouTube, Orkut, and Twitter and not BlogCatalog; the evidence does not state this, and the answer itself flags it as recollection.",
+    "The answer mentions an optional supervised term or semi-supervised variant of LINE, which the evidence does not mention."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The DeepWalk BlogCatalog evaluation (10%-90% training ratio, Micro/Macro-F1, one-vs-rest logistic regression) is supported. However, the answer misses the key point that LINE(1st+2nd) is applied only to supervised tasks because dimension weights are hard to set otherwise, and it adds unsupported claims about LINE's datasets and a semi-supervised variant."
+}

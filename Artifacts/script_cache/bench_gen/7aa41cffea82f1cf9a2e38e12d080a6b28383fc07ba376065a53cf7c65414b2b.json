@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the PCA-based objective in the passage preserve local neighborhoods so well while avoiding eigendecomposition on large networks?",
+      "false_premise": "PCA preserves local neighborhoods and avoids eigendecomposition on large networks.",
+      "correction": "The passage says PCA and related dimensionality reduction methods maximize variance and invariably involve eigendecomposition, not neighborhood preservation.",
+      "evidence_quote": "Classic approaches based on linear and non-linear dimensionality reduction techniques such as Principal Component Analysis, Multi-Dimensional Scaling and their extensions [3, 27, 30, 35] optimize an objective that transforms a representative data matrix of the network such that it maximizes the variance of the data representation.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does the unsupervised objective in the method optimize performance on a downstream prediction task without any task-independent constraints?",
+      "false_premise": "The unsupervised objective optimizes performance on a downstream prediction task and is not task-independent.",
+      "correction": "The passage states that the unsupervised objective is independent of the downstream prediction task and is designed to produce task-independent features.",
+      "evidence_quote": "At the other extreme, the objective function can be defined to be independent of the downstream prediction task and the representations can be learned in a purely unsupervised way.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What makes the linear dimensionality reduction approach in the passage so effective on various network prediction tasks compared with task-specific supervised methods?",
+      "false_premise": "Linear dimensionality reduction approaches are effective on various network prediction tasks and compare favorably with task-specific supervised methods.",
+      "correction": "The passage says these approaches give poor performance on various prediction tasks over networks, unlike carefully designed unsupervised objectives that can closely match task-specific methods.",
+      "evidence_quote": "Moreover, the resulting latent representations give poor performance on various prediction tasks over networks.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does the stochastic gradient descent optimization in the method rely on eigendecomposition of the data matrix instead of backpropagation on a single hidden-layer feedforward neural network?",
+      "false_premise": "The method's optimization relies on eigendecomposition rather than SGD/backpropagation on a single hidden-layer feedforward neural network.",
+      "correction": "The passage says the neighborhood-preserving objective can be efficiently optimized using stochastic gradient descent, akin to backpropagation on just single hidden-layer feedforward neural networks, not via eigendecomposition.",
+      "evidence_quote": "The objective can be efficiently optimized using stochastic gradient descent (SGD) akin to backpropogation on just single hidden-layer feedforward neural networks.",
+      "difficulty": "medium"
+    }
+  ]
+}

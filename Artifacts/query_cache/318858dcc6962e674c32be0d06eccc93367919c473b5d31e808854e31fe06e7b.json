@@ -1,0 +1,100 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node2vec parameter (NP)",
+    "Skip-gram model (SGM)",
+    "Skip-gram objective (SGO)",
+    "grid search (GS)",
+    "biased random walk procedure (BRWP)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OPTIMIZES",
+      "target": "p and q via end-to-end differentiable gradient descent",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "p and q",
+      "type": "IS_A",
+      "target": "fixed hyperparameter",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "p and q",
+      "type": "IS_A",
+      "target": "model parameter",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "return parameter p, in-out parameter q",
+      "type": "APPLIES_TO",
+      "target": "biased random walk procedure (BRWP)",
+      "target_alias": "biased second-order random walk",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "skip-gram embedding",
+      "type": "OPTIMIZES",
+      "target": "Skip-gram objective (SGO)",
+      "target_alias": "negative-sampling objective",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "grid search (GS)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grid search (GS)",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Bayesian optimization",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random search",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "discrete walk sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "non-differentiable with respect to node2vec parameter (NP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

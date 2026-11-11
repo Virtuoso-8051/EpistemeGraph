@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk likely outperforms LINE(2nd) on DBLP PaperCitation because its random walks capture multi-hop, higher-order proximity across the citation graph, while LINE(2nd) models only direct (one-hop) citation links. In a sparse, directed citation network, many papers have few direct citations, so LINE(2nd) gets little signal for them. The citation-path limitation is that LINE(2nd) cannot use indirect citation paths (for example, papers that are cited by the same or similar papers, or that share citation neighborhoods at distance two or more). DeepWalk's windowed walks link such nodes, producing embeddings that reflect community and topical structure and generalize better to sparsely connected papers. This explanation is based on the methods' known designs; I have not verified the specific reported numbers or the paper's exact wording.",
+  "confidence": 0.55,
+  "confidence_reasoning": "The mechanistic explanation (DeepWalk's multi-hop walks versus LINE(2nd)'s first-order-neighborhood objective on a sparse citation graph) is well grounded, but I could not verify the specific paper's results or its exact framing of the citation-path limitation.",
+  "_token_nll": null
+}

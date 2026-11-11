@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "\"it only requires a frequency-based binary tree over the vocabulary, not access to the full corpus at once\"",
+    "\"the node frequencies can be estimated or maintained from the stream\"",
+    "\"It optimizes the expected cost of predicting a node by assigning shorter codes to more frequent nodes\"",
+    "\"which reduces the average number of binary decisions needed during training\""
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The paper supports that in streaming DeepWalk, if vertex frequency can be estimated a priori, Huffman coding can still be used, and that its purpose is to decrease frequent element access times. However, the answer adds several implementation and optimization details (frequency-based binary tree, maintaining frequencies from the stream, expected prediction cost, and binary-decision reduction) that are not stated in the provided evidence."
+}

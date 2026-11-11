@@ -1,0 +1,61 @@
+{
+  "query_entities": [
+    "LINE",
+    "second-order proximity objective",
+    "large graph",
+    "single machine",
+    "16 CPU cores",
+    "128 GB of RAM",
+    "1.5 billion edges"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "about 1.5 hours",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "single machine",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "single machine",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "16 CPU cores",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "single machine",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "128 GB of RAM",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large graph",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "1.5 billion edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "second-order proximity objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

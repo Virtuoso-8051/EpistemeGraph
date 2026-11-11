@@ -1,0 +1,114 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "language modeling",
+    "Skip-gram model",
+    "word2vec"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "language modeling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "short random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "sequence of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sequence of nodes",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "sentence of words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "Skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "source_alias": "",
+      "type": "USES",
+      "target": "word2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "LEARNING",
+      "target": "node embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "similar walk contexts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph local neighborhood structure",
+      "source_alias": "",
+      "type": "PLAYS_ROLE_OF",
+      "target": "word context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "LEARNS",
+      "target": "representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "representations",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "graph proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "representations",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "explicit graph features",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

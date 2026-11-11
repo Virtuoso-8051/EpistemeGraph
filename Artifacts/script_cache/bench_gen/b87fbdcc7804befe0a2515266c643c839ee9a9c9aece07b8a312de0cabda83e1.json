@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does DeepWalk differ from graph kernels in the way it uses graph structure for classification, and what advantage does this give DeepWalk?",
+      "gold_answer": "DeepWalk does not encode graph structure inside a kernel function. Instead, it learns a representation that can be used directly as features for any classification method, which makes the learned features more flexible than graph kernels.",
+      "evidence_quote": "Our approach is complementary; instead of encoding the structure as part of a kernel function, we learn a representation which allows them to be used directly as features for any classification method.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why were distributed representations largely abandoned for almost a decade, and what later developments helped them re-emerge?",
+      "gold_answer": "They were abandoned because of computational costs and numerical instability. They re-emerged when distributed computing made it possible to train larger models and when the growth of data enabled unsupervised learning algorithms to emerge.",
+      "evidence_quote": "Computational costs and numerical instability led to these techniques to be abandoned for almost a decade.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What type of input does DeepWalk use to learn latent social representations of vertices, and what kind of graph information does the learned representation encode?",
+      "gold_answer": "DeepWalk uses local information from truncated random walks as input. The learned representation encodes structural regularities in the graph.",
+      "evidence_quote": "Using local information from truncated random walks as input, our method learns a representation which encodes structural regularities.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does DeepWalk claim to outperform other methods, and what scalability properties does it emphasize for large graphs?",
+      "gold_answer": "DeepWalk says it significantly outperforms other methods designed to operate for sparsity on large graphs where spectral methods cannot be run. It also emphasizes that it is an online algorithm and parallelizable, so it can scale and allow workers to update different parts of the model concurrently.",
+      "evidence_quote": "On such large graphs, our method significantly outperforms other methods designed to operate for sparsity.",
+      "difficulty": "hard"
+    }
+  ]
+}

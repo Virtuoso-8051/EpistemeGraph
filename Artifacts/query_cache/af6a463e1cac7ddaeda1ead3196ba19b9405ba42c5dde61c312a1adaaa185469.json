@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is mistaken. DeepWalk does not use a lock on shared parameters. As described by Perozzi, Al-Rfou and Skiena (2014), it trains Skip-gram with hierarchical softmax using multiple workers that perform asynchronous, lock-free SGD on the shared embedding matrices, in the style of Hogwild!. Its avoidance of the sparse-update problem comes from that lock-free design, not from locking. Each training step (a walk's context window) touches only a few embedding rows, so concurrent workers rarely write to the same parameters at once. Those occasional overwrites are benign noise that SGD tolerates, and skipping locks avoids the serialization and contention that locking would cause.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am fairly confident DeepWalk uses lock-free asynchronous SGD in the Hogwild style, but I am reciting the paper's implementation details from memory and could be slightly off on specifics.",
+  "_token_nll": null
+}

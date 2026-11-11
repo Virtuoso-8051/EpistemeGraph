@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk generates truncated random walks over the graph and effectively treats the network as unweighted, so it ignores the strength of edges. The language network (a word co-occurrence graph) has edges whose weights are co-occurrence counts that vary widely, so DeepWalk cannot distinguish strongly from weakly associated word pairs and its embeddings suffer. LINE instead optimizes first- and second-order proximity objectives over edges directly and samples edges with probability proportional to their weights (using alias tables), so it must handle the weighted nature of the edges, which is the aspect it needs to handle effectively.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The weighted-edge explanation matches the LINE paper's setup and its discussion of DeepWalk's unweighted random walks, but I am reasoning from memory about the specific paper and its exact wording and results.",
+  "_token_nll": null
+}

@@ -1,0 +1,27 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "multi-label classification (MLC)",
+    "grid search (GS)",
+    "Macro-F1 score (MFS)",
+    "node2vec parameter (NP)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "grid search (GS)",
+      "target_alias": "GS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grid search (GS)",
+      "source_alias": "GS",
+      "type": "APPLIES_TO",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "p, q",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

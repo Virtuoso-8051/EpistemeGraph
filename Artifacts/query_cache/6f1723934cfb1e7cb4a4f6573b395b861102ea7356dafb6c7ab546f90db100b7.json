@@ -1,0 +1,6 @@
+{
+  "answer": "LINE outperforms the random-walk methods on the PPI network because it is much more sample-efficient and scalable: it learns from edge-based first- and second-order proximity objectives using negative sampling, so it can reuse the same observed edges many times during training instead of relying on many random-walk contexts. On a large, dense, and highly connected graph like PPI, random-walk methods spend a lot of effort generating walk sequences and repeated context pairs, which is less efficient and can be less effective at capturing the network\u2019s local structure. LINE\u2019s ability to repeatedly reuse samples lets it make better use of the available data and train embeddings more effectively under the same computational budget.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a well-supported high-level explanation from the LINE paper and related comparisons, but the exact wording of the PPI comparison may vary, so I am not fully certain about every detail.",
+  "_token_nll": 0.28521524661432496
+}

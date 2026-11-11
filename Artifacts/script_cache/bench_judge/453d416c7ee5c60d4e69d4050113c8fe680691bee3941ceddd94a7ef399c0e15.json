@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Node2vec 'does not describe how to handle a network that changes over time' and 'incorporating new nodes or edges means rerunning the walks and retraining on the whole graph' is not stated in the evidence, which only says node2vec is trivially parallelizable and scales to millions of nodes.",
+    "The streaming variant 'updates the existing embeddings incrementally, without full retraining, so new nodes can be embedded' is an elaboration not found in the evidence, which only says features can be trained on a continually evolving network without explicitly constructing the entire graph.",
+    "The claim that new nodes and edges can be embedded 'on arrival at much lower cost' is a specific cost claim not supported by the evidence."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast is partly grounded: the evidence confirms the streaming variant trains features on a continually evolving network without constructing the full graph, and that node2vec uses random walks with tunable exploration. However, the answer attributes specific incremental-update mechanics, cost advantages, and claims about what node2vec does not describe that the evidence does not contain, and it inaccurately frames the streaming capability as absent from node2vec when the paper explicitly mentions it."
+}

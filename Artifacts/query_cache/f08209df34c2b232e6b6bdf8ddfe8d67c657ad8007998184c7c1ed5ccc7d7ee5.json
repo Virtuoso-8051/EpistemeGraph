@@ -1,0 +1,109 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "GS",
+    "GAMMA",
+    "SGM",
+    "LM",
+    "GE",
+    "DG"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "GS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "GRAPH VERTICES AS VOCABULARY",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "TRUNCATED RANDOM WALK CORPUS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "GAMMA",
+      "target_alias": "number of walks started per vertex",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SGM",
+      "target_alias": "Skip-gram model",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SGM",
+      "source_alias": "Skip-gram model",
+      "type": "USES",
+      "target": "HIERARCHICAL SOFTMAX",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "LEARNS",
+      "target": "GE",
+      "target_alias": "Graph Embedding",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GS",
+      "source_alias": "graph structure",
+      "type": "IS_A",
+      "target": "SPARSE UNWEIGHTED NETWORK",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GS",
+      "source_alias": "graph structure",
+      "type": "PRESERVES",
+      "target": "LOCAL NEIGHBORHOOD SIMILARITY",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "LOCAL NEIGHBORHOOD SIMILARITY",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "EDGE WEIGHTS",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "GS",
+      "target_alias": "graph structure",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

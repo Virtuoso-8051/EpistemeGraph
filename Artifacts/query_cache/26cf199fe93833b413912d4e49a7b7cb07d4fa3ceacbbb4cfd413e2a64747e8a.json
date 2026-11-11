@@ -1,0 +1,6 @@
+{
+  "answer": "This is most plausibly when the single hidden-layer network is linear (identity or no nonlinear activation) with squared-error loss. Then the optimal weights are determined by the eigenstructure (principal components) of the data covariance or data matrix, so the solution can be obtained by eigendecomposition or SVD instead of backpropagation. A closely related case is when the hidden-layer weights are fixed or random and only the output weights are learned, which reduces to a least-squares problem solved via the pseudoinverse (eigendecomposition of X^T X). With nonlinear hidden activations and trainable hidden weights, backpropagation-based SGD is the standard approach. I could not identify the specific method the question refers to, so this is my best reconstruction.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The question refers to an unidentified specific method, so my answer is a plausible reconstruction from general knowledge of linear networks, PCA, and extreme learning machines rather than a verified source.",
+  "_token_nll": null
+}

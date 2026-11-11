@@ -1,0 +1,26 @@
+{
+  "query_entities": [
+    "LINE",
+    "context vertex",
+    "vertex",
+    "full vertex set V"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "conditional probability of generating a context vertex v_j from a vertex v_i",
+      "target_alias": "p(v_j \\mid v_i) = \\frac{\\exp(\\mathbf{u}_j^\\top \\mathbf{v}_i)}{\\sum_{k=1}^{|V|} \\exp(\\mathbf{u}_k^\\top \\mathbf{v}_i)}",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability of generating a context vertex v_j from a vertex v_i",
+      "source_alias": "p(v_j \\mid v_i) = \\frac{\\exp(\\mathbf{u}_j^\\top \\mathbf{v}_i)}{\\sum_{k=1}^{|V|} \\exp(\\mathbf{u}_k^\\top \\mathbf{v}_i)}",
+      "type": "APPLIES_TO",
+      "target": "full vertex set V",
+      "target_alias": "all vertices in the graph",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "LINE(1st) and LINE-SGD(1st) are designed for directed graphs because the first-order proximity they model is inherently asymmetric in a directed network: an edge from node u to node v does not mean the same thing as an edge from v to u. In practice, these methods treat each directed edge as an ordered pair and learn representations that can preserve direction-specific relationships. For undirected graphs, that asymmetry is unnecessary because every edge is reciprocal, so the same first-order objective can be applied but the directed-graph design is mainly motivated by preserving edge direction and the distinct roles of source and target nodes.",
+  "confidence": 0.89,
+  "confidence_reasoning": "This is a standard interpretation of LINE and LINE-SGD: first-order proximity is defined over observed edges, and directed graphs require ordered-pair modeling, though exact implementation details can vary by paper or codebase.",
+  "_token_nll": 0.27479454711243345
+}

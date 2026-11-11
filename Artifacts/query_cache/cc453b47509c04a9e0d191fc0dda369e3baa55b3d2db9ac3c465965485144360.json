@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec frames its embedding objective around biased random walks that can interpolate between two structural views: a more BFS-like regime that captures local neighborhoods and community membership, and a more DFS-like regime that captures structural roles or equivalence across distant parts of the graph. In other words, node2vec emphasizes that embeddings can be tuned to reflect either community similarity or role similarity, depending on the walk bias. LINE, by contrast, explicitly defines two proximity notions for social networks: first-order proximity is the direct edge relationship between two nodes, while second-order proximity is the similarity of their neighborhood distributions (nodes that share similar neighbors). LINE learns embeddings to preserve first-order proximity, second-order proximity, or both, with the second-order view especially useful for capturing broader neighborhood context in social graphs.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This matches the standard descriptions of node2vec and LINE in the original papers and common summaries, with only minor risk of wording differences in how roles versus communities are described.",
+  "_token_nll": 0.2126012876922009
+}

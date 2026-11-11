@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk's original paper evaluated node classification on BlogCatalog, Flickr, and YouTube, and its Wikipedia experiment used a word co-occurrence network (attributed to Perozzi et al. 2014; not contained in the provided evidence)",
+    "LINE (Tang et al., 2015) reported results on a Wikipedia word co-occurrence network (not stated in the evidence)",
+    "Edge sampling samples edges with probability proportional to their weights so SGD can be applied without variance problems of plain weighted SGD (the evidence does not describe this mechanism)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly notes that edge sampling does not remove the need for weighted edges, but it does not state the source's actual correction that graph factorization outperforms DeepWalk because DeepWalk ignores edge weights. Several claims about external papers and the mechanics of edge sampling are not supported by the provided evidence."
+}

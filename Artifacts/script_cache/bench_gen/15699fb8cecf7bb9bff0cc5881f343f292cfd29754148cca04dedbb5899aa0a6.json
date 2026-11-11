@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What trade-off does feature learning in networks face when choosing an objective function, and how does a supervised procedure compare with an unsupervised procedure in terms of training time complexity and predictive accuracy?",
+      "gold_answer": "The objective-function design trade-off is between computational efficiency and predictive accuracy. A supervised procedure can achieve good accuracy by directly optimizing downstream performance, but it has high training time complexity because many parameters must be estimated. In contrast, an unsupervised procedure is computationally efficient and can produce task-independent features that, with a carefully designed objective, closely match task-specific methods in accuracy.",
+      "evidence_quote": "The challenge in feature learning is defining an objective function, which involves a trade-off in balancing computational efficiency and predictive accuracy.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why are classic dimensionality reduction methods such as Principal Component Analysis and Multi-Dimensional Scaling considered expensive for large real-world networks, and what kind of prediction performance do their latent representations achieve?",
+      "gold_answer": "These methods optimize an objective that transforms the network\u2019s representative data matrix to maximize variance, which requires eigendecomposition of the appropriate data matrix. That eigendecomposition is expensive for large real-world networks. The latent representations produced by these methods also perform poorly on various network prediction tasks.",
+      "evidence_quote": "Consequently, these approaches invariably involve eigendecomposition of the appropriate data matrix which is expensive for large real-world networks.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How can an objective for network feature learning be designed to avoid the drawbacks of variance-maximizing dimensionality reduction, and by what optimization method can it be efficiently learned?",
+      "gold_answer": "The objective can be designed to preserve local neighborhoods of nodes rather than maximize variance. Such an objective can be optimized efficiently using stochastic gradient descent (SGD), in a way that is akin to backpropagation on a single hidden-layer feedforward neural network.",
+      "evidence_quote": "Alternatively, we can design an objective that seeks to preserve local neighborhoods of nodes.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what conditions do unsupervised feature-learning techniques in networks produce task-independent features that approach the predictive accuracy of task-specific approaches, and what limitation do current techniques still have?",
+      "gold_answer": "When the objective is carefully designed, unsupervised feature learning can yield task-independent features that closely match task-specific approaches in predictive accuracy while remaining computationally efficient. However, current techniques still do not satisfactorily define and optimize a reasonable objective for scalable unsupervised feature learning in networks.",
+      "evidence_quote": "At the other extreme, the objective function can be defined to be independent of the downstream prediction task and the representations can be learned in a purely unsupervised way.",
+      "difficulty": "hard"
+    }
+  ]
+}

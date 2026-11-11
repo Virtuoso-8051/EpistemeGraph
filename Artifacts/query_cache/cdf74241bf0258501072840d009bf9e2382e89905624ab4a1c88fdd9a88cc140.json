@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "Social representation (SR)",
+    "Community detection (CD)",
+    "continuous feature representation (CFR)",
+    "social network (SN)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "Social representation (SR)",
+      "target_alias": "SR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Social representation (SR)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Adaptability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Adaptability",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "incremental learning as new nodes and edges arrive",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Social representation (SR)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Community aware",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Community aware",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "Community detection (CD)",
+      "target_alias": "CD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Social representation (SR)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Low dimensional",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Low dimensional",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "generalization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Low dimensional",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "machine learning",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Social representation (SR)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Continuous",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Continuous",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "continuous feature representation (CFR)",
+      "target_alias": "CFR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continuous feature representation (CFR)",
+      "source_alias": "CFR",
+      "type": "IMPROVES",
+      "target": "robustness to overfitting",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "query_entities": [
+    "SkipGram",
+    "Wikipedia word network",
+    "Wikipedia corpus",
+    "word co-occurrence",
+    "dense word embeddings",
+    "semantic regularities",
+    "syntactic regularities",
+    "analogy tasks",
+    "vector arithmetic",
+    "graph-based methods",
+    "explicit edges",
+    "graph structure",
+    "embedding space"
+  ],
+  "triples": [
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "Wikipedia word network",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "dense word embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "dense word embeddings",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "word co-occurrence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "dense word embeddings",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "Wikipedia corpus",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "words that appear in similar contexts",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vectors",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "semantic regularities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vectors",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "syntactic regularities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "analogy tasks",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "simple vector arithmetic",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph-based methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "explicit edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph-based methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph-based methods",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "propagate similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph-based methods",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "rank nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "analogy performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "analogy performance",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "geometry of the learned embedding space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "analogy performance",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "traversing or optimizing over the word network itself",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

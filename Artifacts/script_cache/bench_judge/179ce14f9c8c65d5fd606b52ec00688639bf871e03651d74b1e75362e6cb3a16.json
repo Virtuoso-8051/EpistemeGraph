@@ -1,0 +1,9 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Attributes to Qiu et al. (2018) the finding that DeepWalk's skip-gram objective implicitly factorizes a matrix built from powers of the random-walk transition matrix; this citation and result are not in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, since the source says DeepWalk learns a representation instead of encoding structure in a kernel, and it correctly notes that the vectors can feed any classifier. It goes beyond the evidence in citing Qiu et al. (2018) for a matrix-factorization result, which the provided papers do not contain."
+}

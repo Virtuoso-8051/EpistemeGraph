@@ -1,0 +1,84 @@
+{
+  "query_entities": [
+    "classical graph embedding methods",
+    "DeepWalk",
+    "Hierarchical Softmax tree",
+    "sampled random walks",
+    "full graph structure",
+    "vocabulary of observed nodes"
+  ],
+  "triples": [
+    {
+      "source": "classical graph embedding methods",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "transductive",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classical graph embedding methods",
+      "source_alias": "",
+      "type": "LEARNS",
+      "target": "embeddings only for the nodes seen during training",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classical graph embedding methods",
+      "source_alias": "",
+      "type": "DO_NOT_GENERALIZE_TO",
+      "target": "unseen nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classical graph embedding methods",
+      "source_alias": "",
+      "type": "DO_NOT_GENERALIZE_TO",
+      "target": "new graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Hierarchical Softmax tree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "Hierarchical Softmax tree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "nodes it has encountered in the sampled random walks",
+      "target_alias": "sampled random walks",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "DOES_NOT_REQUIRE",
+      "target": "full graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "vocabulary of observed nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec use DFS neighborhoods to capture structural equivalence around hubs and bridges so effectively?",
+      "false_premise": "node2vec uses DFS neighborhoods to capture structural equivalence around hubs and bridges.",
+      "correction": "node2vec uses BFS neighborhoods to capture structural equivalence, while DFS is associated with homophily and community structure.",
+      "evidence_quote": "In particular, the neighborhoods sampled by BFS lead to embeddings that correspond closely to structural equivalence.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec's BFS-style sampling help it infer communities based on homophily by exploring larger parts of the network?",
+      "false_premise": "node2vec's BFS-style sampling helps it infer communities based on homophily by exploring larger parts of the network.",
+      "correction": "DFS explores larger parts of the network and is used for inferring communities based on homophily; BFS focuses on structural equivalence.",
+      "evidence_quote": "In DFS, the sampled nodes more accurately reflect a macro-view of the neighborhood which is essential in inferring communities based on homophily.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What dataset does node2vec train on to evaluate structural equivalence in citation graphs, given that it relies on only immediate neighborhoods?",
+      "false_premise": "node2vec evaluates structural equivalence on citation graphs.",
+      "correction": "The passage does not mention any dataset such as citation graphs; it discusses neighborhood sampling strategies in general and their relation to structural equivalence and homophily.",
+      "evidence_quote": "For example, structural equivalence based on network roles such as bridges and hubs can be inferred just by observing the immediate neighborhoods of each node.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does node2vec's DFS sampling reduce variance in characterizing 1-hop nodes with respect to the source node?",
+      "false_premise": "node2vec's DFS sampling reduces variance in characterizing 1-hop nodes with respect to the source node.",
+      "correction": "BFS reduces the variance in characterizing the distribution of 1-hop nodes with respect to the source node, not DFS.",
+      "evidence_quote": "Additionally, in BFS, nodes in the sampled neighborhoods tend to repeat many times.",
+      "difficulty": "medium"
+    }
+  ]
+}

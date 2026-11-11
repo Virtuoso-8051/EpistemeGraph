@@ -1,0 +1,6 @@
+{
+  "answer": "In node2vec, BFS-style walks tend to stay close to the starting node and repeatedly sample nodes from the same local neighborhood. This makes the neighborhood characterization more stable and less sensitive to the particular random walk path, so the embeddings have lower variance in what they consider \u201cnearby\u201d structure. The limitation is that BFS is biased toward immediate, local proximity and therefore is less able than DFS-style walks to explore farther-away nodes and capture more global or structural equivalence patterns in the graph.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a standard description of node2vec\u2019s BFS/DFS tradeoff and is well established in the literature, though wording can vary slightly across sources.",
+  "_token_nll": 0.20587395621346427
+}

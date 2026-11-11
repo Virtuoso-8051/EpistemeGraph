@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "HS",
+    "NS",
+    "SGM",
+    "RWG",
+    "VERTEX"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "HS",
+      "target_alias": "hierarchical softmax",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HS",
+      "source_alias": "hierarchical softmax",
+      "type": "IS_A",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "VERTEX",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "HS",
+      "target_alias": "Huffman coding tree",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HS",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "VERTEX",
+      "target_alias": "vertex frequency distribution",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SGM",
+      "source_alias": "skip-gram model",
+      "type": "REQUIRES",
+      "target": "HS",
+      "target_alias": "fixed tree shape",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NS",
+      "source_alias": "negative sampling",
+      "type": "USES",
+      "target": "VERTEX",
+      "target_alias": "unigram distribution",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NS",
+      "source_alias": "negative sampling",
+      "type": "REQUIRES",
+      "target": "VERTEX",
+      "target_alias": "frequency counts",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "HS",
+      "target_alias": "upfront frequency-based tree construction",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

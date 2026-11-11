@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "EdgeCluster's scalability comes from computing a truncated sparse eigen-decomposition (Lanczos-style) of the graph or edge-centric matrix",
+    "EdgeCluster's cost scales with the number of edges because it uses sparse matrix-vector products and never forms the dense modularity matrix",
+    "EdgeCluster's spectral features capture the same community structure as Modularity's leading eigenvectors, which explains its comparable performance",
+    "EdgeCluster first computes a low-dimensional spectral embedding and then clusters it with k-means"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The source says EdgeCluster uses k-means on the adjacency matrix and scales to graphs too large for spectral decomposition. The answer instead credits a spectral eigen-decomposition step for its scalability, which accepts the false premise and contradicts the source, and it invents details about Lanczos methods and sparse matrix-vector products."
+}

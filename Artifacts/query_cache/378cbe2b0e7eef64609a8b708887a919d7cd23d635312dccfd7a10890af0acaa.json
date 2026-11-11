@@ -1,0 +1,43 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "NODE2VEC",
+    "biased random walk procedure (BRWP)",
+    "uniform random walk (URW)",
+    "Macro-F1 score (MFS)"
+  ],
+  "triples": [
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "BRWP",
+      "type": "IS_A",
+      "target": "uniform random walk (URW)",
+      "target_alias": "URW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "uniform random walk (URW)",
+      "target_alias": "URW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram with negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram with negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

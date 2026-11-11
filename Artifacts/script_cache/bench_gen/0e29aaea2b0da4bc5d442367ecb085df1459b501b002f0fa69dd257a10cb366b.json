@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "For node2vec, what exact experimental result shows how much learning the search parameters p and q directly from data improves performance over using fixed hand-tuned values on complex networks?",
+      "why_unanswerable": "The passage says node2vec performs best on complex networks when p and q are learned from data, but it does not report any numerical comparison or exact improvement against fixed values.",
+      "evidence_quote": "While these search parameters have intuitive interpretations, we obtain best results on complex networks when we can learn them directly from data.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which specific benchmark datasets did node2vec use to demonstrate that its node embeddings outperform popular heuristic scores for link prediction, and what were the exact scores?",
+      "why_unanswerable": "The passage claims node2vec outperforms heuristic scores on link prediction, but it does not name the datasets or provide any exact metric values.",
+      "evidence_quote": "We showed how extensions of node embeddings to link prediction outperform popular heuristic scores designed specifically for this task.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many additional binary operators beyond those listed in Table 1 does node2vec support, and which operators are they?",
+      "why_unanswerable": "The passage states that node2vec permits additional binary operators beyond Table 1, but it does not enumerate them or give a count.",
+      "evidence_quote": "Our method permits additional binary operators beyond those listed in Table 1.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which network conditions did node2vec authors test the proposed extension on heterogeneous information networks, networks with explicit domain features for nodes and edges, or signed-edge networks, and what hardware was used for those experiments?",
+      "why_unanswerable": "The passage only says such network types are future extensions of node2vec; it does not report any experiments on them or any hardware details.",
+      "evidence_quote": "Future extensions of node2vec could involve networks with special structure such as heterogeneous information networks, networks with explicit domain features for nodes and edges and signed-edge networks.",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk's skip-gram objective make the model most effective only when the walk length is increased far beyond the fixed value used in the Flickr and BlogCatalog experiments?",
+      "false_premise": "DeepWalk's performance is driven by increasing the walk length far beyond the fixed value used in the parameter sensitivity experiments.",
+      "correction": "The passage says the walk length was fixed at t = 40 while other parameters were varied, and it does not claim that longer walks were the key factor for best performance.",
+      "evidence_quote": "For this test, we have fixed the window size and the walk length to sensible values (w = 10,t = 40) which should emphasize local structure.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does DeepWalk's use of node2vec-style biased second-order random walks explain its improvement on Flickr and BlogCatalog?",
+      "false_premise": "DeepWalk uses node2vec-style biased second-order random walks.",
+      "correction": "The passage discusses DeepWalk with random walks, but it does not describe node2vec-style biased second-order walks as part of the method.",
+      "evidence_quote": "Figure 5a shows the effects of increasing \u03b3, the number of random walks that we start from each vertex.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the comparison between DeepWalk on Flickr and BlogCatalog show about why the model needs many more labeled examples on BlogCatalog to reach the same accuracy?",
+      "false_premise": "DeepWalk needs many more labeled examples on BlogCatalog than on Flickr to reach the same accuracy.",
+      "correction": "The passage says the opposite: 1% of Flickr has approximately as many labeled examples as 10% of BlogCatalog, and the optimal dimensionality depends on the number of training examples.",
+      "evidence_quote": "Note that 1% of Flickr has approximately as many labeled examples as 10% of BlogCatalog).",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does DeepWalk's performance drop because increasing \u03b3 reduces the number of random walks per node?",
+      "false_premise": "Increasing \u03b3 reduces the number of random walks per node and harms DeepWalk's performance.",
+      "correction": "The passage defines \u03b3 as the number of random walks started per vertex and says most of the benefit is achieved by starting \u03b3 = 30 walks per node.",
+      "evidence_quote": "Figure 5a shows the effects of increasing \u03b3, the number of random walks that we start from each vertex.",
+      "difficulty": "medium"
+    }
+  ]
+}

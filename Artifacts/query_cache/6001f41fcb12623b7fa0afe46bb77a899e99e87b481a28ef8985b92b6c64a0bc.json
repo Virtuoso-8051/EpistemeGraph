@@ -1,0 +1,6 @@
+{
+  "answer": "LINE uses edge sampling when the network's edges are weighted (have non-uniform real-valued weights). Directly applying SGD to weighted edges makes the gradient magnitude scale with each weight, which makes the learning rate hard to choose and causes unstable training. Instead, LINE samples edges with probability proportional to their weights (via alias sampling) and then treats each sampled edge as a binary edge with unit weight. Each SGD update therefore has uniform scale. For networks that are already unweighted/binary, the sampling step is unnecessary and ordinary gradient updates apply.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I recall this from the LINE paper's optimization section, but I am reconstructing the exact wording and the condition from memory, so some detail may be imprecise.",
+  "_token_nll": null
+}

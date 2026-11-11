@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does the method in PASSAGE A differ from LINE in PASSAGE B in the type of information each relies on during learning, and what does each method claim to preserve or represent?",
+      "gold_answer": "The method in PASSAGE A is a scalable online approach that uses only local information to learn latent social representations of vertices, whereas LINE uses carefully designed objectives to preserve first-order and second-order proximities in the embedded space and applies edge sampling to make optimization efficient.",
+      "evidence_quote": "We propose a scalable online method which uses only local information.",
+      "evidence_quote_b": "We sample the edges with the probabilities proportional to their weights, and then treat the sampled edges as binary edges for model updating.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compared with LINE's handling of weighted edges, what is the key practical effect of increasing the random-walk parameter \u03b3 in the method from PASSAGE A, and when does that effect diminish?",
+      "gold_answer": "In PASSAGE A, increasing \u03b3 initially has a large effect on the results, but this effect quickly slows once \u03b3 is greater than 10; LINE instead handles weighted edges by sampling them proportionally to their weights and converting sampled edges to binary edges so that edge weights no longer affect the gradients.",
+      "evidence_quote": "Initially, increasing \u03b3 has a big effect in the results, but this effect quickly slows ( \u03b3 > 10).",
+      "evidence_quote_b": "With this sampling process, the objective function remains the same and the weights of the edges no longer affect the gradients.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What common network property do the method in PASSAGE A and LINE in PASSAGE B both aim to exploit, and how do their approaches to using that property differ?",
+      "gold_answer": "Both methods exploit graph structure, but PASSAGE A learns latent representations from random walks over local neighborhoods, while LINE explicitly preserves first-order and second-order proximities through its embedding objectives.",
+      "evidence_quote": "These results demonstrate that we are able to learn meaningful latent representations for vertices after only a small number of random walks.",
+      "evidence_quote_b": "In this paper, we will present carefully designed objectives that preserve the first-order and the second-order proximities.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does PASSAGE A report stable results for its random-walk sampling strategy, and how does that stability contrast with LINE's motivation for edge sampling?",
+      "gold_answer": "PASSAGE A reports that the effects of increasing \u03b3 are very consistent across different embedding dimensions and amounts of training data, while LINE introduces edge sampling because directly using stochastic gradient descent on highly weighted edges can cause gradient explosion and hurt performance.",
+      "evidence_quote": "The results are very consistent for different dimensions (Fig. 5b1, Fig. 5b3) and the amount of training data (Fig. 5b2, Fig. 5b4).",
+      "evidence_quote_b": "However, we show that directly deploying the stochastic gradient descent is problematic for real world information networks.",
+      "difficulty": "hard"
+    }
+  ]
+}

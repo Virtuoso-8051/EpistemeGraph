@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec's rigid one-hop neighborhood definition make it insensitive to both homophily and structural equivalence in networks?",
+      "false_premise": "node2vec uses a rigid one-hop neighborhood definition that makes it insensitive to both homophily and structural equivalence.",
+      "correction": "node2vec defines a flexible notion of a node\u2019s network neighborhood and can learn representations that organize nodes based on their network roles and/or communities they belong to.",
+      "evidence_quote": "Our key contribution is in defining a flexible notion of a node\u2019s network neighborhood.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec rely on convolutional filters instead of random walks to generate network neighborhoods for nodes?",
+      "false_premise": "node2vec uses convolutional filters rather than random walks to generate network neighborhoods.",
+      "correction": "node2vec uses a 2 nd order random walk approach to generate (sample) network neighborhoods for nodes.",
+      "evidence_quote": "We use a 2 nd order random walk approach to generate (sample) network neighborhoods for nodes.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes node2vec optimize its objective with Adam rather than stochastic gradient descent on a single hidden-layer feedforward neural network?",
+      "false_premise": "node2vec optimizes its objective with Adam rather than SGD on a single hidden-layer feedforward neural network.",
+      "correction": "The objective can be efficiently optimized using stochastic gradient descent (SGD) akin to backpropogation on just single hidden-layer feedforward neural networks.",
+      "evidence_quote": "The objective can be efficiently optimized using stochastic gradient descent (SGD) akin to backpropogation on just single hidden-layer feedforward neural networks.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compared with DeepWalk, why does node2vec only learn embeddings for nodes that share the same community and ignore nodes with similar structural roles?",
+      "false_premise": "node2vec only learns embeddings for nodes in the same community and ignores nodes with similar structural roles.",
+      "correction": "node2vec can learn representations that organize nodes based on their network roles and/or communities they belong to.",
+      "evidence_quote": "By choosing an appropriate notion of a neighborhood, node2vec can learn representations that organize nodes based on their network roles and/or communities they belong to.",
+      "difficulty": "hard"
+    }
+  ]
+}

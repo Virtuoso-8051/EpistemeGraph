@@ -1,0 +1,11 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The missing edges are chosen uniformly at random from the observed edges (evidence says chosen randomly from the full network, not from observed edges)",
+    "The constraint that no node is left isolated (evidence says the constraint is that the number of connected components remains fixed)",
+    "Attributing the constraint about isolated nodes to the papers' perturbation analysis"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence states the missing edges are chosen randomly from the full network subject to keeping the number of connected components fixed, but the answer says they are drawn from observed edges and constrains isolated nodes instead. The core of the answer, both the selection population and the constraint, contradicts the source, so it is unsupported despite the hedge."
+}

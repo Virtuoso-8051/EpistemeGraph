@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec\u2019s Macro-F1 score change as the fraction of missing edges increases, and why is robustness to missing edges especially important in some networks?",
+      "gold_answer": "The Macro-F1 score decreases roughly linearly as the fraction of missing edges increases, and the slope of that decrease is small. This robustness matters especially for evolving graphs such as citation networks and for biological networks where constructing the network is expensive.",
+      "evidence_quote": "As we can see in Figure 5b(top), the decrease in Macro-F1 score as the fraction of missing edges increases is roughly linear with a small slope.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What happens to node2vec\u2019s performance when noisy edges are added between randomly selected pairs of nodes, and in what kind of application is this robustness useful?",
+      "gold_answer": "When noisy edges are added, node2vec\u2019s performance declines slightly faster at first than in the missing-edges setting, but the rate of decrease in Macro-F1 score gradually slows over time. This robustness is useful in sensor networks, where the measurements used to construct the network are noisy.",
+      "evidence_quote": "Again, the robustness of node2vec to false edges is useful in several situations such as sensor networks where the measurements used for constructing the network are noisy.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what conditions were the missing edges selected in the perturbation experiment, and what constraint was imposed on that selection?",
+      "gold_answer": "The missing edges were chosen randomly. The selection was constrained so that the number of connected components in the network remained fixed.",
+      "evidence_quote": "The missing edges are chosen randomly, subject to the constraint that the number of connected components in the network remains fixed.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does node2vec scale with increasing graph size, and what specific result is reported for one million nodes?",
+      "gold_answer": "Node2vec scales linearly as the number of nodes increases. The paper reports that it can generate representations for one million nodes in less than four hours.",
+      "evidence_quote": "In Figure 6, we empirically observe thatnode2vec scales linearly with increase in number of nodes generating representations for one million nodes in less than four hours.",
+      "difficulty": "hard"
+    }
+  ]
+}

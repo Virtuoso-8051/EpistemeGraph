@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is mistaken. node2vec does not use negative sampling or asynchronous SGD to speed up the random-walk phase. Walk generation is a second-order biased random walk controlled by the return parameter p and in-out parameter q. Its per-step cost is reduced by precomputing alias tables, which give O(1) sampling of the next node for each (previous, current) edge pair. Negative sampling belongs to the later skip-gram embedding-learning phase, where it draws negative nodes (typically from a unigram distribution raised to the 3/4 power) to make the softmax objective tractable. Asynchronous SGD (Hogwild-style lock-free updates, as in word2vec) is at most a parallelization technique for that training step; it does not make sampling of walks faster.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I am fairly confident that node2vec's walk speedup comes from alias sampling and that negative sampling and SGD apply to the embedding-training step, though implementation details of the original code could differ slightly.",
+  "_token_nll": null
+}

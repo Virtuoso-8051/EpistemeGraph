@@ -1,0 +1,6 @@
+{
+  "answer": "Because node2vec generates many more distinct random-walk contexts than LINE\u2019s edge-sampling objective, it can expose the classifier to a much richer set of neighborhood patterns on BlogCatalog, where labels are highly overlapping and depend on higher-order proximity. LINE\u2019s samples are effectively one-shot edge observations, so it cannot repeatedly reuse the same local structure to reinforce useful signals. node2vec\u2019s walk-based sampling therefore acts like a stronger data-augmentation mechanism, which helps the downstream classifier separate classes better and yields a much larger Macro-F1 improvement on BlogCatalog.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This explanation matches the standard intuition for node2vec versus LINE on overlapping-label social networks, but the exact causal wording depends on the specific experimental setup and paper interpretation.",
+  "_token_nll": 0.32934239544445953
+}

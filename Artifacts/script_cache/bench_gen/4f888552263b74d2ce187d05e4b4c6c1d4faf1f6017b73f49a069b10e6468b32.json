@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does DeepWalk use stochastic gradient descent to optimize its parameters, and how are the derivatives obtained during training?",
+      "gold_answer": "DeepWalk optimizes its parameters with stochastic gradient descent (SGD). The derivatives are estimated using the back-propagation algorithm, and the learning rate is initially set to 2.5% at the beginning of training and then decreased linearly.",
+      "evidence_quote": "Stochastic gradient descent (SGD) [4] is used to optimize these parameters (Line 4, Algorithm 2).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What happens in DeepWalk when a sliding window of length 2w + 1 is applied to a random walk, and which vertex is mapped to a representation?",
+      "gold_answer": "DeepWalk slides a window of length 2w + 1 over the random walk and uses the central vertex as the target. In the example shown, the central vertex v1 is mapped to its representation \u03a6(v1), and the model is trained so that v1 co-occurs with its context vertices such as v3 and v5.",
+      "evidence_quote": "We slide a window of length 2 w + 1 over the random walk Wv4, mapping the central vertex v1 to its representation \u03a6(v1).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why can DeepWalk be parallelized with asynchronous stochastic gradient descent, and what property of the updates makes this possible?",
+      "gold_answer": "DeepWalk can use asynchronous stochastic gradient descent because the frequency distribution of vertices follows a power law, which creates a long tail of infrequent vertices. As a result, the updates that affect \u03a6 are sparse, so multiple workers can update shared parameters without acquiring locks.",
+      "evidence_quote": "This results in a long tail of infrequent vertices, therefore, the updates that affect \u03a6 will be sparse in nature.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under what conditions does parallelizing DeepWalk preserve predictive performance, and what speedup behavior is reported for the BlogCatalog and Flickr networks?",
+      "gold_answer": "Parallelizing DeepWalk preserves predictive performance when it is run with multiple workers using asynchronous SGD, despite not locking shared parameters. The reported results show that speedup on the BlogCatalog and Flickr networks remains consistent as the number of workers increases to 8, with no loss of predictive performance compared with running DeepWalk serially.",
+      "evidence_quote": "It also shows that there is no loss of predictive performance relative to the running DeepW alkserially (Figure 4b).",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "query_entities": [
+    "node2vec",
+    "LINE",
+    "social networks"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "BFS-like regime",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like regime",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "local neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like regime",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "community membership",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "DFS-like regime",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like regime",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "structural roles",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like regime",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "equivalence across distant parts of the graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "EMPHASIZES",
+      "target": "community similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "EMPHASIZES",
+      "target": "role similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "direct edge relationship between two nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "similarity of neighborhood distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "broader neighborhood context in social graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

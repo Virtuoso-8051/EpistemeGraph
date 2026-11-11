@@ -1,0 +1,6 @@
+{
+  "answer": "In the LINE paper (Tang et al., 2015), LINE(2nd) beats LINE(1st) on social network classification (e.g., Flickr and YouTube) mainly because first-order proximity only models direct ties between vertex pairs. Social networks are large and sparse, so many genuinely similar users share neighbors but have no direct edge between them, and first-order embeddings miss that similarity. Second-order proximity treats two vertices as similar when their neighborhood distributions overlap, using each vertex's context representation, so it captures shared-neighbor structure and generalizes to such pairs. This suggests that, for these datasets, neighborhood-overlap information carries more of the useful signal for predicting labels than direct adjacency alone. It does not show that second-order proximity is universally more important: the paper's best results come from concatenating the first- and second-order embeddings, which indicates the two capture complementary information. The result is specific to these datasets and this evaluation setup.",
+  "confidence": 0.7,
+  "confidence_reasoning": "The core explanation (sparsity, shared neighbors, complementarity with the combined model) matches my understanding of the LINE paper, but I am recalling exact framing and dataset details from memory without verification.",
+  "_token_nll": null
+}

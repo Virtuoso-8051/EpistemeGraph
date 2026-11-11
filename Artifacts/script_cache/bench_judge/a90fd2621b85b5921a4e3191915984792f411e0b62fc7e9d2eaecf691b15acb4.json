@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Optimization uses a linearly decaying learning rate, as in word2vec (not in the evidence)",
+    "The objective is approximated with negative sampling or hierarchical softmax (not stated in the provided evidence)",
+    "Common implementations such as the reference C code and gensim follow the same approach (not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the Adam premise and says node2vec uses SGD on a Skip-gram-style shallow model, extended from word2vec with second-order random walks, all of which the evidence supports. It also adds details not in the provided evidence: the linearly decaying learning rate, negative sampling and hierarchical softmax, and the implementation specifics. These are plausible background but unsupported here."
+}

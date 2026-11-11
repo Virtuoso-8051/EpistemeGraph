@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does LINE(1st) compare with LINE(2nd) on the Flickr network when the network is very sparse, and what happens as more links are added?",
+      "gold_answer": "When the Flickr network is very sparse, LINE(1st) outperforms LINE(2nd). As the percentage of links increases, LINE(2nd) begins to outperform LINE(1st), showing that second-order proximity is weak in extremely sparse networks but works better when there are enough neighbors.",
+      "evidence_quote": "As we gradually increase the percentage of links, the LINE(2nd) begins to outperform the LINE(1st).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which degree conditions does LINE(2nd) fail to work well on the original Youtube network, and how is this reflected in the grouped results?",
+      "gold_answer": "On the original Youtube network, LINE(2nd) outperforms LINE(1st) except for the first degree group. This indicates that second-order proximity does not work well for nodes with low degree.",
+      "evidence_quote": "In the original network, the LINE(2nd) outperforms LINE(1st) except for thefirst group, which confirms that the second-order proximity does not work well for nodes with a low degree.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What happens to the performance of LINE(1st) and LINE(2nd) when the embedding dimension d becomes too large?",
+      "gold_answer": "The performance of both LINE(1st) and LINE(2nd) drops when the dimension becomes too large. The passage does not give a specific threshold, only that overly large dimensionality hurts performance.",
+      "evidence_quote": "We can see that the performance of the LINE(1st) or LINE(2nd) drops when the dimension becomes too large.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE(2nd) on the reconstructed Youtube network compare with DeepWalk across the degree groups, and what does the reconstructed dense network change?",
+      "gold_answer": "On the reconstructed Youtube network, LINE(2nd) outperforms DeepWalk in all degree groups. The dense reconstructed network also improves the performance of LINE(1st) and LINE(2nd), especially for LINE(2nd), which preserves second-order proximity.",
+      "evidence_quote": "We can also see that the LINE(2nd) model on the reconstructed network outperforms DeepWalk in all the groups.",
+      "difficulty": "medium"
+    }
+  ]
+}

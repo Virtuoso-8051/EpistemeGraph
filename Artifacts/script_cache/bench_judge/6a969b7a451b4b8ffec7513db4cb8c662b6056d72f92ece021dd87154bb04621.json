@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The claim that DeepWalk's uniform walks mainly reflect community-like proximity is not stated in the evidence; the evidence only says DeepWalk's sampling is a special case of node2vec with p=q=1.",
+    "The claim that breadth-first sampling captures structural equivalence and depth-first sampling captures homophily is a mapping of BFS/DFS to roles/communities that the provided evidence does not explicitly state, though it is consistent with the paper's framing."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, citing the evidence that node2vec can organize nodes by both network roles and communities and that DeepWalk is the p=q=1 special case. The only weakly unsupported elements are the characterization of DeepWalk's walks as mainly community-like and the explicit BFS/DFS-to-role/community mapping, which are peripheral to the core correction."
+}

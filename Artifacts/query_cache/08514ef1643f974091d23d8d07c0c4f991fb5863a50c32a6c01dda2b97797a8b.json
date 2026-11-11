@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk generalizes language-modeling ideas by treating a graph like a corpus of sentences: it first performs short random walks on the graph, and each walk is viewed as a sequence of nodes analogous to a sentence of words. It then applies the Skip-gram idea from word2vec, learning node embeddings so that nodes appearing in similar walk contexts have similar vectors. In this way, the graph\u2019s local neighborhood structure plays the role of word context, and the model learns representations that capture graph proximity and community structure without requiring explicit graph features.",
+  "confidence": 0.96,
+  "confidence_reasoning": "This is a standard and well-established description of DeepWalk and its connection to Skip-gram language modeling, so the factual risk is low.",
+  "_token_nll": 0.18702448527018228
+}

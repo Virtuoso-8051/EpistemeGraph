@@ -1,0 +1,64 @@
+{
+  "query_entities": [
+    "matrix representations of graph (MRG)",
+    "unsupervised feature learning (UFL)"
+  ],
+  "triples": [
+    {
+      "source": "matrix representations of graph (MRG)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "adjacency matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix representations of graph (MRG)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "graph Laplacian",
+      "target_alias": "normalized variants",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix representations of graph (MRG)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "similarity/co-occurrence matrices",
+      "target_alias": "random-walk or diffusion matrices",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised feature learning (UFL)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "linear-algebraic matrix factorization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised feature learning (UFL)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "low-rank approximation problems",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned node embeddings",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "graph matrix",
+      "target_alias": "chosen graph matrix",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned node embeddings",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "coordinates in a spectral subspace",
+      "target_alias": "given by eigenvectors/singular vectors of that matrix",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

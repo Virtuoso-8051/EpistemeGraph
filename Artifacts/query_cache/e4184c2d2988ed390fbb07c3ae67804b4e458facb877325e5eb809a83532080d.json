@@ -1,0 +1,48 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "LINE"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "labeled data are sparse",
+      "target_alias": "low-supervision / semi-supervised settings where only a small fraction of nodes have labels",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "large graphs",
+      "target_alias": "graphs with billions of edges",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "efficiency",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "scalability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparse labels",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

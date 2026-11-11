@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "LINE(1st+2nd) is applied to the language network as a fully unsupervised method",
+    "When the two embeddings are combined, the dimension weights can be tuned from unlabeled data, e.g. via held-out edge reconstruction or link prediction",
+    "The method is fully unsupervised so LINE(1st+2nd) handles unsupervised tasks, which contradicts the paper's statement that it is only applied to supervised tasks"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise and claims that weights for LINE(1st+2nd) can be tuned from unlabeled data. The paper says weighting is hard in unsupervised tasks, so LINE(1st+2nd) is applied only to supervised ones. The generic description of first- and second-order proximity is correct, but it does not rescue the core claim."
+}

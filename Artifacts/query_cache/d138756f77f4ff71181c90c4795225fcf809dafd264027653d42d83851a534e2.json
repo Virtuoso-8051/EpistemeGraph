@@ -1,0 +1,57 @@
+{
+  "query_entities": [
+    "network embedding",
+    "second-order proximity",
+    "second-order neighbor"
+  ],
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "similarity between vertices' neighborhood distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "dot product of neighborhood vectors",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "cosine similarity of neighborhood vectors",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Jaccard-style neighborhood overlap",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "vertices with no common in-neighbors or out-neighbors",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "empty neighborhood overlap",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "0",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

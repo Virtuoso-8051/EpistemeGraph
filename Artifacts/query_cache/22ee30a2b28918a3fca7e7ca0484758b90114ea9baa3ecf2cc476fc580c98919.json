@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is largely mistaken. LINE (Tang et al., 2015) is not restricted to undirected, unweighted networks. Its edge-sampling optimization handles directed, undirected, and weighted networks. The closest true caveat is that its first-order proximity objective models symmetric (undirected) ties, so for directed graphs the second-order proximity variant, with separate vertex and context embeddings, is the one that captures edge direction. Restrictions like the undirected-unweighted one are often attributed to methods such as DeepWalk or some matrix-factorization approaches, not to LINE.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I'm fairly confident LINE's paper claims support for directed, undirected, and weighted networks, but the question's framing may reflect a specific source's claim I can't verify, and the first-order symmetry nuance adds some uncertainty.",
+  "_token_nll": null
+}

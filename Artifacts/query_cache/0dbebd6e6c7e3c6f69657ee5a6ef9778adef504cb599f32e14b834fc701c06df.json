@@ -1,0 +1,61 @@
+{
+  "query_entities": [
+    "LINE",
+    "first-order proximity",
+    "joint probability",
+    "undirected edge",
+    "empirical probability",
+    "edge weight",
+    "graph"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "joint probability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "joint probability",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "undirected edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "joint probability",
+      "source_alias": "",
+      "type": "USES",
+      "target": "sigmoid",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "joint probability",
+      "source_alias": "",
+      "type": "USES",
+      "target": "dot product",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "empirical probability",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "edge weight",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "empirical probability",
+      "source_alias": "",
+      "type": "USES",
+      "target": "graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

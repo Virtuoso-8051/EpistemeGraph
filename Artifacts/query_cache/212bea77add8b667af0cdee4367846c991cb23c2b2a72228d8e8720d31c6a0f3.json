@@ -1,0 +1,6 @@
+{
+  "answer": "In node2vec's second-order biased random walk, a walk that has just traversed edge (t, v) is at current node v and chooses the next node x among v's neighbors. The unnormalized transition weight is \u03c0_vx = \u03b1_pq(t,x)\u00b7w_vx, where \u03b1_pq(t,x) depends on the distance d_tx between the previous node t and the candidate x:\n\n- \u03b1_pq(t,x) = 1/p if d_tx = 0, i.e., x = t (the walk returns to the previous node).\n- \u03b1_pq(t,x) = 1 if d_tx = 1, i.e., x is also a neighbor of t (a common neighbor of t and v, so the walk stays at a distance-1 'BFS-like' step from t).\n- \u03b1_pq(t,x) = 1/q if d_tx = 2, i.e., x is not adjacent to t and is at distance 2 from it (the walk moves outward, 'DFS-like').\n\nHere p is the return parameter (controls likelihood of immediately revisiting the previous node; high p discourages backtracking) and q is the in-out parameter (q > 1 keeps the walk local/BFS-like, q < 1 favors outward exploration/DFS-like). The weights are then normalized over the neighbors of v to give the transition probabilities.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The distance-based definition of \u03b1_pq (1/p for d=0, 1 for d=1, 1/q for d=2) and the roles of p and q are standard from the Grover & Leskovec 2016 paper, though the exact wording of the BFS/DFS interpretation is a paraphrase.",
+  "_token_nll": null
+}

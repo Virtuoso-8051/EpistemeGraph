@@ -1,0 +1,6 @@
+{
+  "answer": "The question's premise is not supported. Node2vec does not benefit from shrinking its embedding dimension well below 100 rather than letting it saturate near that value. In the original paper (Grover & Leskovec, 2016) the default was d=128, and sensitivity results show downstream performance generally rising with dimension and then plateauing. Going much lower usually costs accuracy, because the embeddings lose capacity to separate nodes. The real benefits of smaller dimensions are practical: lower memory use, faster training and inference, and less storage. Whether a dimension is 'enough' depends on the graph's size and structure. Small or simple graphs can saturate at lower dimensions, so a modest reduction may be harmless there, but that is a cost-accuracy trade-off, not an inherent advantage of going below 100.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident the premise is unsupported and that performance generally plateaus rather than improving when shrinking, but exact saturation points vary by dataset and I am recalling the paper's sensitivity analysis from memory.",
+  "_token_nll": null
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "In the DeepWalk paper (Perozzi et al., 2014), DeepWalk is reported to outperform SpectralClustering and Modularity on YouTube multi-label classification. The comparison covers Micro-F1 and Macro-F1 across labeled-training fractions from about 1% to 10%, and DeepWalk stays ahead of both baselines in those settings. The gap is modest at the smallest labeled fractions and is generally a few points, though I cannot reliably recall the exact per-setting numbers. The paper presents this as evidence that DeepWalk's learned representations beat these spectral and modularity-based embeddings even on a graph large enough that the baselines still ran.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The qualitative conclusion that DeepWalk beats these baselines on YouTube matches my recollection of the paper, but I cannot verify the exact numbers or the precise margins at each labeling fraction.",
+  "_token_nll": null
+}

@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "A drop could occur if the total sampling budget is fixed so a larger \u03b3 forces fewer or shorter walks per node (speculative, not in evidence).",
+    "That would most plausibly hurt on large, sparse graphs where nodes need longer walks, and matter less on small or dense graphs (not supported by the evidence)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the premise, stating that \u03b3 is the number of walks per node and that raising it adds walks. However, it then speculates about fixed-budget conditions and graph types, which the evidence does not contain. It does flag this as inference, but it still never mentions that most of the benefit is reached at \u03b3 = 30."
+}

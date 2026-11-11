@@ -1,0 +1,43 @@
+{
+  "query_entities": [
+    "scale-free graph",
+    "random walk (RW)",
+    "power-law distribution",
+    "vertex frequency",
+    "exponent"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "vertex frequency in random walks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "vertex frequency in random walks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "power-law distribution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "power-law distribution",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "word frequency in language",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "power-law distribution",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "exponent between 2 and 3",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

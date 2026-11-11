@@ -1,0 +1,80 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "graph factorization"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "randomness",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "randomness",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "noisy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "graph very sparse",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "too little structure to learn from",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "cleaner embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "more stable embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "more scattered embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "noisy embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

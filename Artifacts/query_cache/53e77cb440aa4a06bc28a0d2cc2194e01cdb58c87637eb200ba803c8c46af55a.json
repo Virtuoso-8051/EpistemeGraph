@@ -1,0 +1,6 @@
+{
+  "answer": "SpectralClustering forms a low-dimensional embedding by taking the top-d eigenvectors of the modularity matrix and using each node\u2019s coordinates in that eigenvector space as its representation. Concretely, if the modularity matrix is B and its leading d eigenvectors are v1, ..., vd, then each node i is mapped to the vector [v1(i), ..., vd(i)]. This d-dimensional feature vector captures the strongest community-structure signals in the graph, and a classifier can then be trained on these embeddings instead of the original adjacency data.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This is the standard spectral embedding procedure for modularity-based clustering, though exact implementation details can vary by source and whether eigenvectors are normalized or centered.",
+  "_token_nll": 0.19174590572234124
+}

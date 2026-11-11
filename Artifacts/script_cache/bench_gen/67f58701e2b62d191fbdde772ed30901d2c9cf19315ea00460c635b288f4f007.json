@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How many latent dimensions did DeepWalk use in the Karate network visualization shown in Figure 1b, and what exact value was reported for the embedding size in that experiment?",
+      "why_unanswerable": "The passage says DeepWalk is shown with 2 latent dimensions, but it does not report any separate embedding-size hyperparameter beyond that figure caption-level detail, so the exact value asked for is not explicitly given as a reported experimental setting.",
+      "evidence_quote": "Figure 1b shows the output of our method with 2 latent dimensions.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What was the exact micro-F1 score achieved by DeepWalk on the challenging multilabel network classification problems in large heterogeneous graphs?",
+      "why_unanswerable": "The passage states that DeepWalk was evaluated on multilabel network classification problems and that it outperforms other methods, but it gives no numerical performance metric such as micro-F1.",
+      "evidence_quote": "To demonstrate DeepW alk\u2019s potential in real world scearXiv:1403.6652v2 [cs.SI] 27 Jun 2014 narios, we evaluate its performance on challenging multilabel network classification problems in large heterogeneous graphs.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which specific datasets did DeepWalk use for the large heterogeneous graph classification experiments, and how many nodes were in each dataset?",
+      "why_unanswerable": "The passage mentions large heterogeneous graphs and multilabel network classification, but it does not name any datasets or provide node counts for the evaluation graphs.",
+      "evidence_quote": "To demonstrate DeepW alk\u2019s potential in real world scearXiv:1403.6652v2 [cs.SI] 27 Jun 2014 narios, we evaluate its performance on challenging multilabel network classification problems in large heterogeneous graphs.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what hardware configuration or parallel computing setup did DeepWalk report its runtime when claiming that it is trivially parallelizable?",
+      "why_unanswerable": "The passage claims DeepWalk is trivially parallelizable, but it does not describe any actual hardware, number of cores, cluster setup, or runtime benchmark conditions.",
+      "evidence_quote": "Our representations are general, and can be combined with any classification method (including iterative inference methods).",
+      "difficulty": "hard"
+    }
+  ]
+}

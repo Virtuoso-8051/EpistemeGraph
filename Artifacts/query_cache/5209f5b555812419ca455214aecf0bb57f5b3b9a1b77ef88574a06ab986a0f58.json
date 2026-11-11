@@ -1,0 +1,82 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "Skip-gram objective (SGO)",
+    "Skip-gram model (SGM)",
+    "classical stochastic gradient descent (CSGD)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "Adam",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "Skip-gram model (SGM)",
+      "target_alias": "SGM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased second-order random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "SGO",
+      "type": "OPTIMIZES",
+      "target": "classical stochastic gradient descent (CSGD)",
+      "target_alias": "SGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "SGO",
+      "type": "APPROXIMATES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "SGO",
+      "type": "APPROXIMATES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classical stochastic gradient descent (CSGD)",
+      "source_alias": "SGD",
+      "type": "USES",
+      "target": "linearly decaying learning rate",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "SGM",
+      "type": "IS_A",
+      "target": "shallow, essentially linear embedding model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "SGM",
+      "type": "REFUTED",
+      "target": "deep feedforward network trained with adaptive optimizers",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

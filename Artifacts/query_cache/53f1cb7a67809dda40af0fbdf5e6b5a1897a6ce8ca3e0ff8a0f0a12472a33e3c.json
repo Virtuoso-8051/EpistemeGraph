@@ -1,0 +1,92 @@
+{
+  "query_entities": [
+    "LINE",
+    "node2vec",
+    "co-occurrence counts",
+    "random-walk sequences",
+    "skip-gram model",
+    "second-order/edge-preserving formulation"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "observed edge/co-occurrence counts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "logarithm",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "weighted factorization of co-occurrence counts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "log(c_ij) or a shifted/normalized version of it",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "second-order/edge-preserving formulation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "MATCHES",
+      "target": "empirical co-occurrence statistics of the graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "DOES_NOT_USE",
+      "target": "log of raw co-occurrence counts",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "random-walk sequences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "TRAINS_ON",
+      "target": "sampled node-context pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

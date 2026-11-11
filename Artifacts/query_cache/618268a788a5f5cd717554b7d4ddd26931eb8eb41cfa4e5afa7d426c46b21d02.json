@@ -1,0 +1,65 @@
+{
+  "query_entities": [
+    "LINE",
+    "negative sampling (NS)",
+    "time complexity (TC)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling (NS)",
+      "target_alias": "NS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "K = 5 negative samples per edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling (NS)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "per-step cost O(d(K+1))",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "per-step cost O(d(K+1))",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "linear growth in K",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "per-step cost O(d(K+1))",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "linear growth in embedding dimension d",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "no additional complexity term beyond O(d(K+1))",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "effect of changing K described in paper",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

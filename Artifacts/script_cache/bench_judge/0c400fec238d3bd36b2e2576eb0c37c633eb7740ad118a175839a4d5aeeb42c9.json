@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Node embeddings were turned into edge features using binary operators (Average, Hadamard, Weighted-L1, Weighted-L2), which the provided evidence does not state.",
+    "A logistic regression classifier was trained on the edge features, which the evidence does not state.",
+    "The paper reports AUC and F1 results for link prediction, which the evidence does not state.",
+    "The paper has no Table 3 of heuristic scores, which contradicts the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says it cannot give classifier hyperparameters and does not accept the premise. But it asserts specifics (logistic regression, the binary operators, AUC and F1) that the evidence does not contain, and it wrongly doubts that Table 3 exists, since the evidence shows Table 3 lists the heuristic scores. Those specifics may be true of the real paper, but they are not supported here."
+}

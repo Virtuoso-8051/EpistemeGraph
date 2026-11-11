@@ -1,0 +1,70 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "vertex frequency distribution",
+    "random walks",
+    "training pairs",
+    "vertex visitation frequencies",
+    "negative-sampling/unigram distribution",
+    "implementation",
+    "theoretical derivation"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "vertex frequency distribution",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "training pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex visitation frequencies",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "vertex frequency distribution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex frequency distribution",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "negative-sampling/unigram distribution",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "negative-sampling/unigram distribution",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "particular implementation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative-sampling/unigram distribution",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "theoretical derivation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

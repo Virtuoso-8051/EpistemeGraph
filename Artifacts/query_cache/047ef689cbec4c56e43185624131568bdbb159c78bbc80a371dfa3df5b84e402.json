@@ -1,0 +1,94 @@
+{
+  "query_entities": [
+    "LINE",
+    "embedding",
+    "first-order proximity",
+    "second-order proximity",
+    "KL-divergence",
+    "empirical edge distributions",
+    "model distributions",
+    "negative sampling"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "newly arrived vertex",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "at least one observed edge to existing vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "local neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "learned embeddings of adjacent nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "recommended optimization objective",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "recommended optimization objective",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "recommended optimization objective",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "KL-divergence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "KL-divergence",
+      "source_alias": "",
+      "type": "BETWEEN",
+      "target": "empirical edge distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "KL-divergence",
+      "source_alias": "",
+      "type": "BETWEEN",
+      "target": "model distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "recommended optimization objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec characterize the blue-colored nodes in the novel network when the nodes are clustered using the same network with setp = 1 and q = 2?",
+      "gold_answer": "Node2vec embeds the blue-colored nodes close together, and these nodes represent characters that act as bridges between different sub-plots of the novel. In this setting, the clusters correspond to structural equivalence rather than community membership.",
+      "evidence_quote": "Here node2vec obtains a complementary assignment of node to clusters such that the colors correspond to structural equivalence as illustrated in Figure 3(bottom).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does the passage say that the community clusters discovered by node2vec closely relate to homophily in the character network?",
+      "gold_answer": "Because the edges between characters are based on coappearances, nodes that frequently interact are grouped into the same clusters or communities. This makes the discovered communities align with homophily, since similar or interacting characters are connected.",
+      "evidence_quote": "Since the edges between characters are based on coappearances, we can conclude this characterization closely relates with homophily.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What different kinds of node groupings does node2vec reveal in the novel network, and how do those groupings differ in meaning?",
+      "gold_answer": "Node2vec can reveal clusters based on community structure, where characters frequently interact in major sub-plots, and it can also reveal clusters based on structural equivalence when using setp = 1 and q = 2. The first grouping reflects homophily and interaction patterns, while the second groups nodes by similar roles such as bridges or peripheral characters.",
+      "evidence_quote": "One could assign alternate semantic interpretations to these clusters of nodes, but the key takeaway is that node2vec is not tied to a particular notion of equivalence.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which experimental tasks are the node2vec feature representations evaluated according to the passage?",
+      "gold_answer": "The node2vec feature representations are evaluated on standard supervised learning tasks. Specifically, the experiments use multilabel classification for nodes and link prediction for edges.",
+      "evidence_quote": "Our experiments evaluate the feature representations obtained through node2vec on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "difficulty": "easy"
+    }
+  ]
+}

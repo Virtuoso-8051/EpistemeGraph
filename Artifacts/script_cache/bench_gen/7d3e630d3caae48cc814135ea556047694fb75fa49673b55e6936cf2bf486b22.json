@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does SkipGram use logistic regression to speed up training when predicting neighbors in the random walk, instead of the hierarchical softmax approximation described in the method?",
+      "false_premise": "SkipGram uses logistic regression to speed up training for predicting neighbors in the random walk.",
+      "correction": "SkipGram uses hierarchical softmax to approximate the probability distribution and speed up training, not logistic regression.",
+      "evidence_quote": "To speed the training time, Hierarchical Softmax [29,30] can be used to approximate the probability distribution.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does SkipGram's objective of classifying vertices in a binary tree path reduce the cost from O(|V|) to O(log|V|), and why is Huffman coding unnecessary in that setting?",
+      "false_premise": "SkipGram's objective is to classify vertices in a binary tree path, and Huffman coding is unnecessary.",
+      "correction": "SkipGram maximizes the probability of neighbors in the walk, and Huffman coding is used to reduce access time for frequent elements in the tree.",
+      "evidence_quote": "Given the representation of vj, we would like to maximize the probability of its neighbors in the walk (line 3).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What dataset does SkipGram train on, and how does it use labeled sentences rather than random walks to generate the collocations within the window w?",
+      "false_premise": "SkipGram trains on labeled sentences rather than random walks to generate collocations within the window w.",
+      "correction": "SkipGram iterates over collocations in random walks, not labeled sentences.",
+      "evidence_quote": "Algorithm 2 iterates over all possible collocations in random walk that appear within the window w (lines 1-2).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does SkipGram optimize its parameters with Adam instead of SGD, and how does that choice affect the model parameter set {\u03a6,T}?",
+      "false_premise": "SkipGram optimizes its parameters with Adam instead of SGD.",
+      "correction": "SkipGram uses stochastic gradient descent (SGD) to optimize the parameters {\u03a6,T}.",
+      "evidence_quote": "Stochastic gradient descent (SGD) [4] is used to optimize these parameters (Line 4, Algorithm 2).",
+      "difficulty": "hard"
+    }
+  ]
+}

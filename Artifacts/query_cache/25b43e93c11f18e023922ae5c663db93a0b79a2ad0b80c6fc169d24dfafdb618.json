@@ -1,0 +1,98 @@
+{
+  "query_entities": [
+    "short random walks",
+    "latent representation",
+    "latent states",
+    "outputs",
+    "labels",
+    "local neighborhoods",
+    "local smoothing",
+    "interpolation mechanism",
+    "distance between latent dimensions",
+    "learned representation space",
+    "features",
+    "states"
+  ],
+  "triples": [
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "generalization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network\u2019s latent representation",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "nearby latent states correspond to similar outputs or labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "walk length short enough to mostly explore local neighborhoods rather than jumping across unrelated regions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "local neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "local smoothing or interpolation mechanism",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "local smoothing or interpolation mechanism",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "shared structure among nearby states",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "local smoothing or interpolation mechanism",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "generalize from observed examples to similar unseen ones",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "distance between latent dimensions",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "measure of similarity or dissimilarity in the learned representation space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small distances",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "closely related features or states",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "larger distances",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "more distinct or less related features or states",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

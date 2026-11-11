@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the Skip-gram model use graph cuts to enforce homophily when learning word embeddings from the passage's network data?",
+      "false_premise": "Skip-gram uses graph cuts and a homophily-based objective on network data.",
+      "correction": "Skip-gram is described as learning word representations with a neighborhood-preserving likelihood objective over words in a document, not graph cuts or network classification.",
+      "evidence_quote": "In particular, the Skip-gram model [21] aims to learn continuous feature representations for words by optimizing a neighborhood preserving likelihood objective.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do the graph-based spectral methods in the passage scale to large networks while avoiding eigendecomposition, especially compared with PCA and IsoMap?",
+      "false_premise": "The spectral methods avoid eigendecomposition and scale well to large networks.",
+      "correction": "The passage says these methods rely on eigendecomposition and are hard to scale to large networks.",
+      "evidence_quote": "In terms of computational efficiency, eigendecomposition of a data matrix is expensive unless the solution quality is significantly compromised with approximations, and hence, these methods are hard to scale to large networks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does Skip-gram optimize a classification loss over adjacency matrices instead of using negative sampling for nearby words?",
+      "false_premise": "Skip-gram optimizes a classification loss over adjacency matrices rather than a neighborhood-based word objective with negative sampling.",
+      "correction": "Skip-gram is presented as optimizing a neighborhood-preserving likelihood objective for words, learned with SGD and negative sampling.",
+      "evidence_quote": "The word feature representations are learned by optmizing the likelihood objective using SGD with negative sampling [22].",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What makes spectral clustering effective here because it assumes structural equivalence rather than homophily?",
+      "false_premise": "Spectral clustering is effective because it assumes structural equivalence instead of homophily.",
+      "correction": "The passage says spectral clustering makes a strong homophily assumption that graph cuts will be useful for classification.",
+      "evidence_quote": "For instance, spectral clustering makes a strong homophily assumption that graph cuts will be useful for classification [29].",
+      "difficulty": "medium"
+    }
+  ]
+}

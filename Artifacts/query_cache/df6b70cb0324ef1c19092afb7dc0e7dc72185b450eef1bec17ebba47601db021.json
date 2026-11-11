@@ -1,0 +1,115 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "streaming variant",
+    "random walk",
+    "skip-gram",
+    "stochastic gradient descent"
+  ],
+  "triples": [
+    {
+      "source": "streaming DeepWalk variant",
+      "source_alias": "",
+      "type": "REPLACES",
+      "target": "batch pipeline",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming DeepWalk variant",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "random walk",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming DeepWalk variant",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming DeepWalk variant",
+      "source_alias": "",
+      "type": "USES",
+      "target": "stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming DeepWalk variant",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "online learning while graph is growing",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming DeepWalk variant",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "storage efficiency without storing whole graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "early embeddings",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "incomplete and biased view of graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes with few observed neighbors",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "poorly estimated vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embeddings",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "drift as new data arrives",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding stability",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "periodic retraining",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "embedding stability",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "replaying old walks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "embedding stability",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "regularization",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "extra mechanisms for consistency",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "additional cost and complexity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

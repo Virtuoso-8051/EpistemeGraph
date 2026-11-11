@@ -1,0 +1,6 @@
+{
+  "answer": "Affinity-graph embedding methods become inefficient on large-scale networks because they typically require constructing and operating on a dense affinity/similarity graph, which grows very quickly with the number of nodes. As the network gets larger, both memory use and computation increase sharply, making the methods hard to scale. The main computational bottleneck is the repeated pairwise similarity/affinity calculations and the resulting graph operations, especially the eigen-decomposition or similar matrix factorization steps on the large affinity matrix.",
+  "confidence": 0.92,
+  "confidence_reasoning": "This is a standard limitation of affinity-graph embedding methods, and the bottleneck is usually the large pairwise affinity matrix and its spectral decomposition, though exact details depend on the specific passage.",
+  "_token_nll": 0.22073531795192408
+}

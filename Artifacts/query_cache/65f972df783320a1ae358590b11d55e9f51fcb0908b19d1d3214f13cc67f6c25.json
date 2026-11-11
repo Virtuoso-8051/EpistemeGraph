@@ -1,0 +1,68 @@
+{
+  "query_entities": [
+    "random walk",
+    "network neighborhood",
+    "first-order proximity",
+    "LINE",
+    "DeepWalk",
+    "second-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk",
+      "target_alias": "RW",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "network neighborhood",
+      "target_alias": "NN",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "network neighborhood",
+      "target_alias": "NN",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "RW",
+      "type": "GENERATES",
+      "target": "multi-hop co-occurrences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "separate objectives",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

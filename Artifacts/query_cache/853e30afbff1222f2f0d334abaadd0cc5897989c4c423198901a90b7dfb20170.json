@@ -1,0 +1,6 @@
+{
+  "answer": "The PCA-based objective preserves local neighborhoods because it is built to keep nearby nodes close in the learned embedding space, which maintains the graph\u2019s local similarity structure. At the same time, it avoids eigendecomposition on large networks by replacing the expensive global spectral decomposition step with an optimization objective that can be solved iteratively using only matrix-vector or sampled neighborhood computations, making it much more scalable.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a high-level explanation consistent with standard PCA/spectral-embedding intuition, but the exact wording depends on the specific passage, which I do not have.",
+  "_token_nll": 0.2280458900017467
+}

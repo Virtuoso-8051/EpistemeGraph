@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "node2vec",
+    "BFS",
+    "DFS",
+    "structural equivalence",
+    "homophily"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "USES",
+      "target": "biased second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "",
+      "type": "CONTROLS",
+      "target": "biased second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "source_alias": "",
+      "type": "CONTROLS",
+      "target": "biased second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased second-order random walk",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "breadth-first sampling (BFS)",
+      "target_alias": "BFS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first sampling (BFS)",
+      "source_alias": "BFS",
+      "type": "APPROXIMATES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first sampling (DFS)",
+      "source_alias": "DFS",
+      "type": "CAPTURES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first sampling (BFS)",
+      "source_alias": "BFS",
+      "type": "REPRESENTS",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first sampling (DFS)",
+      "source_alias": "DFS",
+      "type": "REPRESENTS",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like walks",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "local neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like walks",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The AI accepts the false premise that the comparison on PPI with 10% labeled data is against DeepWalk; the evidence shows the 10% labeled-data PPI comparison is against LINE (up to 41.1% improvement), not DeepWalk.",
+    "Claims node2vec's Micro-F1 is roughly 20% higher than DeepWalk's with 10% labeled data on PPI; the evidence does not report this.",
+    "Claims the gap narrows as training fraction grows; the evidence does not discuss this trend.",
+    "Claims the PPI comparison with DeepWalk at 10% labeled data exists in the paper; the evidence only gives a 50% labeled-data Macro-F1 table where node2vec's PPI gain over DeepWalk is about 1.3% (0.1791 vs 0.1768)."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise that node2vec was compared with DeepWalk on PPI using 10% labeled data, when the passage actually compares node2vec with LINE (up to 41.1% gain on PPI at 10% labels). The specific ~20% Micro-F1 figure and narrowing-gap claim are not in the evidence, making the core of the answer unsupported."
+}

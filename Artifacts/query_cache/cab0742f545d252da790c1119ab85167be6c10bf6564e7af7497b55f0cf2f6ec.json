@@ -1,0 +1,6 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding) is designed to scale roughly linearly with the size of the graph. Its overall training time is typically O(|E|) per epoch for first-order or second-order proximity objectives, and with negative sampling the cost is proportional to the number of sampled negatives as well. In practice, this means the runtime grows approximately linearly with the number of edges, and also linearly with the number of vertices only through the cost of maintaining/updating embeddings and sampling; the dominant factor is usually the number of edges. So, for a fixed embedding dimension and fixed number of negative samples, LINE scales about linearly in both |E| and |V|, with |E| being the main driver.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard description of LINE as a linear-time method for large graphs, though exact complexity can vary with implementation details such as negative sampling and epochs.",
+  "_token_nll": 0.16832231116418395
+}

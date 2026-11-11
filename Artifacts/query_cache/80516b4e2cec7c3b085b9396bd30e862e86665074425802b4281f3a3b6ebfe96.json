@@ -1,0 +1,171 @@
+{
+  "query_entities": [
+    "LINE",
+    "language network (LN)",
+    "DBLP citation data",
+    "word cooccurrence network (WCN)",
+    "weighted graph (WG)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "language network (LN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language network (LN)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language network (LN)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "edges between co-occurring words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edges between co-occurring words",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "words that co-occur within a fixed context window in the text",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weight",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "number of times the pair appears together",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language network (LN)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "weighted word co-occurrence network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "direct edge weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "similar neighborhood/context distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP citation data",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparse",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP citation data",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "large-scale",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP citation data",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "highly skewed",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP citation data",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "many meaningful pairwise relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP citation data",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "far fewer pairwise relationships than a dense graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP citation data",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "word co-occurrence modeling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word cooccurrence network (WCN)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "only a small fraction of all possible word pairs actually co-occur",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "citation-style data",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "strong local association structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "citation-style data",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "heavy-tailed degree distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "citation-style data",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "LINE\u2019s scalable embedding objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

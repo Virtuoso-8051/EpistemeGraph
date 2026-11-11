@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Gains flatten out somewhere around 100 to 200 dimensions for most tasks (general literature claim not in the evidence; the paper says around 100).",
+    "Continued gains are more plausible with large graphs, many-class tasks, and rich training data such as longer walks.",
+    "Longer walks supply more co-occurrence context so higher dimensions can keep helping; with short walks extra dimensions add little or overfit, so the benefit depends on walk length."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer never corrects the false premise that performance keeps rising past about 100 dimensions; the paper says it saturates around 100. It instead speculates about conditions and walk-length interactions the evidence does not support, and treats the premise as plausible."
+}

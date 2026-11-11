@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The answer claims node2vec handles the partition function with 'hierarchical softmax' as an optional alternative, which the evidence does not mention.",
+    "The answer claims node2vec uses 'second-order biased random walks', a detail not stated in the provided evidence excerpt."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, stating that node2vec uses negative sampling to approximate the partition function, which matches the evidence. However, it adds details (hierarchical softmax as an option, second-order biased random walks) that the provided evidence does not contain, so those claims are unsupported by the excerpt."
+}

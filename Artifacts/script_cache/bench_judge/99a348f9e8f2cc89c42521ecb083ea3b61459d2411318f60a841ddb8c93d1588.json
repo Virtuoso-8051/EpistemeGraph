@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Node embeddings for the two endpoints are combined with a binary operator (average, Hadamard, L1, L2) to form edge feature vector fed to a classifier \u2014 not in the provided evidence (evidence only mentions a bootstrapping approach over individual node representations)",
+    "Examples of protein-protein interaction network, collaboration or friendship tie link prediction are not in the provided evidence"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim (extend to pairs because tasks like link prediction involve node pairs; link prediction is the example) is supported. The specific binary operators and the dataset examples are not in the cited evidence, although they are accurate to the node2vec paper in general."
+}

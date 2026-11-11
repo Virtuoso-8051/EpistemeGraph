@@ -1,0 +1,85 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "LINE",
+    "Skip-gram",
+    "Truncated random walk",
+    "First-order proximity",
+    "Second-order proximity",
+    "Observed link"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Truncated random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "Indirect multi-hop co-occurrence relations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "Exploiting missing information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "First-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "Second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "First-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "Direct edges between nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "Shared-neighborhood similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Second-order proximity",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "Nodes with similar neighbor distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

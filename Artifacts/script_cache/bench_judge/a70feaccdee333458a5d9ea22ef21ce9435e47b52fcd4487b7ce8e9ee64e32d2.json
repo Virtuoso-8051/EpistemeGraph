@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "LINE is described as typically concatenating first- and second-order embeddings 'with the embedding treatment depending on edge-sampling optimization' - the evidence does not discuss edge-sampling as determining the embedding treatment, and the answer omits the re-weighting of dimensions that the source specifies",
+    "The answer claims the common goal includes 'link prediction' as a downstream task, which the evidence does not mention (the evidence references word analogy, document classification, and multi-label classification)",
+    "DeepWalk's settings are described only generically ('walk length, walks per node, window size, and dimensionality') without giving the actual configuration (window 10, walk length 40, 40 walks per vertex), so the question's core specifics are not answered"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly notes that LINE combines first- and second-order embeddings and that DeepWalk uses random walks with skip-gram, and that embeddings serve downstream tasks. However, it omits the specific re-weighting step and the concrete DeepWalk parameters (window 10, walk length 40, 40 walks per vertex), and adds link prediction as a shared downstream task not supported by the evidence."
+}

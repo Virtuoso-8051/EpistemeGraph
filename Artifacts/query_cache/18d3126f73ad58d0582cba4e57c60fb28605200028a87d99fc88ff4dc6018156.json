@@ -1,0 +1,100 @@
+{
+  "query_entities": [
+    "SKIPGRAM",
+    "Skip-gram model (SGM)",
+    "DEEPWALK",
+    "hierarchical softmax (HS)",
+    "negative sampling (NS)",
+    "random walk (RW)"
+  ],
+  "triples": [
+    {
+      "source": "SKIPGRAM",
+      "source_alias": "word2vec",
+      "type": "USES",
+      "target": "hierarchical softmax (HS)",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "source_alias": "word2vec",
+      "type": "USES",
+      "target": "negative sampling (NS)",
+      "target_alias": "NS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax (HS)",
+      "source_alias": "HS",
+      "type": "OPTIMIZES",
+      "target": "full softmax computation over vocabulary",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax (HS)",
+      "source_alias": "HS",
+      "type": "USES",
+      "target": "binary tree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax (HS)",
+      "source_alias": "HS",
+      "type": "REDUCES",
+      "target": "O(V) cost to O(log V)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling (NS)",
+      "source_alias": "NS",
+      "type": "USES",
+      "target": "logistic regression",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling (NS)",
+      "source_alias": "NS",
+      "type": "IS_A",
+      "target": "alternative to hierarchical softmax (HS)",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "SKIPGRAM",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax (HS)",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "negative sampling (NS)",
+      "target_alias": "NS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "source_alias": "word2vec",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

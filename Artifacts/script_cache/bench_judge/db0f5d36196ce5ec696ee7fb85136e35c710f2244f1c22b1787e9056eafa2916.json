@@ -1,0 +1,9 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The answer offers three general mechanisms (coupling the unsupervised loss to the downstream predictor, weighting via downstream validation, and aligning the objective's optimum with predictive information) as ways an unsupervised objective can be made task-dependent, but these are not described anywhere in the evidence and are presented as how the method works under a 'reading' that contradicts the passage's statement that the objective is task-independent."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to tie the question to a specific paper and does not affirm the false premise that the unsupervised objective is task-dependent in the paper's method. However, its three proposed mechanisms are not in the evidence and do not correct the false premise, which the passage directly contradicts by stating the objective is independent of the downstream task and yields task-independent features."
+}

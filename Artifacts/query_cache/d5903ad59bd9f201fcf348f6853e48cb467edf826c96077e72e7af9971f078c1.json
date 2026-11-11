@@ -1,0 +1,6 @@
+{
+  "answer": "On the Facebook dataset, node2vec outperforms DeepWalk and LINE for link prediction when the embeddings are learned with biased random walks that preserve both local and more global neighborhood structure, and then combined for edge features using the Hadamard operator. In the reported experiments, this advantage is seen especially when the walk parameters are set to favor either breadth-first or depth-first exploration (i.e., nontrivial p and q settings), rather than the unbiased DeepWalk setting; under those conditions node2vec yields higher link-prediction accuracy than both DeepWalk and LINE.",
+  "confidence": 0.62,
+  "confidence_reasoning": "This is consistent with the known node2vec results on Facebook link prediction, but the exact experimental settings and comparative margins depend on the specific paper/table, so I am moderately confident rather than certain.",
+  "_token_nll": 0.2536556607200986
+}

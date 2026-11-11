@@ -1,0 +1,9 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The grid {0.25, 0.50, 1, 2, 4} for p and q is the one used in the original node2vec paper (Grover & Leskovec, 2016)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly recognizes that the passage reports no expanded grid search and no effects on macro-F1, so it properly declines to invent results. However, its attribution of the grid to the original node2vec paper (Grover & Leskovec, 2016) is not stated in the provided evidence, which only describes the grid as used in this multi-label study, so that citation claim is unsupported by the given sources."
+}

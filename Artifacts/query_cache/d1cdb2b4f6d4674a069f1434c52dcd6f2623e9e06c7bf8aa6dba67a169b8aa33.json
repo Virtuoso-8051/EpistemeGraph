@@ -1,0 +1,85 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "negative sampling",
+    "graph convolution",
+    "skip-gram",
+    "hierarchical softmax",
+    "GCN",
+    "GraphSAGE"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "REFUTED",
+      "target": "graph convolution layers",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "second-order biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "NS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "NS",
+      "type": "APPROXIMATES",
+      "target": "partition function",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph convolution",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "GCN-style mechanism",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GCN",
+      "source_alias": "",
+      "type": "USES",
+      "target": "graph convolution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GraphSAGE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "graph convolution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

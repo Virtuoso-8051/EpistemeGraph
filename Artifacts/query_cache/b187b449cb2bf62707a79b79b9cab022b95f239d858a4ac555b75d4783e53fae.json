@@ -1,0 +1,6 @@
+{
+  "answer": "LINE depends on observed links as the sole signal for global similarity because, in its formulation, the only information it uses to learn embeddings is the graph\u2019s observed edges and their weights. For second-order proximity, LINE models the conditional distribution of a node\u2019s neighbors from the observed adjacency structure, so edge weights determine how strongly each observed link contributes to similarity. In other words, it does not use node attributes or unobserved/global supervision; the weighted observed links themselves are the training signal that defines both first- and second-order proximity.",
+  "confidence": 0.88,
+  "confidence_reasoning": "This is consistent with LINE\u2019s objective and standard descriptions of first- and second-order proximity, though the wording of the question is somewhat ambiguous.",
+  "_token_nll": 0.257505751944877
+}

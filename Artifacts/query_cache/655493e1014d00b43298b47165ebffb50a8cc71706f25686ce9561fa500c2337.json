@@ -1,0 +1,6 @@
+{
+  "answer": "The passage says edge sampling is useful because LINE\u2019s objective is defined over edges, so sampling edges lets the model train efficiently on very large graphs without having to process all edges at once. It also helps handle the fact that the graph may be huge and sparse, making full-batch optimization expensive; by drawing edges according to their importance/frequency, LINE can approximate the training objective with much lower computational cost.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This is a standard explanation of LINE\u2019s edge-sampling training, but I cannot verify the exact wording of the unseen passage.",
+  "_token_nll": 0.204385248819987
+}

@@ -1,0 +1,82 @@
+{
+  "query_entities": [
+    "LINE(1st+2nd)",
+    "network embedding",
+    "reconstructed network",
+    "original network"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative-sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "linear scalability with number of edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "original network",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "reconstructed network",
+      "source_alias": "RN",
+      "type": "CONTAINS",
+      "target": "spurious edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "reconstructed network",
+      "source_alias": "RN",
+      "type": "CONTAINS",
+      "target": "missing edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "reconstructed network",
+      "source_alias": "RN",
+      "type": "IS_A",
+      "target": "distorted proximities",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

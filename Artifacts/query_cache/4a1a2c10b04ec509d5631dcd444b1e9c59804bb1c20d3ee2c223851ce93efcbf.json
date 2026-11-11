@@ -1,0 +1,42 @@
+{
+  "query_entities": [
+    "LINE",
+    "VERTEX",
+    "EDGE",
+    "LN"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Twitter follower network",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Flickr",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "VERTEX",
+      "target_alias": "about 1.7 million vertices",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Flickr",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "EDGE",
+      "target_alias": "about 22.6 million edges",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Flickr",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "LN",
+      "target_alias": "large network",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

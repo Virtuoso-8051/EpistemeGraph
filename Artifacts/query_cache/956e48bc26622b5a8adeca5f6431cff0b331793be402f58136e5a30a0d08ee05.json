@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec is designed for a fixed graph: it learns node embeddings by running biased random walks over the graph as it exists at training time, and it does not explicitly describe how to update embeddings as new nodes or edges arrive. The streaming variant is meant for a growing network, so it incrementally incorporates newly arriving nodes/edges and updates the representation without retraining from scratch. The extra capability it adds is online/streaming embedding updates for dynamic graphs, i.e., handling graph growth in real time rather than only a static snapshot.",
+  "confidence": 0.92,
+  "confidence_reasoning": "This is a standard distinction between static node2vec and streaming extensions, though exact implementation details can vary by paper or system.",
+  "_token_nll": 0.22373744419642858
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "Short random walks make the graph representation depend only on local neighborhoods rather than the entire graph, so when the graph changes slightly, only the embeddings or statistics for nodes near the change need to be updated instead of recomputing everything. The computational benefit is that this yields much cheaper incremental updates: the method avoids expensive full-graph recomputation and can be updated in time proportional to the affected local region rather than the whole graph.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This is a standard property of local random-walk-based graph methods, but the exact wording and complexity claim can vary by the specific paper or algorithm.",
+  "_token_nll": 0.20581681598988613
+}

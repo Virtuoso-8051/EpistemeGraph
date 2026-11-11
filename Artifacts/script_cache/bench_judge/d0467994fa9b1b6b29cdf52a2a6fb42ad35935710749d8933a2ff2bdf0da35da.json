@@ -1,0 +1,9 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Edge sampling \"keeps the learning rate stable without weight-dependent gradient scaling\" is a loose paraphrase; the evidence speaks of gradient explosion rather than learning rate stability."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer declines to state PASSAGE A's conditions, which is acceptable even though the evidence does contain them. Its claims about LINE (weighted edges with high variance, sampling proportional to weight, treating sampled edges as binary) are supported by the evidence, as is the DeepWalk co-occurrence description, which is background. The only slightly loose point is the learning-rate wording, which is a mild paraphrase of the gradient-explosion motivation."
+}

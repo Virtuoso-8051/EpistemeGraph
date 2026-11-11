@@ -1,0 +1,97 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "BlogCatalog",
+    "DFS"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "bounded grid of p and q values {0.25, 0.5, 1, 2, 4}",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "BlogCatalog performance with steadily larger p and q",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "best node2vec parameter settings",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "intermediate or dataset-specific p and q values",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "return parameter",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large p",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "discourages revisiting the previous node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "q",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "in-out parameter",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small q",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "DFS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "depth-first search",
+      "type": "ENABLES",
+      "target": "capture of broader structural roles",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large q",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "local BFS-like walks capturing community homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "tunable interpolation between homophily and structural equivalence",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

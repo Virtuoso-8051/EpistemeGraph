@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk can exploit edge weights by turning them into transition probabilities in its random walks, so stronger connections are sampled more often and the learned embeddings reflect the network\u2019s real interaction strengths. On a language network, where weighted links often encode meaningful co-occurrence or association strength, this lets DeepWalk preserve both local and higher-order structure more faithfully. LINE, by contrast, is primarily designed around first- and second-order proximity objectives and does not use the same random-walk-based higher-order context in a way that can leverage weighted paths as effectively. As a result, DeepWalk can capture richer neighborhood semantics from the weighted graph, which can translate into a much larger performance gain on that dataset.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a well-supported high-level explanation of why weighted random walks can help DeepWalk, but the exact dataset-specific reason and the comparison to LINE depend on the experimental setup and paper details.",
+  "_token_nll": 0.27558240940961887
+}

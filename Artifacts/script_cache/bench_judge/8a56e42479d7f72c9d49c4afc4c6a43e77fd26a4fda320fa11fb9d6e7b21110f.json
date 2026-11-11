@@ -1,0 +1,13 @@
+{
+  "claims_checked": 10,
+  "unsupported_claims": [
+    "The edge-sampling algorithm samples edges in proportion to their weights using alias tables.",
+    "Each sampled edge is treated as a binary training example.",
+    "Sampling avoids high-variance gradients that arise when edge weights are used directly in SGD (the evidence only says weight divergence hurts plain SGD, not that sampling avoids variance).",
+    "The per-update cost is constant regardless of network size or weight scale.",
+    "Runtime depends on the number of sampled edges rather than on graph structure."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast is supported: LINE claims millions of nodes and billions of edges, while BlogCatalog, PPI, and Wikipedia have roughly 3.9K\u201310.3K nodes and 77K\u2013334K edges. However, the mechanistic description of the edge-sampling algorithm (alias tables, binary examples, constant per-update cost, runtime scaling with sampled edges) is not in the provided evidence, though the paper's efficiency claim is loosely supported."
+}

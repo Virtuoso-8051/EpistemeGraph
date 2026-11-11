@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The answer claims node2vec uses 'hierarchical softmax' and 'negative sampling' approximations, and 'a linearly decaying learning rate, as in word2vec', and that the reference C code and gensim implement it this way; the evidence does not state these implementation details.",
+    "The answer asserts that skip-gram is 'essentially linear' and a lookup table feeding an output scorer, a characterization not present in the evidence (though it is broadly textbook background)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that node2vec uses Adam and correctly states that node2vec optimizes with SGD on a skip-gram-style model extended from word2vec, which the evidence supports. However, it adds implementation specifics (negative sampling, hierarchical softmax, linearly decaying learning rate, reference C code and gensim) that the evidence does not contain, making those details unsupported."
+}

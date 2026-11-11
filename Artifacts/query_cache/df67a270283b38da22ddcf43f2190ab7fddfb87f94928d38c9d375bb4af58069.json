@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec can benefit from using a much smaller embedding dimension because the graph structure it learns is often low-dimensional in practice, so extra dimensions beyond what the data supports mostly add redundancy and noise. Shrinking the dimension well below 100 can improve generalization, reduce overfitting, lower memory and computation costs, and make downstream tasks faster. In many cases, performance saturates around some moderate dimension, so increasing it further gives little or no gain; choosing a smaller dimension can therefore achieve nearly the same accuracy with a simpler, more efficient model. The main tradeoff is that if the dimension is too small, it may underfit and lose important structural information.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This is a well-established general property of embedding methods like node2vec, though the exact saturation point and gains depend on the dataset and task.",
+  "_token_nll": 0.22530974041331897
+}

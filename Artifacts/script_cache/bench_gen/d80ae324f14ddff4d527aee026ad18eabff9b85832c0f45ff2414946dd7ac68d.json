@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the streaming variant of the method avoid ever constructing the entire graph while still training features on a continually evolving network, and how does that make web-scale classification feasible?",
+      "false_premise": "The method uses a streaming variant that trains features on a continually evolving network without ever explicitly constructing the entire graph.",
+      "correction": "The passage says this approach can be combined with the streaming variant to train features on a continually evolving network without ever explicitly constructing the entire graph, but it does not identify the main method itself as a streaming method in the excerpt.",
+      "evidence_quote": "This approach can be combined with the streaming variant (Section 4.4.1) to train features on a continually evolving network without ever explicitly constructing the entire graph.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does SpectralClustering use the top-d eigenvectors of the modularity matrix to build its representation for classification?",
+      "false_premise": "SpectralClustering uses the top-d eigenvectors of the modularity matrix.",
+      "correction": "SpectralClustering instead generates a representation from the d-smallest eigenvectors of the normalized graph Laplacian.",
+      "evidence_quote": "SpectralClustering [41]: This method generates a representation in Rd from the d-smallest eigenvectors of ~L, the normalized graph Laplacian of G.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes the YouTube dataset particularly suitable for interest-group prediction, given that its labels represent users\u2019 interests?",
+      "false_premise": "In the YouTube dataset, the labels represent users\u2019 interests.",
+      "correction": "In YouTube, the labels represent groups of viewers that enjoy common video genres.",
+      "evidence_quote": "The labels here represent groups of viewers that enjoy common video genres (e.g. anime and wrestling).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does Modularity outperform EdgeCluster, since EdgeCluster already uses the adjacency matrix features that Modularity derives from the graph structure?",
+      "false_premise": "Modularity and EdgeCluster are compared as if EdgeCluster uses adjacency-matrix features derived from the graph structure in the same way as Modularity, and the question presupposes a performance ordering between them.",
+      "correction": "The passage only states that Modularity uses top-d eigenvectors of the modularity matrix, while EdgeCluster uses k-means clustering to cluster the adjacency matrix; it does not report that Modularity outperforms EdgeCluster in the excerpt.",
+      "evidence_quote": "EdgeCluster [40]: This method uses k-means clustering to cluster the adjacency matrix of G.",
+      "difficulty": "hard"
+    }
+  ]
+}

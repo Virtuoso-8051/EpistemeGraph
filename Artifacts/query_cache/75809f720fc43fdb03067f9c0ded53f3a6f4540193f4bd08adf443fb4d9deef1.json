@@ -1,0 +1,64 @@
+{
+  "query_entities": [
+    "SPARSITY",
+    "DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "SPARSITY",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "large network",
+      "target_alias": "real-world networks are often very sparse",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SPARSITY",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "machine learning methods",
+      "target_alias": "learn useful patterns directly from the raw graph structure",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node embeddings",
+      "target_alias": "low-dimensional vector representations of nodes",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "random walks over the network",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "low-dimensional vector representations of nodes",
+      "type": "REPRESENTS",
+      "target": "network structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "low-dimensional vector representations of nodes",
+      "type": "REPRESENTS",
+      "target": "network neighborhood relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "low-dimensional vector representations of nodes",
+      "type": "ENABLES",
+      "target": "downstream machine learning tasks",
+      "target_alias": "making the data easier to use for downstream machine learning tasks such as classification and clustering",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

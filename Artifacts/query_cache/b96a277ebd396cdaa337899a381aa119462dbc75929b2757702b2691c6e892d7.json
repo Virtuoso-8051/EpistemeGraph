@@ -1,0 +1,31 @@
+{
+  "query_entities": [
+    "second-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "shared neighbor",
+      "target_alias": "SN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity between u and v",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "zero when no shared neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood structure",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "no overlap between u and v",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "For LINE, what exact optimization algorithm or negative-sampling strategy do the authors use to minimize the second-order proximity objective in Eqn. (4)?",
+      "why_unanswerable": "The passage defines the second-order proximity probability and objective, but it does not describe the optimization algorithm or any negative-sampling procedure used to train LINE.",
+      "evidence_quote": "For each vertexvi, Eqn. (4) actually defines a conditional distribution p2(\u00b7|vi) over the contexts, i.e., the entire set of vertices in the network.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "In LINE, what embedding dimension d did the authors use in their experiments for the vertex vectors ui and u'i?",
+      "why_unanswerable": "The passage says vertices can be represented in a d-dimensional space, but it never gives a concrete value for d.",
+      "evidence_quote": "By finding the {\u20d7 ui}i=1..|V| that minimize the objective in Eqn. (3), we can represent every vertex in the d-dimensional space.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE perform on a directed graph dataset compared with DeepWalk in terms of Micro-F1 or another downstream classification metric?",
+      "why_unanswerable": "The passage discusses that first-order proximity is only for undirected graphs and that second-order proximity works for directed graphs, but it provides no benchmark results or comparison with DeepWalk.",
+      "evidence_quote": "The second-order proximity is applicable for both directed and undirected graphs.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which exact conditions does LINE switch from using the first-order proximity objective to the second-order proximity objective, and how many training epochs are used for each objective?",
+      "why_unanswerable": "The passage explains which proximity notions apply to directed versus undirected graphs, but it does not specify a training schedule or the number of epochs for either objective.",
+      "evidence_quote": "Note that the first-order proximity is only applicable for undirected graphs, not for directed graphs.",
+      "difficulty": "medium"
+    }
+  ]
+}

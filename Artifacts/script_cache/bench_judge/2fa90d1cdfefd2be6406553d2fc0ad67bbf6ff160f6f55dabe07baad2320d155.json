@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "LINE(1st) tends to reach its plateau sooner while LINE(2nd) usually needs more samples but reaches a higher final quality \u2013 the evidence only says LINE(2nd) consistently outperforms LINE(1st) and DeepWalk and both LINE variants converge much faster than DeepWalk; it does not describe LINE(1st) plateauing sooner than LINE(2nd).",
+    "The paper reports DeepWalk as competitive in accuracy but slower in wall-clock training time, so LINE's advantage is mainly efficiency rather than accuracy \u2013 the evidence says LINE(2nd) outperforms DeepWalk in Micro-F1 and the gold answer emphasizes performance advantage, and the claim that DeepWalk is 'competitive' and the advantage is 'mainly efficiency' is not stated and contradicts the reported consistent outperformance.",
+    "The answer does not state the key finding that LINE(2nd) consistently outperforms LINE(1st) and DeepWalk as samples increase, and it hedges the core comparison instead of answering it."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence directly states that LINE(2nd) consistently outperforms LINE(1st) and DeepWalk and both LINE variants converge much faster than DeepWalk, but the answer omits these findings and instead attributes unsupported plateau timing and accuracy-competitiveness claims to the papers. The core of the answer therefore is not grounded in the provided source text."
+}

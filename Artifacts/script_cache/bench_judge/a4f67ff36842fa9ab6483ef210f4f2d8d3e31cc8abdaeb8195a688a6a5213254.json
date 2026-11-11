@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "LINE is 'not purely local' because the second-order term reaches beyond immediate edges (the evidence states LINE preserves both local and global structures, which supports the correction, but the detailed first/second-order definitions are not in the provided excerpt)",
+    "On citation benchmarks like Cora and Citeseer LINE is generally competitive with DeepWalk-style methods but below GCN, a comparison not reported in the provided evidence",
+    "LINE's node classification accuracy comes from training a separate classifier such as logistic regression, a detail not stated in the evidence"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that LINE focuses only on local structure, consistent with the abstract's statement that LINE preserves both local and global structures. However, it adds specific comparative claims about Cora/Citeseer performance against DeepWalk and GCN and details about the classifier that the provided evidence does not contain."
+}

@@ -1,0 +1,87 @@
+{
+  "query_entities": [
+    "social representation (SR)",
+    "social network (SN)",
+    "latent social representation (LSR)",
+    "semi-supervised method (SSM)",
+    "unsupervised representation learning (URL)",
+    "supervised feature learning (SFL)",
+    "embedding",
+    "representation learning (RL)",
+    "Link Prediction (LP)"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "unsupervised representation learning",
+      "target_alias": "URL",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-based proximity objectives",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent social representation (LSR)",
+      "source_alias": "LSR",
+      "type": "USES",
+      "target": "unsupervised representation learning",
+      "target_alias": "URL",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "YouTube group-membership labels",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "separate classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "supervised labels",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "random-walk sampling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "scalability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "scalability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "semi-supervised method (SSM)",
+      "source_alias": "SSM",
+      "type": "USES",
+      "target": "supervised labels",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

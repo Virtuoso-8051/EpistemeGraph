@@ -1,0 +1,67 @@
+{
+  "query_entities": [
+    "node2vec",
+    "unnormalized transition bias",
+    "shortest-path distance",
+    "unweighted graph",
+    "undirected graph"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "unnormalized transition bias",
+      "target_alias": "alpha_pq(t,x)",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unnormalized transition bias",
+      "source_alias": "alpha_pq(t,x)",
+      "type": "DEPENDS_ON",
+      "target": "shortest-path distance",
+      "target_alias": "between the previous node t and the candidate next node x",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unnormalized transition bias",
+      "source_alias": "alpha_pq(t,x)",
+      "type": "ACHIEVES",
+      "target": "1/p",
+      "target_alias": "when x = t",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unnormalized transition bias",
+      "source_alias": "alpha_pq(t,x)",
+      "type": "ACHIEVES",
+      "target": "1",
+      "target_alias": "when x is adjacent to t",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unnormalized transition bias",
+      "source_alias": "alpha_pq(t,x)",
+      "type": "ACHIEVES",
+      "target": "1/q",
+      "target_alias": "when x is not adjacent to t",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "unweighted graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "undirected graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "query_entities": [
+    "random walk (RW)",
+    "short random walks",
+    "latent dimension (LD)",
+    "distance between latent dimension (DBLD)",
+    "local and global network structure (LGNS)",
+    "network structure (NS)"
+  ],
+  "triples": [
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "generalization",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "network structure (NS)",
+      "source_alias": "NS",
+      "type": "CONTAINS",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "strong local structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "PRESERVE",
+      "target": "local and global network structure (LGNS)",
+      "target_alias": "LGNS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "longer walks",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "over-smoothing",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "distance between latent dimension (DBLD)",
+      "source_alias": "DBLD",
+      "type": "REPRESENTS",
+      "target": "how differently dimensions encode local neighborhood structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "distance between latent dimension (DBLD)",
+      "source_alias": "DBLD",
+      "type": "REPRESENTS",
+      "target": "number of random-walk steps needed to move between dimensions",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "close latent dimensions",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "redundant or correlated structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "distant latent dimensions",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "distinct structural roles",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "latent dimension (LD)",
+      "source_alias": "LD",
+      "type": "REQUIRES",
+      "target": "stable walk distribution across the graph",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

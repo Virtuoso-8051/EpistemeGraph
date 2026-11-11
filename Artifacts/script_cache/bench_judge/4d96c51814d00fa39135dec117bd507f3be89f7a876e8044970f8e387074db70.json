@@ -1,0 +1,10 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "LINE(1st+2nd) performs significantly better when the graph contains both strong local pairwise connections and broader neighborhood/structural similarity signals, so that first-order and second-order proximities are both informative and complementary.",
+    "This suggests that the two proximities in LINE capture different aspects of network structure and that combining them yields a more complete embedding than using either one alone."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The papers support that LINE(1st+2nd) performs significantly better in the supervised classification setting when embeddings from LINE(1st) and LINE(2nd) can be concatenated, and that this indicates the two proximities are complementary. However, the answer adds extra specifics about 'strong local pairwise connections' and 'broader neighborhood/structural similarity signals' that are not stated in the evidence."
+}

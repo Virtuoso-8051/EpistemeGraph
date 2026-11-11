@@ -1,0 +1,159 @@
+{
+  "query_entities": [
+    "LINE",
+    "stochastic gradient training procedure",
+    "graph",
+    "edge set E",
+    "embedding dimension",
+    "negative samples",
+    "edge-sampling",
+    "negative sampling",
+    "large-scale graphs",
+    "YouTube graph",
+    "Flickr graph",
+    "1st-order model",
+    "2nd-order model",
+    "combined LINE model",
+    "standard experimental setup",
+    "embedding dimension 128",
+    "SGD training"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "O(dK|E|)",
+      "target_alias": "overall time complexity",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "stochastic gradient training procedure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient training procedure",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "graph",
+      "target_alias": "with edge set E",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient training procedure",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embedding dimension",
+      "target_alias": "d",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient training procedure",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative samples",
+      "target_alias": "K per positive edge",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "large-scale graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling",
+      "target_alias": "with negative sampling",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Flickr graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "1st-order model",
+      "source_alias": "LINE",
+      "type": "ACHIEVES",
+      "target": "1.5 hours",
+      "target_alias": "runtime on YouTube graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "1st-order model",
+      "source_alias": "LINE",
+      "type": "ACHIEVES",
+      "target": "2.5 hours",
+      "target_alias": "runtime on Flickr graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "2nd-order model",
+      "source_alias": "LINE",
+      "type": "ACHIEVES",
+      "target": "2.0 hours",
+      "target_alias": "runtime on YouTube graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "2nd-order model",
+      "source_alias": "LINE",
+      "type": "ACHIEVES",
+      "target": "3.0 hours",
+      "target_alias": "runtime on Flickr graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "combined LINE model",
+      "source_alias": "LINE",
+      "type": "ACHIEVES",
+      "target": "3.5 hours",
+      "target_alias": "runtime on YouTube graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "combined LINE model",
+      "source_alias": "LINE",
+      "type": "ACHIEVES",
+      "target": "5.0 hours",
+      "target_alias": "runtime on Flickr graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "standard experimental setup",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embedding dimension 128",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "standard experimental setup",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "during SGD training",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

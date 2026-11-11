@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does the DeepWalk objective define the context of a vertex, and what is the effect of removing the ordering constraint on the training problem?",
+      "gold_answer": "DeepWalk defines the context as the words appearing on both the left and right sides of the given word. By removing the ordering constraint, the model maximizes the probability of any word in the context without knowing its offset from the center vertex, which simplifies the learning problem.",
+      "evidence_quote": "Secondly, the context is composed of the words appearing to right side of the given word as well as the left side.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why are the relaxations used in DeepWalk considered particularly desirable for social representation learning?",
+      "gold_answer": "They are desirable because the order-independence assumption better captures the sense of nearness produced by random walks. In addition, the relaxation speeds up training by allowing small models to be built one vertex at a time.",
+      "evidence_quote": "We find these relaxations are particularly desirable for social representation learning.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What kind of structural similarity do the vertex representations learned by DeepWalk capture, and what downstream benefit does this provide?",
+      "gold_answer": "The learned representations capture shared similarities in local graph structure between vertices. Vertices with similar neighborhoods get similar embeddings, which encodes cocitation similarity and helps generalization on machine learning tasks.",
+      "evidence_quote": "Solving the optimization problem from Eq. 2 builds representations that capture the shared similarities in local graph structure between vertices.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "According to the DeepWalk description, what properties do the resulting representations have, and how do they relate to community structure and network changes?",
+      "gold_answer": "DeepWalk produces low-dimensional representations in a continuous vector space. These embeddings encode latent community membership, and because the method outputs useful intermediate representations, it can adapt to changing network topology.",
+      "evidence_quote": "This method generates representations of social networks that are low-dimensional, and exist in a continuous vector space.",
+      "difficulty": "hard"
+    }
+  ]
+}

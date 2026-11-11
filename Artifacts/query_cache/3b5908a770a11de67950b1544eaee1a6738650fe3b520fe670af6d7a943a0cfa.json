@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "neural language model (NLM)",
+    "truncated random walk (TRW)",
+    "random walk (RW)",
+    "language modeling (LM)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "word2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk (TRW)",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "sentences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "co-occurrence probability of nodes within a window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "language modeling (LM)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "language modeling (LM)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "node sequences",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "language of graphs",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "set of node sequences produced by random walks on a network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language of graphs",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "local graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language of graphs",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "community information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

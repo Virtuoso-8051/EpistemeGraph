@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does LINE's use of DeepWalk on the Youtube network make the comparison especially fair for large-scale graphs?",
+      "false_premise": "LINE uses DeepWalk on the Youtube network and compares itself on that basis.",
+      "correction": "LINE is compared with several existing graph embedding methods, and Youtube is one of the social networks used as a dataset, not a method used by LINE.",
+      "evidence_quote": "We compare the LINE model with several existing graph embedding methods that are able to scale up to very large networks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE construct its language network from DBLP citation data, and why is that dataset ideal for word cooccurrence modeling?",
+      "false_premise": "LINE's language network is built from DBLP citation data.",
+      "correction": "LINE's language network is constructed from the entire set of English Wikipedia pages, while DBLP is used for the citation networks.",
+      "evidence_quote": "We constructed a word cooccurrence network from the entire set of EnglishWikipedia pages.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes LINE's evaluation on MDS and IsoMap compelling, given that those classical embedding methods are included in its comparison set?",
+      "false_premise": "LINE is evaluated against MDS and IsoMap.",
+      "correction": "The paper explicitly says LINE does not compare with MDS, IsoMap, or Laplacian eigenmap because they cannot handle networks of this scale.",
+      "evidence_quote": "We do not compare with some classical graph embedding algorithms such as MDS, IsoMap, and Laplacian eigenmap, as they cannot handle networks of this scale.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does LINE rely on an unweighted author citation network rather than the weighted one, and how does that choice affect the results?",
+      "false_premise": "LINE relies on an unweighted author citation network.",
+      "correction": "The author citation network is weighted, recording the number of papers written by one author and cited by another author.",
+      "evidence_quote": "The author citation network records the number of papers written by one author and cited by another author.",
+      "difficulty": "medium"
+    }
+  ]
+}

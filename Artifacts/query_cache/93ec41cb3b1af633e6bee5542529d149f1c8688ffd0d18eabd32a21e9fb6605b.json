@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk works well in the 3% labeled Flickr setting because it first learns low-dimensional node embeddings from the graph\u2019s random walks, so nodes that are structurally or locally close end up near each other in embedding space even without labels. SpectralClustering then groups these embeddings into communities that reflect the graph\u2019s latent structure, which is especially helpful on Flickr because the network is highly homophilous and community-like. As a result, the method can exploit the large amount of unlabeled graph structure to propagate information from the small labeled subset, while many baselines rely more directly on the scarce labels or weaker feature assumptions. That combination lets DeepWalk capture useful global and local connectivity patterns and generalize better than the baselines under extreme label scarcity.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This explanation matches the standard intuition for DeepWalk and semi-supervised graph learning, though the exact performance gap depends on the specific experimental setup and baseline details.",
+  "_token_nll": 0.25081367881930605
+}

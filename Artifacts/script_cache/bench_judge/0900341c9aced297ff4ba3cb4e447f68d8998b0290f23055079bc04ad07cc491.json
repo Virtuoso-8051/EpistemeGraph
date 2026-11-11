@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Second-order proximity is modeled via conditional probabilities p2(v_j|v_i)=w_ij/sum_k w_ik and minimizing KL divergence (not in the provided evidence; LINE detail)",
+    "Attribution to LINE, Tang et al. 2015 is not stated in the evidence"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core definition (similarity of neighborhood structures, comparing p_u and p_v of first-order proximities) matches the evidence. However, the specific conditional-probability formula, KL-divergence objective, and LINE/Tang attribution go beyond the provided evidence, although they are plausible background."
+}

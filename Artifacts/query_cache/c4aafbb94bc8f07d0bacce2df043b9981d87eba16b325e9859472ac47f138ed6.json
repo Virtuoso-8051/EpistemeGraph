@@ -1,0 +1,6 @@
+{
+  "answer": "In the node2vec paper (Grover & Leskovec, 2016), node2vec beats DeepWalk and LINE on Facebook link prediction when its return and in-out parameters (p, q) are tuned for the task, typically by searching a grid with cross-validation on a small labeled sample, and when edge features are built with the Hadamard operator, which the paper found to be the strongest combination. I can't verify the exact per-dataset numbers or the precise training-fraction conditions from memory, so treat the specific margins as uncertain.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I recall the general setup (tuned p,q, Hadamard operator, Facebook/PPI/arXiv datasets) but not the exact conditions or figures reported, so specific claims may be inaccurate.",
+  "_token_nll": null
+}

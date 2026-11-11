@@ -1,0 +1,57 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "DEEPWALK",
+    "NEIGHBORHOOD SAMPLING STRATEGY"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "DEEPWALK",
+      "type": "USES",
+      "target": "uniform random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk uniform random walks",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "mix of BFS and DFS exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "DEEPWALK",
+      "type": "OUTPERFORMS",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DeepWalk reported performance under sparse labels",
+      "source_alias": "",
+      "type": "SUPPORTS",
+      "target": "homophily-based similarity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "homophily-based similarity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "nodes that are closely connected or belong to the same tightly knit community should have similar embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-style sampling",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

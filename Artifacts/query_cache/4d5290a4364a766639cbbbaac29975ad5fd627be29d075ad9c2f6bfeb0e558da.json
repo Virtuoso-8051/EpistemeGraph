@@ -1,0 +1,77 @@
+{
+  "query_entities": [
+    "LINE",
+    "binary edge (BE)",
+    "weighted graph (WG)",
+    "edge-sampling algorithm (ESA)",
+    "alias table method (ATM)",
+    "Alias sampling (AS)",
+    "EDGE"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DOES_NOT_CONTAIN",
+      "target": "specific numeric memory figure for unfolding",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "unfolding an edge of weight w into w binary edges",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "w stored edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge storage under unfolding",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "sum of all edge weights sum_e w_e",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "blow-up factor of unfolding",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "average edge weight sum_e w_e / |E|",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias table method (ATM)",
+      "source_alias": "ATM",
+      "type": "REQUIRES",
+      "target": "one table entry per edge, about O(|E|) space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias table method (ATM)",
+      "source_alias": "ATM",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "space independent of weight magnitudes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unfolding approach",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "roughly average weight times as many edge entries as alias table",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison factor between unfolding and alias table",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "1 for unit weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

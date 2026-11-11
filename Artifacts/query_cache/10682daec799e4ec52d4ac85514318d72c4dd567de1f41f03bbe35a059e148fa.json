@@ -1,0 +1,105 @@
+{
+  "query_entities": [
+    "Les Mis\u00e9rables network",
+    "node2vec",
+    "NODE2VEC"
+  ],
+  "triples": [
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "Victor Hugo's novel",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "character nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "undirected edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "undirected edges",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "co-appearance of characters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased second-order random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "return parameter p",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "in-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "breadth-first structural-equivalence exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "low-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional embeddings",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "k-means clustering",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "low-dimensional embeddings",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "PCA or t-SNE visualization",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

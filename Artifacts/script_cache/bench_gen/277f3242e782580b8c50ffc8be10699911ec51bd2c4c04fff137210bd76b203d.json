@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk handle weighted networks better than the proposed model when the edges have real-valued strengths rather than binary links?",
+      "false_premise": "DeepWalk handles weighted networks better than the proposed model.",
+      "correction": "DeepWalk only applies to unweighted networks, while the proposed model is applicable to networks with both weighted and unweighted edges.",
+      "evidence_quote": "Practically, DeepWalk only applies to unweighted networks, while our model is applicable for networks with both weighted and unweighted edges.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does the proposed model stop preserving second-order proximity and instead focus only on first-order proximity between vertices?",
+      "false_premise": "The proposed model stops preserving second-order proximity and focuses only on first-order proximity.",
+      "correction": "The model is defined using both first-order and second-order proximities.",
+      "evidence_quote": "We formally define the problem of large-scale information network embedding using first-order and second-order proximities.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What evidence does the passage give that the proposed model was evaluated only on citation networks and not on any real-world social or co-occurrence networks?",
+      "false_premise": "The proposed model was evaluated only on citation networks and not on any real-world social or co-occurrence networks.",
+      "correction": "The model was empirically compared using various real world networks.",
+      "evidence_quote": "In Section 5, we empirically compare the proposed model with these methods using various real world networks.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "How do negative edge weights improve the proposed model's embedding objective in this study?",
+      "false_premise": "The study uses negative edge weights in the embedding objective.",
+      "correction": "The study only considers nonnegative weights.",
+      "evidence_quote": "Note that while negative edge weights are possible, in this study we only consider nonnegative weights.",
+      "difficulty": "easy"
+    }
+  ]
+}

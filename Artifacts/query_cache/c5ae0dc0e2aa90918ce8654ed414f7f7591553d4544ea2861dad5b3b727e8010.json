@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "EdgeCluster",
+    "k-means clustering (K-MEANS)",
+    "Modularity",
+    "CLUSTERS",
+    "network classification performance (NCP)"
+  ],
+  "triples": [
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "k-means clustering (K-MEANS)",
+      "target_alias": "K-MEANS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated sparse eigen-decomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated sparse eigen-decomposition",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Lanczos-style methods",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "sparse matrix-vector products",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "computational cost scales with number of edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "dense n-by-n modularity matrix",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Modularity-based embeddings",
+      "source_alias": "",
+      "type": "USES",
+      "target": "dense n-by-n modularity matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "latent social dimensions",
+      "target_alias": "LFCM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral features",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "comparable classification performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node2vec parameter (NP)",
+    "network neighborhood (NN)",
+    "second-order neighbor (SON)",
+    "neighborhood sampling strategy (NSS)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "DEFINED_AS",
+      "target": "dot product symmetric scoring f(u)\u00b7f(v)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "neighborhood sampling strategy (NSS)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood sampling strategy (NSS)",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "biased second-order random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased second-order random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "return parameter p and in-out parameter q",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "conditional probability P(n | u)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability P(n | u)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "per-source normalization Z_u",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "conditional probability P(n | u)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "asymmetric conditional probability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asymmetric conditional probability",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "conditional probabilities are asymmetric even though the underlying dot product is not",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "DEFINED_AS",
+      "target": "dot product does not provide asymmetry improving source-neighbor discrimination",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "separate source and context embeddings",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

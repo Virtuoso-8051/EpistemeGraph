@@ -1,0 +1,86 @@
+{
+  "query_entities": [
+    "Les Mis\u00e9rables visualization",
+    "community-detection",
+    "clustering mode",
+    "network structure",
+    "nodes",
+    "groups",
+    "community",
+    "network"
+  ],
+  "triples": [
+    {
+      "source": "Les Mis\u00e9rables visualization",
+      "source_alias": "",
+      "type": "USES",
+      "target": "community-detection",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables visualization",
+      "source_alias": "",
+      "type": "USES",
+      "target": "clustering mode",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community-detection",
+      "source_alias": "",
+      "type": "ASSIGNS",
+      "target": "nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "clustering mode",
+      "source_alias": "",
+      "type": "ASSIGNS",
+      "target": "nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "groups",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "groups",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "network structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "same color regions",
+      "source_alias": "",
+      "type": "INDICATES",
+      "target": "community",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "more densely connected to each other than to the rest of the network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

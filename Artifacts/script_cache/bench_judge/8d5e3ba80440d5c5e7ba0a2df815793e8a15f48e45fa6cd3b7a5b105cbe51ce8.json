@@ -1,0 +1,10 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Parenthetical gloss that d_tx=1 means 'BFS-like' step from t: the evidence's figure labels BFS/DFS differently and does not explicitly state this mapping for \u03b1=1.",
+    "High p discourages backtracking / p described as the return parameter: evidence only names parameter 'Return p' in the algorithm and does not explain its effect in the excerpt."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The core \u03b1_pq definitions (1/p for d_tx=0, 1 for d_tx=1, 1/q for d_tx=2) match the evidence and gold answer. The extra interpretive remarks on p and q (return/in-out, q>1 keeps the walk local) are standard node2vec background and partly supported by the evidence (q>1 biases toward nodes close to t), so they do not undermine the answer."
+}

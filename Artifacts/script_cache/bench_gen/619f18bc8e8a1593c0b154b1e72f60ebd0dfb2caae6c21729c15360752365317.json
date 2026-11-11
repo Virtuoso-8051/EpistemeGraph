@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec become more robust when the missing edges are added in a way that increases the number of connected components, and how does that affect its Macro-F1 trend?",
+      "false_premise": "node2vec's missing-edge experiment allows the number of connected components to increase.",
+      "correction": "The missing edges are chosen randomly, subject to the constraint that the number of connected components in the network remains fixed.",
+      "evidence_quote": "The missing edges are chosen randomly, subject to the constraint that the number of connected components in the network remains fixed.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does node2vec use negative sampling and asynchronous SGD to make the sampling procedure itself faster during the random-walk phase?",
+      "false_premise": "node2vec uses negative sampling and asynchronous SGD to speed up the sampling procedure.",
+      "correction": "Negative sampling and asynchronous SGD are used to make the optimization phase efficient, not the sampling procedure.",
+      "evidence_quote": "The optimization phase is made efficient using negative sampling [22] and asynchronous SGD [26].",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What explains node2vec's strong scalability on Barab\u00e1si-Albert graphs with increasing average degree, and why does it still generate one million node representations so quickly?",
+      "false_premise": "node2vec is evaluated for scalability on Barab\u00e1si-Albert graphs with increasing average degree.",
+      "correction": "The scalability test uses Erdos-Renyi graphs with increasing sizes and constant average degree.",
+      "evidence_quote": "To test for scalability, we learn node representations usingnode2vec with default parameter values for Erdos-Renyi graphs with increasing sizes from 100 to 1,000,000 nodes and constant average degree 1 2 3 4 5 6 7 log10 nodes 0 1 2 3 4 log10 time (in seconds) sampling + optimization time sampling time Figure 6: Scalability of node2vec on Erdos-Renyi graphs with an average degree of 10.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Compared with DeepWalk, why does node2vec avoid random walks and instead reuse sampled nodes through breadth-first neighborhoods for different source nodes?",
+      "false_premise": "node2vec avoids random walks and reuses sampled nodes through breadth-first neighborhoods, and this is contrasted with DeepWalk.",
+      "correction": "node2vec uses random walks, and the passage says these random walks are also used in DeepWalk; the sampled nodes are reused as neighborhoods for different source nodes appearing in the walk.",
+      "evidence_quote": "We showed how random walks, also used in DeepWalk [24], allow the sampled nodes to be reused as neighborhoods for different source nodes appearing in the walk.",
+      "difficulty": "medium"
+    }
+  ]
+}

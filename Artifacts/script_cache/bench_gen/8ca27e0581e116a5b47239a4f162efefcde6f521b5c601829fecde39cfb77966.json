@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the model in the passage rely on a carefully designed objective function tailored for network embedding to preserve graph properties while scaling to millions of nodes?",
+      "false_premise": "The passage says the model already relies on a carefully designed objective function tailored for network embedding.",
+      "correction": "The passage does not describe a specific model using such an objective; it says existing methods either use an indirect approach not designed for networks or lack a clear objective function tailored for network embedding, and it anticipates a new model with such a design.",
+      "evidence_quote": "Although a few very recent studies approach the embedding of large-scale networks, these methods either use an indirect approach that is not designed for networks (e.g., [1]) or lack a clear objective function tailored for network embedding (e.g., [16]).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does the passage's graph embedding method use MDS to embed millions of nodes efficiently?",
+      "false_premise": "The passage presents MDS as the method used to efficiently embed millions of nodes.",
+      "correction": "The passage uses MDS only as an example of a classical graph embedding algorithm whose time complexity is at least quadratic and therefore too expensive for networks with millions of nodes.",
+      "evidence_quote": "For example, the time complexity of classical graph embedding algorithms such as MDS [4], IsoMap [20], Laplacian eigenmap [2] are at least quadratic to the number of vertices, which is too expensive for networks with millions of nodes.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What results does the passage report for node classification and link prediction on the Twitter followee-follower network after embedding it into low-dimensional spaces?",
+      "false_premise": "The passage reports experimental results on node classification and link prediction for the Twitter followee-follower network.",
+      "correction": "The passage mentions node classification and link prediction only as example applications of low-dimensional embeddings, not as reported results on the Twitter followee-follower network.",
+      "evidence_quote": "Such a low-dimensional embedding is very useful in a variety of applications such as visualization [21], node classification [3], link prediction [10], and recommendation [23].",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does Laplacian eigenmap outperform the new model for large-scale information networks in the passage?",
+      "false_premise": "The passage compares Laplacian eigenmap against a new model and says Laplacian eigenmap performs better.",
+      "correction": "The passage does not present any such comparison result; it only states that Laplacian eigenmap is a classical graph embedding algorithm whose time complexity is at least quadratic and too expensive for networks with millions of nodes.",
+      "evidence_quote": "For example, the time complexity of classical graph embedding algorithms such as MDS [4], IsoMap [20], Laplacian eigenmap [2] are at least quadratic to the number of vertices, which is too expensive for networks with millions of nodes.",
+      "difficulty": "medium"
+    }
+  ]
+}

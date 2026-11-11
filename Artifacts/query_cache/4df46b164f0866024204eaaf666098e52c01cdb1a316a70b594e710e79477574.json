@@ -1,0 +1,89 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "DEEPWALK",
+    "Node Classification (NC)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "NODE2VEC",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labels in sparsely labeled graphs",
+      "source_alias": "",
+      "type": "DEPEND_ON",
+      "target": "homophilous community structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "Node Classification (NC)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "fixed untuned mix of structural and homophily signals",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

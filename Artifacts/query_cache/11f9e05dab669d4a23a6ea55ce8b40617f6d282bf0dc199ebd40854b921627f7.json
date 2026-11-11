@@ -1,0 +1,111 @@
+{
+  "query_entities": [
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "pixels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pixels",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "nodes in a graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embeddings",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embeddings",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "graph\u2019s neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk strategy",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "breadth-first or depth-first",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first or depth-first",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "local similarity or more global, structural relationships between pixels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "task-specific pixel representations",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "context, boundaries, and spatial relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "task-specific pixel representations",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "raw pixel values",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "task-specific pixel representations",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "compact, discriminative features for pixels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "compact, discriminative features for pixels",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "how they relate to surrounding pixels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "compact, discriminative features for pixels",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "recognition accuracy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

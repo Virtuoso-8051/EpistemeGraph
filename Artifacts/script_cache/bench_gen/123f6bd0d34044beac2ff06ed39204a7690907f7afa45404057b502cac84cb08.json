@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "For the random-walk-based network method described in the passage, how many random walkers did the authors run in parallel during their experiments, and on what hardware setup did they do so?",
+      "why_unanswerable": "The passage says that several random walkers can run in different threads, processes, or machines, but it does not report any specific experimental count or hardware configuration.",
+      "evidence_quote": "Several random walkers (in different threads, processes, or machines) can simultaneously explore different parts of the same graph.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "In the random-walk-based method motivated by local structure, what exact length of short random walks did the authors use when extracting information from a network?",
+      "why_unanswerable": "The passage explains that the algorithm uses short random walks, but it never gives a numerical walk length or any exact hyperparameter value.",
+      "evidence_quote": "It is this connection to local structure that motivates us to use a stream of short random walks as our basic tool for extracting information from a network.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "When applying the random-walk-based approach to a scale-free graph, what measured exponent did the authors find for the power-law frequency distribution of vertices appearing in short random walks?",
+      "why_unanswerable": "The passage states that the frequency of vertices in short random walks will also follow a power-law distribution, but it does not provide any fitted exponent or quantitative measurement.",
+      "evidence_quote": "If the degree distribution of a connected graph follows a power law (is scale-free), we observe that the frequency which vertices appear in the short random walks will also follow a power-law distribution.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compared with global recomputation, by how much did the random-walk-based method reduce update time when the graph changed, and under what benchmark conditions was this speedup reported?",
+      "why_unanswerable": "The passage claims that the model can be updated in time sub-linear to the entire graph, but it does not report any measured speedup, benchmark, or experimental conditions.",
+      "evidence_quote": "We can iteratively update the learned model with new random walks from the changed region in time sub-linear to the entire graph.",
+      "difficulty": "hard"
+    }
+  ]
+}

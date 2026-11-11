@@ -1,0 +1,6 @@
+{
+  "answer": "LINE-SGD is faster because it treats the problem as sampling individual edges rather than factorizing the whole adjacency matrix. Each SGD step draws one (weighted) edge, using alias-table sampling so the sampling cost is O(1), and pairs it with a few negative samples, so an update touches only the two endpoint embeddings and a handful of negative nodes. Its cost per step is therefore independent of graph size and sparse. Graph factorization instead works with the full weighted matrix and its factor matrices, so its updates are heavier and less sparse. Sampling edges with probability proportional to weight, rather than using raw weights as gradient scales, also avoids the variance and learning-rate tuning problems that weighted graphs cause for plain SGD.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The general LINE edge-sampling explanation is well established, but I could not identify the specific paper comparing LINE-SGD and graph factorization on a language network, so the exact claimed reason may differ.",
+  "_token_nll": null
+}

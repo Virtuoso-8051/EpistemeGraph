@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "LINE-SGD (1ST)",
+    "Link Prediction (LP)",
+    "node representation (NR)",
+    "node embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "average operator",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Hadamard product",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "weighted L1 distance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "weighted L2 distance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "edge representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hadamard product",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "pairwise feature interactions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node representation (NR)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "first-order proximity embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "second-order proximity embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation (NR)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local and higher-order structural proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node2vec representation (NR)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "relationship between a pair of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

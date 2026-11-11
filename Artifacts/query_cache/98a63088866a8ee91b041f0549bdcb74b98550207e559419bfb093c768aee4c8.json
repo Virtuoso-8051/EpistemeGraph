@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node representation (NR)",
+    "EDGE",
+    "Link Prediction (LP)",
+    "binary edge (BE)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "binary operator",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary operator",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "pair feature g(u,v)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pair feature g(u,v)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "element-wise combination of embeddings f(u) and f(v)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pair feature g(u,v)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "pure function of the two vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pair feature g(u,v)",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "any pair of nodes regardless of edge existence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation (NR)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "random walk based embedding learned over graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EDGE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "positive labels in link-prediction training",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampled non-edges",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative labels in link-prediction training",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "link prediction",
+      "type": "USES",
+      "target": "pair feature g(u,v) computed for candidate pairs including non-edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "link prediction",
+      "type": "APPLIES_TO",
+      "target": "prediction of whether a link exists between candidate pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

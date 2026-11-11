@@ -1,0 +1,77 @@
+{
+  "query_entities": [
+    "node2vec",
+    "BFS",
+    "DFS",
+    "structural equivalence",
+    "homophily",
+    "community-based similarity",
+    "local neighborhood similarity"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "BFS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "DFS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local neighborhood similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "community-based similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "local neighborhood similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "structural equivalence",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "DFS-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

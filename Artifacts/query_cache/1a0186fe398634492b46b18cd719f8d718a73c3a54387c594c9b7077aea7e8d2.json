@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node2vec parameter (NP)",
+    "node representation (NR)",
+    "biased random walk procedure (BRWP)",
+    "node embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "REFUTED",
+      "target": "pure DFS traversal",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "second-order biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order biased random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "return parameter p",
+      "target_alias": "p",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order biased random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "in-out parameter q",
+      "target_alias": "q",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small q",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "homophily (communities)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large q",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "structural equivalence (roles)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "p",
+      "type": "APPLIES_TO",
+      "target": "biased random walk procedure (BRWP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "interpolation between DFS and BFS regimes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram training",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "both homophily and structural equivalence similarity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

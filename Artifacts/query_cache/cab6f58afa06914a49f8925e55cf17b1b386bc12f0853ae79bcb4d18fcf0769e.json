@@ -1,0 +1,6 @@
+{
+  "answer": "The embedding problem is harder for real-world information networks because they are typically very large, sparse, noisy, and heterogeneous, so a method must preserve useful structure while remaining computationally feasible and robust to incomplete or irregular connectivity. Smaller networks are easier because their structure is simpler to inspect and model, and exhaustive or near-exhaustive methods are more practical. DeepWalk exploits non-random walks by using short, biased random walks that stay within local neighborhoods, turning each walk into a sequence of nodes analogous to a sentence. It then applies a Skip-gram-style objective to learn embeddings from co-occurrence in these sequences, so nodes that appear in similar walk contexts get similar vectors. This captures not only direct graph topology but also higher-order proximity and community/role information reflected in the walk statistics.",
+  "confidence": 0.86,
+  "confidence_reasoning": "The explanation matches the standard interpretation of graph embedding and DeepWalk, though the exact wording of Passages A and B is unavailable, so some phrasing may differ from the source.",
+  "_token_nll": 0.23435044288635254
+}

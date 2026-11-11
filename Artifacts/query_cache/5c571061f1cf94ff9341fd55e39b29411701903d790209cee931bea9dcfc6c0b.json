@@ -1,0 +1,84 @@
+{
+  "query_entities": [
+    "first-order proximity (FOP)",
+    "second-order neighbor (SON)",
+    "directed graph (DG)",
+    "undirected graph",
+    "weighted graph (WG)",
+    "network embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "FOP",
+      "type": "DEFINED_AS",
+      "target": "local pairwise proximity (LPP)",
+      "target_alias": "LPP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "FOP",
+      "type": "DEFINED_AS",
+      "target": "observed edge weight between vertices u and v",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "joint probability p1(v_i, v_j) = 1 / (1 + exp(-u_i \u00b7 u_j))",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "KL divergence between joint probability and empirical distribution p\u03021(i, j) = w_ij / W",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "FOP",
+      "type": "APPLICABLE_FOR",
+      "target": "undirected graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "FOP",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "symmetric edge weight (w_uv = w_vu)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "FOP",
+      "type": "REQUIRES",
+      "target": "undirected graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "directed graph (DG)",
+      "source_alias": "DG",
+      "type": "REQUIRES",
+      "target": "second-order neighbor (SON)",
+      "target_alias": "SON",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order neighbor (SON)",
+      "source_alias": "SON",
+      "type": "USES",
+      "target": "vertex neighborhood (context)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

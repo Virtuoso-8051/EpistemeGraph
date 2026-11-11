@@ -1,0 +1,40 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC"
+  ],
+  "triples": [
+    {
+      "source": "node2vec paper",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "NODE2VEC",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "preprocessing on a graph with about 10 million edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "preprocessing on a graph with about 10 million edges",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "optimization time on the order of minutes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "single multi-core commodity machine",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

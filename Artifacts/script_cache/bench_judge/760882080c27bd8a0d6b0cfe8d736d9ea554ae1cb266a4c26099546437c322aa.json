@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The AI answer says the recommended objective is the second-order proximity objective, optionally combined with first-order; the evidence says either the first-order or second-order form can be minimized, with no single recommendation stated.",
+    "The AI answer says the objective uses edge-sampling with negative sampling for the new vertex; the evidence for the new-vertex procedure only describes minimizing a weighted negative log-likelihood over neighbors, not negative sampling."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly states that LINE needs known connections to existing vertices, that existing embeddings are fixed, and that a vertex without links cannot be embedded. However, it misstates the recommended objective as second-order (with first-order optional) when the paper presents both forms as equally valid options, and it adds negative sampling detail not stated in the new-vertex passage."
+}

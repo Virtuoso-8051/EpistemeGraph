@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How do LINE(1st), LINE(2nd), and DeepWalk compare in terms of convergence speed and performance as the number of samples increases during optimization?",
+      "gold_answer": "LINE(2nd) consistently outperforms LINE(1st) and DeepWalk in Micro-F1 as the number of samples increases. In addition, both LINE(1st) and LINE(2nd) converge much faster than DeepWalk.",
+      "evidence_quote": "The LINE(2nd) consistently outperforms LINE(1st) and DeepWalk, and both the LINE(1st) and LINE(2nd) converge much faster than DeepWalk.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does the conclusion say are the two complementary proximity objectives preserved by the LINE model?",
+      "gold_answer": "The LINE model is designed to preserve both first-order proximity and second-order proximity. The conclusion states that these two proximities are complementary to each other.",
+      "evidence_quote": "It has carefully designed objective functions that preserve both the first-order and second-order proximities, which are complementary to each other.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under what scalability conditions does the LINE model remain stable when optimized with multiple threads, and what does the speedup look like?",
+      "gold_answer": "The scalability experiment uses the Youtube data set and multiple threads for model updating. The speedup is reported to be quite close to linear, while classification performance remains stable as the number of threads increases.",
+      "evidence_quote": "The speed up is quite close to linear.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why does the paper claim that the LINE inference algorithm is quite scalable, and what implementation choices support that claim?",
+      "gold_answer": "The paper argues that LINE is quite scalable because it uses edge-sampling treatment together with asynchronous stochastic gradient descent, which allows multiple threads to be deployed for optimization. The observed near-linear speedup and stable Micro-F1 across threads support this claim.",
+      "evidence_quote": "Finally, we investigate the scalability of the LINE model optimized by the edge-sampling treatment and asynchronous stochastic gradient descent, which deploys multiple threads for optimization.",
+      "difficulty": "hard"
+    }
+  ]
+}

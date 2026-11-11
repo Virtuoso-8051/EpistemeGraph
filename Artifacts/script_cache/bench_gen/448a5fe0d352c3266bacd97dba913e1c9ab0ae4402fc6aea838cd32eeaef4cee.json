@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What exact value of the walk length parameter t did DeepWalk use in its main experiments on social networks?",
+      "why_unanswerable": "The passage defines t as an input to DeepWalk but does not report any experimental value for the walk length parameter.",
+      "evidence_quote": "Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many walks per vertex \u03b3 did DeepWalk set when training the vertex representations described in the passage?",
+      "why_unanswerable": "The passage lists \u03b3 as an input parameter, but it never states the specific number of walks per vertex used in any experiment.",
+      "evidence_quote": "Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What embedding dimension d did DeepWalk use for the low-dimensional vertex representation matrix \u03a6 in its reported experiments?",
+      "why_unanswerable": "Although the passage says DeepWalk produces a matrix \u03a6 with embedding size d, it does not give the actual dimensionality chosen in experiments.",
+      "evidence_quote": "Algorithm 1 DeepW alk(G, w, d, \u03b3, t) Input: graph G(V,E ) window size w embedding size d walks per vertex \u03b3 walk length t Output: matrix of vertex representations \u03a6\u2208 R|V|\u00d7d",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which specific social network datasets did DeepWalk evaluate on to show that vertices with similar neighborhoods acquire similar representations?",
+      "why_unanswerable": "The passage explains the method and its intended properties, but it does not name any datasets or benchmark graphs used for evaluation.",
+      "evidence_quote": "Solving the optimization problem from Eq. 2 builds representations that capture the shared similarities in local graph structure between vertices.",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In LINE, what exact value of the embedding dimension d did the authors use in their main experiments on large-scale information networks?",
+      "why_unanswerable": "The passage defines the embedding space as R^d and says d is much smaller than |V|, but it never reports any concrete dimension used in experiments.",
+      "evidence_quote": "Given a large network G = (V,E ), the problem of Large-scale Information Network Embedding aims to represent each vertexv\u2208V into a low-dimensional space Rd, i.e., learning a function fG : V \u2192 Rd, where d\u226a| V|.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many vertices and edges were used in the largest dataset evaluated by LINE, and what were its exact counts?",
+      "why_unanswerable": "The passage mentions that LINE should scale to networks with millions of vertices and billions of edges, but it does not name any dataset or give exact dataset sizes.",
+      "evidence_quote": "second, it must scale for very large networks, say millions of vertices and billions of edges; third, it can deal with networks with arbitrary types of edges: directed, undirected and/or weighted.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what training conditions or optimizer settings did LINE achieve its best performance when preserving first-order and second-order proximity together?",
+      "why_unanswerable": "The passage explains that LINE preserves first-order and second-order proximities and that the two are combined in a simple way, but it does not report any optimization hyperparameters or best-performing training conditions.",
+      "evidence_quote": "We describe the LINE model to preserve the first-order proximity and second-order proximity separately, and then introduce a simple way to combine the two proximity.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Compared with preserving only first-order proximity, by how much did LINE improve link prediction accuracy when both first-order and second-order proximity were preserved?",
+      "why_unanswerable": "The passage states that LINE preserves both proximities, but it provides no link prediction experiment, no baseline comparison, and no numerical improvement.",
+      "evidence_quote": "In the space Rd, both the first-order proximity and the second-order proximity between the vertices are preserved.",
+      "difficulty": "medium"
+    }
+  ]
+}

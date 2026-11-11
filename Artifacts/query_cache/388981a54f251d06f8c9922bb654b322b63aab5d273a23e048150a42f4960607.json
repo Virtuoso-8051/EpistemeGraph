@@ -1,0 +1,50 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE(2nd)",
+    "LINE(1st+2nd)",
+    "Wikipedia page classification"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "best Wikipedia classification result",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(2nd)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "best Wikipedia classification result",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "concatenation of separately trained first-order and second-order embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE paper",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "LINE(1st+2nd)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

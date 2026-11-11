@@ -1,0 +1,140 @@
+{
+  "query_entities": [
+    "LINE(2nd)",
+    "LINE(1st)",
+    "social network classification",
+    "first-order proximity",
+    "second-order proximity",
+    "neighborhood context",
+    "embeddings",
+    "adjacent nodes",
+    "second-order proximity",
+    "community",
+    "role",
+    "interest group",
+    "neighborhood structure",
+    "labels"
+  ],
+  "triples": [
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(1st)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social network classification",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "classification task",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social network classification",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "task driven by neighborhood context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "keeping embeddings of adjacent nodes close together",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "direct links",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "nodes with similar neighbors have similar representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social networks",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "community",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social networks",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "role",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social networks",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "interest group",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "many neighbors shared by nodes in the same community, role, or interest group",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "stronger signal for classification than direct edge existence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "similarity in neighborhood structure",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "more informative than immediate pairwise adjacency for predicting labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "more important than first-order proximity for predicting labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

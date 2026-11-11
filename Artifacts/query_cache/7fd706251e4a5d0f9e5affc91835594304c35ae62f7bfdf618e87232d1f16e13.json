@@ -1,0 +1,77 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "BlogCatalog",
+    "Node Classification (NC)",
+    "multi-label classification (MLC)",
+    "Wikipedia data (WD)",
+    "BlogCatalog network (BN)",
+    "classification performance (CP)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "labeled training fraction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled training fraction",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "multi-label classification (MLC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "10,312 nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI network",
+      "source_alias": "PPI",
+      "type": "CONTAINS",
+      "target": "3,890 nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia data (WD)",
+      "source_alias": "Wikipedia",
+      "type": "CONTAINS",
+      "target": "4,777 nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "DEFINED_AS",
+      "target": "approximate absolute training counts",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "one fixed training count",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

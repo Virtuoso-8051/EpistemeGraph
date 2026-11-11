@@ -1,0 +1,46 @@
+{
+  "query_entities": [
+    "second-order proximity",
+    "neighborhood distributions",
+    "vertices",
+    "u",
+    "v",
+    "outgoing/incoming adjacency patterns",
+    "neighbor profiles",
+    "directly connected"
+  ],
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "similarity between the neighborhood distributions of two vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "COMPARES",
+      "target": "outgoing/incoming adjacency patterns",
+      "target_alias": "neighbor profiles",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "COMPARES",
+      "target": "connections to all other vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "NOT_BASED_ON",
+      "target": "whether two vertices are directly connected",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "Why do the authors use a stream of short random walks as the basic tool for extracting information from a network, and what two additional advantages do they claim this choice provides?",
+      "gold_answer": "The authors use short random walks because of their connection to local structure, which lets them capture local community information efficiently. They also say this choice makes local exploration easy to parallelize and allows the model to be updated incrementally after small graph changes without global recomputation.",
+      "evidence_quote": "It is this connection to local structure that motivates us to use a stream of short random walks as our basic tool for extracting information from a network.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How do short random walks help the authors accommodate small changes in a graph, and what is the computational benefit of that approach?",
+      "gold_answer": "Because the method relies on information from short random walks, the learned model can be updated using new walks only from the changed region. This makes the update time sub-linear to the size of the entire graph, avoiding the need to recompute everything globally.",
+      "evidence_quote": "We can iteratively update the learned model with new random walks from the changed region in time sub-linear to the entire graph.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what condition do the authors expect the frequency of vertices in short random walks to follow a power-law distribution, and what analogy do they draw from natural language?",
+      "gold_answer": "If the degree distribution of a connected graph follows a power law, meaning the graph is scale-free, then the frequency of vertices appearing in short random walks is also expected to follow a power-law distribution. They compare this to word frequencies in natural language, which also follow a similar distribution and are modeled effectively by language-modeling techniques.",
+      "evidence_quote": "If the degree distribution of a connected graph follows a power law (is scale-free), we observe that the frequency which vertices appear in the short random walks will also follow a power-law distribution.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the core contribution of the authors' approach to modeling community structure in networks, and how do they justify it using the relationship between random walks and language modeling?",
+      "gold_answer": "The core contribution is the idea that techniques developed for modeling natural language can be repurposed to model community structure in networks. The justification is that both short random-walk visits in scale-free graphs and word frequencies in text exhibit power-law behavior, making the two settings analogous.",
+      "evidence_quote": "A core contribution of our work is the idea that techniques which have been used to model natural language (where the symbol frequency follows a power law distribution (or Zipf\u2019s law)) can be re-purposed to model community structure in networks.",
+      "difficulty": "hard"
+    }
+  ]
+}

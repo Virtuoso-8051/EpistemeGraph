@@ -1,0 +1,6 @@
+{
+  "answer": "LINE(2nd) embeds each author using second-order proximity, so two authors are placed close together only if they share neighbors in their context (co-neighbor) distributions. In a sparse co-author network, many authors in the same community have few or no common collaborators, so their context vectors are weakly aligned and the embedding does not pull them together. Low-degree nodes also get poorly determined vectors, and the optimization is dominated by hubs and noise. The result is that authors from the same community are scattered across the layout instead of forming coherent clusters. This explanation is my reconstruction of the general mechanism; I could not verify the specific paper's stated reason.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I could not identify the specific source, so the explanation is a plausible general reconstruction of LINE(2nd)'s behavior on sparse co-author graphs rather than a verified claim from the paper.",
+  "_token_nll": null
+}

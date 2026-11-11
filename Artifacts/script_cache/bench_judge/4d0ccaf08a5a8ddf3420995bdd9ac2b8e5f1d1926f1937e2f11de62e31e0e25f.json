@@ -1,0 +1,16 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "\"LINE(1st) converges the fastest\"",
+    "\"LINE(2nd) converges more slowly\"",
+    "\"DeepWalk is typically the slowest to optimize as the number of training samples increases\"",
+    "\"LINE(1st) usually reaches good performance with fewer samples because it models only first-order proximity and has a simpler objective\"",
+    "\"LINE(2nd) needs more samples than LINE(1st) to stabilize because it also learns second-order neighborhood structure, making optimization harder\"",
+    "\"DeepWalk generally requires the most samples and the longest training time, since it relies on random-walk-based context generation and a skip-gram objective, which is more expensive and tends to improve more gradually\"",
+    "\"In terms of final performance, LINE(2nd) often performs better than LINE(1st), and DeepWalk is often competitive or better than both when enough samples are used\"",
+    "\"it usually improves more slowly during optimization\""
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The paper evidence says LINE(2nd) consistently outperforms LINE(1st) and DeepWalk as samples increase, and that both LINE variants converge much faster than DeepWalk. The answer reverses the convergence ordering, adds unsupported explanations about why, and claims DeepWalk can be competitive or better than LINE methods, which contradicts the cited result."
+}

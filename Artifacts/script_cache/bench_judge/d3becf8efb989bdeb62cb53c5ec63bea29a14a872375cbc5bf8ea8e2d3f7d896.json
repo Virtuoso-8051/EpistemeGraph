@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The first-order model is specifically the sigmoid of the inner product p1(vi,vj)=sigmoid(ui\u00b7uj) trained to match empirical edge weights; the evidence does not give this formula.",
+    "The joint distribution for first-order proximity is symmetric, which the evidence does not state.",
+    "Second-order proximity uses separate vertex and context embeddings; the evidence does not mention this."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, since the evidence explicitly says LINE(1st) and LINE-SGD(1st) only apply to undirected graphs and that second-order proximity covers both directed and undirected graphs. However, it adds method-specific details (the sigmoid inner-product formulation, joint symmetry, and separate vertex/context embeddings) that the provided evidence does not contain."
+}

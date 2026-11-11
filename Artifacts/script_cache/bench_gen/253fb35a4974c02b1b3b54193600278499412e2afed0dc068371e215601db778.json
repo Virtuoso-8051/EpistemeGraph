@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does the role of structural equivalence in the neighborhood-sampling setup of node2vec relate to DeepWalk's advantage when only a small fraction of nodes are labeled for classification?",
+      "gold_answer": "Node2vec's sampling framework explicitly aims to capture structural equivalence by allowing depth-first sampling to reach nodes that can be far apart but play similar structural roles, while DeepWalk shows strong performance when labels are sparse, outperforming baselines even with only 20% labeled nodes and maintaining an advantage at very low training ratios.",
+      "evidence_quote": "Importantly, unlike homophily, structural equivalence does not emphasize connectivity; nodes could be far apart in the network and still have the same structural role.",
+      "evidence_quote_b": "This strong performance when only small fractions of the graph are labeled is a core strength of our approach.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compared with BFS and DFS in the neighborhood-sampling method described for node2vec, what kind of graph similarity does DeepWalk's reported performance suggest is especially useful under sparse supervision?",
+      "gold_answer": "BFS is aligned with homophily because it samples immediate neighbors, whereas DFS can capture structural equivalence by moving to farther nodes; DeepWalk's strong results with sparse labels suggest that representations useful for classification can benefit from capturing both local community similarity and structural-role similarity, rather than relying only on immediate-neighbor homophily.",
+      "evidence_quote": "The breadth-first and depth-first sampling represent extreme scenarios in terms of the search space they explore leading to interesting implications on the learned representations.",
+      "evidence_quote_b": "DeepW alkoutperforms all baselines by at least 3% with respect to Micro-F1.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions would the node2vec sampling strategy that explores nodes at increasing distances be more consistent with DeepWalk's gains on Flickr and YouTube: when homophily dominates, or when structural equivalence matters more?",
+      "gold_answer": "The increasing-distance strategy corresponds to DFS, which is more consistent with structural equivalence than homophily; DeepWalk's gains on Flickr and YouTube under very low training ratios indicate that such nonlocal, role-based similarities can be especially helpful when labeled data is scarce.",
+      "evidence_quote": "In Figure 1, DFS sampless4,s5,s6.",
+      "evidence_quote_b": "DeepW alksignificantly outperforms the scalable baseline for creating graph representations, EdgeCluster.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why is the comparison between BFS and DFS in node2vec relevant when interpreting DeepWalk's results on sparsely labeled graphs such as Flickr and YouTube?",
+      "gold_answer": "Because BFS emphasizes immediate-neighbor homophily while DFS can capture distant nodes with similar structural roles, the comparison helps explain why DeepWalk can remain effective with sparse labels: its learned representations appear robust enough to support classification even when supervision is limited, as shown on Flickr and YouTube.",
+      "evidence_quote": "For example, in Figure 1 for a neighborhood of size k = 3 , BFS samples nodess1,s2,s3.",
+      "evidence_quote_b": "When 1% of the labeled nodes are used for test, the Micro- F1 improves by 14%.",
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "matrix factorization (MF)",
+    "truncated random walk (TRW)",
+    "community structure"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walk",
+      "target_alias": "TRW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram model with hierarchical softmax",
+      "target_alias": "word2vec",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram with negative sampling",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "shifted pointwise mutual information matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "matrix factorization of (1/T) sum_{r=1}^{T} (D^{-1}A)^r D^{-1} minus a log(b) shift",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix factorization",
+      "source_alias": "MF",
+      "type": "PRESERVES",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk",
+      "source_alias": "TRW",
+      "type": "PRESERVE",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "matrix factorization",
+      "target_alias": "MF",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

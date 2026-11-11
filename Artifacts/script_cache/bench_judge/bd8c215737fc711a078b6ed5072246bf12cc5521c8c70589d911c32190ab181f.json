@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Missing edges are chosen uniformly at random from observed edges, often at a fixed fraction (stated as common practice, not tied to the paper).",
+    "A common constraint is that the perturbed graph stays connected or that no node is isolated; this differs from the paper's constraint that the number of connected components remains fixed."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer declines to identify the specific experiment, then offers generic guesses. The 'chosen randomly' guess matches the evidence, but the guessed constraint (stays connected / no isolated node) is not the paper's constraint (number of connected components fixed), and the answer never states the actual one. The core of the question goes unanswered."
+}

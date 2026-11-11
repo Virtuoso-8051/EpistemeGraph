@@ -1,0 +1,47 @@
+{
+  "query_entities": [
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "nodes that are more likely to be grouped together",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "walk biased toward exploring nodes that are closer to the current node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "broad outward exploration",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "homophily-like, community-oriented cluster",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Advantage over baselines was most pronounced for BlogCatalog with roughly 1% to 10% labeled, and similarly on Flickr and YouTube (specific ranges not in evidence)",
+    "As labeled data grows, the gap narrows and competing methods approach DeepWalk's performance (not in evidence)",
+    "Baselines specifically include modularity-based and wvRN methods (evidence only mentions EdgeCluster and spectral clustering)",
+    "Outperforms baselines on large graphs, being efficient on sparse social-network-style graphs (not specifically supported)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that gains are largest when labeled data is sparse is supported by the abstract. However, the answer omits missing information and the 60% less training data point, and adds specifics (1-10% ranges, gap narrowing, wvRN/modularity baselines) not in the evidence."
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "LINE applies this only in the cold-start case, when a newly arrived vertex has no observed edges to the existing network and so only its text is available. The text features are used to establish first-order proximity between the new vertex and existing vertices (for example, by text similarity, which yields weighted links). The new vertex's embedding is then optimized against the first-order objective with the already-learned embeddings of existing vertices held fixed. I am not certain of the exact formulation in the original paper.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I recall the general idea of inferring embeddings for new vertices from text-derived links, but I am unsure of the exact conditions and formulation the question refers to.",
+  "_token_nll": null
+}

@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "truncated random walk (TRW)",
+    "skip-gram model",
+    "Word2Vec",
+    "hierarchical softmax",
+    "negative sampling"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "TRW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "DOES_NOT_PRESERVE",
+      "target": "exact ordering of neighbors within a window",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Word2Vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "invariance to order of context vertices within window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "embeddings reflecting neighborhood co-occurrence statistics",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

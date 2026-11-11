@@ -1,0 +1,9 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk samples a neighbor uniformly at random from each node, producing short truncated walks used as sentences for a skip-gram model, which is not stated in the passage."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The core claims are supported: DeepWalk uses uniform random walks, and the limitation is that it gives no control over explored neighborhoods. The BFS/DFS trade-off framing is supported by the passage. The skip-gram and truncated-walk details are standard background on DeepWalk, and the evidence also mentions truncated random walks, so they are acceptable."
+}

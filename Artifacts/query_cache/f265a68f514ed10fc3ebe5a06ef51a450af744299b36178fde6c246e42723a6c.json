@@ -1,0 +1,6 @@
+{
+  "answer": "In node2vec, the unnormalized transition bias \\(\\alpha_{pq}(t,x)\\) depends on the shortest-path distance between the previous node \\(t\\) and the candidate next node \\(x\\):\n- \\(\\alpha_{pq}(t,x) = 1/p\\) if \\(x = t\\) (the walk would immediately return to the previous node).\n- \\(\\alpha_{pq}(t,x) = 1\\) if \\(x\\) is adjacent to \\(t\\) (i.e., \\(d_{tx} = 1\\)).\n- \\(\\alpha_{pq}(t,x) = 1/q\\) if \\(x\\) is not adjacent to \\(t\\) (i.e., \\(d_{tx} = 2\\) in an unweighted, undirected graph setting used by node2vec).",
+  "confidence": 0.98,
+  "confidence_reasoning": "This is the standard node2vec transition rule and is directly stated in the original formulation, so I am highly confident.",
+  "_token_nll": 0.07885442228398772
+}

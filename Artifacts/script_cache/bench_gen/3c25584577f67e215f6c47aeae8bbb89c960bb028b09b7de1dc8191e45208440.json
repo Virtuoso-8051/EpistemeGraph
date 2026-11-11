@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does DeepWalk differ from the model in paper1 with respect to the kinds of networks it can handle, especially regarding edge weights?",
+      "gold_answer": "DeepWalk is described as only applying to unweighted networks, whereas the model in paper1 is applicable to networks with both weighted and unweighted edges.",
+      "evidence_quote": "Practically, DeepWalk only applies to unweighted networks, while our model is applicable for networks with both weighted and unweighted edges.",
+      "evidence_quote_b": "Each edge e\u2208 E is an ordered pair e = (u,v ) and is associated with a weight wuv > 0, which indicates the strength of the relation.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does DeepWalk use as its corpus and vocabulary, and how does that compare with the graph representation assumed in paper1?",
+      "gold_answer": "DeepWalk treats short truncated random walks as its corpus and the graph vertices as its vocabulary, while paper1 defines an information network as a graph whose vertices are data objects connected by weighted edges representing relationships.",
+      "evidence_quote": "DeepW alkconsiders a set of short truncated random walks its own corpus, and the graph vertices as its own vocabulary (V =V ).",
+      "evidence_quote_b": "An information network is defined as G = (V,E ), where V is the set of vertices, each representing a data object and E is the set of edges between the vertices, each representing a relationship between two data objects.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does DeepWalk sample vertices during a walk, and how does that relate to the role of edge weights in paper1\u2019s information network definition?",
+      "gold_answer": "DeepWalk samples uniformly from the neighbors of the last visited vertex until the maximum length is reached, whereas paper1\u2019s information networks can have edges with arbitrary nonnegative weights that indicate relation strength rather than being sampled uniformly by DeepWalk.",
+      "evidence_quote": "A walk samples uniformly from the neighbors of the last vertex visited until the maximum length ( t) is reached.",
+      "evidence_quote_b": "The weights of the edges can be either binary or take any real value.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "How do DeepWalk and the model in paper1 differ in what structural information they explicitly preserve or exploit?",
+      "gold_answer": "DeepWalk learns representations from random-walk contexts using SkipGram updates, while paper1 explicitly frames the embedding task around preserving first-order proximity, meaning local pairwise proximity between vertices.",
+      "evidence_quote": "In the inner loop, we iterate over all the vertices of the graph.",
+      "evidence_quote_b": "We define the local network structures as the firstorder proximity between the vertices: Definition 2. (First-order Proximity) The first-order proximity in a network is the local pairwise proximity between two vertices.",
+      "difficulty": "medium"
+    }
+  ]
+}

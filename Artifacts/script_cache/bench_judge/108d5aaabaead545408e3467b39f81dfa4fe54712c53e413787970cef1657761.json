@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "In BlogCatalog experiments, DeepWalk outperforms spectral-clustering and modularity baselines most clearly when only about 10% of nodes are labeled. The evidence gives the '10%' figure only as an F1 improvement, not as a labeled-data fraction, and does not name these baselines.",
+    "The claim that this is 'not a claim about sparse graphs' conflicts with the evidence, which says DeepWalk tackles network sparsity through truncated random walks.",
+    "LINE handles 'billions of edges' and uses edge sampling and negative sampling. The evidence only mentions scaling to millions of nodes and does not contain these specifics.",
+    "The claim that LINE's scalability claim is 'more explicit' than DeepWalk's is an evaluative judgment. DeepWalk's abstract also states it is scalable, online, and trivially parallelizable."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast is right: DeepWalk's advantage is under sparse labels and missing information, while LINE's stated strength is scaling to very large networks. However, the answer adds unsupported specifics (the 10% labeled-data fraction, the named baselines, billions of edges, and the sampling details) and misstates the sparsity point as not concerning sparse graphs."
+}

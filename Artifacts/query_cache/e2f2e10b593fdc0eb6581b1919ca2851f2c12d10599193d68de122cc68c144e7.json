@@ -1,0 +1,70 @@
+{
+  "query_entities": [
+    "LINE",
+    "node2vec",
+    "NODE2VEC",
+    "Hadamard operator",
+    "Weighted-L1",
+    "Weighted-L2",
+    "Average operator",
+    "distance-based edge operators"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "NODE2VEC",
+      "target_alias": "node2vec",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "Weighted-L1",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "Weighted-L2",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "WORKS_WELL_FOR",
+      "target": "Hadamard operator",
+      "target_alias": "HO",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "WORKS_WELL_FOR",
+      "target": "Average operator",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Weighted-L1",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "distance-based edge operators",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Weighted-L2",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "distance-based edge operators",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

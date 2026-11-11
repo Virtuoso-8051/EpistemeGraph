@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Uses biased second-order random walks with parameters p (return) and q (in-out) interpolating between BFS and DFS",
+    "Feeds sampled walks into a skip-gram/word2vec style objective",
+    "Optimization uses negative sampling"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims (learning low-dimensional embeddings, maximizing likelihood of preserving network neighborhoods, SGD optimization) are supported by the evidence. The specifics of biased second-order walks with p and q, the skip-gram objective, and negative sampling are not in the provided evidence, though BFS/DFS appears only in a figure caption, and they are accurate to the actual paper."
+}

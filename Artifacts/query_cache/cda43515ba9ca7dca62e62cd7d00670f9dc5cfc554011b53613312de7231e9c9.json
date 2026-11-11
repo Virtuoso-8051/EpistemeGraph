@@ -1,0 +1,79 @@
+{
+  "query_entities": [
+    "SkipGram",
+    "hierarchical softmax tree",
+    "binary tree",
+    "node2vec",
+    "custom graph-based objective",
+    "feature representations",
+    "network neighborhoods",
+    "vertices",
+    "embeddings"
+  ],
+  "triples": [
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax tree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax tree",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "prediction over all vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "prediction over all vertices",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "sequence of binary decisions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sequence of binary decisions",
+      "source_alias": "",
+      "type": "USES",
+      "target": "binary tree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "custom graph-based objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "custom graph-based objective",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "feature representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature representations",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "network neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network neighborhoods",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "similar embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

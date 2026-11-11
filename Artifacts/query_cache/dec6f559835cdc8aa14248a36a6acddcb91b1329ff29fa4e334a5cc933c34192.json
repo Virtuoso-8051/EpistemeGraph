@@ -1,0 +1,93 @@
+{
+  "query_entities": [
+    "LINE(2nd)",
+    "DeepWalk",
+    "node2vec",
+    "random walk",
+    "biased random-walk strategy",
+    "efficiency",
+    "scalable"
+  ],
+  "triples": [
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "0.5 hours",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "6.5 hours",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "13\u00d7 faster than DeepWalk",
+      "target_alias": "about 6 hours faster",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "biased random-walk strategy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random-walk strategy",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "efficiency",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "many walk samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "methods based on random walks",
+      "source_alias": "",
+      "type": "ARE_MORE_EXPENSIVE_THAN",
+      "target": "approaches like LINE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk-based embedding methods",
+      "source_alias": "",
+      "type": "INCUR",
+      "target": "significant runtime overhead",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ARGUES",
+      "target": "biased random-walk strategy is designed to be efficient and scalable",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "node2vec",
+    "Skip-gram model (SGM)",
+    "NODE2VEC",
+    "DEEPWALK"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram model (SGM)",
+      "target_alias": "SGM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "uniform random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "uniform random walks",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "first-order sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "USES",
+      "target": "second-order biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "USES",
+      "target": "return parameter p",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "USES",
+      "target": "in-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "breadth-first-like neighborhoods",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first-like neighborhoods",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "homophily and community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "SGM",
+      "type": "OPTIMIZES",
+      "target": "skip-gram log-likelihood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram log-likelihood",
+      "source_alias": "",
+      "type": "USES",
+      "target": "stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "softmax normalization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "softmax normalization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper3",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

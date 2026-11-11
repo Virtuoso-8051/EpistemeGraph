@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Uses the Skip-gram model with hierarchical softmax from word2vec (the evidence only mentions hierarchical sampling approximating softmax, not Skip-gram explicitly)",
+    "Typical dimensionality is on the order of tens to a few hundred, e.g., 128 (no specific values in evidence)",
+    "Embeddings encode the vertex's structural role (evidence says neighborhood similarity and community membership, not structural role)",
+    "Used for multi-label node classification downstream and are unsupervised without labels (not directly in the evidence, though plausible background)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims (latent social representations from short random walks, continuous low-dimensional vectors encoding neighborhood and community membership) match the evidence. Specifics like Skip-gram, d=128, and structural role are not in the provided evidence, though they are widely known background."
+}

@@ -1,0 +1,110 @@
+{
+  "query_entities": [
+    "Principal Component Analysis",
+    "Multi-Dimensional Scaling",
+    "dense matrix representation of graph",
+    "eigen-decomposition",
+    "singular value decomposition",
+    "DeepWalk",
+    "node2vec",
+    "LINE"
+  ],
+  "triples": [
+    {
+      "source": "Principal Component Analysis",
+      "source_alias": "PCA",
+      "type": "REQUIRES",
+      "target": "eigen-decomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "source_alias": "PCA",
+      "type": "USES",
+      "target": "singular value decomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Multi-Dimensional Scaling",
+      "source_alias": "MDS",
+      "type": "USES",
+      "target": "dense matrix representation of graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "source_alias": "PCA",
+      "type": "USES",
+      "target": "dense matrix representation of graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "source_alias": "PCA",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "cubic time complexity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "source_alias": "PCA",
+      "type": "IS_A",
+      "target": "dimensionality reduction technique",
+      "target_alias": "DRT",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Multi-Dimensional Scaling",
+      "source_alias": "MDS",
+      "type": "IS_A",
+      "target": "dimensionality reduction technique",
+      "target_alias": "DRT",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "source_alias": "PCA",
+      "type": "WORKS_WELL_FOR",
+      "target": "small networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "Principal Component Analysis",
+      "target_alias": "PCA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "Principal Component Analysis",
+      "target_alias": "PCA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "Principal Component Analysis",
+      "target_alias": "PCA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "higher-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "query_entities": [
+    "node2vec parameter (NP)",
+    "NODE2VEC",
+    "BlogCatalog network (BN)",
+    "node representation (NR)"
+  ],
+  "triples": [
+    {
+      "source": "missing edges",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "BlogCatalog network (BN)",
+      "target_alias": "BN",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "missing edges",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "no node is left isolated",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "missing edges",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "edges chosen uniformly at random from observed edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "constraint",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "every node keeps at least one edge",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "every node keeps at least one edge",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "embedding remains defined for all nodes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

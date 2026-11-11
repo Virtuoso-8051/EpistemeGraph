@@ -1,0 +1,92 @@
+{
+  "query_entities": [
+    "node2vec",
+    "biased random walk procedure",
+    "Skip-gram model",
+    "node embedding",
+    "node classification",
+    "link prediction"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "biased random walk procedure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "Skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "node embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "breadth-first exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "depth-first exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node sequences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "vector representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "query_entities": [
+    "LINE",
+    "first-order proximity",
+    "second-order proximity",
+    "global network structure",
+    "KL-divergence",
+    "negative sampling",
+    "edge sampling"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "first-order proximity",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "KL-divergence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "DEFINED_AS",
+      "target": "joint probability distribution over edge endpoints p1(vi, vj) = 1 / (1 + exp(-u_i\u00b7u_j))",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "KL-divergence between p1 and empirical distribution p\u03021",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "IGNORES",
+      "target": "global network structure",
+      "target_alias": "LGNS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "context-vector objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "linear scalability in number of edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "combination of first-order and second-order proximity",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "neighborhood structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "real-world graphs",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "very large, sparse, and noisy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "strongly connected vertices",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "similar vertices (homophily)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

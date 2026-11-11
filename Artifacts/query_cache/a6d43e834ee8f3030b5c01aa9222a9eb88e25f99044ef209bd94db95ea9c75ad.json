@@ -1,0 +1,84 @@
+{
+  "query_entities": [
+    "LINE",
+    "FLICKR",
+    "YOUTUBE",
+    "SN",
+    "CAN",
+    "LN"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "SN",
+      "target_alias": "social network",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "FLICKR",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YOUTUBE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Wikipedia language co-occurrence network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "DBLP co-authorship network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "FLICKR",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "much smaller than YOUTUBE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "FLICKR",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "denser than YOUTUBE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "YOUTUBE",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "larger than FLICKR",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "YOUTUBE",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparser than FLICKR",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

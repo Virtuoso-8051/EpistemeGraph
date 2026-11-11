@@ -1,0 +1,131 @@
+{
+  "query_entities": [
+    "node2vec",
+    "LINE",
+    "truncated random walk",
+    "first-order proximity",
+    "second-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order biased random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order biased random walk",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "control the search space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "bias",
+      "source_alias": "",
+      "type": "DEPENDS_ON",
+      "target": "distance from x to the previous node t",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return and in-out controls",
+      "source_alias": "",
+      "type": "GOVERNES",
+      "target": "bias",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return control",
+      "source_alias": "",
+      "type": "ENCOURAGES",
+      "target": "immediately revisiting the previous node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out control",
+      "source_alias": "",
+      "type": "ENCOURAGES",
+      "target": "exploring outward or staying close to the current neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "breadth-first-like walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "depth-first-like walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walks",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "additional local co-occurrence information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity variant",
+      "source_alias": "LINE",
+      "type": "PRESERVES",
+      "target": "direct edge relationships between adjacent nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity variant",
+      "source_alias": "LINE",
+      "type": "PRESERVES",
+      "target": "similarity between a node and the context distribution of its neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "nodes that are not directly connected can still appear together in training contexts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walks",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "robust co-occurrence signals for the second-order model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walks",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "sparse observed network structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

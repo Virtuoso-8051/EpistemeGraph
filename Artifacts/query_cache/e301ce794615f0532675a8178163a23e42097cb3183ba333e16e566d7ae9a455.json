@@ -1,0 +1,122 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding (1ST)",
+    "random walks",
+    "weighted network (WN)",
+    "first-order proximity",
+    "second-order proximity",
+    "edge sampling",
+    "alias tables",
+    "negative sampling",
+    "DeepWalk",
+    "node2vec",
+    "Graph Embedding (GE)",
+    "KL divergence"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "REFUTED",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "IS_A",
+      "target": "Graph Embedding (GE)",
+      "target_alias": "GE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "OPTIMIZES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "OPTIMIZES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "weighted network (WN)",
+      "target_alias": "WN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias tables",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "O(1) sampling per edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "ACHIEVES",
+      "target": "linear training time in number of edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "",
+      "type": "USES",
+      "target": "degree-based distribution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "neighborhood overlap between nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "higher-order co-occurrence structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "higher-order co-occurrence structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "concatenation of first- and second-order embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

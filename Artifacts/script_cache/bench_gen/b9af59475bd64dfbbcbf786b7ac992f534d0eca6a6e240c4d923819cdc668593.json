@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How many random walks per vertex did DeepWalk use when learning latent social representations, and what exact walk length did the authors choose?",
+      "why_unanswerable": "The passage says DeepWalk uses local information from truncated random walks, but it does not report the number of walks per vertex or the walk length.",
+      "evidence_quote": "Using local information from truncated random walks as input, our method learns a representation which encodes structural regularities.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What hidden-layer size or embedding dimensionality did DeepWalk use in its representation learning model?",
+      "why_unanswerable": "The passage describes DeepWalk as learning a representation, but it never gives the dimensionality of the learned vectors or any hidden-layer size.",
+      "evidence_quote": "We propose DeepW alk, a novel approach for learning latent social representations of vertices.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which specific graph datasets did DeepWalk outperform spectral methods, and what were the exact classification accuracy numbers on each dataset?",
+      "why_unanswerable": "The passage mentions experiments on a variety of graphs and says DeepWalk outperforms other methods on large graphs, but it does not name the datasets or provide accuracy values.",
+      "evidence_quote": "Experiments on a variety of different graphs illustrate the effectiveness of our approach on challenging multi-label classification tasks.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many worker threads or machines did DeepWalk use to update different parts of the model concurrently, and what speedup did the parallelization achieve?",
+      "why_unanswerable": "The passage states that DeepWalk is parallelizable and that workers can update different parts concurrently, but it does not specify the number of workers or any measured speedup.",
+      "evidence_quote": "We also show that our approach is parallelizable, allowing workers to update different parts of the model concurrently.",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "query_entities": [
+    "LINE",
+    "stochastic gradient descent",
+    "gradient explosion",
+    "word co-occurrence network",
+    "edge sampling",
+    "alias table",
+    "asynchronous stochastic gradient algorithm (ASGA)",
+    "weighted network (WN)",
+    "edge-sampling treatment (EST)",
+    "gradient"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "classical stochastic gradient descent (CSGD)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "naive stochastic gradient descent on weighted edges",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "gradient",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "weighted network (WN)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "gradient",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling treatment (EST)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "gradient",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "edge-sampling treatment (EST)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling treatment (EST)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "alias table",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "asynchronous stochastic gradient algorithm (ASGA)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling treatment (EST)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "gradient",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classical stochastic gradient descent (CSGD)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "gradient explosion",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "classical stochastic gradient descent (CSGD)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "gradient explosion",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "edge-sampling treatment (EST)",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "gradient explosion",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "word co-occurrence network",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "weighted network (WN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

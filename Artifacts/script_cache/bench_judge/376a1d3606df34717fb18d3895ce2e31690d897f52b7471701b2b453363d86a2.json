@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The sampling budget K = 10 was used in the node2vec experiments",
+    "node2vec used r = 10 walks per source node, walk length l = 80, and window k = 10",
+    "The same budget was used for DeepWalk",
+    "LINE was given a comparable sample budget matched to the same number of samples"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence only states that DeepWalk, LINE, and node2vec were configured to generate an equal number of samples and gives the formula K = r\u00b7l\u00b7|V|, but it reports no numerical value for K, r, l, or window size. The AI answer nonetheless commits to K = 10 and specific parameter values (r = 10, l = 80, k = 10) that the papers do not contain, so its core answer is unsupported."
+}

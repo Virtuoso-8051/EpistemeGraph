@@ -1,0 +1,90 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "LINE(2nd)",
+    "DBLP PaperCitation",
+    "RANDOM WALK"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(2nd)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "RANDOM WALK",
+      "target_alias": "RW",
+      "claim_type": "ASserted"
+    },
+    {
+      "source": "RANDOM WALK",
+      "source_alias": "RW",
+      "type": "ENABLES",
+      "target": "higher-order proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "one-hop citation modeling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "direct citation links",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DBLP PaperCitation",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparse directed citation network",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "papers with few direct citations",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "indirect citation paths",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "community and topical structure embeddings",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "sparsely connected papers",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

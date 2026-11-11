@@ -1,0 +1,51 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE(2nd)",
+    "FLICKR",
+    "first-order proximity (FOP)",
+    "second-order neighbor (SON)"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st)",
+      "source_alias": "LINE-SGD (1ST)",
+      "type": "OUTPERFORMS",
+      "target": "LINE(2nd)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "LINE-SGD (1ST)",
+      "type": "APPLICABLE_FOR",
+      "target": "FLICKR",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "direct first-order ties",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order neighbor (SON)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "sufficient links for informative estimation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(1st)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

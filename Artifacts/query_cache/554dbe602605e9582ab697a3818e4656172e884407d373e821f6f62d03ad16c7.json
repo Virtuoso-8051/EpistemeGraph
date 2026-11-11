@@ -1,0 +1,101 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "NE",
+    "NC",
+    "CD",
+    "RWIN",
+    "RGW",
+    "DL"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "network neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "low-dimensional continuous vector representations of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram language model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "network classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "anomaly detection",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "scalability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "unsupervised learning",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "large sparse real-world graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "scarce label settings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

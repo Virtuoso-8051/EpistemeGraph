@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "For node2vec on the arXiv ASTRO-PH network, what exact p and q values were used for the best-performing setting in Table 4?",
+      "why_unanswerable": "The passage says the best p and q parameter settings for each node2vec entry are omitted, so the exact values are not provided.",
+      "evidence_quote": "The best p and q parameter settings for each node2vec entry are omitted for ease of presentation.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many dimensions were used in the learned node2vec feature vectors when evaluating link prediction on Facebook, PPI, and arXiv ASTRO-PH?",
+      "why_unanswerable": "The passage reports datasets, edge counts, and relative performance, but it does not state the embedding dimensionality for node2vec.",
+      "evidence_quote": "Experimental results.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which hardware setup or GPU model did the authors train node2vec, DeepWalk, and LINE for the link prediction experiments?",
+      "why_unanswerable": "No hardware, accelerator, or training environment details are given in the passage, so the exact setup cannot be recovered.",
+      "evidence_quote": "We summarize our results for link prediction in Table 4.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What was the exact AUC score of node2vec with the Hadamard operator on the PPI network, and how does it compare numerically to DeepWalk and LINE on that same dataset?",
+      "why_unanswerable": "The passage only states that Hadamard with node2vec is highly stable and best on average, but it does not provide the exact AUC values for PPI or the full numeric comparison requested.",
+      "evidence_quote": "Overall, the Hadamard operator when used with node2vec is highly stable and gives the best performance on average across all networks.",
+      "difficulty": "hard"
+    }
+  ]
+}

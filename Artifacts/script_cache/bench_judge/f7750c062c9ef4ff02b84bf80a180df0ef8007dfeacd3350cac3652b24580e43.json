@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "node2vec\u2019s performance typically degrades only slightly when noisy edges are added between randomly selected node pairs.",
+    "This robustness is useful in applications such as social networks, recommendation systems, or other real-world network analysis tasks where spurious connections may appear."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The paper does support that with noisy edges between randomly selected pairs, node2vec declines slightly faster initially than in the missing-edges case and then the rate of decrease in Macro-F1 gradually slows. However, the answer adds unsupported application examples; the paper specifically mentions sensor networks with noisy measurements, not social networks or recommendation systems."
+}

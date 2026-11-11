@@ -1,0 +1,6 @@
+{
+  "answer": "In LINE (Tang et al., 2015), first-order proximity is the local, pairwise closeness of two vertices u and v given by the observed edge weight w_uv. If there is no edge, the proximity is 0. LINE models it with a joint probability p1(v_i, v_j) = 1 / (1 + exp(-u_i \u00b7 u_j)) over the embedding vectors, and fits this to the empirical distribution p\u03021(i, j) = w_ij / W, where W is the sum of all edge weights, by minimizing the KL divergence. It applies only to undirected graphs because the edge weight is symmetric (w_uv = w_vu) and the model's dot-product joint probability is also symmetric, so it cannot capture the direction of a link. Directed graphs therefore require the second-order proximity, which uses a vertex's neighborhood (context) instead.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core definitions (edge weight as first-order proximity, the sigmoid joint probability, the KL objective, and the symmetry rationale) match my recollection of the paper, but I am reciting from memory and the exact wording of the directed-graph justification may differ.",
+  "_token_nll": null
+}

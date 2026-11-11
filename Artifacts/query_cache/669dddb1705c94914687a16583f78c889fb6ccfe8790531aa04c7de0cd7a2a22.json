@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec is reported to scale roughly linearly with graph size, because its random-walk generation and embedding learning can be parallelized efficiently. In the reported experiment, it was able to process a graph with one million nodes in about 10 minutes on a multi-core machine.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the commonly reported node2vec scalability claim and the specific one-million-node runtime, though exact timing can vary by implementation and hardware.",
+  "_token_nll": 0.19414551404057717
+}

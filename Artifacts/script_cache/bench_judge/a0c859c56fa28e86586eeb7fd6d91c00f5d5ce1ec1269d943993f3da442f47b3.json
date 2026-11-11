@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "DeepWalk used a representation size of d = 128 dimensions by default.",
+    "Its Skip-gram model has a single linear hidden layer of that size, mapping each node to a 128-dimensional vector.",
+    "The paper's parameter study also varied this size.",
+    "128 is the default used in its main experiments."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is unanswerable from the provided evidence, which never states DeepWalk's embedding dimensionality or hidden-layer size. The AI answer instead confidently supplies d = 128 as the default and describes a specific architecture, none of which appears in the evidence (the 128 figure appears only in a comparison with LINE, not as DeepWalk's default), so the core answer is unsupported."
+}

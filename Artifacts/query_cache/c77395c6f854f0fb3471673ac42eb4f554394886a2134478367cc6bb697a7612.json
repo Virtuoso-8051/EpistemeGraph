@@ -1,0 +1,123 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "first-order proximity (FOP)",
+    "Flickr",
+    "LINE(2nd)",
+    "second-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "directly connected nodes close in the embedding space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Flickr",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "extremely sparse graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "extremely sparse graph",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "few observed edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order signal",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "weak and noisy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order signal",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "too few positive links to reliably learn from",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "structurally related nodes",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "not directly connected",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "MODELS",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "similarity of neighborhood context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "nodes that share similar neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "many more effective training signals in sparse graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "indirect structural information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "robustness in extremely sparse graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(1st)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

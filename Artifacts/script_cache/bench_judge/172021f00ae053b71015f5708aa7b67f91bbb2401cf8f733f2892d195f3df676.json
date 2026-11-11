@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Specific datasets named (BlogCatalog, PPI, Wikipedia, Facebook, arXiv) and the network types (biological, social, Wikipedia co-occurrence, arXiv collaboration) are not in the provided evidence.",
+    "Baselines named as LINE are not in the evidence; only spectral clustering and DeepWalk are mentioned.",
+    "Link prediction details (Hadamard and other binary operators over node embeddings) are not in the evidence.",
+    "Claim that the paper reports improvements in scalability relative to baselines, and that gains are most pronounced with mixed homophily and structural equivalence, is not supported by the evidence.",
+    "Characterization as 'semi-supervised' with skip-gram is not in the evidence."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim, efficacy on multi-label classification and link prediction in diverse real-world networks, is supported. However, the answer adds many specifics (datasets, LINE baseline, Hadamard operators, scalability gains) that the evidence does not contain."
+}

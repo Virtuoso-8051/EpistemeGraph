@@ -1,0 +1,6 @@
+{
+  "answer": "In the original LINE (Tang et al., 2015), edges are sampled with probability proportional to their weights, and the sampled edges are then treated as binary (unweighted) during optimization, so every sampled edge contributes equally to the gradient. The weight is used only to decide how often an edge is sampled. LINE-SGD, by contrast, is the plain stochastic gradient descent formulation that does not use edge-sampling: it uses the raw edge weights directly inside the objective and gradient, so each update is scaled by the edge weight w_ij. Consequently, LINE-SGD is sensitive to the scale of the weights (large weights can cause large gradient magnitudes and unstable learning, requiring careful learning-rate tuning), whereas the original LINE's alias-sampling of edges avoids that weight-scale problem by making the gradient magnitude independent of the weights.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The core distinction (LINE samples edges proportional to weight and treats them as binary; LINE-SGD uses weights directly in the gradient) is my best recollection of the literature, but the exact terminology and framing of 'LINE-SGD' in the source question may differ and I am not certain of the precise details.",
+  "_token_nll": null
+}

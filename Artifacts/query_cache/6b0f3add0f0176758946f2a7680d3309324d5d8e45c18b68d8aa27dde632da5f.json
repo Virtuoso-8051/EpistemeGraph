@@ -1,0 +1,6 @@
+{
+  "answer": "In the node2vec paper, the heuristic edge scores in Table 3 were not fed into a separate learned classifier. For link prediction, the authors used a simple thresholding rule on the heuristic score itself: an edge was predicted to exist if its score was above a chosen threshold, and not otherwise. Because of that, there was no downstream classifier to tune, so there were no classifier hyperparameters selected for this step. The only model-selection choice was the threshold, which was chosen on validation data.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This matches the node2vec paper\u2019s link-prediction setup, where Table 3 reports heuristic scoring methods rather than a trained classifier, though I cannot verify the exact wording without the paper in front of me.",
+  "_token_nll": 0.23576195632355124
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is mistaken. DeepWalk does not rely on spectral methods and does not scale by using them. It generates truncated random walks over the graph, treats each walk as a sentence of node tokens, and trains Skip-gram (word2vec) with hierarchical softmax or negative sampling using stochastic gradient descent. It performs no eigendecomposition or Laplacian computation. Its scalability comes from the local, sampling-based nature of random walks, the streaming SGD training, and the ability to parallelize across walks. A later analysis (Qiu et al., 2018) showed that DeepWalk implicitly factorizes a matrix built from random-walk co-occurrence statistics, which is related to spectral-style matrix factorization, but that is a theoretical connection and not a mechanism DeepWalk uses to scale.",
+  "confidence": 0.85,
+  "confidence_reasoning": "I am confident DeepWalk is a random-walk plus Skip-gram method without eigendecomposition, and the Qiu et al. matrix-factorization connection is a well-known result, though exact details of the Perozzi et al. algorithm could be stated slightly differently.",
+  "_token_nll": null
+}

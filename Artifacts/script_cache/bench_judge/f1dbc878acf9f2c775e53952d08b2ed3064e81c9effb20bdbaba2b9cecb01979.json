@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "In the original paper the default was d=128 (not stated in the provided evidence)",
+    "Going much lower usually costs accuracy because embeddings lose capacity to separate nodes (not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and matches the evidence that performance saturates at around 100 dimensions. However, it adds details the evidence does not contain: the d=128 default, the claim that lower dimensions cost accuracy, and the practical benefits of smaller dimensions. The d=128 default is true in the real paper, but the provided evidence does not show it."
+}

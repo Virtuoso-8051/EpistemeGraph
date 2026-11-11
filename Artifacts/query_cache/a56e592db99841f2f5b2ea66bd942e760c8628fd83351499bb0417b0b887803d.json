@@ -1,0 +1,142 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "SkipGram",
+    "binary tree T",
+    "Huffman tree",
+    "hierarchical softmax",
+    "random walk generator",
+    "random walk",
+    "stochastic gradient descent"
+  ],
+  "triples": [
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "Huffman tree",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "vertex frequencies",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "hierarchical softmax",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk generator",
+      "source_alias": "RWG",
+      "type": "USES",
+      "target": "binary tree T",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "RW",
+      "type": "GENERATES",
+      "target": "stream of short random walk",
+      "target_alias": "SSRW",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "SGM",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "HS",
+      "type": "REPRESENTS",
+      "target": "binary tree T",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "internal node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "internal node",
+      "source_alias": "",
+      "type": "USES",
+      "target": "logistic classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "SGM",
+      "type": "OPTIMIZES",
+      "target": "likelihood of preserving network neighborhoods of node",
+      "target_alias": "LPNNN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "HS",
+      "type": "REPLACES",
+      "target": "full softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "HS",
+      "type": "APPROXIMATES",
+      "target": "full softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk generator",
+      "source_alias": "RWG",
+      "type": "USES",
+      "target": "uniform random walk",
+      "target_alias": "URW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "path length O(log |V|)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "negative log probability of context vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "faster training",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

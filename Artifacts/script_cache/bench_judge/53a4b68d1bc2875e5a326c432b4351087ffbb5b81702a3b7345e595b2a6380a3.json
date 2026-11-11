@@ -1,0 +1,12 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The AI answer says the passage was not provided and draws on outside knowledge of the node2vec paper, rather than the provided evidence; the evidence does not describe walk cost as linear in walks, walk length, and dimensionality, nor preprocessing cost growing with sum of squared node degrees, nor alias tables or Hogwild-style asynchronous SGD.",
+    "The claim that the walk-simulation phase is parallelizable because walks from different start nodes are independent is not stated in the evidence; the evidence only says the major phases are trivially parallelizable.",
+    "The claim that the optimization phase is parallelized with Hogwild-style asynchronous SGD is not in the evidence, though the evidence does mention asynchronous execution of phases.",
+    "The claim that the authors report scalability to large networks is only partly supported; the evidence says millions of nodes in a few hours, which the answer omits."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that the major phases are trivially parallelizable is supported by the evidence, but the answer leans on outside details (complexity formulas, alias tables, Hogwild updates) not in the passage. It also omits the specific scale claim of millions of nodes in a few hours."
+}

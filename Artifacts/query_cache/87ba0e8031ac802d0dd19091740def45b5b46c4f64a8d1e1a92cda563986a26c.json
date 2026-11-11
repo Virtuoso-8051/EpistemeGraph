@@ -1,0 +1,58 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "TRW",
+    "RW",
+    "DG"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "graph of agents interacting with pages",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "undirected graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "DG",
+      "target_alias": "directed graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "TRW",
+      "target_alias": "truncated random walk",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "user-page interaction graph",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

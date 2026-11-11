@@ -1,0 +1,68 @@
+{
+  "query_entities": [
+    "SpectralClustering",
+    "modularity matrix",
+    "eigenvectors",
+    "classification",
+    "graph",
+    "adjacency data"
+  ],
+  "triples": [
+    {
+      "source": "SpectralClustering",
+      "source_alias": "",
+      "type": "USES",
+      "target": "modularity matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SpectralClustering",
+      "source_alias": "",
+      "type": "USES",
+      "target": "eigenvectors",
+      "target_alias": "top-d eigenvectors",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SpectralClustering",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "low-dimensional embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node",
+      "source_alias": "each node",
+      "type": "MAPS_TO",
+      "target": "vector",
+      "target_alias": "[v1(i), ..., vd(i)]",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "d-dimensional feature vector",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "community-structure signals",
+      "target_alias": "the strongest community-structure signals in the graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classifier",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embeddings",
+      "source_alias": "",
+      "type": "REPLACES",
+      "target": "adjacency data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

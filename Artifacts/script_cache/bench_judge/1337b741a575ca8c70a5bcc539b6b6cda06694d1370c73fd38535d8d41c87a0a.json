@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The answer names specific datasets (BlogCatalog, PPI, Wikipedia, Facebook, arXiv collaboration networks) and baselines like LINE and specific networks, which the provided evidence does not list.",
+    "The answer claims gains are most pronounced when labels reflect mixed homophily and structural equivalence, and that the paper reports scalability improvements, which are not stated in the excerpted evidence.",
+    "The answer describes node2vec as 'semi-supervised', which is not stated in the evidence (the paper describes it as feature learning with supervised downstream tasks)."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer, multi-label classification and link prediction across diverse real-world networks, is directly supported by the evidence. However, the answer adds many specific dataset names, baselines like LINE, and claims about scalability and the homophily/structural-equivalence pattern that the provided excerpts do not contain."
+}

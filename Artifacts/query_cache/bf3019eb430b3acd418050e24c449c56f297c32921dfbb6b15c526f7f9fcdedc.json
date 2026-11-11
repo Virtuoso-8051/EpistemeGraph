@@ -1,0 +1,75 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE(2nd)",
+    "word analogy",
+    "first-order proximity",
+    "second-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(1st)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "word analogy",
+      "target_alias": "WA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "similarity of vertices' neighborhood or context distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "REPRESENTS",
+      "target": "direct edge-level co-occurrence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "IS_A",
+      "target": "weaker signal for analogy relations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "shared contexts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "SUPPORTS",
+      "target": "analogical structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "combining first-order and second-order proximity (concatenating embeddings)",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "LINE(2nd)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

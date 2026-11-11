@@ -1,0 +1,97 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE(2nd)",
+    "DEEPWALK"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "edge samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "edge samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "plateau sooner",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "higher final quality",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk corpora",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SGD",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "competitive accuracy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "training time",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

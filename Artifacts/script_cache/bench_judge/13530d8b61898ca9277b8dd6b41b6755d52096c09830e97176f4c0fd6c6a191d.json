@@ -1,0 +1,9 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Each objective is optimized by edge sampling with asynchronous SGD for a fixed total number of sampled edges (on the order of billions for large networks)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise of a switch, and correctly states that LINE(1st) and LINE(2nd) are trained separately and concatenated, and that no epoch count is given. However, the claim that each objective uses edge sampling with asynchronous SGD for a fixed total of billions of sampled edges is not stated in the evidence, though the evidence does mention edge-sampling and asynchronous SGD in general, so the specific sample count is an unsupported detail."
+}

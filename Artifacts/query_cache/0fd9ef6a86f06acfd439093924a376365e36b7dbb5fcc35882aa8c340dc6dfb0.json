@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec and LINE both note that you can combine learned node representations, but they mean different things by the combination. In node2vec, the paper says that for a node you can concatenate the embeddings learned from the two random-walk contexts (the p and q settings) to form a richer representation; this combined vector is intended to capture both local neighborhood structure and more global, structural context. In LINE, the paper says that the first-order and second-order embeddings can be concatenated to obtain the final representation of a node; this combination is intended to preserve both direct edge proximity (first-order) and neighborhood similarity/distributional context (second-order). So, node2vec\u2019s combination is about merging two walk-bias views of the graph, while LINE\u2019s combination is about merging two different proximity objectives.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This is based on the standard descriptions in the two papers, but exact wording and emphasis can vary slightly across summaries and implementations.",
+  "_token_nll": 0.26267457716535814
+}

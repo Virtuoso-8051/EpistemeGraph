@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "LINE used DeepWalk on the Youtube network as a basis for a fair comparison, accepting the false premise rather than correcting that Youtube is a dataset, not a method",
+    "DeepWalk was run under the same evaluation protocol (same embedding dimensionality, same varying labeled-node fractions), which the evidence does not state",
+    "The comparison is fairer on large graphs because DeepWalk is a scalable, realistic competitor; this justification is not in the evidence"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer only says the premise is 'partly supported' and goes along with the framing that the comparison is especially fair on large graphs, instead of clarifying that Youtube is a dataset (the same one used in DeepWalk) and not a method. It also adds protocol details and fairness rationale that the evidence does not contain, although it does say DeepWalk is a baseline and Youtube is a large network."
+}

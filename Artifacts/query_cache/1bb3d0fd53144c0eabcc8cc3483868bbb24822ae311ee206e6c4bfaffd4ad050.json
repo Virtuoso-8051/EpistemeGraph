@@ -1,0 +1,87 @@
+{
+  "query_entities": [
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "two different embedding roles",
+      "target_alias": "source/center node embedding and context/neighbor node embedding",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "source-neighborhood dot product",
+      "target_alias": "asymmetric",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "source embedding",
+      "target_alias": "embedding of a node when it appears as the source/center node",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "context embedding",
+      "target_alias": "embedding of a node when it appears as a context/neighbor node",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "source embedding",
+      "source_alias": "embedding of a node when it appears as the source/center node",
+      "type": "USES",
+      "target": "context embedding",
+      "target_alias": "embedding of a node when it appears as a context/neighbor node",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "different representations for being the source versus being a neighbor",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "direction-like or role-specific relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "source node distinction from surrounding neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "ability to distinguish the source node from its surrounding neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "more flexible representation of interactions than a single shared embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

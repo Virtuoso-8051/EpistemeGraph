@@ -1,0 +1,115 @@
+{
+  "query_entities": [
+    "LINE",
+    "edge-sampling algorithm (ESA)",
+    "weighted graph (WG)",
+    "sampling strategy (SS)",
+    "unweighted edge (UE)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "unweighted edge (UE)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE's original objective",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "sum of w_ij log p(v_j|v_i) over edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large or widely varying edge weights",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "large high-variance SGD updates",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "sampling strategy (SS)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "expected gradient proportional to weighted gradient",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "weighted graph (WG)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each sampled edge update",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "bounded gradient magnitude",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling from noise distribution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "linearly decayed learning rate",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampled edge",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "unweighted edge (UE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling with probability proportional to w_ij",
+      "source_alias": "",
+      "type": "USES",
+      "target": "alias table",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE's edge sampling",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "weighted objective in expectation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

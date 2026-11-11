@@ -1,0 +1,49 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "DEEPWALK",
+    "PPI network"
+  ],
+  "triples": [
+    {
+      "source": "PPI network",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "3,890 nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "128-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding matrix",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "497,920 parameters",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "128-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "497,920 parameters",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

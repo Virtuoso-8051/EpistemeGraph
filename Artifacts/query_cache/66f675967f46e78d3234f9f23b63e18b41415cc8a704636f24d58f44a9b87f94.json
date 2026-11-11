@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec is especially effective for multi-label classification on very large graphs because it learns a compact, reusable embedding for each node from local and higher-order graph neighborhoods, instead of requiring expensive end-to-end training on the full graph. Its hand-engineered objective uses biased random walks to sample neighborhoods that balance homophily and structural equivalence, so the resulting features capture both community membership and role similarity. This makes the embeddings informative for labels that may depend on either nearby neighbors or broader structural context. In practice, once the embeddings are learned, multi-label prediction reduces to a standard supervised classifier on fixed-length vectors, which scales well to millions of nodes and many labels. The objective is also unsupervised, so it can exploit the graph structure even when labeled data are sparse, which is common in multi-label settings.",
+  "confidence": 0.92,
+  "confidence_reasoning": "This is a well-established description of node2vec\u2019s design and scaling advantages, though exact performance depends on the dataset and downstream classifier.",
+  "_token_nll": 0.2577248554603726
+}

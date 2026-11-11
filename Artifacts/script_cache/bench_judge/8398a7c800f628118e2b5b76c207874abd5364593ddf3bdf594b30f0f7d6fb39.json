@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "On word analogy evaluations, node2vec is generally reported to score better overall than LINE(2nd) (contradicts evidence: LINE(2nd) has the best overall score, 66.10%, and node2vec has no word analogy result)",
+    "LINE(2nd) uses separate vertex and context embeddings and samples edges directly with no multi-hop random walks (not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The descriptions of LINE(2nd) as second-order proximity and node2vec as biased random walks are supported. However, the answer says node2vec scores better on word analogy, which contradicts the evidence that LINE(2nd) is best at 66.10%. This is the answer's final conclusion, and it is wrong."
+}

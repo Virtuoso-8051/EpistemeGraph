@@ -1,0 +1,78 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "LINE",
+    "graph-embedding baseline",
+    "standard random-walk setup",
+    "embedding objective",
+    "low-dimensional vector representations of nodes",
+    "classification",
+    "link prediction"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "standard random-walk setup",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "graph-embedding baseline",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embedding objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "settings as described in the paper",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "low-dimensional vector representations of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "low-dimensional vector representations of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional vector representations of nodes",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional vector representations of nodes",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

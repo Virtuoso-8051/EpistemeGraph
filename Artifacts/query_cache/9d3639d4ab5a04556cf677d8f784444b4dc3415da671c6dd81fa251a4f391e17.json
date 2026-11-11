@@ -1,0 +1,57 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "number of walks started per vertex (GAMMA)",
+    "latent social representation (LSR)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "number of walks started per vertex (GAMMA)",
+      "target_alias": "GAMMA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "APPROXIMATES",
+      "target": "80",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "walk length (t = 40)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "window size of 10",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "128-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "experiments with the above parameter values",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

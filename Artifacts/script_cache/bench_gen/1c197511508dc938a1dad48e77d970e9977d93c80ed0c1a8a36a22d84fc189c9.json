@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec differ from LINE in the way it handles exploration and sample reuse, and what performance consequence does that difference have on the PPI and Wikipedia word cooccurrence networks?",
+      "gold_answer": "node2vec can adapt its exploration strategy and reuse information from random walks, while LINE cannot reuse samples; as a result, node2vec beats LINE by 23.8% in Macro-F1 on PPI and by 33.2% on the Wikipedia word cooccurrence network.",
+      "evidence_quote": "LINE showed worse performance than expected, which can be explained by its inability to reuse samples, a feat that can be easily done using the random walk methods.",
+      "evidence_quote_b": "In the case of PPI network, the best exploration strategy (p = 4 ,q = 1 ) turns out to be virtually indistinguishable from DeepWalk\u2019s uniform (p = 1,q = 1) exploration giving us only a slight edge over DeepWalk by avoiding redudancy in already visited nodes through a high p value, but a convincing 23.8% gain over LINE in Macro-F 1 scores.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does node2vec become equivalent to DeepWalk, and how do the two papers describe the reason this happens?",
+      "gold_answer": "node2vec becomes equivalent to DeepWalk in the worst case when the search phase has little bearing on the learned representations, and the random-walk setup can reduce to DeepWalk\u2019s uniform exploration.",
+      "evidence_quote": "In the worst case, the search phase has little bearing on learned representations in which case node2vec is equivalent to DeepWalk.",
+      "evidence_quote_b": "In the case of PPI network, the best exploration strategy (p = 4 ,q = 1 ) turns out to be virtually indistinguishable from DeepWalk\u2019s uniform (p = 1,q = 1) exploration giving us only a slight edge over DeepWalk by avoiding redudancy in already visited nodes through a high p value, but a convincing 23.8% gain over LINE in Macro-F 1 scores.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What baseline methods are used in the second paper to evaluate the approach, and which of those baselines is also directly compared against node2vec in the first paper?",
+      "gold_answer": "The second paper uses SpectralClustering, Modularity, and EdgeCluster as baselines; among these, Spectral clustering is directly compared against node2vec in the first paper, where node2vec and the other methods significantly outperform it.",
+      "evidence_quote": "To validate the performance of our approach we compare it against a number of baselines:",
+      "evidence_quote_b": "All methods significantly outperform Spectral clustering, DeepWalk outperforms LINE, node2vec consistently outperforms LINE and achieves large improvement over DeepWalk across domains.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How do node2vec and the streaming variant differ in their treatment of a growing network, and what capability does the streaming variant add that node2vec alone does not explicitly mention?",
+      "gold_answer": "node2vec is described as learning from random walks with tunable exploration, whereas the streaming variant lets features be trained on a continually evolving network without explicitly constructing the entire graph, enabling web-scale classification.",
+      "evidence_quote": "Even in our other two networks, where we have a mix of equivalences present, the semi-supervised nature of node2vec can help us infer the appropriate degree of exploration necessary for feature learning.",
+      "evidence_quote_b": "This approach can be combined with the streaming variant (Section 4.4.1) to train features on a continually evolving network without ever explicitly constructing the entire graph.",
+      "difficulty": "medium"
+    }
+  ]
+}

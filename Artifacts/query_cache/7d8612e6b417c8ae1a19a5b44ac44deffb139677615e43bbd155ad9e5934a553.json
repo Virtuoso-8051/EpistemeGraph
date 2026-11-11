@@ -1,0 +1,6 @@
+{
+  "answer": "Feature learning in networks faces a trade-off between optimizing for predictive performance on a specific task and learning broadly useful representations: a supervised objective is usually more directly aligned with the target labels, while an unsupervised objective may learn more general structure but not necessarily the most task-relevant features. In terms of training time complexity, a supervised procedure is typically more expensive because it must process labeled examples and optimize against the target output, whereas an unsupervised procedure is generally cheaper since it does not require labels. In terms of predictive accuracy, supervised training usually achieves higher accuracy on the target task, while unsupervised training often yields lower accuracy unless followed by additional task-specific fine-tuning.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This reflects the standard trade-off described in feature learning literature, though exact complexity and accuracy comparisons can vary by model, data, and implementation details.",
+  "_token_nll": 0.19486545584055298
+}

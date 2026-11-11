@@ -1,0 +1,104 @@
+{
+  "query_entities": [
+    "SpectralClustering",
+    "modularity matrix",
+    "spectral clustering (SC)",
+    "affinity matrix (AM)",
+    "graph Laplacian",
+    "eigendecomposition",
+    "spectral embedding",
+    "k-means clustering (K-MEANS)",
+    "modularity maximization (MM)",
+    "Community detection (CD)"
+  ],
+  "triples": [
+    {
+      "source": "scikit-learn SpectralClustering",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "modularity matrix",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SpectralClustering",
+      "type": "USES",
+      "target": "affinity matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SpectralClustering",
+      "type": "USES",
+      "target": "graph Laplacian",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph Laplacian",
+      "source_alias": "",
+      "type": "USES",
+      "target": "eigendecomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SpectralClustering",
+      "type": "GENERATES",
+      "target": "spectral embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SpectralClustering",
+      "type": "USES",
+      "target": "k-means clustering (K-MEANS)",
+      "target_alias": "k-means",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SpectralClustering",
+      "type": "APPLIES_TO",
+      "target": "Community detection (CD)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SpectralClustering",
+      "type": "IS_A",
+      "target": "unsupervised clustering",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "spectral clustering (SC)",
+      "source_alias": "SpectralClustering",
+      "type": "REFUTED",
+      "target": "Feature Representation (FR)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "modularity maximization (MM)",
+      "source_alias": "Newman's spectral community detection",
+      "type": "USES",
+      "target": "modularity matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Newman's spectral community detection",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "Community detection (CD)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

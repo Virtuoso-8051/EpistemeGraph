@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "network embedding model",
+    "first-order proximity",
+    "observed edge",
+    "input network",
+    "second-order proximity",
+    "higher-order/indirect mechanisms"
+  ],
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "observed edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "observed edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nonzero first-order proximity",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "vertex pair with an edge between them in the input network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pair of vertices with no observed edge",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "first-order proximity is zero",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network embedding model",
+      "source_alias": "",
+      "type": "DOES_NOT_ASSIGN",
+      "target": "nonzero first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "similarity between non-adjacent vertices",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "similarity between non-adjacent vertices",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "higher-order/indirect mechanisms",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "similarity between non-adjacent vertices",
+      "source_alias": "",
+      "type": "NOT_FIRST_ORDER_PROXIMITY",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

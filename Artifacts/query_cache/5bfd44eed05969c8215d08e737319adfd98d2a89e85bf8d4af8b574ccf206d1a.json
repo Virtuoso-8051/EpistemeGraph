@@ -1,0 +1,96 @@
+{
+  "query_entities": [
+    "node2vec",
+    "convolutional filters",
+    "biased random walks",
+    "graph",
+    "skip-gram model",
+    "graph convolutional networks",
+    "CNN-based methods",
+    "convolution-based graph method",
+    "learned filters",
+    "local neighbors"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "convolutional filters",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolutional filters",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "graph convolutional networks",
+      "target_alias": "GCN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolutional filters",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "CNN-based methods",
+      "target_alias": "CNN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolution-based graph method",
+      "source_alias": "",
+      "type": "USES",
+      "target": "learned filters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolution-based graph method",
+      "source_alias": "",
+      "type": "USES",
+      "target": "local neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "convolution-based graph method",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

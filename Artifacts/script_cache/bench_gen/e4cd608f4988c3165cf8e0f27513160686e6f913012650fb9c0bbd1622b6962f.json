@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How did LINE construct the word cooccurrence network for the language network, and what filtering rule was applied to words before building it?",
+      "gold_answer": "LINE constructed the language network from the entire set of English Wikipedia pages by connecting words that appear within every 5-word sliding window. It also filtered out words whose frequency was smaller than 5.",
+      "evidence_quote": "Words within every 5-word sliding window are considered to be co-occurring with each other.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which social networks did LINE use in its experiments, and how is the Flickr network described relative to Youtube?",
+      "gold_answer": "LINE used two social networks: Flickr and Youtube. The passage says that the Flickr network is denser than the Youtube network, and that Youtube is the same network as used in DeepWalk.",
+      "evidence_quote": "We use two social networks:Flickr and Youtube2.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What kinds of citation networks did LINE evaluate on, and what does the author citation network record?",
+      "gold_answer": "LINE evaluated two citation networks: an author citation network and a paper citation network, both constructed from the DBLP data set. The author citation network records the number of papers written by one author and cited by another author.",
+      "evidence_quote": "The author citation network records the number of papers written by one author and cited by another author.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why did LINE avoid comparing itself with MDS, IsoMap, and Laplacian eigenmap, and what scale of networks did the evaluated datasets have?",
+      "gold_answer": "LINE did not compare with MDS, IsoMap, or Laplacian eigenmap because those methods cannot handle networks at the scale used in the experiments. The evaluated networks were very large, with each containing at least half a million nodes and millions of edges, and the largest having around two million nodes and a billion edges.",
+      "evidence_quote": "We do not compare with some classical graph embedding algorithms such as MDS, IsoMap, and Laplacian eigenmap, as they cannot handle networks of this scale.",
+      "difficulty": "hard"
+    }
+  ]
+}

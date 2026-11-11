@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node2vec parameter (NP)",
+    "node representation (NR)",
+    "Community detection (CD)",
+    "network neighborhood (NN)",
+    "network structure (NS)"
+  ],
+  "triples": [
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "NODE2VEC",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "breadth-first exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local neighborhood structure of each node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation (NR)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "structural equivalence or role",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation (NR)",
+      "source_alias": "",
+      "type": "GROUPS",
+      "target": "similar local connectivity or hub/peripheral position",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Community detection (CD)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "densely connected community membership",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node representation (NR)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "network neighborhood (NN)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "network structure (NS)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "blue nodes clustering without direct connection",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

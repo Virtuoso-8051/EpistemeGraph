@@ -1,0 +1,56 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "exact training hardware setup",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "skip-gram objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "word2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec reference implementation",
+      "source_alias": "",
+      "type": "USES",
+      "target": "CPU",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec reference implementation",
+      "source_alias": "",
+      "type": "USES",
+      "target": "GPU",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

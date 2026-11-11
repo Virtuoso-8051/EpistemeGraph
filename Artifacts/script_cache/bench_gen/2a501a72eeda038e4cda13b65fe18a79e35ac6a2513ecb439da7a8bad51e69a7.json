@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does DeepWalk generalize neural language models, and what kind of output does DeepWalk produce when given a graph as input?",
+      "gold_answer": "DeepWalk generalizes neural language models by applying them to a special language made of randomly generated walks. Given a graph as input, DeepWalk produces a latent representation as output.",
+      "evidence_quote": "DeepW alkgeneralizes neural language models to process a special language composed of a set of randomly-generated walks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What relationship does DeepWalk report between the 2-dimensional latent representation of the Karate network and the structure of the original graph?",
+      "gold_answer": "The 2-dimensional embedding of the Karate network is strikingly similar to the force-directed visualization of the graph. DeepWalk also notes that linearly separable regions in the embedding correspond to clusters found by modularity maximization in the original graph.",
+      "evidence_quote": "Beyond the striking similarity, we note that linearly separable portions of (1b) correspond to clusters found through modularity maximization in the input graph (1a) (shown as vertex colors).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does DeepWalk outperform other latent representation methods for creating social dimensions, according to the passage?",
+      "gold_answer": "DeepWalk outperforms other latent representation methods especially when labeled nodes are scarce. The passage emphasizes that this advantage comes from learning label-independent graph representations.",
+      "evidence_quote": "DeepW alkoutperforms other latent representation methods for creating social dimensions [39, 41], especially when labeled nodes are scarce.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why can DeepWalk\u2019s learned representations be shared among tasks, and what kind of classifier can achieve strong performance with them?",
+      "gold_answer": "DeepWalk\u2019s representations can be shared among tasks because their quality is not influenced by which vertices are labeled, since the method learns label-independent representations of the graph. The passage says that strong performance is possible with very simple linear classifiers such as logistic regression.",
+      "evidence_quote": "Our representation quality is not influenced by the choice of labeled vertices, so they can be shared among tasks.",
+      "difficulty": "hard"
+    }
+  ]
+}

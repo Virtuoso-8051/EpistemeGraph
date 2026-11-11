@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "When edges are added or removed so the graph splits into more components, each component becomes a more self-contained neighborhood and walks sample a more homogeneous set of nodes, making node2vec more robust.",
+    "Components often align with label communities, so embeddings separate classes more cleanly and sensitivity to perturbed edges drops.",
+    "Macro-F1 would tend to be stable or rise under such perturbations, or fall if small isolated components contain minority classes.",
+    "Accepts the premise that missing edges increase the number of connected components, instead of correcting that the number of components is held fixed."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise and invents a mechanism for increased components improving robustness. It never states that the paper fixes the number of connected components, and it misses the actual finding of a roughly linear Macro-F1 decrease with small slope."
+}

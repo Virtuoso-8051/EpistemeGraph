@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The AI answer gives the softmax form p2(v_j|v_i) = exp(u_j^T u_i) / \u03a3_k exp(u_k^T u_i) with u_j as context embedding; the evidence only says p2(\u00b7|vi) is a conditional distribution over contexts specified by low-dimensional representations and does not explicitly state this softmax parameterization in the excerpt shown.",
+    "The claim that the 'fixed normalization' is dropped is an embellishment not stated in the evidence."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims that KL-divergence is the distance function, \u03bb_i = d_i, and that O2 = -\u03a3 w_ij log p2(v_j|v_i) are directly stated in the evidence. The explicit softmax form for p2 and the detail about 'fixed normalization' go beyond the excerpt, though they are standard LINE details, so the answer is mostly grounded."
+}

@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "SKIPGRAM",
+    "SGO",
+    "SGM",
+    "RW"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SKIPGRAM",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Walk length of 40",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "80 walks per node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Window size of 10",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Flickr and BlogCatalog experiments",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "likelihood of nodes co-occurring within a context window along walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "Window size",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SKIPGRAM",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "Number of walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "longer walk length as a requirement",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "performance with more walks and suitable window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "performance gains flatten beyond a point",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

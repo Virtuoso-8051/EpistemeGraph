@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What four characteristics are required for learning social representations, and why are continuous latent representations useful for community membership?",
+      "gold_answer": "The method requires representations to be adaptable, community aware, low dimensional, and continuous. Continuous representations are useful because they can model partial community membership in continuous space, provide a nuanced view of membership, and create smooth decision boundaries between communities for more robust classification.",
+      "evidence_quote": "We seek learning social representations with the following characteristics:",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does the method learn representations for vertices, and what optimization inspiration does it use?",
+      "gold_answer": "It learns representations for vertices from a stream of short random walks. The optimization techniques used are originally designed for language modeling, and the text says the combination of random walks and language modeling is what satisfies the stated requirements.",
+      "evidence_quote": "Our method for satisfying these requirements learns representation for vertices from a stream of short random walks, using optimization techniques originally designed for language modeling.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why is a low-dimensional model preferred when labeled data is scarce, according to the social representation framework?",
+      "gold_answer": "Low-dimensional models are preferred because they generalize better when labeled data is scarce. They also speed up convergence and inference, which makes them practical for learning social representations.",
+      "evidence_quote": "When labeled data is scarce, lowdimensional models generalize better, and speed up convergence and inference.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions do short random walks support generalization in networks, and how is the distance between latent dimensions interpreted?",
+      "gold_answer": "The framework says the distance between latent dimensions should act as a metric for evaluating social similarity between the corresponding network members. This supports generalization in networks with homophily, where similar nodes tend to be close in the latent space.",
+      "evidence_quote": "This allows generalization in networks with homophily.",
+      "difficulty": "hard"
+    }
+  ]
+}

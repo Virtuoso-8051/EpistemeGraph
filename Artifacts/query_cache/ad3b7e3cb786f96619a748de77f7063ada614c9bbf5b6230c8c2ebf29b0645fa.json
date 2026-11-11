@@ -1,0 +1,114 @@
+{
+  "query_entities": [
+    "SkipGram",
+    "node2vec",
+    "hierarchical softmax",
+    "binary tree",
+    "full softmax",
+    "negative sampling",
+    "DeepWalk",
+    "biased random walks",
+    "BFS",
+    "DFS",
+    "homophily",
+    "structural equivalence"
+  ],
+  "triples": [
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "",
+      "type": "USES",
+      "target": "binary tree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "O(log|V|) prediction cost",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "full softmax",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "O(|V|) prediction cost",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "Skip-gram objective (SGO)",
+      "target_alias": "SGO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "likelihood of preserving network neighborhoods of node (LPNNN)",
+      "target_alias": "LPNNN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "network neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "BFS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "DFS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "homophily and structural equivalence balance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

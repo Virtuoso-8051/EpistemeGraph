@@ -1,0 +1,42 @@
+{
+  "query_entities": [
+    "second-order proximity",
+    "shared neighbor (SN)",
+    "neighborhood (N_I)",
+    "second-order neighbor (SON)"
+  ],
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "shared neighbor (SN)",
+      "target_alias": "SN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "neighborhood similarity between two vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "value of 0 when no shared neighbors exist",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "two vertices with no shared neighbors",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "N(u) \u2229 N(v) = \u2205",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

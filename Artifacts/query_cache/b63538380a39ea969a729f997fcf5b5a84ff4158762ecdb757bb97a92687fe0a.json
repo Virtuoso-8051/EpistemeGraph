@@ -1,0 +1,41 @@
+{
+  "query_entities": [
+    "node2vec",
+    "DeepWalk",
+    "Protein-Protein Interaction"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "128-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "128 parameters per node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Protein-Protein Interaction",
+      "target_alias": "PPI",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

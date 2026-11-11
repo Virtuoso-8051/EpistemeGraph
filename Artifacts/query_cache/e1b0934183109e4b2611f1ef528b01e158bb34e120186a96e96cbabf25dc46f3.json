@@ -1,0 +1,66 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "NWPS",
+    "NP",
+    "NR"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "number of walks per source",
+      "target_alias": "NWPS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks per source",
+      "source_alias": "NWPS",
+      "type": "OPTIMIZES",
+      "target": "node2vec parameter r = 10",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "walk length l = 80",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "context size k = 10",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embedding dimensionality d = 128",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "number of walks per source r values",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "return parameter p and in-out parameter q",
+      "target_alias": "node2vec parameter",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "query_entities": [
+    "LINE-SGD",
+    "LINE",
+    "edge weights",
+    "gradient update",
+    "sampling distribution",
+    "training",
+    "optimization"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge weight",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weight",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "frequency/probability signal",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "heavier edges",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "sampling distribution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "heavier edges",
+      "source_alias": "",
+      "type": "INFLUENCES",
+      "target": "training",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge weight",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weight",
+      "source_alias": "",
+      "type": "USES",
+      "target": "gradient update",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weight",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "multiplicative importance factor",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each sampled edge",
+      "source_alias": "",
+      "type": "CONTRIBUTES_TO",
+      "target": "optimization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each sampled edge",
+      "source_alias": "",
+      "type": "CONTRIBUTES_PROPORTIONALLY_TO",
+      "target": "edge weight",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

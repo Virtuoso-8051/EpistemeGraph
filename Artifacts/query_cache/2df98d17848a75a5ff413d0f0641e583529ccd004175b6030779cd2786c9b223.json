@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "DEEPWALK",
+    "DFS",
+    "NP",
+    "RW"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "NP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "NP",
+      "type": "CONTAINS",
+      "target": "in-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first search (DFS)",
+      "source_alias": "DFS",
+      "type": "APPLICABLE_FOR",
+      "target": "node2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "outward exploration of the graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first search (DFS)",
+      "source_alias": "DFS",
+      "type": "PRESERVES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first search (DFS)",
+      "source_alias": "DFS",
+      "type": "REQUIRES",
+      "target": "greater depth sampling leads to distant nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "greater depth sampling",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "broader less local context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like walks",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "structural roles",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like walks at greater depth",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "noisy embeddings",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "greater depth random walks",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

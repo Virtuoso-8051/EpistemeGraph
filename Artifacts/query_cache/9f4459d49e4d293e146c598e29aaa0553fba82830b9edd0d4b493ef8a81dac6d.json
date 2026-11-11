@@ -1,0 +1,6 @@
+{
+  "answer": "The authors set the walk length to l = 80 (with r = 10 walks per node, context size k = 10, and d = 128 dimensions) in their link prediction and node classification experiments. As I recall, their sensitivity analysis indicates that performance generally improves as l increases, with gains diminishing at larger values, so l = 80 was a sensible trade-off between accuracy and computational cost. I am not certain of the exact wording or figures of that sensitivity result.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The value l = 80 is a well-recalled default from the node2vec paper, but the description of how performance varies with other l values is recalled less reliably and may be imprecise.",
+  "_token_nll": null
+}

@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Graph factorization is applicable to undirected (and sometimes weighted) graphs of moderate size; the evidence says it only applies to undirected graphs and says nothing about weighted graphs or 'moderate size' limits",
+    "Graph factorization is limited to smaller, undirected-style matrix settings and is more computationally demanding than LINE; the evidence only says it is optimized with SGD and does not state it is limited to small graphs or more computationally demanding than LINE",
+    "Graph factorization is a transductive method that cannot naturally embed unseen nodes; this is not in the evidence",
+    "Graph factorization preserves first-order proximity well but captures higher-order structure only via explicit matrix powers; the evidence says it expects nodes with higher first-order proximity to be close and that the objective does not necessarily preserve global structure, not this specific claim",
+    "LINE scales linearly with the number of edges and uses negative sampling; the evidence mentions scaling to millions of nodes and billions of edges but not linear scaling or negative sampling"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer that graph factorization is only for undirected graphs while LINE handles undirected, directed, and weighted graphs is supported by the evidence. However, the answer adds several unsupported details about weighted graphs, transductive limits, computational cost, and LINE's negative sampling and linear scaling that the source excerpts do not state."
+}

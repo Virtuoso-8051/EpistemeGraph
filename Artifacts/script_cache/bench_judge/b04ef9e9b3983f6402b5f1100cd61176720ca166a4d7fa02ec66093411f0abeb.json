@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "A drop could occur if the total sampling budget is fixed so that larger \u03b3 forces fewer or shorter walks per node, which would most plausibly hurt on large sparse graphs (presented as a conditional scenario, not supported by the paper's text)",
+    "Attributing the 'nodes need longer walks on large sparse graphs' reasoning to the setup is not stated in the evidence"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise by noting that raising \u03b3 adds walks rather than reducing them, and it honestly flags that it found no source for the proposed condition. However, its speculative conditions about fixed budgets and large sparse graphs are not in the evidence, and the paper actually says most benefit is achieved by \u03b3 = 30, which the answer fails to mention."
+}

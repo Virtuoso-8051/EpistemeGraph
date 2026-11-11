@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "node2vec's binary operators are listed as average, Hadamard, weighted L1, and weighted L2; the evidence only confirms the existence of simple binary operators and mentions Hadamard and Weighted-L1/L2 (average is not named in the excerpts, though it is a common operator in the source).",
+    "The claim that the Hadamard product captures pairwise feature interactions and L1/L2 capture difference or distance is an interpretive gloss not stated in the evidence.",
+    "LINE 'trains first-order and second-order embeddings separately' and describes first-order as direct observed ties and second-order as shared neighborhood context; the evidence supports the complementarity and the 1st/2nd labels but not the explicit 'without fusing into a shared space' framing.",
+    "The claim that LINE's concatenation represents 'multi-scale neighbourhood structure' of a single node and 'preserves both local and higher-order structural proximity' is a paraphrase beyond the evidence's explicit statement that the two proximities are complementary.",
+    "The claim that node2vec's combinations represent relationships between pairs of nodes (edges) for link prediction is supported by the evidence on edge features and link prediction."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core contrast (node2vec composes node embeddings into edge features via binary operators for link prediction; LINE concatenates first- and second-order embeddings because the proximities are complementary) is supported by the evidence. Several interpretive glosses on what each operator captures and on LINE's 'without fusing' and 'multi-scale' framing go beyond what the excerpts state."
+}

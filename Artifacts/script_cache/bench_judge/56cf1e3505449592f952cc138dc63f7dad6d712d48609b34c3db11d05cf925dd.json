@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "DeepWalk uses skip-gram to capture indirect, multi-hop co-occurrence relations (skip-gram is not stated in the provided evidence excerpts)",
+    "Nodes with similar neighbor distributions get similar embeddings is a paraphrase consistent with the evidence rather than an explicit statement, but the evidence states shared neighbors make nodes similar",
+    "DeepWalk's truncated random walks reveal connections not directly observed (supported by the evidence that walks enrich neighbors/contexts under sparsity)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The core answer correctly identifies DeepWalk as the method addressing missing information through truncated random walks, and LINE as modeling first-order (observed ties) and second-order (shared neighborhood) proximity, both directly supported by the evidence. The only minor gap is the skip-gram mention, which is uncontroversial background for DeepWalk rather than a substantive unsupported attribution."
+}

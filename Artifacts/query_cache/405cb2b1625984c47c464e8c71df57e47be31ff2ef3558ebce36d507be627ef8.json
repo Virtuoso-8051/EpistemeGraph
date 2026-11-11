@@ -1,0 +1,6 @@
+{
+  "answer": "The comparison suggests the gap comes from how well the graph structure matches the labels, not from the model itself. DeepWalk's embeddings on Flickr form clusters that align closely with the node labels, so a linear classifier can separate the classes with few labeled examples. On BlogCatalog, the labels are less aligned with the structural communities DeepWalk captures (weaker homophily, with overlapping or multi-label classes), so the embeddings are less cleanly separable by label. The classifier therefore needs many more labeled examples to learn the class boundaries and reach the same accuracy. I could not verify the specific source paper, so this is inferred from the general properties of the two datasets.",
+  "confidence": 0.4,
+  "confidence_reasoning": "The general explanation (label-structure alignment and homophily differences between Flickr and BlogCatalog) is plausible, but I could not confirm the specific paper's findings or exact claims.",
+  "_token_nll": null
+}

@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The softmax formula p2(v_j|v_i) = exp(u_j^T u_i)/\u03a3_k exp(u_k^T u_i), described with context embeddings, is not in the evidence. The evidence only gives the first-order sigmoid formula and says p2(\u00b7|v_i) is a conditional distribution.",
+    "The claim that the objective is a KL divergence weighted by vertex degree is not stated in the evidence. The evidence only says the model distribution should be close to the empirical distribution."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says the paper gives no explicit similarity function between p_u and p_v, and that is the core of a faithful response. It then adds the softmax formula and the degree-weighted KL objective, which the provided evidence does not contain, so those details are unsupported."
+}

@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Graph embedding methods use MDS to handle millions of nodes by avoiding the O(n\u00b2) cost (accepts the false premise that MDS is used for efficient large-scale embedding).",
+    "Landmark-based MDS, sparse/approximate distance matrices, and Nystrom-style approximations make the cost scale roughly linearly (not in the passage; presented as how MDS-based methods handle millions of nodes)."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer never corrects the false premise that the passage uses MDS to embed millions of nodes; the passage cites MDS only as a classical method with at-least-quadratic complexity that is too expensive at that scale. It instead supplies generic landmark-MDS details not found in the evidence, though it does mention the O(n\u00b2) cost of full MDS and admits it cannot see the passage."
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "LINE(1st+2nd) learns node embeddings from the language network without labels. It trains one embedding that preserves first-order proximity (the direct, weighted co-occurrence or edge strength between two words) and another that preserves second-order proximity (similarity of neighborhood distributions, using context vectors). Both are optimized with edge sampling and negative sampling. Because the objective depends only on the graph structure, the method is fully unsupervised. When the two embeddings are combined, the relative weight of each dimension or view can be tuned from unlabeled data, for example by using a structural proxy such as held-out edge reconstruction or link prediction, rather than downstream labeled performance. I could not verify the specific paper or its exact weighting procedure, so the details of that tuning step are a general description rather than a confirmed account.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The general description of LINE's first- and second-order objectives is well established, but I could not identify the specific source paper, so the claim about how the dimension weights are tuned from unlabeled data is uncertain.",
+  "_token_nll": null
+}

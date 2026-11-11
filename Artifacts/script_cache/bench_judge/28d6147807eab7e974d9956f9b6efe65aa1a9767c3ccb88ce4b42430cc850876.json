@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Streaming variant generates random walks from the portion of the graph observed so far as edges or nodes arrive (paper says small walks are passed directly, not describing incremental edge arrival)",
+    "The stated tradeoff is accuracy vs timeliness, with biased early embeddings and drift (paper's tradeoff is constant small learning rate which takes longer to learn)",
+    "Stability requires extra mechanisms such as periodic retraining, replaying old walks, or regularization (not in the paper)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly conveys that the model is updated online from walks without the whole graph, but it misses the paper's actual tradeoff (constant small learning rate, slower learning, since decay isn't possible). It instead invents a different tradeoff about drift, incomplete views, and retraining mechanisms not found in the evidence."
+}

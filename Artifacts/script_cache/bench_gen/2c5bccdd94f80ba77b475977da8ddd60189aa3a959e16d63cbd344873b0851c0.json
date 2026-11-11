@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the node2vec method rely on global graph statistics and offline processing to learn its latent social representations?",
+      "false_premise": "node2vec relies on global graph statistics and offline processing.",
+      "correction": "node2vec proposes a scalable online method which uses only local information.",
+      "evidence_quote": "We propose a scalable online method which uses only local information.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec extend the collective classification procedure itself with graph kernels to improve inference?",
+      "false_premise": "node2vec extends the collective classification procedure itself with graph kernels.",
+      "correction": "node2vec does not attempt to extend the classification procedure itself, and instead learns representations that can be used by existing inference procedures.",
+      "evidence_quote": "We do not attempt to extend the classification procedure itself (through collective inference [37] or graph kernels [20]).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does node2vec need many random walks per vertex before its embeddings become meaningful?",
+      "false_premise": "node2vec needs many random walks per vertex before its embeddings become meaningful.",
+      "correction": "node2vec can learn meaningful latent representations after only a small number of random walks, and increasing the number of walks quickly has diminishing returns.",
+      "evidence_quote": "These results demonstrate that we are able to learn meaningful latent representations for vertices after only a small number of random walks.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What centrality-based statistics does node2vec compute instead of learning latent social representations?",
+      "false_premise": "node2vec computes centrality-based statistics instead of learning latent social representations.",
+      "correction": "node2vec learns latent social representations rather than computing statistics related to centrality or partitioning.",
+      "evidence_quote": "We learn our latent social representations, instead of computing statistics related to centrality [12] or partitioning [41].",
+      "difficulty": "easy"
+    }
+  ]
+}

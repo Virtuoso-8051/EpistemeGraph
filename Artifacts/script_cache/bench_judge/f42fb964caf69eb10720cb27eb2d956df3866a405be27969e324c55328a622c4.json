@@ -1,0 +1,9 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "In an extremely sparse network like Flickr, LINE(2nd) embeds nodes better than LINE(1st) because second-order proximity supplies information when first-order links are scarce (accepts the false premise; the paper says LINE(1st) outperforms LINE(2nd) when the network is very sparse)."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise and explains why LINE(2nd) is better on an extremely sparse network, which contradicts the paper: LINE(1st) outperforms LINE(2nd) when the network is very sparse, and second-order proximity suffers there. The definitions of first- and second-order proximity are background, but the core claim is unsupported."
+}

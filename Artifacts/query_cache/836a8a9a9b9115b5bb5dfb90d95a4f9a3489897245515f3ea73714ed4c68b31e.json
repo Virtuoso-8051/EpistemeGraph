@@ -1,0 +1,6 @@
+{
+  "answer": "In node2vec, BFS and DFS are two different neighborhood-exploration strategies used to bias random walks on a graph. BFS (breadth-first search) emphasizes staying close to the starting node and exploring its immediate neighborhood, which tends to capture local, homophily-based similarity. DFS (depth-first search) pushes walks farther away from the start, which tends to capture more structural or role-based similarity between nodes that occupy similar positions in the graph even if they are not directly connected. The Les Mis\u00e9rables example is used to illustrate that these two strategies can reveal different kinds of relationships in the same network: BFS highlights tightly connected communities, while DFS can surface nodes with similar structural roles across the graph.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This matches the standard node2vec interpretation of BFS/DFS-biased walks and the common purpose of the Les Mis\u00e9rables example, though exact wording can vary by source.",
+  "_token_nll": 0.15815501188108433
+}

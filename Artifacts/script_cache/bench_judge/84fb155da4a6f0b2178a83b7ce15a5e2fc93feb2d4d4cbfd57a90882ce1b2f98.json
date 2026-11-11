@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI attributes to PASSAGE A a weight-exponent random walk (transition probability proportional to w^\u03b3), which the evidence does not contain; PASSAGE A's \u03b3 is the number of random walks started per vertex.",
+    "The claim that the effect diminishes when edge weights are near uniform and that the walk becomes nearly deterministic at extreme values is not supported by the evidence.",
+    "The answer fails to state the key practical effect from the source: large initial gains from increasing \u03b3 that quickly slow once \u03b3 > 10.",
+    "The answer omits the LINE comparison detail that edge sampling converts weighted edges to binary edges so weights no longer affect gradients; it only partially reflects LINE's approach."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer claims PASSAGE A was missing and then invents a weight-exponent definition of \u03b3, whereas the evidence shows \u03b3 is the number of random walks per vertex, with a big initial effect that slows past \u03b3 > 10. Because the core of the answer rests on this invented definition and misses the stated diminishing point, it is unsupported."
+}

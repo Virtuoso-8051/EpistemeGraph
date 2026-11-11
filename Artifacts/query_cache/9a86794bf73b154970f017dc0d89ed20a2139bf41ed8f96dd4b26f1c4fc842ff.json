@@ -1,0 +1,123 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "SGM",
+    "VERTEX",
+    "LM",
+    "UI"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "corpus of sentences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "VERTEX",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "word",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "vocabulary V",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vocabulary V",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "set of graph vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vocabulary V",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "size equal to number of vertices |V|",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vocabulary V",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "set of learned language words",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SGM",
+      "target_alias": "skip-gram model",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SGM",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "SGM",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "latent representation \u03a6: v -> R^{|V|\u00d7d}",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "VERTEX",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "word token",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "vertex embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex embeddings",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "node representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context of each vertex",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "vertices within window of size w in walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

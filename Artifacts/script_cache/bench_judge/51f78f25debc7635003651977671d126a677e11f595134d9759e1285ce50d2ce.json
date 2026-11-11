@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The four named operators (Average, Hadamard, Weighted-L1, Weighted-L2) are specified in the answer; the evidence only mentions 'several choices for the operator' summarized in Table 1 and does not list these names in the provided excerpt.",
+    "The claim that edges serve as positive labels while sampled non-edges serve as negatives during link-prediction training is not stated in the provided evidence excerpts."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, stating that the operators are defined for any pair of nodes even without an edge, which matches the source's explicit statement for link prediction. The minor extra details (specific operator names and training label scheme) are not in the excerpt but are peripheral and do not undermine the core correction, so the verdict is SUPPORTED with small caveats."
+}

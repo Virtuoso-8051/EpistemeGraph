@@ -1,0 +1,35 @@
+{
+  "query_entities": [
+    "SkipGram",
+    "paper3",
+    "node2vec",
+    "paper2",
+    "Skip-gram objective"
+  ],
+  "triples": [
+    {
+      "source": "SkipGram",
+      "source_alias": "",
+      "type": "USES",
+      "target": "local co-occurrence neighborhoods",
+      "target_alias": "nodes that appear within a fixed context window around a target node",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "neighborhoods induced by biased random walks on the graph",
+      "target_alias": "can be tuned to capture either more breadth-first-like or depth-first-like structural neighborhoods",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram objective",
+      "target_alias": "optimized with negative sampling",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

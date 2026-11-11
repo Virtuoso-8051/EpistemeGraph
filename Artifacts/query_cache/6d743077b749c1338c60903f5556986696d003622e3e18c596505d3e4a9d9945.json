@@ -1,0 +1,129 @@
+{
+  "query_entities": [
+    "feature learning in networks",
+    "supervised objective",
+    "unsupervised objective",
+    "supervised procedure",
+    "unsupervised procedure",
+    "training time complexity",
+    "predictive accuracy",
+    "target labels",
+    "labeled examples",
+    "target output",
+    "task-specific fine-tuning"
+  ],
+  "triples": [
+    {
+      "source": "feature learning in networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "trade-off between optimizing for predictive performance on a specific task and learning broadly useful representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised objective",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised objective",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "target labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised objective",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised objective",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "learn more general structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised objective",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "not necessarily the most task-relevant features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised procedure",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "more expensive training time complexity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised procedure",
+      "source_alias": "",
+      "type": "USES",
+      "target": "labeled examples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised procedure",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "target output",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised procedure",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "cheaper training time complexity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised procedure",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "labels",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "supervised training",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "higher predictive accuracy on the target task",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised training",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "lower predictive accuracy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised training",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "predictive accuracy",
+      "target_alias": "task-specific fine-tuning",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

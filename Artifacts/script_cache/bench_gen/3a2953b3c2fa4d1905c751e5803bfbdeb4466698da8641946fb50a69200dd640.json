@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec's use of random walks centered on homophily make the blue cluster correspond to structural equivalence in the novel network?",
+      "false_premise": "node2vec's random walks are used to make the blue cluster correspond to structural equivalence, rather than homophily.",
+      "correction": "In the homophily setting, node2vec discovers clusters/communities of characters that frequently interact with each other, while structural equivalence is obtained separately by setting p=1 and q=2 and clustering the node features.",
+      "evidence_quote": "In this setting node2vec discovers clusters/communities of characters that frequently interact with each other in the major sub-plots of the novel.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How did node2vec evaluate its embeddings on graph reconstruction for the characters in the novel, and why was that objective chosen over classification?",
+      "false_premise": "node2vec was evaluated on graph reconstruction rather than supervised classification tasks.",
+      "correction": "node2vec's experiments evaluate the learned representations on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "evidence_quote": "Our experiments evaluate the feature representations obtained through node2vec on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does node2vec use DeepWalk embeddings to separate peripheral characters from bridge characters in Figure 3(bottom)?",
+      "false_premise": "node2vec uses DeepWalk embeddings to separate peripheral characters from bridge characters.",
+      "correction": "The passage describes node2vec itself, with p=1 and q=2, producing node features that are clustered to reveal structural equivalence; it does not use DeepWalk for this result.",
+      "evidence_quote": "In order to discover which nodes have the same structural roles we use the same network but setp = 1,q = 2, use node2vec to get node features and then cluster the nodes based on the obtained features.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What comparison result shows that the yellow nodes are the best-connected characters, while the blue nodes sit at the periphery of the network?",
+      "false_premise": "the yellow nodes are the best-connected characters and the blue nodes are peripheral.",
+      "correction": "The passage says the blue-colored nodes act as bridges between different sub-plots, while the yellow nodes mostly represent characters at the periphery with limited interactions.",
+      "evidence_quote": "Similarly, the yellow nodes mostly represent characters that are at the periphery and have limited interactions.",
+      "difficulty": "easy"
+    }
+  ]
+}

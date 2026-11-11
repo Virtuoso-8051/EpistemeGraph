@@ -1,0 +1,6 @@
+{
+  "answer": "Node2vec aims to learn continuous, low-dimensional feature representations (embeddings) for nodes in a network such that nodes with similar network neighborhoods or roles end up close together in the embedding space. It does this by maximizing the likelihood of preserving network neighborhoods of nodes: it generates neighborhood samples for each node using biased second-order random walks (controlled by parameters p, the return parameter, and q, the in-out parameter, which interpolate between breadth-first-like and depth-first-like exploration), and then feeds these sampled node sequences into a skip-gram style word2vec objective, optimized with stochastic gradient descent and negative sampling, to learn the embeddings.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The general description (neighborhood-preserving embeddings via biased random walks with p and q fed into skip-gram with negative sampling) matches the standard node2vec paper, but I do not have the specific passage, so exact wording or emphasis the question expects may differ.",
+  "_token_nll": null
+}

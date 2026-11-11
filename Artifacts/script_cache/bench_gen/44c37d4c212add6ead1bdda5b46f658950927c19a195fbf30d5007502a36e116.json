@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec\u2019s use of the parameters p and q relate to the way LINE handles optimization with negative sampling, and what effect do these settings have on node2vec performance compared with LINE on BlogCatalog?",
+      "gold_answer": "Node2vec is sensitive to its walk parameters: performance improves as p and q decrease, with low q encouraging outward exploration and low p keeping walks near the start node. LINE, by contrast, addresses optimization expense by using negative sampling rather than changing walk parameters. The two methods therefore handle different issues: node2vec tunes exploration behavior, while LINE uses negative sampling to make objective optimization tractable.",
+      "evidence_quote": "The performance of node2vec improves as the in-out parameter p and the return parameter q decrease.",
+      "evidence_quote_b": "To address this problem, we adopt the approach of negative sampling proposed in [13], which samples multiple negative edges according to some noisy distribution for each edge (i,j ).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does node2vec\u2019s performance saturate according to its parameter study, and how does that compare with the optimization challenge that LINE faces when edge weights have high variance?",
+      "gold_answer": "Node2vec\u2019s performance tends to saturate once the representation dimension reaches around 100. LINE faces a different issue: when edge weights vary widely, the gradients are scaled by edge weight and can either explode or become too small, making learning-rate selection difficult. So node2vec saturates with increasing dimensionality, while LINE becomes unstable because of highly variable edge weights.",
+      "evidence_quote": "We observe that performance tends to saturate once the dimensions of the representations reaches around 100.",
+      "evidence_quote_b": "This will become problematic when the weights of edges have a high variance.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does node2vec report about the relationship between low values of p and q and the type of graph structure it captures, and how is that different from LINE\u2019s use of negative sampling to model observed and negative edges?",
+      "gold_answer": "Node2vec reports that lowering p and q improves performance because the BlogCatalog network exhibits homophily and structural equivalence; low q encourages outward exploration while low p prevents the walk from moving too far from the start node. LINE\u2019s negative sampling objective instead separates observed edges from noise-sampled negative edges. Thus node2vec changes random-walk behavior to capture network structure, whereas LINE changes the training objective to distinguish positive and negative edges.",
+      "evidence_quote": "This increase in performance can be based on the homophilic and structural equivalences we expect to see in BlogCatalog.",
+      "evidence_quote_b": "The first term models the observed edges, the second term models the negative edges drawn from the noise distribution and K is the number of negative edges.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do node2vec and LINE differ in the way they make training practical: what parameter choices does node2vec study for performance, and what optimization strategy does LINE use to avoid summing over all vertices?",
+      "gold_answer": "Node2vec studies how p, q, the embedding dimension d, the number of walks r, the walk length l, and the neighborhood size k affect performance, finding that performance improves as p and q decrease and saturates around 100 dimensions. LINE makes training practical by replacing the expensive full-vertex summation with negative sampling and optimizing the resulting objective using asynchronous stochastic gradient descent. So node2vec focuses on tuning random-walk and representation parameters, while LINE focuses on computationally efficient optimization.",
+      "evidence_quote": "We also examine how the number of features d and the node\u2019s neighborhood parameters (number of walks r, walk length l, and neighborhood sizek) affect the performance.",
+      "evidence_quote_b": "Optimizing objective (6) is computationally expensive, which requires the summation over the entire set of vertices when calculating the conditional probability p2(\u00b7|vi).",
+      "difficulty": "easy"
+    }
+  ]
+}

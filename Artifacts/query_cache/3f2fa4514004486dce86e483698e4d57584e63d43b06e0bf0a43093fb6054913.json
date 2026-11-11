@@ -1,0 +1,63 @@
+{
+  "query_entities": [
+    "relational classification (RC)"
+  ],
+  "triples": [
+    {
+      "source": "relational classifier (RC)",
+      "source_alias": "RC",
+      "type": "OUTPERFORMS",
+      "target": "non-iterative single-pass relational features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational classifier (RC)",
+      "source_alias": "RC",
+      "type": "OUTPERFORMS",
+      "target": "standard non-relational learner",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational classification (RC)",
+      "source_alias": "RC",
+      "type": "USES",
+      "target": "Iterative Classification (ICA)",
+      "target_alias": "ICA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational classification (RC)",
+      "source_alias": "RC",
+      "type": "USES",
+      "target": "Gibbs sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Iterative Classification (ICA)",
+      "source_alias": "ICA",
+      "type": "IS_A",
+      "target": "iterative inference procedure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Gibbs sampling",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "iterative inference procedure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Iterative Classification (ICA)",
+      "source_alias": "ICA",
+      "type": "OUTPERFORMS",
+      "target": "non-iterative single-pass relational features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

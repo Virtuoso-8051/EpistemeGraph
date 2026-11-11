@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk's negative sampling objective make its hierarchical softmax updates faster to compute than the standard skip-gram objective?",
+      "false_premise": "DeepWalk uses negative sampling and compares it against a standard skip-gram objective.",
+      "correction": "DeepWalk uses hierarchical softmax, not negative sampling, to factor the conditional probabilities.",
+      "evidence_quote": "Hierarchical Softmax factors out Pr( v3| \u03a6(v1)) and Pr(v5| \u03a6(v1)) over sequences of probability distributions corresponding to the paths starting at the root and ending at v3 and v5.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does DeepWalk's use of a lock on shared parameters help it avoid the sparse-update problem in its multi-worker training?",
+      "false_premise": "DeepWalk uses a lock on shared parameters during multi-worker training.",
+      "correction": "DeepWalk explicitly says it does not acquire a lock when accessing shared parameters in ASGD.",
+      "evidence_quote": "Given that our updates are sparse and we do not acquire a lock to access the model shared parameters, ASGD will achieve an optimal rate of convergence [36].",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What evidence shows that DeepWalk's parallelization hurts predictive performance on BlogCatalog and Flickr once the number of workers reaches 8?",
+      "false_premise": "DeepWalk's parallelization hurts predictive performance on BlogCatalog and Flickr at 8 workers.",
+      "correction": "The passage says parallelization yields consistent speedup and no loss of predictive performance relative to serial execution.",
+      "evidence_quote": "It also shows that there is no loss of predictive performance relative to the running DeepW alkserially (Figure 4b).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does DeepWalk require knowledge of the entire graph for its streaming variant to work?",
+      "false_premise": "DeepWalk's streaming variant requires knowledge of the entire graph.",
+      "correction": "The streaming variant could be implemented without knowledge of the entire graph.",
+      "evidence_quote": "One interesting variant of this method is a streaming approach, which could be implemented without knowledge of the entire graph.",
+      "difficulty": "hard"
+    }
+  ]
+}

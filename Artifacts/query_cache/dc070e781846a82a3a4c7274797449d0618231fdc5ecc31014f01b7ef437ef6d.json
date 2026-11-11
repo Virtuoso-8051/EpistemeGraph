@@ -1,0 +1,135 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node2vec representation (NR)",
+    "Graph Embedding (GE)",
+    "node embedding (NE)",
+    "Node Classification (NC)",
+    "skip-gram model",
+    "word2vec",
+    "convolutional neural networks",
+    "vision transformers"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "DEFINED_AS",
+      "target": "graph representation learning method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "PROPOSES",
+      "target": "Grover and Leskovec 2016",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "p (return) and q (in-out) parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "word2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "APPROXIMATES",
+      "target": "node embedding (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "APPLICABLE_FOR",
+      "target": "Node Classification (NC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "APPLICABLE_FOR",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "APPLICABLE_FOR",
+      "target": "network visualization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "REPRESENTS",
+      "target": "node2vec does not improve multi-class image recognition",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "convolutional neural networks",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "image classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vision transformers",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "image classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "APPLICABLE_FOR",
+      "target": "graphs built over image regions or superpixels",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "IS_A",
+      "target": "generic embedding tool",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Node2vec optionally handles the partition function with hierarchical softmax (the evidence only mentions negative sampling)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and states that node2vec approximates the partition function with negative sampling, consistent with the evidence. The hierarchical softmax option and the claim about GCN/GraphSAGE are background not in the evidence. The hierarchical softmax claim is arguably not uncontroversial background for node2vec, so it is flagged as unsupported."
+}

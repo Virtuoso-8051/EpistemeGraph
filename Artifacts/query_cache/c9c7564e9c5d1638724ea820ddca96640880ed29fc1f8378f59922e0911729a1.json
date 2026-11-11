@@ -1,0 +1,62 @@
+{
+  "query_entities": [
+    "missing edges",
+    "perturbation experiment",
+    "non-edges",
+    "graph",
+    "self-loops",
+    "duplicate existing edges",
+    "perturbed graph",
+    "simple graph"
+  ],
+  "triples": [
+    {
+      "source": "missing edges",
+      "source_alias": "",
+      "type": "USES",
+      "target": "non-edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing edges",
+      "source_alias": "",
+      "type": "USES",
+      "target": "graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing edges",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "uniformly at random",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "selection",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "no self-loops",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "selection",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "no duplicate existing edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "perturbed graph",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "simple graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

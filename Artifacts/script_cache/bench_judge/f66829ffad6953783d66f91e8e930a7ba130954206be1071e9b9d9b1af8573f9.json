@@ -1,0 +1,9 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The answer implies DeepWalk outperforms LINE on the language network (hedged as 'if'), and does not state that LINE with edge-sampling performs very well there; it also suggests possible causes without evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "SUPPORTED",
+  "rationale": "The answer correctly rejects the premise that DeepWalk uses edge weights, consistent with the evidence that DeepWalk ignores weights and only applies to unweighted networks, and that LINE handles weights via edge sampling. It does not explicitly say LINE with edge-sampling performs very well, but it makes no claims contradicting the evidence, and the speculative alternative causes are hedged."
+}

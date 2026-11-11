@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk can still underperform EdgeCluster at a 3% training ratio because its embeddings are learned in an unsupervised way from random walks and may not separate Flickr\u2019s classes well when supervision is very sparse. With only 3% labeled nodes, the classifier has too little labeled signal to fully exploit DeepWalk\u2019s representation, while EdgeCluster\u2019s clustering-based features can align better with the graph\u2019s community structure and class boundaries. So the weaker Macro-F1 is explained by representation quality and class separability, not simply by the amount of labeled data available.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This explanation is consistent with how DeepWalk and EdgeCluster work and with the reported comparison, but the exact dataset-specific cause is inferred rather than directly verified from the prompt.",
+  "_token_nll": 0.2507803916931152
+}

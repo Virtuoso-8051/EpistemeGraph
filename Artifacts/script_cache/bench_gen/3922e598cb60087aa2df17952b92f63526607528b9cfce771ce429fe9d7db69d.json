@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the method described in the social representation model rely on supervised labels from the YouTube social graph to learn its low-dimensional embeddings so efficiently?",
+      "false_premise": "The method relies on supervised labels from the YouTube social graph to learn its embeddings.",
+      "correction": "The method learns representations from a stream of short random walks, not from supervised labels, and the example graph shown is YouTube Social Graph only as an illustration of vertex frequency.",
+      "evidence_quote": "Our method for satisfying these requirements learns representation for vertices from a stream of short random walks, using optimization techniques originally designed for language modeling.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How do the short random walks in the social representation method model partial community membership by choosing each next vertex directly from all vertices in the graph rather than from the current vertex's neighbors?",
+      "false_premise": "The random walk chooses the next vertex from all vertices in the graph, not from the current vertex's neighbors.",
+      "correction": "In the described random walk, the next vertex is chosen from the neighbors of the current vertex.",
+      "evidence_quote": "Random walks are a stochastic process with random variablesW1vi,W2vi,..., W kvi such thatW k+1vi is a vertex chosen at random from the neighbors of vertex vk.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes the method's objective of learning social representations depend on preserving the exact distance between latent dimensions as a community similarity metric for homophilic networks?",
+      "false_premise": "The objective depends on preserving the exact distance between latent dimensions as a community similarity metric.",
+      "correction": "The passage says the distance between latent dimensions should represent a metric for evaluating social similarity, which supports generalization in networks with homophily; it does not claim exact distance preservation as the objective.",
+      "evidence_quote": "Community aware - The distance between latent dimensions should represent a metric for evaluating social similarity between the corresponding members of the network.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Compared with DeepWalk's use of long random walks and non-language-model optimization, how does the social representation method improve convergence on sparse labeled data?",
+      "false_premise": "The method is compared against DeepWalk and is described as using long random walks and non-language-model optimization.",
+      "correction": "The passage does not mention DeepWalk, and it specifically says the method uses a stream of short random walks with optimization techniques originally designed for language modeling.",
+      "evidence_quote": "Our method for satisfying these requirements learns representation for vertices from a stream of short random walks, using optimization techniques originally designed for language modeling.",
+      "difficulty": "medium"
+    }
+  ]
+}

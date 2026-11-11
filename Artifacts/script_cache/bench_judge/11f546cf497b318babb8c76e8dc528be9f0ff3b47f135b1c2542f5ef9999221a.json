@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The authors chose p and q by a grid search over {0.25, 0.5, 1, 2, 4}, scored on a small labeled validation subset for the downstream task.",
+    "Main comparisons are across Facebook, Wikipedia, and protein-protein interaction networks, with DeepWalk corresponding to p = q = 1.",
+    "The answer attributes specific experimental details (grid values, datasets) to the paper, none of which appear in the provided evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly states that the papers do not report a specific learned-versus-fixed numerical improvement, which is the core of a faithful response. However, it adds specific claims about the grid search values, validation procedure, datasets, and DeepWalk equivalence that are not contained in the provided evidence, so these are unsupported."
+}

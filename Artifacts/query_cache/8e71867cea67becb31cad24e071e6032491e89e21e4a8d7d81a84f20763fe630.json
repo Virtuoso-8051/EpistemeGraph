@@ -1,0 +1,69 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "DEEPWALK",
+    "LINE",
+    "Facebook",
+    "Link Prediction",
+    "Hadamard operator",
+    "node2vec parameter"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OUTPERFORMS",
+      "target": "DEEPWALK",
+      "target_alias": "DeepWalk",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OUTPERFORMS",
+      "target": "LINE",
+      "target_alias": "LINE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EVALUATED_ON",
+      "target": "Facebook",
+      "target_alias": "Facebook dataset",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "source_alias": "return and in-out parameters (p, q)",
+      "type": "OPTIMIZES",
+      "target": "Link Prediction",
+      "target_alias": "LP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "Hadamard operator",
+      "target_alias": "HO",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "HO",
+      "type": "OUTPERFORMS",
+      "target": "other edge feature operators",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OUTPERFORMS",
+      "target": "DEEPWALK",
+      "target_alias": "DeepWalk",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

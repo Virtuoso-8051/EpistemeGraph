@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In LINE, what exact memory increase occurs when an edge with weight w is unfolded into w binary edges, and how does this compare numerically to the alias-table approach on a graph with the same edge weights?",
+      "why_unanswerable": "The passage says unfolding weighted edges into binary edges significantly increases memory requirement, but it does not report any exact memory increase or a numerical comparison to the alias-table method.",
+      "evidence_quote": "A simple treatment is thus to unfold a weighted edge into multiple binary edges, e.g., an edge with weight w is unfolded into w binary edges.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How much faster, in terms of wall-clock speedup, is the alias table method than the O(|E|) interval-sampling procedure when LINE repeatedly draws samples from the same weighted edge distribution?",
+      "why_unanswerable": "The passage states the asymptotic costs of the two sampling methods, but it does not provide any measured wall-clock speedup or benchmark comparison.",
+      "evidence_quote": "We use the alias table method [9] to draw a sample according to the weights of the edges, which takes onlyO(1) time when repeatedly drawing samples from the same discrete distribution.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which specific experimental conditions or datasets did LINE achieve the reported overall time complexity of O(dK|E|), and what were the corresponding runtime numbers?",
+      "why_unanswerable": "The passage gives the theoretical complexity of LINE, but it does not mention any datasets, experimental conditions, or concrete runtime measurements.",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What exact value of K negative samples did LINE use in its optimization experiments, and how did changing K affect the per-step complexity beyond O(d(K + 1))?",
+      "why_unanswerable": "The passage defines K symbolically and states the per-step complexity, but it does not report a chosen numerical value for K or any ablation on varying K.",
+      "evidence_quote": "Sampling an edge from the alias table takes constant time, O(1), and optimization with negative sampling takesO(d(K+ 1)) time, whereK is the number of negative samples.",
+      "difficulty": "medium"
+    }
+  ]
+}

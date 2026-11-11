@@ -1,0 +1,6 @@
+{
+  "answer": "The premise appears to be mistaken, or at least unsupported as stated. Methods that learn social representations from the YouTube social graph, such as DeepWalk, LINE, and the latent social dimensions approach of Tang and Liu, learn their low-dimensional embeddings in an unsupervised way from graph structure, typically via random walks or edge-based proximity objectives. The YouTube group-membership labels are used only downstream, to train and evaluate a separate classifier on the learned embeddings, not to learn the embeddings themselves. So the method does not rely on supervised labels to learn its embeddings efficiently. Its efficiency comes from the structure-based, label-free training objective and from the scalability of techniques such as random-walk sampling and negative sampling. I could not identify the specific paper referenced, so if it describes a semi-supervised variant that does use labels in training, that would change this answer.",
+  "confidence": 0.5,
+  "confidence_reasoning": "I am fairly sure that the standard YouTube social-graph embedding methods (DeepWalk, LINE, Tang and Liu) are unsupervised with labels used only for evaluation, but I could not identify the specific paper the question refers to, so it may describe a variant that differs.",
+  "_token_nll": null
+}

@@ -1,0 +1,42 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "latent representation (LR)",
+    "Zachary's Karate network",
+    "d-dimensional space (DDS)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "latent representation (LR)",
+      "target_alias": "LR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representation (LR)",
+      "source_alias": "LR",
+      "type": "USES",
+      "target": "d-dimensional space (DDS)",
+      "target_alias": "DDS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Zachary's Karate network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Zachary's Karate network",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "latent representation (LR)",
+      "target_alias": "LR",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

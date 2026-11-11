@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How do BFS and DFS differ in the kinds of network equivalences that node2vec can capture, and what role does BFS play in representing structural equivalence?",
+      "gold_answer": "BFS-based sampling tends to produce embeddings that correspond closely to structural equivalence, while DFS is better suited to capturing homophily and community structure. For node2vec, BFS helps by restricting search to nearby nodes, giving a microscopic view of each node\u2019s neighborhood and making local roles such as bridges and hubs easier to infer.",
+      "evidence_quote": "We observe that BFS and DFS strategies play a key role in producing representations that reflect either of the above equivalences.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does BFS reduce variance in node2vec\u2019s neighborhood characterization, and what limitation does it have compared with DFS?",
+      "gold_answer": "BFS reduces variance because nodes in the sampled neighborhoods tend to repeat many times, which helps characterize the distribution of 1-hop nodes with respect to the source node. Its limitation is that, for a fixed sample size k, it explores only a very small portion of the graph.",
+      "evidence_quote": "Additionally, in BFS, nodes in the sampled neighborhoods tend to repeat many times.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what conditions does DFS become useful for node2vec, and what drawback arises when it goes to greater depths?",
+      "gold_answer": "DFS is useful when the goal is to obtain a macro-view of the neighborhood, which is important for inferring communities based on homophily. However, deeper DFS exploration can create complex dependencies and higher variance because sampled nodes may be far from the source and less representative.",
+      "evidence_quote": "In DFS, the sampled nodes more accurately reflect a macro-view of the neighborhood which is essential in inferring communities based on homophily.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does node2vec use the observations about BFS and DFS to define its neighborhood sampling strategy?",
+      "gold_answer": "node2vec builds on the BFS/DFS observations by introducing a flexible neighborhood sampling strategy. This strategy is designed to smoothly interpolate between BFS and DFS, allowing the method to capture either structural equivalence or homophily depending on the sampling behavior.",
+      "evidence_quote": "Building on the above observations, we design a flexible neighborhood sampling strategy which allows us to smoothly interpolate between BFS and DFS.",
+      "difficulty": "hard"
+    }
+  ]
+}

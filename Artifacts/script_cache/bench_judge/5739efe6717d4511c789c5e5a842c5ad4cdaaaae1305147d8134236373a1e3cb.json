@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "DeepWalk uses an exact number of 80 walks per vertex (evidence says \u03b3 = 40 in one setting, not 80)",
+    "The answer gives a single definitive step count as 'the' number, going along with the premise that an exact number exists, rather than noting it is a configurable hyperparameter"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence does contain t = 40 as a default/chosen walk length in some experiments, so that claim is supported, although the question was framed as unanswerable from the specific passage. However, the answer's claim of 80 walks per vertex contradicts the evidence (\u03b3 = 40), and it presents 40 as the exact fixed value rather than a tunable parameter."
+}

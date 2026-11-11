@@ -1,0 +1,71 @@
+{
+  "query_entities": [
+    "DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram-style objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "latent vertex representations",
+      "target_alias": "embeddings",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representations",
+      "source_alias": "embeddings",
+      "type": "IS_A",
+      "target": "low-dimensional vector",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representations",
+      "source_alias": "embeddings",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "not directly human-interpretable coordinates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representations",
+      "source_alias": "embeddings",
+      "type": "REPRESENTS",
+      "target": "graph context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representations",
+      "source_alias": "embeddings",
+      "type": "REPRESENTS",
+      "target": "structural similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent vertex representations",
+      "source_alias": "embeddings",
+      "type": "PRESERVES",
+      "target": "nearby or similarly situated vertices have similar representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

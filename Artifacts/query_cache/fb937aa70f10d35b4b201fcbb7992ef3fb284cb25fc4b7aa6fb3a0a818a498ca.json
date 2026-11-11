@@ -1,0 +1,113 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "RANDOMLY-GENERATED WALK (RGW)",
+    "RANDOM WALK (RW)",
+    "TRUNCATED RANDOM WALK (TRW)",
+    "CO-AUTHOR NETWORK (CAN)",
+    "SKIP-GRAM",
+    "WORD2VEC",
+    "GRAPH CONVOLUTIONAL NETWORK (GCN)",
+    "GRAPHSAGE",
+    "t-SNE",
+    "PCA"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "RANDOM WALK (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "TRUNCATED RANDOM WALK (TRW)",
+      "target_alias": "TRW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SKIP-GRAM",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "CO-AUTHOR NETWORK (CAN)",
+      "target_alias": "CAN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "NODE PROXIMITY",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "GRAPH CONVOLUTIONAL NETWORK (GCN)",
+      "target_alias": "GCN",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "DETERMINISTIC NEIGHBORHOOD AGGREGATION",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "NODE EMBEDDINGS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRODUCES",
+      "target": "2D LAYOUT",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "t-SNE",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "NODE EMBEDDINGS",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "PCA",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "NODE EMBEDDINGS",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "GRAPHSAGE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "DETERMINISTIC NEIGHBORHOOD AGGREGATION",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

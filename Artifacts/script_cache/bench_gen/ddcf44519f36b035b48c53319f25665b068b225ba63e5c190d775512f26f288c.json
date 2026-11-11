@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What kind of vertex information does DeepWalk learn from a graph, and how are those learned representations described in terms of dimensionality and meaning?",
+      "gold_answer": "DeepWalk learns social representations of a graph\u2019s vertices by modeling a stream of short random walks. These representations are latent features that capture neighborhood similarity and community membership, and they encode social relations in a continuous vector space with a relatively small number of dimensions.",
+      "evidence_quote": "We develop an algorithm ( DeepW alk) that learns social representations of a graph\u2019s vertices, by modeling a stream of short random walks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does the passage explain why sparsity matters for machine learning applications in networks, and what role does DeepWalk play in addressing that issue?",
+      "gold_answer": "Sparsity is presented as something that makes it harder to generalize in statistical learning, even though it enables efficient discrete algorithms. DeepWalk is introduced as a deep learning approach for network analysis that learns useful vertex representations from random walks, helping methods deal with sparse network data.",
+      "evidence_quote": "Sparsity enables the design of efficient discrete algorithms, but can make it harder to generalize in statistical learning.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which network-analysis tasks does the passage say methods must cope with sparsity, and what examples are given?",
+      "gold_answer": "The passage says network methods must deal with sparsity in tasks such as network classification, content recommendation, anomaly detection, and missing link prediction. These examples show the breadth of applications where sparse network structure is a challenge.",
+      "evidence_quote": "Machine learning applications in networks (such as network classification [15, 37], content recommendation [11], anomaly detection [5], and missing link prediction [22]) must be able to deal with this sparsity in order to survive.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does the passage claim that DeepWalk can be viewed as a generalization of neural language models, and what is the special language it processes?",
+      "gold_answer": "DeepWalk generalizes neural language models because it applies them to network data rather than ordinary text. The special language it processes is composed of a set of randomly-generated walks.",
+      "evidence_quote": "DeepW alkgeneralizes neural language models to process a special language composed of a set of randomly-generated walks.",
+      "difficulty": "hard"
+    }
+  ]
+}

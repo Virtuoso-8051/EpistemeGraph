@@ -1,0 +1,6 @@
+{
+  "answer": "LINE(2nd) captures second-order proximity, which treats two nodes as similar when they share neighbors or have similar neighborhood (context) distributions. LINE(1st) only models direct first-order ties. In an extremely sparse network like Flickr, many nodes have few or no direct links, so first-order proximity gives little signal for them. Second-order proximity still links nodes through shared neighbors and so supplies usable structural information, which explains why LINE(2nd) embeds these nodes better for the downstream tasks.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The explanation matches the general first- versus second-order rationale in the LINE paper, but I am recalling the exact wording of the Flickr result from memory and have not verified it.",
+  "_token_nll": null
+}

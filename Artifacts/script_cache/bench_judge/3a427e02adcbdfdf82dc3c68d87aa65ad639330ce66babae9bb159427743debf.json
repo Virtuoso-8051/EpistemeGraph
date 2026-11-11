@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "node2vec tended to win with the Hadamard and Average operators (the evidence only says Hadamard with node2vec performs best on average; Average is not mentioned)",
+    "LINE beat node2vec 'mainly' under the Weighted-L1 and Weighted-L2 operators (the evidence says only 'a couple of cases', not a main pattern)",
+    "Weighted-L1 and Weighted-L2 are 'distance-based' operators (a characterization not in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim, that LINE outperformed node2vec with the Weighted-L1 and Weighted-L2 operators, matches the evidence. The answer adds unsupported details: the Average operator, the word 'mainly' in place of 'a couple of cases', and the 'distance-based' label. It is also hedged as a guess rather than a finding from the paper."
+}

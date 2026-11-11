@@ -1,0 +1,55 @@
+{
+  "query_entities": [
+    "DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "short random walks on the graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "short random walks on the graph",
+      "type": "GENERATES",
+      "target": "vertex sequences",
+      "target_alias": "resulting vertex sequences",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex sequences",
+      "source_alias": "resulting vertex sequences",
+      "type": "APPROXIMATES",
+      "target": "sentences",
+      "target_alias": "like sentences",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned latent representation",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "local neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned latent representation",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "broader graph proximity/co-occurrence patterns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertices that appear in similar random-walk contexts",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "similar embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

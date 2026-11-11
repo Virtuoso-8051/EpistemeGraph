@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "Under which conditions is DeepWalk applicable, and what kind of proximity does DeepWalk use to learn vertex representations?",
+      "gold_answer": "DeepWalk is only applicable to networks with binary edges. It learns embeddings by running truncated random walks from each vertex to collect contextual information, so it uses only second-order proximity.",
+      "evidence_quote": "DeepWalk is an approach recently proposed for social network embedding, which is only applicable for networks with binary edges.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE-SGD differ from LINE in the way each model uses edge weights during optimization?",
+      "gold_answer": "LINE-SGD multiplies the edge weights directly into the gradients when sampled edges are used for model updating. LINE instead samples an edge with probability proportional to its weight and then treats that edge as binary during model updating.",
+      "evidence_quote": "With this approach, the weights of the edges are directly multiplied into the gradients when the edges are sampled for model updating.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which variants of LINE and LINE-SGD are limited to undirected graphs, and what proximity order does each variant use?",
+      "gold_answer": "LINE(1st) and LINE-SGD(1st) are the variants limited to undirected graphs. Both use first-order proximity, while the 2nd-order variants use second-order proximity instead.",
+      "evidence_quote": "Like the graph factorization, both LINE(1st) and LINE-SGD(1st) only apply to undirected graphs.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why is graph factorization described as scalable to large networks, and what graph type restriction does it have?",
+      "gold_answer": "Graph factorization is optimized through stochastic gradient descent, which makes it able to handle large networks efficiently. However, it only applies to undirected networks.",
+      "evidence_quote": "Graph factorization is optimized through stochastic gradient descent and is able to handle large networks.",
+      "difficulty": "easy"
+    }
+  ]
+}

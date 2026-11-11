@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "vertex representation (UI)",
+    "neighborhood similarity",
+    "community detection",
+    "node representation (NR)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "Neighborhood similarity",
+      "target_alias": "NS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex representation (UI)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "Neighborhood similarity",
+      "target_alias": "NS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Neighborhood similarity",
+      "source_alias": "NS",
+      "type": "IS_A",
+      "target": "structural similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex representation (UI)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "Community detection",
+      "target_alias": "CD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "multi-label node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "classification with few labeled nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "online update",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

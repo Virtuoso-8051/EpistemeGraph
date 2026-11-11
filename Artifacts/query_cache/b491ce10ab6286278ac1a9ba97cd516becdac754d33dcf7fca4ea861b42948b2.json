@@ -1,0 +1,125 @@
+{
+  "query_entities": [
+    "LINE",
+    "MDS",
+    "IsoMap",
+    "Laplacian eigenmaps",
+    "Flickr",
+    "Twitter",
+    "Sina Weibo"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "Multidimensional Scaling",
+      "target_alias": "MDS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Multidimensional Scaling",
+      "source_alias": "MDS",
+      "type": "REQUIRES",
+      "target": "dense pairwise similarity matrices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Isomap",
+      "source_alias": "IsoMap",
+      "type": "REQUIRES",
+      "target": "eigen-decomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmaps",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "eigen-decomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmaps",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "dense pairwise similarity matrices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmaps",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "dimensionality reduction method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Multidimensional Scaling",
+      "source_alias": "MDS",
+      "type": "IS_A",
+      "target": "dimensionality reduction method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Isomap",
+      "source_alias": "IsoMap",
+      "type": "IS_A",
+      "target": "dimensionality reduction method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmaps",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "quadratic memory and cubic time complexity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Multidimensional Scaling",
+      "source_alias": "MDS",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "quadratic memory and cubic time complexity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Isomap",
+      "source_alias": "IsoMap",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "quadratic memory and cubic time complexity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "evaluated datasets",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "large-scale information networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "large-scale information networks",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "millions of vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Flickr",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "information network",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

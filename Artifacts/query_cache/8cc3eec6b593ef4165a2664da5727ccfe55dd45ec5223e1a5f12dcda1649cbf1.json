@@ -1,0 +1,58 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "EdgeCluster",
+    "Macro-F1 score (MFS)",
+    "Skip-gram objective (SGO)"
+  ],
+  "triples": [
+    {
+      "source": "Macro-F1 score (MFS)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "Macro-F1 weights every class equally",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram objective (SGO)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "hub-centered structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "labeled data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "edge-centric community features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

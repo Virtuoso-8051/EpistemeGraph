@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The original paper used 80 walks per node for these datasets; the evidence says \u03b3 = 40 as a default setting, and the sensitivity experiments vary \u03b3.",
+    "The paper's sensitivity analyses show gains flatten beyond a point and a suitable window helps; the window size was fixed at w=10 in the sensitivity experiments, so no window-size sensitivity is shown, and walk length was not varied."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly cites t=40 and w=10. However, it misstates the walks per node as 80 (evidence says \u03b3=40) and claims the sensitivity analyses cover window size, which the evidence does not support because window size was fixed."
+}

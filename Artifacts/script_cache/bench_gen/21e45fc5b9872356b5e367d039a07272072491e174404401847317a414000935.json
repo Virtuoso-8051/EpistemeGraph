@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How do DeepWalk and LINE differ in the kind of network structure they use to learn node representations: what does DeepWalk treat as the equivalent of sentences, and what additional proximity does LINE explicitly optimize beyond observed links?",
+      "gold_answer": "DeepWalk learns from truncated random walks by treating walks as sentences, while LINE optimizes both first-order proximity from observed links and second-order proximity based on shared neighborhood structure.",
+      "evidence_quote": "DeepW alk uses local information obtained from truncated random walks to learn latent representations by treating walks as the equivalent of sentences.",
+      "evidence_quote_b": "As a complement, we explore the second-order proximity between the vertices, which is not determined through the observed tie strength but through the shared neighborhood structures of the vertices.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what data-sparsity conditions does DeepWalk report an advantage, and how does that compare with LINE\u2019s stated ability to scale to large graphs?",
+      "gold_answer": "DeepWalk reports that its representations can give up to 10% higher F1 scores when labeled data is sparse, whereas LINE is described as able to scale to very large networks with millions of nodes.",
+      "evidence_quote": "DeepW alk\u2019s representations can provide F1 scores up to 10% higher than competing methods when labeled data is sparse.",
+      "evidence_quote_b": "We anticipate that a new model with a carefully designed objective function that preserves properties of the graph and an efficient optimization technique should effectively find the embedding of millions of nodes.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What optimization target distinguishes LINE from DeepWalk\u2019s learning procedure when preserving graph information, and how does DeepWalk describe its approach to learning latent representations?",
+      "gold_answer": "LINE uses an objective that preserves local and global network structures, whereas DeepWalk learns latent representations from local information in random walks and generalizes language-model-style learning from sequences of words to graphs.",
+      "evidence_quote": "DeepW alk generalizes recent advancements in language modeling and unsupervised feature learning (or deep learning ) from sequences of words to graphs.",
+      "evidence_quote_b": "The model optimizes an objective which preserves both the local and global network structures.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Compare the types of network properties emphasized by DeepWalk and LINE: which method is presented as exploiting missing information well, and which method explicitly models both observed ties and shared-neighborhood similarity?",
+      "gold_answer": "DeepWalk is presented as outperforming baselines especially when information is missing, while LINE explicitly models observed ties through first-order proximity and shared-neighborhood similarity through second-order proximity.",
+      "evidence_quote": "Our results show that DeepW alkoutperforms challenging baselines which are allowed a global view of the network, especially in the presence of missing information.",
+      "evidence_quote_b": "Such an intuition can be found in the theories of sociology and linguistics.",
+      "difficulty": "hard"
+    }
+  ]
+}

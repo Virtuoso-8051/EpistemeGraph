@@ -1,0 +1,98 @@
+{
+  "query_entities": [
+    "relational classification (RC)",
+    "Node Classification (NC)",
+    "network embedding (NE)",
+    "node representation (NR)"
+  ],
+  "triples": [
+    {
+      "source": "relational classification (RC)",
+      "source_alias": "RC",
+      "type": "USES",
+      "target": "known labels of neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational classification (RC)",
+      "source_alias": "RC",
+      "type": "IS_A",
+      "target": "supervised learning task (SLT)",
+      "target_alias": "SLT",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational classification (RC)",
+      "source_alias": "RC",
+      "type": "OPTIMIZES",
+      "target": "label prediction accuracy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational classification (RC)",
+      "source_alias": "RC",
+      "type": "USES",
+      "target": "node features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational classification (RC)",
+      "source_alias": "RC",
+      "type": "GENERATES",
+      "target": "label distribution-based representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent-dimension learning",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "unsupervised representation learning (URL)",
+      "target_alias": "URL",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "latent-dimension learning",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "structural or proximity information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent-dimension learning",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "neighborhood reconstruction",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "latent-dimension learning",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "random-walk co-occurrence",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "latent-dimension learning",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "multiple tasks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent-dimension learning",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "label distribution independence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

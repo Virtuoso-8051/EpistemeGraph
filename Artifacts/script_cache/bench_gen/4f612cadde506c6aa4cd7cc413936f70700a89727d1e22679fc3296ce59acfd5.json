@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does LINE(2nd) compare with node2vec in terms of the kind of proximity or neighborhood information each method emphasizes, and which method is reported to achieve the better overall word analogy score?",
+      "gold_answer": "LINE(2nd) emphasizes second-order proximity, while node2vec uses biased random walks to sample graph neighborhoods; LINE(2nd) achieves the better overall word analogy score at 66.10%, compared with node2vec\u2019s random-walk-based framework being described for sampling rather than that benchmark result.",
+      "evidence_quote": "We can see that LINE(2nd) outperforms all other methods, including the graph embedding methods and the SkipGram.",
+      "evidence_quote_b": "There are several benefits of random walks over pure BFS/DFS approaches.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does the graph embedding approach in LINE use a logarithm of cooccurrence counts, and how does that contrast with node2vec\u2019s use of random-walk samples?",
+      "gold_answer": "LINE uses the logarithm of the number of cooccurrences as edge weights when constructing the graph for embedding, whereas node2vec generates training samples by simulating random walks over the graph.",
+      "evidence_quote": "For graph factorization, the weight between each pair of words is defined as the logarithm of the number of cooccurrences, which leads to better performance than the original value of cooccurrences.",
+      "evidence_quote_b": "By simulating a random walk of lengthl>k we can generatek samples forl\u2212k nodes at once due to the MarkoOperator Symbol Definition Average \u229e [f (u) \u229ef (v)]i = fi(u)+fi(v)2 Hadamard \u22a1 [f (u) \u22a1f (v)]i =fi(u)\u2217fi(v) Weighted-L1 \u2016\u00b7\u2016 \u03041 \u2016f (u)\u00b7f (v)\u2016 \u03041i =|fi(u)\u2212fi(v)| Weighted-L2 \u2016\u00b7\u2016 \u03042 \u2016f (u)\u00b7f (v)\u2016 \u03042i =|fi(u)\u2212fi(v)|2 Table 1: Choice of binary operators \u25e6 for learning edge features.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the reported running time difference between LINE(2nd) and DeepWalk in the word analogy experiment, and how does that relate to node2vec\u2019s claim about efficiency from random walks?",
+      "gold_answer": "LINE(2nd) runs in 2.55h versus DeepWalk\u2019s 16.64h, so LINE(2nd) is much faster in that experiment; node2vec separately argues that random walks are computationally efficient in both space and time.",
+      "evidence_quote": "LINE(2nd) outperforms all other methods, including the graph embedding methods and the SkipGram.",
+      "evidence_quote_b": "Random walks are computationally efficient in terms of both space and time requirements.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Compare how LINE(2nd) and node2vec each exploit graph structure: which one is evaluated on word analogy using Wikipedia word networks, and which one reuses samples across source nodes to improve sampling efficiency?",
+      "gold_answer": "LINE(2nd) is evaluated on word analogy using embeddings learned from the Wikipedia word network, while node2vec reuses samples across different source nodes by using random walks to improve sampling efficiency.",
+      "evidence_quote": "Table 2 reports the results of word analogy using the embeddings of words learned on the Wikipedia corpora (SkipGram) or the Wikipedia word network (all other methods).",
+      "evidence_quote_b": "By imposing graph connectivity in the sample generation process, random walks provide a convenient mechanism to increase the effective sampling rate by reusing samples across different source nodes.",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "Huffman coding",
+    "skip-gram",
+    "hierarchical softmax",
+    "streaming DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Huffman coding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Huffman coding",
+      "source_alias": "",
+      "type": "ASSIGNS",
+      "target": "binary code to vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Huffman coding",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "expected code length",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "expected code length",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "entropy of vertex frequency distribution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "tree built from early-stream counts",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "streaming setting",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "valid probability distribution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "approximate or stale tree",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "correctness",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "graph frequency distributions",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "skewed and fairly stable",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax",
+      "source_alias": "",
+      "type": "REDUCES",
+      "target": "per-update cost from O(|V|) to O(log|V|)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

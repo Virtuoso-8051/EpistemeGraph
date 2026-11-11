@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The answer says the passage is not included with the question, but the passage is provided in the evidence.",
+    "The answer attributes the LINE paper to Tang et al. (2015); the evidence excerpt does not state the authors or year.",
+    "The answer describes real-world networks as often heterogeneous; the evidence does not say this.",
+    "The answer says useful embeddings support downstream tasks such as classification, link prediction, and visualization; the evidence does not mention these tasks.",
+    "The answer says LINE is optimized with edge sampling and negative sampling; the evidence excerpt does not contain this."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer, that LINE must preserve first- and second-order proximity, scale to millions of vertices and billions of edges, and handle directed, undirected, and weighted edges, is correctly supported by the passage. However, the answer wrongly claims the passage is absent and adds several details (authors, downstream tasks, edge/negative sampling, heterogeneity) that are not in the evidence."
+}

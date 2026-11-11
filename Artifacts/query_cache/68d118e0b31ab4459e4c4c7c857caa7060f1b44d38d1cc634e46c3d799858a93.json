@@ -1,0 +1,106 @@
+{
+  "query_entities": [
+    "network embedding",
+    "first-order proximity",
+    "second-order proximity",
+    "higher-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "GraRep",
+      "source_alias": "",
+      "type": "USES",
+      "target": "k-step transition matrices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GraRep",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "separate embeddings for each k-step transition matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HOPE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "higher-order similarity matrices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Katz index",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "higher-order similarity measure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Adamic-Adar",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "higher-order similarity measure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random-walk windows",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random-walk windows",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk window length",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "effective proximity order",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "M-NMF",
+      "source_alias": "",
+      "type": "USES",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "M-NMF",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "M-NMF",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper1.pdf method",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "higher-order proximity approaches such as GraRep, HOPE, Node2vec, DeepWalk, or M-NMF",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

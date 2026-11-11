@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec extend random walks to represent a pair of nodes, and why is this extension useful for link prediction?",
+      "gold_answer": "node2vec extends the random-walk-based node representations to node pairs by using a bootstrapping approach over the feature vectors of the two individual nodes. It defines a binary operator over the feature vectors of nodes u and v to produce a pair representation g(u,v), and this is useful for link prediction because the operator is defined even when no edge exists between the pair, allowing both true and false edges to be represented.",
+      "evidence_quote": "Given two nodesu andv, we define a binary operator\u25e6 over the corresponding feature vectors f (u) andf (v) in order to generate a representation g(u,v ) such that g : V\u00d7V \u2192 Rd\u2032 whered\u2032 is the representation size for the pair (u,v ).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What do the BFS and DFS strategies represent in the node2vec case study, and what does the Les Mis\u00e9rables example aim to show about them?",
+      "gold_answer": "In the node2vec discussion, BFS and DFS are described as extreme ends of a spectrum of embedding nodes based on homophily and structural equivalence. The Les Mis\u00e9rables case study aims to empirically demonstrate that node2vec can discover embeddings that obey both principles.",
+      "evidence_quote": "In Section 3.1 we observed that BFS and DFS strategies represent extreme ends on the spectrum of embedding nodes based on the principles of homophily (i.e., network communities) and structural equivalence ( i.e., structural roles of nodes).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are the size and construction of the network used in the Les Mis\u00e9rables case study, and how is it analyzed with node2vec?",
+      "gold_answer": "The network has 77 nodes and 254 edges, with nodes corresponding to characters in the novel Les Mis\u00e9rables and edges connecting coappearing characters. node2vec is run with d = 16 to learn a feature representation for every node, and the resulting representations are clustered using kmeans before visualization.",
+      "evidence_quote": "The network has 77 nodes and 254 edges.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which parameter setting does the Les Mis\u00e9rables visualization show regions of the network colored with the same color, and what does that indicate?",
+      "gold_answer": "The example shown in Figure 3(top) uses p = 1 and q = 0.5. In that setting, regions of the network are colored with the same color, indicating that node2vec is grouping together network communities in the visualization.",
+      "evidence_quote": "Figure 3(top) shows the example when we set p = 1,q = 0.5.",
+      "difficulty": "medium"
+    }
+  ]
+}

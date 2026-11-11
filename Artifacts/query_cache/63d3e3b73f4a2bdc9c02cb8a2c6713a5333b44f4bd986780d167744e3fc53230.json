@@ -1,0 +1,77 @@
+{
+  "query_entities": [
+    "truncated random walk",
+    "skip-gram model",
+    "language model",
+    "network embedding",
+    "community detection",
+    "random walk",
+    "local community structure information"
+  ],
+  "triples": [
+    {
+      "source": "network embedding",
+      "source_alias": "NE",
+      "type": "USES",
+      "target": "truncated random walk",
+      "target_alias": "TRW",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "truncated random walk",
+      "source_alias": "TRW",
+      "type": "PRESERVES",
+      "target": "local community structure information",
+      "target_alias": "LCSI",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network embedding",
+      "source_alias": "NE",
+      "type": "ENABLES",
+      "target": "community detection",
+      "target_alias": "CD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "SGM",
+      "type": "IS_A",
+      "target": "language model",
+      "target_alias": "LM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "RW",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "power law",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "RW",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Zipfian word frequency distribution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "SGM",
+      "type": "APPROXIMATES",
+      "target": "shifted pointwise mutual information matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network embedding",
+      "source_alias": "NE",
+      "type": "PRESERVES",
+      "target": "random walk proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

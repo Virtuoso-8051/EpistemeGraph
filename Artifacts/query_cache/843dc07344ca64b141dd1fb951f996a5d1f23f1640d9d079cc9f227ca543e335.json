@@ -1,0 +1,6 @@
+{
+  "answer": "Huffman coding can still be used in the streaming version of DeepWalk because it only requires a frequency-based binary tree over the vocabulary, not access to the full corpus at once. In practice, the node frequencies can be estimated or maintained from the stream, so the hierarchical softmax structure remains usable online. It optimizes the expected cost of predicting a node by assigning shorter codes to more frequent nodes, which reduces the average number of binary decisions needed during training.",
+  "confidence": 0.88,
+  "confidence_reasoning": "This matches the standard role of Huffman coding in hierarchical softmax and its compatibility with frequency estimates in streaming settings, though exact implementation details can vary by paper or system.",
+  "_token_nll": 0.2039574214390346
+}

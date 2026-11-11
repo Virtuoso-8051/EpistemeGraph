@@ -1,0 +1,93 @@
+{
+  "query_entities": [
+    "LINE",
+    "BlogCatalog network",
+    "PPI",
+    "Wikipedia data",
+    "first-order proximity",
+    "second-order proximity",
+    "word cooccurrence network"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "DEFINED_AS",
+      "target": "local pairwise similarity of directly linked nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "similarity of neighborhood structure between nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog network",
+      "source_alias": "BN",
+      "type": "EVALUATED_ON",
+      "target": "first-order proximity",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia data",
+      "source_alias": "WD",
+      "type": "CONTAINS",
+      "target": "word cooccurrence network",
+      "target_alias": "WCN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "protein interactions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "WORKS_WELL_FOR",
+      "target": "homophily-style ties",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "structural-equivalence-style relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog network",
+      "source_alias": "BN",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "social links",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE(2nd)",
+    "first-order proximity",
+    "semantic analogy",
+    "syntactic analogy",
+    "neighborhood similarity"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(2nd)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "semantic analogy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "syntactic analogy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "PRESERVES",
+      "target": "direct edge relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "IS_A",
+      "target": "stronger setting",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood similarity",
+      "source_alias": "NS",
+      "type": "IS_A",
+      "target": "weaker setting",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

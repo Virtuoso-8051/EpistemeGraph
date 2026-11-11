@@ -1,0 +1,74 @@
+{
+  "query_entities": [
+    "stochastic gradient descent",
+    "eigendecomposition",
+    "backpropagation",
+    "single hidden-layer feedforward neural network"
+  ],
+  "triples": [
+    {
+      "source": "linear single hidden-layer network",
+      "source_alias": "",
+      "type": "USES",
+      "target": "squared-error loss",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "optimal weights of linear network",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "principal components of data covariance",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "eigendecomposition",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "closed-form solution of linear network without backpropagation",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "singular value decomposition",
+      "source_alias": "SVD",
+      "type": "ENABLES",
+      "target": "closed-form solution of linear network without backpropagation",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "output-weight learning with fixed hidden weights",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "least-squares problem",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pseudoinverse",
+      "source_alias": "",
+      "type": "USES",
+      "target": "eigendecomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nonlinear hidden activations with trainable hidden weights",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "backpropagation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "source_alias": "SGD",
+      "type": "USES",
+      "target": "backpropagation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

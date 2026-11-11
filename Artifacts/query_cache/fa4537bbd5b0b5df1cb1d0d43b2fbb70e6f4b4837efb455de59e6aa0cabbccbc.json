@@ -1,0 +1,78 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "SC",
+    "EdgeCluster",
+    "Node Classification (NC)",
+    "Deep learning (DL)",
+    "representation learning (RL)",
+    "Low-dimensional Embedding (LDE)",
+    "network embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "DOES_NOT_USE",
+      "target": "SC",
+      "target_alias": "spectral clustering",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "Word2Vec-style model",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "Low-dimensional Embedding (LDE)",
+      "target_alias": "node embeddings",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "one-vs-rest logistic regression classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SC",
+      "source_alias": "spectral clustering",
+      "type": "EVALUATED_ON",
+      "target": "DEEPWALK",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "EdgeCluster",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "Node Classification (NC)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec does not learn p and q by end-to-end differentiable gradient descent. In Grover and Leskovec's (2016) formulation, p (return parameter) and q (in-out parameter) are fixed hyperparameters that control the biased second-order random walk used to generate node sequences. They are not model parameters, so they never receive gradients. The skip-gram embedding vectors are learned with stochastic gradient descent on a negative-sampling objective, but p and q only shape the walk distribution that produces the training pairs. In practice they are chosen by external search: the original paper used grid search over values such as {0.25, 0.5, 1, 2, 4} and selected the best on a downstream task such as link prediction or node classification using held-out data. Other tuning methods, such as Bayesian optimization or random search, are also used. Because the walk sampling is discrete, the objective is not differentiable with respect to p and q, which is one reason gradient-based learning of them is not done.",
+  "confidence": 0.9,
+  "confidence_reasoning": "The core claim that p and q are fixed hyperparameters tuned by grid search over {0.25, 0.5, 1, 2, 4} in the original paper is well established, though the exact grid values are from memory.",
+  "_token_nll": null
+}

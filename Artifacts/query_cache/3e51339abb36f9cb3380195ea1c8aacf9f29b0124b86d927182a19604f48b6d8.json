@@ -1,0 +1,50 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "Flickr",
+    "YouTube",
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "local neighborhood similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "gains on Flickr and YouTube",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "explores nodes at increasing distances",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "more consistent with DeepWalk's gains on Flickr and YouTube in settings where nearby nodes tend to share labels or attributes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "NOT_APPLICABLE_FOR",
+      "target": "settings where structural equivalence is the main signal",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

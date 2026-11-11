@@ -1,0 +1,150 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "stochastic gradient descent",
+    "skip-gram model",
+    "random walks",
+    "graph",
+    "embedding vectors",
+    "input/output embeddings",
+    "sliding window",
+    "skip-gram loss",
+    "mini-batch",
+    "backpropagation",
+    "chain rule",
+    "hierarchical softmax",
+    "negative sampling",
+    "graph structure",
+    "skip-gram prediction loss"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "nearby nodes from a center node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embedding vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding vectors",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "input/output embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding vectors",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "source_alias": "",
+      "type": "USES",
+      "target": "short random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "source_alias": "",
+      "type": "USES",
+      "target": "center-context pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "center-context pairs",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "skip-gram loss",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic gradient descent",
+      "source_alias": "",
+      "type": "USES",
+      "target": "mini-batch",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "backpropagation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "chain rule",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "gradient",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "gradient",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "DOES_NOT_USE",
+      "target": "graph structure",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram prediction loss",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

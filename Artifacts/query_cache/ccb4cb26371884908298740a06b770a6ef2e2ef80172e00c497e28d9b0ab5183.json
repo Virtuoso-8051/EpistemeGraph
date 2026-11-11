@@ -1,0 +1,123 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "spectral clustering (SC)",
+    "node2vec parameter (NP)",
+    "word cooccurrence network (WCN)",
+    "Node Classification (NC)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "DOES_NOT_USE",
+      "target": "spectral clustering (SC)",
+      "target_alias": "SC",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "second-order biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "return (p) and in-out (q) parameters",
+      "type": "CONTROLS",
+      "target": "second-order biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order biased random walks",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram model with negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model with negative sampling",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "word2vec objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EVALUATED_ON",
+      "target": "Wikipedia dataset",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia dataset",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "word cooccurrence network (WCN)",
+      "target_alias": "word co-occurrence network",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word cooccurrence network (WCN)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "part-of-speech tags",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia dataset",
+      "source_alias": "",
+      "type": "USES",
+      "target": "part-of-speech tags",
+      "target_alias": "labels",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EVALUATED_ON",
+      "target": "Node Classification (NC)",
+      "target_alias": "multi-label node classification",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmaps",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "spectral methods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix factorization",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "spectral methods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmaps",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node2vec paper related-work baselines",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

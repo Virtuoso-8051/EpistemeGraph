@@ -1,0 +1,90 @@
+{
+  "query_entities": [
+    "LINE",
+    "DEEPWALK",
+    "EDGE",
+    "RANDOM WALK"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DEEPWALK",
+      "target_alias": "DeepWalk",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Multi-label node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Edge sampling",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Alias table",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Alias table",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "O(1) cost per SGD step",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Edge sampling",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "Weighted edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "Many samples",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "Edge sampling hurts efficiency relative to DeepWalk",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

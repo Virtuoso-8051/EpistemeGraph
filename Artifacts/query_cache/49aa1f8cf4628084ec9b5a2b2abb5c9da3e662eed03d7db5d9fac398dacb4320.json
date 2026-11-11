@@ -1,0 +1,153 @@
+{
+  "query_entities": [
+    "embedding",
+    "DeepWalk",
+    "Skip-gram"
+  ],
+  "triples": [
+    {
+      "source": "embedding",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "real-world information networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "very large",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparse",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "noisy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "heterogeneous",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "preserving useful structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "computational feasibility",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "robustness to incomplete or irregular connectivity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "smaller networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "simpler structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "smaller networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "easier to inspect and model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "smaller networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "exhaustive or near-exhaustive methods are more practical",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "short, biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short, biased random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "staying within local neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "sequences of nodes analogous to a sentence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "co-occurrence in these sequences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "higher-order proximity and community/role information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "more than just topology",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

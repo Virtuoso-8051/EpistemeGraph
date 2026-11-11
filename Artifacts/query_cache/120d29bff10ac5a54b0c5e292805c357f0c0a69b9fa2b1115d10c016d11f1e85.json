@@ -1,0 +1,6 @@
+{
+  "answer": "The likely explanation is that DeepWalk's random walks capture higher-order proximity. Skip-gram over walk windows models co-occurrence within several hops, so it sees the broader context structure that word analogies depend on. LINE(2nd) models only direct, one-hop neighbourhoods through edge-level context prediction, so it captures less of this structure. I could not verify the specific source comparison, so this reasoning is inferred from the methods rather than taken from a reported result.",
+  "confidence": 0.35,
+  "confidence_reasoning": "The mechanistic explanation is plausible and consistent with how the two methods are defined, but I could not confirm the specific Wikipedia word-analogy result or the paper's stated reason.",
+  "_token_nll": null
+}

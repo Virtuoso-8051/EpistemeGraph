@@ -1,0 +1,9 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The claim that Passage A is not included in the message is contradicted by the evidence, which contains the Passage A text (DOC_001 introduction) on scalability and the objective-function/optimization design."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The DeepWalk streaming claims (walks fed directly to the learner, decaying learning rate replaced by a small constant) are supported by DOC_003, and the Perozzi et al. 2014 attribution is correct background. However, the answer wrongly says Passage A is missing and so omits the scalability answer that DOC_001 provides."
+}

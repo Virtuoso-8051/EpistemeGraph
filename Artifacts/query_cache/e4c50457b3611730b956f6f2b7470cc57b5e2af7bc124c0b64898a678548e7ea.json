@@ -1,0 +1,6 @@
+{
+  "answer": "The LINE paper does not give a specific numeric memory figure for this. Unfolding an edge of weight w into w binary edges replaces one stored edge with w stored edges, so the edge storage grows from |E| to the sum of all edge weights, sum_e w_e. The extra storage is sum_e (w_e - 1) edges, and the blow-up factor is the average edge weight, sum_e w_e / |E|. With the alias-table method (Walker's alias method), edge sampling needs only one table entry per edge, about O(|E|) space, plus the original edge list, regardless of weight magnitudes. So on a graph with the same weights, the unfolding approach needs roughly (average weight) times as many edge entries as the alias table, which is a factor of 1 for unit weights and grows linearly with the average weight otherwise.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The general reasoning (edge count becomes the sum of weights, versus O(|E|) for alias tables) is sound, but I cannot recall the paper giving an exact numeric example, so the specific framing of the 'exact increase' may not match the source.",
+  "_token_nll": null
+}

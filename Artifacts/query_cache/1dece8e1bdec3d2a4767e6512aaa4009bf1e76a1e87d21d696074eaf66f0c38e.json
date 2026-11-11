@@ -1,0 +1,57 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "Skip-gram model",
+    "word2vec"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "CONTEXT",
+      "target_alias": "vertices that appear within a fixed-size window around a vertex in random-walk sequences",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "Skip-gram model",
+      "target_alias": "analogous objective of maximizing the probability of observing context vertices given the target vertex",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "word2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "training problem",
+      "target_alias": "removing the ordering constraint makes the training problem much simpler",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "bag-of-contexts formulation",
+      "target_alias": "unordered set or multiset of co-occurring vertices",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "bag-of-contexts formulation",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "optimization",
+      "target_alias": "makes optimization easier",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What is the overall time complexity of LINE, and how does it scale with the number of edges and vertices?",
+      "gold_answer": "LINE has overall time complexity O(dK|E|). It is linear in the number of edges |E| and does not depend on the number of vertices |V|.",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does the passage say that edge sampling is useful for LINE\u2019s training procedure?",
+      "gold_answer": "Edge sampling improves the effectiveness of stochastic gradient descent. The passage also says this is done without compromising efficiency.",
+      "evidence_quote": "The edge sampling treatment improves the effectiveness of the stochastic gradient descent without compromising the efficiency.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE suggest handling low-degree vertices, and which additional neighbors are considered in the described approach?",
+      "gold_answer": "For low-degree vertices, LINE suggests expanding their neighborhoods to make representation learning easier. In this paper, the authors only consider adding second-order neighbors, meaning neighbors of neighbors, and they may keep only the subset with the largest proximity values.",
+      "evidence_quote": "In this paper, we only consider adding second-order neighbors, i.e., neighbors of neighbors, to each vertex.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what conditions can LINE obtain an embedding for a newly arrived vertex, and what is the recommended optimization objective?",
+      "gold_answer": "If the new vertex\u2019s connections to existing vertices are known, LINE can compute empirical distributions over existing vertices and then optimize the embedding of the new vertex while keeping existing embeddings fixed. The objective can be either the first-order form or the second-order form, minimizing the corresponding weighted negative log-likelihood over the new vertex\u2019s neighbors.",
+      "evidence_quote": "For a new vertex i, if its connections to the existing vertices are known, we can obtain the empirical distribution \u02c6p1(\u00b7,v i) and \u02c6p2(\u00b7|vi) over existing vertices.",
+      "difficulty": "hard"
+    }
+  ]
+}

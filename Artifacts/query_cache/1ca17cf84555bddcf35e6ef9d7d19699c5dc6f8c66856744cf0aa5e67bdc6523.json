@@ -1,0 +1,55 @@
+{
+  "query_entities": [
+    "DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "uniform random walk",
+      "target_alias": "URW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "graph adjacency",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "edge weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper1\u2019s information network definition",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "edge weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weights",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "strength or frequency of a relationship",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "weighted transitions",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

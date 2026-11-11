@@ -1,0 +1,67 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "Link Prediction (LP)",
+    "graph connectivity (GC)",
+    "fraction of missing edge (FME)",
+    "reconstructed network (RN)"
+  ],
+  "triples": [
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "LP",
+      "type": "USES",
+      "target": "fraction of missing edge (FME)",
+      "target_alias": "FME",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "fraction of missing edge (FME)",
+      "source_alias": "FME",
+      "type": "DEFINED_AS",
+      "target": "50% of network edges removed to form positive test examples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "reconstructed network (RN)",
+      "source_alias": "RN",
+      "type": "PRESERVE",
+      "target": "graph connectivity (GC)",
+      "target_alias": "GC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Link Prediction (LP)",
+      "target_alias": "LP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "LP",
+      "type": "USES",
+      "target": "randomly sampled node pairs with no edge as negative examples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "LP",
+      "type": "REQUIRES",
+      "target": "graph connectivity (GC)",
+      "target_alias": "GC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph connectivity (GC)",
+      "source_alias": "GC",
+      "type": "PRESERVE",
+      "target": "residual network",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

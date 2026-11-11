@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How did the authors construct the co-author network used for visualization, and what were the final network size and edge count after filtering authors with low degree?",
+      "gold_answer": "The co-author network was built from papers published in six conferences spanning three fields: WWW and KDD for data mining, NIPS and ICML for machine learning, and CVPR and ICCV for computer vision. After filtering out authors with degree less than 3, the final network contained 18,561 authors and 207,074 edges.",
+      "evidence_quote": "The co-author network is built from the papers published in these conferences.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why is laying out the co-author network described as very challenging, and which embedding approach produced the most meaningful layout according to the comparison?",
+      "gold_answer": "It is challenging because the three research fields are very close to each other, making the communities hard to separate visually. Among the compared methods, LINE(2nd) performed quite well and produced a meaningful layout where nodes with the same colors were distributed closer together.",
+      "evidence_quote": "Laying out this co-author network is very challenging as the three research fields are very close to each other.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What limitation of DeepWalk is reported in the visualization of the co-author network, especially for high-degree vertices?",
+      "gold_answer": "DeepWalk clusters many authors from different communities tightly into the center area, and most of these are high-degree vertices. The passage explains that this happens because DeepWalk\u2019s random-walk-based neighbor enrichment introduces a lot of noise, especially for vertices with higher degrees.",
+      "evidence_quote": "However, many authors belonging to different communities are clustered tightly into the center area, most of which are high degree vertices.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what condition does the passage say DeepWalk\u2019s randomness becomes especially noisy, and what comparison is made between graph factorization and DeepWalk in the visualization results?",
+      "gold_answer": "The noise from DeepWalk is especially problematic for vertices with higher degrees, because the random walk based approach brings in a lot of noise due to randomness. Compared with DeepWalk, graph factorization is described as not very meaningful because authors in the same communities are not clustered together, while DeepWalk is better but still has the center-clustering issue.",
+      "evidence_quote": "This is because DeepWalk uses a random walk based approach to enrich the neighbors of the vertices, which brings in a lot of noise due to the randomness, especially for vertices with higher degrees.",
+      "difficulty": "hard"
+    }
+  ]
+}

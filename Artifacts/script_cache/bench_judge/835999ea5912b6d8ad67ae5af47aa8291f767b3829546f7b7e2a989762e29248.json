@@ -1,0 +1,9 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "DeepWalk's training was done using multiple worker threads on a single multi-core machine, which the evidence does not state."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says the papers do not give a machine count or core configuration, and it correctly notes that DeepWalk uses a parallel implementation and evaluates on YouTube. However, it adds a specific claim about multiple worker threads on a single multi-core machine, which the evidence does not contain and which is an invented hardware detail."
+}

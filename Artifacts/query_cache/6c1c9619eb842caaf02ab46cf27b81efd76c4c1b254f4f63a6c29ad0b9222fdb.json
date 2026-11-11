@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "node2vec parameter (NP)",
+    "BlogCatalog network (BN)",
+    "NODE2VEC",
+    "node representation (NR)",
+    "classification performance (CP)"
+  ],
+  "triples": [
+    {
+      "source": "classification performance (CP)",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "embedding dimensionality",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding dimensionality",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "diminishing returns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding dimensionality",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "saturation at roughly 100 dimensions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "saturation at roughly 100 dimensions",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "BlogCatalog network (BN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "saturation at roughly 100 dimensions",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "100 to 128 dimensions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adding dimensions beyond saturation",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "little further improvement",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

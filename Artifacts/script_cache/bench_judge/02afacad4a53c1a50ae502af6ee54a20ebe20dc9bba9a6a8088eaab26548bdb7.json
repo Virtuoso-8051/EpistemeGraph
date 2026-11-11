@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "LINE's scalability breaks down on a typical single machine because of memory footprint, with embedding matrices and graph structures exceeding RAM",
+    "Training runtime becomes prohibitive on one machine for large graphs, needing billions of samples",
+    "The alias table memory strains a single machine for graphs with hundreds of millions of edges",
+    "In short, LINE fails to scale on a typical single machine when the graph has millions of nodes and many edges, the dimension is large, and RAM and time are limited"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise and invents failure conditions for LINE, while the paper states LINE learns embeddings for millions of vertices and billions of edges in a few hours on a typical single machine. It never corrects the premise."
+}

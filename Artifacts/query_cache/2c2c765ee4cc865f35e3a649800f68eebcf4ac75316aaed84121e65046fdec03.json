@@ -1,0 +1,86 @@
+{
+  "query_entities": [
+    "second-order proximity",
+    "network embedding (NE)",
+    "LINE",
+    "first-order proximity (FOP)",
+    "second-order neighbor (SON)",
+    "network neighborhood (NN)",
+    "network structure (NS)",
+    "graph structure (GS)"
+  ],
+  "triples": [
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "neighborhood structure of vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "network embedding (NE)",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "network structure (NS)",
+      "target_alias": "NS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "similarity of neighborhood network structures between vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "KL divergence between conditional neighbor distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "conditional probability p2(v_j|v_i) = w_ij / sum_k w_ik",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "shared neighbors between vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "network neighborhood (NN)",
+      "target_alias": "NN",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

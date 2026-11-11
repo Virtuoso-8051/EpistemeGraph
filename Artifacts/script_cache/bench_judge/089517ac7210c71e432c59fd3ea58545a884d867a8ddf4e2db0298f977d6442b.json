@@ -1,0 +1,11 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "LINE learns embeddings from network structure alone, without node attributes, labels, or domain semantics, and is 'purely topology-driven'",
+    "Second-order proximity is implemented via a context-vector objective",
+    "LINE uses negative sampling in its optimization"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer is supported: the evidence states LINE suits arbitrary undirected, directed, and weighted networks, scales to large graphs, and preserves first- and second-order proximity, and the three datasets are described as social, biological, and word co-occurrence graphs. However, the answer adds implementation details (negative sampling, context-vector objective) and a 'topology-only' characterization that the provided evidence does not contain."
+}

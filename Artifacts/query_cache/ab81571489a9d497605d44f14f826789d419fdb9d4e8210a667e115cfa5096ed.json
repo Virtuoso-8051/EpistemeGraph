@@ -1,0 +1,102 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "Wikipedia data (WD)",
+    "word cooccurrence network (WCN)",
+    "Stanford POS-Tagger",
+    "network embedding (NE)",
+    "biased random walks",
+    "one-vs-rest logistic regression"
+  ],
+  "triples": [
+    {
+      "source": "Wikipedia data (WD)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "word cooccurrence network (WCN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia data (WD)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "word cooccurrence network built from the first million bytes of English Wikipedia",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word cooccurrence network (WCN)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "Node Classification (NC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Labels of Node (LN)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "part-of-speech (POS) tags",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Stanford POS-Tagger",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "Labels of Node (LN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "network embedding (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network embedding (NE)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "one-vs-rest logistic regression",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word cooccurrence network (WCN)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "low average degree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word cooccurrence network (WCN)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparse cooccurrence edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sparse cooccurrence edges",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "words appearing within the context window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

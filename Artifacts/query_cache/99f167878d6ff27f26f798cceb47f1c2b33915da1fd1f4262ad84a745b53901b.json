@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk learns node representations in an unsupervised way: it treats truncated random walks over the graph as sentences and applies the Skip-gram language model (word2vec-style) to learn embeddings that maximize the likelihood of a node's neighborhood context. Because the objective depends only on the graph structure and not on any particular label set, the resulting latent vectors capture general structural information (community and neighborhood similarity) and are task-agnostic, so the same embeddings can be reused across multiple downstream tasks (for example, multi-label node classification on different labels) without retraining. For classification, simple linear classifiers such as one-vs-rest logistic regression trained on these dense embeddings can achieve strong performance, since the representations already encode the relevant structural regularities, making the classifier itself lightweight.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The core idea (unsupervised Skip-gram on random walks yields task-independent embeddings usable with linear classifiers like one-vs-rest logistic regression) matches the DeepWalk paper, but the exact phrasing the question expects (e.g., 'sparse linear classifier') and details are uncertain.",
+  "_token_nll": null
+}

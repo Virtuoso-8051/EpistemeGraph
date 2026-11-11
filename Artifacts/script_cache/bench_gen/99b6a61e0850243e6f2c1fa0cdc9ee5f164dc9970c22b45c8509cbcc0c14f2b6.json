@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What exact embedding dimension did LINE use in its experiments on large-scale networks?",
+      "why_unanswerable": "The passage explains LINE conceptually and compares it to graph factorization and DeepWalk, but it does not report any experimental embedding dimensionality.",
+      "evidence_quote": "Instead, the LINE model uses an objective that is particularly designed for networks, which preserves both the first-order and the second-order proximities.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many nodes and edges were in the largest graph evaluated with DeepWalk in the experiments described by this passage?",
+      "why_unanswerable": "The passage mentions DeepWalk as a related method and describes its random-walk strategy, but it gives no dataset sizes or graph statistics for any experiments.",
+      "evidence_quote": "The most recent work related with ours is DeepWalk [16], which deploys a truncated random walk for social network embedding.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which hardware configuration did the authors train LINE, including the CPU model, RAM size, and number of cores?",
+      "why_unanswerable": "The passage discusses LINE's objective and applicability, but it contains no implementation or hardware details for training.",
+      "evidence_quote": "Instead, the LINE model uses an objective that is particularly designed for networks, which preserves both the first-order and the second-order proximities.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What ablation result did LINE report when removing the second-order proximity term from its objective, and how did that change performance compared with the full model?",
+      "why_unanswerable": "The passage states that LINE preserves first-order and second-order proximities, but it does not describe any ablation study or quantify the effect of removing either term.",
+      "evidence_quote": "Instead, the LINE model uses an objective that is particularly designed for networks, which preserves both the first-order and the second-order proximities.",
+      "difficulty": "medium"
+    }
+  ]
+}

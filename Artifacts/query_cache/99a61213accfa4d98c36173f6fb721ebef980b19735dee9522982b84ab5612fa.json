@@ -1,0 +1,100 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding (1ST)",
+    "Node Classification (NC)",
+    "citation network (CN)",
+    "network structure (NS)",
+    "local and global network structure (LGNS)",
+    "network embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PRESERVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "local and global network structure (LGNS)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "IS_A",
+      "target": "network embedding (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "unsupervised",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification (NC)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "logistic regression",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "EVALUATED_ON",
+      "target": "citation network (CN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "REFUTED_BY_ANSWER",
+      "target": "local structure focus",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "ACHIEVES",
+      "target": "scalability to large networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph neural network (GCN)",
+      "source_alias": "GCN",
+      "type": "USES",
+      "target": "neighborhood aggregation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "OUTPERFORMS",
+      "target": "graph neural network (GCN)",
+      "target_alias": "GCN",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

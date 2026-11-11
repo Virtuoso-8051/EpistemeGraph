@@ -1,0 +1,6 @@
+{
+  "answer": "Node2vec's link prediction setup removes 50% of the network's edges to form the positive test examples. The edges are removed so that the residual network stays connected. The paper does not spell out a specific procedure, but this is the stated constraint. Equal numbers of randomly sampled node pairs with no edge between them serve as negative examples.",
+  "confidence": 0.8,
+  "confidence_reasoning": "I recall the 50% figure and the explicit 'residual network remains connected' wording from the node2vec paper, but I am less sure of the exact mechanism used to ensure connectivity, which the paper does not detail.",
+  "_token_nll": null
+}

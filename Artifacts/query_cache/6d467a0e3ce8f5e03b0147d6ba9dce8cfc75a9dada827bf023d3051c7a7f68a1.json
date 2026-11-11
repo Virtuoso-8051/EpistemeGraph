@@ -1,0 +1,75 @@
+{
+  "query_entities": [
+    "Skip-gram model",
+    "graph cuts",
+    "homophily",
+    "word embeddings",
+    "network data"
+  ],
+  "triples": [
+    {
+      "source": "Skip-gram model",
+      "source_alias": "SGM",
+      "type": "USES",
+      "target": "graph cuts",
+      "target_alias": "GC",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "source_alias": "SGM",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "source_alias": "SGM",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model",
+      "source_alias": "SGM",
+      "type": "APPLIES_TO",
+      "target": "word embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community-based methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "graph partitioning",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

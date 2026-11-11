@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "word cooccurrence network (WCN)",
+    "edge-cutoff threshold",
+    "random walks",
+    "embedding quality"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-cutoff threshold",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "threshold sweep on word cooccurrence network (WCN)",
+      "source_alias": "WCN",
+      "type": "APPLIES_TO",
+      "target": "word cooccurrence network (WCN)",
+      "target_alias": "WCN",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "removing every edge",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding quality",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "chance-level performance",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "optimal threshold",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "retention of edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

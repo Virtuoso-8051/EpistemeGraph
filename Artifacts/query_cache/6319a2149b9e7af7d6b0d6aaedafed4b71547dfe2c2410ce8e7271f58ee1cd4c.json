@@ -1,0 +1,78 @@
+{
+  "query_entities": [
+    "Graph Embedding",
+    "multidimensional scaling",
+    "landmark-based MDS",
+    "landmark nodes",
+    "all-pairs distance matrix",
+    "triangulation",
+    "Nystr\u00f6m approximation",
+    "sparse distance matrix"
+  ],
+  "triples": [
+    {
+      "source": "Graph Embedding",
+      "source_alias": "GE",
+      "type": "USES",
+      "target": "multidimensional scaling",
+      "target_alias": "MDS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "full MDS",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "all-pairs distance matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "landmark-based MDS",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "multidimensional scaling",
+      "target_alias": "MDS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "landmark-based MDS",
+      "source_alias": "",
+      "type": "USES",
+      "target": "landmark nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "landmark-based MDS",
+      "source_alias": "",
+      "type": "USES",
+      "target": "triangulation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "landmark-based MDS",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "linear scaling in number of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "MDS variants",
+      "source_alias": "",
+      "type": "USES",
+      "target": "sparse distance matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "MDS variants",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Nystr\u00f6m approximation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

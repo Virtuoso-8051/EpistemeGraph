@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The corpus would be needed only when graph embeddings must be learned by running an embedding method over a co-occurrence network built from Wikipedia text (implies the model's embeddings may be trained on Wikipedia text; the paper uses Wikipedia text only as an example of a power-law distribution)",
+    "If the model derives frequency predictions directly from the network structure, it would not need the Wikipedia corpus (accepts the premise that the model models English text frequencies from the network)"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer never corrects the false premise; it treats the model as potentially modeling English text frequencies and offers conditional scenarios in which Wikipedia is needed. The paper uses the 100,000 Wikipedia articles only to illustrate a similar power-law distribution, which the answer misses, though it does honestly say it could not verify paper3."
+}

@@ -1,0 +1,83 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "truncated random walk (TRW)",
+    "node embedding (NE)",
+    "Link Prediction (LP)",
+    "Low-dimensional Embedding (LDE)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling optimization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "truncated random walks",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "GENERATES",
+      "target": "node embedding (NE)",
+      "target_alias": "single node embedding",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "Link Prediction (LP)",
+      "target_alias": "link prediction",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Low-dimensional Embedding (LDE)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

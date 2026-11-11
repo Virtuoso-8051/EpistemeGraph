@@ -1,0 +1,67 @@
+{
+  "query_entities": [
+    "LINE",
+    "edge sampling",
+    "stochastic gradient descent",
+    "DeepWalk",
+    "random walk"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "stable learning rate",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "plain stochastic gradient descent on weighted edges",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "high variance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "sampling in proportion to edge weights",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge sampling",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "binary treatment of sampled edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "training pairs from co-occurrence within walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

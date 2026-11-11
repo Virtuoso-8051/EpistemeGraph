@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "SkipGram offers two approximations to the full softmax, hierarchical softmax and negative sampling. The evidence mentions only hierarchical softmax, not negative sampling.",
+    "Negative sampling turns the problem into binary logistic regression. This is not in the evidence.",
+    "DeepWalk does not use negative sampling. The evidence says DeepWalk uses hierarchical softmax but does not address negative sampling.",
+    "Logistic regression appears only in the negative-sampling variant. The evidence says binary classifiers at tree nodes are used within hierarchical softmax, so this is at least in tension with the source."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and correctly states that DeepWalk uses hierarchical softmax to approximate the softmax, reducing cost from O(|V|) to O(log|V|). However, it adds claims about negative sampling and about where logistic regression appears that the evidence does not contain, and the last one conflicts with the evidence's description of binary classifiers within hierarchical softmax."
+}

@@ -1,0 +1,100 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "second-order random walk",
+    "node2vec parameter",
+    "random walk",
+    "depth-first search",
+    "breadth-first search"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order random walk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "previous node t's neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "unnormalized transition weight \u03b1(t,x)\u00b7w(v,x)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "precomputed alias tables for every directed edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "precomputed alias tables for every directed edge",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "storage grows with the sum of squared degrees",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "first-order transition probability storage",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "interpolation between BFS-like and DFS-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter",
+      "source_alias": "p and q",
+      "type": "CONTAINS",
+      "target": "interpolation between BFS-like and DFS-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "some implementations",
+      "source_alias": "",
+      "type": "USES",
+      "target": "on-the-fly transition computation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "on-the-fly transition computation",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "previous node's adjacency",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "second-order random walk scheme eliminates neighborhood storage",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

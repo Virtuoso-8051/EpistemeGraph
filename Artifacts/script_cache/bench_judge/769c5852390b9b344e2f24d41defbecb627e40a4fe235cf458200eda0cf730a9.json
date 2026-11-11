@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The answer does not state the key correction: the paper attributes LINE's worse-than-expected performance to LINE's own inability to reuse samples, which random walk methods can do.",
+    "The answer attributes node2vec's BlogCatalog advantage to multi-hop context and says it 'should not be read as a sample-reuse effect', which partly conflicts with the paper's explanation that sample reuse by random walks contrasts with LINE."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer rejects the false premise and correctly says node2vec's random walks reuse samples. However, it misses that the paper attributes LINE's weak performance to its inability to reuse samples, and it dismisses sample reuse as an explanation. Some background details on LINE and node2vec are textbook knowledge, not from the evidence."
+}

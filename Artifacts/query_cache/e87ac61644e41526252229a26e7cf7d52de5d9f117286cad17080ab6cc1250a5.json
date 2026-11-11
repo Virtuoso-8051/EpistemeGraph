@@ -1,0 +1,101 @@
+{
+  "query_entities": [
+    "graph factorization",
+    "co-author network",
+    "low-dimensional embedding",
+    "network structure",
+    "co-authorship ties",
+    "research community",
+    "community structure"
+  ],
+  "triples": [
+    {
+      "source": "graph factorization",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "low-dimensional embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional embedding",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "network structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "authors connected to many of the same people",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "similar vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "authors directly linked through many co-authorship ties",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "similar vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "similar vectors",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "placed near each other in the visualization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "people from the same research community",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "collaborate with one another",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "people from the same research community",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "share many neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "",
+      "type": "PULLS",
+      "target": "authors from the same communities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "",
+      "type": "PUSHES_APART",
+      "target": "authors from different communities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "",
+      "type": "MAKES_APPEAR",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community structure",
+      "source_alias": "",
+      "type": "APPEARS_AS",
+      "target": "clear clusters in the plot",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

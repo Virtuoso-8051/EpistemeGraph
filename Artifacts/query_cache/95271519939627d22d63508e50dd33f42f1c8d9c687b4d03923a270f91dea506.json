@@ -1,0 +1,142 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "citation network (CN)",
+    "Cora",
+    "Citeseer",
+    "LINE",
+    "random-walk/skip-gram objective",
+    "higher-order neighborhood structure",
+    "community context",
+    "homophilous citation networks",
+    "first-order proximity",
+    "second-order proximity",
+    "node classification",
+    "multi-hop structural patterns",
+    "semi-supervised classification benchmark",
+    "label homophily",
+    "embeddings"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "random-walk/skip-gram objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk/skip-gram objective",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "higher-order neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk/skip-gram objective",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "community context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher-order neighborhood structure",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "useful for homophilous citation networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "homophilous citation networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "nearby nodes often share labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "method designed to preserve first-order proximity and second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "method designed to preserve first-order proximity and second-order proximity",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "more local, edge-centric objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "less effective at exploiting multi-hop structural patterns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "multi-hop structural patterns",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "all available connectivity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "all available connectivity",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "many informative contexts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised embeddings",
+      "source_alias": "",
+      "type": "ALIGNS_WITH",
+      "target": "semi-supervised classification benchmark",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "BENEFITS_FROM",
+      "target": "strong label homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "BENEFITS_FROM",
+      "target": "multi-hop context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embeddings",
+      "source_alias": "",
+      "type": "ARE",
+      "target": "particularly discriminative for the evaluation protocol",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

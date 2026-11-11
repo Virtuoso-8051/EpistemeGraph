@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In the node2vec parameter sensitivity study on the BlogCatalog network, what happens to performance as the representation dimension increases, and around what dimension does it saturate?",
+      "gold_answer": "Performance tends to saturate once the representation dimension reaches around 100. This means increasing the embedding size beyond roughly 100 yields little additional improvement in the reported macro-F1 score.",
+      "evidence_quote": "We observe that performance tends to saturate once the dimensions of the representations reaches around 100.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How do the number and length of walks per source affect node2vec performance on the BlogCatalog network, and what tradeoff is mentioned for the context size k?",
+      "gold_answer": "Increasing the number and length of walks per source improves performance, and both parameters have a relatively high impact on the method's performance. The context size k also improves performance, but it does so at the cost of increased optimization time, and the performance differences are not very large.",
+      "evidence_quote": "Similarly, we observe that increasing the number and length of walks per source improves performance,",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under the perturbation analysis for node2vec on the BlogCatalog network, how are the missing edges selected in the first imperfect-information scenario, and what constraint must still hold?",
+      "gold_answer": "The missing edges are chosen randomly from the full network. The selection is constrained so that the number of connected components in the network remains fixed.",
+      "evidence_quote": "The missing edges are chosen randomly, subject to the constraint that the number of connected components in the network remains fixed.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the perturbation study of node2vec on the BlogCatalog network examine in addition to missing edges, and what kind of structural uncertainty does this second scenario represent?",
+      "gold_answer": "It also studies performance as a function of the fraction of additional edges. This second scenario represents another imperfect-information case where the observed network structure is perturbed by extra edges rather than missing ones.",
+      "evidence_quote": "In the first scenario, we measure performace as a function of the fraction of missing edges (relative to the full network).",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "truncated random walk (TRW)",
+    "unweighted graph (UG)",
+    "weighted graph (WG)",
+    "uniform random walk (URW)",
+    "random walk (RW)",
+    "LINE",
+    "alias sampling",
+    "first-order proximity",
+    "second-order proximity",
+    "higher-order proximity",
+    "edge weights"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge weights",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "TRW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "truncated random walk (TRW)",
+      "source_alias": "TRW",
+      "type": "USES",
+      "target": "uniform random walk (URW)",
+      "target_alias": "URW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "unweighted graph (UG)",
+      "target_alias": "UG",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "alias sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "PRESERVES",
+      "target": "higher-order proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

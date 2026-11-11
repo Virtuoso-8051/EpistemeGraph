@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The most likely comparison is node2vec's performance drop as added random edges grow, relative to LINE's smaller drop, which implicitly accepts that LINE is more robust to additional edges.",
+    "Implies the source compares node2vec against LINE on BlogCatalog perturbation, which the evidence does not contain."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence contains only node2vec's perturbation analysis on BlogCatalog (missing and additional edges) and no comparison with LINE. The answer hedges, but its core guess that LINE shows a smaller drop accepts the false premise rather than stating that the passage does not make this comparison."
+}

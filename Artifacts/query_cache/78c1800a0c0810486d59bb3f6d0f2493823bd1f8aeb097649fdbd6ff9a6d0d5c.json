@@ -1,0 +1,6 @@
+{
+  "answer": "Node2vec does not use spectral clustering to build its embeddings for the Wikipedia network. Instead, it learns embeddings by simulating biased random walks over the graph and then training a skip-gram model on the resulting node sequences. The bias is controlled by two parameters: one that encourages breadth-first-like exploration and another that encourages depth-first-like exploration, letting the method capture either homophily or structural equivalence. If you are thinking of spectral methods, those are a different family of graph embedding techniques that use eigenvectors of graph matrices; node2vec is not one of them. For the Wikipedia network specifically, node2vec would treat pages as nodes, links as edges, generate many random walks from each node, and optimize embeddings so that nodes appearing in similar walk contexts have similar vectors.",
+  "confidence": 0.97,
+  "confidence_reasoning": "Node2vec is well known to use biased random walks plus skip-gram rather than spectral clustering, so the core factual claims are highly reliable.",
+  "_token_nll": 0.16221988734914294
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does LINE rely on random walks to capture second-order proximity, and how does that choice help it scale to millions of nodes?",
+      "false_premise": "LINE uses random walks to capture second-order proximity.",
+      "correction": "LINE does not use random walks; it optimizes an objective that preserves local and global network structures, including first-order and second-order proximity.",
+      "evidence_quote": "In this paper, we propose such a network embedding model called the \u201cLINE,\u201d which is able to scale to very large, arbitrary types of networks: undirected, directed and/or weighted.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does LINE preserve only first-order proximity while ignoring global network structure, and why is that sufficient for real-world graphs?",
+      "false_premise": "LINE preserves only first-order proximity and ignores global network structure.",
+      "correction": "LINE optimizes an objective which preserves both the local and global network structures.",
+      "evidence_quote": "The model optimizes an objective which preserves both the local and global network structures.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What makes LINE depend on observed links as the sole signal for global similarity, given that it treats second-order proximity as determined by edge weights?",
+      "false_premise": "LINE treats second-order proximity as determined by edge weights and uses observed links as the sole signal for global similarity.",
+      "correction": "LINE says second-order proximity is not determined through the observed tie strength but through the shared neighborhood structures of the vertices.",
+      "evidence_quote": "As a complement, we explore the second-order proximity between the vertices, which is not determined through the observed tie strength but through the shared neighborhood structures of the vertices.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does LINE work only for undirected, unweighted networks, unlike methods designed for directed graphs?",
+      "false_premise": "LINE works only for undirected, unweighted networks.",
+      "correction": "LINE is able to scale to very large, arbitrary types of networks, including undirected, directed and/or weighted networks.",
+      "evidence_quote": "In this paper, we propose such a network embedding model called the \u201cLINE,\u201d which is able to scale to very large, arbitrary types of networks: undirected, directed and/or weighted.",
+      "difficulty": "easy"
+    }
+  ]
+}

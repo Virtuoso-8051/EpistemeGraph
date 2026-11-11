@@ -1,0 +1,72 @@
+{
+  "query_entities": [
+    "node2vec",
+    "novel network"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "communities of nodes that are densely connected to each other",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "structural-role groupings of nodes that are not necessarily close in the graph but play similar roles or have similar connection patterns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "communities of nodes that are densely connected to each other",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "local proximity or homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes in the same group",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "directly linked or belong to the same neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "structural-role groupings of nodes that are not necessarily close in the graph but play similar roles or have similar connection patterns",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "structural equivalence or role similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "similar positions in the network even if they are far apart",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "one grouping",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "who is connected to whom",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "the other grouping",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "how nodes function in the network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "query_entities": [
+    "LINE",
+    "paper citation network",
+    "author citation network"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "paper citation network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "author citation network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "author citation network",
+      "source_alias": "",
+      "type": "RECORDS",
+      "target": "citation relationships between authors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "citation relationships between authors",
+      "source_alias": "",
+      "type": "INDICATES",
+      "target": "one author has cited another through their papers",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

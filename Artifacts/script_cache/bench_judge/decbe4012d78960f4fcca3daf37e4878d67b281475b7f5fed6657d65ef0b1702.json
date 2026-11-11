@@ -1,0 +1,10 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "With more labeled data, the advantage over baselines such as spectral clustering or modularity-based embeddings generally narrowed, because a supervised classifier can compensate for weaker embeddings (the evidence does not give this explanation or the narrowing detail).",
+    "Dense graphs were not the key condition either; DeepWalk's benefits tied to sparse labels (the evidence says nothing about graph density)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise: DeepWalk uses local information from truncated random walks and its gains are largest when labeled data is sparse, both of which match the evidence. It adds a few unsupported specifics, namely the causal explanation for the narrowing advantage and the remarks about graph density, so it is only partially supported."
+}

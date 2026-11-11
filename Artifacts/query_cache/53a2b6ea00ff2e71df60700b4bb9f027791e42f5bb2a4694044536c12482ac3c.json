@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is not supported by what I know. DeepWalk (Perozzi, Al-Rfou, and Skiena, 2014) evaluated on a YouTube social network among other datasets, but I am not aware of the paper specifying a cluster, machine count, or exact CPU-core configuration for building YouTube representations. The method was described as parallelizable, with training done in a word2vec/skip-gram style using multiple worker threads on a single multi-core machine. I cannot confirm an exact number of machines or cores, so the question's specific hardware details cannot be verified from my knowledge.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I am fairly confident the paper gives no clearly specified cluster configuration for YouTube, but I am unsure of the exact scalability-section details, such as whether it names a specific multi-core machine or thread count.",
+  "_token_nll": null
+}

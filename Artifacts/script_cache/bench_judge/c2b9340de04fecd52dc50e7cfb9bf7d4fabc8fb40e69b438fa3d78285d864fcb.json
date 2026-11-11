@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI answer does not identify the paper and instead guesses future directions (dynamic networks, attributed networks, signed/directed networks), none of which appear in the evidence as the authors' stated future work.",
+    "The claim that the paper's future work includes dynamic (time-evolving) networks is not in the evidence.",
+    "The claim that the future work includes attributed networks with node features is not in the evidence.",
+    "The claim that the paper is a generic network embedding paper whose future extensions are typically dynamic, attributed, or signed networks is an unsupported characterization of the source, which actually names higher-order proximity and heterogeneous networks."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence clearly states the authors plan to investigate higher-order proximity and heterogeneous information networks with multiple vertex types, but the AI answer fails to mention either and instead offers speculative directions (dynamic, attributed, signed) not attributed to the paper. Since the core of the answer is not grounded in the source, it is unsupported."
+}

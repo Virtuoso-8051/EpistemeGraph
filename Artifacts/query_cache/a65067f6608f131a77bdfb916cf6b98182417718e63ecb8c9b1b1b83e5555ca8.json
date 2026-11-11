@@ -1,0 +1,6 @@
+{
+  "answer": "LINE uses random walks because they generate short, biased samples of the network that reflect both immediate neighborhood relationships and longer-range co-occurrence patterns. By repeatedly walking through the graph, nodes that are directly connected are sampled together often, preserving local structure, while nodes that are not adjacent but appear frequently on the same walks can still be learned as related, preserving more global structure. This makes random walks a scalable way to capture multi-hop connectivity in large information networks without needing to process the entire graph at once.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a standard description of why walk-based sampling helps capture both first-order and higher-order proximity in network embedding methods, and it matches the intended use in LINE.",
+  "_token_nll": 0.3092477240530001
+}

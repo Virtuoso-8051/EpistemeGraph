@@ -1,0 +1,71 @@
+{
+  "query_entities": [
+    "DEEPWALK"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "low-dimensional vector embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "network proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes that co-occur in short random walks",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "similar vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "latent community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes in the same or nearby communities",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "close together in the embedding space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "tracking network changes over time",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "changes in the graph",
+      "source_alias": "",
+      "type": "ARE_REFLECTED_AS",
+      "target": "changes in the learned representations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned representations",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "summarizing evolving structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

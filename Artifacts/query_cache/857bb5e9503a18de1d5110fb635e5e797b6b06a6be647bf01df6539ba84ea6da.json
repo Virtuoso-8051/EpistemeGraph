@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "language modeling",
+    "network embedding",
+    "graph modeling",
+    "BERT",
+    "GPT"
+  ],
+  "triples": [
+    {
+      "source": "language modeling",
+      "source_alias": "LM",
+      "type": "ENABLES",
+      "target": "network embedding",
+      "target_alias": "NE",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "pretrained transformer encoders",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "network embedding",
+      "target_alias": "NE",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "BERT",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "pretrained transformer encoders",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GPT",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "pretrained transformer encoders",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BERT",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "text-attributed nodes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "pretrained transformer encoders",
+      "source_alias": "",
+      "type": "PROVIDES",
+      "target": "context-aware embeddings",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graph modeling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "language modeling",
+      "target_alias": "LM",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graph modeling",
+      "source_alias": "",
+      "type": "PROVIDES",
+      "target": "structural inductive biases",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "structural inductive biases",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "factual consistency",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "knowledge-graph information",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "entity-level understanding",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

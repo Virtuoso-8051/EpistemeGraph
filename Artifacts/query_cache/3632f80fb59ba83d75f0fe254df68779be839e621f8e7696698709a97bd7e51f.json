@@ -1,0 +1,6 @@
+{
+  "answer": "This matches LINE (Tang et al., 2015). The paper defines p_u as the first-order proximity vector of vertex u to all other vertices, and says second-order proximity is determined by the similarity between p_u and p_v. It does not give an explicit closed-form similarity between p_u and p_v. Instead it models each vertex's neighborhood as a context distribution: p2(v_j | v_i) = exp(u_j^T u_i) / \u03a3_k exp(u_k^T u_i), with u the context embeddings. It then minimizes the KL divergence between this conditional distribution and the empirical one, weighted by vertex degree. So the comparison is via a softmax over inner products with a KL-divergence objective, not a named similarity such as cosine. If the question presumes a specific named function like cosine, that presumption is not supported by the paper as I recall it.",
+  "confidence": 0.35,
+  "confidence_reasoning": "I am fairly sure LINE's second-order formulation is the softmax conditional with KL divergence and does not state an explicit p_u/p_v similarity, but the question's framing may refer to a different paper or intend a different function.",
+  "_token_nll": null
+}

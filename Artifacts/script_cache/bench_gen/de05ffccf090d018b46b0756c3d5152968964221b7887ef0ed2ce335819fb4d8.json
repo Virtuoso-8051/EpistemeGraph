@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What are the three main contributions of DeepWalk described in the passage, and what performance gains does it report on the sparsest multilabel classification problems?",
+      "gold_answer": "DeepWalk is presented as a deep learning tool for analyzing graphs, learning robust representations suitable for statistical modeling, and capturing structural regularities from short random walks. It is also shown to scale to web-scale graphs with a parallel implementation and to be adaptable to a streaming version with minimal changes. On the sparsest multilabel classification problems, it improves MicroF1 by about 5%\u201310%.",
+      "evidence_quote": "We show significantly increased classification performance in the presence of label sparsity, getting improvements 5%-10% of MicroF1, on the sparsest problems we consider.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does DeepWalk define the classification problem on a social network, and what role do the graph structure and labels play in that formulation?",
+      "gold_answer": "The task is to classify members of a social network into one or more categories. Formally, the network is represented as a graph G=(V,E), and a partially labeled version GL=(V,E,X,Y) includes attributes X and labels Y; DeepWalk uses the dependence among examples embedded in the graph structure to improve classification beyond a standard mapping from features to labels.",
+      "evidence_quote": "We consider the problem of classifying members of a social network into one or more categories.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does DeepWalk outperform its competitors, and by how much less training data can it still do so?",
+      "gold_answer": "DeepWalk can outperform competing methods even when the amount of training data is reduced substantially. The passage states that in some cases it still wins with 60% less training data, indicating robustness under low-label or low-data settings.",
+      "evidence_quote": "In some cases, DeepW alk\u2019s representations can outperform its competitors even when given 60% less training data.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does the passage say DeepWalk is suitable for statistical modeling of graphs, and what kind of graph regularities does it learn from?",
+      "gold_answer": "DeepWalk is described as producing robust graph representations that can be used for statistical modeling. It learns structural regularities that appear in short random walks, which is the mechanism highlighted for capturing graph structure.",
+      "evidence_quote": "DeepW alklearns structural regularities present within short random walks.",
+      "difficulty": "medium"
+    }
+  ]
+}

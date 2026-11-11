@@ -1,0 +1,84 @@
+{
+  "query_entities": [
+    "first-order proximity (FOP)",
+    "LINE(1st)",
+    "LINE(2nd)",
+    "LINE(1st+2nd)",
+    "edge-sampling algorithm (ESA)",
+    "asynchronous stochastic gradient algorithm (ASGA)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DOES_NOT_SWITCH",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "FOP",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "concatenated embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DOES_NOT_DEFINE",
+      "target": "switching condition",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "DOES_NOT_USE",
+      "target": "epochs",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "ESA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "asynchronous stochastic gradient algorithm (ASGA)",
+      "target_alias": "ASGA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "ESA",
+      "type": "USES",
+      "target": "asynchronous stochastic gradient algorithm (ASGA)",
+      "target_alias": "ASGA",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

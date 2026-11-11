@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk\u2019s use of SpectralClustering on the Flickr network let it outperform the baselines even when only 3% of the graph is labeled?",
+      "false_premise": "DeepWalk uses SpectralClustering on the Flickr network.",
+      "correction": "DeepWalk is compared against SpectralClustering as a baseline; it does not use SpectralClustering as part of its method.",
+      "evidence_quote": "Deep Walk outperforms all baselines by at least 3% with respect to Micro-F1.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does DeepWalk\u2019s performance on YouTube compare to SpectralClustering and Modularity, which are reported to run successfully on that larger graph?",
+      "false_premise": "SpectralClustering and Modularity run successfully on the YouTube graph.",
+      "correction": "On YouTube, SpectralClustering and Modularity cannot run because the graph is too large; only the scalable baseline EdgeCluster is compared there.",
+      "evidence_quote": "The YouTube network is considerably larger than the previous ones we have experimented on, and its size prevents two of our baseline methods (SpectralClustering and Modularity) from running on it.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What explains DeepWalk\u2019s weaker Macro-F1 than EdgeCluster on Flickr when the training ratio is only 3%, despite having more labeled data?",
+      "false_premise": "DeepWalk has weaker Macro-F1 than EdgeCluster on Flickr at 3% training ratio.",
+      "correction": "DeepWalk performs better than the baselines on Flickr, including in Macro-F1 where it starts close to SpectralClustering and then improves further.",
+      "evidence_quote": "Deep Walk outperforms all baselines by at least 3% with respect to Micro-F1.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does DeepWalk stop outperforming the baselines once the labeled fraction rises above 20%, especially on Macro-F1 and Micro-F1?",
+      "false_premise": "DeepWalk stops outperforming the baselines once labeled fraction rises above 20%.",
+      "correction": "DeepWalk remains strong with sparse labels and even outperforms baselines when only small fractions of the graph are labeled, including at low training ratios on both Macro-F1 and Micro-F1.",
+      "evidence_quote": "This strong performance when only small fractions of the graph are labeled is a core strength of our approach.",
+      "difficulty": "hard"
+    }
+  ]
+}

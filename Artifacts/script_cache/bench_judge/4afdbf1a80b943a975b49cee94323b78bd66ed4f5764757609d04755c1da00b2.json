@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The reported advantage over graph factorization comes from scalability and from preserving local and higher-order structures without factorizing the full matrix. The evidence attributes LINE(1st)'s advantage over graph factorization to better modeling of first-order proximity, not to scalability.",
+    "Second-order proximity is most useful when vertices have few direct links (sparse graphs). The evidence says the opposite: second-order proximity may become inaccurate when the network is too sparse and nodes have too few neighbors."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and accurately describes LINE's separate first- and second-order objectives and concatenation. However, it attributes LINE's advantage over graph factorization to scalability rather than first-order modeling, and it claims second-order proximity is most useful in sparse graphs, which conflicts with the paper's warning that second-order proximity degrades under sparsity."
+}

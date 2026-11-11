@@ -1,0 +1,6 @@
+{
+  "answer": "In node2vec, DFS-like behavior becomes useful when you want the random walk to explore farther from the starting node and capture more structural equivalence or role-based similarity rather than staying close in the local neighborhood. However, as the walk goes to greater depths, the main drawback is that it can drift too far from the source and lose local context, making the sampled neighborhood less relevant and potentially increasing noise.",
+  "confidence": 0.92,
+  "confidence_reasoning": "This matches the standard node2vec intuition about the DFS/BFS tradeoff and the loss of locality at larger walk depths.",
+  "_token_nll": 0.23582633336385092
+}

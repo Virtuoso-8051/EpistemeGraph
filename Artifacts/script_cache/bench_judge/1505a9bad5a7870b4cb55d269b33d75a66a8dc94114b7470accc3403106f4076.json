@@ -1,0 +1,10 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Qiu et al. (2018, NetMF) showed that DeepWalk implicitly factorizes a log-transformed, windowed random-walk co-occurrence matrix. This result is not in the provided evidence.",
+    "DeepWalk trains a skip-gram model with hierarchical softmax on walks treated as sentences. The evidence does not describe this training detail."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise: the evidence states DeepWalk is only applicable to binary-edge networks and uses truncated random walks to capture only second-order proximity, and Table 1 lists DBLP(PaperCitation) as directed and binary. However, it adds external claims about NetMF and skip-gram/hierarchical softmax that the provided evidence does not contain."
+}

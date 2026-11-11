@@ -1,0 +1,83 @@
+{
+  "query_entities": [
+    "relational classifier (RC)",
+    "relational classification (RC)",
+    "collective classification problem (CCP)",
+    "relational data (RD)",
+    "classification performance (CP)"
+  ],
+  "triples": [
+    {
+      "source": "relational classifier (RC)",
+      "source_alias": "RC",
+      "type": "USES",
+      "target": "network label distribution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network label distribution",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "label autocorrelation or homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature vector",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "aggregated neighbor-label features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "aggregated neighbor-label features",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "counts or proportions of each class among neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node attributes",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "intrinsic characteristics of a node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighbor label distribution",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "dependence between linked nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "combining attributes and neighbor label distribution",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "using attributes or neighbor labels alone",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "collective classification problem (CCP)",
+      "source_alias": "CCP",
+      "type": "USES",
+      "target": "iterative estimation of unknown neighbor labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational data (RD)",
+      "source_alias": "RD",
+      "type": "REQUIRES",
+      "target": "known neighbor labels from training data or earlier inference steps",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

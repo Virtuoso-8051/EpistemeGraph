@@ -1,0 +1,6 @@
+{
+  "answer": "Paper3 relies on global recomputation because the learned representation is not just a local function of the changed edges or nodes: a small graph edit can alter the distribution of random-walk contexts and the downstream embeddings for many nodes across the graph. In that setting, simply adding a few new short walks from the modified region would leave the model trained on stale context statistics and would not correctly propagate the effect of the change to distant but structurally affected nodes. Global recomputation is therefore used to keep the learned model consistent with the updated graph distribution and to avoid bias from an incomplete, locally sampled update. In short, the method treats the graph change as something that can have nonlocal effects on the learned embedding space, so it recomputes globally rather than trying to patch the model with only local new walks.",
+  "confidence": 0.62,
+  "confidence_reasoning": "This is a well-supported general explanation for why dynamic graph embedding methods often recompute globally, but I cannot verify the exact wording or assumptions of the specific paper3 without the paper itself.",
+  "_token_nll": 0.24259083226041975
+}

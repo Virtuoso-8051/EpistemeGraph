@@ -1,0 +1,6 @@
+{
+  "answer": "LINE\u2019s uniform random-walk exploration samples neighbors without bias toward edge weights or local structure, so it can wander across the graph and occasionally reach nodes in the same latent community even when those nodes are not immediately obvious from a single local neighborhood. This makes it capable of discovering homophilous communities because repeated random walks can expose co-occurrence patterns among similar nodes. The tradeoff is high variance: because the walk is uniform and not guided, the sampled context can differ a lot from run to run, so the learned neighborhoods and embeddings can be unstable and noisy, especially in sparse or irregular graphs.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This is a standard description of uniform random-walk sampling in graph embedding methods like LINE, though the exact phrasing of the tradeoff can vary by implementation and paper.",
+  "_token_nll": 0.26317099162510466
+}

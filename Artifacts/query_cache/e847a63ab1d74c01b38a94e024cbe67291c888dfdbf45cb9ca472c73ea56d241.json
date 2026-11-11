@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk tends to do better on the word analogy task because it learns embeddings from random walks that capture higher-order, multi-step co-occurrence patterns in the graph, which are more similar to the kind of relational regularities needed for analogies. LINE(2nd), by contrast, is designed mainly to preserve second-order proximity, i.e., local neighborhood similarity, and it does not model the same broader context structure as effectively. On Wikipedia, where the graph is large and sparse, DeepWalk\u2019s skip-gram-on-walks objective can exploit longer-range structural information and produce embeddings that are more transferable to analogy relations than LINE(2nd)\u2019s more local objective.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This explanation matches the standard interpretation of the two methods and their reported behavior on analogy benchmarks, though the exact performance gap can depend on preprocessing and hyperparameters.",
+  "_token_nll": 0.23647329542371961
+}

@@ -1,0 +1,61 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "Link Prediction (LP)",
+    "Common Neighbors",
+    "Jaccard's Coefficient",
+    "Adamic-Adar Score",
+    "Preferential Attachment",
+    "PPI"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EVALUATED_ON",
+      "target": "Link Prediction (LP)",
+      "target_alias": "LP",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EVALUATED_ON",
+      "target": "PPI",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "Spectral Clustering",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OUTPERFORMS",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EVALUATED_ON",
+      "target": "Common Neighbors",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Common Neighbors",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Jaccard's Coefficient",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

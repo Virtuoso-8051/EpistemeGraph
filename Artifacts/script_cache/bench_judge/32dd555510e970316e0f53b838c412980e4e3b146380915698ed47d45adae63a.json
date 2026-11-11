@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Skip-gram is equivalent to optimizing a classification (matrix factorization) loss over adjacency matrices when the negative-sampling approximation is replaced by the full softmax, with the full co-occurrence matrix as target.",
+    "The answer attributes to Qiu et al., 2018 an analysis of DeepWalk/skip-gram as matrix factorization of the random-walk co-occurrence matrix, which is not in the provided evidence.",
+    "The answer accepts the false premise that Skip-gram's core objective is a dense classification loss over adjacency matrices, rather than a neighborhood-preserving likelihood learned with negative sampling."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence states that Skip-gram optimizes a neighborhood-preserving likelihood objective using SGD with negative sampling, so the answer's premise that it is a classification loss over adjacency matrices is contradicted. The answer accepts the false premise and cites an external paper not present in the evidence, so its core is unsupported."
+}

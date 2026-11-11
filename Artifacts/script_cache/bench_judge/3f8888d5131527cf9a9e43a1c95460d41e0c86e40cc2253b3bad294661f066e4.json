@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The answer asserts a definitive count of three node classification datasets for node2vec in the KDD'16 study, which the passage does not report; the evidence only shows BlogCatalog, PPI, and Wikipedia appear in a multilabel classification table, not that these are the complete set.",
+    "The answer describes the Wikipedia network's labels as part-of-speech labels, which the evidence does not state."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The question is borderline and the passage does not give a definitive dataset count, yet the answer presents three named datasets as the complete answer rather than saying the papers do not clearly report it. The dataset names do appear in the evidence (BlogCatalog, PPI, Wikipedia) for node2vec's classification experiments, but the part-of-speech label detail is not supported."
+}

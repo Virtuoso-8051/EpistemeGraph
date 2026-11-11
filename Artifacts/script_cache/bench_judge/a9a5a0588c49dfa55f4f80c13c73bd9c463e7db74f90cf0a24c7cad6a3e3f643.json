@@ -1,0 +1,9 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "node2vec's advantage on Facebook depends on tuning (p, q) via grid search with cross-validation on a small labeled sample; the evidence does not describe this as a condition for outperforming."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The Hadamard-on-Facebook comparison is correct per the table (node2vec 0.7543 vs DeepWalk 0.6923 and LINE 0.6330), and the evidence says Hadamard with node2vec gives the best average performance. The specific claim about tuning (p, q) by grid search with cross-validation is not in the evidence, though the answer does hedge on the exact numbers and conditions."
+}

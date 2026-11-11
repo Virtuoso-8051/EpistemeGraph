@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec use DFS-only sampling to reduce the effective sampling rate when generating neighborhoods from a random walk of length l>k?",
+      "false_premise": "node2vec uses DFS-only sampling to reduce the effective sampling rate.",
+      "correction": "node2vec uses random walks, and sample reuse across different source nodes increases the effective sampling rate.",
+      "evidence_quote": "By simulating a random walk of lengthl>k we can generatek samples forl\u2212k nodes at once due to the MarkoOperator Symbol Definition Average \u229e [f (u) \u229ef (v)]i = fi(u)+fi(v)2 Hadamard \u22a1 [f (u) \u22a1f (v)]i =fi(u)\u2217fi(v) Weighted-L1 \u2016\u00b7\u2016 \u03041 \u2016f (u)\u00b7f (v)\u2016 \u03041i =|fi(u)\u2212fi(v)| Weighted-L2 \u2016\u00b7\u2016 \u03042 \u2016f (u)\u00b7f (v)\u2016 \u03042i =|fi(u)\u2212fi(v)|2 Table 1: Choice of binary operators \u25e6 for learning edge features.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does node2vec's second-order random walk scheme eliminate the need to store any neighborhood information beyond immediate neighbors?",
+      "false_premise": "node2vec's second-order random walk scheme eliminates the need to store neighborhood information beyond immediate neighbors.",
+      "correction": "For second-order random walks, node2vec stores interconnections between neighbors of each node, which adds O(a^2|V|) space complexity.",
+      "evidence_quote": "For 2 nd order random walks, it is helpful to store the interconnections between the neighbors of every node, which incurs a space complexity of O(a2|V|) wherea is the average degree of the graph and is usually small for realworld networks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What makes node2vec's pure BFS/DFS sampling strategy more time-efficient than random walks on large graphs?",
+      "false_premise": "node2vec's pure BFS/DFS sampling strategy is more time-efficient than random walks on large graphs.",
+      "correction": "The passage says random walks are more time-efficient than classic search-based sampling strategies such as pure BFS/DFS.",
+      "evidence_quote": "The other key advantage of random walks over classic search-based sampling strategies is its time complexity.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does node2vec avoid any bias from sample reuse while still improving efficiency?",
+      "false_premise": "node2vec avoids any bias from sample reuse while still improving efficiency.",
+      "correction": "The passage states that sample reuse can introduce bias, even though it greatly improves efficiency.",
+      "evidence_quote": "Note that sample reuse can introduce some bias in the overall procedure.",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "LINE-SGD (1ST)",
+    "Skip-gram objective (SGO)",
+    "BlogCatalog network (BN)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog network (BN)",
+      "target_alias": "BN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Cora",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Citeseer",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE-SGD (1ST)",
+      "target_alias": "LINE",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram objective (SGO)",
+      "target_alias": "skip-gram",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "higher-order neighborhood structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "first- and second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk avoid random walks and instead rely on deterministic neighborhood aggregation to produce such a clean layout of the co-author network?",
+      "false_premise": "DeepWalk avoids random walks and uses deterministic neighborhood aggregation.",
+      "correction": "DeepWalk is a random walk based method, and the passage says its layout is worse because the randomness brings in noise, especially for high-degree vertices.",
+      "evidence_quote": "This is because DeepWalk uses a random walk based approach to enrich the neighbors of the vertices, which brings in a lot of noise due to the randomness, especially for vertices with higher degrees.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE(2nd) fail to generate a meaningful layout of the co-author network, with authors from the same communities scattered apart?",
+      "false_premise": "LINE(2nd) fails to generate a meaningful layout and scatters same-community authors apart.",
+      "correction": "The passage says LINE(2nd) performs quite well and generates a meaningful layout, with nodes of the same colors distributed closer.",
+      "evidence_quote": "The LINE(2nd) performs quite well and generates meaningful layout of the network (nodes with same colors are distributed closer).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes graph factorization cluster authors from the same communities together so effectively in the visualization of the co-author network?",
+      "false_premise": "Graph factorization clusters authors from the same communities together effectively.",
+      "correction": "The passage says graph factorization is not very meaningful because authors belonging to the same communities are not clustered together.",
+      "evidence_quote": "The visualization using graph factorization is not very meaningful, in which the authors belonging to the same communities are not clustered together.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does the co-author network include only the WWW and KDD conferences, and how many authors remain after filtering vertices with degree less than 3?",
+      "false_premise": "The co-author network includes only WWW and KDD conferences.",
+      "correction": "The passage says the network is built from conferences in three research fields: WWW and KDD, NIPS and ICML, and CVPR and ICCV, and after filtering degree less than 3 it contains 18,561 authors.",
+      "evidence_quote": "We select some conferences from three different research fields: WWW, KDD from\u201cdata mining,\u201d NIPS, ICML from \u201cmachine learning,\u201d and CVPR, ICCV from \u201ccomputer vision.\u201d",
+      "difficulty": "hard"
+    }
+  ]
+}

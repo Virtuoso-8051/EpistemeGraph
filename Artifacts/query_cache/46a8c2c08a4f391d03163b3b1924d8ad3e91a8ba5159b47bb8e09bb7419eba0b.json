@@ -1,0 +1,67 @@
+{
+  "query_entities": [
+    "language model (LM)",
+    "graph",
+    "corpus",
+    "observable graph",
+    "unobserved latent graph"
+  ],
+  "triples": [
+    {
+      "source": "language model (LM)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "training data",
+      "target_alias": "explicit graph built from observed text units and their co-occurrences or transitions",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph",
+      "source_alias": "the graph",
+      "type": "IS_A",
+      "target": "fully observed",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph",
+      "source_alias": "the graph",
+      "type": "DEFINED_AS",
+      "target": "deterministic representation",
+      "target_alias": "of observed samples",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "text",
+      "source_alias": "the text itself",
+      "type": "PROVIDES",
+      "target": "observable samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language model (LM)",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "paths over a graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph",
+      "source_alias": "the graph",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "directly available structure",
+      "target_alias": "from the data",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "observable graph",
+      "source_alias": "",
+      "type": "CONTRASTS_WITH",
+      "target": "unobserved latent graph",
+      "target_alias": "that must be estimated",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk trains a skip-gram model on random walks over a graph, and the same node embeddings are shared across many training examples. In multi-worker training, a lock on the shared parameter matrix ensures that when one worker updates an embedding vector, no other worker writes to that same shared memory at the same time. This prevents race conditions and lost updates, so even if a node appears only occasionally in a worker\u2019s mini-batches, its embedding updates are still applied consistently to the single shared model rather than being overwritten or skipped. In that sense, the lock helps mitigate the sparse-update problem by making sparse, asynchronous updates safe and cumulative across workers.",
+  "confidence": 0.89,
+  "confidence_reasoning": "This is a well-established description of shared-parameter training with locking in DeepWalk-like implementations, though exact implementation details can vary by codebase.",
+  "_token_nll": 0.2295854160551391
+}

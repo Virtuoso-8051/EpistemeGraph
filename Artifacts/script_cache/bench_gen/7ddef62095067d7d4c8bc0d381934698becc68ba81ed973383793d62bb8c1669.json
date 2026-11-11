@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec use the Les Mis\u00e9rables network to evaluate link prediction on a graph with 77 nodes and 254 edges, and what makes that dataset ideal for testing true and false edges?",
+      "false_premise": "node2vec evaluates link prediction on the Les Mis\u00e9rables network, which is used as a dataset for true and false edges.",
+      "correction": "node2vec uses the Les Mis\u00e9rables network as a case study for clustering and visualization of learned embeddings, not as a link prediction benchmark.",
+      "evidence_quote": "We use a network where nodes correspond to characters in the novel Les Mis\u00e9rables [13] and edges connect coappearing characters.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec's binary operator over node feature vectors rely on an edge existing between the two nodes before it can form g(u,v)?",
+      "false_premise": "node2vec requires an edge to exist between the two nodes before constructing the pair representation.",
+      "correction": "node2vec explicitly defines operators for any pair of nodes, even when no edge exists between them, because this is useful for link prediction.",
+      "evidence_quote": "We want our operators to be generally defined for any pair of nodes, even if an edge does not exist between the pair since doing so makes the representations useful for link prediction where our test set contains both true and false edges (i.e., do not exist).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What objective does node2vec optimize in Eq. 2 to directly improve community detection accuracy on the downstream task?",
+      "false_premise": "The objective in Eq. 2 is designed to directly optimize a downstream community detection task.",
+      "correction": "The objective in Eq. 2 is independent of any downstream task.",
+      "evidence_quote": "The objective in Eq. 2 is independent of any downstream task and the flexibility in exploration offered by node2vec lends the learned feature representations to a wide variety of network analysis settings discussed below.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does node2vec's Figure 3(top) result show that p = 1 and q = 0.5 produce embeddings that capture structural equivalence rather than homophily?",
+      "false_premise": "Figure 3(top) demonstrates that p = 1 and q = 0.5 produce embeddings capturing structural equivalence rather than homophily.",
+      "correction": "Figure 3(top) is presented to show that node2vec can discover embeddings that obey both homophily and structural equivalence, and the captioned observation specifically notes same-colored network communities.",
+      "evidence_quote": "We now aim to empirically demonstrate this fact and show that node2vec in fact can discover embeddings that obey both principles.",
+      "difficulty": "hard"
+    }
+  ]
+}

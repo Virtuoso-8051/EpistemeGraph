@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk learns vertex embeddings by first doing unsupervised random-walk-based representation learning, then using a supervised objective for node classification that directly optimizes the embeddings to predict node labels. This helps because the learned vectors are not only good at preserving local graph co-occurrence structure, but are also adjusted to separate classes in the embedding space. Compared with many other deep learning methods that learn graph features indirectly or require more hand-engineered input, DeepWalk\u2019s supervised fine-tuning makes the latent embeddings more discriminative for classification and typically improves downstream node-label prediction performance.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a high-level summary of DeepWalk-style training and its effect on embeddings, but the exact comparison to specific other deep learning methods can vary by paper and setup.",
+  "_token_nll": 0.2520521412725034
+}

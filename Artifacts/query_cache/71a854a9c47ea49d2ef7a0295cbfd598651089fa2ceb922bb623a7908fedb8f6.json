@@ -1,0 +1,91 @@
+{
+  "query_entities": [
+    "LINE(1st+2nd)",
+    "language network (LN)",
+    "node embedding (NE)",
+    "unsupervised representation learning (URL)",
+    "embedding"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "node embedding (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "unsupervised representation learning (URL)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "language network (LN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relative weight of each dimension or view",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "unlabeled data",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "structural proxy such as held-out edge reconstruction or link prediction",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "tuning of combined embedding weights",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "labeled data",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

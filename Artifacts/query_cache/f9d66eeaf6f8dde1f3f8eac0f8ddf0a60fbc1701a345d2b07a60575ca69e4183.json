@@ -1,0 +1,77 @@
+{
+  "query_entities": [
+    "LINE",
+    "BlogCatalog",
+    "PPI",
+    "Wikipedia",
+    "first-order proximity",
+    "second-order proximity",
+    "network structure"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "relationships",
+      "target_alias": "directly or through similar neighborhood roles",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "social network",
+      "target_alias": "strong community structure",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "protein-protein interaction network",
+      "target_alias": "dense functional modules",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "hyperlink network",
+      "target_alias": "local link patterns and broader structural regularities",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "AIMS_TO_PRESERVE",
+      "target": "first-order proximity",
+      "target_alias": "direct edge/link strength between adjacent nodes",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "AIMS_TO_PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "similarity of nodes\u2019 neighborhood distributions or shared context",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "CORRESPONDS_TO",
+      "target": "local pairwise ties",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "CORRESPONDS_TO",
+      "target": "community/role-based structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

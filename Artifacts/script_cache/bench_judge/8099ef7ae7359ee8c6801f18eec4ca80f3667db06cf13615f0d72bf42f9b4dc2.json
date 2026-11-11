@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "DeepWalk uses hierarchical softmax as its default output layer.",
+    "DeepWalk builds a Huffman coding tree from vertex occurrence frequencies in the random-walk corpus, so the tree must be fixed before training.",
+    "Negative sampling draws from a unigram distribution and needs frequency counts for its sampling distribution, as stated in the answer's framing of DeepWalk."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence explicitly says knowing the vertex frequency distribution is beneficial but not necessary for DeepWalk to work, which the answer does not state; instead it describes a conditional requirement tied to hierarchical softmax. The evidence never mentions hierarchical softmax or Huffman trees as DeepWalk's default, so those specifics are unsupported attributions to the paper."
+}

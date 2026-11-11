@@ -1,0 +1,72 @@
+{
+  "query_entities": [
+    "Skip-gram objective",
+    "language-modeling objective"
+  ],
+  "triples": [
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "SGO",
+      "type": "OPTIMIZES",
+      "target": "probability of context words within a fixed window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "SGO",
+      "type": "PREDICTS",
+      "target": "surrounding context words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "SGO",
+      "type": "USES",
+      "target": "center word",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "SGO",
+      "type": "ASSERTED_INDEPENDENCE",
+      "target": "context words conditionally independent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language modeling",
+      "source_alias": "LM",
+      "type": "PREDICTS",
+      "target": "next word from preceding words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "language modeling",
+      "source_alias": "LM",
+      "type": "IS_A",
+      "target": "left-to-right autoregressive factorization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective",
+      "source_alias": "SGO",
+      "type": "DEFINED_AS",
+      "target": "prediction from center word to neighbors in both directions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Passage A and Passage B",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "specific formulations take precedence over general description",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

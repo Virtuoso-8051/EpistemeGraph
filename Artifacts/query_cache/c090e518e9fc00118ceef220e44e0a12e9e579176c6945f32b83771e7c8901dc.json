@@ -1,0 +1,68 @@
+{
+  "query_entities": [
+    "sample reuse (SR)",
+    "node2vec (NODE2VEC)",
+    "efficiency",
+    "Alias sampling (AS)",
+    "biased random walk procedure (BRWP)",
+    "node2vec parameter (NP)"
+  ],
+  "triples": [
+    {
+      "source": "sample reuse (SR)",
+      "source_alias": "SR",
+      "type": "PRESERVE",
+      "target": "biased random walk procedure (BRWP)",
+      "target_alias": "BRWP",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "sample reuse (SR)",
+      "source_alias": "SR",
+      "type": "REQUIRES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "NP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sample reuse (SR)",
+      "source_alias": "SR",
+      "type": "PRESERVE",
+      "target": "node2vec representation (NR)",
+      "target_alias": "NR",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Alias sampling (AS)",
+      "source_alias": "AS",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "NP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sample reuse (SR)",
+      "source_alias": "SR",
+      "type": "IMPROVES",
+      "target": "efficiency",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Alias sampling (AS)",
+      "source_alias": "AS",
+      "type": "ENABLES",
+      "target": "efficiency",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "sample reuse (SR)",
+      "source_alias": "SR",
+      "type": "APPLIES_TO",
+      "target": "node2vec representation (NR)",
+      "target_alias": "NR",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

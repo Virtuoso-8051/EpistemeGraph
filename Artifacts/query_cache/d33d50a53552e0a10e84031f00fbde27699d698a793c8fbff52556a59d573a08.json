@@ -1,0 +1,96 @@
+{
+  "query_entities": [
+    "node2vec",
+    "biased random walks",
+    "breadth-first neighborhood exploration",
+    "depth-first neighborhood exploration",
+    "feature learning approaches",
+    "neighborhood definition",
+    "sampling strategy",
+    "structural roles",
+    "community patterns",
+    "graphs"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "breadth-first neighborhood exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "depth-first neighborhood exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "breadth-first neighborhood exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "depth-first neighborhood exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning approaches",
+      "source_alias": "",
+      "type": "USES",
+      "target": "neighborhood definition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning approaches",
+      "source_alias": "",
+      "type": "USES",
+      "target": "sampling strategy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning approaches",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "single, rigid neighborhood definition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "feature learning approaches",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "single, rigid sampling strategy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "single, rigid neighborhood definition",
+      "source_alias": "",
+      "type": "PREVENTS",
+      "target": "adaptation to different structural roles and community patterns in graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

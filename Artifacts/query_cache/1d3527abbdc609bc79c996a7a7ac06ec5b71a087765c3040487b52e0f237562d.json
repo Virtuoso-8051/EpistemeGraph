@@ -1,0 +1,6 @@
+{
+  "answer": "I can't verify the specific study this question refers to, so this is a plausible explanation rather than a confirmed finding. Node2vec generates embeddings from random walks, which never leave the connected component where they start. When added or missing edges split the graph into more components, each component becomes a more self-contained neighborhood, and the walks sample a smaller, more homogeneous set of nodes. Components often align with label communities (homophily), so the embeddings separate classes more cleanly, and the model's sensitivity to the specific perturbed edges drops. This would tend to make Macro-F1 stable or rise under such perturbations, though the gain depends on how well components match class labels. Macro-F1 can also fall if small, isolated components contain minority classes that the walks rarely reach, so the direction of the trend depends on the dataset.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The mechanism is reasonable based on how random walks work, but I could not identify the source study, so the specific claimed robustness trend and Macro-F1 direction are unverified.",
+  "_token_nll": null
+}

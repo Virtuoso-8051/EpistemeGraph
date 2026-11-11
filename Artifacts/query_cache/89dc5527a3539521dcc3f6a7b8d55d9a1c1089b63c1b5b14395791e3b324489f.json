@@ -1,0 +1,39 @@
+{
+  "query_entities": [
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks per node",
+      "target_alias": "r = 10",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "parameter sensitivity analysis",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "COMPARES_WITH",
+      "target": "smaller and larger values of random walks per node",
+      "target_alias": "r",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "performance robustness",
+      "target_alias": "around r = 10",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

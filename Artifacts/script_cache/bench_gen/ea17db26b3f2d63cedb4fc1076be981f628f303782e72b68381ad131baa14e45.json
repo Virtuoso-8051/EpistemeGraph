@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "For DeepWalk, what exact initial learning rate schedule was used on the BlogCatalog and Flickr experiments, and what final learning rate value did the authors report after the linear decrease?",
+      "why_unanswerable": "The passage says DeepWalk starts with a learning rate of 2.5% and then decreases it linearly, but it does not give the endpoint or any exact final value.",
+      "evidence_quote": "The learning rate \u03b1 for SGD is initially set to 2.5% at the beginning of the training and then decreased linearly (a) Random walk generation.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many random walks per vertex did DeepWalk generate when evaluating the BlogCatalog and Flickr networks, and what walk length did it use in those experiments?",
+      "why_unanswerable": "The passage mentions random walk generation and a sliding window, but it does not state the number of walks per vertex or the walk length used in the experiments.",
+      "evidence_quote": "Figure 3: Overview of DeepW alk.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which hardware configuration did DeepWalk achieve its reported speedup on BlogCatalog and Flickr, and what CPU or memory specifications were used for the multi-worker runs?",
+      "why_unanswerable": "The passage says the authors ran experiments on one machine using multiple threads and increased workers to 8, but it does not provide hardware specifications such as CPU model, RAM, or exact machine setup.",
+      "evidence_quote": "While we run experiments on one machine using multiple threads, it has been demonstrated that this technique is highly scalable, and can be used in very large scale machine learning [8].",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Compared with serial DeepWalk, what exact quantitative predictive-performance difference did the 8-worker asynchronous version achieve on BlogCatalog and Flickr, and what metric was used to measure that difference?",
+      "why_unanswerable": "The passage states there was no loss of predictive performance relative to serial DeepWalk, but it does not give the numerical amount of difference or name the evaluation metric.",
+      "evidence_quote": "It also shows that there is no loss of predictive performance relative to the running DeepW alkserially (Figure 4b).",
+      "difficulty": "medium"
+    }
+  ]
+}

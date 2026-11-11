@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How did node2vec perform compared with DeepWalk and LINE on link prediction across the evaluated networks, and what was the largest AUC gain reported for node2vec over each of those algorithms?",
+      "gold_answer": "Node2vec outperformed both DeepWalk and LINE in all networks. The passage says the gain reached up to 3.8% over DeepWalk and up to 6.5% over LINE in AUC, using the best binary-operator choice for each algorithm.",
+      "evidence_quote": "Amongst the feature learning algorithms, node2vec outperforms both DeepWalk and LINE in all networks with gain up to 3.8% and 6.5% respectively in the AUC scores for the best possible choices of the binary operator for each algorithm.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which binary operator did node2vec use most successfully on average across all networks, and what was the stated reason for highlighting it?",
+      "gold_answer": "The Hadamard operator was identified as the most stable choice with node2vec. It was highlighted because, when paired with node2vec, it gave the best performance on average across all networks.",
+      "evidence_quote": "Overall, the Hadamard operator when used with node2vec is highly stable and gives the best performance on average across all networks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which condition did LINE outperform node2vec in the operator-wise comparison, and what kinds of operators were involved?",
+      "gold_answer": "LINE outperformed node2vec in a couple of cases rather than broadly across the results. Those exceptions involved the Weighted-L1 and Weighted-L2 operators, where LINE performed better.",
+      "evidence_quote": "When we look at operators individually (Table 1), node2vec outperforms DeepWalk and LINE barring a couple of cases involving the Weighted-L1 and Weighted-L2 operators in which LINE performs better.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the arXiv ASTRO-PH network in terms of node meaning and edge meaning, and how many nodes and edges does it contain?",
+      "gold_answer": "The arXiv ASTRO-PH network is a collaboration network generated from papers submitted to the e-print arXiv. Its nodes represent scientists, and an edge exists between two scientists if they have collaborated on a paper; the network contains 18,722 nodes and 198,110 edges.",
+      "evidence_quote": "This is a collaboration network generated from papers submitted to the e-print arXiv where nodes represent scientists, and an edge is present between two scientists if they have collaborated in a paper.",
+      "difficulty": "easy"
+    }
+  ]
+}

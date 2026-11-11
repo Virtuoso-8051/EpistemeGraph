@@ -1,0 +1,6 @@
+{
+  "answer": "LINE is typically trained in an unsupervised way, but it requires supervised data when the goal is to evaluate or tune it for a downstream classification task: a labeled subset of nodes is used to train a classifier on the learned embeddings and test on held-out labels. In contrast, DeepWalk on BlogCatalog is usually evaluated by first learning embeddings without labels and then measuring their quality on node classification using the BlogCatalog labels only for the evaluation step, not for embedding training; the standard protocol is to train a classifier on a fraction of labeled nodes and report performance on the rest.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This matches the standard evaluation setups for LINE and DeepWalk, though exact protocol details can vary by paper or implementation.",
+  "_token_nll": 0.22635136152568616
+}

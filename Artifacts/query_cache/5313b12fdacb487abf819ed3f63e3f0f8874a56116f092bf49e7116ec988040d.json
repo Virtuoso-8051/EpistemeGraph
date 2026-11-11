@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec reduces start-node bias by not relying on a single walk from one source node. Instead, it launches many biased random walks from every node in the graph, so each node can appear as a context center and as a context neighbor during training. The learned embeddings are then optimized over these multiple walk samples, which makes the representation learning less dependent on any particular starting point. The random walk sampling is made efficient by using a second-order Markov walk with precomputed transition probabilities and alias sampling, so each step can be sampled in constant time after preprocessing.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This matches the standard node2vec procedure: multiple walks from all nodes reduce dependence on any one start node, and alias tables enable efficient O(1) sampling per step after preprocessing.",
+  "_token_nll": 0.2451342249209164
+}

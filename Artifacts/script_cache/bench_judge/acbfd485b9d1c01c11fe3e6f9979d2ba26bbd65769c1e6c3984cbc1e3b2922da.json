@@ -1,0 +1,9 @@
+{
+  "claims_checked": 1,
+  "unsupported_claims": [
+    "LINE's main experiments on large-scale information networks used embedding dimension d = 128"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is labeled unanswerable from the cited passage, which defines d only abstractly as R^d with d\u226a|V|. The answer gives a specific value of 128 without saying the passage does not report one. Other retrieved sentences mention a default of 128 for some networks, but that does not establish it as the main-experiment value, and the answer does not acknowledge the gap."
+}

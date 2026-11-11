@@ -1,0 +1,61 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "word analogy (WA)",
+    "Wikipedia corpora (WC)",
+    "LINE(2nd)",
+    "Skip-gram model (SGM)",
+    "random walk (RW)",
+    "1-hop and 2-hop neighbor (1H2HN)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "higher-order proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "",
+      "type": "MODELS",
+      "target": "co-occurrence within several hops",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word analogy (WA)",
+      "source_alias": "WA",
+      "type": "REQUIRES",
+      "target": "broader context structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "MODELS",
+      "target": "direct one-hop neighbourhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "less higher-order structure than DeepWalk",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DeepWalk outperformance on word analogy",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(2nd)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

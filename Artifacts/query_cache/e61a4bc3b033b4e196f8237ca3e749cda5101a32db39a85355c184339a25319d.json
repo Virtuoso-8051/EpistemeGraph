@@ -1,0 +1,75 @@
+{
+  "query_entities": [
+    "BlogCatalog",
+    "PPI",
+    "Wikipedia",
+    "node2vec",
+    "multi-label classification"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "multi-label classification",
+      "target_alias": "MLC",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled training nodes",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "10% of the nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "10% of the nodes",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "10% of the nodes",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "PPI",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "10% of the nodes",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "Wikipedia",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "about 5,196 labeled training nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "about 1,186 labeled training nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Wikipedia",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "about 1,000 labeled training nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

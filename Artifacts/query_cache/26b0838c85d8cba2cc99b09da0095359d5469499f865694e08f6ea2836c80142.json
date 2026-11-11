@@ -1,0 +1,34 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "LINE",
+    "first-order proximity",
+    "second-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "missing information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "MODELS",
+      "target": "first-order proximity",
+      "target_alias": "observed ties",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "MODELS",
+      "target": "second-order proximity",
+      "target_alias": "shared-neighborhood similarity",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

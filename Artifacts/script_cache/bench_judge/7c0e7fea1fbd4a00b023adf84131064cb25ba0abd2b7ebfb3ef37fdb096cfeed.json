@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "DeepWalk used 80 walks per vertex (evidence says \u03b3 = 40)",
+    "DeepWalk used 128-dimensional embeddings in its main experiments (not in evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The evidence includes a setting of window size 10 and walk length 40 for DeepWalk, from a comparison paper's default settings, so those two claims are supported. The claims of 80 walks per vertex and 128 dimensions are unsupported, and the 80 contradicts the evidence's \u03b3 = 40."
+}

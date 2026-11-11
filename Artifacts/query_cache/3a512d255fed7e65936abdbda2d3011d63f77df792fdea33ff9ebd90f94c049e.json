@@ -1,0 +1,42 @@
+{
+  "query_entities": [
+    "Skip-gram model (SGM)",
+    "Skip-gram objective (SGO)",
+    "likelihood",
+    "random walk (RW)"
+  ],
+  "triples": [
+    {
+      "source": "context window spanning entire walk or sentence",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "joint likelihood of whole word sequence",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "joint likelihood of whole word sequence",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "joint likelihood of whole word sequence",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "likelihood",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "Skip-gram model (SGM)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

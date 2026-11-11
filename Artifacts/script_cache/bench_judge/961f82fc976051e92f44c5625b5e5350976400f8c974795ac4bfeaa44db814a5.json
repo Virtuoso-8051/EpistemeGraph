@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Biased second-order random walks controlled by return parameter p and in-out parameter q are not in the provided evidence (though standard node2vec background).",
+    "The claim that P(n|u) and P(u|n) are asymmetric because of different normalizers and sampled neighborhoods is the answer's own inference, not stated in the evidence.",
+    "The claim that word2vec-style separate source and context embeddings are a different design that node2vec does not use is not stated in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and matches the evidence that node2vec assumes symmetry and uses a softmax over a dot product with a single embedding f. It adds several details beyond the evidence, such as p/q walks, the asymmetric conditionals argument, and the comparison to separate context embeddings, which are not supported by the provided passages."
+}

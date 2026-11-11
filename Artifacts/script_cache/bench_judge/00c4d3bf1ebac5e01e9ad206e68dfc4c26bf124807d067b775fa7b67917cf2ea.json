@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The passage says node2vec's main cost is generating biased random walks and then training the skip-gram model.",
+    "The passage says both phases are described as highly parallelizable.",
+    "The passage says random-walk generation can be parallelized across nodes/walks.",
+    "The passage says skip-gram training can also be parallelized."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The source explicitly supports that node2vec's major phases are trivially parallelizable and that it can scale to large networks with millions of nodes in a few hours. However, the answer adds specific implementation details about biased random walks, skip-gram training, and how each phase is parallelized, which are not stated in the provided evidence."
+}

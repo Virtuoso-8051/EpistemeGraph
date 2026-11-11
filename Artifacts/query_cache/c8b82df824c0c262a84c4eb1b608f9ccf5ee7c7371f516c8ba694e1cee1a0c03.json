@@ -1,0 +1,85 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "depth-first search (DFS)",
+    "breadth-first search (BFS)",
+    "biased random walk procedure (BRWP)",
+    "node2vec parameter (NP)",
+    "Alias sampling (AS)",
+    "random walk (RW)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "depth-first search (DFS)",
+      "target_alias": "DFS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walk procedure (BRWP)",
+      "target_alias": "BRWP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "NP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "BRWP",
+      "type": "APPROXIMATES",
+      "target": "breadth-first search (BFS)",
+      "target_alias": "BFS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "BRWP",
+      "type": "APPROXIMATES",
+      "target": "depth-first search (DFS)",
+      "target_alias": "DFS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "BRWP",
+      "type": "IS_A",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Alias sampling (AS)",
+      "source_alias": "AS",
+      "type": "ENABLES",
+      "target": "O(1) draws after preprocessing",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Alias sampling (AS)",
+      "source_alias": "AS",
+      "type": "REQUIRES",
+      "target": "precomputed alias tables for each second-order state",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "NP",
+      "type": "ENABLES",
+      "target": "control of exploration without changing walk length or count",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "query_entities": [
+    "first-order proximity",
+    "second-order proximity",
+    "graph-embedding",
+    "direct edges",
+    "co-occurrence",
+    "adjacency",
+    "neighborhood distributions",
+    "semantic neighbors",
+    "syntactic neighbors"
+  ],
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "direct edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "co-occurrence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "adjacency",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "semantic neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "neighborhood distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "similarity of nodes\u2019 neighborhood distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "semantic neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "syntactic neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

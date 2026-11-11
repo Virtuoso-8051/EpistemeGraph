@@ -1,0 +1,108 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "Skip-gram",
+    "hierarchical softmax",
+    "lock-free SGD",
+    "Hogwild!",
+    "sparse-update problem"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "lock on shared parameters",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "lock-free SGD",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "lock-free SGD",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "Hogwild!",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "lock-free SGD",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "shared embedding matrices",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "lock-free SGD",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "avoidance of sparse-update problem",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training step",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "walk context window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training step",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "few embedding rows",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "concurrent workers",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "same parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "overwrites",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "benign noise",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "locking",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "serialization and contention",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

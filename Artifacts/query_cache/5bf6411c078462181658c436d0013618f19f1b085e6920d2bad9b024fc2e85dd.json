@@ -1,0 +1,6 @@
+{
+  "answer": "Based on the node2vec paper (Grover & Leskovec, 2016), DFS-like sampling does not reduce variance in characterizing 1-hop nodes relative to the source. That property belongs to BFS-like sampling (small return parameter p and large in-out parameter q), because BFS walks keep sampling the same immediate neighbourhood and so give low-variance estimates of 1-hop nodes. DFS-like sampling (large p, small q) explores farther, outward parts of the network. It captures macro-level homophily and community structure, but it has higher variance for the immediate neighbourhood. The question's premise therefore appears mistaken, and no condition makes DFS reduce 1-hop variance.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I recall the paper's discussion of BFS giving low variance for 1-hop nodes and DFS capturing macro/homophily views, but I am not certain of the exact wording or whether the paper says anything about DFS variance under specific conditions.",
+  "_token_nll": null
+}

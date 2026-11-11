@@ -1,0 +1,74 @@
+{
+  "query_entities": [
+    "LINE(1st+2nd)",
+    "first-order proximity",
+    "second-order proximity",
+    "LINE"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "all other methods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "sparser networks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "settings with limited labeled data",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "REPRESENTS",
+      "target": "direct tie strength between adjacent nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "shared-neighborhood similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "IS_A",
+      "target": "complementary rather than redundant",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "concatenation of first-order and second-order embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st+2nd)",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "representation richness",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

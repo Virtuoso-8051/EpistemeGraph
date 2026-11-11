@@ -1,0 +1,11 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The answer claims vertices are placed at leaves of a Huffman tree built from vertex frequencies; the evidence only says 'Build a binary Tree T from V' and does not mention Huffman coding or frequency-based construction.",
+    "The answer describes the gradient formula (1 \u2212 code \u2212 \u03c3(\u03a6\u00b7\u03c8)) and the accumulation of per-path gradients into a single update per pair, which are not stated in the evidence.",
+    "The answer states the decaying learning rate starts around 0.025, which matches the evidence's 2.5%, but the evidence does not state that the walks are generated online, though Algorithm 1 implies on-the-fly generation."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims (SGD optimization, derivatives via back-propagation, learning rate initially 2.5% decreasing linearly) are supported by the evidence. However, the answer adds specifics about a Huffman tree, a particular gradient formula, and per-pair accumulation that the provided excerpts do not contain."
+}

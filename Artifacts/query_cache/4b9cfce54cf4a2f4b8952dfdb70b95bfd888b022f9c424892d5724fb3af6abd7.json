@@ -1,0 +1,6 @@
+{
+  "answer": "In LINE, unfolding an edge of weight w into w binary edges increases memory by a factor of w, because the edge is explicitly replicated w times. By contrast, the alias-table approach stores the same weighted edge information in O(1) extra space per edge (two alias-table entries per edge endpoint in the usual implementation), so numerically it uses far less memory than the w-fold expansion when w > 1.",
+  "confidence": 0.86,
+  "confidence_reasoning": "The qualitative comparison is standard and reliable, but the exact constant-factor memory accounting for the alias-table implementation can vary by implementation details.",
+  "_token_nll": 0.22214083517751387
+}

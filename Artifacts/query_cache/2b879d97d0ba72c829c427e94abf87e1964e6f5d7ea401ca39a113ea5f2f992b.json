@@ -1,0 +1,72 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "hierarchical softmax (HS)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax (HS)",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax (HS)",
+      "source_alias": "HS",
+      "type": "USES",
+      "target": "Huffman tree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Huffman tree",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "vertex visit frequency in random walk corpus",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "hierarchical softmax (HS)",
+      "source_alias": "HS",
+      "type": "REQUIRES",
+      "target": "stable vertex frequency estimates",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "streaming setting with known or stable vertex-frequency distribution",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "new vertices",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "new leaves in existing Huffman tree",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "new vertices",
+      "source_alias": "",
+      "type": "USES",
+      "target": "initialization of embeddings and inner-node parameters",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "hierarchical softmax (HS)",
+      "source_alias": "HS",
+      "type": "REQUIRES",
+      "target": "tree rebuild when frequency drift exceeds threshold",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

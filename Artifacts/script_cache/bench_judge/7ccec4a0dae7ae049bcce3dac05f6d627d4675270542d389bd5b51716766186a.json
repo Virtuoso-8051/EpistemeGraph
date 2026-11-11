@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The claim that PASSAGE A is not included, so the stability conditions cannot be stated, is contradicted by the provided evidence, which contains the random-walk sampling-frequency section (DOC_003) reporting consistency across dimensions and training data amounts.",
+    "The claim that DeepWalk builds training pairs from co-occurrence within walks is not in the provided evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The LINE edge-sampling motivation (high-variance weights causing gradient explosion, sampling proportional to weight and treating samples as binary) is supported by the evidence. However, the answer wrongly claims PASSAGE A is missing and therefore omits the required stability conditions (consistency across embedding dimensions and training data amounts), which the evidence does state."
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "The premise doesn't fit the node2vec paper (Grover & Leskovec, 2016) as I recall it. Its link prediction experiments used unweighted networks (Facebook, PPI, and arXiv ASTRO-PH), not weighted graphs. The paper also did not name one exact (p, q) pair as strongest. It tuned p and q over a grid of {0.25, 0.5, 1, 2, 4} and reported results for the best setting per dataset and edge-feature operator. I can't reliably recall the exact best (p, q) and AUC for each dataset, so I won't give a specific pair or number. The Facebook result with the Hadamard operator was roughly 0.996 AUC, but treat that figure as unverified.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I'm fairly sure the paper used unweighted graphs and a {0.25, 0.5, 1, 2, 4} grid, but my recall of the specific best settings and AUC values is uncertain.",
+  "_token_nll": null
+}

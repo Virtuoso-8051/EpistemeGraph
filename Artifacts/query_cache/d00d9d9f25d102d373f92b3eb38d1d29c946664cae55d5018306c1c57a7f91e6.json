@@ -1,0 +1,96 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding (1ST)",
+    "training time complexity (TTC)",
+    "edge-sampling algorithm (ESA)",
+    "classical stochastic gradient descent (CSGD)",
+    "asynchronous stochastic gradient algorithm (ASGA)",
+    "very large networks",
+    "linear in number of edges",
+    "alias-table sampling",
+    "negative sampling",
+    "full softmax"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "APPLICABLE_FOR",
+      "target": "very large networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "training time complexity (TTC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training time complexity (TTC)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "linear in number of edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "edge sampling",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "edge sampling",
+      "type": "IMPROVES",
+      "target": "classical stochastic gradient descent (CSGD)",
+      "target_alias": "plain SGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias-table sampling",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "constant-time edge and negative vertex sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "full softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "a few noise samples per edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "asynchronous stochastic gradient algorithm (ASGA)",
+      "target_alias": "asynchronous lock-free SGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous stochastic gradient algorithm (ASGA)",
+      "source_alias": "asynchronous lock-free SGD",
+      "type": "ENABLES",
+      "target": "parallel training on a single machine",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

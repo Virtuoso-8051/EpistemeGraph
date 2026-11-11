@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The answer's core claim that node2vec generalizes prior work by reducing to earlier methods (DeepWalk with p=q=1, LINE as immediate-neighbor neighborhoods) is not what the passage states; the evidence only says node2vec generalizes prior work based on rigid neighborhood notions and that DeepWalk's sampling is a special case with p=q=1.",
+    "The answer's characterization of LINE as a neighborhood limited to immediate neighbors is not stated in the evidence.",
+    "The answer attributes to the papers the homophily (DFS-style) versus structural equivalence (BFS-style) framing and the claim that DeepWalk offers no way to tune exploration, which is not contained in the provided evidence excerpts."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly notes that node2vec generalizes prior work and that DeepWalk is a special case with p=q=1, but it misses the passage's actual reason (flexible neighborhood definition and biased random walks replacing rigid notions) and the expressiveness limitation. It also adds unsupported details about LINE and the homophily/structural equivalence framing that the excerpts do not contain."
+}

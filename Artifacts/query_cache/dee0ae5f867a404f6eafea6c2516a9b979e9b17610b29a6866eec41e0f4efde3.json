@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk learns latent social/structural representations of vertices: it uses truncated random walks over the graph to generate sequences of vertices, then applies a language-modeling approach (the Skip-gram model with hierarchical softmax, from word2vec) to those walks, so that vertices which co-occur on short random walks (i.e., are close in the graph's neighborhood structure) get similar embeddings. The learned representations are low-dimensional, continuous, real-valued feature vectors (embeddings) for each vertex, with the dimensionality d being much smaller than the number of vertices (typically on the order of tens to a few hundred dimensions, e.g., 128). These vectors encode the vertex's structural role and network neighborhood/community membership in a dense form that can be used as features for downstream tasks such as multi-label node classification, and they are unsupervised in that they require no labels to be learned.",
+  "confidence": 0.8,
+  "confidence_reasoning": "The core description (random walks, Skip-gram, low-dimensional continuous embeddings capturing neighborhood/social structure, typical d like 128) matches the DeepWalk paper, though the exact typical dimensionality phrasing and some details are approximate.",
+  "_token_nll": null
+}

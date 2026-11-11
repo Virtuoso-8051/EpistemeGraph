@@ -1,0 +1,75 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "streaming variant (SV)",
+    "learning rate (LR)",
+    "classical stochastic gradient descent (CSGD)",
+    "random walk (RW)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "classical stochastic gradient descent",
+      "target_alias": "CSGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "learning rate",
+      "target_alias": "LR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learning rate",
+      "source_alias": "LR",
+      "type": "BASED_ON",
+      "target": "word2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learning rate",
+      "source_alias": "LR",
+      "type": "IMPROVES",
+      "target": "embedding convergence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learning rate",
+      "source_alias": "LR",
+      "type": "ENABLES",
+      "target": "faster training of the streaming variant",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "streaming variant",
+      "source_alias": "SV",
+      "type": "USES",
+      "target": "random walk",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant",
+      "source_alias": "SV",
+      "type": "PRESERVE",
+      "target": "full walk corpus and graph are not stored in memory",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "node2vec's p and q parameters are tuned by grid search with cross-validation on a small labeled sample, which the evidence does not mention."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The Facebook Hadamard column (node2vec 0.7543 vs DeepWalk 0.6923 and LINE 0.6330) and the statement that Hadamard gives the best average performance both support the answer's core claims. The parameter-tuning procedure is not in the evidence, so that specific condition is unsupported, though the answer hedges its specifics."
+}

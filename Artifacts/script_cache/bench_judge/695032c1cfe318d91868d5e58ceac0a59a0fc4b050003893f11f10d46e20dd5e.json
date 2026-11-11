@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The link prediction experiments used a protein-protein interaction (PPI) network from Stanford/BioGRID data.",
+    "The link prediction experiments used arXiv collaboration networks (ASTRO-PH and HEP-PH).",
+    "The edge feature operators (average, Hadamard, weighted-L1, weighted-L2) were evaluated on these graphs.",
+    "The node classification experiments used BlogCatalog and Wikipedia word co-occurrence datasets.",
+    "Synthetic data appears only in the paper's illustrative analyses and not as the basis for the reported edge prediction benchmarks."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise and the evidence supports that node2vec was evaluated for link prediction and multi-label classification on real-world datasets, including Facebook. However, the specific dataset names (PPI, arXiv, BlogCatalog, Wikipedia), the edge operators, and the claim about where synthetic data appears are not contained in the provided evidence."
+}

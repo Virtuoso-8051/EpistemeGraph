@@ -1,0 +1,103 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "biased random walk procedure (BRWP)",
+    "node2vec parameter (NP)",
+    "network neighborhood (NN)",
+    "structural equivalence",
+    "homophily",
+    "Community detection (CD)",
+    "BFS-style sampling",
+    "DFS-style sampling"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walk procedure (BRWP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "interpolation between BFS-style and DFS-style sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-style sampling",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "small q setting",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-style sampling",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "large q setting",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-style sampling",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "network neighborhood (NN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-style sampling",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-style sampling",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "homophily",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "tendency of nearby, densely connected nodes to belong to the same community",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-style sampling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "Community detection (CD)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-style sampling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

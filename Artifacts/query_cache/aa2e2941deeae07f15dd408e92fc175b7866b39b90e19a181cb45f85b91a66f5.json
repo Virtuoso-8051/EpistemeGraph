@@ -1,0 +1,115 @@
+{
+  "query_entities": [
+    "relational classification (RC)",
+    "unsupervised method (UM)",
+    "collective classification problem (CCP)",
+    "unsupervised feature learning (UFL)",
+    "relational classifier (RC)"
+  ],
+  "triples": [
+    {
+      "source": "Traditional relational classification methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "iterative approximate inference",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "collective classification in Markov logic networks",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "traditional relational classification methods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "traditional relational classification methods",
+      "source_alias": "",
+      "type": "USES",
+      "target": "joint model coupling feature learning and label inference",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "iterative approximate inference",
+      "source_alias": "",
+      "type": "USES",
+      "target": "loopy belief propagation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "iterative approximate inference",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Gibbs sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "iterative approximate inference",
+      "source_alias": "",
+      "type": "USES",
+      "target": "mean-field updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "proposed unsupervised method",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "unsupervised feature learning (UFL)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "proposed unsupervised method",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "relational classification (RC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "proposed unsupervised method",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "separation of feature learning and classification stages",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classification on learned representations",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "single feed-forward pass",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "separation of stages",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "faster and more scalable inference on large graphs",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "separation of stages",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "avoidance of convergence and approximation problems of loopy inference",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "learned representations",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "reuse across tasks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

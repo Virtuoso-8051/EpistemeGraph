@@ -1,0 +1,6 @@
+{
+  "answer": "The question rests on a false contrast. Logistic regression is not used 'instead of' hierarchical softmax in the sense implied. SkipGram (word2vec) offers two approximations to the full softmax over the vocabulary, and each is a different way to avoid computing it. Hierarchical softmax arranges the vocabulary (or graph nodes) in a binary tree and models each prediction as a sequence of binary logistic decisions along the path to the target, which reduces the cost from O(V) to O(log V). Negative sampling instead turns the problem into binary logistic regression: it distinguishes the true context node from a few randomly drawn 'negative' nodes. DeepWalk, the random-walk method that applies SkipGram to graphs, uses hierarchical softmax, as described in its paper, and does not use negative sampling. So the speedup in the random-walk setting comes from hierarchical softmax, not from logistic regression replacing it. Logistic regression appears only in the negative-sampling variant, which is an alternative to hierarchical softmax, not a refinement of it.",
+  "confidence": 0.8,
+  "confidence_reasoning": "The core facts about word2vec's two approximations and DeepWalk's use of hierarchical softmax are well established, though I am relying on memory of the exact wording of the DeepWalk paper.",
+  "_token_nll": null
+}

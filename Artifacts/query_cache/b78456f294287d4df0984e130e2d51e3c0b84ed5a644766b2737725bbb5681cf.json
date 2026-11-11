@@ -1,0 +1,111 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "binary tree T",
+    "Huffman tree",
+    "hierarchical softmax",
+    "SkipGram model",
+    "random walks",
+    "context vertices",
+    "full softmax",
+    "vertices"
+  ],
+  "triples": [
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Huffman tree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Huffman tree",
+      "source_alias": "",
+      "type": "USES",
+      "target": "hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Huffman tree",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SkipGram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node/vertex",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "graph vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node/vertex",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "graph node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node/vertex",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "path from the root of T to a leaf",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram model",
+      "source_alias": "",
+      "type": "PREDICTS",
+      "target": "context vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram model",
+      "source_alias": "",
+      "type": "USES",
+      "target": "path from the root of T to a leaf",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "SkipGram model",
+      "source_alias": "",
+      "type": "AVOIDS",
+      "target": "full softmax over all vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "DOES_NOT_GENERATE",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "USES",
+      "target": "SkipGram training loop",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "binary tree T",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "output probability computation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

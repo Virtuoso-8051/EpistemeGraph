@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI claims node2vec tended to win with the Hadamard and Average operators, but the evidence only states node2vec outperforms baselines barring a couple of Weighted-L1/L2 cases and that Hadamard is stable and best on average; nothing specifically says node2vec beat LINE under Average.",
+    "The AI claims LINE beat node2vec mainly under distance-based operators, which overstates the evidence: the paper says LINE won only in a couple of cases, not 'mainly'."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The AI's core identification of the Weighted-L1 and Weighted-L2 operators as the exceptions where LINE beat node2vec is supported by the evidence. However, it adds an unsupported claim about node2vec winning with Average and overgeneralizes the exceptions to 'mainly' distance-based operators, though it does hedge its confidence."
+}

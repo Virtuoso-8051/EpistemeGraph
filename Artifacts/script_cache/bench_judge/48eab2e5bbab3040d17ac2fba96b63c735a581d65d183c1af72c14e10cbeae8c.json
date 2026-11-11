@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "An unsupervised objective can be coupled to the downstream predictor so that gradients or selection criteria favor task-helpful features.",
+    "The unsupervised term can be weighted or selected using downstream validation performance to push it toward task-relevant structure.",
+    "The objective can be defined over the joint data distribution so that its optimum aligns with predictive information about the target."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer goes along with the false premise and describes ways an unsupervised objective could be steered toward downstream tasks. The source says the unsupervised objective is independent of the downstream task and yields task-independent features, and the answer never corrects this."
+}

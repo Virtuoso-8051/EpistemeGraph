@@ -1,0 +1,9 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The claim that unweighted edges get first-order proximity of 1 is not stated in the evidence, which only says the edge weight w_uv indicates first-order proximity."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer that non-edges have zero first-order proximity is directly stated in the evidence, and attributing any nonzero non-edge proximity to second-order proximity is a reasonable reading of the definitions. The evidence does not mention a default weight of 1 for unweighted graphs, so that detail is unsupported."
+}

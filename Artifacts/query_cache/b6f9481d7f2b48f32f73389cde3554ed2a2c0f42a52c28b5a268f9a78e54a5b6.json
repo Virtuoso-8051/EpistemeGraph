@@ -1,0 +1,123 @@
+{
+  "query_entities": [
+    "node2vec",
+    "DeepWalk",
+    "LINE",
+    "link prediction",
+    "Facebook dataset",
+    "Hadamard operator",
+    "biased random walks",
+    "breadth-first exploration",
+    "depth-first exploration",
+    "p",
+    "q",
+    "DeepWalk setting",
+    "link-prediction accuracy"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DeepWalk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Facebook dataset",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "more global neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Hadamard operator",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hadamard operator",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "edge features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "breadth-first exploration",
+      "target_alias": "p and q settings",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "depth-first exploration",
+      "target_alias": "p and q settings",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DeepWalk",
+      "target_alias": "unbiased DeepWalk setting",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "link-prediction accuracy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

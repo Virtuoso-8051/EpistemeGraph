@@ -1,0 +1,9 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The paper uses 128-dimensional embeddings, 10 walks per node, walk length 80, and window size 10 (these specific hyperparameter values are not in the provided evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says the paper does not report hardware or runtime environment, which matches the reference. However, it adds specific hyperparameter values (d=128, r=10, l=80, k=10) that the evidence does not contain, so these are unsupported by the provided evidence even though they are plausibly accurate."
+}

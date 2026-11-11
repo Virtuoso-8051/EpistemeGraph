@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk outperform LINE(2nd) on Wikipedia page classification when the edge-sampling treatment removes the need for weighted edges?",
+      "false_premise": "DeepWalk outperforms LINE(2nd) on Wikipedia page classification, and the edge-sampling treatment removes the need for weighted edges.",
+      "correction": "The passage says the graph factorization outperforms DeepWalk, and the LINE optimized by the edge-sampling treatment performs much better than directly deploying SGD.",
+      "evidence_quote": "The graph factorization outperforms DeepWalk as DeepWalk ignores the weights of the edges.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE(1st) alone achieve the best Wikipedia page classification result once its embeddings are concatenated with LINE(2nd)?",
+      "false_premise": "LINE(1st) alone achieves the best result after concatenation with LINE(2nd).",
+      "correction": "The passage says the concatenated LINE(1st+2nd) method performs significantly better than all other methods, not LINE(1st) alone.",
+      "evidence_quote": "As a result, the LINE(1st+2nd) method performs significantly better than all other methods.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes the first-order proximity return only semantically related words, while the second-order proximity mixes syntactic and semantic neighbors?",
+      "false_premise": "First-order proximity returns only semantically related words, while second-order proximity mixes syntactic and semantic neighbors.",
+      "correction": "The passage states the opposite: second-order proximity returns semantically related words, and first-order proximity returns a mixture of syntactically and semantically related words.",
+      "evidence_quote": "We can see that by using the contextual proximity, the most similar words returned by the secondorder proximity are all semantically related words.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does LINESGDs outperform graph factorization on Wikipedia page classification because the weights of the edges are consistent?",
+      "false_premise": "LINESGDs outperform graph factorization on Wikipedia page classification because the edge weights are consistent.",
+      "correction": "The passage says LINESGDs perform worse due to the divergence of the weights of the edges, while graph factorization outperforms DeepWalk.",
+      "evidence_quote": "The LINESGDs perform worse due to the divergence of the weights of the edges.",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "query_entities": [
+    "PAGERANK",
+    "random walk (RW)",
+    "social network (SN)"
+  ],
+  "triples": [
+    {
+      "source": "Bahmani, Chowdhury and Goel's work",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "incremental PageRank using stored random walks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walks",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "PAGERANK",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walks",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk",
+      "target_alias": "RW",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walks",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "full recomputation",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walks",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "update speedup of roughly one to two orders of magnitude over full recomputation",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "incremental PageRank using stored random walks",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "large real-world graphs such as Twitter-scale social networks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Twitter-scale social networks",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "social network",
+      "target_alias": "SN",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

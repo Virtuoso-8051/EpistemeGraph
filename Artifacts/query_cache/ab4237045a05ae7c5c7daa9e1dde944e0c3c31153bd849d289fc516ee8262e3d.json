@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is incorrect. node2vec does not learn only community-based (homophily) embeddings and ignore structural roles. It generalizes DeepWalk: DeepWalk uses unbiased, uniform random walks, which is equivalent to node2vec with p = q = 1. node2vec adds two parameters that bias the walk. The return parameter p controls how often the walk revisits the previous node. The in-out parameter q interpolates between breadth-first sampling (local neighborhoods, which captures structural equivalence and similar structural roles) and depth-first sampling (wider exploration, which captures homophily and community membership). With suitable settings, node2vec can therefore encode structural roles as well as communities, while DeepWalk's uniform walks mainly reflect community-like proximity. Any claim that node2vec is restricted to communities is a mischaracterization of the method.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The description of node2vec's p and q parameters, BFS/DFS interpretation, and DeepWalk being the p=q=1 special case are well-established facts from the original paper, though I am summarizing from memory.",
+  "_token_nll": null
+}

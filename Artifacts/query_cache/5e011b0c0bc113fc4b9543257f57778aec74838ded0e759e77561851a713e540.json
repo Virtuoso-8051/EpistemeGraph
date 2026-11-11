@@ -1,0 +1,100 @@
+{
+  "query_entities": [
+    "LINE",
+    "LINE(2nd)",
+    "LINE(1st)",
+    "first-order proximity",
+    "second-order proximity",
+    "social network classification"
+  ],
+  "triples": [
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(1st)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "MAPS_TO",
+      "target": "direct ties between vertex pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "social networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "large and sparse",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "REQUIRES",
+      "target": "direct edge between vertex pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "SON",
+      "type": "DEFINED_AS",
+      "target": "vertices are similar when their neighborhood distributions overlap",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "SON",
+      "type": "USES",
+      "target": "context representation of each vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "SON",
+      "type": "GENERALIZES",
+      "target": "shared-neighbor structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood-overlap information",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "label prediction",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "SON",
+      "type": "IS_A",
+      "target": "universally more important than first-order proximity",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE paper best results",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "concatenation of first- and second-order embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order and second-order embeddings",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "complementary information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

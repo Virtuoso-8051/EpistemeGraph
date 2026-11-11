@@ -1,0 +1,124 @@
+{
+  "query_entities": [
+    "graph factorization",
+    "LINE",
+    "adjacency matrix",
+    "first-order proximity",
+    "second-order proximity",
+    "network embedding"
+  ],
+  "triples": [
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "REQUIRES",
+      "target": "adjacency matrix",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "APPLICABLE_FOR",
+      "target": "undirected graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "APPLICABLE_FOR",
+      "target": "weighted network",
+      "target_alias": "WN",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "IS_A",
+      "target": "matrix factorization",
+      "target_alias": "MF",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "APPLICABLE_FOR",
+      "target": "homogeneous single-relation networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "large-scale information networks",
+      "target_alias": "IN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "edge-sampling objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "linear scalability with number of edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "REQUIRES",
+      "target": "matrix factorization",
+      "target_alias": "MF",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

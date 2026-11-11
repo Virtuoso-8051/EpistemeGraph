@@ -1,0 +1,98 @@
+{
+  "query_entities": [
+    "Modularity",
+    "EdgeCluster",
+    "adjacency matrix (AM)",
+    "Modularity matrix (MM)"
+  ],
+  "triples": [
+    {
+      "source": "Modularity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "adjacency matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "USES",
+      "target": "adjacency matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Modularity",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Modularity matrix (MM)",
+      "target_alias": "MM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Modularity matrix (MM)",
+      "source_alias": "MM",
+      "type": "DEFINED_AS",
+      "target": "A - dd^T/(2m)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Modularity matrix (MM)",
+      "source_alias": "MM",
+      "type": "REPRESENTS",
+      "target": "degree-based null model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "USES",
+      "target": "k-means",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Modularity",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "EdgeCluster",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Modularity",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "graph with strong assortative community structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "very large, sparse networks",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "graphs with weak community structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Modularity",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "small to medium-sized graphs with modest embedding dimensions",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

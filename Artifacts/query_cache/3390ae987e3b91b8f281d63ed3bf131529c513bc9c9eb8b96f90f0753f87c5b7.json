@@ -1,0 +1,6 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding, Tang et al., 2015) has training time complexity O(K\u00b7d\u00b7|E|), where K is the number of negative samples per edge, d is the embedding dimension, and |E| is the number of edges. It scales linearly with the number of edges and does not directly depend on the number of vertices |V|. Edge sampling uses alias tables, so each sample costs O(1) after O(|E|) preprocessing, and the vertex-side negative sampling table adds O(|V|) memory. Training the first-order and second-order proximity models separately and concatenating them doubles the constant factor but keeps the same order. Because the number of SGD updates is set by the sampling budget rather than by graph size, the method is practical for large sparse networks.",
+  "confidence": 0.8,
+  "confidence_reasoning": "The O(K\u00b7d\u00b7|E|) complexity and linear-in-edges, vertex-independent scaling are well established from the LINE paper, though details like the memory term and the exact wording of the claim could vary slightly.",
+  "_token_nll": null
+}

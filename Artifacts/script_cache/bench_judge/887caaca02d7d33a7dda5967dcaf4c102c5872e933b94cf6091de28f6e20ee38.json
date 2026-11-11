@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The LINE paper reports wall-clock training times for the second-order model on large graphs such as Twitter (the evidence only mentions a network with 2 million nodes and a billion edges, with no Twitter-specific timing)",
+    "Cost scales roughly linearly with the number of edge samples (not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give exact figures and the single-machine, multi-thread claim is supported by the evidence. However, it asserts that the paper reports Twitter wall-clock times and linear scaling in edge samples, neither of which appears in the evidence, and it implicitly goes along with the question's premise that such figures are reported."
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "In the paper3 method, the walk is treated as a sequence of vertices and the model is trained in a skip-gram/negative-sampling style to predict a vertex from its surrounding context. The \u201cdirect analog\u201d of language modeling is therefore the reverse-direction conditional: instead of estimating Pr(v_i | v_1, \u2026, v_{i-1}) from earlier tokens, it estimates Pr(v_i | \u03a6(v_{i+1}), \u03a6(v_{i+2}), \u2026) from vertices that come after v_i in the walk. This happens because the objective is formulated to use the future context window around the current vertex, so the conditioning information is the embeddings of later vertices rather than the previously visited ones.",
+  "confidence": 0.62,
+  "confidence_reasoning": "I am moderately confident because the answer reflects the standard skip-gram interpretation of random-walk embedding methods, but the exact paper3 wording and notation are not fully specified in the prompt.",
+  "_token_nll": 0.2254747079343212
+}

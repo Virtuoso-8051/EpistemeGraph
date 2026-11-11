@@ -1,0 +1,82 @@
+{
+  "query_entities": [
+    "LINE model",
+    "Large-scale Information Network Embedding",
+    "network G = (V,E)",
+    "low-dimensional space R^d",
+    "first-order proximity",
+    "second-order proximity",
+    "mapping f: V -> R^d",
+    "vertex",
+    "d-dimensional vector representation",
+    "important structural proximities",
+    "original graph",
+    "embedding space"
+  ],
+  "triples": [
+    {
+      "source": "LINE model",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "network\u2019s observed proximity information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network\u2019s observed proximity information",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "first-order proximity",
+      "target_alias": "direct edge/adjacency strength",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network\u2019s observed proximity information",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "second-order proximity",
+      "target_alias": "similarity of neighborhood distributions",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "learning a mapping f: V -> R^d",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "mapping f: V -> R^d",
+      "source_alias": "",
+      "type": "ASSIGNS",
+      "target": "each vertex a d-dimensional vector representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "d-dimensional vector representation",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "important structural proximities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "important structural proximities",
+      "source_alias": "",
+      "type": "OF",
+      "target": "original graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "d-dimensional vector representation",
+      "source_alias": "",
+      "type": "IN",
+      "target": "embedding space",
+      "target_alias": "low-dimensional space R^d",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

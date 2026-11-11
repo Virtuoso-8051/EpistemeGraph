@@ -1,0 +1,58 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "multi-label classification (MLC)",
+    "grid search (GS)",
+    "Macro-F1 score (MFS)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "multi-label classification (MLC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "grid search (GS)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grid search (GS)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "p,q \u2208 {0.25, 0.50, 1, 2, 4}",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grid search (GS)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "only tested values for the return and in-out parameters were p,q \u2208 {0.25, 0.50, 1, 2, 4}",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "published evaluation",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "expanded grid beyond p,q \u2208 {0.25, 0.50, 1, 2, 4}",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "expanded grid beyond p,q \u2208 {0.25, 0.50, 1, 2, 4}",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "Macro-F1 score (MFS)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

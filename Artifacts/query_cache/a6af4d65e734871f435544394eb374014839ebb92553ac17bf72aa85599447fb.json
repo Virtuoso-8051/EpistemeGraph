@@ -1,0 +1,34 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node2vec parameter (NP)",
+    "arXiv ASTRO-PH network",
+    "Table 4"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "grid search",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "grid search",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "p and q",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "p and q",
+      "type": "CONTAINS",
+      "target": "{0.25, 0.5, 1, 2, 4}",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

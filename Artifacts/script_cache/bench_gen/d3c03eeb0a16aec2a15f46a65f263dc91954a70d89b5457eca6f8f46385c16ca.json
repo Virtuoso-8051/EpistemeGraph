@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In node2vec, what exact negative-sampling rate or number of negative samples per positive pair did the authors use when optimizing the likelihood objective with SGD?",
+      "why_unanswerable": "The passage says node2vec uses SGD with negative sampling, but it does not report the specific negative-sampling rate or count.",
+      "evidence_quote": "The word feature representations are learned by optmizing the likelihood objective using SGD with negative sampling [22].",
+      "difficulty": "easy"
+    },
+    {
+      "question": "For node2vec, how many dimensions d did the authors choose for the learned node feature vectors in their main experiments?",
+      "why_unanswerable": "The passage defines d as the feature dimension parameter, but it never gives a concrete value used in experiments.",
+      "evidence_quote": "Here d is a parameter specifying the number of dimensions of our feature representation.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Compared with DeepWalk, what quantitative improvement in accuracy did node2vec achieve on node classification tasks under the authors' best sampling strategy?",
+      "why_unanswerable": "The passage mentions that node2vec is motivated by prior work and that different sampling strategies exist, but it provides no benchmark results or accuracy comparisons.",
+      "evidence_quote": "In fact, as we shall show, there is no clear winning sampling strategy that works across all networks and all prediction tasks.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which exact training hardware setup did node2vec optimize its feature learning objective, including GPU model, CPU type, and amount of RAM?",
+      "why_unanswerable": "The passage discusses the learning objective and scalability in general terms, but it does not describe any hardware configuration used for training.",
+      "evidence_quote": "These architectures directly minimize the loss function for a downstream prediction task using several layers of non-linear transformations which results in high accuracy, but at the cost of scalability due to high training time requirements.",
+      "difficulty": "hard"
+    }
+  ]
+}

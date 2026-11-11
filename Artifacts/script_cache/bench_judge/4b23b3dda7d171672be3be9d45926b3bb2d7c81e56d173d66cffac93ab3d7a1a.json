@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Graph kernels compare graphs or nodes through hand-designed structural similarity measures and typically rely on explicit feature counts or pairwise similarity computations.",
+    "The main advantage of DeepWalk is that it learns task-specific, continuous representations automatically from the graph, which can capture latent structural patterns and scale better to large graphs than many kernel methods."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The papers support that DeepWalk does not encode structure inside a kernel function and instead learns representations that can be used directly as features for any classification method. However, the answer adds extra characterizations of graph kernels and DeepWalk\u2019s advantages (hand-designed similarity measures, explicit feature counts, task-specific continuous representations, and better scaling than many kernel methods) that are not stated in the provided evidence."
+}

@@ -1,0 +1,75 @@
+{
+  "query_entities": [
+    "LINE(2nd)",
+    "LINE(1st)",
+    "Flickr",
+    "second-order proximity",
+    "first-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "SON",
+      "type": "DEFINED_AS",
+      "target": "nodes are similar when they share neighbors or have similar neighborhood distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "1ST",
+      "type": "USES",
+      "target": "first-order proximity",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Flickr",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "extremely sparse network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "PROVIDES",
+      "target": "little signal for nodes with few or no direct links",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "SON",
+      "type": "ENABLES",
+      "target": "structural information through shared neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(1st)",
+      "target_alias": "1ST",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "embedding of nodes in sparse networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

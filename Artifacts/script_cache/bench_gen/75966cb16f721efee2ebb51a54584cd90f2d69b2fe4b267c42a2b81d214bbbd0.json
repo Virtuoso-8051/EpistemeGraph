@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How many node classification datasets did node2vec evaluate on in the KDD'16 study, and what were their names?",
+      "why_unanswerable": "The passage defines node classification and link prediction, but it does not report any node2vec experiments, dataset counts, or dataset names.",
+      "evidence_quote": "In a typical node classification task, we are interested in predicting the most probable labels of nodes in a network [33].",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What exact improvement in link prediction accuracy did node2vec achieve over a hand-engineered feature baseline on social networks?",
+      "why_unanswerable": "The passage explains what link prediction is and motivates learned representations, but it gives no accuracy results or baseline comparisons for node2vec.",
+      "evidence_quote": "Similarly, in link prediction, we wish to predict whether a pair of nodes in a network should have an edge connecting them [18].",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which hardware or computational setting did node2vec train its feature representations, and how long did training take per dataset?",
+      "why_unanswerable": "The passage discusses learning feature representations by optimization, but it contains no implementation details such as hardware, runtime, or training duration.",
+      "evidence_quote": "An alternative approach is to learn feature representations by solving an optimization problem [4].",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Compared with DeepWalk, what exact number of parameters did node2vec use for its embedding model on the protein-protein interaction network?",
+      "why_unanswerable": "The passage mentions protein-protein interaction networks as an example of a node classification task, but it does not mention DeepWalk, node2vec parameters, or any model-size comparison.",
+      "evidence_quote": "For example, in a social network, we might be interested in predicting interests of users, or in a protein-protein interaction network we might be interested in predicting functional labels of proteins [25, 37].",
+      "difficulty": "medium"
+    }
+  ]
+}

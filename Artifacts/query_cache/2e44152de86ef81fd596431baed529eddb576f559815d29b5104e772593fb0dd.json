@@ -1,0 +1,6 @@
+{
+  "answer": "LINE did not compare itself with MDS, IsoMap, or Laplacian eigenmaps because those classic dimensionality-reduction methods do not scale to large networks. They rely on dense pairwise similarity matrices and eigen-decomposition, which cost roughly quadratic memory and cubic time in the number of nodes, making them infeasible for the networks LINE targets. The evaluated datasets were large-scale information networks, on the order of millions of vertices and tens of millions to billions of edges (for example, Flickr, Twitter, and Sina Weibo-type networks), along with some smaller benchmark networks.",
+  "confidence": 0.4,
+  "confidence_reasoning": "The scalability rationale is well grounded in the paper's framing, but I am unsure of the exact stated reason and the precise node and edge counts for each dataset.",
+  "_token_nll": null
+}

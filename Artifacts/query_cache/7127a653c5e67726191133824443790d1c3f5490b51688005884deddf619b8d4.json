@@ -1,0 +1,61 @@
+{
+  "query_entities": [
+    "LINE",
+    "PASSAGE A",
+    "random walk (RW)",
+    "random-walk parameter \u03b3",
+    "edge weight",
+    "transition probability",
+    "weighted graph (WG)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge sampling proportional to edge weight",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "weighted graph (WG)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk parameter \u03b3",
+      "source_alias": "\u03b3",
+      "type": "DEFINED_AS",
+      "target": "exponent scaling edge weights in transition probability (proportional to w^\u03b3)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "increasing \u03b3",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "stronger bias toward heavier edges in sampled neighborhoods",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "equal edge weights",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "identical transition probabilities for any \u03b3",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "extreme \u03b3 values",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "nearly deterministic walk that always selects the heaviest edge",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "query_entities": [
+    "node2vec",
+    "BFS",
+    "DFS"
+  ],
+  "triples": [
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "node2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "network neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "neighborhood characterization stability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "lower variance in nearby structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "immediate local proximity bias",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "local neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "DFS",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "farther-away nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "global or structural equivalence patterns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

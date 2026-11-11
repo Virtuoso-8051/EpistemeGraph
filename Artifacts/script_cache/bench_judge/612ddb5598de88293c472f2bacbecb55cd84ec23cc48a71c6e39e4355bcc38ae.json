@@ -1,0 +1,10 @@
+{
+  "claims_checked": 10,
+  "unsupported_claims": [
+    "LINE's first-order objective is described as a 'symmetric KL-divergence-based objective'; the evidence does not contain this, and the description is questionable.",
+    "The claim that LINE uses edge sampling with alias tables to avoid the high variance of weighted SGD is not in the provided evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise that LINE uses truncated random walks for sparsity, and its node2vec description of p, q and the 1/p, 1, 1/q transition weights matches the evidence. However, it adds LINE implementation details (symmetric KL objective, alias-table variance argument) that the evidence does not contain, and it omits the gold point that LINE(1st) often beats LINE(2nd) in sparse networks."
+}

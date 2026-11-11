@@ -1,0 +1,6 @@
+{
+  "answer": "The premise is only partly supported. LINE (Tang et al., 2015) evaluated on large networks, including YouTube, and used DeepWalk as a baseline. The comparison is fairer on large graphs because DeepWalk is itself a scalable, widely used network embedding method, so it is a realistic competitor at that scale, not a strawman. It was run on the same network, under the same evaluation protocol (for example, the same embedding dimensionality and the same varying labeled-node fractions for multi-label classification), so the comparison is like-for-like. I cannot confirm the exact wording of the paper's justification, so this explanation is inferred from the setup rather than quoted.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I am reasonably sure LINE compared against DeepWalk on YouTube with a shared protocol, but I am unsure of the paper's exact stated rationale and of the dataset details.",
+  "_token_nll": null
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "I can't identify the specific study this question refers to, so I can't cite its exact numbers. Evidence that parallelizing DeepWalk hurts predictive performance on BlogCatalog and Flickr at 8 or more workers would typically be a table or plot of node-classification scores (such as Micro-F1 or Macro-F1 at fixed training ratios) against worker count, showing scores flat or declining beyond 8 workers while wall-clock time keeps improving. Such results usually stem from asynchronous SGD races and reduced effective learning-rate or sampling quality. If you can share the paper or its table, I can point to the specific values and explain them.",
+  "confidence": 0.15,
+  "confidence_reasoning": "I don't know the source paper, so I can't verify any specific claim about its worker-count results on BlogCatalog or Flickr, and the answer describes only the general form such evidence would take.",
+  "_token_nll": null
+}

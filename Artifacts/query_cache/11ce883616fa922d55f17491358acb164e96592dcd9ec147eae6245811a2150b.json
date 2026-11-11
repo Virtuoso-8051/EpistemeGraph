@@ -1,0 +1,122 @@
+{
+  "query_entities": [
+    "node2vec",
+    "DeepWalk",
+    "Flickr",
+    "YouTube"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "fixed, unbiased sampling strategy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "changing the walk bias",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "changing the walk bias",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "changing the walk bias",
+      "source_alias": "",
+      "type": "DEPENDS_ON",
+      "target": "graph and task",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Flickr",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "sparsely labeled graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "YouTube",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "sparsely labeled graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sparsely labeled graphs",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "limited available labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "performance differences",
+      "source_alias": "",
+      "type": "ARE_SENSITIVE_TO",
+      "target": "local neighborhood similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "performance differences",
+      "source_alias": "",
+      "type": "ARE_SENSITIVE_TO",
+      "target": "broader structural roles/communities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "default walk behavior closer to a useful BFS-style neighborhood sampler",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "DEMONSTRATES",
+      "target": "alternative BFS/DFS tradeoffs may improve or change performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison between BFS and DFS in node2vec",
+      "source_alias": "",
+      "type": "EXPLAINS",
+      "target": "why DeepWalk works well on Flickr and YouTube",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "comparison between BFS and DFS in node2vec",
+      "source_alias": "",
+      "type": "EXPLAINS",
+      "target": "whether DeepWalk's success comes from local proximity bias rather than a universally optimal random-walk strategy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

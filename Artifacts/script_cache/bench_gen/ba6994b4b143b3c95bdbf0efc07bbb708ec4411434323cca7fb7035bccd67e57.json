@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the node2vec objective maximize the probability of reconstructing a node's class label from its embedding, and how does that classification target shape the learned features?",
+      "false_premise": "node2vec optimizes a classification objective that predicts node labels from embeddings.",
+      "correction": "node2vec maximizes the log-probability of observing a sampled network neighborhood conditioned on a node's feature representation.",
+      "evidence_quote": "We seek to optimize the following objective function, which maximizes the log-probability of observing a network neighborhoodNS(u) for a nodeu conditioned on its feature representation, given byf: max f \u2211 u\u2208V logPr (NS(u)|f (u)). (1)",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec use a sliding window over consecutive vertices to define each source node's neighborhood, and why is that sequential context sufficient for networks?",
+      "false_premise": "node2vec defines neighborhoods with a sliding window over consecutive vertices.",
+      "correction": "node2vec uses a randomized neighborhood sampling strategy, because networks are not linear and need a richer notion of neighborhood than consecutive order.",
+      "evidence_quote": "Given the linear nature of text, the notion of a neighborhood can be naturally defined using a sliding window over consecutive words.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does node2vec rely on graph convolution layers instead of negative sampling to make the partition function tractable?",
+      "false_premise": "node2vec uses graph convolution layers and does not use negative sampling.",
+      "correction": "node2vec approximates the expensive partition function using negative sampling.",
+      "evidence_quote": "The per-node partition function, Zu = \u2211v\u2208V exp(f(u)\u00b7f(v)), is expensive to compute for large networks and we approximate it using negative sampling [22].",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What makes node2vec's source-neighborhood dot product asymmetric, and how does that asymmetry improve the model's ability to distinguish the source node from its neighbors?",
+      "false_premise": "node2vec models source-neighborhood pairs asymmetrically.",
+      "correction": "node2vec assumes symmetry in feature space and models each source-neighborhood node pair with a softmax unit parametrized by a dot product.",
+      "evidence_quote": "\u2022 Symmetry in feature space. A source node and neighborhood node have a symmetric effect over each other in feature space.",
+      "difficulty": "medium"
+    }
+  ]
+}

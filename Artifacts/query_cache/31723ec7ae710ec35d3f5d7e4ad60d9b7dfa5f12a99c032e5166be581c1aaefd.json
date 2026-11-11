@@ -1,0 +1,32 @@
+{
+  "query_entities": [
+    "number of walks started per vertex (GAMMA)",
+    "DEEPWALK"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "number of walks started per vertex (GAMMA)",
+      "target_alias": "GAMMA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "APPROXIMATES",
+      "target": "80",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "80 walks per vertex",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

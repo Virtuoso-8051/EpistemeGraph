@@ -1,0 +1,84 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "asynchronous stochastic gradient descent",
+    "Hogwild!",
+    "skip-gram model",
+    "stochastic gradient descent",
+    "random walk"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "asynchronous stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "stochastic gradient descent",
+      "target_alias": "SGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "random walk",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "extremely sparse updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous stochastic gradient descent",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "lock-free parallel training",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stochastic update",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "embedding vectors of nodes in one walk window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low overlap between concurrent updates",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "convergence",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "overwritten update",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "convergence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

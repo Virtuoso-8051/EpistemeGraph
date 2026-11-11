@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk's breadth-first sampling make it especially effective at characterizing structural equivalence in the immediate local structure of nodes?",
+      "false_premise": "DeepWalk uses breadth-first sampling and is especially effective for structural equivalence in immediate local structure.",
+      "correction": "DeepWalk proposes search using uniform random walks, not breadth-first sampling, and the passage associates the immediate-local-structure structural equivalence point with BFS rather than DeepWalk.",
+      "evidence_quote": "DeepWalk [24] proposes search using uniform random walks.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE's uniform random-walk exploration help it discover homophilous communities at the cost of high variance?",
+      "false_premise": "LINE uses uniform random walks and is the method described as discovering homophilous communities at the cost of high variance.",
+      "correction": "The passage says DeepWalk uses uniform random walks, while DFS is the strategy described as important in discovering homophilous communities at the cost of high variance.",
+      "evidence_quote": "DeepWalk [24] proposes search using uniform random walks.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does node2vec outperform DeepWalk and LINE on link prediction when the embeddings are bootstrapped using the Hadamard operator on the Facebook dataset?",
+      "false_premise": "node2vec is the best method on Facebook with the Hadamard operator.",
+      "correction": "In the Facebook column for Hadamard, node2vec scores 0.7543, which is higher than DeepWalk at 0.6923 and LINE at 0.6330, so the premise is actually correct about that comparison; however, the passage does not frame node2vec as the method being discussed in the explanatory paragraph about search strategies, so this question does not fit a contradiction and should be replaced.",
+      "evidence_quote": "(b) DeepWalk 0.9680 0.7441 0.9340 LINE 0.9490 0.7249 0.8902 node2vec 0.9680 0.7719 0.9366 Spectral Clustering 0.7200 0.6356 0.7099",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What makes LINE's unrestricted exploration over deeper network neighborhoods a flexible alternative to DeepWalk's rigid search strategy?",
+      "false_premise": "LINE has unrestricted exploration over deeper network neighborhoods and is flexible in that sense.",
+      "correction": "The passage says LINE proposes primarily a breadth-first strategy over only 1-hop and 2-hop neighbors, and that this is restrictive and provides no flexibility in exploring nodes at further depths.",
+      "evidence_quote": "LINE [28] proposes primarily a breadth-first strategy, sampling nodes and optimizing the likelihood independently over only 1-hop and 2-hop neighbors.",
+      "difficulty": "medium"
+    }
+  ]
+}

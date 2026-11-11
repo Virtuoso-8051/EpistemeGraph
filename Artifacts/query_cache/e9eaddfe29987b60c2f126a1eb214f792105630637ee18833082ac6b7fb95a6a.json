@@ -1,0 +1,85 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "node2vec",
+    "PPI network",
+    "Macro-F1",
+    "biased random walk procedure",
+    "unbiased random walk procedure",
+    "multi-label classification"
+  ],
+  "triples": [
+    {
+      "source": "PPI network",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "multi-label classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "PPI network",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "dense graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "unbiased random walk procedure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walk procedure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "uniform setting (p = 1, q = 1)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "node2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "Macro-F1",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "node2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "multi-label classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

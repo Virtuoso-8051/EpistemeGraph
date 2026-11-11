@@ -1,0 +1,14 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The network is based on Knuth's Stanford GraphBase (not stated in the evidence)",
+    "Edges are weighted by how often the pair co-appears (evidence describes unweighted coappearance edges)",
+    "Embeddings are typically around 128 dimensions (evidence says d = 16 was used in the case study)",
+    "Default-like walk length, walks per node, and window size are described (not reported in the evidence)",
+    "Projection to 2D uses PCA or t-SNE (evidence says only that the network is visualized in two dimensions, without naming the method)",
+    "Clusters correspond to main protagonists' circles (evidence says clusters capture communities of characters in major sub-plots, not specifically protagonists)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly gives roughly 77 nodes and 254 edges, the coappearance construction, and the p/q biased walks feeding a skip-gram model. However, it misstates the embedding dimension (128 instead of d=16), adds weighting and dataset-source details not in the evidence, and invents walk parameters and a PCA/t-SNE projection."
+}

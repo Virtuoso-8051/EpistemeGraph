@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "On DBLP PaperCitation, DeepWalk's multi-hop random-walk co-occurrences give more training signal and yield better embeddings than LINE(2nd), which accepts the false premise that DeepWalk outperforms LINE(2nd) there",
+    "The SGD scheme with repeated walks and a decaying learning rate yields better-generalizing embeddings than LINE(2nd), which the evidence does not state and which contradicts it",
+    "LINE(2nd) sees only one-hop neighborhoods and is therefore weaker on sparse citation graphs, which the source does not claim for this dataset"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The source says LINE(2nd) significantly outperforms DeepWalk on DBLP(PaperCitation), because random walks only follow citing paths, and LINE(2nd) is the model directly optimized by SGD. The answer accepts the reversed premise and explains a DeepWalk advantage that the evidence contradicts."
+}

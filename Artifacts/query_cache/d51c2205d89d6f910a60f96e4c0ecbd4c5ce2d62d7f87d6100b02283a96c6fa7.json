@@ -1,0 +1,6 @@
+{
+  "answer": "Assuming paper3 is DeepWalk-style SkipGram, it uses hierarchical softmax: vertices are placed as leaves of a binary tree, so predicting a vertex costs O(log|V|) rather than O(|V|) for a full softmax over the partition function. (Negative sampling is the other common SkipGram trick, if paper3 is a different SkipGram variant.) Node2vec (paper2) describes its custom graph-based objective as learning feature representations that preserve each node's network neighborhood, i.e., maximizing the likelihood of observing a node's neighborhood. Its neighborhood notion is flexible, controlled by biased random walks (BFS-like and DFS-like), so the embeddings balance homophily and structural equivalence.",
+  "confidence": 0.45,
+  "confidence_reasoning": "The papers were not provided, so I inferred that paper3 is DeepWalk and paper2 is node2vec, and the specific claims about hierarchical softmax and neighborhood preservation are from memory and may not match the actual documents.",
+  "_token_nll": null
+}

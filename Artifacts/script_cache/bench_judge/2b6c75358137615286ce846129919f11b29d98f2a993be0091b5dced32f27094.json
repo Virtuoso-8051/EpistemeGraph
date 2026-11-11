@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The paper tunes p and q on held-out validation data rather than explicitly by 10-fold cross-validation (contradicted: the evidence says the hyperparameters were learned using 10-fold cross-validation on 10% labeled data)",
+    "The paper reports Micro-F1 and Macro-F1 across several labelled-training-ratio settings and Table 2 does not give a single set of numbers (partly contradicted: Table 2 gives a single set of Macro-F1 values at 50% labeled)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to give seed-averaged values and does not invent numbers. However, it wrongly says the paper did not use 10-fold cross-validation, which the evidence contradicts, and it mischaracterizes Table 2 as not giving a single set of numbers."
+}

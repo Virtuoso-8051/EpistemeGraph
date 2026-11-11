@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Negative sampling is described as the alternative SkipGram approximation that uses binary logistic regression; the evidence never mentions negative sampling.",
+    "DeepWalk 'does not use negative sampling' is not stated in the evidence, though it is consistent with the evidence that DeepWalk uses hierarchical softmax."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer rejects the false premise and correctly says the speedup comes from hierarchical softmax, which reduces the cost from O(V) to O(log V) with binary classifiers along a tree path. However, it adds claims about negative sampling that the evidence does not contain. These are standard background knowledge but are not supported by the sources. The answer also treats logistic regression as a separate, valid speedup, whereas the paper presents it as the costly option."
+}

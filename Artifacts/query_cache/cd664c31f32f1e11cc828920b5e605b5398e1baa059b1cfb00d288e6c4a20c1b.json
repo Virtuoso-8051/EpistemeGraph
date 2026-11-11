@@ -1,0 +1,41 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "number of walks started per vertex (GAMMA)",
+    "BlogCatalog"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "number of walks started per vertex (GAMMA)",
+      "target_alias": "GAMMA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks started per vertex (GAMMA)",
+      "source_alias": "GAMMA",
+      "type": "REPRESENTS",
+      "target": "80 random walks per vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "walk length (t)",
+      "target_alias": "t",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length (t)",
+      "source_alias": "t",
+      "type": "REPRESENTS",
+      "target": "40",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk can outperform LINE(2nd) on Wikipedia page classification because the two methods capture different kinds of graph structure. LINE(2nd) is designed to preserve second-order proximity, which mainly reflects similarity in a node\u2019s immediate neighborhood, while DeepWalk uses truncated random walks and a skip-gram objective to learn embeddings from broader, higher-order co-occurrence patterns. On Wikipedia, page categories are often better reflected by these multi-hop structural contexts than by only local neighbor similarity. So even when edge sampling removes the advantage of using weighted edges, DeepWalk can still do better because its random-walk context modeling captures richer global relationships that are more useful for classification.",
+  "confidence": 0.86,
+  "confidence_reasoning": "This explanation matches the standard interpretation of DeepWalk versus LINE(2nd) and the reported effect of edge sampling, though the exact empirical reason can vary by dataset and experimental setup.",
+  "_token_nll": 0.23312338323541026
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "In LINE, the objective is based on observed edge/co-occurrence counts, and the logarithm appears when the model is written as a weighted factorization of those counts: for a pair of nodes with co-occurrence count c_ij, the target is effectively log(c_ij) (or a shifted/normalized version of it) when fitting the embedding. This is used in the second-order/edge-preserving formulation, where the model tries to match the empirical co-occurrence statistics of the graph rather than generate sequences. By contrast, node2vec does not use a log of raw co-occurrence counts as its training signal; it first generates many random-walk sequences over the graph, treats those sequences like sentences, and then trains a skip-gram model on the sampled node-context pairs. So LINE is count/statistics-driven, while node2vec is sample-driven via random walks.",
+  "confidence": 0.84,
+  "confidence_reasoning": "The high-level distinction between LINE\u2019s count-based objective and node2vec\u2019s random-walk skip-gram training is well established, though the exact phrasing about when a logarithm is used can vary by LINE formulation and implementation.",
+  "_token_nll": 0.2878873976703468
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec use biased random walks to control the search space, and how does LINE address network sparsity with truncated random walks when comparing its first- and second-order proximity variants?",
+      "gold_answer": "node2vec uses tunable biased random walks to explore diverse neighborhoods and control the search space, while LINE uses truncated random walks in DeepWalk-style reasoning to enrich sparse neighborhoods; in sparse networks, LINE(1st) often beats LINE(2nd), and combining first- and second-order proximity helps LINE outperform DeepWalk.",
+      "evidence_quote": "By choosing an appropriate notion of a neighborhood, node2vec can learn representations that organize nodes based on their network roles and/or communities they belong to.",
+      "evidence_quote_b": "It is interesting to observe how DeepWalk tackles the network sparsity through truncated random walks, which enrich the neighbors or contexts of each vertex.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does LINE(2nd) become less reliable than LINE(1st), and how does node2vec claim to handle sparse or noisy network settings differently?",
+      "gold_answer": "LINE(2nd) can become inaccurate when the network is too sparse and nodes have too few neighbors, whereas node2vec says its learned representations are robust to noisy or missing edges and can still perform competitively with only 10% labeled data.",
+      "evidence_quote": "when the network is too sparse and the average number of neighbors of a node is too small, the second-order proximity may become inaccurate.",
+      "evidence_quote_b": "The algorithm shows competitive performance with even 10% labeled data and is also robust to perturbations in the form of noisy or missing edges.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What do node2vec and LINE each say about combining learned representations, and how do the combinations differ in what they are intended to represent?",
+      "gold_answer": "node2vec composes node embeddings with binary operators to produce edge representations for link prediction, while LINE concatenates the embeddings from LINE(1st) and LINE(2nd) because first- and second-order proximity are complementary.",
+      "evidence_quote": "We also show how feature representations of individual nodes can be extended to pairs of nodes (i.e., edges).",
+      "evidence_quote_b": "By concatenating the representations learned by LINE(1st) and LINE(2nd), the performance further improves, confirming that the two proximities are complementary to each other.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Compare how node2vec and LINE relate their embedding objectives to network structure: what does node2vec emphasize about roles and communities, and what does LINE emphasize about first- versus second-order proximity in social networks?",
+      "gold_answer": "node2vec aims to organize nodes by roles and communities using a flexible neighborhood definition, while LINE emphasizes that in social networks first-order proximity is often more important than second-order proximity, though the two are complementary.",
+      "evidence_quote": "node2vec can learn representations that organize nodes based on their network roles and/or communities they belong to.",
+      "evidence_quote_b": "first-order proximity is still more important than secondorder proximity in social network, which indicates strong ties;",
+      "difficulty": "medium"
+    }
+  ]
+}

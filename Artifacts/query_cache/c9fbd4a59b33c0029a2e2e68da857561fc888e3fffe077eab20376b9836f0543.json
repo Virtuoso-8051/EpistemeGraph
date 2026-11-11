@@ -1,0 +1,52 @@
+{
+  "query_entities": [
+    "first-order proximity",
+    "network embedding",
+    "weighted network",
+    "unweighted network",
+    "second-order neighbor",
+    "network neighborhood"
+  ],
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "IS_A",
+      "target": "network embedding",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "REQUIRES",
+      "target": "weighted network",
+      "target_alias": "WN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "DEFINED_AS",
+      "target": "unweighted network",
+      "target_alias": "UN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "REFUTED",
+      "target": "network neighborhood",
+      "target_alias": "NN",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "second-order neighbor",
+      "source_alias": "SON",
+      "type": "GENERATES",
+      "target": "network neighborhood",
+      "target_alias": "NN",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

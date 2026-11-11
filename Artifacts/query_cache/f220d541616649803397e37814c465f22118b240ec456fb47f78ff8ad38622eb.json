@@ -1,0 +1,50 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "streaming variant (SV)",
+    "random walk (RW)",
+    "graph connectivity (GC)"
+  ],
+  "triples": [
+    {
+      "source": "streaming DeepWalk variant",
+      "source_alias": "SV",
+      "type": "REQUIRES",
+      "target": "entire graph",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk transition probabilities",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "global graph properties",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "transition normalization",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "all of a node's neighbors",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "walk corpus",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "sampling walks from final topology",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "walk generation based only on local already-seen edges",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "incremental execution without whole graph",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

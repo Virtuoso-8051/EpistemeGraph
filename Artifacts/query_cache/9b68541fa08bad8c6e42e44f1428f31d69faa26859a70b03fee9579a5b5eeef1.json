@@ -1,0 +1,65 @@
+{
+  "query_entities": [
+    "LINE",
+    "author citation network (ACN)",
+    "citation network (CN)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "paper citation network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "author citation network",
+      "target_alias": "ACN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper citation network",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "citation network (CN)",
+      "target_alias": "CN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "paper citation network",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "citation links as edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "author citation network",
+      "source_alias": "ACN",
+      "type": "REPRESENTS",
+      "target": "citation relationships between authors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "author citation network",
+      "source_alias": "ACN",
+      "type": "CONTAINS",
+      "target": "authors as nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "author citation network",
+      "source_alias": "ACN",
+      "type": "IS_A",
+      "target": "weighted network (WN)",
+      "target_alias": "WN",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

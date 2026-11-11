@@ -1,0 +1,6 @@
+{
+  "answer": "Graph factorization outperforms DeepWalk in the Wikipedia page classification results because it directly factorizes a graph proximity matrix, so it can preserve the global weighted structure of the Wikipedia link graph more faithfully than DeepWalk\u2019s random-walk-based, local co-occurrence objective. In that setting, the graph is relatively sparse and the classification signal is strongly tied to explicit link structure, which favors methods that optimize a matrix factorization objective over methods that learn embeddings indirectly from sampled walks. Compared with LINE-based methods, graph factorization also tends to capture higher-order proximity more effectively while still using the full graph information, whereas LINE mainly preserves first- or second-order local neighborhood relations. As a result, graph factorization produces embeddings that are more aligned with the class structure in Wikipedia pages, leading to better classification performance.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This explanation is consistent with the standard differences between graph factorization, DeepWalk, and LINE, but the exact empirical reason depends on the specific dataset and experimental setup.",
+  "_token_nll": 0.2826255101423997
+}

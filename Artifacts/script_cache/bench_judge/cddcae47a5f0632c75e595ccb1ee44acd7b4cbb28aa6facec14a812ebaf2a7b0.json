@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "LINE avoids the costly matrix factorization used by graph factorization; the evidence says graph factorization is optimized through SGD, not matrix decomposition",
+    "Graph factorization's matrix decomposition is the most expensive at scale; the evidence says LINE is only at least 10% faster than graph factorization, and DeepWalk is five times slower",
+    "LINE is 'substantially faster' than graph factorization; the evidence only reports at least 10% faster",
+    "Running time is roughly linear in the number of edges; not stated in the evidence",
+    "The answer omits the specific conditions: a single machine with 1T memory, 40 cores, 16 threads, under 3 hours for 2M nodes and 1B edges"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says LINE is efficient on large networks with edge sampling and asynchronous SGD, and faster than DeepWalk. However, it wrongly portrays graph factorization as a costly matrix decomposition and as the slowest method, overstates the speedup over it (evidence: only at least 10%), and omits the hardware conditions and the 'five times slower' figure for DeepWalk."
+}

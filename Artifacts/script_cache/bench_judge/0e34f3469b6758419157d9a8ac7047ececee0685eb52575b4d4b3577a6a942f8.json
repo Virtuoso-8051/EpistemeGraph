@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "DeepWalk trains skip-gram with a learning rate that decreases linearly over training, inherited from word2vec (the evidence does show the SGD learning rate is initially 2.5% and decreased linearly, but the claim that it is a DeepWalk feature inherited from word2vec and that it aids convergence and reduces noise is not stated in the evidence)",
+    "The decaying schedule helps embeddings converge and reduces noise from late updates, affecting stability and quality rather than throughput (not stated in the papers)",
+    "Any streaming speed advantage comes from generating walks on the fly and single-pass processing without storing the full corpus (the evidence does not attribute speed gains to these mechanisms)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, since the source states that a decaying learning rate is no longer possible in streaming and a small constant rate is used instead. However, it omits this key correction and adds unsupported explanations about convergence, noise, and the sources of streaming speedup that the papers do not contain."
+}

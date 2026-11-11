@@ -1,0 +1,13 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI claims the tree can be kept only while frequency estimates remain adequate, and rebuilt when frequencies drift; the evidence says the tree can be built for the maximum cardinality when |V| is known or boundable, not rebuilt on drift.",
+    "The AI says new vertices are inserted as new leaves by splitting or attaching near low-frequency nodes; the evidence says vertices are assigned to one of the remaining pre-built leaves when first seen, not inserted into the tree.",
+    "The AI says the tree is built from an initial sample and not rebuilt after drift, which is not in the evidence.",
+    "The AI says the tree is weighted by visit frequency in the walk corpus; the evidence only mentions Huffman coding for frequent elements in the streaming section, and the core streaming condition (known or boundable cardinality of V) is omitted.",
+    "The AI's claim that vertex-frequency distribution known enables the tree is only loosely tied to the source, which says frequency estimation a priori is an optional refinement for assignment."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The gold answer states the key condition is that the cardinality of V is known or boundable, with new vertices assigned to remaining pre-built leaves on first sight. The AI answer misses this condition and instead describes dynamic leaf insertion and periodic rebuilding, which the evidence does not contain."
+}

@@ -1,0 +1,101 @@
+{
+  "query_entities": [
+    "matrix representations of graph (MRG)",
+    "adjacency matrix (AM)",
+    "graph Laplacian",
+    "unsupervised representation learning (URL)",
+    "Laplacian eigenmap (LE)",
+    "node representation (NR)",
+    "matrix factorization (MF)"
+  ],
+  "triples": [
+    {
+      "source": "graph Laplacian",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "D - A",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix representations of graph (MRG)",
+      "source_alias": "MRG",
+      "type": "CONTAINS",
+      "target": "adjacency matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix representations of graph (MRG)",
+      "source_alias": "MRG",
+      "type": "CONTAINS",
+      "target": "graph Laplacian",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix representations of graph (MRG)",
+      "source_alias": "MRG",
+      "type": "CONTAINS",
+      "target": "positive pointwise mutual information (PPMI) matrix",
+      "target_alias": "PPMI",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised representation learning (URL)",
+      "source_alias": "URL",
+      "type": "USES",
+      "target": "matrix factorization (MF)",
+      "target_alias": "MF",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmap (LE)",
+      "source_alias": "LE",
+      "type": "USES",
+      "target": "graph Laplacian",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "GraRep",
+      "source_alias": "",
+      "type": "USES",
+      "target": "matrix factorization (MF)",
+      "target_alias": "MF",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "HOPE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "matrix factorization (MF)",
+      "target_alias": "MF",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NetMF",
+      "source_alias": "",
+      "type": "USES",
+      "target": "matrix factorization (MF)",
+      "target_alias": "MF",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation (NR)",
+      "source_alias": "NR",
+      "type": "MINIMIZES",
+      "target": "reconstruction error",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node representation (NR)",
+      "source_alias": "NR",
+      "type": "APPROXIMATES",
+      "target": "structural similarity of graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

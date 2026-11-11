@@ -1,0 +1,50 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "Karate network",
+    "community structure",
+    "latent space"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "GENERATES",
+      "target": "Karate network 2-dimensional embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Karate network 2-dimensional embedding",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "PRESERVE",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertices closely connected in original graph",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "nearby points in latent space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "community structure",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "distinguishable clusters in 2D representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

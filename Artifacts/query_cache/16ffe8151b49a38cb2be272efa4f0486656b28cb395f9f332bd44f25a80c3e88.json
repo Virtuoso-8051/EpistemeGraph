@@ -1,0 +1,106 @@
+{
+  "query_entities": [
+    "Principal Component Analysis",
+    "Multi-Dimensional Scaling",
+    "large real-world networks",
+    "dense matrices",
+    "pairwise distance information",
+    "high computational and memory costs",
+    "large graphs",
+    "latent representations",
+    "link prediction",
+    "node classification",
+    "prediction performance",
+    "modern network embedding methods"
+  ],
+  "triples": [
+    {
+      "source": "Principal Component Analysis",
+      "source_alias": "PCA",
+      "type": "USES",
+      "target": "dense matrices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Multi-Dimensional Scaling",
+      "source_alias": "MDS",
+      "type": "USES",
+      "target": "pairwise distance information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "dense matrices",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "high computational and memory costs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "pairwise distance information",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "high computational and memory costs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "high computational and memory costs",
+      "source_alias": "",
+      "type": "SCALES_POORLY_WITH",
+      "target": "large real-world networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Principal Component Analysis",
+      "source_alias": "PCA",
+      "type": "APPLICABLE_FOR",
+      "target": "large graphs",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Multi-Dimensional Scaling",
+      "source_alias": "MDS",
+      "type": "APPLICABLE_FOR",
+      "target": "large graphs",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "latent representations",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "moderate prediction performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representations",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representations",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent representations",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "modern network embedding methods",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

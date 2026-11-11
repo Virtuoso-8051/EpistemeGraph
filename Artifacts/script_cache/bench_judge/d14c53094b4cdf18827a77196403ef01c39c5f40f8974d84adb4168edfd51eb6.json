@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Edge sampling uses alias tables, so each sample costs O(1) after O(|E|) preprocessing, and the vertex-side negative sampling table adds O(|V|) memory.",
+    "Training the first-order and second-order proximity models separately and concatenating them doubles the constant factor but keeps the same order."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer (O(dK|E|), linear in edges, independent of vertices, with K negative samples and d dimensions) is directly supported by the evidence. However, the claims about alias tables, O(|V|) memory for the negative sampling table, and a doubled constant factor from separate training are not stated in the provided evidence, so they are unsupported additions."
+}

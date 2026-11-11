@@ -1,0 +1,93 @@
+{
+  "query_entities": [
+    "Learning social representation (LSR)",
+    "Social representation (SR)",
+    "Community membership (CM)",
+    "latent representation (LR)",
+    "Community aware (CA)",
+    "latent dimension (LD)",
+    "continuous feature representation (CFR)"
+  ],
+  "triples": [
+    {
+      "source": "Learning social representation (LSR)",
+      "source_alias": "LSR",
+      "type": "REQUIRES",
+      "target": "adaptability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Learning social representation (LSR)",
+      "source_alias": "LSR",
+      "type": "REQUIRES",
+      "target": "community-awareness",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Learning social representation (LSR)",
+      "source_alias": "LSR",
+      "type": "REQUIRES",
+      "target": "sparsity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Learning social representation (LSR)",
+      "source_alias": "LSR",
+      "type": "REQUIRES",
+      "target": "dimensionality",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Community aware (CA)",
+      "source_alias": "CA",
+      "type": "IS_A",
+      "target": "community-awareness",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continuous feature representation (CFR)",
+      "source_alias": "CFR",
+      "type": "ENABLES",
+      "target": "Community membership (CM)",
+      "target_alias": "CM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continuous feature representation (CFR)",
+      "source_alias": "CFR",
+      "type": "REPRESENTS",
+      "target": "graded real-valued membership strength",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Community membership (CM)",
+      "source_alias": "CM",
+      "type": "IS_A",
+      "target": "overlapping community membership",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continuous feature representation (CFR)",
+      "source_alias": "CFR",
+      "type": "PRESERVES",
+      "target": "smooth similarity measures between nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent dimension (LD)",
+      "source_alias": "LD",
+      "type": "REQUIRES",
+      "target": "low-dimensional representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

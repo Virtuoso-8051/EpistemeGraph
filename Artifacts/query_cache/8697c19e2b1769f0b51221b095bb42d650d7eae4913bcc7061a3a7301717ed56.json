@@ -1,0 +1,6 @@
+{
+  "answer": "In the LINE network embedding framework, the authors compare the neighborhood vectors p_u and p_v using the Kullback\u2013Leibler (KL) divergence. The exact similarity/distance function is\n\nD_{KL}(p_u \\| p_v) = \\sum_i p_u(i) \\log \\frac{p_u(i)}{p_v(i)}.\n\nFor second-order proximity, they minimize this divergence between the empirical neighborhood distribution of a vertex and the distribution predicted by its embedding.",
+  "confidence": 0.96,
+  "confidence_reasoning": "This is a standard, explicit formula from the LINE paper\u2019s second-order proximity objective, and I am highly confident it is stated correctly.",
+  "_token_nll": 0.14172851455795182
+}

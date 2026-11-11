@@ -1,0 +1,6 @@
+{
+  "answer": "The question's premise is not something I can verify from a specific source, so this is a reasoned explanation rather than a confirmed finding. DeepWalk trains skip-gram with stochastic gradient descent on node sequences from truncated random walks, so each node is paired with many neighbors up to several hops away within a context window. LINE(2nd) instead samples direct edges and uses second-order proximity with negative sampling, so it sees only one-hop neighborhoods per update. On a sparse citation graph like DBLP PaperCitation, where many nodes have few direct links, the multi-hop co-occurrences from walks give more training signal per node and capture community structure more robustly. The SGD scheme with repeated walks and a decaying learning rate therefore tends to yield better-generalizing embeddings, though the exact reason in the source paper may differ.",
+  "confidence": 0.3,
+  "confidence_reasoning": "I could not identify the specific source study, so the claimed mechanism and the premise that DeepWalk outperforms LINE(2nd) on this dataset are plausible but unverified.",
+  "_token_nll": null
+}

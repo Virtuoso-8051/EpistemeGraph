@@ -1,0 +1,6 @@
+{
+  "answer": "The passages are not included in the prompt, so I can't cite their specifics. In general, the Skip-gram objective predicts surrounding context words from a center (target) word: for each word, it maximizes the probability of each word within a fixed window around it, conditioned only on that center word, and the context words are treated as conditionally independent. A standard language-modeling objective instead predicts the next word from the preceding words (a left-to-right, autoregressive factorization, P(w_t | w_1...w_{t-1})). So Skip-gram goes from a center word to its neighbors in both directions, while language modeling goes from the past sequence to the next token. If Passage A and Passage B define these objectives differently, their specific formulations should take precedence over this general description.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The general descriptions of Skip-gram and language modeling are standard and accurate, but the passages were not provided, so I cannot verify that they match the specific formulations the question intends.",
+  "_token_nll": null
+}

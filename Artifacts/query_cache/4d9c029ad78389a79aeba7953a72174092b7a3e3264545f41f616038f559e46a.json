@@ -1,0 +1,6 @@
+{
+  "answer": "In node2vec, BFS- and DFS-like random walks bias the embeddings toward different notions of similarity. BFS-style walks stay close to the starting node and tend to sample nodes in the same local neighborhood, so they are better at capturing homophily or community-based similarity: nodes that are directly connected or share many nearby neighbors. DFS-style walks move farther away from the start and explore outward branches, so they are better at capturing structural equivalence: nodes that may not be close in the graph but play similar roles or have similar connectivity patterns, such as two hubs in different parts of the network. In this sense, BFS mainly represents local neighborhood similarity, while structural equivalence is more associated with DFS-like exploration rather than BFS.",
+  "confidence": 0.95,
+  "confidence_reasoning": "This matches the standard node2vec interpretation of the BFS/DFS tradeoff and the distinction between homophily/local proximity and structural equivalence.",
+  "_token_nll": 0.15492888354750536
+}

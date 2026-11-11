@@ -1,0 +1,6 @@
+{
+  "answer": "I can't identify a specific paper that defines these conditions, so this is a general answer. DeepWalk's Hierarchical Softmax uses a Huffman tree whose leaves are vertices, weighted by their visit frequency in the random-walk corpus. In a streaming setting, that tree can be kept only while the frequency estimates remain adequate, for example when the vertex-frequency distribution is known or stable, or when the tree is built from an initial sample and not rebuilt after large drift. New vertices are typically handled by inserting them as new leaves at an appropriate position in the existing tree (for instance by splitting or attaching them near low-frequency nodes), initializing their embeddings and inner-node parameters, and training on incoming walks. When frequencies drift too far from those the tree was built on, the tree is rebuilt, often periodically or on a threshold.",
+  "confidence": 0.25,
+  "confidence_reasoning": "The answer is a plausible general description of Huffman-tree-based hierarchical softmax under streaming updates, but I could not verify the specific paper's conditions or new-vertex procedure, so details may be wrong.",
+  "_token_nll": null
+}

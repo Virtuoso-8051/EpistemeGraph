@@ -1,0 +1,105 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "node embedding (NE)",
+    "Link Prediction (LP)"
+  ],
+  "triples": [
+    {
+      "source": "sparsity in networks",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "most possible pairs of nodes are not connected",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adjacency matrix",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "mostly zeros",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sparse high-dimensional representations",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "inefficient to store and compute with",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "GENERATES",
+      "target": "node sequences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "word2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "GENERATES",
+      "target": "dense low-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "NE",
+      "type": "REPRESENTS",
+      "target": "nodes with similar neighborhoods or structural roles have similar vectors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "NE",
+      "type": "APPLICABLE_FOR",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "NE",
+      "type": "APPLICABLE_FOR",
+      "target": "Link Prediction (LP)",
+      "target_alias": "LP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "NE",
+      "type": "APPLICABLE_FOR",
+      "target": "visualization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

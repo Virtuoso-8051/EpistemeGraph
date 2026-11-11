@@ -1,0 +1,80 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "CSGD"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram",
+      "target_alias": "Word2Vec",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Stochastic gradient descent",
+      "target_alias": "SGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical softmax",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "Reduction of update cost from O(|V|) to O(log|V|)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Scalability and efficiency",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Online learning",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian eigenmaps",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "Closed-form eigendecomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Spectral/matrix-factorization methods",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "Closed-form eigendecomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Older distributed graph representations",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Back-propagation",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

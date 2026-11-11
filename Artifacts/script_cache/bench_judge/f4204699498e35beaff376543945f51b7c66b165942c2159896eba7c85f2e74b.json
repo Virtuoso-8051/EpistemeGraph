@@ -1,0 +1,12 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "DeepWalk is reported to outperform SpectralClustering and Modularity on YouTube multi-label classification.",
+    "The comparison covers Micro-F1 and Macro-F1 across labeled-training fractions from about 1% to 10%, with DeepWalk staying ahead of both baselines.",
+    "The baselines (SpectralClustering and Modularity) still ran on the YouTube graph, so the comparison was possible even on a graph large enough for them.",
+    "The paper presents this as evidence that DeepWalk beats spectral and modularity-based embeddings on YouTube."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence explicitly states that YouTube's size prevents SpectralClustering and Modularity from running, so the AI answer's central claim of a DeepWalk-versus-those-baselines comparison on YouTube is false. The answer accepts the false premise and fabricates a comparison, whereas a faithful answer would note that only EdgeCluster was compared on YouTube."
+}

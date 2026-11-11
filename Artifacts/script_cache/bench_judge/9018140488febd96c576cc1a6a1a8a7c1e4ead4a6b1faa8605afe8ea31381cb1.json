@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "DeepWalk is reported to outperform SpectralClustering and Modularity on YouTube",
+    "DeepWalk stays ahead of both baselines across 1%-10% training fractions on YouTube, with a modest gap of a few points",
+    "The graph is large enough that the baselines still ran"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The paper states that YouTube's size prevents SpectralClustering and Modularity from running, and only EdgeCluster is compared there. The answer accepts the false premise and fabricates a comparison against both baselines."
+}

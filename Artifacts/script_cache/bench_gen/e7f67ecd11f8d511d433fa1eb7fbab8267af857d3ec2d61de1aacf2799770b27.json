@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does the proposed unsupervised method for relational classification differ from traditional approaches that use iterative approximate inference, and what advantage does this separation provide?",
+      "gold_answer": "Traditional approaches formulate relational classification as inference in an undirected Markov network and then use iterative approximate inference methods such as iterative classification, Gibbs sampling, or label relaxation. The proposed method instead learns structural features independently of labels, which avoids cascading errors that can occur in iterative methods and lets the same representation be reused for multiple classification problems on the same network.",
+      "evidence_quote": "We propose an unsupervised method which learns features that capture the graph structure independent of the labels\u2019 distribution.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What kind of representation does the method aim to learn for the network, and how are the learned dimensions described?",
+      "gold_answer": "The method aims to learn a matrix XE in R|V|\u00d7d, where d is a small number of latent dimensions. These representations are distributed, meaning that each social phenomenon is expressed by a subset of dimensions and each dimension contributes to a subset of the social concepts represented in the space.",
+      "evidence_quote": "Our goal is to learn XE\u2208 R|V|\u00d7d, where d is small number of latent dimensions.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why are the learned structural features said to be especially useful with simple machine learning algorithms, even though they can be used with any classifier?",
+      "gold_answer": "The features can be combined with any classification algorithm, including iterative methods, because they are general structural representations. The passage says their greatest utility is that they are easy to integrate with simple machine learning algorithms, while also scaling appropriately to real-world networks.",
+      "evidence_quote": "However, we believe that the greatest utility of these features is their easy integration with simple machine learning algorithms.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions should the social representations remain useful when the network changes, and what property should the latent dimensions satisfy for community awareness?",
+      "gold_answer": "The representations should remain useful when real social networks evolve, so that new social relations do not require rerunning the learning process from scratch. For community awareness, the distance between latent dimensions should act as a metric for evaluating social similarity between the corresponding members of the network.",
+      "evidence_quote": "Real social networks are constantly evolving; new social relations should not require repeating the learning process all over again.",
+      "difficulty": "hard"
+    }
+  ]
+}

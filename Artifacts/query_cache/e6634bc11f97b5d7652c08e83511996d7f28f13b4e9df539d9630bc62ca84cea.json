@@ -1,0 +1,118 @@
+{
+  "query_entities": [
+    "LINE",
+    "first-order proximity objective",
+    "second-order proximity objective",
+    "LINE-1st",
+    "LINE-2nd",
+    "embeddings",
+    "original LINE paper",
+    "epochs"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "switch objectives during a single training run",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "first-order proximity objective",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "trained separately as a different variant of the model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity objective",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "trained separately as a different variant of the model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "LINE-1st",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "LINE-2nd",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-1st",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-2nd",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "training LINE-1st and LINE-2nd independently and then concatenating their embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-1st",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-2nd",
+      "source_alias": "",
+      "type": "USES",
+      "target": "embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "same number of epochs specified by the user",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity objective",
+      "source_alias": "",
+      "type": "USES",
+      "target": "same number of epochs specified by the user",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "original LINE paper",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "fixed universal epoch count for one objective before switching to the other",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

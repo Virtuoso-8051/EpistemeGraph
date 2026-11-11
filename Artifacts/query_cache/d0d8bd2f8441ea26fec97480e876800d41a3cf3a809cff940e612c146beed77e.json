@@ -1,0 +1,82 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "BlogCatalog",
+    "FLICKR",
+    "learning rate (LR)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "FLICKR",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Micro-F1",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "node classification metric",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Macro-F1",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "node classification metric",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk parallelization",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "wall-clock time",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DeepWalk parallelization beyond 8 workers",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "predictive performance degradation",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "asynchronous SGD races",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "predictive performance degradation",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "reduced effective learning rate",
+      "source_alias": "LR",
+      "type": "GENERATES",
+      "target": "predictive performance degradation",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "reduced sampling quality",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "predictive performance degradation",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

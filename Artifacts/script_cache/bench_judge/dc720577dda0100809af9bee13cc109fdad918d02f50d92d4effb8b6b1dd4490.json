@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The one-vs-rest logistic regression classifier trained on the embeddings is not in the evidence.",
+    "The claim that random walks capture community-level neighborhood structure is not stated in the evidence.",
+    "The answer says it cannot confirm the 3% Flickr figure, but the evidence explicitly reports that DeepWalk's Micro-F1 at 3% labeled beats all other methods at 10%."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, stating that SpectralClustering was a baseline rather than part of DeepWalk, and the evidence supports this. However, it adds some specifics not in the evidence (the one-vs-rest classifier and community-level structure) and hedges on the 3% figure that the evidence does report."
+}

@@ -1,0 +1,115 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "graph kernel (GK)",
+    "Skip-gram objective (SGO)",
+    "Node Classification (NC)",
+    "Graph Embedding (GE)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "graph kernel (GK)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "dense node embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram objective (SGO)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram objective (SGO)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "likelihood of nodes co-occurring within a window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "fixed-length real-valued vector per node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "general feature extraction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "Node Classification (NC)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "Graph Embedding (GE)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "co-occurrence structure of nodes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Qiu et al., 2018",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "DeepWalk skip-gram objective implicitly factorizes a random-walk transition matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk skip-gram objective",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "matrix built from powers of the random-walk transition matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "kernel method",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

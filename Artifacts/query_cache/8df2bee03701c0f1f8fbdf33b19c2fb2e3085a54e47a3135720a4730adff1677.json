@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "Social representation (SR)",
+    "latent dimension (LD)",
+    "Community aware (CA)",
+    "continually evolving network (CEN)",
+    "latent forms of community membership (LFCM)",
+    "Network Community (NC)"
+  ],
+  "triples": [
+    {
+      "source": "Social representation (SR)",
+      "source_alias": "SR",
+      "type": "REQUIRES",
+      "target": "stable embedding updated incrementally",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "continually evolving network (CEN)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "temporal smoothness of embeddings",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Social representation (SR)",
+      "source_alias": "SR",
+      "type": "ENABLES",
+      "target": "addition or removal of nodes and edges without retraining from scratch",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Community aware (CA)",
+      "source_alias": "CA",
+      "type": "REQUIRES",
+      "target": "latent dimension (LD) non-negativity",
+      "target_alias": "LD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent dimension (LD)",
+      "source_alias": "LD",
+      "type": "REQUIRES",
+      "target": "sparsity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent dimension (LD)",
+      "source_alias": "LD",
+      "type": "REPRESENTS",
+      "target": "community membership",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "latent dimension (LD)",
+      "source_alias": "LD",
+      "type": "ENABLES",
+      "target": "soft or overlapping community assignments",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent forms of community membership (LFCM)",
+      "source_alias": "LFCM",
+      "type": "IS_A",
+      "target": "soft or overlapping community assignments",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "random walk (RW)",
+    "RW",
+    "biased random walk procedure (BRWP)",
+    "BRWP",
+    "citation network (CN)",
+    "CN",
+    "node2vec parameter (NP)",
+    "NP",
+    "local and global network structure (LGNS)",
+    "LGNS"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "REFUTED",
+      "target": "uniform random walk (URW)",
+      "target_alias": "unbiased random walk",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "biased random walk procedure (BRWP)",
+      "target_alias": "second-order biased walk",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "return parameter p",
+      "type": "OPTIMIZES",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "p and q",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "APPROXIMATES",
+      "target": "uniform random walk (URW)",
+      "target_alias": "p=q=1 case",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small p setting",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "BFS-like walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "small q setting",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "DFS-like walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like walks",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "immediate neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like walks",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "community or homophily structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "OPTIMIZES",
+      "target": "local and global network structure (LGNS)",
+      "target_alias": "balance of local and global neighborhood information",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "APPLICABLE_FOR",
+      "target": "citation network (CN)",
+      "target_alias": "citation networks",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "REFUTED",
+      "target": "immediate neighbor preservation only",
+      "target_alias": "preserve only immediate neighbors",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

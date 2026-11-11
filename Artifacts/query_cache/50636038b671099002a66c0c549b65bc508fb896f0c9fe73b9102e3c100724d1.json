@@ -1,0 +1,67 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE(2nd)",
+    "latent dimension",
+    "implicit proximity matrix",
+    "graph structure"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "implicit proximity matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "implicit proximity matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st) performance gains with increasing latent dimension",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "latent dimension",
+      "target_alias": "LD",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "effective rank of implicit proximity matrix",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "latent dimension",
+      "target_alias": "LD",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "implicit proximity matrix",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "graph structure",
+      "target_alias": "GS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "performance degradation beyond threshold",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "overfitting or optimization noise",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "threshold",
+      "source_alias": "",
+      "type": "USES",
+      "target": "number of negative samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

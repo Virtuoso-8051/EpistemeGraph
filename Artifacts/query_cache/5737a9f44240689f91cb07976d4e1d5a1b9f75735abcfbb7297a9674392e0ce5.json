@@ -1,0 +1,94 @@
+{
+  "query_entities": [
+    "unsupervised method",
+    "relational classification",
+    "relational classifier",
+    "iterative approximate inference",
+    "graph",
+    "standard classifier",
+    "relational features",
+    "relational structure"
+  ],
+  "triples": [
+    {
+      "source": "unsupervised method",
+      "source_alias": "",
+      "type": "SEPARATES",
+      "target": "learning of relational features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised method",
+      "source_alias": "",
+      "type": "SEPARATES",
+      "target": "inference/classification step",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "relational classifier",
+      "source_alias": "",
+      "type": "USES",
+      "target": "iterative approximate inference",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "iterative approximate inference",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unsupervised method",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "representation of the relational structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "representation of the relational structure",
+      "source_alias": "",
+      "type": "USES",
+      "target": "standard classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "decoupling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "avoids the need for expensive iterative inference inside the learning loop",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "decoupling",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "simplicity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "decoupling",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "scalability",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "unsupervised method",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "useful relational information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

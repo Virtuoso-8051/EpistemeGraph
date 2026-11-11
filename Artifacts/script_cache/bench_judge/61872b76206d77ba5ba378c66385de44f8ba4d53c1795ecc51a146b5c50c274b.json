@@ -1,0 +1,10 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The embeddings can be used for downstream tasks such as vertex classification, link prediction, and visualization; the evidence does not mention these tasks.",
+    "LINE 'embeds local and global network structure'; the evidence describes first- and second-order proximity but does not use this local/global framing."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer is correct: LINE preserves first- and second-order proximity, and the problem is defined as learning f_G: V\u2192R^d with d\u226a|V|, both of which the evidence states. The answer adds downstream applications and a local/global framing that the evidence does not contain, so it is partially unsupported."
+}

@@ -1,0 +1,107 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding (1ST)",
+    "uniform random walk (URW)",
+    "DEEPWALK",
+    "node2vec",
+    "random walk (RW)"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "edge sampling with negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "OPTIMIZES",
+      "target": "first-order and second-order proximity objectives",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "uniform random walk (URW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "uniform random walk (URW)",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "broad neighborhood exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "co-occurrence statistics",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "stochastic sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "p and q parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p and q parameters",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "breadth-first and depth-first exploration balance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "first-order proximity captures direct ties",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "second-order proximity captures shared neighbors",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does the node2vec objective use full-graph softmax rather than negative sampling to avoid summing over all vertices during optimization?",
+      "false_premise": "node2vec optimizes its objective with full-graph softmax instead of negative sampling.",
+      "correction": "node2vec addresses the expensive summation by adopting negative sampling.",
+      "evidence_quote": "To address this problem, we adopt the approach of negative sampling proposed in [13], which samples multiple negative edges according to some noisy distribution for each edge (i,j ).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does node2vec rely on a fixed uniform noise distribution for negative edges, instead of the out-degree-based distribution p_n(v)\u221dd_v^{3/4}, when training?",
+      "false_premise": "node2vec uses a fixed uniform noise distribution for negative sampling.",
+      "correction": "node2vec sets P_n(v)\u221dd_v^{3/4}, where d_v is the out-degree of vertex v.",
+      "evidence_quote": "We set Pn(v)\u221d dv 3/4 as proposed in [13], where dv is the out-degree of vertex v.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What comparison result does node2vec report when ASGD is replaced by a full-batch Newton-style optimizer for Eqn. (7)?",
+      "false_premise": "node2vec uses a full-batch Newton-style optimizer instead of ASGD for Eqn. (7).",
+      "correction": "node2vec adopts the asynchronous stochastic gradient algorithm (ASGD) to optimize Eqn. (7).",
+      "evidence_quote": "We adopt the asynchronous stochastic gradient algorithm (ASGD) [17] for optimizing Eqn. (7).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does node2vec multiply the gradient by the edge weight only after clipping it to prevent explosions on high-variance graphs?",
+      "false_premise": "node2vec clips gradients before multiplying by edge weights to prevent explosions.",
+      "correction": "node2vec multiplies the gradient by the edge weight, and this can become problematic when edge weights have high variance.",
+      "evidence_quote": "Note that the gradient will be multiplied by the weight of the edge.",
+      "difficulty": "hard"
+    }
+  ]
+}

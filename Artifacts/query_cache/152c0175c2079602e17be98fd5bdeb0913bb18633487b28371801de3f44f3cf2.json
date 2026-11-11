@@ -1,0 +1,82 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "transition probability (TP)",
+    "second-order neighbor (SON)"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "USES",
+      "target": "second-order biased random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unnormalized transition weight",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "\u03b1_pq(t,x)\u00b7w_vx",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "\u03b1_pq(t,x)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "1/p when d_tx = 0",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "\u03b1_pq(t,x)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "1 when d_tx = 1",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "\u03b1_pq(t,x)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "1/q when d_tx = 2",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "return parameter",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "q",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "in-out parameter",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "q > 1",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "BFS-like local walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "transition probabilities",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "normalized weights over neighbors of v",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

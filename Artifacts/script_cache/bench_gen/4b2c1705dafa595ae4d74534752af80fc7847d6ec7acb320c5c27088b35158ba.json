@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In node2vec, what exact value of the return parameter p did the authors find to be optimal on their largest benchmark graph?",
+      "why_unanswerable": "The passage explains what p controls, but it does not report any tuned or optimal numeric value for p on any dataset.",
+      "evidence_quote": "Parameterp controls the likelihood of immediately revisiting a node in the walk.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "For node2vec, how much wall-clock time did the authors measure for preprocessing on a graph with 10 million edges, and on what hardware was that timing obtained?",
+      "why_unanswerable": "The passage mentions tractable preprocessing and superior sampling efficiency, but it gives no runtime measurements or hardware specifications.",
+      "evidence_quote": "However, an essential difference here is that we achieve DFS-like exploration within the random walk framework.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compared with DeepWalk, by how many percentage points did node2vec improve classification accuracy on the Cora dataset under the best hyperparameter setting?",
+      "why_unanswerable": "The passage discusses node2vec's BFS/DFS interpolation, but it does not include any experimental comparison with DeepWalk or any accuracy numbers.",
+      "evidence_quote": "Intuitively, parametersp andq control how fast the walk explores and leaves the neighborhood of starting node u.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which exact conditions on p and q did node2vec authors report the strongest performance for link prediction on weighted graphs, and what was the corresponding AUC?",
+      "why_unanswerable": "The passage describes the qualitative effects of p and q, but it does not report any link-prediction experiment, weighted-graph setting, or AUC value.",
+      "evidence_quote": "In particular, the parameters allow our search procedure to (approximately) interpolate between BFS and DFS and thereby reflect an affinity for different notions of node equivalences.",
+      "difficulty": "hard"
+    }
+  ]
+}

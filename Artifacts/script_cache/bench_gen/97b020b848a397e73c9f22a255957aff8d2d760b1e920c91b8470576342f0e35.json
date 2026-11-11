@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "For node2vec, what exact value of the sampling budget K would result if the number of walks per node r, the walk length l, and the number of vertices |V| are set to the values used in the experiments?",
+      "why_unanswerable": "The passage gives the relationship K = r\u00b7l\u00b7|V| and the experimental values of r and l, but it never states the graph size |V| for the datasets, so K cannot be computed from the provided information.",
+      "evidence_quote": "As an example, ifK is the overall sampling budget, then the node2vec parameters satisfyK = r\u00b7l\u00b7|V|.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many labeled nodes were used for training in absolute counts for the BlogCatalog, PPI, and Wikipedia multi-label classification experiments with node2vec?",
+      "why_unanswerable": "The passage says that 50% of the nodes were labeled for training, but it does not report the total number of nodes in each dataset, so the exact labeled-node counts are not given.",
+      "evidence_quote": "Table 2: Macro-F1 scores for multilabel classification on BlogCatalog, PPI (Homo sapiens) and Wikipedia word cooccurrence networks with 50% of the nodes labeled for training.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What were the exact macro-F1 scores of node2vec on BlogCatalog, PPI, and Wikipedia when using the best in-out and return hyperparameters found by 10-fold cross-validation, averaged over the 10 random seed initializations rather than reported per seed?",
+      "why_unanswerable": "Although the passage reports the final macro-F1 scores and notes that results were repeated over 10 random seeds, it does not provide per-seed results or an average over seeds, so that specific quantity is not stated.",
+      "evidence_quote": "We repeat our experiments for 10 random seed initializations, and our results are statistically significant with a p-value of less than 0.01.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "If node2vec were evaluated on the same multi-label classification task with the grid search expanded beyond p,q\u2208{0.25, 0.50, 1, 2, 4}, which additional hyperparameter values were tested and how did they affect the macro-F1 scores?",
+      "why_unanswerable": "The passage only lists the grid-search values actually used and does not mention any expanded search, additional hyperparameter values, or their effect on performance.",
+      "evidence_quote": "The best in-out and return hyperparameters were learned using 10-fold cross-validation on 10% labeled data with a grid search overp,q\u2208{ 0.25, 0.50, 1, 2, 4}.",
+      "difficulty": "medium"
+    }
+  ]
+}

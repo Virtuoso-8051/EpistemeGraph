@@ -1,0 +1,103 @@
+{
+  "query_entities": [
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REDUCES",
+      "target": "start-node bias",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "many biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "many biased random walks",
+      "source_alias": "",
+      "type": "LAUNCHED_FROM",
+      "target": "every node in the graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "each node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each node",
+      "source_alias": "",
+      "type": "APPEARS_AS",
+      "target": "context center",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each node",
+      "source_alias": "",
+      "type": "APPEARS_AS",
+      "target": "context neighbor",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "learned embeddings",
+      "source_alias": "",
+      "type": "OPTIMIZES_OVER",
+      "target": "multiple walk samples",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "multiple walk samples",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "representation learning",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk sampling",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "second-order Markov walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk sampling",
+      "source_alias": "",
+      "type": "USES",
+      "target": "precomputed transition probabilities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk sampling",
+      "source_alias": "",
+      "type": "USES",
+      "target": "alias sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias sampling",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "constant time",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

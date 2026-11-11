@@ -1,0 +1,83 @@
+{
+  "query_entities": [
+    "node2vec",
+    "BlogCatalog",
+    "number of walks per source",
+    "walk length",
+    "context size"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "NODE2VEC",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "BN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter sensitivity analysis",
+      "source_alias": "NP",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog",
+      "target_alias": "BN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks per source",
+      "source_alias": "NWPS",
+      "type": "IMPROVES",
+      "target": "node2vec performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk length",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "node2vec performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks per source",
+      "source_alias": "NWPS",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "diminishing returns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context size",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "node2vec performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context size",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "higher computational cost",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "larger context window",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "more training pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "larger context window",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "longer training time",
+      "target_alias": "TTC",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "Node2vec extends feature learning from individual nodes to pairs of nodes (and, more generally, to edges/links). Rather than learning only a vector per node, it learns representations for node pairs, typically by combining (e.g., via binary operators such as averaging, Hadamard product, or concatenation) the learned feature vectors of the two endpoint nodes, so that the same learned embedding space can be used for edge-level tasks. The prediction tasks mentioned are link prediction (predicting whether an edge exists or is likely to form between two nodes, such as in social or biological networks) and, more broadly, node-level tasks like node classification and multi-label classification of nodes, with the paper emphasizing link prediction as the edge-level application.",
+  "confidence": 0.55,
+  "confidence_reasoning": "The core idea (node-pair features via binary operators for link prediction) matches the node2vec paper, but the exact wording of which tasks the question expects and the precise list of operators may not match the source passage.",
+  "_token_nll": null
+}

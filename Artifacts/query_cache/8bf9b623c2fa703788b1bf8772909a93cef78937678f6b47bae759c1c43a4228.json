@@ -1,0 +1,6 @@
+{
+  "answer": "The premise appears to be incorrect. In the LINE paper (Tang et al., 2015), the language network was not built from DBLP citation data. It was built from Wikipedia text: words are vertices, and weighted, undirected edges connect words that co-occur within a fixed context window across Wikipedia articles, with weights reflecting co-occurrence counts. The DBLP data LINE used was a co-authorship network, where authors are vertices and edge weights reflect the number of co-authored papers. DBLP was therefore not the basis for word cooccurrence modeling in LINE. I cannot confirm from memory why DBLP would be called 'ideal' for that task, since it is not a word-cooccurrence source.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident LINE's language network came from Wikipedia and its DBLP use was co-authorship, but my recall of exact dataset details and edge-weighting specifics is not certain.",
+  "_token_nll": null
+}

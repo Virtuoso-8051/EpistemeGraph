@@ -1,0 +1,100 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding (1ST)",
+    "DEEPWALK",
+    "hierarchical softmax (HS)",
+    "latent social representation (LSR)",
+    "unsupervised representation learning (URL)",
+    "network embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "OPTIMIZES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "edge-sampling stochastic gradient descent",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "DEFINED_AS",
+      "target": "explicit graph-structure objective",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "Skip-gram language-model approach",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "USES",
+      "target": "hierarchical softmax (HS)",
+      "target_alias": "hierarchical softmax",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "OPTIMIZES",
+      "target": "likelihood of observing a vertex's neighborhood context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "PROPOSES",
+      "target": "latent social representation (LSR)",
+      "target_alias": "learning latent social representations",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "IS_A",
+      "target": "unsupervised representation learning (URL)",
+      "target_alias": "unsupervised, online representation learning method",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "REPRESENTS",
+      "target": "social relations in a continuous vector space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

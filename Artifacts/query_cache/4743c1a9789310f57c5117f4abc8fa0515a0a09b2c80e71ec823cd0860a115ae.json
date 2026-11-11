@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "graph factorization",
+    "DEEPWALK",
+    "Graph Embedding",
+    "adjacency matrix",
+    "graph structure"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "graph factorization",
+      "target_alias": "GF",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "label classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk co-occurrence",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "higher-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "USES",
+      "target": "adjacency matrix",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "USES",
+      "target": "Laplacian matrix",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization",
+      "source_alias": "GF",
+      "type": "REFUTED",
+      "target": "higher-order proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

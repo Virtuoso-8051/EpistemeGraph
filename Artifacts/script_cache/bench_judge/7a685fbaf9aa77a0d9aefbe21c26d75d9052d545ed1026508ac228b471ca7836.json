@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI answer states that the passage is not included and gives a general answer rather than drawing on the evidence; the evidence is in fact provided and the answer does not cite it.",
+    "Attributes to affinity-graph methods a specific O(n^3) naive eigendecomposition cost, which the evidence does not state (evidence only says at least quadratic complexity).",
+    "Mentions shortest-path computations (Isomap) and approximations such as landmarks and randomized eigensolvers as remedies, which are not discussed in the evidence."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that these methods rely on eigendecomposition of affinity matrices with quadratic-or-worse cost, making them inefficient at scale, matches the evidence. However, the answer wrongly says the passage is absent, and it adds unsourced specifics such as the O(n^3) cost and remedy techniques that the papers do not mention."
+}

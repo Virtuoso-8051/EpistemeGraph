@@ -1,0 +1,6 @@
+{
+  "answer": "Both methods aim to exploit network sparsity, especially the fact that real-world graphs often have many more non-edges than edges. PASSAGE A\u2019s method uses this property by sampling only a small subset of the many possible negative/non-edge pairs during training, so it can scale to large sparse graphs without enumerating all absent links. LINE also exploits sparsity, but differently: it preserves local and global network structure by learning embeddings from observed edges and carefully designed negative sampling, rather than relying on a sparse matrix factorization-style objective over all node pairs. In short, both use sparsity to make learning tractable, but PASSAGE A uses it mainly to reduce the number of negative examples considered, while LINE uses it to efficiently train embeddings that capture first- and second-order proximity.",
+  "confidence": 0.62,
+  "confidence_reasoning": "I\u2019m moderately confident because the shared property and the broad distinction between negative sampling and embedding-based proximity preservation are standard, but I do not have the exact text of PASSAGE A and B to verify the wording precisely.",
+  "_token_nll": 0.31528454991013793
+}

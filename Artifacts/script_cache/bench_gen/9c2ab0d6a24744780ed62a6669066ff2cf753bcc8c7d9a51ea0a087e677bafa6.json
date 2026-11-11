@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does LINE(2nd) outperform LINE(1st) on the social network classification task, and what does that suggest about second-order proximity being more important than first-order proximity there?",
+      "false_premise": "The passage says LINE(2nd) outperforms LINE(1st) on the social network classification task and that second-order proximity is more important there.",
+      "correction": "On the social network classification task, LINE(1st) is slightly better than LINE(2nd), and first-order proximity is still more important than second-order proximity in social network.",
+      "evidence_quote": "LINE(1st) is slightly better than LINE(2nd), which is opposite to the results on the language network.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE use truncated random walks to improve its first-order proximity modeling on Youtube network?",
+      "false_premise": "LINE uses truncated random walks to improve first-order proximity modeling on Youtube network.",
+      "correction": "DeepWalk uses truncated random walks, while LINE combines first- and second-order proximity representations and does not use truncated random walks.",
+      "evidence_quote": "It is interesting to observe how DeepWalk tackles the network sparsity through truncated random walks, which enrich the neighbors or contexts of each vertex.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What evidence in the passage shows that LINE(2nd) beats DeepWalk on the extremely sparse Youtube network when the average degree is as low as 5?",
+      "false_premise": "LINE(2nd) beats DeepWalk on the extremely sparse Youtube network.",
+      "correction": "On Youtube network, due to the extreme sparsity, LINE(2nd) is even inferior to DeepWalk.",
+      "evidence_quote": "Due to the extreme sparsity, the performance of LINE(2nd) is even inferior to DeepWalk.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does LINE rely on second-order proximity to outperform graph factorization by modeling the first-order proximity more effectively?",
+      "false_premise": "LINE relies on second-order proximity to outperform graph factorization by modeling the first-order proximity more effectively.",
+      "correction": "LINE(1st) outperforms graph factorization, indicating a better capability of modeling the first-order proximity.",
+      "evidence_quote": "LINE(1st) outperforms graph factorization, indicating a better capability of modeling the first-order proximity.",
+      "difficulty": "hard"
+    }
+  ]
+}

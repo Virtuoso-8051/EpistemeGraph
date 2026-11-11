@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec reduce the implicit bias caused by the choice of the start node when learning representations for all nodes, and how is the random walk sampling made efficient?",
+      "gold_answer": "node2vec offsets the start-node bias by simulating r random walks of fixed length l starting from every node, so every node serves as a starting point. The transition probabilities for the second-order Markov chain are precomputed, and alias sampling lets node sampling during the walk be done in O(1) time.",
+      "evidence_quote": "Since we learn representations for all nodes, we offset this bias by simulating r random walks of fixed length l starting from every node.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What are the three phases of node2vec, and how are they executed according to the passage?",
+      "gold_answer": "The three phases are preprocessing to compute transition probabilities, random walk simulations, and optimization using SGD. They are executed sequentially, and each phase is parallelizable and executed asynchronously, which contributes to node2vec's scalability.",
+      "evidence_quote": "The three phases of node2vec, i.e., preprocessing to compute transition probabilities, random walk simulations and optimization using SGD, are executed sequentially.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does node2vec use alias sampling, and what is the role of the precomputed transition probabilities \u03c0vx?",
+      "gold_answer": "During simulation of the random walk, node2vec samples nodes based on the transition probabilities \u03c0vx for the second-order Markov chain. Because these probabilities can be precomputed, the walk can use alias sampling to draw the next node efficiently in constant time.",
+      "evidence_quote": "The transition probabilities\u03c0vx for the 2nd order Markov chain can be precomputed and hence, sampling of nodes while simulating the random walk can be done efficiently in O(1) time using alias sampling.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Why does node2vec extend its random walks to pairs of nodes, and what kind of prediction task is given as an example?",
+      "gold_answer": "node2vec extends the random-walk-based representations to pairs of nodes because many tasks involve predicting relationships between node pairs rather than individual nodes. The example given is link prediction, where the goal is to predict whether a link exists between two nodes in a network.",
+      "evidence_quote": "However, we are often interested in prediction tasks involving pairs of nodes instead of individual nodes.",
+      "difficulty": "easy"
+    }
+  ]
+}

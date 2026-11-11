@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "LINE",
+    "sample reuse (SR)",
+    "PPI network",
+    "random walk (RW)",
+    "DEEPWALK",
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "alias-table sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "sample reuse (SR)",
+      "target_alias": "SR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sample reuse (SR)",
+      "source_alias": "SR",
+      "type": "ENABLES",
+      "target": "larger, more efficient set of training signals",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "REQUIRES",
+      "target": "multi-hop context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "IS_A",
+      "target": "less efficient to reuse",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

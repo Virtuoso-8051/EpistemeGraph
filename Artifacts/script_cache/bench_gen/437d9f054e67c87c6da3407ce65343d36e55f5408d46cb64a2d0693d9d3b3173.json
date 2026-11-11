@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "For node2vec, what exact value of the sampling budget K was used in the experiments on multilabel classification and link prediction, and how was it chosen relative to DeepWalk and LINE?",
+      "why_unanswerable": "The passage says that node2vec, DeepWalk, and LINE were set to generate an equal number of samples at runtime, but it does not report any specific numerical value for K.",
+      "evidence_quote": "Thus, in the sampling phase, the parameters for DeepWalk, LINE and node2vec are set such that they generate equal number of samples at runtime.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many nodes or edges were used in the supervised evaluation of node2vec on the multilabel classification task and the link prediction task?",
+      "why_unanswerable": "The experimental setup names the tasks, but it does not provide the dataset sizes or the number of nodes/edges used for evaluation.",
+      "evidence_quote": "Our experiments evaluate the feature representations obtained through node2vec on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what exact train/test split or cross-validation protocol was node2vec evaluated for multilabel classification and link prediction?",
+      "why_unanswerable": "The passage mentions the evaluation tasks and comparison methods, but it does not specify any split ratio, fold count, or validation protocol.",
+      "evidence_quote": "Our experiments evaluate the feature representations obtained through node2vec on standard supervised learning tasks: multilabel classification for nodes and link prediction for edges.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What hardware, CPU/GPU configuration, or runtime environment was used to compare node2vec against DeepWalk, LINE, and spectral clustering?",
+      "why_unanswerable": "The passage discusses controlling for implementation-language effects, but it does not report any hardware specifications or runtime environment details.",
+      "evidence_quote": "In doing so, we discount for performance gain observed purely because of the implementation language (C/C++/Python) since it is secondary to the algorithm.",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The paper describes node2vec as running on a single machine rather than a distributed cluster.",
+    "The three phases were parallelized across the cores of one multi-core, shared-memory machine, with the graph held in RAM.",
+    "The reference implementation is in Python, using Gensim's word2vec-style SGD.",
+    "The scalability experiments used a 16-core machine with on the order of 60+ GB of RAM."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is unanswerable from the evidence, which says only that the phases are sequential, parallelizable, and asynchronous, with no hardware or runtime details. The AI answer invents a single-machine, 16-core, Python/Gensim environment and specific RAM figures that appear nowhere in the source, and never states that the papers do not report this."
+}

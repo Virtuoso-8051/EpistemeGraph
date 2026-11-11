@@ -1,0 +1,6 @@
+{
+  "answer": "LINE (Large-scale Information Network Embedding, Tang et al., 2015) is designed to preserve first-order and second-order proximity in large weighted graphs, and it is typically trained by sampling edges directly rather than by random walks. The premise of the question is therefore partly inaccurate: LINE does not rely on random walks and skip-gram. Its edge-sampling objective with negative sampling (akin to skip-gram's negative-sampling loss) is what it uses, and it is the random-walk-based methods such as DeepWalk and node2vec that combine random walks with skip-gram. Those methods are effective on vertex classification because random walks capture local and multi-hop neighborhood structure, and skip-gram turns co-occurrence in walks into embeddings where nodes with similar neighborhoods (and hence often similar labels) lie close together. LINE's effectiveness on vertex classification comes from its explicit modeling of first-order (direct edge) and second-order (shared-neighbor) proximity, its edge sampling that scales to large graphs, and its handling of weighted edges.",
+  "confidence": 0.6,
+  "confidence_reasoning": "I am fairly confident that LINE uses edge sampling rather than random walks, but the general characterizations of DeepWalk/node2vec and LINE's effectiveness involve some interpretive judgment.",
+  "_token_nll": null
+}

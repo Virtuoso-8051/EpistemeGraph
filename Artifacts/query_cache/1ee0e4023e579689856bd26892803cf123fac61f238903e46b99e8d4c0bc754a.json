@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk\u2019s performance can drop when \u03b3 is increased enough that it reduces the number of random walks started from each node too much, especially on sparse graphs or when the embedding quality depends on having many walk samples to capture local and global co-occurrence statistics. In practice, this hurts most when the graph is small, sparse, or has limited connectivity, because fewer walks mean poorer coverage of node neighborhoods and less reliable training data for the skip-gram model.",
+  "confidence": 0.84,
+  "confidence_reasoning": "This is a well-known tradeoff in DeepWalk between walk length/number and sampling coverage, but the exact conditions can vary by dataset and implementation.",
+  "_token_nll": 0.24553485446506076
+}

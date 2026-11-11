@@ -1,0 +1,6 @@
+{
+  "answer": "The passages weren't included, so I'm answering from general knowledge of the likely source. Classical graph embedding methods (e.g., spectral methods such as Laplacian Eigenmaps or IsoMap) are usually limited by needing the whole graph up front and by costly eigen-decompositions that scale poorly with the number of vertices, which makes them hard to apply to large or evolving networks. DeepWalk can still build a Hierarchical Softmax tree without seeing the entire graph when the vertex frequencies in its short random walks follow a power-law (scale-free) distribution. In that case the Huffman-coded tree can be built from the observed frequencies, which is what allows the approach to work online and at scale.",
+  "confidence": 0.5,
+  "confidence_reasoning": "The passages are absent, so the answer relies on my recollection of the DeepWalk paper (power-law frequency assumption for Huffman tree construction), while the exact limitation Passage A emphasizes is uncertain.",
+  "_token_nll": null
+}

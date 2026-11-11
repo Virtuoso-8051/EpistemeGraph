@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "LINE",
+    "Large-scale Information Network Embedding (1ST)",
+    "embedding",
+    "vertex representation (UI)",
+    "edge-sampling treatment (EST)",
+    "VERTEX"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "network neighborhood (NN)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "new vertex embedding optimization",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge-sampling treatment (EST)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling treatment (EST)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity objective",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "conditional distribution of context vertices given a vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity objective",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "retraining",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "vertex with no links to existing network",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "signal",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

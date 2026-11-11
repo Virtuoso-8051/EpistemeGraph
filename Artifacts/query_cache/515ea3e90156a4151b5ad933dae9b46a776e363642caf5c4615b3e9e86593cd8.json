@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "LINE",
+    "DEEPWALK",
+    "depth-first search (DFS)",
+    "random walk (RW)",
+    "first-order proximity (FOP)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "FOP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "shared neighbors of two vertices (neighborhood similarity)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "neighborhood sampling strategy (NSS)",
+      "target_alias": "NSS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE's local sampling",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "breadth-first search",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "depth-first search (DFS)",
+      "target_alias": "DFS",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "higher-order, community-level structure",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "breadth-first search",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "breadth-first search",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

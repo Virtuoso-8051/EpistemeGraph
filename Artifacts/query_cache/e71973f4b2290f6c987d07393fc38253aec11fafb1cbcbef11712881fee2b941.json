@@ -1,0 +1,6 @@
+{
+  "answer": "The question's premise is not well supported. The DeepWalk paper (Perozzi et al., 2014) does not describe its back-propagation training as especially stable. DeepWalk learns node embeddings by running skip-gram (the Word2Vec model) over random-walk sequences, optimized with stochastic gradient descent. Its documented advantages are scalability and efficiency, mainly from hierarchical softmax, which reduces the cost of each update from O(|V|) to O(log|V|). It is also an online learner: it can be updated incrementally as new data arrives. Older distributed graph representations, such as Laplacian eigenmaps or spectral/matrix-factorization methods, were generally not trained by back-propagation or SGD at all. They used closed-form eigendecompositions, so the comparison is between different kinds of methods. Any claim of special stability relative to those methods would need a source I cannot confirm.",
+  "confidence": 0.5,
+  "confidence_reasoning": "I am fairly confident DeepWalk's documented benefits are scalability, hierarchical softmax, and online learning rather than stability, but I am less certain about every characterization of older methods and about what later papers have said.",
+  "_token_nll": null
+}

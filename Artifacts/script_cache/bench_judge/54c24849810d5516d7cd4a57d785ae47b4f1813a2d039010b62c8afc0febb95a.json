@@ -1,0 +1,10 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "DeepWalk generates truncated random walks over the graph (the evidence mentions random walks but not truncation explicitly)",
+    "LINE samples edges with probability proportional to their weights using alias tables (the evidence says edge-sampling is used but does not mention proportional sampling or alias tables)"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "SUPPORTED",
+  "rationale": "The core answer matches the evidence: DeepWalk ignores edge weights/co-occurrences, which matter in the language network, and LINE with edge-sampling handles the weighted edges effectively. The extra details about truncated walks and alias tables are minor implementation specifics not stated in the provided excerpt, but they do not affect the core answer, so the verdict is SUPPORTED with minor caveats."
+}

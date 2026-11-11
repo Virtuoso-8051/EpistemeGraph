@@ -1,0 +1,83 @@
+{
+  "query_entities": [
+    "node2vec",
+    "homophily",
+    "structural equivalence",
+    "NODE2VEC",
+    "node embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "Node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "search strategy parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like walks",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Low return parameter p and low in-out parameter q",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "DFS-like walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "homophily",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "node embedding (NE)",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "High q (BFS-like walks)",
+      "source_alias": "",
+      "type": "CAPTURES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "structural equivalence",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "node embedding (NE)",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "homophily",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "community",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "BFS-style sampling",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "blue cluster",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "community",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

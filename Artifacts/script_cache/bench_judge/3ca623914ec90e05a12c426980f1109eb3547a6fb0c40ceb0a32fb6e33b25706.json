@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The AI attributes the high-degree issue to random walks visiting high-degree nodes very often, dominating their embeddings; the paper instead says random-walk neighbor enrichment brings in a lot of noise due to randomness, especially for higher-degree vertices, and does not mention visit frequency dominating embeddings.",
+    "The AI says hubs are pulled toward the centre and crowd together so community membership is blurred; this matches the paper's description of many authors from different communities clustered tightly in the centre, mostly high-degree vertices, so it is supported but hedged."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core observation (high-degree vertices from different communities clustered in the centre) matches the source, and the answer candidly flags its uncertainty. However, the proposed mechanism about walks visiting hubs very often dominating embeddings is not what the paper states, which attributes the problem to noise from randomness in neighbor enrichment."
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "Graph factorization works well here because it learns a low-dimensional embedding that preserves the network\u2019s structure: authors who are connected to many of the same people, or who are directly linked through many co-authorship ties, end up with similar vectors and are placed near each other in the visualization. In a co-author network, people from the same research community tend to collaborate with one another and share many neighbors, so the factorization naturally pulls those authors into tight groups while pushing apart authors from different communities. This makes community structure appear as clear clusters in the plot.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a standard and well-established explanation of graph factorization and community clustering in co-author networks, though the exact implementation details can vary by method.",
+  "_token_nll": 0.18865262545072115
+}

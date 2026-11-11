@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Skip-gram with negative sampling implicitly factorizes a shifted PMI matrix (Levy & Goldberg, 2014), and Qiu et al. (2018) showed DeepWalk approximates factorizing a matrix of the form (1/T) sum (D^-1 A)^r D^-1 minus log(b) \u2014 this is external to the provided evidence",
+    "The low-rank factorization forces nodes in the same community to receive similar embeddings, so the implicit factorization is what preserves community structure \u2014 not in the evidence",
+    "Skip-gram with hierarchical softmax is used (original paper detail, not in the provided evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly notes that the original DeepWalk paper does not explicitly perform matrix factorization and that it uses truncated random walks treated as sentences, which the evidence supports. However, it then builds most of its explanation on an implicit-factorization framing from outside papers (Levy & Goldberg, Qiu et al.) that the evidence does not contain, so those claims are unsupported."
+}

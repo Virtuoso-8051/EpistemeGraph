@@ -1,0 +1,96 @@
+{
+  "query_entities": [
+    "node2vec",
+    "LINE (2nd-order)"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased second-order random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "p (return) and q (in-out) parameters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "structural equivalence (BFS-like walks)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram with negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE (2nd-order)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE (2nd-order)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE (2nd-order)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "KL-divergence-based objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE (2nd-order)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge sampling with negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE (2nd-order)",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "multi-hop structure capture tunable between local and global views",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE (2nd-order)",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "direct and two-hop neighborhood similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

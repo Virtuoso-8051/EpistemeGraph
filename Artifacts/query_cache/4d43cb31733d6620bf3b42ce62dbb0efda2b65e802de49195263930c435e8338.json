@@ -1,0 +1,90 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "FLICKR",
+    "BlogCatalog",
+    "BlogCatalog network (BN)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "Graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "Clustered embeddings on Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Clustered embeddings on Flickr",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "Node labels on Flickr",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Linear classifier",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "Few labeled examples on Flickr",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Weaker homophily",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "BlogCatalog",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "Overlapping or multi-label classes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Node labels on BlogCatalog",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "Structural communities captured by DeepWalk",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "Many labeled examples on BlogCatalog",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Gap in labeled examples required",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "Degree of match between graph structure and labels",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Source paper",
+      "source_alias": "",
+      "type": "USES",
+      "target": "General properties of the two datasets",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

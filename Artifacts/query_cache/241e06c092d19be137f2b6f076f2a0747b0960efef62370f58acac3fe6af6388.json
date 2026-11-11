@@ -1,0 +1,80 @@
+{
+  "query_entities": [
+    "embedding model",
+    "DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "embedding model",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "large graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding model",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "node embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding model",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "efficient learning",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding model",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "networks with millions of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding model",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "expensive full-graph computations",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "streaming-style training adjustment",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "incremental training",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "incremental training",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "new nodes and edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "entire graph present at the start",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The original paper compared DeepWalk against unsupervised baselines such as spectral clustering, edge-clustering, and modularity-based embeddings (the evidence excerpt only mentions baselines allowed a global view of the network and does not list them)",
+    "DeepWalk applies the Skip-gram model with hierarchical softmax to maximize neighbor likelihood (the evidence mentions hierarchical sampling to approximate softmax, which supports this in part)",
+    "Classification uses one-vs-rest logistic regression on frozen embeddings (not stated in the provided evidence excerpts)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise, stating DeepWalk is unsupervised and generalizes unsupervised feature learning from word sequences to graphs, which the abstract supports. However, some specifics about the baselines compared and the classifier used are not contained in the provided evidence, though they do not undermine the core correction."
+}

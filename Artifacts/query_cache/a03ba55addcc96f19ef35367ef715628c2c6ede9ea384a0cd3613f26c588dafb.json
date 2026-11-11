@@ -1,0 +1,95 @@
+{
+  "query_entities": [
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "single machine",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "preprocessing",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "random-walk simulation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "SGD optimization",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Python environment",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "multicore CPU system",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk generation",
+      "source_alias": "",
+      "type": "USES",
+      "target": "multiple threads/processes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "training",
+      "source_alias": "",
+      "type": "USES",
+      "target": "multiple threads/processes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "GPU",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "distributed cluster",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "larger graphs",
+      "source_alias": "",
+      "type": "BENEFITS_FROM",
+      "target": "more RAM and CPU cores",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

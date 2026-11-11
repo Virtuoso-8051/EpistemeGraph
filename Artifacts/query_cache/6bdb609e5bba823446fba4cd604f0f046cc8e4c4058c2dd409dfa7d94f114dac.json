@@ -1,0 +1,98 @@
+{
+  "query_entities": [
+    "node2vec",
+    "negative sampling",
+    "asynchronous SGD",
+    "random-walk phase"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "negative sampling",
+      "target_alias": "NS",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "asynchronous stochastic gradient algorithm",
+      "target_alias": "ASGA",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "2 nd order random walk approach",
+      "target_alias": "2NORWA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node2vec parameter",
+      "target_alias": "NP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "alias tables",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias tables",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "O(1) sampling of the next node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "NS",
+      "type": "APPLIES_TO",
+      "target": "skip-gram embedding-learning phase",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "NS",
+      "type": "USES",
+      "target": "unigram distribution raised to the 3/4 power",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "negative sampling",
+      "source_alias": "NS",
+      "type": "ENABLES",
+      "target": "tractable softmax objective",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous stochastic gradient algorithm",
+      "source_alias": "ASGA",
+      "type": "IS_A",
+      "target": "parallelization technique",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous stochastic gradient algorithm",
+      "source_alias": "ASGA",
+      "type": "REFUTED",
+      "target": "faster walk sampling",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

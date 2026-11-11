@@ -1,0 +1,11 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "The tree is a Huffman tree built from vertex frequencies (the evidence only says a binary tree is built from V).",
+    "The explicit gradient formula with error term (1 - code - sigma(\u03a6(v_j)\u00b7\u03c8_node)) and the per-path accumulation into a single SGD update per pair are not in the evidence."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: SGD, derivatives obtained by back-propagation, learning rate starting at about 0.025 and decaying, and hierarchical softmax with a binary tree. The Huffman-tree detail and the explicit gradient formulas are not in the evidence; they match the original paper's background but are not entailed by the provided text.",
+  "note": "The decaying-rate claim is supported; the answer says 'decaying' rather than 'linearly', which is consistent."
+}

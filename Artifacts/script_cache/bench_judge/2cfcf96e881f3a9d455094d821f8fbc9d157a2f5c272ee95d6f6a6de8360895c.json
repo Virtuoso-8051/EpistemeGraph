@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The AI answer says BFS-like sampling 'tends to capture structural equivalence' and DFS-like sampling 'tends to capture homophily'; the evidence does state BFS suits structural equivalence and DFS suits homophily, so this is supported, but the answer's framing that node2vec's goal is to capture 'homophily and structural equivalence' in embedding space is only partially in the excerpt.",
+    "The AI answer says the parameter settings are 'q large, or p small to stay near the start' for BFS-like exploration; the evidence gives alpha values (1/p for return, 1/q for outward moves) but does not explicitly state these BFS/DFS parameter regimes, so this mapping is an inference not stated in the excerpt.",
+    "The AI answer claims the strategy is about 'conditioned on the previous node' second-order walks; the evidence supports second-order random walk with p and q, so this is supported."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that node2vec smoothly interpolates between BFS and DFS via a biased second-order random walk with parameters p and q is supported by the evidence. However, the answer's specific parameter-regime mapping (q large vs. p small) is an inference beyond what the excerpt explicitly states, and the gold answer's emphasis on the interpolation goal is somewhat diluted by the extra embedding-objective framing."
+}

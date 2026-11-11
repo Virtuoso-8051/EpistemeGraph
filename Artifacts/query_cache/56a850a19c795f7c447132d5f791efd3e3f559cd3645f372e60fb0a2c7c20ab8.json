@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "LINE",
+    "time complexity (TC)",
+    "network embedding (NE)",
+    "number of edge (NE)",
+    "edge-sampling treatment (EST)"
+  ],
+  "triples": [
+    {
+      "source": "time complexity (TC)",
+      "source_alias": "TC",
+      "type": "IS_A",
+      "target": "O(dK|E|)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "O(dK|E|)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "analytical result",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "O(dK|E|)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "embedding dimension d, negative samples K per edge, and number of edges |E|",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous SGD",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "asynchronous SGD",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "each update",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "O(dK)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "O(dK|E|)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "time complexity of LINE",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Tencent Weibo",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "large networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "runtime",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "number of threads",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "exact runtime figures for specific datasets",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "reliable recall",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

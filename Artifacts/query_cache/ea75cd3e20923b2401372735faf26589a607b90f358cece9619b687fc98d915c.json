@@ -1,0 +1,47 @@
+{
+  "query_entities": [
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "graph noise robustness",
+      "target_alias": "robustness to noisy edges added between randomly selected node pairs",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "performance",
+      "target_alias": "performance degrades only slightly when noisy edges are added between randomly selected node pairs",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph noise robustness",
+      "source_alias": "robustness to noisy edges added between randomly selected node pairs",
+      "type": "APPLICABLE_FOR",
+      "target": "social networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph noise robustness",
+      "source_alias": "robustness to noisy edges added between randomly selected node pairs",
+      "type": "APPLICABLE_FOR",
+      "target": "recommendation systems",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph noise robustness",
+      "source_alias": "robustness to noisy edges added between randomly selected node pairs",
+      "type": "APPLICABLE_FOR",
+      "target": "real-world network analysis tasks",
+      "target_alias": "other real-world network analysis tasks where spurious connections may appear",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

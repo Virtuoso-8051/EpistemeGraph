@@ -1,0 +1,58 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "Link Prediction",
+    "Facebook network"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EVALUATED_ON",
+      "target": "Link Prediction",
+      "target_alias": "LP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "source_alias": "LP",
+      "type": "CONTAINS",
+      "target": "labeled edge examples (approximately 88,234)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled edge examples (approximately 88,234)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "true removed edges as positives (approximately 44,117)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "labeled edge examples (approximately 88,234)",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "sampled non-edges as negatives (equal number)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction",
+      "source_alias": "LP",
+      "type": "USES",
+      "target": "train-test split of 50/50",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EVALUATED_ON",
+      "target": "Facebook network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

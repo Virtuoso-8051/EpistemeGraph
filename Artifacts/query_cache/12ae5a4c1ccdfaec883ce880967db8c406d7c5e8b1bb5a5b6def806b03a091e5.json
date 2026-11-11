@@ -1,0 +1,6 @@
+{
+  "answer": "LINE can obtain an embedding for a newly arrived vertex as long as the new vertex has at least one observed edge to existing vertices, because its embedding can then be inferred from its local neighborhood and the learned embeddings of adjacent nodes. The recommended optimization objective is to preserve first-order and second-order proximity in the network, typically by minimizing the KL-divergence between the empirical edge distributions and the model distributions for these two proximities (often optimized with negative sampling).",
+  "confidence": 0.86,
+  "confidence_reasoning": "This matches the standard LINE formulation and its inductive use for new vertices with observed neighbors, though exact wording can vary across descriptions of the method.",
+  "_token_nll": 0.22498533460828993
+}

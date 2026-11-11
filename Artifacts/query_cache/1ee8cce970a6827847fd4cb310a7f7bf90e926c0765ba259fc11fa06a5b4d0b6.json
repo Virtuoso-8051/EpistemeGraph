@@ -1,0 +1,111 @@
+{
+  "query_entities": [
+    "short random walks",
+    "graph representation",
+    "local neighborhoods",
+    "embeddings",
+    "statistics",
+    "incremental updates",
+    "full-graph recomputation",
+    "affected local region",
+    "whole graph"
+  ],
+  "triples": [
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "graph representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph representation",
+      "source_alias": "",
+      "type": "DEPENDS_ON",
+      "target": "local neighborhoods",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph representation",
+      "source_alias": "",
+      "type": "DOES_NOT_DEPEND_ON",
+      "target": "entire graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph changes slightly",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph changes slightly",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "statistics",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embeddings",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "nodes near the change",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "statistics",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "nodes near the change",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "short random walks",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "incremental updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "method",
+      "source_alias": "",
+      "type": "AVOIDS",
+      "target": "full-graph recomputation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "method",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "cheaper incremental updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "method",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "affected local region",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "method",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "whole graph",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

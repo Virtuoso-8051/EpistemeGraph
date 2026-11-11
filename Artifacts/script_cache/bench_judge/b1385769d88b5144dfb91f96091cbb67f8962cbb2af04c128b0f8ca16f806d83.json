@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Graph factorization is applicable only to graphs of moderate size because it requires forming and factorizing an n-by-n matrix, which is costly in time and memory (the evidence says it uses SGD and scales to large graphs).",
+    "Graph factorization is transductive and cannot embed unseen nodes.",
+    "Graph factorization captures higher-order structure only if the matrix is explicitly constructed with it, e.g. via powers of the adjacency matrix.",
+    "Graph factorization is limited to homogeneous, single-relation networks.",
+    "LINE is applicable to a broader range of graph sizes than graph factorization, and graph factorization is more computationally demanding."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim is supported: graph factorization applies only to undirected graphs, while LINE handles both undirected and directed graphs. The answer adds unsupported claims, including that graph factorization is limited to moderate-sized graphs, which contradicts the evidence that it is optimized with SGD and scales to large graphs; it also adds claims about transductivity and homogeneity."
+}

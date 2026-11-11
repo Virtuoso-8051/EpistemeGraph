@@ -1,0 +1,6 @@
+{
+  "answer": "The O(dK|E|) complexity is an analytical result, not one tied to a specific dataset. Here d is the embedding dimension, K the number of negative samples per edge, and |E| the number of edges. It follows from asynchronous SGD with edge sampling and negative sampling, where each update costs O(dK). The paper reports its empirical scalability on large networks (e.g., Tencent Weibo and other datasets), with runtime decreasing roughly linearly as the number of threads grows. I cannot reliably recall exact runtime figures for specific datasets, so I am not giving specific numbers.",
+  "confidence": 0.3,
+  "confidence_reasoning": "The complexity expression and the general scalability claims are consistent with my knowledge of the LINE paper (Tang et al., 2015), but I am unsure of the exact dataset-specific runtime numbers and cannot verify them.",
+  "_token_nll": null
+}

@@ -1,0 +1,9 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "Node2vec papers often grid-search p and q over {0.25, 0.5, 1, 2, 4}"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says the exact best p and q values cannot be given from the source, since the passage states the best node2vec settings are omitted. However, it adds a specific grid of p/q values that appears nowhere in the evidence, which is external detail the papers do not provide."
+}

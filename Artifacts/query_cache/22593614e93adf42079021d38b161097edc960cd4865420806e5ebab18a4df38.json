@@ -1,0 +1,84 @@
+{
+  "query_entities": [
+    "node2vec",
+    "biased random walk procedure (BRWP)",
+    "random walk (RW)",
+    "node2vec parameter (NP)",
+    "node embedding (NE)",
+    "classical stochastic gradient descent (CSGD)"
+  ],
+  "triples": [
+    {
+      "source": "Grover & Leskovec",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "NODE2VEC",
+      "target_alias": "node2vec",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "biased random walk procedure (BRWP)",
+      "target_alias": "BRWP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walk procedure (BRWP)",
+      "source_alias": "BRWP",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "NP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec parameter (NP)",
+      "source_alias": "NP",
+      "type": "ENABLES",
+      "target": "BFS-like and DFS-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "random walk (RW)",
+      "target_alias": "RW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "USES",
+      "target": "negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "classical stochastic gradient descent (CSGD)",
+      "target_alias": "CSGD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "node embedding (NE)",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

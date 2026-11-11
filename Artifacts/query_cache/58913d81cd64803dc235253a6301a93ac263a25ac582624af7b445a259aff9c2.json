@@ -1,0 +1,6 @@
+{
+  "answer": "The Skip-gram model uses graph cuts because the network data is treated as a graph of words or nodes whose connections should reflect similarity, and graph cuts provide a way to partition that graph so that strongly connected nodes stay together. This enforces homophily by encouraging nearby or linked words to have similar embeddings, which helps the model preserve the local structure of the network while learning representations. In short, graph cuts are used to regularize the embedding learning so that words connected in the graph end up close in the embedding space.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This answer reflects the standard role of graph cuts in homophily-based embedding methods, but the exact wording and emphasis may vary depending on the specific passage.",
+  "_token_nll": 0.23682472229003906
+}

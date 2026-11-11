@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The AI answer attributes its content to general knowledge rather than the passage, which is not what the question asks; the passage does contain the relevant statements about sparsity and DeepWalk, so the answer misses the source-grounded explanation.",
+    "DeepWalk applies the skip-gram model from word2vec to random walk sequences, which is not stated in the provided evidence excerpts.",
+    "The claim that nodes with few connections receive little signal is not stated in the evidence; the passage only says sparsity makes generalization harder and methods must deal with it."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The AI answer explicitly disclaims the passage and relies on background knowledge, so its sparsity explanation is only loosely aligned with the source's point that sparsity hampers generalization in statistical learning. Its description of DeepWalk as using random walks to learn low-dimensional vertex embeddings matches the evidence, but the skip-gram detail and some sparsity elaborations go beyond what the evidence states."
+}

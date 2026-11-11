@@ -1,0 +1,109 @@
+{
+  "query_entities": [
+    "Les Mis\u00e9rables network",
+    "node2vec",
+    "biased random walks",
+    "skip-gram model",
+    "low-dimensional embeddings",
+    "local neighborhood structure",
+    "global community/role similarity"
+  ],
+  "triples": [
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "standard character co-occurrence graph",
+      "target_alias": "from the novel",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "characters",
+      "target_alias": "nodes",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "edges connecting two characters",
+      "target_alias": "if they appear together in the same scene/chapter segment",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weights",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "character co-occurrence frequency",
+      "target_alias": "how often they co-occur",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "77 nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "254 weighted edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walks",
+      "target_alias": "over the graph",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node sequences",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "low-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional embeddings",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional embeddings",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "global community/role similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

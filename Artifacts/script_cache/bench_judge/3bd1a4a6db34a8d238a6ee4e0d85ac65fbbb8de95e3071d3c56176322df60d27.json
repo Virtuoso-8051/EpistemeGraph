@@ -1,0 +1,9 @@
+{
+  "claims_checked": 1,
+  "unsupported_claims": [
+    "The answer gives 128 as the LINE embedding dimension for large-scale networks, but the evidence only states that 128 is the default dimension for 'other networks' (following DeepWalk [16]) and never ties it to LINE's experiments on large-scale networks; the question is unanswerable from the papers and the answer presents a specific value without saying so."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is not answerable from the source passage, which does not report LINE's experimental embedding dimensionality, and a faithful answer should say so. The AI answer instead gives the specific value 128, which at best is a default setting mentioned in the evidence for other networks and is not attributed to LINE's large-scale experiments."
+}

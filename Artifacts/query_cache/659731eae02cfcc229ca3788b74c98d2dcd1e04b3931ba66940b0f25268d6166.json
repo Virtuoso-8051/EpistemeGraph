@@ -1,0 +1,81 @@
+{
+  "query_entities": [
+    "Graph Embedding (GE)",
+    "DEEPWALK",
+    "hierarchical softmax (HS)"
+  ],
+  "triples": [
+    {
+      "source": "Classical graph embedding methods",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "whole graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Spectral methods",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "eigen-decomposition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "eigen-decomposition",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "costly scaling with number of vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Laplacian Eigenmaps",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "spectral method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "IsoMap",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "spectral method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "hierarchical softmax (HS)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "vertex frequencies in short random walks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "power-law distribution",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Huffman-coded tree",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "observed vertex frequencies",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "online and large-scale operation",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

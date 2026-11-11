@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "node2vec",
+    "BlogCatalog network (BN)",
+    "graph structure (GS)",
+    "observed link (OL)",
+    "robust to perturbation (RP)"
+  ],
+  "triples": [
+    {
+      "source": "perturbation study",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "BlogCatalog network (BN)",
+      "target_alias": "BN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "perturbation study",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "adding spurious edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adding spurious edges",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "inserting false connections into the BlogCatalog network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "adding spurious edges",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "erroneous or noisy observations",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BlogCatalog network (BN)",
+      "source_alias": "BN",
+      "type": "CONTAINS",
+      "target": "links that do not truly exist",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "uncertainty about presence of false-positive edges",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "structural uncertainty in observed graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

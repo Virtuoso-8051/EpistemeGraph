@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "Why do the linear and non-linear dimensionality reduction methods mentioned in the passage struggle to scale to large networks, and what is one additional limitation of their objectives?",
+      "gold_answer": "They are hard to scale because eigendecomposition of a data matrix is expensive unless the solution quality is significantly compromised with approximations. In addition, their objectives are not robust to diverse network patterns such as homophily and structural equivalence, and they make assumptions about how network structure relates to the prediction task.",
+      "evidence_quote": "In terms of computational efficiency, eigendecomposition of a data matrix is expensive unless the solution quality is significantly compromised with approximations, and hence, these methods are hard to scale to large networks.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How is the Skip-gram model used to learn word representations, and what training objective does it optimize?",
+      "gold_answer": "The Skip-gram model scans over the words of a document and learns an embedding for each word so that the word\u2019s features can predict nearby words within a context window. It trains by optimizing a neighborhood-preserving likelihood objective using SGD with negative sampling.",
+      "evidence_quote": "In particular, the Skip-gram model [21] aims to learn continuous feature representations for words by optimizing a neighborhood preserving likelihood objective.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which assumption does spectral clustering operate according to the passage, and why is that assumption considered limiting?",
+      "gold_answer": "Spectral clustering makes a strong homophily assumption that graph cuts will be useful for classification. This is limiting because such assumptions may be reasonable in many scenarios, but they do not generalize well across diverse networks.",
+      "evidence_quote": "For instance, spectral clustering makes a strong homophily assumption that graph cuts will be useful for classification [29].",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What matrix representations of graphs are highlighted as especially important for unsupervised feature learning, and how are these methods interpreted under a linear algebra perspective?",
+      "gold_answer": "The passage highlights the Laplacian and adjacency matrices as especially important spectral representations used by unsupervised feature learning methods. Under a linear algebra perspective, these methods can be viewed as dimensionality reduction techniques.",
+      "evidence_quote": "Unsupervised feature learning approaches typically exploit the spectral properties of various matrix representations of graphs, especially the Laplacian and the adjacency matrices.",
+      "difficulty": "easy"
+    }
+  ]
+}

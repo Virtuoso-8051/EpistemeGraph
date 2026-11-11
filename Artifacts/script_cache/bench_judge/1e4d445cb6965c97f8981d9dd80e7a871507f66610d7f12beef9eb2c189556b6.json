@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Reuse avoids bias only when each reused sample follows the exact biased transition distribution and does not correlate successive walk steps - this goes along with the false premise and the paper says no such conditions.",
+    "Bias-free reuse is achieved by reusing alias tables or rejection-sampling outcomes within the same state, so each step is an exact draw from the node2vec distribution - not in the evidence and misdescribes how sample reuse works in node2vec.",
+    "Efficiency gains come from amortizing table-building cost across walks, provided reuse is restricted to identical transition states - the paper attributes efficiency to reusing walk samples across source nodes, not to this."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The answer accepts the false premise by supplying conditions under which node2vec's sample reuse is bias-free, whereas the paper says sample reuse can introduce some bias while greatly improving efficiency. It also invents mechanisms (alias-table reuse, rejection sampling) that the evidence does not support as the source of the efficiency gain."
+}

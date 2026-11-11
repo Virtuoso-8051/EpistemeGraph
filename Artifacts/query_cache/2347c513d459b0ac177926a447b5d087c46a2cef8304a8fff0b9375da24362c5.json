@@ -1,0 +1,6 @@
+{
+  "answer": "DeepWalk samples the next vertex in a walk by choosing uniformly at random from the current vertex\u2019s neighbors, so the transition probability depends only on graph adjacency, not on edge weights. In paper1\u2019s information network definition, edge weights are part of the graph representation and can encode the strength or frequency of a relationship, but DeepWalk\u2019s standard random-walk procedure ignores those weights unless the method is explicitly modified to use weighted transitions.",
+  "confidence": 0.92,
+  "confidence_reasoning": "This is consistent with the standard DeepWalk algorithm and with the usual interpretation of weighted edges in information networks, though the exact wording of paper1 could vary.",
+  "_token_nll": 0.19468691876826397
+}

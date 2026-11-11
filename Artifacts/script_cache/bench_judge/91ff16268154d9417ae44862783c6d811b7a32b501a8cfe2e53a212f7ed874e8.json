@@ -1,0 +1,13 @@
+{
+  "claims_checked": 8,
+  "unsupported_claims": [
+    "Alias setup costs roughly O(a^2 |V|) for second-order transitions, with a the average degree in the worst case",
+    "Alias tables are stored for each (previous node, current node) pair with O(1)-per-edge preprocessing",
+    "The walks are fed to a skip-gram model with negative sampling",
+    "The answer says it repeats over multiple passes so each node appears as a walk start equally often, and that the start-node choice does not bias the corpus toward any region of the graph",
+    "Can be reduced further by on-the-fly computation or approximations"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core points (r walks of length l from every node, precomputed second-order transition probabilities, and O(1) alias sampling) are supported by the evidence. However, the answer adds specific complexity figures, the on-the-fly/approximation remark, and skip-gram/negative-sampling details that the provided excerpt does not state, though it does not contradict them."
+}

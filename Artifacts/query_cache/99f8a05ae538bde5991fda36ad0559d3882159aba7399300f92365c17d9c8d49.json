@@ -1,0 +1,81 @@
+{
+  "query_entities": [
+    "first-order proximity",
+    "network structure",
+    "real-world information network"
+  ],
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "DEFINED_AS",
+      "target": "direct observed links between a pair of vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information network",
+      "source_alias": "RWIN",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparse and noisy",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "REQUIRES",
+      "target": "observed edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "PRESERVES",
+      "target": "broader structural similarity between nodes",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "comparison of neighbor distributions between nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher-order proximity",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "longer-range connectivity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity and second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local and global network structure",
+      "target_alias": "LGNS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "direct-link signal",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "too sparse and incomplete to represent full network structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

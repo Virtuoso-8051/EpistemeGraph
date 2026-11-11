@@ -1,0 +1,11 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "DeepWalk needs the vertex frequency distribution before training when it uses hierarchical softmax (accepts the false premise; the source says knowing it is beneficial but not necessary)",
+    "The Huffman tree shape built from frequencies must be fixed before training, so frequency knowledge is required",
+    "Negative sampling still needs frequency counts for its sampling distribution (not in evidence)"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The source states that knowing the vertex frequency distribution is beneficial but not necessary for DeepWalk, so the answer accepts the false premise by claiming it is required under hierarchical softmax. The Huffman-tree and negative-sampling details are not backed by the evidence and contradict the stated correction."
+}

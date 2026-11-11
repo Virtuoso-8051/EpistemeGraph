@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How does node2vec define the unnormalized transition probability for the next step of a biased random walk after the walk has just moved from node t to node v, and what role do the parameters p and q play?",
+      "gold_answer": "node2vec sets the unnormalized transition probability to \u03c0_vx = \u03b1_pq(t,x) \u00b7 w_vx for an edge (v,x). The bias term \u03b1_pq(t,x) depends on the shortest-path distance d_tx: it is 1/p when x is the same as t, 1 when x is adjacent to t, and 1/q when x is two hops away from t, so p and q control the walk's tendency to return, stay local, or explore outward.",
+      "evidence_quote": "We set the unnormalized transition probability to\u03c0vx =\u03b1pq(t,x )\u00b7wvx, where \u03b1pq(t,x ) = \uf8f1 \uf8f4\uf8f2 \uf8f4\uf8f3 1 p ifdtx = 0 1 ifdtx = 1 1 q ifdtx = 2",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why does node2vec use a second-order random walk with parameters p and q instead of sampling the next node only according to the static edge weights w_vx?",
+      "gold_answer": "Using only the static edge weights would ignore the network structure and would not let node2vec guide the search toward different kinds of neighborhoods. The second-order walk with p and q lets node2vec smoothly interpolate between BFS-like and DFS-like exploration, capturing that real networks can exhibit both homophily and structural equivalence.",
+      "evidence_quote": "However, this does not allow us to account for the network structure and guide our search procedure to explore different types of network neighborhoods.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under what conditions does node2vec assign \u03b1_pq(t,x) equal to 1/p, 1, or 1/q when choosing the next node x?",
+      "gold_answer": "node2vec assigns \u03b1_pq(t,x)=1/p when x is the same node as t, meaning the walk would immediately return. It assigns \u03b1_pq(t,x)=1 when x is one hop from t, and \u03b1_pq(t,x)=1/q when x is two hops away from t.",
+      "evidence_quote": "We set the unnormalized transition probability to\u03c0vx =\u03b1pq(t,x )\u00b7wvx, where \u03b1pq(t,x ) = \uf8f1 \uf8f4\uf8f2 \uf8f4\uf8f3 1 p ifdtx = 0 1 ifdtx = 1 1 q ifdtx = 2",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the main goal of node2vec's flexible neighborhood sampling strategy, and how does it relate BFS and DFS?",
+      "gold_answer": "The main goal is to create a flexible neighborhood sampling strategy that can smoothly interpolate between BFS and DFS. node2vec does this by using a biased random walk procedure that can explore neighborhoods in either a BFS-like or DFS-like fashion, rather than treating the two as mutually exclusive extremes.",
+      "evidence_quote": "we design a flexible neighborhood sampling strategy which allows us to smoothly interpolate between BFS and DFS.",
+      "difficulty": "medium"
+    }
+  ]
+}

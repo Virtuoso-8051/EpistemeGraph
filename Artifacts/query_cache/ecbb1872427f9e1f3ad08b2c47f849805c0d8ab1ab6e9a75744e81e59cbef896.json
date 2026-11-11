@@ -1,0 +1,6 @@
+{
+  "answer": "LINE claims it can embed very large information networks, scaling to millions of nodes and billions of edges. The benchmark networks it is evaluated on are small by comparison: BlogCatalog has roughly 10.3K nodes and 334K edges, PPI about 3.9K nodes and 77K edges, and Wikipedia about 4.8K nodes and 185K edges. So these experiments show accuracy on modest graphs and do not by themselves demonstrate the claimed large-scale performance. LINE's edge-sampling algorithm addresses the scalability concern. It samples edges in proportion to their weights (using alias tables) and treats each sampled edge as a binary training example. This avoids the high-variance gradients that arise when edge weights are used directly in SGD, and it keeps the cost of each update constant regardless of network size or weight scale, so runtime depends on the number of sampled edges rather than on the graph's structure. That per-sample efficiency is what supports the scalability claim, even though the reported benchmarks are much smaller than the networks the claim targets.",
+  "confidence": 0.6,
+  "confidence_reasoning": "The dataset sizes and the edge-sampling description match my recollection of the LINE paper, but I am not fully certain of the exact node and edge counts or of how the paper frames the contrast.",
+  "_token_nll": null
+}

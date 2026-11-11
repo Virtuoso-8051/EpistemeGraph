@@ -1,0 +1,82 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "TMN",
+    "NCP",
+    "TTC"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "alias tables",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias tables",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "preprocessing cost grows with the sum of squared degrees",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "denser graphs",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "considerably more expensive preprocessing",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk generation and skip-gram training",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "linear scaling with number of nodes, walks per node, and walk length",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walk generation and skip-gram training",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "O(1) per step once alias tables exist",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "one million node representations",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "linear cost in node count",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "walks being generated independently and in parallel",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "speed on around one million nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "efficient implementations such as C/Python word2vec-style training",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "speed on around one million nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "strong degree-scalability reported by a specific study",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "particular parameters, implementation, or hardware",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

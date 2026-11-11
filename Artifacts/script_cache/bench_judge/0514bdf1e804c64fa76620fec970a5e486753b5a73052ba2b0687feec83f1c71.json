@@ -1,0 +1,12 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "The answer says only a subset V_L of nodes has known labels and frames the task as semi-supervised learning; the evidence describes a partially labeled network but does not use the term semi-supervised or define V_L.",
+    "The answer states the embedding is in R^{|V|\u00d7d} with d 'e.g., 64 to 128' and that the embedding is learned purely from structure with labels playing no role; the evidence does not give the dimension range or explicitly state that labels are excluded from embedding learning.",
+    "The answer says the classifier is one-vs-rest logistic regression, which is not stated in the provided evidence.",
+    "The answer claims evaluation on BlogCatalog, Flickr, and YouTube with 'small fraction labeled' results; the evidence mentions social networks and YouTube but does not name BlogCatalog or Flickr in the excerpt."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core formulation (graph G=(V,E), partially labeled GL with attributes and labels, classification leveraging graph dependence) is correctly captured by the evidence. However, several specifics added in the answer (V_L notation, semi-supervised framing, one-vs-rest logistic regression, dimension range, named datasets) are not found in the provided excerpts."
+}

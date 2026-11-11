@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "For DeepWalk, what exact classification accuracy or F1 score was obtained on Flickr when the latent dimension was set to 128 and the number of walks per vertex was 30?",
+      "why_unanswerable": "The passage discusses trends in performance with changing dimensionality and walk count, but it does not report any exact metric values for a specific setting like 128 dimensions and \u03b3=30.",
+      "evidence_quote": "Figures 5a1 and 5a3 examine the effects of varying the dimensionality and training rate.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many labeled examples did DeepWalk use in the Flickr experiment at the 10% training-rate setting?",
+      "why_unanswerable": "The passage compares 1% of Flickr to 10% of BlogCatalog in a relative way, but it never gives the exact number of labeled examples used for Flickr at 10%.",
+      "evidence_quote": "(Note that 1% of Flickr has approximately as many labeled examples as 10% of BlogCatalog).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which hardware configuration did DeepWalk run the parameter sensitivity experiments on Flickr and BlogCatalog, including the GPU model and amount of memory?",
+      "why_unanswerable": "The passage describes the experiments and parameter sweeps, but it gives no hardware or implementation environment details such as GPU type or memory size.",
+      "evidence_quote": "In order to evaluate how changes to the parameterization of DeepWalk effect its performance on classification tasks, we conducted experiments on two multi-label classifications tasks (Flickr, and BlogCatalog).",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compared with DeepWalk using 30 walks per node, what was the percentage improvement from increasing the number of walks per vertex to 50 on BlogCatalog?",
+      "why_unanswerable": "The passage says most of the benefit comes by starting with 30 walks per node, but it does not report a quantified improvement for 50 walks or any exact comparison percentage.",
+      "evidence_quote": "The first is that there is most of the benefit is accomplished by starting \u03b3 = 30 walks per node in both graphs.",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk perform poorly on the language network compared with the LINE variants, and what aspect of the edges does LINE need to handle effectively?",
+      "gold_answer": "DeepWalk performs poorly because it has to ignore the weights, or co-occurrences, of the edges, and those weights are very important in a language network. LINE works much better when it handles the edge weights properly, especially when optimized with edge sampling.",
+      "evidence_quote": "This is because DeepWalk has to ignore the weights (i.e., co-occurrences) of the edges, which is very important in a language network.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How do the LINE models optimized directly with SGD compare with the LINE model optimized by edge sampling, and why is the SGD version worse?",
+      "gold_answer": "The LINE models directly optimized with SGD perform much worse than the edge-sampling version. They suffer because the edge weights in the language network diverge widely, from single digits to tens of thousands, which makes learning difficult, while edge sampling effectively addresses that problem.",
+      "evidence_quote": "The performance by the LINE models directly optimized with SGD is much worse, because the weights of the edges in the language network diverge, which range from a single digit to tens of thousands, making the learning process suffer.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under what conditions are LINE(1st) and LINE(2nd) reported to be efficient, and how fast are they relative to graph factorization and DeepWalk?",
+      "gold_answer": "On a single machine with 1T memory, 40 CPU cores at 2.0GHZ using 16 threads, both LINE(1st) and LINE(2nd) are reported to be quite efficient. They take less than 3 hours to process a network with 2 million nodes and a billion edges, are at least 10% faster than graph factorization, and are much more efficient than DeepWalk, which is five times slower.",
+      "evidence_quote": "Both the LINE(1st) and LINE(2nd) are quite efficient, which take less than 3 hours to process such a network with 2 million nodes and a billion edges.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "How are document vectors constructed for the document classification evaluation, and why is this simple method used instead of a more advanced approach?",
+      "gold_answer": "Document vectors are built by averaging the word vector representations in each document. This simple approach is used because the goal is to compare the quality of different word embedding methods, not to optimize document embeddings, and the text notes that more advanced document embedding approaches are available elsewhere.",
+      "evidence_quote": "To obtain document vectors, we choose a very simple approach, taking the average of the word vector representations in that document.",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "node embeddings",
+    "graph structure",
+    "downstream task",
+    "linear classifier",
+    "logistic regression"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "unsupervised way",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "graph structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "not tied to any single downstream task",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node embeddings",
+      "source_alias": "",
+      "type": "GENERALIZES",
+      "target": "different tasks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "linear classifier",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "logistic regression",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "logistic regression",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "strong performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "logistic regression",
+      "source_alias": "",
+      "type": "USES",
+      "target": "these embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

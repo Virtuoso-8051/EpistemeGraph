@@ -1,0 +1,6 @@
+{
+  "answer": "It doesn't. The premise is incorrect. Node2vec's second-order walk does not avoid storing neighborhood information beyond immediate neighbors. Its bias depends on the previous node t, so the transition from current node v to next node x uses the unnormalized weight \u03b1(t,x)\u00b7w(v,x), where \u03b1 is 1/p if x = t, 1 if x is a neighbor of t, and 1/q otherwise. Computing this requires knowing t's neighbors, which is information beyond v's immediate neighbors. The precomputed alias tables for every directed edge (t\u2192v) also make storage grow with the sum of squared degrees, which is much larger than storing first-order transition probabilities. Node2vec trades extra memory and computation for the ability to interpolate between BFS-like and DFS-like exploration, controlled by p and q. Some implementations reduce cost by computing transitions on the fly, but that still needs the previous node's adjacency, so the walk does not eliminate that dependency.",
+  "confidence": 0.85,
+  "confidence_reasoning": "The node2vec transition definition (p, q, distance d_tx, alias tables per edge pair) is well established, so the claim that the premise is false is well supported, though I am recalling implementation details from memory.",
+  "_token_nll": null
+}

@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE(2nd)",
+    "first-order proximity",
+    "second-order proximity",
+    "word analogy"
+  ],
+  "triples": [
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(2nd)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "Tang et al. (2015)",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "word analogy",
+      "target_alias": "WA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word analogy",
+      "source_alias": "WA",
+      "type": "USES",
+      "target": "Wikipedia co-occurrence data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "LINE(1st)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "contextual similarity",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "contextual similarity",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "word analogy",
+      "target_alias": "WA",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk rely on restarts in its random walks to improve performance, and how does that teleport probability change the learned embeddings?",
+      "false_premise": "DeepWalk uses restarts/teleport probability as a core mechanism and benefits from them.",
+      "correction": "DeepWalk's random walks could have restarts, but the authors report no advantage from using restarts in their preliminary results.",
+      "evidence_quote": "These walks could have restarts (i.e. a teleport probability of returning back to their root), but our preliminary results did not show any advantage of using restarts.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What vocabulary does DeepWalk build from the corpus, and how does it treat the graph vertices as a separate vocabulary during training?",
+      "false_premise": "DeepWalk uses the corpus vocabulary and graph vertices as separate vocabularies.",
+      "correction": "DeepWalk treats the graph vertices as its own vocabulary, with V = V.",
+      "evidence_quote": "DeepWalkconsiders a set of short truncated random walks its own corpus, and the graph vertices as its own vocabulary (V =V ).",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does DeepWalk require knowing the vertex frequency distribution ahead of training in order to work correctly?",
+      "false_premise": "DeepWalk requires the vertex frequency distribution ahead of training to function.",
+      "correction": "Knowing the vertex frequency distribution ahead of training is beneficial but not necessary for DeepWalk to work.",
+      "evidence_quote": "While it is beneficial to know the V and the frequency distribution of vertices in the random walks ahead of the training, it is not necessary for the algorithm to work as we will show in 4.2.2.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "How does DeepWalk's update procedure use the CBOW objective to predict a vertex from its neighbors, and why is that better than SkipGram here?",
+      "false_premise": "DeepWalk uses CBOW rather than SkipGram for its update procedure.",
+      "correction": "DeepWalk uses the SkipGram algorithm to update the representations, not CBOW.",
+      "evidence_quote": "We use the SkipGram algorithm [26] to update these representations in accordance with our objective function in Eq. 2.",
+      "difficulty": "medium"
+    }
+  ]
+}

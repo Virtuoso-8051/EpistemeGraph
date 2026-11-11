@@ -1,0 +1,41 @@
+{
+  "query_entities": [
+    "fraction of missing edge (FME)",
+    "observed link (OL)",
+    "graph connectivity (GC)"
+  ],
+  "triples": [
+    {
+      "source": "missing edge selection",
+      "source_alias": "",
+      "type": "USES",
+      "target": "uniform random sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing edge selection",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "observed link (OL)",
+      "target_alias": "OL",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing edge selection",
+      "source_alias": "",
+      "type": "USES",
+      "target": "fraction of missing edge (FME)",
+      "target_alias": "FME",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "perturbed graph",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "graph connectivity (GC)",
+      "target_alias": "GC",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

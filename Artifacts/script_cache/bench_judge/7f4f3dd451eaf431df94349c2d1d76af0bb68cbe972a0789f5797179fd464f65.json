@@ -1,0 +1,10 @@
+{
+  "claims_checked": 2,
+  "unsupported_claims": [
+    "node2vec used d = 128 dimensions in the main experiments",
+    "128 dimensions was used for all methods in the main experiments"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is labeled unanswerable from the passage, which defines d but gives no value, so a faithful answer should say the value is not reported. The answer asserts d = 128 for all methods. The evidence only says 128 is the default for 'other networks', as used in [16], and that some baselines used d = 500, which contradicts 'all methods'."
+}

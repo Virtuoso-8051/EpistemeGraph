@@ -1,0 +1,98 @@
+{
+  "query_entities": [
+    "node2vec",
+    "BFS",
+    "DFS",
+    "Les Mis\u00e9rables network"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "BFS",
+      "target_alias": "breadth-first search",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "DFS",
+      "target_alias": "depth-first search",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "breadth-first search",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "immediate neighborhood exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "breadth-first search",
+      "type": "IMPROVES",
+      "target": "local homophily-based similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "depth-first search",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "farther-from-start exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "depth-first search",
+      "type": "IMPROVES",
+      "target": "structural or role-based similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "BFS",
+      "target_alias": "breadth-first search",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "DFS",
+      "target_alias": "depth-first search",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Les Mis\u00e9rables network",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "different kinds of relationships in the same network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS",
+      "source_alias": "breadth-first search",
+      "type": "HIGHLIGHTS",
+      "target": "tightly connected communities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS",
+      "source_alias": "depth-first search",
+      "type": "SURFACES",
+      "target": "nodes with similar structural roles across the graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

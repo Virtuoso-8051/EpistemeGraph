@@ -1,0 +1,101 @@
+{
+  "query_entities": [
+    "real-world information network (RWIN)",
+    "network embedding (NE)",
+    "DEEPWALK",
+    "truncated random walk (TRW)",
+    "random walk (RW)",
+    "Skip-gram model",
+    "node2vec"
+  ],
+  "triples": [
+    {
+      "source": "real-world information network (RWIN)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information network (RWIN)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparse, heterogeneous, and noisy structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information network (RWIN)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "temporal evolution",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walk (TRW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram model",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "network embedding (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "uniform random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "higher-order co-occurrence capture",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "local neighbourhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walk (RW)",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

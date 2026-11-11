@@ -1,0 +1,98 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "effective sampling rate (ESR)",
+    "random walk (RW)",
+    "node2vec parameter (NP)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "DFS-only sampling",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "effective sampling rate (ESR)",
+      "target_alias": "ESR",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "second-order biased random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "return parameter p",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "likelihood of revisiting the previous node",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "in-out parameter q",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "outward (DFS-like) versus local (BFS-like) walk movement",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "node2vec parameter (NP)",
+      "target_alias": "NP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "BFS-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "DFS-like exploration",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "RW",
+      "type": "GENERATES",
+      "target": "neighborhood N_S(u)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood N_S(u)",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "set of nodes visited by biased walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighborhood N_S(u)",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "restricted to immediate neighbors",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

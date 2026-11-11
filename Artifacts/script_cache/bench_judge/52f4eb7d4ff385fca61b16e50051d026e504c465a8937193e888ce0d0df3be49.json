@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "In the original LINE method, the vertex importance weights \u03bbi are not part of the objective. The evidence (Eq. 5) explicitly introduces \u03bbi into the second-order objective, so this contradicts the source.",
+    "Negative sampling uses a vertex distribution proportional to degree raised to the 3/4 power. This is not in the provided evidence excerpt, though it is consistent with the broader LINE paper."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says the papers do not report a PageRank-versus-degree comparison, so no quantitative change can be given. However, it wrongly states that \u03bbi is absent from LINE's objective, when the evidence shows \u03bbi appears in the second-order objective (Eq. 5), and its negative-sampling detail is not in the excerpt."
+}

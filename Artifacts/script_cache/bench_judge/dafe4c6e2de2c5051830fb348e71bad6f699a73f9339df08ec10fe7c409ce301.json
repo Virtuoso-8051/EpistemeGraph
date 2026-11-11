@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The condition is 'most plausibly on networks where first and second-order proximities capture distinct structure (e.g., sparser networks or limited labeled data)' - the paper states the condition is the supervised task permitting concatenation of embeddings, not sparsity or limited labels.",
+    "The answer fails to identify the actual condition (supervised task allowing concatenation), instead speculating about network sparsity/limited labels."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The conclusion that the proximities are complementary and that concatenation yields the combined embedding is supported, but the stated condition (sparser networks, limited labeled data) is speculative and not what the paper says. The real condition is the supervised task permitting concatenation, which the answer only mentions indirectly."
+}

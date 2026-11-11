@@ -1,0 +1,9 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The evaluated datasets were large-scale networks, ranging from tens of thousands to millions of nodes (with millions of edges in some cases)."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The paper supports that LINE did not compare with MDS, IsoMap, and Laplacian eigenmap because they cannot handle networks of this scale, and it also supports that the evaluated networks were very large, with at least half a million nodes and millions of edges, up to around two million nodes and a billion edges. However, the answer understates the dataset scale by saying they ranged from tens of thousands to millions of nodes, which is not what the paper reports."
+}

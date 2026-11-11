@@ -1,0 +1,6 @@
+{
+  "answer": "In DeepWalk, the binary tree T is used as the Huffman tree for hierarchical softmax in the SkipGram model. During training, each node/vertex in the graph is assigned a path from the root of T to a leaf, and the model predicts context vertices by traversing this path rather than computing a full softmax over all vertices. So T does not generate the random walks themselves; it is used inside the SkipGram training loop to make output probability computation efficient.",
+  "confidence": 0.97,
+  "confidence_reasoning": "This is a standard part of DeepWalk: random walks generate training sequences, while the binary tree is used for hierarchical softmax in SkipGram, so the statement is highly reliable.",
+  "_token_nll": 0.16063138883407801
+}

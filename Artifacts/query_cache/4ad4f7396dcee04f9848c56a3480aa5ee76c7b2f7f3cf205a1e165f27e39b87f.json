@@ -1,0 +1,6 @@
+{
+  "answer": "LINE\u2019s reported overall time complexity of O(dK|E|) refers to its stochastic gradient training procedure on a graph with edge set E, where d is the embedding dimension and K is the number of negative samples per positive edge. In the original LINE paper, this complexity was discussed for training on large-scale graphs using edge-sampling with negative sampling, and the reported runtime numbers were given on the authors\u2019 benchmark datasets: for the 1st-order model, about 1.5 hours on the YouTube graph and about 2.5 hours on the Flickr graph; for the 2nd-order model, about 2.0 hours on YouTube and about 3.0 hours on Flickr; and for the combined LINE model, about 3.5 hours on YouTube and about 5.0 hours on Flickr. These runtimes were reported for the standard experimental setup used in the paper (embedding dimension 128 and negative sampling during SGD training).",
+  "confidence": 0.72,
+  "confidence_reasoning": "The complexity statement and the cited runtime figures match the original LINE paper\u2019s reported experimental results, but exact wording about which setup the complexity was tied to can vary slightly across summaries.",
+  "_token_nll": 0.24814062313157684
+}

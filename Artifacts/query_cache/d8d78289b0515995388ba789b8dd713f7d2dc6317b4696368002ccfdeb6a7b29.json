@@ -1,0 +1,86 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding (1ST)",
+    "embedding",
+    "node embedding (NE)",
+    "local and global network structure (LGNS)",
+    "network structure (NS)",
+    "large network (LN)",
+    "information network (IN)",
+    "weighted network (WN)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding (1ST)",
+      "type": "PRESERVE",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding (1ST)",
+      "type": "PRESERVE",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "local pairwise similarity between vertices linked by an observed edge",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "similarity of neighborhood structures of vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "Large-scale Information Network Embedding (1ST)",
+      "type": "PRESERVE",
+      "target": "local and global network structure (LGNS)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding problem",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "learning a mapping f: V -> R^d with d much smaller than |V| that preserves network structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "network structure (NS)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "first-order and second-order proximities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "vertex classification, link prediction, and visualization",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Large-scale Information Network Embedding (1ST)",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "very large networks with millions of vertices and billions of edges",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

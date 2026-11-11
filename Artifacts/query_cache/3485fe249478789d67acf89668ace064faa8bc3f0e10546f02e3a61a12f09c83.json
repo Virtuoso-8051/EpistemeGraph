@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "LINE(1st)",
+    "LINE-SGD (1ST)",
+    "first-order proximity (FOP)",
+    "undirected graph (UG)",
+    "directed graph (DG)",
+    "second-order proximity"
+  ],
+  "triples": [
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD(1st)",
+      "type": "USES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "first-order proximity objective",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "USES",
+      "target": "first-order proximity (FOP)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "undirected graph (UG)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "undirected graph (UG)",
+      "target_alias": "designed for undirected graphs",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "LINE-SGD(1st)",
+      "type": "DEFINED_AS",
+      "target": "undirected graph (UG)",
+      "target_alias": "designed for undirected graphs",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE(1st)",
+      "source_alias": "",
+      "type": "REFUTED",
+      "target": "directed graph (DG)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "first-order proximity (FOP)",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "undirected graph (UG)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "directed graph (DG)",
+      "target_alias": "handles directed edges",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

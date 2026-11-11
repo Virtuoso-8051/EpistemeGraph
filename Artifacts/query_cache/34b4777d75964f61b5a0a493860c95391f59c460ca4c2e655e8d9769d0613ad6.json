@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "LINE(2nd)",
+    "YOUTUBE2",
+    "second-order proximity",
+    "low-degree nodes",
+    "Micro-F1",
+    "Macro-F1"
+  ],
+  "triples": [
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "poor performance on low-degree nodes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "YOUTUBE2",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "low-degree nodes with one or two neighbours",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "neighbourhood context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "neighbourhood context",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparse for low-degree nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-degree nodes",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "poorly learned embeddings",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "grouped results",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "low classification scores for low-degree groups",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "classification scores",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "Micro-F1 and Macro-F1",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "higher-degree groups",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "low-degree groups",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

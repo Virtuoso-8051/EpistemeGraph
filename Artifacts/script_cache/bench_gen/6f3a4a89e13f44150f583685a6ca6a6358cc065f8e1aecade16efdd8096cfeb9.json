@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "Why is the first-order proximity objective in LINE only applicable to undirected graphs, and what optimization objective is used to preserve it?",
+      "gold_answer": "The first-order proximity in LINE is only applicable to undirected graphs because it models pairwise similarity between vertices directly, which the passage explicitly says is not suitable for directed graphs. To preserve it, LINE minimizes a distance between the empirical distribution and the model distribution, and specifically uses the KL-divergence, giving the objective O1 = \u2212 \u2211(i,j)\u2208E wij log p1(vi, vj).",
+      "evidence_quote": "Note that the first-order proximity is only applicable for undirected graphs, not for directed graphs.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE represent each vertex under the second-order proximity setting, and what are the two roles a vertex plays there?",
+      "gold_answer": "Under second-order proximity, LINE represents each vertex with two vectors: ui for when the vertex is treated as a vertex, and u'i for when it is treated as a specific context. The passage says each vertex plays two roles: the vertex itself and a specific context of other vertices.",
+      "evidence_quote": "Therefore, each vertex plays two roles: the vertex itself and a specific \u201ccontext\u201d of other vertices.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What conditional probability does LINE define for generating a context vertex vj from a vertex vi, and over what set is this distribution defined?",
+      "gold_answer": "LINE defines p2(vj|vi) = exp(u'j^T \u00b7 ui) / \u2211_{k=1}^{|V|} exp(u'k^T \u00b7 ui). This is a conditional distribution over the contexts, meaning it is defined over the entire set of vertices in the network.",
+      "evidence_quote": "For each vertexvi, Eqn. (4) actually defines a conditional distribution p2(\u00b7|vi) over the contexts, i.e., the entire set of vertices in the network.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does LINE say second-order proximity is applicable, and what similarity assumption does it make about vertices?",
+      "gold_answer": "LINE says second-order proximity is applicable for both directed and undirected graphs. It assumes that vertices sharing many connections to other vertices are similar, and more specifically that vertices with similar distributions over contexts are similar to each other.",
+      "evidence_quote": "The second-order proximity is applicable for both directed and undirected graphs.",
+      "difficulty": "medium"
+    }
+  ]
+}

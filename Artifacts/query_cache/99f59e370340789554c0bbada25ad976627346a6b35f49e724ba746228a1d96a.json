@@ -1,0 +1,73 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "Macro-F1 score (MFS)",
+    "Micro-F1 score"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "baselines",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DeepWalk's advantage over baselines in node classification",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "supervised or attribute-aware baselines",
+      "source_alias": "",
+      "type": "BENEFIT_FROM",
+      "target": "additional labels",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "stop-outperforming pattern above 20% labeled data",
+      "source_alias": "",
+      "type": "DEPENDS_ON",
+      "target": "dataset",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "graphs with informative node attributes",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "attribute-aware baselines",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Macro-F1 score (MFS)",
+      "source_alias": "Macro-F1",
+      "type": "OUTPERFORMS",
+      "target": "Micro-F1 score",
+      "target_alias": "Micro-F1",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Macro-F1 score (MFS)",
+      "source_alias": "Macro-F1",
+      "type": "WORKS_WELL_FOR",
+      "target": "minority classes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Micro-F1 score",
+      "source_alias": "Micro-F1",
+      "type": "REQUIRES",
+      "target": "source paper results table",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

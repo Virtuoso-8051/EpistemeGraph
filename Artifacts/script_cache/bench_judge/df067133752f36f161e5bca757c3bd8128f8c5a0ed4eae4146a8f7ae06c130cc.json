@@ -1,0 +1,10 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "Random walks and skip-gram updates are generated as the graph arrives instead of from a full precomputed graph (the evidence says small walks are passed directly to the learner, not that they are generated as the graph arrives)",
+    "The usual linearly decaying learning rate assumes a known total number of training steps (not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly says the decaying learning rate is replaced by a fixed one in streaming DeepWalk, which the evidence supports. It adds some details the evidence does not state, and it gives no answer for Passage A even though the evidence for it was available."
+}

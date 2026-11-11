@@ -1,0 +1,102 @@
+{
+  "query_entities": [
+    "LINE-SGD (1ST)",
+    "graph factorization (GF)",
+    "edge-sampling algorithm (ESA)",
+    "adjacency matrix (AM)",
+    "weighted graph (WG)",
+    "classical stochastic gradient descent (CSGD)",
+    "learning rate (LR)",
+    "graph structure (GS)"
+  ],
+  "triples": [
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "1ST",
+      "type": "USES",
+      "target": "edge-sampling algorithm (ESA)",
+      "target_alias": "ESA",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "1ST",
+      "type": "APPLIES_TO",
+      "target": "adjacency matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "ESA",
+      "type": "ACHIEVES",
+      "target": "O(1) sampling cost",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE-SGD (1ST)",
+      "source_alias": "1ST",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "cost per step independent of graph size",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "USES",
+      "target": "adjacency matrix (AM)",
+      "target_alias": "AM",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "graph factorization (GF)",
+      "source_alias": "GF",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "heavier and less sparse updates",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "ESA",
+      "type": "PRESERVES",
+      "target": "weighted graph (WG)",
+      "target_alias": "WG",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "ESA",
+      "type": "REQUIRES",
+      "target": "learning rate (LR)",
+      "target_alias": "LR",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "weighted graph (WG)",
+      "source_alias": "WG",
+      "type": "REQUIRES",
+      "target": "learning rate (LR)",
+      "target_alias": "LR",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "classical stochastic gradient descent (CSGD)",
+      "source_alias": "CSGD",
+      "type": "USES",
+      "target": "weighted graph (WG)",
+      "target_alias": "WG",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge-sampling algorithm (ESA)",
+      "source_alias": "ESA",
+      "type": "PROPOSES",
+      "target": "edge sampling with probability proportional to weight",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

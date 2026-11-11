@@ -1,0 +1,83 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "homophilic and structural equivalence (HSE)",
+    "Structural Equivalence (SE)",
+    "Homophily"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "p = 1 and q = 0.5",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p = 1 and q = 0.5",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "DFS-like outward walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DFS-like outward walks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Top panel of node2vec Figure 3",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "q > 1 (e.g., q = 2)",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "BFS-like local walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "BFS-like local walks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "Structural Equivalence (SE)",
+      "target_alias": "SE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Bottom panel of node2vec Figure 3",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "Structural Equivalence (SE)",
+      "target_alias": "SE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "p = 1 and q = 0.5",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "p = 1 and q = 0.5",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "Structural Equivalence (SE)",
+      "target_alias": "SE",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

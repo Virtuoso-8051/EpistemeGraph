@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the method in paper3 rely on global recomputation after small graph changes instead of updating the learned model with new short random walks from the changed region?",
+      "false_premise": "The method relies on global recomputation after small graph changes.",
+      "correction": "The method updates the learned model with new random walks from the changed region in time sub-linear to the entire graph, without global recomputation.",
+      "evidence_quote": "We can iteratively update the learned model with new random walks from the changed region in time sub-linear to the entire graph.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does paper3's approach use long random walks to capture community structure in the full graph rather than short random walks for local exploration?",
+      "false_premise": "The approach uses long random walks to capture community structure in the full graph.",
+      "correction": "The method uses a stream of short random walks as its basic tool for extracting information from a network, emphasizing local exploration.",
+      "evidence_quote": "It is this connection to local structure that motivates us to use a stream of short random walks as our basic tool for extracting information from a network.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does the model in paper3 need the Wikipedia article corpus to train its graph embeddings, given that it models English text frequencies directly from the network?",
+      "false_premise": "The model needs the Wikipedia article corpus to train its graph embeddings and models English text frequencies directly from the network.",
+      "correction": "The paper uses the text of 100,000 articles from the English Wikipedia only as an example of a similar power-law distribution; it is not training graph embeddings on English text frequency data.",
+      "evidence_quote": "The first comes from a series of short random walks on a scale-free graph, and the second comes from the text of 100,000 articles from the English Wikipedia.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What comparison result does paper3 report between random-walk frequencies and word frequencies in natural language, and why does the method conclude they are unrelated distributions?",
+      "false_premise": "The paper reports that random-walk frequencies and word frequencies are unrelated distributions.",
+      "correction": "The paper says the two distributions are similar power-law distributions, and uses that similarity to motivate repurposing language-modeling techniques for networks.",
+      "evidence_quote": "Word frequency in natural language follows a similar distribution, and techniques from language modeling account for this distributional behavior.",
+      "difficulty": "easy"
+    }
+  ]
+}

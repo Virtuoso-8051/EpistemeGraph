@@ -1,0 +1,13 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "The AI frames the trade-off as expressiveness/representational power versus tractability, rather than the paper's computational efficiency versus predictive accuracy.",
+    "The AI claims a supervised procedure needs no separate pretraining stage and has lower training-time complexity per task, whereas the paper says supervised learning has high training time complexity due to a blowup in parameters.",
+    "The AI describes unsupervised procedures as generally requiring more training time with layer-wise or two-stage pipelines, contradicting the paper's statement that unsupervised optimization is computationally efficient.",
+    "The AI claims unsupervised features have lower predictive accuracy, whereas the paper says carefully designed unsupervised objectives closely match task-specific approaches in accuracy.",
+    "The AI attributes examples such as autoencoders, RBMs, and reconstruction/generative objectives to the papers, which the evidence does not mention."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The AI answer inverts the paper's central comparison: the paper says supervised methods have high training-time cost but good accuracy, while unsupervised methods are computationally efficient and can closely match task-specific accuracy. The AI instead claims supervised training is cheaper and unsupervised features are less accurate, which the evidence contradicts."
+}

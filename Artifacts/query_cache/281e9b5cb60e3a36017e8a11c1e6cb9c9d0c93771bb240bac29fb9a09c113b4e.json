@@ -1,0 +1,42 @@
+{
+  "query_entities": [
+    "PASSAGE A",
+    "PASSAGE B",
+    "node2vec",
+    "LINE(2nd)"
+  ],
+  "triples": [
+    {
+      "source": "PASSAGE A",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "PASSAGE A",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "PASSAGE B",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "PASSAGE B",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "PASSAGE A",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "LINE(2nd)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "PASSAGE B",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

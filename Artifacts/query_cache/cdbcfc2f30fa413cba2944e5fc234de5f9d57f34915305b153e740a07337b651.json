@@ -1,0 +1,72 @@
+{
+  "query_entities": [
+    "node2vec",
+    "depth-first search"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "depth-first search",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "depth-first search",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "",
+      "type": "APPROXIMATES",
+      "target": "role-based similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walk",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "local neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "greater depths",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "drift too far from the source",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "drift too far from the source",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "local context",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "greater depths",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "noise",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

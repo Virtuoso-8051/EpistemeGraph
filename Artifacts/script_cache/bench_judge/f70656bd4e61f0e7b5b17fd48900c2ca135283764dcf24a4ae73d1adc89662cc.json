@@ -1,0 +1,12 @@
+{
+  "claims_checked": 9,
+  "unsupported_claims": [
+    "LINE's first-order objective is modeled by making the joint distribution of connected nodes similar to the empirical distribution (not in evidence)",
+    "LINE uses edge-sampling stochastic gradient descent (not in evidence)",
+    "DeepWalk applies Skip-gram to maximize the likelihood of a vertex's neighborhood context within a window (specific detail not in evidence)",
+    "DeepWalk does not define an explicit graph-structure objective (not stated in evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: LINE preserves local (first-order) and global (second-order) structure, and DeepWalk learns latent representations from truncated random walks treated as sentences. Several technical details are not in the provided evidence: the KL/empirical-distribution formulation, edge-sampling SGD, Skip-gram window likelihood, and the claim that DeepWalk has no explicit objective. Most of these are plausible background knowledge but cannot be verified from the excerpts."
+}

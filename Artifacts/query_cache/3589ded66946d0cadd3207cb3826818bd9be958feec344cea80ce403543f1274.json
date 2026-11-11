@@ -1,0 +1,77 @@
+{
+  "query_entities": [
+    "node2vec",
+    "NODE2VEC",
+    "Link Prediction (LP)",
+    "Node Classification (NC)",
+    "EDGE",
+    "node embedding (NE)",
+    "node representation (NR)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "EXTENDS",
+      "target": "feature learning from individual nodes to pairs of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "representations for node pairs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "representations for node pairs",
+      "source_alias": "",
+      "type": "USES",
+      "target": "binary operators such as averaging, Hadamard product, or concatenation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "EDGE",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "edge-level tasks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "link prediction",
+      "type": "IS_A",
+      "target": "edge-level application",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "link prediction",
+      "type": "APPLIES_TO",
+      "target": "social or biological networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification (NC)",
+      "source_alias": "node classification",
+      "type": "IS_A",
+      "target": "node-level task",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Node Classification (NC)",
+      "source_alias": "node classification",
+      "type": "APPLIES_TO",
+      "target": "multi-label classification of nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

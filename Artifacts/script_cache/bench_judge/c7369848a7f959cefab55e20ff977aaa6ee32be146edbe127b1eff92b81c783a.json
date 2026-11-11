@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The evaluated datasets included Twitter and Sina Weibo-type networks, which the evidence does not mention (the evidence lists a language network, Flickr and Youtube social networks, and DBLP citation networks).",
+    "The answer says the evaluated datasets included 'some smaller benchmark networks', which the evidence does not state; the evidence says each network contains at least half a million nodes.",
+    "The answer says the datasets had 'tens of millions to billions of edges', while the evidence says each network has millions of edges and the largest has about a billion edges, so 'tens of millions' is not stated."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core reason (these methods cannot handle networks at that scale, with quadratic complexity and eigendecomposition cost) is supported by the evidence. However, the answer misstates the dataset scale by inventing Twitter/Weibo examples, claiming smaller benchmark networks, and giving an inaccurate edge range, and it omits the half-million-node minimum."
+}

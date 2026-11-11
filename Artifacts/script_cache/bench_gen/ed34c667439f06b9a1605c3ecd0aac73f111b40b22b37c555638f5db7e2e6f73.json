@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk's use of a decaying learning rate make the streaming variant faster to train on large graphs?",
+      "false_premise": "DeepWalk's streaming variant uses a decaying learning rate.",
+      "correction": "The streaming variant cannot use a decaying learning rate; it instead initializes the learning rate to a small constant value.",
+      "evidence_quote": "First, using a decaying learning rate will no longer be possible.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does DeepWalk build the full graph before training when it is used in the streaming setting?",
+      "false_premise": "DeepWalk's streaming setting requires building the entire graph before training.",
+      "correction": "The streaming approach can be implemented without knowledge of the entire graph, and small walks are passed directly to the representation learning code.",
+      "evidence_quote": "which could be implemented without knowledge of the entire graph.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does DeepWalk rely on a graph of agents interacting with pages to create its training walks?",
+      "false_premise": "DeepWalk's streaming variant is based on graphs created by agents interacting with pages.",
+      "correction": "The passage says that graphs created by agents interacting with sequences of elements describe the non-random-walk variant, not the streaming variant.",
+      "evidence_quote": "Some graphs are created as a by-product of agents interacting with a sequence of elements (e.g. users\u2019 navigation of pages on a website).",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What comparison result does the passage report for DeepWalk, where streaming with hierarchical softmax is impossible unless the vertex cardinality is unknown?",
+      "false_premise": "DeepWalk cannot use Hierarchical Softmax in the streaming variant unless the vertex cardinality is unknown.",
+      "correction": "If the cardinality of V is known or bounded, DeepWalk can build the Hierarchical Softmax tree for that maximum value.",
+      "evidence_quote": "If the cardinality of V is known (or can be bounded), we can build the Hierarchical Softmax tree for that maximum value.",
+      "difficulty": "medium"
+    }
+  ]
+}

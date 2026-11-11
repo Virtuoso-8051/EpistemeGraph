@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Updates only on observed edges, so cost and memory grow with the number of edges rather than the square of the number of nodes, avoiding a dense n\u00d7n matrix",
+    "The optimization can be parallelized or distributed across machines",
+    "It is typically applied to unweighted graphs (the evidence lists Wikipedia, a weighted network, as a dataset, so this is not supported)",
+    "Cites Ahmed et al., 2013 (the evidence only gives the reference [1])"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: SGD optimization makes it scalable, and it applies only to undirected graphs. The answer adds details the evidence does not contain, namely edge-only complexity, distributed optimization, and the restriction to unweighted graphs, and the last of these is arguably contradicted."
+}

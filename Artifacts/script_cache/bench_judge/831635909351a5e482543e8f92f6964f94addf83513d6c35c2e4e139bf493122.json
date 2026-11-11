@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "A streaming DeepWalk variant needs the entire graph when its random-walk transition probabilities or walk corpus depend on global graph properties such as normalizing over all neighbors, degree or stationary-distribution statistics, or sampling from the final topology.",
+    "If walk generation depends only on local, already-seen edges, it can run incrementally without the whole graph."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly declines to identify a source and does not accept the false premise that the streaming variant requires the entire graph, which is consistent with the paper's statement that it 'could be implemented without knowledge of the entire graph.' However, its specific conditions under which entire-graph knowledge is needed are not in the evidence and are attributed to the framework without support, so those claims are unsupported."
+}

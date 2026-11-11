@@ -1,0 +1,121 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "node2vec",
+    "SkipGram",
+    "Hierarchical Softmax",
+    "Breadth-first search",
+    "Depth-first search",
+    "Structural equivalence",
+    "Homophily",
+    "Biased second-order random walk",
+    "Return parameter p",
+    "In-out parameter q"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "Skip-gram model",
+      "target_alias": "SGM",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "Skip-gram model",
+      "source_alias": "SGM",
+      "type": "USES",
+      "target": "Hierarchical Softmax",
+      "target_alias": "HS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "source_alias": "HS",
+      "type": "USES",
+      "target": "Binary tree",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "source_alias": "HS",
+      "type": "APPROXIMATES",
+      "target": "Flat softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hierarchical Softmax",
+      "source_alias": "HS",
+      "type": "ACHIEVES",
+      "target": "O(log |V|) prediction cost",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Uniform random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Breadth-first search",
+      "source_alias": "BFS",
+      "type": "CAPTURES",
+      "target": "Structural equivalence",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Depth-first search",
+      "source_alias": "DFS",
+      "type": "CAPTURES",
+      "target": "Homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Biased second-order random walk",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Biased second-order random walk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Return parameter p",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Biased second-order random walk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "In-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "Interpolation between BFS-like and DFS-like sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "Tuning for communities, roles, or both",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

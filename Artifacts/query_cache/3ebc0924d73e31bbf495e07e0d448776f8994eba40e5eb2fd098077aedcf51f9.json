@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "LINE",
+    "DeepWalk",
+    "YouTube network",
+    "network embedding (NE)",
+    "DEEPWALK",
+    "node embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "large network (LN)",
+      "target_alias": "LN",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "YouTube network",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "DEEPWALK",
+      "target_alias": "DeepWalk",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "IS_A",
+      "target": "network embedding (NE)",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "scalability",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "DeepWalk",
+      "type": "ENABLES",
+      "target": "realistic competitor at large scale",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "same evaluation protocol",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "same embedding dimensionality",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "BlogCatalog network (BN)",
+    "latent dimension (LD)",
+    "network classification performance (NCP)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "latent dimension (LD)",
+      "target_alias": "LD",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "latent dimension (LD)",
+      "source_alias": "LD",
+      "type": "IMPROVES",
+      "target": "network classification performance (NCP)",
+      "target_alias": "NCP",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "lower-dimensional embeddings",
+      "source_alias": "",
+      "type": "WORKS_WELL_FOR",
+      "target": "small labeled training data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher dimensions",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "larger training fraction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "optimal DeepWalk dimensionality",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "increasing trend with training data",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher dimensions",
+      "source_alias": "",
+      "type": "OUTPERFORMS",
+      "target": "lower-dimensional embeddings",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "query_entities": [
+    "node2vec",
+    "BlogCatalog network"
+  ],
+  "triples": [
+    {
+      "source": "missing edges",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "non-edges",
+      "target_alias": "BlogCatalog network",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "missing edges",
+      "source_alias": "",
+      "type": "USES",
+      "target": "uniformly at random",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "perturbation",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "network\u2019s basic structure",
+      "target_alias": "no self-loops or duplicate edges; graph stays undirected/simple",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

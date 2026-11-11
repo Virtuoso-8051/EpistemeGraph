@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does the relational classification method use Gibbs Sampling to directly learn label distributions from the network structure, and how does that iterative inference improve its social representations?",
+      "false_premise": "The relational classification method uses Gibbs Sampling to directly learn label distributions from the network structure.",
+      "correction": "The method proposes an unsupervised approach that learns features capturing graph structure independent of labels, rather than using Gibbs Sampling to directly infer label distributions.",
+      "evidence_quote": "Traditional approaches to relational classification pose the problem as an inference in an undirected Markov network, and then use iterative approximate inference algorithms (such as the iterative classification algorithm [31], Gibbs Sampling [14], or label relaxation [18]) to compute the posterior distribution of labels given the network structure.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does the relational classification method's goal of predicting labels with the same representation for each node differ from its objective of learning latent dimensions that are independent of the labels' distribution?",
+      "false_premise": "The relational classification method's goal is to predict labels with the same representation for each node.",
+      "correction": "Its goal is to learn low-dimensional structural representations, not to predict labels directly or make representations the same for each node.",
+      "evidence_quote": "Our goal is to learn XE\u2208 R|V|\u00d7d, where d is small number of latent dimensions.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does the relational classification method rely on the network's label distribution as part of the feature space, and why is that mixing necessary for its classification performance?",
+      "false_premise": "The relational classification method relies on the network's label distribution as part of the feature space.",
+      "correction": "It explicitly avoids mixing the label space into the feature space and instead learns structural features independent of labels.",
+      "evidence_quote": "Instead of mixing the label space as part of the feature space, we propose an unsupervised method which learns features that capture the graph structure independent of the labels\u2019 distribution.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What comparison result shows that the relational classification method works best only when paired with iterative methods rather than simple machine learning algorithms?",
+      "false_premise": "The relational classification method works best only when paired with iterative methods rather than simple machine learning algorithms.",
+      "correction": "The passage says the features can be used with any classification algorithm, but the greatest utility is their easy integration with simple machine learning algorithms.",
+      "evidence_quote": "However, we believe that the greatest utility of these features is their easy integration with simple machine learning algorithms.",
+      "difficulty": "medium"
+    }
+  ]
+}

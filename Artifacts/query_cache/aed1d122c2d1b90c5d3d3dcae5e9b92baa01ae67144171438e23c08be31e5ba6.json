@@ -1,0 +1,90 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "vertex representation (UI)",
+    "representation learning (RL)",
+    "graph structure (GS)"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "truncated random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Skip-gram model with hierarchical softmax",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Skip-gram model with hierarchical softmax",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "word2vec",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "low-dimensional continuous real-valued vertex embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional continuous real-valued vertex embeddings",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "dimensionality d much smaller than number of vertices",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional continuous real-valued vertex embeddings",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "dimensionality of 128 typical example",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "vertices co-occurring on short random walks",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "similar embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional continuous real-valued vertex embeddings",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "structural role and network neighborhood/community membership",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "low-dimensional continuous real-valued vertex embeddings",
+      "source_alias": "",
+      "type": "APPLICABLE_FOR",
+      "target": "multi-label node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "unsupervised representation learning (URL)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "answer": "LINE defines the conditional probability of generating a context vertex v_j from a vertex v_i as p(v_j \\mid v_i) = \\frac{\\exp(\\mathbf{u}_j^\\top \\mathbf{v}_i)}{\\sum_{k=1}^{|V|} \\exp(\\mathbf{u}_k^\\top \\mathbf{v}_i)}. This distribution is defined over all vertices in the graph, i.e., the full vertex set V.",
+  "confidence": 0.97,
+  "confidence_reasoning": "This is the standard softmax conditional probability used in LINE, and the denominator sums over the entire vertex set.",
+  "_token_nll": 0.07819747924804688
+}

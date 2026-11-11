@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Higher-order proximity, which reflects longer-range connectivity, is discussed as a notion in the evidence (the passage does not mention higher-order proximity)",
+    "Embedding methods such as LINE combine first- and second-order proximity to preserve both local and global network structure is only partially stated; the evidence says LINE preserves both first- and second-order proximity but does not frame it as local vs. global",
+    "Real-world information networks are described as noisy, and observed edges can be incomplete, which goes beyond the evidence's point about missing links"
+  ],
+  "accepted_false_premise": null,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core answer correctly reflects the source: links observed are a small proportion, so missing links give zero first-order proximity even for similar nodes, making first-order proximity insufficient. However, the answer adds claims about higher-order proximity and 'global' vs 'local' framing and 'noisy' networks that the passage does not state."
+}

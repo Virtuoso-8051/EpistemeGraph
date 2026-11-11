@@ -1,0 +1,11 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "In BlogCatalog experiments DeepWalk outperforms spectral-clustering and modularity-based baselines most clearly when only about 10% of nodes are labeled (the evidence does not give this detail; the 10% in the evidence refers to F1 improvement)",
+    "LINE uses edge sampling and negative sampling to handle millions of vertices and billions of edges (edge sampling, negative sampling and billions of edges are not in the evidence)",
+    "LINE's scalability claim is more explicit than DeepWalk's (the evidence says DeepWalk can scale to large graphs and is scalable)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim is supported: DeepWalk's advantage under sparse labeled data and LINE's scaling to very large networks with millions of nodes. However, the answer adds unsupported specifics (10% labeled fraction, edge/negative sampling, billions of edges) and a comparison of explicitness that the evidence does not back, since DeepWalk also claims scalability."
+}

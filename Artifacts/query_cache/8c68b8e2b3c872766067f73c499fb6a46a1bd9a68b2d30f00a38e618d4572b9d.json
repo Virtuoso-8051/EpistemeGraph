@@ -1,0 +1,100 @@
+{
+  "query_entities": [
+    "first-order proximity",
+    "second-order proximity",
+    "word2vec",
+    "skip-gram model",
+    "distributional context window",
+    "embedding models"
+  ],
+  "triples": [
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "IS_A",
+      "target": "direct co-occurrence relation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "DEFINED_AS",
+      "target": "two words are close when they appear together within the same local window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "PRESERVES",
+      "target": "SEMANTIC",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "two words are close when they share similar neighbors even if they never appear together",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "syntactic",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "SEMANTIC",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "word2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "distributional context window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "skip-gram model",
+      "source_alias": "SGM",
+      "type": "USES",
+      "target": "distributional context window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "FOP",
+      "type": "GENERATES",
+      "target": "semantically related nearest neighbors",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "neighborhoods mixing syntactically substitutable and semantically related words",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Levy and Goldberg (2014)",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "analysis of word2vec skip-gram as distributional context window",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

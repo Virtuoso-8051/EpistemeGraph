@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk outperform LINE(2nd) on the word analogy task when both are trained on the Wikipedia corpora?",
+      "false_premise": "DeepWalk outperforms LINE(2nd) on the word analogy task, and both are trained on the Wikipedia corpora.",
+      "correction": "LINE(2nd) outperforms DeepWalk, and DeepWalk is evaluated on a Wikipedia word network rather than directly on the Wikipedia corpora.",
+      "evidence_quote": "We can see that LINE(2nd) outperforms all other methods, including the graph embedding methods and the SkipGram.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does SkipGram use the Wikipedia word network to achieve its word analogy scores, unlike the graph-based methods?",
+      "false_premise": "SkipGram uses the Wikipedia word network to achieve its word analogy scores.",
+      "correction": "SkipGram learns the word embeddings directly from the original Wikipedia pages, while the other methods use the Wikipedia word network.",
+      "evidence_quote": "We also compare with the state-of-the-art word embedding model SkipGram [12], which learns the word embeddings directly from the original Wikipedia pages and is also implicitly a matrix factorization approach [8].",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does LINE(1st) beat LINE(2nd) on semantic and syntactic analogy, given that first-order proximity is the stronger setting here?",
+      "false_premise": "LINE(1st) beats LINE(2nd) on semantic and syntactic analogy, and first-order proximity is the stronger setting.",
+      "correction": "LINE(2nd) beats LINE(1st) on both semantic and syntactic analogy, so second-order proximity is the stronger setting in these results.",
+      "evidence_quote": "We can see that LINE(2nd) outperforms all other methods, including the graph embedding methods and the SkipGram.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does DeepWalk's use of all edges being removed from the network reveal about its best cutoff threshold on the Wikipedia word network?",
+      "false_premise": "DeepWalk's best cutoff threshold removes all edges from the network.",
+      "correction": "DeepWalk achieves its best performance when all the edges are kept in the network.",
+      "evidence_quote": "For DeepWalk, different cutoff thresholds are tried to convert the language network into a binary network, and the best performance is achieved when all the edges are kept in the network.",
+      "difficulty": "medium"
+    }
+  ]
+}

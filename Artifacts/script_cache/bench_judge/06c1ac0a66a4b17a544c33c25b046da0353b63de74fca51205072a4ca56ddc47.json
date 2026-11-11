@@ -1,0 +1,11 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "The node2vec paper varied the labeled training fraction from 1% to 90% of labeled nodes.",
+    "Dataset sizes are BlogCatalog 10,312 nodes; PPI 3,890 nodes; Wikipedia 4,777 nodes.",
+    "Approximate absolute training counts are BlogCatalog about 103 to 9,281; PPI about 39 to 3,501; Wikipedia about 48 to 4,299."
+  ],
+  "accepted_false_premise": null,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The question is not answerable from the provided evidence, which only states that 50% of nodes were labeled for training in Table 2 and never gives total node counts per dataset. The AI answer instead invents dataset sizes and a 1%-90% training range that do not appear in the evidence, and derives counts from them rather than saying the papers do not report them."
+}

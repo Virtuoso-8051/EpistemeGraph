@@ -1,0 +1,10 @@
+{
+  "claims_checked": 5,
+  "unsupported_claims": [
+    "Any reported gap most likely comes from implementation and experimental differences (walk length, epochs, etc.) rather than the method - speculative attribution not in the evidence",
+    "Both node2vec and DeepWalk feed walks to skip-gram with negative sampling - supported by the evidence only partly, as the paper states negative sampling is the approximation used in both"
+  ],
+  "accepted_false_premise": true,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly notes that p=q=1 reduces node2vec to uniform walks like DeepWalk, but it never corrects the false premise: the 23.8% gain is node2vec over LINE, and node2vec's best setting (p=4, q=1) is nearly the same as DeepWalk. Instead it speculates about implementation differences to explain a gap that the source does not report."
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does DeepWalk's graph-kernel encoding make it usable as a direct feature extractor for any classification method?",
+      "false_premise": "DeepWalk encodes graph structure as part of a kernel function and is used as a direct feature extractor for classification.",
+      "correction": "DeepWalk does not encode structure as part of a kernel function; it learns representations from truncated random walks that can be used directly as features for any classification method.",
+      "evidence_quote": "Our approach is complementary; instead of encoding the structure as part of a kernel function, we learn a representation which allows them to be used directly as features for any classification method.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does DeepWalk rely on spectral methods to scale to very large graphs?",
+      "false_premise": "DeepWalk relies on spectral methods for large graphs.",
+      "correction": "DeepWalk is presented as an approach that can create meaningful representations for graphs too large to run spectral methods on, rather than relying on spectral methods itself.",
+      "evidence_quote": "Our results show that we can create meaningful representations for graphs too large to run spectral methods on.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What makes DeepWalk's back-propagation training especially stable compared with older distributed representations?",
+      "false_premise": "DeepWalk is trained with back-propagation and gradient descent as a distributed representation method.",
+      "correction": "The passage says distributed representations were trained by back-propagation and gradient descent, but DeepWalk itself is described as using truncated random walks as input to learn latent social representations.",
+      "evidence_quote": "These representations are trained by the back-propagation and gradient descent.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does DeepWalk outperform methods designed for dense graphs on sparsity-oriented tasks?",
+      "false_premise": "DeepWalk is compared against methods designed for dense graphs.",
+      "correction": "DeepWalk is described as significantly outperforming other methods designed to operate for sparsity, not methods designed for dense graphs.",
+      "evidence_quote": "On such large graphs, our method significantly outperforms other methods designed to operate for sparsity.",
+      "difficulty": "medium"
+    }
+  ]
+}

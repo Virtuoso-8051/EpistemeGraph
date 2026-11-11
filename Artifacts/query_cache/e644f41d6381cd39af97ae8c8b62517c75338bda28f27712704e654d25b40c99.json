@@ -1,0 +1,89 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "network embedding (NE)",
+    "NETWORK"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "ENABLES",
+      "target": "embedding of very large networks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "REQUIRES",
+      "target": "two embedding matrices of size |V| x d in memory",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "edge sampling with negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "asynchronous SGD",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "REQUIRES",
+      "target": "billions of samples for large graphs",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "alias table",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "alias table",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "memory proportional to number of edges and nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "IS_A",
+      "target": "shallow structure-only method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "node attributes",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "distributed or out-of-core training",
+      "source_alias": "",
+      "type": "REQUIRED_FOR",
+      "target": "scaling LINE to millions of nodes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

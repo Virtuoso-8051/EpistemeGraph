@@ -1,0 +1,76 @@
+{
+  "query_entities": [
+    "sampling budget (SB)",
+    "node2vec",
+    "DEEPWALK",
+    "number of walks per source (NWPS)",
+    "NODE2VEC",
+    "number of sample (NS)"
+  ],
+  "triples": [
+    {
+      "source": "sampling budget (SB)",
+      "source_alias": "SB",
+      "type": "APPLIES_TO",
+      "target": "NODE2VEC",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampling budget (SB)",
+      "source_alias": "SB",
+      "type": "EVALUATED_ON",
+      "target": "multilabel classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "sampling budget (SB)",
+      "source_alias": "SB",
+      "type": "EVALUATED_ON",
+      "target": "link prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "number of walks per source (NWPS)",
+      "source_alias": "NWPS",
+      "type": "USES",
+      "target": "NODE2VEC",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "walk length l = 80",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "window k = 10",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "sampling budget (SB)",
+      "target_alias": "SB",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "number of sample (NS)",
+      "target_alias": "NS",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

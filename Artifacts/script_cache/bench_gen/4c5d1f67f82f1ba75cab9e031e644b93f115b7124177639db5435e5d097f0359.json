@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does the method in paper3.pdf use observable graphs to improve language modeling rather than treating language modeling as the main source of graph representations?",
+      "false_premise": "paper3.pdf presents language modeling as the main source of graph representations, with graphs playing the secondary role.",
+      "correction": "The passage says the opposite: insights from modeling observable graphs may improve modeling unobservable ones, and language modeling may generate improved latent representations for networks.",
+      "evidence_quote": "We believe that insights obtained from modeling observable graphs may in turn yield improvements to modeling unobservable ones.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why does paper3.pdf claim that language modeling is sampling from an observable graph, making the graph fully observed and directly accessible?",
+      "false_premise": "paper3.pdf says language modeling samples from an observable graph.",
+      "correction": "The passage says language modeling is sampling from an unobservable language graph, not an observable one.",
+      "evidence_quote": "In our view, language modeling is actually sampling from an unobservable language graph.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Under which conditions does paper3.pdf rely on graph convolution networks to strengthen the theoretical justifications of the method?",
+      "false_premise": "paper3.pdf says the method uses graph convolution networks.",
+      "correction": "The passage does not mention graph convolution networks; it says future work will focus on investigating the duality further and strengthening the theoretical justifications of the method.",
+      "evidence_quote": "Our future work in the area will focus on investigating this duality further, using our results to improve language modeling, and strengthening the theoretical justifications of the method.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What comparison result does paper3.pdf report between modeling observable graphs and modeling unobservable ones, given that observable-graph modeling is said to hurt language modeling performance?",
+      "false_premise": "paper3.pdf reports that modeling observable graphs hurts language modeling performance.",
+      "correction": "The passage says the relationship is mutually beneficial, not harmful.",
+      "evidence_quote": "This connection is mutually beneficial.",
+      "difficulty": "easy"
+    }
+  ]
+}

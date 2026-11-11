@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "node2vec representation (NR)",
+    "Skip-gram model (SGM)",
+    "random walk (RW)",
+    "node embedding (NE)"
+  ],
+  "triples": [
+    {
+      "source": "Skip-gram model (SGM)",
+      "source_alias": "SGM",
+      "type": "USES",
+      "target": "global softmax or negative-sampling objective",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "skip-gram-style embedding",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node2vec representation (NR)",
+      "source_alias": "node2vec",
+      "type": "IS_A",
+      "target": "skip-gram-style embedding",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "co-occurrence statistics of the full graph",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "random walk (RW)",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "walks started only in the changed region produce biased sample",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "node embedding (NE)",
+      "source_alias": "",
+      "type": "PRESERVE",
+      "target": "vectors of unchanged nodes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

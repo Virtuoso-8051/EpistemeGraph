@@ -1,0 +1,9 @@
+{
+  "claims_checked": 4,
+  "unsupported_claims": [
+    "The reference implementation builds on gensim's word2vec, whose default is 5 negative samples (not in the evidence; the reference implementation is also not clearly gensim-based, and the default is outside-paper knowledge)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claim that the paper does not report the negative-sampling count, and that it uses SGD with negative sampling per Mikolov et al., is supported by the evidence. The added claim about the gensim-based implementation and its default of 5 negatives is not in the evidence. The answer does flag it as not stated in the paper."
+}

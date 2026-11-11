@@ -1,0 +1,6 @@
+{
+  "answer": "LINE reports that it performs better than DeepWalk on the evaluated tasks, i.e., it achieves higher-quality embeddings / better downstream performance than DeepWalk in the comparison. However, LINE\u2019s training is less efficient because it uses edge sampling: it repeatedly samples edges and updates embeddings from those sampled edges, which adds extra sampling overhead and makes optimization slower than DeepWalk\u2019s simpler random-walk-based context generation.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is consistent with the standard LINE vs. DeepWalk comparison, but the exact wording and the specific efficiency explanation can vary by source, so I am moderately confident rather than certain.",
+  "_token_nll": 0.2507362072284405
+}

@@ -1,0 +1,102 @@
+{
+  "query_entities": [
+    "real-world information networks",
+    "LINE",
+    "first-order proximity",
+    "second-order proximity",
+    "direct pairwise connections",
+    "neighborhood distributions",
+    "large networks",
+    "sparsity"
+  ],
+  "triples": [
+    {
+      "source": "real-world information networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "large",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "sparse",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "real-world information networks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "local and global structural information",
+      "target_alias": "LGNS",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "desirable embedding model for real-world information networks",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "different kinds of relationships",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "direct pairwise connections",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "similarity of neighborhood distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "nodes that are not directly connected",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "scalability to very large networks",
+      "target_alias": "large networks",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "handling sparsity effectively",
+      "target_alias": "sparsity",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

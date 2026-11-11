@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "How many dimensions did DeepWalk use for the latent representation in the Zachary\u2019s Karate network example, and what exact value did the authors report for that embedding size?",
+      "why_unanswerable": "The passage says the representation is shown in R2 in the figure caption, but it does not report a general embedding dimension choice for DeepWalk beyond that example or any exact hyperparameter setting used in experiments.",
+      "evidence_quote": "Figure 1: Our proposed method learns a latent space representation of social interactions in Rd.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What random-walk length and window size did DeepWalk use when modeling the stream of short random walks?",
+      "why_unanswerable": "The passage states that DeepWalk models a stream of short random walks, but it gives no numeric random-walk length, context window, or other sampling hyperparameters.",
+      "evidence_quote": "We develop an algorithm ( DeepW alk) that learns social representations of a graph\u2019s vertices, by modeling a stream of short random walks.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Compared with node2vec or LINE, what quantitative improvement did DeepWalk report on network classification accuracy?",
+      "why_unanswerable": "The passage mentions network classification as an application area, but it does not compare DeepWalk against node2vec, LINE, or any other method, nor does it provide any numerical performance results.",
+      "evidence_quote": "Machine learning applications in networks (such as network classification [15, 37], content recommendation [11], anomaly detection [5], and missing link prediction [22]) must be able to deal with this sparsity in order to survive.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which dataset conditions did DeepWalk fail to capture community membership in its learned vertex representations?",
+      "why_unanswerable": "The passage claims that DeepWalk\u2019s latent features capture neighborhood similarity and community membership, but it does not describe any failure cases, datasets, or conditions where this did not hold.",
+      "evidence_quote": "Social representations are latent features of the vertices that capture neighborhood similarity and community membership.",
+      "difficulty": "medium"
+    }
+  ]
+}

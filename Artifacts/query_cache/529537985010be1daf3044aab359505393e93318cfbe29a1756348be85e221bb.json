@@ -1,0 +1,59 @@
+{
+  "query_entities": [
+    "node2vec",
+    "homophily",
+    "character network",
+    "clusters",
+    "communities"
+  ],
+  "triples": [
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "GROUPS_TOGETHER",
+      "target": "characters",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "characters",
+      "source_alias": "",
+      "type": "ARE_STRUCTURALLY_SIMILAR_IN",
+      "target": "network",
+      "target_alias": "character network",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "characters",
+      "source_alias": "",
+      "type": "ARE_CONNECTED_TO_OR_INTERACT_WITH",
+      "target": "similar others",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "homophily",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "tendency for similar or related nodes to be linked or to appear in the same local neighborhood",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "discovered clusters",
+      "source_alias": "",
+      "type": "REFLECT",
+      "target": "communities of characters with shared relationships or roles",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "discovered clusters",
+      "source_alias": "",
+      "type": "ARE_NOT",
+      "target": "random groupings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "claims_checked": 3,
+  "unsupported_claims": [
+    "The AI answer says the objective becomes the joint likelihood of the whole sequence when the window spans the entire walk, which attributes to the paper a whole-sequence objective the evidence does not contain; the paper instead estimates per-vertex likelihood Pr(vi | v1..vi-1) and explicitly notes that computing it over long walks is infeasible.",
+    "The AI answer accepts the false premise framing by suggesting that a wider context window turns the method into maximizing whole-sequence probability, rather than correcting that the method estimates vertex likelihood given preceding walk vertices."
+  ],
+  "accepted_false_premise": true,
+  "verdict": "UNSUPPORTED",
+  "rationale": "The evidence states the paper's objective is to estimate the likelihood of observing a vertex given the previous vertices in a random walk, and the answer instead claims it maximizes joint whole-sequence probability under a wide window, which the source does not say. The answer also hedges about which paper is meant, but its core claim accepts the false premise and is therefore unsupported."
+}

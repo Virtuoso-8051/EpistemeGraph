@@ -1,0 +1,97 @@
+{
+  "query_entities": [
+    "node2vec representation (NR)",
+    "NODE2VEC",
+    "streaming variant (SV)"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "IS_A",
+      "target": "static batch method",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "biased random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "biased random walks",
+      "source_alias": "",
+      "type": "OPTIMIZES",
+      "target": "return parameter p and in-out parameter q",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "skip-gram model with negative sampling",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "REQUIRES",
+      "target": "rerunning the walks and retraining on the whole graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "DOES_NOT_DESCRIBE",
+      "target": "handling of time-changing networks",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "SV",
+      "type": "USES",
+      "target": "sequence of arriving edges or nodes",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "SV",
+      "type": "ENABLES",
+      "target": "incremental embedding updates without full retraining",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "SV",
+      "type": "ENABLES",
+      "target": "embedding of new nodes on arrival",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "SV",
+      "type": "PROPOSES",
+      "target": "online or incremental updating of embeddings for a growing graph",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "streaming variant (SV)",
+      "source_alias": "SV",
+      "type": "ACHIEVES",
+      "target": "lower embedding cost for new nodes and edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

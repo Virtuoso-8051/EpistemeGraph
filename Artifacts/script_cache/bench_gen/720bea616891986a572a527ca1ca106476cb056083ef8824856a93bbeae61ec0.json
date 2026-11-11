@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What is node2vec designed to learn for nodes in a network, and what objective does it optimize when doing so?",
+      "gold_answer": "node2vec is designed to learn continuous, low-dimensional feature representations for nodes in a network. It learns a mapping of nodes to that space by maximizing the likelihood of preserving the network neighborhoods of the nodes.",
+      "evidence_quote": "In node2vec, we learn a mapping of nodes to a low-dimensional space of features that maximizes the likelihood of preserving network neighborhoods of nodes.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does node2vec define a node\u2019s network neighborhood, and why is that definition important according to the passage?",
+      "gold_answer": "node2vec uses a flexible notion of a node\u2019s network neighborhood rather than a rigid one. This flexibility is important because it lets the method explore diverse neighborhoods and is argued to be the key to learning richer representations.",
+      "evidence_quote": "We define a flexible notion of a node\u2019s network neighborhood and design a biased random walk procedure, which efficiently explores diverse neighborhoods.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which tasks and in what kinds of networks does node2vec demonstrate efficacy over existing state-of-the-art techniques?",
+      "gold_answer": "node2vec is shown to be effective on multi-label classification and link prediction tasks. The passage says these results hold in several real-world networks from diverse domains.",
+      "evidence_quote": "We demonstrate the efficacy of node2vec over existing state-of-the-art techniques on multi-label classification and link prediction in several real-world networks from diverse domains.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why does the passage claim node2vec generalizes prior work, and what limitation of earlier feature learning approaches does it address?",
+      "gold_answer": "The passage says node2vec generalizes prior work because it replaces rigid notions of network neighborhoods with a flexible neighborhood definition and a biased random walk procedure. This addresses the limitation that earlier feature learning approaches were not expressive enough to capture the diversity of connectivity patterns observed in networks.",
+      "evidence_quote": "Our algorithm generalizes prior work which is based on rigid notions of network neighborhoods, and we argue that the added flexibility in exploring neighborhoods is the key to learning richer representations.",
+      "difficulty": "hard"
+    }
+  ]
+}

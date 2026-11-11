@@ -1,0 +1,6 @@
+{
+  "answer": "node2vec uses DFS-biased sampling to avoid repeatedly sampling many highly overlapping, near-duplicate neighborhoods from a long random walk. When the walk length l is greater than the neighborhood window k, a plain sliding window over the walk would generate many training pairs from nearby positions that are strongly correlated and mostly reflect the same local region. By biasing the walk toward depth-first exploration, node2vec is more likely to move outward to new parts of the graph, so the neighborhoods extracted from the walk are less redundant and the effective sampling rate is reduced. This helps capture broader structural context rather than oversampling the same local neighborhood.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This matches the standard intuition behind node2vec's DFS-like bias for long walks and neighborhood generation, though the exact phrasing of 'effective sampling rate' is interpretive rather than a direct formal definition.",
+  "_token_nll": 0.28893822564019095
+}

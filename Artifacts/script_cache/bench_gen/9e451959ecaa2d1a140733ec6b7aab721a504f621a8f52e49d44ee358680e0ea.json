@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does node2vec's unbiased random walk help it preserve only immediate neighbors so well on citation networks?",
+      "false_premise": "node2vec uses an unbiased random walk and focuses on preserving only immediate neighbors.",
+      "correction": "node2vec uses a biased random walk procedure and is designed to preserve network neighborhoods more generally, not just immediate neighbors.",
+      "evidence_quote": "In node2vec, we learn a mapping of nodes to a low-dimensional space of features that maximizes the likelihood of preserving network neighborhoods of nodes.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How does node2vec improve multi-class image recognition by learning task-specific representations for pixels?",
+      "false_premise": "node2vec is for multi-class image recognition and learns task-specific representations for pixels.",
+      "correction": "node2vec is for nodes in networks and is presented as learning task-independent representations for complex networks, with experiments on multi-label classification and link prediction.",
+      "evidence_quote": "We demonstrate the efficacy of node2vec over existing state-of-the-art techniques on multi-label classification and link prediction in several real-world networks from diverse domains.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What makes node2vec outperform DeepWalk by using rigid neighborhood definitions instead of flexible ones?",
+      "false_premise": "node2vec uses rigid neighborhood definitions and outperforms DeepWalk for that reason.",
+      "correction": "node2vec generalizes prior work based on rigid notions of network neighborhoods by introducing a flexible notion of a node\u2019s network neighborhood.",
+      "evidence_quote": "Our algorithm generalizes prior work which is based on rigid notions of network neighborhoods, and we argue that the added flexibility in exploring neighborhoods is the key to learning richer representations.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Under which conditions does node2vec's graph convolution layer maximize the likelihood of preserving edge labels?",
+      "false_premise": "node2vec uses a graph convolution layer and maximizes the likelihood of preserving edge labels.",
+      "correction": "node2vec does not use a graph convolution layer; it learns node embeddings by maximizing the likelihood of preserving network neighborhoods of nodes.",
+      "evidence_quote": "In node2vec, we learn a mapping of nodes to a low-dimensional space of features that maximizes the likelihood of preserving network neighborhoods of nodes.",
+      "difficulty": "medium"
+    }
+  ]
+}

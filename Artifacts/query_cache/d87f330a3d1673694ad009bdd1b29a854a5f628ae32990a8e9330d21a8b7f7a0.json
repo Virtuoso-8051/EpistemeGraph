@@ -1,0 +1,99 @@
+{
+  "query_entities": [
+    "DEEPWALK",
+    "RANDOM WALK",
+    "UNWEIGHTED GRAPH",
+    "WEIGHTED GRAPH",
+    "URW"
+  ],
+  "triples": [
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "uniform random walk",
+      "target_alias": "URW",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "uniform random walk",
+      "source_alias": "URW",
+      "type": "APPLIES_TO",
+      "target": "neighbor selection",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "edge weights",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "unweighted graph",
+      "target_alias": "UG",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "unweighted graph",
+      "source_alias": "UG",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "edges carry no weight or direction information",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "USES",
+      "target": "walks of length t per vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "PROPOSES",
+      "target": "root order shuffled each pass",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "gamma walks per vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "biased random walk over weighted edges",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "DEEPWALK",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "graph G = (V, E)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge weights",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "not part of network definition",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

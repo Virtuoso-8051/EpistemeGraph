@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "How does the embedding model in Passage A address scalability for networks with millions of nodes, and what streaming-related training adjustment does DeepWalk in Passage B require when the full graph is not available upfront?",
+      "gold_answer": "Passage A says the model should use a carefully designed objective function that preserves graph properties together with an efficient optimization technique to embed millions of nodes, while Passage B says DeepWalk can be trained in a streaming way by feeding small walks directly to the learner and using a small constant learning rate instead of a decaying one.",
+      "evidence_quote": "We anticipate that a new model with a carefully designed objective function that preserves properties of the graph and an efficient optimization technique should effectively find the embedding of millions of nodes.",
+      "evidence_quote_b": "First, using a decaying learning rate will no longer be possible.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What limitation of classical graph embedding methods does Passage A emphasize, and under which condition can DeepWalk in Passage B still build a Hierarchical Softmax tree without seeing the entire graph?",
+      "gold_answer": "Passage A emphasizes that classical methods like MDS, IsoMap, and Laplacian eigenmap are at least quadratic in the number of vertices and therefore too expensive for million-node networks, while Passage B says DeepWalk can still build a Hierarchical Softmax tree if the cardinality of V is known or can be bounded.",
+      "evidence_quote": "For example, the time complexity of classical graph embedding algorithms such as MDS [4], IsoMap [20], Laplacian eigenmap [2] are at least quadratic to the number of vertices, which is too expensive for networks with millions of nodes.",
+      "evidence_quote_b": "If the cardinality of V is known (or can be bounded), we can build the Hierarchical Softmax tree for that maximum value.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why is the embedding problem in Passage A harder for real-world information networks than for smaller networks, and how does DeepWalk in Passage B exploit non-random walks to capture more than just topology?",
+      "gold_answer": "Passage A says the problem is harder because real-world networks can contain millions of nodes and billions of edges, making many existing embedding algorithms unable to scale, while Passage B says DeepWalk can use non-random walks from sequences such as web navigation to capture both network structure and the frequency with which paths are traversed.",
+      "evidence_quote": "The problem becomes much more challenging when a real world information network is concerned, which typically contains millions of nodes and billions of edges.",
+      "evidence_quote_b": "Graphs sampled in this way will not only capture information related to network structure, but also to the frequency at which paths are traversed.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do the goals of the low-dimensional embedding model in Passage A compare with the language-model interpretation of SkipGram in Passage B when the graph is generated from a sequence of elements?",
+      "gold_answer": "Passage A presents low-dimensional embedding as a way to represent each vertex for tasks such as visualization, node classification, link prediction, and recommendation, whereas Passage B says that when a graph comes from a sequence of elements, DeepWalk's non-random-walk variant can be viewed as language modeling and that SkipGram is designed to capture this behavior.",
+      "evidence_quote": "Such a low-dimensional embedding is very useful in a variety of applications such as visualization [21], node classification [3], link prediction [10], and recommendation [23].",
+      "evidence_quote_b": "Sentences can be viewed as purposed walks through an appropriately designed language network, and language models like SkipGram are designed to capture this behavior.",
+      "difficulty": "hard"
+    }
+  ]
+}

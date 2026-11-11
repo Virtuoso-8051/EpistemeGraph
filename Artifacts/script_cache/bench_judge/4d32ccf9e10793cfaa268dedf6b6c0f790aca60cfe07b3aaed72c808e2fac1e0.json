@@ -1,0 +1,12 @@
+{
+  "claims_checked": 7,
+  "unsupported_claims": [
+    "Skip-gram with negative sampling is implicitly factorizing a shifted PMI matrix of node co-occurrences (attributed to Levy & Goldberg, 2014, and Qiu et al., 2018, not in the evidence)",
+    "The matrix form (1/T) sum (D^{-1}A)^r D^{-1} minus log(b) is attributed to Qiu et al. 2018 as DeepWalk's implicit target; this is not in the provided evidence",
+    "The low-rank factorization forces nodes in the same community to receive similar embeddings, so community structure is preserved",
+    "The answer's explanation of why community structure is preserved relies on the factorization mechanism, which the evidence does not describe"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly notes that the original DeepWalk paper does not explicitly perform matrix factorization, which corrects the false premise, and it correctly describes the random walks fed to Skip-gram. However, its core explanation of community preservation rests on an implicit matrix factorization and cites external works (Levy & Goldberg, Qiu et al.) that are not in the evidence, so those claims are unsupported by the provided sources."
+}

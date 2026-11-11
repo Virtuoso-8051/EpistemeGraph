@@ -1,0 +1,6 @@
+{
+  "answer": "Passage A emphasizes that classical graph embedding methods are limited because they are typically transductive: they learn embeddings only for the nodes seen during training and do not naturally generalize to unseen nodes or new graphs. In Passage B, DeepWalk can still build a Hierarchical Softmax tree without seeing the entire graph as long as it has access to the nodes it has encountered in the sampled random walks; it does not need the full graph structure in advance, only the vocabulary of observed nodes to construct the tree.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This answer is based on the standard distinction between transductive classical embeddings and DeepWalk\u2019s walk-based, incremental construction of the softmax vocabulary, but the exact wording of Passages A and B is not provided.",
+  "_token_nll": 0.18533661080606328
+}

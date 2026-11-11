@@ -1,0 +1,90 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "EdgeCluster",
+    "Macro-F1 score",
+    "Flickr"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "unsupervised representation learning",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "class separability",
+      "target_alias": "may not separate Flickr\u2019s classes well when supervision is very sparse",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "EdgeCluster",
+      "source_alias": "",
+      "type": "USES",
+      "target": "clustering-based features",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "clustering-based features",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "graph\u2019s community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "clustering-based features",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "class boundaries",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "UNDERPERFORMS",
+      "target": "EdgeCluster",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "representation quality",
+      "source_alias": "",
+      "type": "EXPLAINS",
+      "target": "Macro-F1 score",
+      "target_alias": "weaker Macro-F1",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "class separability",
+      "source_alias": "",
+      "type": "EXPLAINS",
+      "target": "Macro-F1 score",
+      "target_alias": "weaker Macro-F1",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "amount of labeled data available",
+      "source_alias": "",
+      "type": "EXPLAINS",
+      "target": "Macro-F1 score",
+      "target_alias": "not simply by the amount of labeled data available",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "The answer says DeepWalk's workers perform lock-free SGD 'in the style of Hogwild!', but the evidence never mentions Hogwild!.",
+    "The answer says each training step touches only a few embedding rows, so workers rarely write to the same parameters. The evidence only says the updates are sparse because of the power-law vertex distribution.",
+    "The answer says occasional overwrites are benign noise that SGD tolerates, and that skipping locks avoids serialization and contention. The evidence does not state this."
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The answer correctly rejects the false premise: DeepWalk does not acquire a lock and uses ASGD with sparse updates. It adds details not in the evidence (Hogwild!, the contention explanation, benign overwrites), and it treats sparse updates as helpful, whereas the paper presents sparsity as what makes lock-free ASGD work."
+}

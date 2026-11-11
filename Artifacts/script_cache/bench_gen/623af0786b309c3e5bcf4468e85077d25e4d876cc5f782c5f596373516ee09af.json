@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "question": "Why does LINE\u2019s use of random walks and skip-gram training make it especially effective on vertex classification?",
+      "false_premise": "LINE uses random walks and skip-gram training to learn embeddings.",
+      "correction": "LINE is not described as using random walks or skip-gram; it is trained with edge sampling and stochastic gradient descent on first-order and second-order proximity objectives.",
+      "evidence_quote": "The edge sampling treatment improves the effectiveness of the stochastic gradient descent without compromising the efficiency.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does LINE\u2019s node2vec-style objective help it scale with the number of vertices rather than the number of edges?",
+      "false_premise": "LINE scales with the number of vertices and uses a node2vec-style objective.",
+      "correction": "LINE\u2019s time complexity is linear in the number of edges and does not depend on the number of vertices, and node2vec is not mentioned as part of LINE.",
+      "evidence_quote": "Therefore, the overall time complexity of the LINE isO(dK|E|), which is linear to the number of edges |E|, and does not depend on the number of vertices|V|.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Under which conditions does LINE combine first-order proximity with textual features of newly arrived vertices to infer embeddings?",
+      "false_premise": "LINE uses textual features for newly arrived vertices in addition to first-order proximity.",
+      "correction": "For new vertices, LINE uses their observed connections to existing vertices and optimizes an objective based on p1 or p2; textual information is mentioned only as future work when no connections are observed.",
+      "evidence_quote": "If no connections between the new vertex and existing vertices are observed, we must resort to other information, such as the textual information of the vertices, and we leave it as our future work.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What comparison result does LINE report against DeepWalk, and how does LINE\u2019s edge sampling hurt its efficiency relative to DeepWalk?",
+      "false_premise": "LINE is compared against DeepWalk and edge sampling hurts its efficiency.",
+      "correction": "The passage does not mention DeepWalk, and it states that edge sampling improves effectiveness without compromising efficiency.",
+      "evidence_quote": "The edge sampling treatment improves the effectiveness of the stochastic gradient descent without compromising the efficiency.",
+      "difficulty": "easy"
+    }
+  ]
+}

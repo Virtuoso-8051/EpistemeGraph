@@ -1,0 +1,34 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node feature (NF)",
+    "feature vector (FV)",
+    "d-dimensional space (DDS)"
+  ],
+  "triples": [
+    {
+      "source": "node feature vector",
+      "source_alias": "FV",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "128 dimensions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "d-dimensional space",
+      "source_alias": "DDS",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "d = 128",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "d = 128",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

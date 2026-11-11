@@ -1,0 +1,6 @@
+{
+  "answer": "The core contribution is a simple, scalable framework that learns low-dimensional node embeddings by treating network neighborhoods as \u201csentences\u201d and nodes as \u201cwords,\u201d so that nodes appearing in similar random-walk contexts get similar vector representations. The authors justify this by showing that short random walks on a graph generate sequences whose co-occurrence statistics capture community structure, and that maximizing the likelihood of these walk-generated sequences with a language-model objective is equivalent to learning embeddings that preserve those local structural relationships. In other words, random walks provide the corpus, and language modeling provides the training objective that turns graph proximity into a representation-learning problem.",
+  "confidence": 0.93,
+  "confidence_reasoning": "This is a well-established description of the DeepWalk-style approach and its random-walk/language-model justification, though exact wording may vary by paper.",
+  "_token_nll": 0.2375826578654215
+}

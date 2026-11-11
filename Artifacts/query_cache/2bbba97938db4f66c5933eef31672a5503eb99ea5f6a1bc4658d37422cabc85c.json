@@ -1,0 +1,123 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "Link Prediction (LP)",
+    "node embedding (NE)",
+    "edge-based prediction task (EBPT)",
+    "popular heuristic score (PHS)"
+  ],
+  "triples": [
+    {
+      "source": "Link Prediction (LP)",
+      "source_alias": "LP",
+      "type": "APPLIES_TO",
+      "target": "node2vec representation (NR)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "node embedding (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge feature vector",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "node embedding (NE)",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "edge feature vector",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "binary operator",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Average",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "binary operator",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Hadamard",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "binary operator",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Weighted-L1",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "binary operator",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Weighted-L2",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "binary operator",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "logistic regression",
+      "source_alias": "",
+      "type": "IS_A",
+      "target": "supervised binary classifier",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "logistic regression",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "AUC",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "EVALUATED_ON",
+      "target": "F1",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "popular heuristic score (PHS)",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "",
+      "type": "USES",
+      "target": "Table 3",
+      "target_alias": "",
+      "claim_type": "REFUTED"
+    }
+  ]
+}

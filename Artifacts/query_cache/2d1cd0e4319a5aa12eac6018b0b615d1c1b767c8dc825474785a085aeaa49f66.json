@@ -1,0 +1,78 @@
+{
+  "query_entities": [
+    "NODE2VEC",
+    "node embedding",
+    "random walks",
+    "connected components",
+    "homophily",
+    "Macro-F1",
+    "label communities",
+    "minority classes"
+  ],
+  "triples": [
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "USES",
+      "target": "random walks",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "NODE2VEC",
+      "source_alias": "node2vec",
+      "type": "GENERATES",
+      "target": "node embedding",
+      "target_alias": "NE",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "never leave the connected component where they start",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "connected components",
+      "source_alias": "",
+      "type": "MAPS_TO",
+      "target": "label communities",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "label communities",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "connected components",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "class separation in node embedding",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "increased number of connected components",
+      "source_alias": "",
+      "type": "IMPROVES",
+      "target": "Macro-F1",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    },
+    {
+      "source": "small isolated components",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "minority classes",
+      "target_alias": "",
+      "claim_type": "SPECULATIVE"
+    }
+  ]
+}

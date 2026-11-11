@@ -1,0 +1,111 @@
+{
+  "query_entities": [
+    "Large-scale Information Network Embedding",
+    "citation networks",
+    "node classification",
+    "first-order proximity",
+    "second-order proximity",
+    "local neighborhood structure",
+    "global graph properties",
+    "random-walk context",
+    "embeddings"
+  ],
+  "triples": [
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "IMPROVES",
+      "target": "node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "USES",
+      "target": "local neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "PRESERVES",
+      "target": "local neighborhood structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "DOES_NOT_RELY_ON",
+      "target": "global graph properties",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "MODELS",
+      "target": "first-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "first-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "directly connected nodes should have similar embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "MODELS",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "nodes with similar neighbors should be close in embedding space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "CAPTURES",
+      "target": "citation patterns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embeddings",
+      "source_alias": "",
+      "type": "ARE_USEFUL_AS",
+      "target": "features for downstream node classification",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "OUTPERFORMS",
+      "target": "methods that emphasize only global structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "Large-scale Information Network Embedding",
+      "source_alias": "LINE",
+      "type": "OUTPERFORMS",
+      "target": "methods that emphasize random-walk context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

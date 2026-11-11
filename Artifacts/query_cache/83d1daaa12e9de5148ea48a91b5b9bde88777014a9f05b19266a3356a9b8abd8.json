@@ -1,0 +1,6 @@
+{
+  "answer": "Modularity can outperform EdgeCluster when the graph\u2019s community structure is strong and relatively well-separated, because modularity explicitly rewards dense within-community connections and sparse between-community connections. In practice, this tends to help when the task is more about recovering global cluster structure than exploiting local adjacency patterns alone. EdgeCluster may already use adjacency-matrix-derived features, but Modularity adds an objective that directly encodes the graph partitioning bias, which can be advantageous on graphs with clear assortative communities, higher signal-to-noise in connectivity, and fewer ambiguous boundary nodes. It is less likely to help, and may not outperform, when the graph is noisy, weakly clustered, highly heterophilous, or when local edge features already capture the useful information well.",
+  "confidence": 0.78,
+  "confidence_reasoning": "This is a general graph-clustering explanation consistent with how modularity works, but the exact conditions depend on the specific dataset, model, and experimental setup.",
+  "_token_nll": 0.2705813816615513
+}

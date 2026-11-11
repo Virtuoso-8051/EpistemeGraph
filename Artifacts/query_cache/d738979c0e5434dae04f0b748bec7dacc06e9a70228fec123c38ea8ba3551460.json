@@ -1,0 +1,79 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "node2vec",
+    "BFS",
+    "DFS",
+    "homophily-based similarity",
+    "local proximity",
+    "random-walk neighborhoods",
+    "sparse supervision",
+    "labeled data"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "reported performance",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "SUGGESTS",
+      "target": "homophily-based similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "homophily-based similarity",
+      "source_alias": "",
+      "type": "DEFINED_AS",
+      "target": "nodes being similar because they are close in the graph and tend to share labels or community membership",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "BFS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "USES",
+      "target": "DFS",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "TRADE_OFFS_BETWEEN",
+      "target": "local homophily",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "node2vec",
+      "source_alias": "",
+      "type": "TRADE_OFFS_BETWEEN",
+      "target": "structural/role-based similarity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "INDICATES",
+      "target": "simple random-walk neighborhoods capturing local proximity are often enough when labeled data are scarce",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

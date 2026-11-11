@@ -1,0 +1,66 @@
+{
+  "query_entities": [
+    "LINE",
+    "second-order proximity",
+    "vertex embedding",
+    "context embedding"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "vertex embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "context embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "vertex embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "second-order proximity",
+      "source_alias": "",
+      "type": "REQUIRES",
+      "target": "context embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex embedding",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "VERTEX",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context embedding",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "node representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "VERTEX",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "node representation",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

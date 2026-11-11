@@ -1,0 +1,6 @@
+{
+  "answer": "The streaming variant of DeepWalk learns embeddings incrementally as new nodes and edges arrive, rather than requiring the full graph to be available up front. It updates the model online from the observed stream, so it can adapt to evolving graphs without retraining from scratch on the entire network. One tradeoff is that, because it only sees a partial graph at any moment, the learned embeddings can be less globally consistent or slightly less accurate than those from a batch method that has access to the full graph.",
+  "confidence": 0.9,
+  "confidence_reasoning": "This is a standard description of streaming DeepWalk and its main limitation, though exact performance tradeoffs can vary by implementation and dataset.",
+  "_token_nll": 0.16610734239756633
+}

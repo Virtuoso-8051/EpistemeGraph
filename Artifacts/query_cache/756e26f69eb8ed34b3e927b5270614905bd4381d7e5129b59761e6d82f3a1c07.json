@@ -1,0 +1,88 @@
+{
+  "query_entities": [
+    "LINE",
+    "second-order proximity",
+    "vertex",
+    "vertex vector",
+    "context vector",
+    "source node",
+    "neighbor",
+    "target/source vertex",
+    "context/neighbor vertex",
+    "edge-based prediction"
+  ],
+  "triples": [
+    {
+      "source": "LINE",
+      "source_alias": "",
+      "type": "USES",
+      "target": "second-order proximity",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "vertex vector",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex",
+      "source_alias": "",
+      "type": "REPRESENTS",
+      "target": "context vector",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex vector",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "source node",
+      "target_alias": "center node",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context vector",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "neighbor",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "target/source vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "vertex",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "context/neighbor vertex",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "target/source vertex",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "edge-based prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "context/neighbor vertex",
+      "source_alias": "",
+      "type": "APPLIES_TO",
+      "target": "edge-based prediction",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "query_entities": [
+    "DeepWalk",
+    "2-dimensional latent representation",
+    "Karate network",
+    "original graph",
+    "community structure",
+    "embedding",
+    "Karate club network",
+    "factions",
+    "communities"
+  ],
+  "triples": [
+    {
+      "source": "2-dimensional latent representation",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "community structure",
+      "target_alias": "Karate network",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes that are close or densely connected in the original graph",
+      "source_alias": "",
+      "type": "APPEARS_NEAR",
+      "target": "each other in the embedding",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "well-known factions",
+      "target_alias": "Karate club network communities",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "embedding",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "communities",
+      "target_alias": "Karate club network",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}

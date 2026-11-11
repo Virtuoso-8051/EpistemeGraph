@@ -1,0 +1,11 @@
+{
+  "claims_checked": 6,
+  "unsupported_claims": [
+    "Skip-gram with negative sampling implicitly factorizes a shifted PMI matrix of node co-occurrences, so representations capture random-walk proximity (not in the evidence; presented as part of the justification)",
+    "Community structure is recovered by clustering the learned embeddings (not stated in the evidence)"
+  ],
+  "accepted_false_premise": false,
+  "verdict": "PARTIALLY_SUPPORTED",
+  "rationale": "The core claims are supported: language-modeling techniques are repurposed for graphs, short random walks are treated like sentences, and node visit frequencies follow a power law like Zipfian word frequencies. However, the answer adds a PMI-factorization justification and a clustering step that the evidence does not contain, and the PMI point is presented as part of the authors' justification.",
+  "unsupported_details": null
+}

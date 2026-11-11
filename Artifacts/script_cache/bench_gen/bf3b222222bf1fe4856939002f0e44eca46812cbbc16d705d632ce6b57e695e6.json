@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "In node2vec's link prediction setup, what exact fraction of edges are removed to create the positive examples, and how is connectivity of the residual network preserved after removal?",
+      "why_unanswerable": "The passage states that 50% of edges are removed and that the residual network must remain connected, but it does not explain the exact algorithm or procedure used to enforce connectivity beyond that condition.",
+      "evidence_quote": "To obtain positive examples, we remove 50% of edges chosen randomly from the network while ensuring that the residual network obtained after the edge removals is connected, and to generate negative examples, we randomly sample an equal number of node pairs from the network which have no edge connecting them.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many labeled edge examples did node2vec use for link prediction on the Facebook network after removing half of its edges, and what was the final train-test split?",
+      "why_unanswerable": "The passage gives the Facebook network size in nodes and edges, but it does not report the resulting number of positive/negative examples or any train-test partition for the link prediction task.",
+      "evidence_quote": "\u2022 Facebook [14]: In the Facebook network, nodes represent users, and edges represent a friendship relation between any two users.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What exact classifier or downstream model did node2vec use to turn the heuristic scores in Table 3 into link-prediction decisions, and what hyperparameters were selected for that classifier?",
+      "why_unanswerable": "The passage says node2vec evaluates against heuristic scores and defines those scores, but it never specifies the classifier used for link prediction or any classifier hyperparameters.",
+      "evidence_quote": "Since none of feature learning algorithms have been previously used for link prediction, we additionally evaluatenode2vec against some popular heuristic scores that achieve good performance in link prediction.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "For node2vec's link prediction experiments, what were the exact performance numbers for Common Neighbors, Jaccard's Coefficient, Adamic-Adar Score, and Preferential Attachment on the PPI dataset?",
+      "why_unanswerable": "The passage lists the heuristic scores and names the PPI dataset, but it does not report any numerical results for those methods on that dataset.",
+      "evidence_quote": "The scores we consider are defined in terms of the neighborhood sets of the nodes constituting the pair (see Table 3).",
+      "difficulty": "medium"
+    }
+  ]
+}

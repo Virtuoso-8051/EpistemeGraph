@@ -1,0 +1,95 @@
+{
+  "query_entities": [
+    "DeepWalk"
+  ],
+  "triples": [
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "random-walk co-occurrence statistics",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random-walk co-occurrence statistics",
+      "source_alias": "",
+      "type": "GENERATES",
+      "target": "similar rows",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "similar rows",
+      "source_alias": "",
+      "type": "ENABLES",
+      "target": "similar embeddings",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "random walks",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "staying longer within densely connected regions than across sparse cuts",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "co-occurrence matrix",
+      "source_alias": "",
+      "type": "CONTAINS",
+      "target": "proximity and shared neighborhood context",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "matrix factorization",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "community structure",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes in the same community",
+      "source_alias": "",
+      "type": "ACHIEVES",
+      "target": "close embeddings in the embedding space",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "nodes in the same community",
+      "source_alias": "",
+      "type": "HAS_CHARACTERISTIC",
+      "target": "similar walk-based context distributions",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "DeepWalk",
+      "source_alias": "",
+      "type": "PRESERVES",
+      "target": "higher-order connectivity patterns",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    },
+    {
+      "source": "higher-order connectivity patterns",
+      "source_alias": "",
+      "type": "BASED_ON",
+      "target": "graph\u2019s random-walk dynamics",
+      "target_alias": "",
+      "claim_type": "ASSERTED"
+    }
+  ]
+}
