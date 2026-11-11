@@ -197,7 +197,10 @@ confidence reaches \CVAUCllm{} with ECE \CVECEllm{} ($p=\CVPllm$) and length \CV
 $p=\CVPtext$) and the same learner without the claim-set representation is indistinguishable (\CVAUCvthree,
 $p=\CVPvthree$); after the verbalised confidence, the curvature shift $\Delta\kappa$ is the most important answer feature,
 but the geometric family does not significantly beat text NLI on this corpus. On unanswerable and cross-paper questions
-the verbalised confidence is \emph{inversely} related to support (AUROC \CatBorderLLM{} and \CatCrossLLM). Out of fold,
+the verbalised confidence is \emph{inversely} related to support (AUROC \CatBorderLLM{} and \CatCrossLLM): the model is
+most confident when it invents an answer the papers do not contain or blends two papers. EpistemeGraph is strongest on
+false-premise questions (\CatFPVfour, versus \CatFPLLM{} for $c_{\mathrm{LLM}}$), while on factual questions the
+verbalised confidence is informative (\CatFactLLM, versus \CatFactVfour). Out of fold,
 \MatchN{} of \MatchTotal{} answers match the primary judge, against \MatchBase{} for a constant ``hallucinated''; raw
 accuracy is a poor yardstick under this imbalance and label noise.
 
@@ -205,13 +208,29 @@ accuracy is a poor yardstick under this imbalance and label noise.
 
 \begin{figure}[t]\centering
 \IfFileExists{figures/roc_cv.pdf}{\includegraphics[width=0.82\columnwidth]{figures/roc_cv.pdf}}{}
-\caption{Out-of-fold ROC over all labelled answers.}\label{fig:roc}
+\caption{Out-of-fold ROC curves from the first of the five cross-validation repetitions; the legend gives that repetition's AUROC, \cref{tab:cv} the average over all five (\CVAUC).}\label{fig:roc}
+\end{figure}
+
+\paragraph*{What the champion uses}
+\Cref{tab:leaderboard} lists the tournament: with \NTrain{} training answers the neural contenders lose to boosted trees,
+and the multiple-instance network is kept as the claim localiser. Grouped permutation importance (\cref{fig:imp})
+ranks the verbalised confidence first and the curvature shift $\Delta\kappa$ second among answer features; the most
+important claim-level groups are NLI contradiction and entailment, out-of-corpus rate and grafted-edge curvature.
+Removing the whole topological family does not change test AUROC significantly ($\Delta=\DeltaTopo$, $p=\PvalTopo$).
+
+\TableLeaderboard
+
+\begin{figure}[t]\centering
+\IfFileExists{figures/importance_v4.pdf}{\includegraphics[width=0.95\columnwidth]{figures/importance_v4.pdf}}{}
+\caption{Grouped permutation importance of the champion (increase in test log-loss, 20 repeats): answer features
+(grey) and pooled claim-feature groups (blue).}\label{fig:imp}
 \end{figure}
 
 \paragraph*{Pool and decisions}
 The KG term passes both pool checks ($p=\PoolLRTp$; CV log-loss \PoolCVwith{} versus \PoolCVwithout) with a negative
 weight ($b_2=\PoolBkg$), which we read as the verbosity confound again. At $\alpha=0.10$ cross-conformal coverage is
-\CVCovTen\% with \CVAbsTen\% abstention and \CVSelTen\% selective accuracy (\cref{tab:conformal}); at $\alpha=0.20$
+\CVCovTen\% with \CVAbsTen\% abstention and \CVSelTen\% selective accuracy (\cref{tab:conformal}); abstention is the
+price of a per-class guarantee with a moderately discriminative scorer and imbalanced classes; at $\alpha=0.20$
 abstention falls to \CVAbsTwenty\%. On the pre-specified test split ($n=\NTest$) the champion (\Champion) reaches
 AUROC \TestAUC{} with coverage \Coverage\%. The full study cost \$\CostRun.
 

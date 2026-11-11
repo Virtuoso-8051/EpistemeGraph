@@ -262,7 +262,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         macro("SupportedRate", f(res["label"].mean(), pct=True) if res is not None else DASH),
         macro("ExtentHal", f(ext_hal, pct=True)), macro("ExtentSup", f(ext_sup, pct=True)),
         macro("ExtentAUC", f(ext_auc)),
-        macro("Champion", esc(prod.get("winning_model", DASH))),
+        macro("Champion", esc(MODEL_NAMES.get(prod.get("winning_model", ""), prod.get("winning_model", DASH))).lower()),
         macro("TestAUC", f(sf.get("roc_auc"))), macro("TestLL", f(sf.get("log_loss"))),
         macro("TestBrier", f(sf.get("brier"))), macro("TestECE", f(sf.get("ece"))),
         macro("TestAcc", f(sf.get("accuracy_at_0.5"), pct=True)),
@@ -301,7 +301,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         # ---- v4: models, repeated CV over all labelled answers, judge reliability, cost
         macro("AnswerModel", esc(run_cfg.get("answer_model", DASH))),
         macro("JudgeModel", esc(run_cfg.get("judge_model", DASH))),
-        macro("CVProtocol", esc(cvm.get("protocol", DASH))),
+        macro("CVProtocol", (r"5$\times$5 repeated stratified cross-validation over all " + str(cvm["n"]) + " answers") if cvm.get("n") else DASH),
         macro("CVAUC", f((cvmod.get("EpistemeGraph_v4") or {}).get("auroc_pooled_oof"))),
         macro("CVAUCsd", f((cvmod.get("EpistemeGraph_v4") or {}).get("auroc_sd_folds"))),
         macro("CVAUCLo", f(((cvmod.get("EpistemeGraph_v4") or {}).get("auroc_ci95_rep0") or [None, None])[0])),
@@ -435,9 +435,9 @@ def main(argv: Optional[List[str]] = None) -> None:
     cc_rows = [[f(c["alpha"], nd=2), f(c["coverage"], pct=True), f(c["coverage_supported"], pct=True), f(c["coverage_hallucinated"], pct=True),
                 f(c["abstention_rate"], pct=True), f(c["selective_accuracy"], pct=True)] for c in ana.get("conformal_curve_cv", [])]
     tables = [
-        table(r"Repeated cross-validation over all labelled answers (\CVProtocol). Pooled out-of-fold AUROC, mean $\pm$ "
-              r"s.d. over folds, 95\% bootstrap CI and ECE of one repetition, and the paired DeLong $p$-value against "
-              r"EpistemeGraph v4.", "tab:cv",
+        table(r"Repeated cross-validation over all labelled answers (\CVProtocol). AUROC of the pooled out-of-fold scores averaged over the five "
+              r"repetitions, mean $\pm$ s.d.\ over the 25 folds, 95\% bootstrap CI and ECE of the first repetition, and the "
+              r"paired DeLong $p$-value against EpistemeGraph.", "tab:cv",
               ["Detector", "AUROC", "fold mean $\\pm$ s.d.", "95\\% CI", "ECE", "$p$ (DeLong)"], cv_rows, "lccccc"),
         table(r"Risk--abstention trade-off of the Mondrian cross-conformal decision over all labelled answers "
               r"(out-of-fold scores, 5-fold calibration).", "tab:conformal",

@@ -44,8 +44,8 @@ DOC_FIG = os.path.join(ROOT, "docs", "figures")
 ORDER = {"UNSUPPORTED": 0, "PARTIALLY_SUPPORTED": 1, "SUPPORTED": 2}
 COLORS = {"EpistemeGraph_v4": "#2a78d6", "same_learner_v3_inputs": "#7a7a74", "text_nli_checker": "#1baf7a",
           "llm_self_confidence": "#eb6834", "answer_length": "#b8862b"}
-LABELS = {"EpistemeGraph_v4": "EpistemeGraph v4", "same_learner_v3_inputs": "same learner, v3 inputs",
-          "text_nli_checker": "text-only NLI checker", "llm_self_confidence": "LLM self-confidence", "answer_length": "answer length"}
+LABELS = {"EpistemeGraph_v4": "EpistemeGraph", "same_learner_v3_inputs": "same learner, 13 answer features",
+          "text_nli_checker": "text-only NLI checker", "llm_self_confidence": "LLM verbalised confidence", "answer_length": "answer length"}
 
 
 def auc(y, s):
@@ -262,7 +262,7 @@ def main(argv=None):
                     label=f"{LABELS.get(m, m)} ({out['oof_auroc'][m]:.2f})")
         ax.plot([0, 1], [0, 1], ls="--", lw=0.7, color="grey")
         ax.set_xlabel("false positive rate"); ax.set_ylabel("true positive rate")
-        ax.set_title(f"Out-of-fold ROC, n={len(y)}", fontsize=9)
+        ax.set_title(f"Out-of-fold ROC, first CV repetition, n={len(y)}", fontsize=9)
         ax.legend(frameon=False, fontsize=6.5, loc="lower right")
         save(fig, "roc_cv"); plt.close(fig); made.append("roc_cv")
 

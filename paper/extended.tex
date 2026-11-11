@@ -406,8 +406,7 @@ papers in full and blind to the other verdicts, labelled the same \CrossJudgeN{}
 
 \paragraph*{Protocol}
 Two evaluations are reported. (i) The \emph{pre-specified} hash test split ($n=\NTest$). (ii) Because one 20\% split of
-a 20\%-positive problem leaves only a handful of positives, the primary evaluation is \CVProtocol{} over all labelled
-answers~\cite{bengio2004noUnbiased}: the champion family with its tuned hyper-parameters, the same learner on the 13
+a 20\%-positive problem leaves only a handful of positives, the primary evaluation is \CVProtocol~\cite{bengio2004noUnbiased}: the champion family with its tuned hyper-parameters, the same learner on the 13
 answer-level features only, a text-only NLI checker (logistic regression on $\sigma_{\mathrm{sim}},\bar\gamma,
 \gamma^{\min},\nu_{\mathrm{ooc}}$ and the pooled text-level claim features, the strongest text baseline we can build from
 the same evidence), the verbalised confidence $c_{\mathrm{LLM}}$, and an answer-length baseline. AUROC differences use
@@ -478,7 +477,7 @@ correctness, which the model's own confidence tracks better.
 
 \begin{figure}[t]\centering
 \IfFileExists{figures/roc_cv.pdf}{\includegraphics[width=0.95\columnwidth]{figures/roc_cv.pdf}}{}
-\caption{Out-of-fold ROC curves over all labelled answers (one repetition of the repeated CV).}\label{fig:roc}
+\caption{Out-of-fold ROC curves from the first of the five cross-validation repetitions. The legend gives that repetition's AUROC; \cref{tab:cv} reports the average over all five (\CVAUC{} for EpistemeGraph).}\label{fig:roc}
 \end{figure}
 
 \paragraph*{How many answers match the judge}

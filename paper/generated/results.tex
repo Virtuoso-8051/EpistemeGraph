@@ -26,7 +26,7 @@
 \newcommand{\ExtentHal}{80.8}
 \newcommand{\ExtentSup}{75.9}
 \newcommand{\ExtentAUC}{0.511}
-\newcommand{\Champion}{MonotoneHistGBM}
+\newcommand{\Champion}{monotone gradient boosting}
 \newcommand{\TestAUC}{0.728}
 \newcommand{\TestLL}{0.402}
 \newcommand{\TestBrier}{0.123}
@@ -70,7 +70,7 @@
 \newcommand{\SensRange}{0.0557}
 \newcommand{\AnswerModel}{claude-haiku-5-5}
 \newcommand{\JudgeModel}{claude-sonnet-5-5}
-\newcommand{\CVProtocol}{5x5 repeated stratified CV, n=400}
+\newcommand{\CVProtocol}{5$\times$5 repeated stratified cross-validation over all 400 answers}
 \newcommand{\CVAUC}{0.742}
 \newcommand{\CVAUCsd}{0.052}
 \newcommand{\CVAUCLo}{0.633}
@@ -161,7 +161,7 @@
 
 \newcommand{\TableCv}{%
 \begin{table}[t]\centering\footnotesize
-\caption{Repeated cross-validation over all labelled answers (\CVProtocol). Pooled out-of-fold AUROC, mean $\pm$ s.d. over folds, 95\% bootstrap CI and ECE of one repetition, and the paired DeLong $p$-value against EpistemeGraph v4.}\label{tab:cv}
+\caption{Repeated cross-validation over all labelled answers (\CVProtocol). AUROC of the pooled out-of-fold scores averaged over the five repetitions, mean $\pm$ s.d.\ over the 25 folds, 95\% bootstrap CI and ECE of the first repetition, and the paired DeLong $p$-value against EpistemeGraph.}\label{tab:cv}
 \begin{adjustbox}{max width=\columnwidth}\begin{tabular}{lccccc}\toprule
 Detector & AUROC & fold mean $\pm$ s.d. & 95\% CI & ECE & $p$ (DeLong) \\ \midrule
 \textbf{EpistemeGraph} & 0.742 & 0.741 $\pm$ 0.052 & [0.633, 0.780] & 0.090 & -- \\
