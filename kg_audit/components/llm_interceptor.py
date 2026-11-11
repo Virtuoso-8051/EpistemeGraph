@@ -1,14 +1,36 @@
+"""
+Phase 2 - Query interception (two-stage, prompt-version-pinned, fully cached).
+
+Stage A  ANSWER     : the LLM answers the user exactly as it would in production, and verbalises
+                      a confidence (Xiong et al., 2024). Modes:
+                        closed_book - no context (audits the model's parametric knowledge)
+                        grounded    - top-k corpus sentences retrieved by embedding similarity
+                                      are supplied (audits a RAG system)
+Stage B  EXTRACT    : a SEPARATE extraction call converts the answer text into the response
+                      graph G' with claim polarity (ASSERTED / SPECULATIVE / REFUTED).
+                      Decoupling matters: when one call both answers and lists its own claims,
+                      the model can silently omit its fabrications from G'.
+
+Dynamic prompting (no hard-coded domain wording):
+  * the relation vocabulary is mined from the live KG (most frequent relation types),
+  * entity naming hints are the KG entities nearest to the query+answer in embedding space,
+  * grounded-mode evidence is retrieved from the indexed corpus.
+
+Every LLM response is cached on disk under sha256(prompt_version | model | prompt), so re-running
+a benchmark or reloading the UI costs $0.
+"""
+from __future__ import annotations
+
+import json
 import os
 import re
 import sys
-import json
 import time
-import unicodedata
-from typing import List, Dict, Any, Tuple, Optional
-from openai import OpenAI
+from collections import Counter
+from typing import Any, Dict, List, Optional, Tuple
 
-from kg_audit.entity.config_entity import LLMInterceptorConfig
-from kg_audit.entity.artifact_entity import LLMInterceptorArtifact
+import numpy as np
+
 from kg_audit.components.kg_builder import (
     PREFERRED_RELATIONS,
     RELATION_SYNONYMS,
@@ -16,131 +38,134 @@ from kg_audit.components.kg_builder import (
     _GENERIC_MENTIONS,
     KGBuilder,
 )
+from kg_audit.entity.artifact_entity import LLMInterceptorArtifact
+from kg_audit.entity.config_entity import LLMInterceptorConfig
 from kg_audit.exceptions.exception import KGAuditException
+from kg_audit.utils.api_errors import FatalAPIError
+from kg_audit.utils.llm import LLMClient, default_client
 from kg_audit.logging.logger import logging
+from kg_audit.utils.main_utils import embed, embed_many, read_json, sha256_text, write_json_atomic
 
+PROMPT_VERSION = "intercept-v4"
 
-INTERCEPTION_SYSTEM_PROMPT = """You are a rigorous scientific AI assistant under epistemic audit.
-You must answer the user's question and extract the exact directed knowledge graph induced by your answer.
-Output strictly valid JSON with no markdown wrappers."""
+ANSWER_SYSTEM = "You are a knowledgeable research assistant. Reply with a single valid JSON object."
+ANSWER_USER = """Answer the question below as accurately and completely as you can.
+{context_block}
+Then report how confident you are that every factual statement in your answer is correct.
 
-INTERCEPTION_USER_PROMPT = """Answer the user's research query thoroughly and accurately.
-Along with your natural language answer, extract the structured Knowledge Graph (G') representing every technical claim made in your response.
+Return JSON:
+{{"answer": "<your answer>",
+  "confidence": <number between 0 and 1>,
+  "confidence_reasoning": "<one sentence>"}}
 
-Rules for Knowledge Graph (G') Extraction:
-1. "self_reported_accuracy": Your estimated probability (0.00 to 1.00) that your answer is completely factually accurate.
-2. "confidence_reasoning": One concise sentence explaining why you assigned that confidence score.
-3. "query_entities": Key technical entities explicitly mentioned in the user's query (use canonical singular names, e.g., "Large-scale Information Network Embedding", "node2vec", "breadth-first search").
-4. "response_entities": All key technical entities in both the query and your answer. Never use generic pronouns ("it", "this model", "the paper").
-5. "response_triples": Extract 4 to 10 directed technical claims from your answer.
-   - If an entity has both a full name and an acronym (e.g., "Breadth-First Search" and "BFS"), provide the full name as "source"/"target" and the acronym in "source_alias"/"target_alias".
-   - Prefer normalized relation verbs from: [__RELATIONS__]. Avoid vague verbs like RELATED_TO.
-   - "claim_type":
-       * "ASSERTED": A positive factual claim you assert as true in the original algorithm/literature.
-       * "SPECULATIVE": A hypothetical extension, hybrid design, or extrapolation beyond the original formulation.
-       * "REFUTED": A relationship you explicitly state is false or NOT used by the method (e.g., "X does NOT use Y").
-   - "weight": Your confidence (0.0 to 1.0) in this specific triple.
+QUESTION:
+{query}"""
 
-__KNOWN_ENTITIES_HINT__
+EXTRACT_SYSTEM = "You convert text into a knowledge graph. Reply with a single valid JSON object."
+EXTRACT_USER = """Extract every technical factual claim made in the ANSWER as directed triples.
 
-Return ONLY valid JSON matching this schema:
-{
-  "answer": "Detailed technical response...",
-  "self_reported_accuracy": 0.95,
-  "confidence_reasoning": "One-sentence explanation of confidence.",
-  "query_entities": ["Entity1", "Entity2"],
-  "response_entities": ["Entity1", "Entity2", "Entity3"],
-  "response_triples": [
-    {
-      "source": "Full Entity Name 1",
-      "source_alias": "ACR1",
-      "target": "Full Entity Name 2",
-      "target_alias": "ACR2",
-      "type": "USES",
-      "claim_type": "ASSERTED",
-      "weight": 0.95
-    }
-  ]
-}
+Rules
+1. Extract claims from the ANSWER only - not from the question, not from your own knowledge.
+2. Entities: specific technical names (methods, models, datasets, metrics, objectives, concepts).
+   Never pronouns or generic phrases ("it", "the model", "this paper"). If a full name and an
+   acronym both appear, use the full name as "source"/"target" and put the acronym in the alias field.
+3. Relations: UPPER_SNAKE_CASE verbs. Prefer this vocabulary, which is the vocabulary of the
+   reference knowledge graph: {relations}. Never use vague verbs such as RELATED_TO.
+4. claim_type:
+   ASSERTED    - the answer states it as true
+   SPECULATIVE - the answer hedges ("may", "could", "one could extend ...") or extrapolates
+   REFUTED     - the answer explicitly denies it ("X does not use Y")
+5. Extract between 1 and 15 triples; include EVERY claim, also doubtful ones.
+{entity_hints}
+Return JSON:
+{{"query_entities": ["..."],
+  "triples": [{{"source": "...", "source_alias": "", "type": "USES", "target": "...",
+               "target_alias": "", "claim_type": "ASSERTED"}}]}}
 
-CONTEXT (if provided):
-\"\"\"__CONTEXT__\"\"\"
+QUESTION (for entity naming only):
+{query}
 
-USER QUERY:
-\"\"\"__QUERY__\"\"\"
-"""
+ANSWER:
+{answer}"""
 
 
 class LLMInterceptor:
-    def __init__(self, config: LLMInterceptorConfig):
+    _entity_matrix_cache: Dict[str, Any] = {}
+
+    def __init__(self, config: LLMInterceptorConfig, client: Optional[LLMClient] = None):
         try:
             self.config = config
-            self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            self.client = client or default_client()     # Claude or OpenAI, chosen per model name
+            os.makedirs(config.query_cache_dir, exist_ok=True)
         except Exception as e:
             raise KGAuditException(e, sys)
 
-    def _load_canonical_entity_hints(self, user_query: str, max_hints: int = 30) -> str:
+    # ------------------------------------------------------------------ LLM call with cache
+    def _cached_json_call(self, model: str, system: str, user: str, logprobs: bool = False) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         """
-        Loads canonical entity names from the Phase 1 KG state (if available) that share tokens
-        with the user query so the extractor uses consistent canonical naming for known entities,
-        without restricting the LLM from introducing new/hallucinated entities.
+        With logprobs=True the call also returns token log-probabilities (no extra cost) and the cache stores
+        `_token_nll` = mean negative log-likelihood of the generated tokens, a model-intrinsic uncertainty
+        signal (Kadavath et al., 2022; Farquhar et al., 2024). Models that do not expose logprobs (e.g. some
+        reasoning models) are retried without it and `_token_nll` is None.
         """
-        try:
-            fidelity_path = os.path.join("final_model", "kg_fidelity_state.json")
-            if not os.path.exists(fidelity_path):
-                return ""
-            with open(fidelity_path, "r", encoding="utf-8") as f:
-                state = json.load(f)
-            kg_path = state.get("latest_extracted_kg_path", "")
-            if not kg_path or not os.path.exists(kg_path):
-                return ""
-            with open(kg_path, "r", encoding="utf-8") as f:
-                kg_data = json.load(f)
+        key = sha256_text(f"{PROMPT_VERSION}|{model}|{system}|{user}")
+        path = os.path.join(self.config.query_cache_dir, f"{key}.json")
+        cached = read_json(path)
+        if cached is not None:
+            return cached, {"cache_hit": True, "latency_ms": 0.0, "prompt_tokens": 0, "completion_tokens": 0}
 
-            nodes = kg_data.get("nodes", [])
-            if not nodes:
-                return ""
+        parsed, meta = self.client.complete_json(model, system, user, temperature=self.config.temperature,
+                                                 logprobs=logprobs, max_tokens=8000)
+        if logprobs:      # Claude does not expose log-probabilities -> None (feature imputed downstream)
+            parsed["_token_nll"] = meta.get("token_nll")
+        write_json_atomic(path, parsed)
+        return parsed, {"cache_hit": False, "latency_ms": meta.get("latency_ms", 0.0),
+                        "prompt_tokens": meta.get("prompt_tokens", 0), "completion_tokens": meta.get("completion_tokens", 0)}
 
-            q_tokens = {
-                w.lower() for w in re.sub(r"[^\w\s]", " ", user_query).split() if len(w) >= 2
-            }
-            scored = []
-            for n in nodes:
-                name = str(n.get("name", ""))
-                aliases = [str(a) for a in n.get("aliases", [])]
-                all_toks = {
-                    w.lower()
-                    for phrase in ([name] + aliases)
-                    for w in re.sub(r"[^\w\s]", " ", phrase).split()
-                    if len(w) >= 2
-                }
-                overlap = len(q_tokens & all_toks)
-                scored.append((overlap, len( n.get("source_pdfs", [])), name, aliases))
+    # ------------------------------------------------------------------ dynamic prompt parts
+    def _kg_store(self) -> Dict[str, Any]:
+        return read_json(self.config.kg_store_path, default={}) or {}
 
-            scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
-            selected = []
-            for _, _, name, aliases in scored[:max_hints]:
-                short_als = [a for a in aliases if a.lower() != name.lower() and len(a) <= 10]
-                if short_als:
-                    selected.append(f"{name} (alias: {short_als[0]})")
-                else:
-                    selected.append(name)
+    def dynamic_relation_vocabulary(self, top_n: int = 24) -> List[str]:
+        """Most frequent non-vague relation types of the live KG, padded with the core ontology."""
+        claims = self._kg_store().get("claims", [])
+        freq = Counter(str(c.get("relation", "")).upper() for c in claims)
+        mined = [r for r, _ in freq.most_common() if r and r not in VAGUE_RELATIONS][:top_n]
+        return mined + [r for r in PREFERRED_RELATIONS if r not in mined][: max(0, top_n - len(mined))]
 
-            if not selected:
-                return ""
-            return (
-                "When referring to concepts that match these canonical corpus entities, "
-                "use their exact canonical name (you may still introduce other entities if needed):\n"
-                + ", ".join(selected)
-            )
-        except Exception:
+    def dynamic_entity_hints(self, text: str) -> str:
+        """KG entities nearest (cosine) to the query+answer; tells the extractor the canonical names."""
+        ents = self._kg_store().get("entities", {})
+        if not ents:
             return ""
+        names = list(ents.keys())
+        key = sha256_text("|".join(names), 16)
+        if LLMInterceptor._entity_matrix_cache.get("key") != key:   # encode the KG vocabulary once
+            LLMInterceptor._entity_matrix_cache = {"key": key, "mat": embed_many(names)}
+        sims = LLMInterceptor._entity_matrix_cache["mat"] @ embed(text)
+        top = [names[i] for i in np.argsort(-sims)[: self.config.max_entity_hints] if sims[i] > 0.25]
+        if not top:
+            return ""
+        shown = []
+        for n in top:
+            short = [a for a in ents[n].get("aliases", []) if a.lower() != n.lower() and 2 <= len(a) <= 10 and a.isupper()]
+            shown.append(f"{n} ({short[0]})" if short else n)
+        return ("6. If the answer mentions one of these reference entities, use exactly this canonical name "
+                "(other entities are allowed): " + "; ".join(shown))
 
+    def retrieve_context(self, query: str, k: int = 8) -> List[str]:
+        """Dense retrieval over the disk-cached corpus sentence index shared with Phase 3."""
+        from kg_audit.components.truth_evaluator import CorpusIndex  # local import: avoids a cycle
+        idx = CorpusIndex.get(self.config.latest_chunks_path, self.config.cache_dir)
+        if idx.sentence_emb.shape[0] == 0:
+            return []
+        sims = idx.sentence_emb @ embed(query).astype(np.float32)
+        return [idx.sentences[i] for i in np.argsort(-sims)[:k]]
+
+    # ------------------------------------------------------------------ normalisation
     @staticmethod
     def _normalize_entity(raw_name: Any, raw_alias: Any = "") -> Tuple[str, str]:
-        name_str, alias_str = KGBuilder._split_inline_parenthetical(
-            str(raw_name or ""), str(raw_alias or "")
-        )
+        name_str, alias_str = KGBuilder._split_inline_parenthetical(str(raw_name or ""), str(raw_alias or ""))
         clean_name = KGBuilder._clean_mention(name_str)
         clean_alias = KGBuilder._clean_mention(alias_str) if alias_str else ""
         if clean_alias and len(clean_alias) > len(clean_name) and KGBuilder._is_short_token(clean_name):
@@ -150,245 +175,139 @@ class LLMInterceptor:
     @staticmethod
     def _normalize_relation(rel: Any) -> str:
         r = re.sub(r"[^A-Z0-9]+", "_", str(rel or "").upper()).strip("_")
-        norm_r = RELATION_SYNONYMS.get(r, r) or "USES"
-        if norm_r in VAGUE_RELATIONS:
-            return "USES"
-        return norm_r
+        r = RELATION_SYNONYMS.get(r, r) or "USES"
+        return "USES" if r in VAGUE_RELATIONS else r
 
+    def build_response_graph(self, raw_query_entities, raw_triples) -> Dict[str, Any]:
+        aliases: Dict[str, set] = {}
+
+        def register(raw_n: Any, raw_a: Any = "") -> Optional[str]:
+            name, alias = self._normalize_entity(raw_n, raw_a)
+            if not name or name.lower() in _GENERIC_MENTIONS:
+                return None
+            for existing, al in aliases.items():
+                al_low = {a.lower() for a in al}
+                if (name.lower() == existing.lower() or name.lower() in al_low
+                        or KGBuilder._is_acronym_match(name, existing)
+                        or (alias and (alias.lower() == existing.lower() or KGBuilder._is_acronym_match(alias, existing)))):
+                    al.update(x for x in (name, alias) if x)
+                    return existing
+            aliases[name] = {x for x in (name, alias) if x}
+            return name
+
+        q_ents = [e for e in (register(q) for q in raw_query_entities or []) if e]
+        triples, seen, counts = [], set(), Counter()
+        for t in raw_triples or []:
+            if not isinstance(t, dict):
+                continue
+            s = register(t.get("source"), t.get("source_alias", ""))
+            o = register(t.get("target"), t.get("target_alias", ""))
+            if not s or not o or s == o:
+                continue
+            rel = self._normalize_relation(t.get("type"))
+            ct = str(t.get("claim_type", "ASSERTED")).upper()
+            ct = ct if ct in {"ASSERTED", "SPECULATIVE", "REFUTED"} else "ASSERTED"
+            key = (s.lower(), rel, o.lower(), ct)
+            if key in seen:
+                continue
+            seen.add(key)
+            counts[ct] += 1
+            triples.append({"source": s, "target": o, "type": rel, "claim_type": ct})
+
+        names = list(aliases.keys())
+        idx = {n: i for i, n in enumerate(names)}
+        return {
+            "entities": names,
+            "query_entities": list(dict.fromkeys(q_ents)),
+            "nodes": [{"id": i, "name": n, "aliases": sorted(aliases[n])} for i, n in enumerate(names)],
+            "edges": [{"source": idx[t["source"]], "target": idx[t["target"]], "type": t["type"],
+                       "claim_type": t["claim_type"], "weight": 1.0} for t in triples],
+            "triples": triples,
+            "polarity_counts": dict(counts),
+        }
+
+    # ------------------------------------------------------------------ main entry
     def intercept_and_generate(
         self,
         user_query: str,
-        source_documents: Optional[List[str]] = None
+        source_documents: Optional[List[str]] = None,
+        mode: str = "closed_book",
+        precomputed_answer: Optional[Dict[str, Any]] = None,
     ) -> Tuple[LLMInterceptorArtifact, Dict[str, Any]]:
         """
-        Phase 2 Single-Pass Query Interceptor:
-        1. Sends user query (+ optional context) to OpenAI LLM.
-        2. Captures natural language response, self-reported accuracy score (P_LLM), and rationale.
-        3. Extracts ontology-normalized induced response graph G' with claim polarity & telemetry metadata.
+        precomputed_answer lets the benchmark runner inject an answer produced elsewhere
+        (e.g. a different LLM under audit) and still run the identical extraction stage.
         """
         try:
-            logging.info(f"Intercepting user query: '{user_query}'")
-            if source_documents is None:
-                source_documents = []
+            source_documents = list(source_documents or [])
+            context = source_documents + (self.retrieve_context(user_query) if mode == "grounded" else [])
+            ctx_block = ("\nUse the following context where relevant:\n\"\"\"\n" + "\n".join(context) + "\n\"\"\"\n") if context else ""
 
-            context_str = "\n".join(source_documents)
-            entity_hints = self._load_canonical_entity_hints(user_query)
-
-            prompt = (
-                INTERCEPTION_USER_PROMPT
-                .replace("__RELATIONS__", ", ".join(PREFERRED_RELATIONS))
-                .replace("__KNOWN_ENTITIES_HINT__", entity_hints)
-                .replace("__CONTEXT__", context_str)
-                .replace("__QUERY__", user_query)
-            )
-
-            import hashlib
-            query_cache_dir = os.path.join("Artifacts", "query_cache")
-            os.makedirs(query_cache_dir, exist_ok=True)
-            q_hash = hashlib.sha256(
-                f"v2_{self.config.llm_model_name}_{user_query.strip()}_{context_str}".encode("utf-8")
-            ).hexdigest()
-            q_cache_file = os.path.join(query_cache_dir, f"{q_hash}.json")
-
-            t0 = time.perf_counter()
-            if os.path.exists(q_cache_file):
-                with open(q_cache_file, "r", encoding="utf-8") as f:
-                    parsed = json.load(f)
-                latency_ms = round((time.perf_counter() - t0) * 1000.0, 2)
-                usage = None
-                logging.info(f"[Query Cache HIT] Loaded cached LLM response for '{user_query[:60]}...' ($0 API cost)")
+            if precomputed_answer is None:
+                ans, a_meta = self._cached_json_call(self.config.llm_model_name, ANSWER_SYSTEM,
+                                                     ANSWER_USER.format(context_block=ctx_block, query=user_query), logprobs=True)
             else:
-                response = self.client.chat.completions.create(
-                    model=self.config.llm_model_name,
-                    response_format={"type": "json_object"},
-                    messages=[
-                        {"role": "system", "content": INTERCEPTION_SYSTEM_PROMPT},
-                        {"role": "user", "content": prompt}
-                    ],
-                    temperature=self.config.temperature
-                )
-                latency_ms = round((time.perf_counter() - t0) * 1000.0, 2)
-                raw_content = response.choices[0].message.content.strip()
-                match = re.search(r"\{.*\}", raw_content, re.S)
-                parsed = json.loads(match.group(0) if match else raw_content)
-                usage = getattr(response, "usage", None)
-                with open(q_cache_file, "w", encoding="utf-8") as f:
-                    json.dump(parsed, f, indent=2)
+                ans, a_meta = precomputed_answer, {"cache_hit": True, "latency_ms": 0.0, "prompt_tokens": 0, "completion_tokens": 0}
+            answer = str(ans.get("answer", "")).strip()
+            try:
+                conf = float(ans.get("confidence", ans.get("self_reported_accuracy", 0.5)))
+            except (TypeError, ValueError):
+                conf = 0.5
+            conf = float(np.clip(conf / 100.0 if conf > 1.0 else conf, 0.0, 1.0))
+            reason = str(ans.get("confidence_reasoning", "")).strip()
 
-            llm_response = str(parsed.get("answer", "")).strip()
-            self_acc = float(parsed.get("self_reported_accuracy", 0.90))
-            self_acc = max(0.01, min(0.999, self_acc))
-            conf_reason = str(parsed.get("confidence_reasoning", "Self-estimated by language model.")).strip()
+            ext, e_meta = self._cached_json_call(
+                self.config.extractor_model_name, EXTRACT_SYSTEM,
+                EXTRACT_USER.format(relations=", ".join(self.dynamic_relation_vocabulary()),
+                                    entity_hints=self.dynamic_entity_hints(f"{user_query} {answer}"),
+                                    query=user_query, answer=answer))
+            graph = self.build_response_graph(ext.get("query_entities", []), ext.get("triples", []))
+            n_trip = max(1, len(graph["triples"]))
+            pc = graph["polarity_counts"]
 
-            raw_q_ents = parsed.get("query_entities", [])
-            raw_r_ents = parsed.get("response_entities", [])
-            raw_triples = parsed.get("response_triples", [])
-
-            # Canonicalize entities and track aliases across the response graph G'
-            entity_aliases: Dict[str, set] = {}
-            norm_query_entities: List[str] = []
-
-            def register_entity(raw_n: Any, raw_a: Any = "") -> Optional[str]:
-                c_name, c_alias = self._normalize_entity(raw_n, raw_a)
-                if not c_name or c_name.lower() in _GENERIC_MENTIONS:
-                    return None
-                # Check if matches an already registered entity by case or acronym
-                for existing, al_set in entity_aliases.items():
-                    if c_name.lower() == existing.lower() or c_name.lower() in {a.lower() for a in al_set}:
-                        if c_alias:
-                            al_set.add(c_alias)
-                        return existing
-                    if KGBuilder._is_acronym_match(c_name, existing) or (
-                        c_alias and (
-                            c_alias.lower() == existing.lower()
-                            or KGBuilder._is_acronym_match(c_alias, existing)
-                        )
-                    ):
-                        al_set.add(c_name)
-                        if c_alias:
-                            al_set.add(c_alias)
-                        return existing
-                als = {c_name}
-                if c_alias:
-                    als.add(c_alias)
-                init = KGBuilder._initials(c_name)
-                if 2 <= len(init) <= 6:
-                    als.add(init)
-                entity_aliases[c_name] = als
-                return c_name
-
-            for qe in raw_q_ents:
-                cn = register_entity(qe)
-                if cn and cn not in norm_query_entities:
-                    norm_query_entities.append(cn)
-
-            for re_ent in raw_r_ents:
-                register_entity(re_ent)
-
-            normalized_triples: List[Dict[str, Any]] = []
-            seen_edges = set()
-            speculative_count = 0
-            refuted_count = 0
-            asserted_count = 0
-
-            for t in raw_triples:
-                if not isinstance(t, dict):
-                    continue
-                src_name = register_entity(t.get("source"), t.get("source_alias", ""))
-                tgt_name = register_entity(t.get("target"), t.get("target_alias", ""))
-                if not src_name or not tgt_name or src_name == tgt_name:
-                    continue
-
-                rel_type = self._normalize_relation(t.get("type", "USES"))
-                claim_type = str(t.get("claim_type", "ASSERTED")).strip().upper()
-                if claim_type not in {"ASSERTED", "SPECULATIVE", "REFUTED"}:
-                    claim_type = "ASSERTED"
-
-                try:
-                    w = float(t.get("weight", 1.0))
-                except (TypeError, ValueError):
-                    w = 1.0
-
-                edge_key = (src_name.lower(), rel_type, tgt_name.lower())
-                if edge_key in seen_edges:
-                    continue
-                seen_edges.add(edge_key)
-
-                if claim_type == "SPECULATIVE":
-                    speculative_count += 1
-                elif claim_type == "REFUTED":
-                    refuted_count += 1
-                else:
-                    asserted_count += 1
-
-                normalized_triples.append({
-                    "source": src_name,
-                    "source_aliases": sorted(entity_aliases.get(src_name, {src_name})),
-                    "target": tgt_name,
-                    "target_aliases": sorted(entity_aliases.get(tgt_name, {tgt_name})),
-                    "type": rel_type,
-                    "claim_type": claim_type,
-                    "weight": w
-                })
-
-            combined_entities = list(entity_aliases.keys())
-            response_nodes = [
-                {
-                    "id": idx,
-                    "name": ent,
-                    "aliases": sorted(entity_aliases[ent])
-                }
-                for idx, ent in enumerate(combined_entities)
-            ]
-            node_map = {ent: idx for idx, ent in enumerate(combined_entities)}
-
-            response_edges = []
-            for triple in normalized_triples:
-                src_id = node_map.get(triple["source"])
-                tgt_id = node_map.get(triple["target"])
-                if src_id is not None and tgt_id is not None:
-                    response_edges.append({
-                        "source": src_id,
-                        "target": tgt_id,
-                        "type": triple["type"],
-                        "claim_type": triple["claim_type"],
-                        "weight": triple["weight"]
-                    })
-
-            total_triples = max(1, len(normalized_triples))
-            
-            # THE FIX: Added user_query to metadata so truth_evaluator.py can read it
             metadata = {
                 "user_query": user_query,
-                "llm_extraction_confidence": self_acc,
-                "llm_confidence_reasoning": conf_reason,
+                "llm_response": answer,
+                "llm_extraction_confidence": conf,
+                "llm_confidence_reasoning": reason,
                 "llm_model_name": self.config.llm_model_name,
-                "response_latency_ms": latency_ms,
-                "prompt_tokens": int(getattr(usage, "prompt_tokens", 0) or 0) if usage else 0,
-                "completion_tokens": int(getattr(usage, "completion_tokens", 0) or 0) if usage else 0,
-                "asserted_claim_count": asserted_count,
-                "speculative_claim_count": speculative_count,
-                "refuted_claim_count": refuted_count,
-                "speculative_ratio": round(speculative_count / total_triples, 4),
-                "query_entities": norm_query_entities,
+                "extractor_model_name": self.config.extractor_model_name,
+                "mode": mode,
+                "prompt_version": PROMPT_VERSION,
+                "answer_call": a_meta,
+                "extract_call": e_meta,
+                "asserted_claim_count": pc.get("ASSERTED", 0),
+                "speculative_claim_count": pc.get("SPECULATIVE", 0),
+                "refuted_claim_count": pc.get("REFUTED", 0),
+                "speculative_ratio": round(pc.get("SPECULATIVE", 0) / n_trip, 4),
+                "token_nll": ans.get("_token_nll"),
+                "query_entities": graph["query_entities"],
             }
-
-            interception_payload = {
-                "user_query": user_query,
-                "llm_response": llm_response,
-                "llm_self_reported_accuracy": self_acc,
-                "llm_confidence_reasoning": conf_reason,
-                "extracted_query_entities": norm_query_entities,
-                "extracted_response_entities": combined_entities,
-                "extracted_response_triples": normalized_triples,
-                "telemetry_metadata": metadata,
-                "source_documents": source_documents
+            payload = {
+                "user_query": user_query, "mode": mode, "llm_response": answer,
+                "llm_self_reported_accuracy": conf, "llm_confidence_reasoning": reason,
+                "extracted_query_entities": graph["query_entities"],
+                "extracted_response_entities": graph["entities"],
+                "extracted_response_triples": graph["triples"],
+                "context_used": context, "telemetry_metadata": metadata,
             }
-
-            export_path = self.config.captured_payload_file_path
-            os.makedirs(os.path.dirname(export_path), exist_ok=True)
-            with open(export_path, "w", encoding="utf-8") as f:
-                json.dump(interception_payload, f, indent=4)
+            write_json_atomic(self.config.captured_payload_file_path, payload, indent=4)
 
             artifact = LLMInterceptorArtifact(
-                user_query=user_query,
-                llm_response=llm_response,
-                llm_self_reported_accuracy=self_acc,
-                llm_confidence_reasoning=conf_reason,
-                source_documents=source_documents,
-                captured_payload_path=export_path
+                user_query=user_query, llm_response=answer, llm_self_reported_accuracy=conf,
+                llm_confidence_reasoning=reason, source_documents=context,
+                captured_payload_path=self.config.captured_payload_file_path, mode=mode,
             )
-
-            graph_payload_resp = {
-                "entities": combined_entities,
-                "query_entities": norm_query_entities,
-                "nodes": response_nodes,
-                "edges": response_edges,
-                "llm_self_reported_accuracy": self_acc,
-                "metadata": metadata
+            graph_payload = {
+                "entities": list(dict.fromkeys(graph["query_entities"] + graph["entities"])),
+                "query_entities": graph["query_entities"],
+                "nodes": graph["nodes"], "edges": graph["edges"], "triples": graph["triples"],
+                "llm_self_reported_accuracy": conf, "metadata": metadata,
             }
-
-            return artifact, graph_payload_resp
-
+            logging.info(f"Intercepted '{user_query[:60]}' -> {len(graph['triples'])} triples "
+                         f"(answer cache={a_meta['cache_hit']}, extract cache={e_meta['cache_hit']})")
+            return artifact, graph_payload
+        except FatalAPIError:
+            raise                                # keep the type: callers stop the whole stage on it
         except Exception as e:
             raise KGAuditException(e, sys)

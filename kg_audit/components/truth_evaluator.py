@@ -1,794 +1,697 @@
+"""
+Phase 3B - CASSE truth evaluator (schema casse-v2).
+
+Given the ground-truth (GT) subgraph retrieved from Neo4j and the response graph G'
+induced by the LLM answer, compute an 8-dimensional feature vector x in R^8:
+
+  Topological (structure of G' relative to the GT knowledge graph)
+    x1  E_sheaf   translational knowledge-sheaf Dirichlet energy of G' (relative to GT baseline)
+    x2  Delta_K   Wasserstein shift of the Forman-Ricci curvature distribution when G' is grafted on GT
+    x3  D_spec    W1 distance between normalised-Laplacian spectra of G' and its GT 2-hop shadow
+
+  Evidential (provenance against the source PDFs)
+    x4  pi_prov   Beta-Bernoulli posterior that a claim is backed by a grounded GT path
+    x5  sigma_ent mean best-match semantic similarity of claims to corpus sentences
+    x6  nu_ooc    IDF-weighted out-of-corpus vocabulary rate of the asserted claims
+    x7  kappa_con contradiction rate (functional violations, polarity conflicts, direction inversions)
+
+  Model
+    x8  c_llm     the LLM's verbalised confidence (kept as a feature so the data can down-weight it)
+
+Every feature is computed from the RESPONSE (its asserted claims), never from the query text,
+so the detector cannot "cheat" by recognising adversarial query templates.
+
+The mapping x -> S_query -> S_final -> {VERIFIED, ABSTAIN, HALLUCINATED} is entirely learned
+(see model_trainer.py and decision.py). There are no hand-set weights or score thresholds here.
+"""
+from __future__ import annotations
+
+import math
 import os
+import pickle
 import re
 import sys
-import json
-import pickle
-import hashlib
-import unicodedata
-from datetime import datetime, timezone
+import threading
+from collections import defaultdict
+from typing import Any, Dict, List, Optional, Set, Tuple
+
 import networkx as nx
 import numpy as np
 from scipy.stats import wasserstein_distance
-from typing import Dict, Any, List, Tuple, Optional
 
-from kg_audit.entity.config_entity import TruthEvaluatorConfig
-from kg_audit.entity.artifact_entity import GraphRetrieverArtifact, TruthEvaluatorArtifact
+from kg_audit.components.decision import (
+    CLAIM_FEATURES,
+    FEATURE_KEYS,
+    FEATURE_SCHEMA_VERSION,
+    UNCALIBRATED,
+    DecisionBundle,
+)
 from kg_audit.components.kg_builder import KGBuilder
-from kg_audit.components.graph_retriever import _BROAD_DOMAIN_STOPWORDS
+from kg_audit.components.nli import NLIVerifier
+from kg_audit.entity.artifact_entity import GraphRetrieverArtifact, TruthEvaluatorArtifact
+from kg_audit.entity.config_entity import TruthEvaluatorConfig
 from kg_audit.exceptions.exception import KGAuditException
 from kg_audit.logging.logger import logging
+from kg_audit.utils.main_utils import (
+    content_stems,
+    embed,
+    embed_many,
+    fold_ascii,
+    limit_cpu_threads,
+    read_json,
+    sha256_text,
+    write_json_atomic,
+)
 
-try:
-    from sentence_transformers import SentenceTransformer
-    SENTENCE_TRANSFORMERS_AVAILABLE = True
-except ImportError:
-    SENTENCE_TRANSFORMERS_AVAILABLE = False
-
-_EVAL_EMBEDDER = None
-
-_QUERY_STOPWORDS = {
-    "the", "and", "for", "with", "from", "that", "this", "into", "over", "how", "what", "why", "which",
-    "when", "where", "does", "do", "is", "are", "was", "were", "can", "could", "would", "should",
-    "assume", "explain", "describe", "detail", "compare", "write", "according", "paper1", "paper2", "paper3",
-    "paper", "papers", "section", "table", "figure", "algorithm", "method", "methods", "model", "models",
-    "formulation", "formulated", "used", "uses", "using", "use", "based", "between", "across", "both",
-    "its", "their", "them", "they", "these", "those", "such", "than", "more", "most", "high", "low",
-    "large", "small", "new", "newly", "first", "second", "two", "three", "four", "five", "one", "all",
-    "any", "each", "every", "step", "steps", "exact", "pipeline", "core", "main", "standard", "known"
-}
-
-# Generic single-word or 1-letter node names in Neo4j that must not match multi-word alien phrases via substring
-_GENERIC_SINGLE_WORD_NODES = {
-    "r", "f", "k", "s", "g", "network", "networks", "graph", "graphs",
-    "embedding", "objective", "similarity", "bias", "clusters", "scalable", "semantic", "syntactic"
-}
+# Relations whose direction carries meaning: (u r v) and (v r u) cannot both be true.
+ASYMMETRIC_RELATIONS = frozenset({
+    "OUTPERFORMS", "PART_OF", "CONTAINS", "IS_A", "BASED_ON", "PROPOSES", "GENERALIZES",
+    "TRAINED_ON", "EVALUATED_ON", "IMPROVES", "REDUCES", "CAUSES", "REQUIRES", "DEFINED_AS",
+})
+SUPPORTING_POLARITIES = ("ASSERTED", "SPECULATIVE")
+_SENT_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"(\[])")
 
 
+# ======================================================================================
+# Corpus index (chunk sentences + embeddings + document frequencies), built once per corpus
+# ======================================================================================
+class CorpusIndex:
+    _instance: Optional["CorpusIndex"] = None
+    _lock = threading.Lock()
+
+    def __init__(self, chunks_path: str, cache_dir: str):
+        chunks = read_json(chunks_path, default=[]) or []
+        self.n_chunks = len(chunks)
+        self.signature = sha256_text("".join(c.get("chunk_id", "") + str(len(c.get("text", ""))) for c in chunks), 24)
+
+        chunk_stem_sets: List[Set[str]] = []
+        sentences: List[str] = []
+        for ch in chunks:
+            text = str(ch.get("text", ""))
+            chunk_stem_sets.append(set(content_stems(text)))
+            sentences.extend(s.strip() for s in _SENT_SPLIT.split(text) if len(s.split()) >= 6)
+
+        self.vocab: Set[str] = set().union(*chunk_stem_sets) if chunk_stem_sets else set()
+        df: Dict[str, int] = defaultdict(int)
+        for cs in chunk_stem_sets:
+            for t in cs:
+                df[t] += 1
+        self.doc_freq = dict(df)
+        self.sentences = sentences
+
+        emb_path = os.path.join(cache_dir, f"corpus_sentence_emb_{self.signature}.npy")
+        if os.path.exists(emb_path):
+            self.sentence_emb = np.load(emb_path)
+        elif sentences:
+            self.sentence_emb = embed_many(sentences).astype(np.float32)
+            os.makedirs(cache_dir, exist_ok=True)
+            np.save(emb_path, self.sentence_emb)
+        else:
+            self.sentence_emb = np.zeros((0, 384), dtype=np.float32)
+
+    @property
+    def available(self) -> bool:
+        return self.n_chunks > 0
+
+    def idf(self, stem_: str) -> float:
+        """Smoothed IDF (scikit-learn convention): log((1+N)/(1+df)) + 1. Unseen tokens get the maximum."""
+        return math.log((1.0 + self.n_chunks) / (1.0 + self.doc_freq.get(stem_, 0))) + 1.0
+
+    def best_sentence(self, query_vecs: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+        if self.sentence_emb.shape[0] == 0 or query_vecs.shape[0] == 0:
+            return np.zeros(query_vecs.shape[0]), np.full(query_vecs.shape[0], -1)
+        sims = query_vecs.astype(np.float32) @ self.sentence_emb.T
+        return sims.max(axis=1), sims.argmax(axis=1)
+
+    def top_sentences(self, query_vecs: np.ndarray, k: int = 3) -> List[List[str]]:
+        """Dense retrieval: the k corpus sentences nearest to each query vector (NLI premises)."""
+        if self.sentence_emb.shape[0] == 0 or query_vecs.shape[0] == 0:
+            return [[] for _ in range(query_vecs.shape[0])]
+        sims = query_vecs.astype(np.float32) @ self.sentence_emb.T
+        idx = np.argsort(-sims, axis=1)[:, :k]
+        return [[self.sentences[j] for j in row] for row in idx]
+
+    @classmethod
+    def get(cls, chunks_path: str, cache_dir: str) -> "CorpusIndex":
+        """Process-wide cache, invalidated automatically when latest_chunks.json changes."""
+        mtime = os.path.getmtime(chunks_path) if os.path.exists(chunks_path) else 0.0
+        with cls._lock:
+            if cls._instance is None or getattr(cls._instance, "_mtime", None) != mtime:
+                inst = cls(chunks_path, cache_dir)
+                inst._mtime = mtime
+                cls._instance = inst
+            return cls._instance
+
+
+# ======================================================================================
+# Production decision bundle (model.pkl + pool + conformal), cached by file mtime
+# ======================================================================================
+class _ProductionBrain:
+    _cache: Dict[str, Any] = {}
+    _lock = threading.Lock()
+
+    @classmethod
+    def load(cls, model_path: str, metrics_path: str) -> Tuple[Any, DecisionBundle, Dict[str, Any]]:
+        key = f"{model_path}|{metrics_path}"
+        stamp = tuple(os.path.getmtime(p) if os.path.exists(p) else 0.0 for p in (model_path, metrics_path))
+        with cls._lock:
+            hit = cls._cache.get(key)
+            if hit and hit["stamp"] == stamp:
+                return hit["model"], hit["bundle"], hit["metrics"]
+            metrics = read_json(metrics_path, default={}) or {}
+            bundle = DecisionBundle.from_dict(metrics.get("decision_bundle"))
+            model = None
+            if os.path.exists(model_path) and bundle.schema_version == FEATURE_SCHEMA_VERSION:
+                try:
+                    with open(model_path, "rb") as f:
+                        model = pickle.load(f)
+                except Exception as e:  # stale pickle from an older schema / library version
+                    logging.warning(f"Could not load production model: {e}")
+            cls._cache[key] = {"stamp": stamp, "model": model, "bundle": bundle, "metrics": metrics}
+            return model, bundle, metrics
+
+
+# ======================================================================================
+# Truth evaluator
+# ======================================================================================
 class TruthEvaluator:
-    MUTABLE_RELATIONS = {
-        "CEO_OF", "CTO_OF", "CURRENT_ROLE", "PRICE", "HEADQUARTERED_IN", "LOCATED_IN", "WORKS_AT"
-    }
-
     def __init__(self, config: TruthEvaluatorConfig):
         try:
-            global _EVAL_EMBEDDER
+            limit_cpu_threads()
             self.config = config
-            self.embedder = None
-            if SENTENCE_TRANSFORMERS_AVAILABLE:
-                if _EVAL_EMBEDDER is None:
-                    _EVAL_EMBEDDER = SentenceTransformer(self.config.embedding_model_name)
-                self.embedder = _EVAL_EMBEDDER
-            self._corpus_index = self._load_corpus_chunk_index()
+            self.corpus = CorpusIndex.get(config.latest_chunks_path, config.cache_dir)
         except Exception as e:
             raise KGAuditException(e, sys)
 
+    # ------------------------------------------------------------------ alignment
     @staticmethod
-    def _fold_ascii(text: str) -> str:
-        return unicodedata.normalize("NFKD", str(text)).encode("ascii", "ignore").decode("ascii").lower()
+    def _surface_forms(name: str, aliases: List[str]) -> Set[str]:
+        forms = {fold_ascii(name).strip()}
+        for a in aliases or []:
+            a_f = fold_ascii(a).strip()
+            # 1-3 character aliases like '1st' or 'r' create false matches; keep them only if alphabetic acronyms
+            if len(a_f) >= 4 or (len(a_f) >= 2 and a_f.isalpha()):
+                forms.add(a_f)
+        return {f for f in forms if f}
 
-    @staticmethod
-    def _stem_word(w: str) -> str:
-        if len(w) > 4 and w.endswith("ing"):
-            return w[:-3]
-        if len(w) > 4 and w.endswith("ed"):
-            return w[:-2]
-        if len(w) > 3 and w.endswith("s") and not w.endswith("ss"):
-            return w[:-1]
-        return w
-
-    def _load_corpus_chunk_index(self) -> Dict[str, Any]:
-        chunks_path = os.path.join("final_model", "latest_chunks.json")
-        chunk_texts: List[str] = []
-
-        if os.path.exists(chunks_path):
-            try:
-                with open(chunks_path, "r", encoding="utf-8") as f:
-                    raw_chunks = json.load(f)
-                for ch in raw_chunks:
-                    txt = self._fold_ascii(ch.get("text", ""))
-                    if txt:
-                        chunk_texts.append(txt)
-            except Exception as e:
-                logging.warning(f"Could not load latest_chunks.json: {e}")
-
-        chunk_stem_sets = []
-        chunk_bigrams = []
-        for ch in chunk_texts:
-            clean = re.sub(r"(\w)-(\w)", r"\1 \2", ch)
-            cw = [
-                self._stem_word(w)
-                for w in re.findall(r"[a-z0-9]+", clean)
-                if len(w) >= 3 and w not in _QUERY_STOPWORDS
-            ]
-            chunk_stem_sets.append(set(cw))
-            chunk_bigrams.append(set(zip(cw, cw[1:])) | set(zip(cw, cw[2:])) | set(zip(cw, cw[3:])))
-
-        corpus_stems = set().union(*chunk_stem_sets) if chunk_stem_sets else set()
-        all_bigrams = set().union(*chunk_bigrams) if chunk_bigrams else set()
-        doc_freq = {w: sum(1 for cs in chunk_stem_sets if w in cs) for w in corpus_stems}
-
-        return {
-            "has_chunks": len(chunk_stem_sets) > 0,
-            "chunk_stem_sets": chunk_stem_sets,
-            "corpus_stems": corpus_stems,
-            "all_bigrams": all_bigrams,
-            "doc_freq": doc_freq,
-        }
-
-    def _compute_corpus_grounding_signals(
-        self, user_query: str, id_to_name: Dict[int, str], G_resp: nx.Graph
-    ) -> Tuple[float, float]:
+    def align_entities(
+        self, gt_nodes: List[Dict[str, Any]], resp_nodes: List[Dict[str, Any]]
+    ) -> Tuple[Dict[Any, Any], Dict[Any, float]]:
         """
-        100% Domain-Agnostic Lexical-Contextual Chunk Grounding (Zero Hardcoded Paper Words):
-        1. phi_cooc in [0, 1]: IDF-weighted chunk co-occurrence + local bigram continuity in PDF chunks.
-        2. rho_ooc in [0, 1]: Out-of-Corpus missing technical stem ratio.
+        Maps each response entity to at most one GT node.
+          1. exact surface-form match (name or alias, case/diacritic folded)
+          2. acronym <-> expansion match (same rule as Phase 1 entity resolution)
+          3. dense cosine >= tau_align (the SAME threshold Phase 1 uses to merge entities,
+             so "same entity" has one definition across the whole pipeline)
+        Returns (resp_id -> gt_id, resp_id -> alignment confidence).
         """
-        idx = self._corpus_index
-        if not idx["has_chunks"]:
-            return 0.65, 0.10
+        tau = float(self.config.entity_align_threshold)
+        gt_forms: Dict[str, Any] = {}
+        for n in gt_nodes:
+            for f in self._surface_forms(n.get("name", ""), n.get("aliases", [])):
+                gt_forms.setdefault(f, n["id"])
+        gt_ids = [n["id"] for n in gt_nodes]
+        gt_names = [str(n.get("name", "")) for n in gt_nodes]
+        gt_mat = embed_many(gt_names) if gt_names else np.zeros((0, 384))
 
-        source_text = user_query.strip() if user_query.strip() else " ".join(id_to_name.values())
-        q_clean = re.sub(r"(\w)-(\w)", r"\1 \2", self._fold_ascii(source_text))
-        toks = [w for w in re.findall(r"[a-z0-9]+", q_clean) if len(w) >= 3 and w not in _QUERY_STOPWORDS]
-        stems = [self._stem_word(w) for w in toks]
-        uniq_stems = list(dict.fromkeys(stems))
-
-        if not uniq_stems:
-            return 0.65, 0.05
-
-        corpus_stems = idx["corpus_stems"]
-        chunk_stem_sets = idx["chunk_stem_sets"]
-        doc_freq = idx["doc_freq"]
-        all_bigrams = idx["all_bigrams"]
-
-        rho_ooc = sum(1 for s in uniq_stems if s not in corpus_stems) / len(uniq_stems)
-
-        weights = [1.0 / np.log2(2.0 + doc_freq.get(s, 0)) for s in uniq_stems]
-        total_w = sum(weights) + 1e-12
-        best_chunk_cov = max(
-            sum(w for s, w in zip(uniq_stems, weights) if s in cs) / total_w
-            for cs in chunk_stem_sets
-        )
-
-        q_bgs = list(dict.fromkeys(zip(stems, stems[1:])))
-        bg_hit = sum(1 for bg in q_bgs if bg in all_bigrams) / max(1, len(q_bgs))
-
-        phi_cooc = float(np.clip(0.75 * best_chunk_cov + 0.25 * bg_hit, 0.0, 1.0))
-        return phi_cooc, float(rho_ooc)
-
-    def _encode_text(self, text: str, dim: int = 384) -> np.ndarray:
-        clean_text = str(text).strip().lower()
-        if not clean_text:
-            return np.zeros(dim, dtype=np.float64)
-        if self.embedder is not None:
-            vec = self.embedder.encode(clean_text, show_progress_bar=False)
-            return np.asarray(vec, dtype=np.float64) / (np.linalg.norm(vec) + 1e-12)
-
-        vec = np.zeros(dim, dtype=np.float64)
-        tokens = [clean_text[i:i + 3] for i in range(max(1, len(clean_text) - 2))]
-        for tok in tokens:
-            digest = hashlib.sha256(tok.encode("utf-8")).digest()
-            idx = int.from_bytes(digest[:4], "little") % dim
-            sign = 1.0 if (digest[4] % 2 == 0) else -1.0
-            vec[idx] += sign
-        return vec / (np.linalg.norm(vec) + 1e-12)
-
-    @staticmethod
-    def _cosine_sim(v1: np.ndarray, v2: np.ndarray) -> float:
-        return float(np.dot(v1, v2) / ((np.linalg.norm(v1) * np.linalg.norm(v2)) + 1e-12))
-
-    @staticmethod
-    def _householder_reflect(source_vec: np.ndarray, target_vec: np.ndarray, input_vec: np.ndarray) -> np.ndarray:
-        diff = source_vec - target_vec
-        norm_sq = float(np.dot(diff, diff))
-        if norm_sq < 1e-12:
-            return input_vec.copy()
-        proj_scalar = 2.0 * float(np.dot(diff, input_vec)) / norm_sq
-        return input_vec - (proj_scalar * diff)
-
-    @classmethod
-    def _distinctive_tokens(cls, text: str) -> set:
-        toks = {
-            cls._stem_word(w)
-            for w in re.sub(r"[^\w\s]", " ", cls._fold_ascii(text)).split()
-            if len(w) >= 3 and w not in _BROAD_DOMAIN_STOPWORDS and w not in _QUERY_STOPWORDS
-        }
-        return toks
-
-    @classmethod
-    def _is_clean_entity_match(cls, r_name: str, gt_name: str, gt_aliases: List[str]) -> bool:
-        """
-        Matches response entity r_name to a Ground-Truth Neo4j node without colliding on
-        auto-invented 2-letter initials (like 'BA', 'SP', 'SR', 'NS') or single-letter nodes ('r').
-        """
-        rn = cls._fold_ascii(r_name).strip()
-        gn = cls._fold_ascii(gt_name).strip()
-        if not rn or not gn:
-            return False
-        if gn in _GENERIC_SINGLE_WORD_NODES and rn != gn:
-            return False
-        if rn == gn or KGBuilder._is_acronym_match(rn, gn):
-            return True
-
-        for al in gt_aliases:
-            al_low = cls._fold_ascii(al).strip()
-            if not al_low or al_low in _GENERIC_SINGLE_WORD_NODES:
+        mapping: Dict[Any, Any] = {}
+        conf: Dict[Any, float] = {}
+        for rn in resp_nodes:
+            rid, rname = rn["id"], str(rn.get("name", ""))
+            forms = self._surface_forms(rname, rn.get("aliases", []))
+            hit = next((gt_forms[f] for f in forms if f in gt_forms), None)
+            if hit is None:
+                for gid, gname in zip(gt_ids, gt_names):
+                    if any(KGBuilder._is_acronym_match(f, fold_ascii(gname)) for f in forms):
+                        hit = gid
+                        break
+            if hit is not None:
+                mapping[rid], conf[rid] = hit, 1.0
                 continue
-            # Only trust multi-character phrase aliases (>=5 chars) or verified acronyms of the full name
-            if len(al_low) >= 5 and (rn == al_low or KGBuilder._is_acronym_match(rn, al_low)):
-                return True
-            if KGBuilder._is_short_token(al_low) and KGBuilder._is_acronym_match(al_low, gn) and rn == al_low:
-                return True
+            if gt_mat.shape[0]:
+                sims = gt_mat @ embed(rname)
+                j = int(np.argmax(sims))
+                if sims[j] >= tau:
+                    mapping[rid], conf[rid] = gt_ids[j], float(sims[j])
+        return mapping, conf
 
-        rn_clean = re.sub(r"[^\w\s]", " ", rn).strip()
-        gn_clean = re.sub(r"[^\w\s]", " ", gn).strip()
-        if len(rn_clean) >= 8 and len(gn_clean) >= 8:
-            if rn_clean in gn_clean or gn_clean in rn_clean:
-                return True
+    # ------------------------------------------------------------------ graph construction
+    @staticmethod
+    def _build_gt_graphs(gt_nodes, gt_edges) -> Tuple[nx.Graph, nx.MultiDiGraph]:
+        G = nx.Graph()
+        D = nx.MultiDiGraph()
+        for n in gt_nodes:
+            G.add_node(n["id"], name=n.get("name", ""))
+            D.add_node(n["id"])
+        for e in gt_edges:
+            u, v = e.get("source"), e.get("target")
+            if u is None or v is None or u == v or u not in G or v not in G:
+                continue
+            rel = str(e.get("type", "USES")).upper()
+            g = float(e.get("grounding_score", 0.0) or 0.0)
+            D.add_edge(u, v, type=rel, grounding=g, is_functional=bool(e.get("is_functional", False)),
+                       quote=str(e.get("evidence_quote", "")), sources=list(e.get("source_pdfs", [])))
+            if G.has_edge(u, v):
+                G[u][v]["grounding"] = max(G[u][v]["grounding"], g)
+                G[u][v]["types"].add(rel)
+            else:
+                G.add_edge(u, v, grounding=g, types={rel})
+        return G, D
 
-        toks_r = cls._distinctive_tokens(rn)
-        toks_g = cls._distinctive_tokens(gn)
-        if toks_r and toks_g:
-            if len(toks_r & toks_g) / len(toks_r | toks_g) >= 0.80:
-                return True
-        return False
+    @staticmethod
+    def _unified_ids(resp_nodes, mapping) -> Dict[Any, Any]:
+        """Response id -> unified vertex id (GT id if aligned, else a fresh namespaced id)."""
+        return {rn["id"]: mapping.get(rn["id"], f"resp::{rn['id']}") for rn in resp_nodes}
 
-    def _is_phrase_in_corpus_chunks(self, phrase: str) -> float:
-        idx = self._corpus_index
-        if not idx["has_chunks"]:
-            return 0.5
-        toks = self._distinctive_tokens(phrase)
-        if not toks:
-            return 0.8
-        hits = sum(1 for t in toks if t in idx["corpus_stems"])
-        return float(hits / len(toks))
+    # ------------------------------------------------------------------ x1: sheaf energy
+    def sheaf_energy(self, D_gt: nx.MultiDiGraph, gt_names: Dict[Any, str],
+                     claims: List[Dict[str, Any]], per_claim: Optional[List[Dict[str, Any]]] = None):
+        """
+        Translational knowledge sheaf (Gebhart et al., 2023; TransE is the special case):
+          vertex stalks  F(v) = R^d,  x_v = phi(name_v)   (unit sentence embedding)
+          edge stalks    F(e) = R^d,  restriction maps F_{u<e} = F_{v<e} = I,  affine shift t_r
+          coboundary     (delta x)_e = x_v - x_u - t_r      for e = (u --r--> v)
+        t_r is the maximum-likelihood translation of relation r on the GT subgraph, shrunk
+        towards the global mean translation with one pseudo-observation:
+          t_r = (sum_{e in E_r} (x_v - x_u) + t_bar) / (|E_r| + 1)
+        The energy of the response is the mean edge Dirichlet energy, normalised by the GT
+        baseline energy (so E = 1 means "as consistent as the ground truth itself"):
+          E_sheaf = mean_{e in E'} ||delta_e||^2  /  mean_{e in E_GT} ||delta_e||^2
+        If `per_claim` is given, returns (E_sheaf, [normalised residual of each claim in per_claim]).
+        """
+        per_claim = per_claim or []
+        neutral = (1.0, [1.0] * len(per_claim))
+        diffs_by_rel: Dict[str, List[np.ndarray]] = defaultdict(list)
+        all_diffs: List[np.ndarray] = []
+        gt_triples = [(u, v, d["type"]) for u, v, d in D_gt.edges(data=True)]
+        for u, v, r in gt_triples:
+            d = embed(gt_names[v]) - embed(gt_names[u])
+            diffs_by_rel[r].append(d)
+            all_diffs.append(d)
+        if not all_diffs:
+            return neutral
+        t_bar = np.mean(all_diffs, axis=0)
+        t_rel = {r: (np.sum(ds, axis=0) + t_bar) / (len(ds) + 1.0) for r, ds in diffs_by_rel.items()}
 
-    def _build_aligned_graphs(
-        self,
-        gt_nodes: List[Dict[str, Any]],
-        gt_edges: List[Dict[str, Any]],
-        resp_nodes: List[Dict[str, Any]],
-        resp_edges: List[Dict[str, Any]]
-    ) -> Tuple[nx.Graph, nx.Graph, Dict[int, str], set]:
-        try:
-            canonical_id_to_name: Dict[int, str] = {}
-            canonical_id_to_vec: Dict[int, np.ndarray] = {}
-            canonical_id_to_aliases: Dict[int, List[str]] = {}
-            canonical_id_to_pdfs: Dict[int, List[str]] = {}
-            grounded_gt_cids: set = set()
+        def residual(name_u: str, name_v: str, rel: str) -> float:
+            delta = embed(name_v) - embed(name_u) - t_rel.get(rel, t_bar)
+            return float(delta @ delta)
 
-            gt_raw_id_to_canon: Dict[Any, int] = {}
-            for node in gt_nodes:
-                name_str = str(node.get("name", node.get("id"))).strip()
-                aliases = [str(a) for a in node.get("aliases", []) if a]
-                c_id = len(canonical_id_to_name)
-                canonical_id_to_name[c_id] = name_str
-                canonical_id_to_vec[c_id] = self._encode_text(name_str)
-                canonical_id_to_aliases[c_id] = aliases
-                canonical_id_to_pdfs[c_id] = list(node.get("source_pdfs", []))
-                gt_raw_id_to_canon[node["id"]] = c_id
-                grounded_gt_cids.add(c_id)
+        baseline = float(np.mean([residual(gt_names[u], gt_names[v], r) for u, v, r in gt_triples])) + 1e-9
+        per = [residual(c["source_name"], c["target_name"], c["type"]) / baseline for c in per_claim]
+        if not claims:
+            return 1.0, per
+        resp = float(np.mean([residual(c["source_name"], c["target_name"], c["type"]) for c in claims]))
+        return resp / baseline, per
 
-            resp_raw_id_to_canon: Dict[Any, int] = {}
-            for node in resp_nodes:
-                r_name = str(node.get("name", node.get("id"))).strip()
-                r_vec = self._encode_text(r_name)
-                r_toks = self._distinctive_tokens(r_name)
-                chunk_presence = self._is_phrase_in_corpus_chunks(r_name)
+    # ------------------------------------------------------------------ x2: curvature distortion
+    @staticmethod
+    def forman_curvature(G: nx.Graph) -> Dict[Tuple[Any, Any], float]:
+        """
+        Augmented Forman-Ricci curvature of an unweighted graph (Samal et al., 2018):
+          F(u,v) = 4 - deg(u) - deg(v) + 3 * #triangles(u,v)
+        Negative values flag bridge-like edges; triangles (shared context) raise curvature.
+        """
+        out = {}
+        for u, v in G.edges():
+            tri = len(set(G[u]) & set(G[v]))
+            out[(u, v)] = 4.0 - G.degree(u) - G.degree(v) + 3.0 * tri
+        return out
 
-                matched_cid = None
-                best_sim = 0.0
+    def curvature_distortion(self, G_gt: nx.Graph, resp_edges_u: List[Tuple[Any, Any]]) -> float:
+        """
+        Delta_K = log(1 + W1( F_{G_GT}, F_{G_GT  U  E'} ))
+        i.e. how far the curvature distribution of the GT subgraph moves when the response's
+        claims are grafted onto it. A fully grounded response adds no new edges -> Delta_K = 0.
+        Fabricated bridges between unrelated regions create strongly negative-curvature edges
+        and raise endpoint degrees -> large Wasserstein shift. log1p is a variance stabiliser.
+        """
+        return self.curvature_shift(G_gt, resp_edges_u)[0]
 
-                if chunk_presence >= 0.60:
-                    for cid in grounded_gt_cids:
-                        gt_name = canonical_id_to_name[cid]
-                        gt_aliases = canonical_id_to_aliases.get(cid, [])
-                        if self._is_clean_entity_match(r_name, gt_name, gt_aliases):
-                            matched_cid = cid
+    def curvature_shift(self, G_gt: nx.Graph, resp_edges_u: List[Tuple[Any, Any]]) -> Tuple[float, Dict[Tuple[Any, Any], float]]:
+        """(Delta_K, Forman curvature of every edge of G_GT U E') - the latter feeds the claim-level vectors."""
+        G_aug = G_gt.copy()
+        G_aug.add_edges_from(resp_edges_u)
+        aug_map = self.forman_curvature(G_aug)
+        if not resp_edges_u:
+            return 0.0, aug_map
+        base = list(self.forman_curvature(G_gt).values()) or [0.0]
+        return float(np.log1p(wasserstein_distance(base, list(aug_map.values())))), aug_map
+
+    # ------------------------------------------------------------------ x3: spectral divergence
+    @staticmethod
+    def spectral_divergence(G_gt: nx.Graph, resp_edges_u: List[Tuple[Any, Any]], hop: int) -> float:
+        """
+        Let V' be the vertices touched by the response. H is the 'GT shadow' of G' on V':
+          (u,v) in E(H)  <=>  d_GT(u,v) <= hop   (hop = retrieval depth, default 2)
+        D_spec = W1( spec(L_sym(G')), spec(L_sym(H)) ) / 2  in [0, 1]
+        since every eigenvalue of the symmetric normalised Laplacian lies in [0, 2].
+        """
+        G_r = nx.Graph()
+        G_r.add_edges_from(resp_edges_u)
+        V = list(G_r.nodes())
+        if len(V) < 2:
+            return 0.0
+        H = nx.Graph()
+        H.add_nodes_from(V)
+        in_gt = [v for v in V if v in G_gt]
+        for i, u in enumerate(in_gt):
+            lengths = nx.single_source_shortest_path_length(G_gt, u, cutoff=hop)
+            for v in in_gt[i + 1:]:
+                if v in lengths:
+                    H.add_edge(u, v)
+        ev_r = np.linalg.eigvalsh(nx.normalized_laplacian_matrix(G_r, nodelist=V).toarray())
+        ev_h = np.linalg.eigvalsh(nx.normalized_laplacian_matrix(H, nodelist=V).toarray())
+        return float(np.clip(wasserstein_distance(ev_r, ev_h) / 2.0, 0.0, 1.0))
+
+    # ------------------------------------------------------------------ x4 + x7: provenance & conflicts
+    @staticmethod
+    def provenance_and_conflicts(
+        G_gt: nx.Graph, D_gt: nx.MultiDiGraph, claims: List[Dict[str, Any]]
+    ) -> Tuple[float, float, List[Dict[str, Any]]]:
+        """
+        Provenance strength of claim e=(u,v):
+          s_e = g(u,v)                         if a direct GT edge exists (Phase-1 grounding score)
+          s_e = max_w g(u,w) * g(w,v)          if only 2-hop paths exist (independent-hop probability)
+          s_e = 0                              otherwise / endpoint not aligned
+        pi_prov = posterior mean of Beta(1 + sum s_e, 1 + sum (1 - s_e))   (uniform prior)
+
+        Contradiction rate kappa_con = |conflicting claims| / |claims| where a claim conflicts if
+          * it is REFUTED by the LLM but a grounded GT edge (u,v) exists   (denies a documented fact)
+          * its relation is functional in GT for u and GT gives a different object  (functional violation)
+          * its relation is asymmetric and GT only has the reverse direction (direction inversion)
+        """
+        details = []
+        s_sum, n_sup, n_conf = 0.0, 0, 0
+        for c in claims:
+            u, v, rel, pol = c["u"], c["v"], c["type"], c["claim_type"]
+            aligned = c["u_aligned"] and c["v_aligned"]
+            tier, s_e, quote, conflict = "UNGROUNDED", 0.0, "", ""
+
+            if aligned and G_gt.has_edge(u, v):
+                s_e, tier = float(G_gt[u][v]["grounding"]), "DIRECT_EDGE"
+                for a, b in ((u, v), (v, u)):
+                    if D_gt.has_edge(a, b):
+                        for d in D_gt[a][b].values():
+                            if d.get("quote"):
+                                quote = d["quote"]
+                                break
+            elif aligned and u in G_gt and v in G_gt:
+                best = 0.0
+                for w in set(G_gt[u]) & set(G_gt[v]):
+                    best = max(best, G_gt[u][w]["grounding"] * G_gt[w][v]["grounding"])
+                if best > 0:
+                    s_e, tier = best, "TWO_HOP_PATH"
+
+            if pol == "REFUTED":
+                if tier == "DIRECT_EDGE":
+                    conflict = "denies_documented_fact"
+            elif aligned:
+                fwd = {d["type"] for d in D_gt.get_edge_data(u, v, default={}).values()} if D_gt.has_edge(u, v) else set()
+                rev = {d["type"] for d in D_gt.get_edge_data(v, u, default={}).values()} if D_gt.has_edge(v, u) else set()
+                if rel in ASYMMETRIC_RELATIONS and rel in rev and rel not in fwd:
+                    conflict = "direction_inversion"
+                elif u in D_gt:
+                    for _, obj, d in D_gt.out_edges(u, data=True):
+                        if d.get("is_functional") and d["type"] == rel and obj != v:
+                            conflict = "functional_violation"
                             break
 
-                        if gt_name.strip().lower() in _GENERIC_SINGLE_WORD_NODES:
-                            continue
+            if pol in SUPPORTING_POLARITIES:
+                s_sum += s_e
+                n_sup += 1
+            n_conf += int(bool(conflict))
+            details.append({
+                "source": c["source_name"], "relation": rel, "target": c["target_name"],
+                "claim_type": pol, "source_aligned": c["u_aligned"], "target_aligned": c["v_aligned"],
+                "support_tier": tier, "provenance_strength": round(s_e, 4),
+                "conflict": conflict or None, "evidence_quote": quote[:300],
+                "is_supported": bool(tier != "UNGROUNDED" and not conflict and pol != "REFUTED"),
+            })
+        pi_prov = (1.0 + s_sum) / (2.0 + n_sup)
+        kappa = n_conf / len(claims) if claims else 0.0
+        return float(pi_prov), float(kappa), details
 
-                        sim = self._cosine_sim(r_vec, canonical_id_to_vec[cid])
-                        gt_toks = self._distinctive_tokens(gt_name)
-                        jacc = (len(r_toks & gt_toks) / len(r_toks | gt_toks)) if (r_toks and gt_toks) else 0.0
-                        if (sim >= 0.85 or (sim >= 0.72 and jacc >= 0.50)) and sim > best_sim:
-                            best_sim = sim
-                            matched_cid = cid
+    # ------------------------------------------------------------------ x5 + x6: corpus signals
+    def entailment_similarity(self, claim_texts: List[str]) -> Tuple[float, List[str]]:
+        """sigma_ent = mean_i max_s cos(phi(claim_i), phi(sentence_s)) over all corpus sentences."""
+        if not claim_texts or not self.corpus.available:
+            return 0.0, []
+        best, idx = self.corpus.best_sentence(embed_many(claim_texts))
+        evidence = [self.corpus.sentences[i] if i >= 0 else "" for i in idx]
+        return float(np.mean(best)), evidence
 
-                if matched_cid is None:
-                    matched_cid = len(canonical_id_to_name)
-                    canonical_id_to_name[matched_cid] = r_name
-                    canonical_id_to_vec[matched_cid] = r_vec
-                    canonical_id_to_aliases[matched_cid] = [r_name]
-                    canonical_id_to_pdfs[matched_cid] = []
+    def out_of_corpus_novelty(self, texts: List[str]) -> float:
+        """
+        nu_ooc = sum_{t in T} idf(t) 1[t not in V_corpus] / sum_{t in T} idf(t)
+        over the unique content stems T of the asserted claims (IDF-weighted so rare
+        technical terms dominate generic English).
+        """
+        if not self.corpus.available:
+            return 0.0
+        stems = set()
+        for t in texts:
+            stems.update(content_stems(t))
+        if not stems:
+            return 0.0
+        w = {t: self.corpus.idf(t) for t in stems}
+        return float(sum(wt for t, wt in w.items() if t not in self.corpus.vocab) / sum(w.values()))
 
-                resp_raw_id_to_canon[node["id"]] = matched_cid
+    # ------------------------------------------------------------------ local KG fidelity
+    @staticmethod
+    def local_kg_fidelity(gt_edges: List[Dict[str, Any]], s_kg_global: float) -> float:
+        """
+        S_KG(q): Beta-shrunk mean grounding of the retrieved subgraph,
+          S_KG(q) = (sum_e g_e + S_KG) / (|E_q| + 1)
+        i.e. the global fidelity acts as one prior pseudo-edge. Varies per query, which is
+        what makes its weight in the learned pool identifiable.
+        """
+        g = [float(e.get("grounding_score", 0.0) or 0.0) for e in gt_edges]
+        return float(np.clip((sum(g) + s_kg_global) / (len(g) + 1.0), 0.01, 0.99))
 
-            G_gt = nx.Graph()
-            G_resp = nx.Graph()
-
-            for c_id, c_name in canonical_id_to_name.items():
-                G_gt.add_node(
-                    c_id,
-                    name=c_name,
-                    source_pdfs=canonical_id_to_pdfs.get(c_id, []),
-                    is_in_gt=(c_id in grounded_gt_cids)
-                )
-                G_resp.add_node(c_id, name=c_name, is_in_gt=(c_id in grounded_gt_cids))
-
-            for edge in gt_edges:
-                u = gt_raw_id_to_canon.get(edge["source"])
-                v = gt_raw_id_to_canon.get(edge["target"])
-                if u is not None and v is not None and u != v:
-                    G_gt.add_edge(
-                        u, v,
-                        weight=float(edge.get("weight", 0.9)),
-                        grounding_score=float(edge.get("grounding_score", 0.85)),
-                        evidence_quote=str(edge.get("evidence_quote", "")),
-                        source_pdfs=list(edge.get("source_pdfs", [])),
-                        support_count=int(edge.get("support_count", 1)),
-                        type=str(edge.get("type", "USES")).strip().upper()
-                    )
-
-            for edge in resp_edges:
-                u = resp_raw_id_to_canon.get(edge["source"])
-                v = resp_raw_id_to_canon.get(edge["target"])
-                if u is not None and v is not None and u != v:
-                    G_resp.add_edge(
-                        u, v,
-                        weight=float(edge.get("weight", 1.0)),
-                        type=str(edge.get("type", "USES")).strip().upper(),
-                        claim_type=str(edge.get("claim_type", "ASSERTED")).strip().upper()
-                    )
-
-            return G_gt, G_resp, canonical_id_to_name, grounded_gt_cids
-
-        except Exception as e:
-            raise KGAuditException(e, sys)
-
-    def _build_induced_ground_truth_subgraph(
+    # ------------------------------------------------------------------ feature extraction
+    def extract_features(
         self,
-        G_gt: nx.Graph,
-        G_resp: nx.Graph,
-        id_to_name: Dict[int, str],
-        grounded_gt_cids: set,
-        phi_cooc: float,
-        rho_ooc: float
-    ) -> Tuple[nx.Graph, Dict[int, float], List[Dict[str, Any]]]:
-        """
-        Builds G_gt_induced honestly from Neo4j edges and geodesic paths without artificially
-        blocking true background edges when phi_cooc is low.
-        """
-        active_nodes = [n for n, d in G_resp.degree() if d > 0]
-        gt_vecs = {cid: self._encode_text(id_to_name[cid]) for cid in grounded_gt_cids}
+        retriever_artifact: GraphRetrieverArtifact,
+        response_nodes: List[Dict[str, Any]],
+        response_edges: List[Dict[str, Any]],
+        metadata: Dict[str, Any],
+    ) -> Dict[str, Any]:
+        gt_nodes = retriever_artifact.extracted_nodes or []
+        gt_edges = retriever_artifact.extracted_edges or []
+        G_gt, D_gt = self._build_gt_graphs(gt_nodes, gt_edges)
+        gt_names = {n["id"]: str(n.get("name", "")) for n in gt_nodes}
 
-        node_grounding: Dict[int, float] = {}
-        for n in G_resp.nodes():
-            chunk_pres = self._is_phrase_in_corpus_chunks(id_to_name[n])
-            if n in grounded_gt_cids:
-                node_grounding[n] = float(0.75 + 0.25 * chunk_pres)
-            elif gt_vecs:
-                n_vec = self._encode_text(id_to_name[n])
-                max_cos = max(0.0, max(self._cosine_sim(n_vec, gv) for gv in gt_vecs.values()))
-                node_grounding[n] = float(chunk_pres * (0.35 + 0.65 * max_cos))
-            else:
-                node_grounding[n] = float(0.5 * chunk_pres)
+        mapping, align_conf = self.align_entities(gt_nodes, response_nodes)
+        uid = self._unified_ids(response_nodes, mapping)
+        resp_name = {rn["id"]: str(rn.get("name", "")) for rn in response_nodes}
 
-        G_gt_induced = nx.Graph()
-        for n in active_nodes:
-            G_gt_induced.add_node(n)
-
-        for i in range(len(active_nodes)):
-            for j in range(i + 1, len(active_nodes)):
-                u, v = active_nodes[i], active_nodes[j]
-                mu_pair = min(node_grounding.get(u, 0.0), node_grounding.get(v, 0.0))
-
-                if G_gt.has_edge(u, v):
-                    # Always honor direct Neo4j edges honestly!
-                    G_gt_induced.add_edge(
-                        u, v,
-                        weight=1.0,
-                        type=G_gt[u][v].get("type", "USES"),
-                        support_tier="DIRECT_NEO4J_EDGE"
-                    )
-                elif nx.has_path(G_gt, u, v):
-                    path = nx.shortest_path(G_gt, u, v)
-                    plen = max(1, len(path) - 1)
-                    if plen <= 3:
-                        G_gt_induced.add_edge(
-                            u, v,
-                            weight=1.0 / plen,
-                            type="GEODESIC_PATH",
-                            support_tier=f"GEODESIC_{plen}_HOP"
-                        )
-                elif G_resp.has_edge(u, v) and mu_pair >= 0.75 and phi_cooc >= 0.435 and rho_ooc <= 0.16:
-                    cdata = G_resp[u][v]
-                    if cdata.get("claim_type", "ASSERTED") == "ASSERTED":
-                        G_gt_induced.add_edge(
-                            u, v,
-                            weight=float(phi_cooc),
-                            type=cdata.get("type", "USES"),
-                            support_tier="PDF_CHUNK_VERIFIED"
-                        )
-
-        edge_audit_details: List[Dict[str, Any]] = []
-        for u, v, rdata in G_resp.edges(data=True):
-            c_type = rdata.get("claim_type", "ASSERTED")
-            rel = rdata.get("type", "USES")
-            mu_u, mu_v = node_grounding.get(u, 0.0), node_grounding.get(v, 0.0)
-
-            if c_type in {"SPECULATIVE", "REFUTED"} and (mu_u < 0.50 or mu_v < 0.50 or rho_ooc > 0.20):
-                is_supported = False
-                status_str = f"UNVERIFIED_{c_type}"
-            else:
-                is_supported = G_gt_induced.has_edge(u, v)
-                status_str = (
-                    G_gt_induced[u][v].get("support_tier", "VERIFIED")
-                    if is_supported else "UNSUPPORTED_CLAIM"
-                )
-
-            edge_audit_details.append({
-                "source": id_to_name[u],
-                "relation": rel,
-                "target": id_to_name[v],
-                "claim_type": c_type,
-                "source_grounding_mu": round(mu_u, 3),
-                "target_grounding_mu": round(mu_v, 3),
-                "is_supported": is_supported,
-                "audit_verdict": status_str
+        claims: List[Dict[str, Any]] = []
+        for e in response_edges:
+            s, t = e.get("source"), e.get("target")
+            if s not in uid or t not in uid or uid[s] == uid[t]:
+                continue
+            claims.append({
+                "u": uid[s], "v": uid[t],
+                "u_aligned": s in mapping, "v_aligned": t in mapping,
+                "source_name": gt_names.get(uid[s], resp_name.get(s, "")),
+                "target_name": gt_names.get(uid[t], resp_name.get(t, "")),
+                "type": str(e.get("type", "USES")).upper(),
+                "claim_type": str(e.get("claim_type", "ASSERTED")).upper(),
             })
 
-        return G_gt_induced, node_grounding, edge_audit_details
+        asserted = [c for c in claims if c["claim_type"] in SUPPORTING_POLARITIES]
+        asserted_edges = list({tuple(sorted((c["u"], c["v"]), key=str)) for c in asserted})
+        verbal = lambda c: f"{c['source_name']} {c['type'].replace('_', ' ').lower()} {c['target_name']}"  # noqa: E731
+        claim_texts = [verbal(c) for c in asserted]
+        if not claim_texts and metadata.get("llm_response"):
+            claim_texts = [s for s in _SENT_SPLIT.split(str(metadata["llm_response"])) if len(s.split()) >= 6]
 
-    def compute_sheaf_laplacian_energy(
-        self,
-        G_gt: nx.Graph,
-        G_resp: nx.Graph,
-        G_gt_induced: nx.Graph,
-        node_grounding: Dict[int, float],
-        id_to_name: Dict[int, str],
-        phi_cooc: float,
-        rho_ooc: float
-    ) -> float:
-        try:
-            if G_resp.number_of_edges() == 0:
-                return float(np.clip(0.85 - 0.70 * phi_cooc + 0.50 * rho_ooc, 0.10, 1.20))
+        all_names = dict(gt_names)
+        all_names.update({uid[k]: v for k, v in resp_name.items() if uid[k] not in all_names})
 
-            node_stalks: Dict[int, np.ndarray] = {
-                n: self._encode_text(id_to_name[n]) for n in G_resp.nodes()
-            }
+        # ---- topological
+        e_sheaf, resid_all = self.sheaf_energy(D_gt, all_names, asserted, per_claim=claims)
+        delta_k, forman_aug = self.curvature_shift(G_gt, asserted_edges)
+        d_spec = self.spectral_divergence(G_gt, asserted_edges, hop=int(self.config.max_hop_depth))
+        # ---- evidential (graph)
+        pi_prov, kappa_con, edge_details = self.provenance_and_conflicts(G_gt, D_gt, claims)
+        # ---- evidential (text): embedding similarity, NLI against retrieved evidence, OOC vocabulary
+        sigma_ent, evidence = self.entailment_similarity(claim_texts)
+        nu_ooc = self.out_of_corpus_novelty(claim_texts)
+        nli = NLIVerifier.get()
+        all_texts = [verbal(c) for c in claims]               # positive verbalisation of EVERY claim
+        all_vecs = embed_many(all_texts) if all_texts else np.zeros((0, 384))
+        claim_ev = self.corpus.top_sentences(all_vecs, k=3) if all_texts else []
+        claim_nli = nli.verify_claims(all_texts, claim_ev) if all_texts else np.zeros((0, 3))
+        claim_cos = self.corpus.best_sentence(all_vecs)[0] if all_texts else np.zeros(0)
+        if asserted:
+            idx = [i for i, c in enumerate(claims) if c["claim_type"] in SUPPORTING_POLARITIES]
+            nli_cons = float(np.mean(claim_nli[idx, 2]))             # how consistent the answer is on average
+            nli_worst = float(np.min(claim_nli[idx, 2]))             # its least consistent claim
+        elif claim_texts:                                             # no claims: judge the answer sentences
+            sv = embed_many(claim_texts)
+            sn = nli.verify_claims(claim_texts, self.corpus.top_sentences(sv, k=3))
+            nli_cons, nli_worst = float(np.mean(sn[:, 2])), float(np.min(sn[:, 2]))
+        else:
+            nli_cons, nli_worst = 0.0, 0.0
+        align_rate = (len(mapping) / len(response_nodes)) if response_nodes else 0.0
+        # ---- model-side signals
+        c_llm = float(np.clip(metadata.get("llm_extraction_confidence", 0.5), 0.0, 1.0))
+        u_nll = float(metadata.get("token_nll") or 0.0)
+        spec_ratio = float(metadata.get("speculative_ratio") or 0.0)
 
-            coboundary_energies = []
-            for u, v, resp_data in G_resp.edges(data=True):
-                x_u = node_stalks[u]
-                x_v = node_stalks[v]
-                r_resp = self._encode_text(resp_data.get("type", "USES"))
+        # attach evidence + NLI to each claim for the UI / audit trail
+        it = iter(evidence)
+        for i, d in enumerate(edge_details):
+            if d["claim_type"] in SUPPORTING_POLARITIES and evidence:
+                d["nearest_corpus_sentence"] = next(it, "")[:300]
+            if len(claim_nli):
+                d["nli_entail"], d["nli_contra"] = round(float(claim_nli[i, 0]), 4), round(float(claim_nli[i, 1]), 4)
+                d["nli_consistency"] = round(float(claim_nli[i, 2]), 4)
 
-                u_tilde = x_u + 0.5 * r_resp
-                u_tilde = u_tilde / (np.linalg.norm(u_tilde) + 1e-12)
+        # ---- claim-level matrix (one row per claim, CLAIM_FEATURES order) for the multiple-instance model
+        claim_matrix = []
+        for i, (c, d) in enumerate(zip(claims, edge_details)):
+            key = (c["u"], c["v"]) if (c["u"], c["v"]) in forman_aug else (c["v"], c["u"])
+            stems = content_stems(all_texts[i])
+            ooc = (sum(self.corpus.idf(t) for t in stems if t not in self.corpus.vocab) / max(1e-9, sum(self.corpus.idf(t) for t in stems))) \
+                if (stems and self.corpus.available) else 0.0
+            claim_matrix.append([
+                d["provenance_strength"], float(d["support_tier"] == "DIRECT_EDGE"), float(d["support_tier"] == "TWO_HOP_PATH"),
+                float(bool(d.get("conflict"))), float(c["claim_type"] == "ASSERTED"), float(c["claim_type"] == "SPECULATIVE"),
+                float(c["claim_type"] == "REFUTED"), (float(c["u_aligned"]) + float(c["v_aligned"])) / 2.0,
+                float(claim_nli[i, 0]), float(claim_nli[i, 1]), float(claim_nli[i, 2]), float(claim_cos[i]), float(ooc),
+                float(np.log1p(resid_all[i])) if i < len(resid_all) else 0.0,
+                float(np.sign(forman_aug.get(key, 0.0)) * np.log1p(abs(forman_aug.get(key, 0.0)))),  # signed log curvature
+            ])
 
-                if G_gt_induced.has_edge(u, v):
-                    r_gt = self._encode_text(G_gt_induced[u][v].get("type", "USES"))
-                    u_tilde_gt = x_u + 0.5 * r_gt
-                    u_tilde_gt = u_tilde_gt / (np.linalg.norm(u_tilde_gt) + 1e-12)
+        features = {
+            "e_sheaf": e_sheaf, "delta_k": delta_k, "d_spec": d_spec, "pi_prov": pi_prov,
+            "sigma_ent": sigma_ent, "nli_cons": nli_cons, "nli_worst": nli_worst, "nu_ooc": nu_ooc,
+            "kappa_con": kappa_con, "align_rate": align_rate, "c_llm": c_llm, "u_nll": u_nll, "spec_ratio": spec_ratio,
+        }
+        # Claim-level hallucination EXTENT ("how much"): share of asserted claims that are neither
+        # backed by a direct/2-hop grounded KG path nor free of conflict. Always available (no brain needed).
+        asserted_details = [d for d in edge_details if d["claim_type"] in SUPPORTING_POLARITIES]
+        unsupported = [d for d in asserted_details if d["support_tier"] == "UNGROUNDED" or d.get("conflict")]
+        diagnostics = {
+            "gt_nodes": len(gt_nodes), "gt_edges": len(gt_edges),
+            "response_entities": len(response_nodes), "response_claims": len(claims),
+            "asserted_claims": len(asserted),
+            "unsupported_claims": len(unsupported),
+            "conflicting_claims": sum(1 for d in edge_details if d.get("conflict")),
+            "hallucination_extent": (len(unsupported) / len(asserted_details)) if asserted_details else 0.0,
+            "entity_alignment_rate": align_rate,
+            "mean_alignment_confidence": float(np.mean(list(align_conf.values()))) if align_conf else 0.0,
+            "nli_model": nli.model_name if nli.available else None,
+        }
+        return {"features": features, "edge_details": edge_details, "diagnostics": diagnostics, "claim_matrix": claim_matrix}
 
-                    f_u_to_e = self._householder_reflect(u_tilde_gt, x_v, u_tilde)
-                    delta_e = f_u_to_e - x_v
-                    raw_res = float(np.dot(delta_e, delta_e))
-                    coboundary_energies.append(0.18 * raw_res + 0.22 * (1.0 - phi_cooc))
-                else:
-                    mu_u = node_grounding.get(u, 0.0)
-                    mu_v = node_grounding.get(v, 0.0)
-                    proj_scale = mu_u * mu_v * max(0.05, phi_cooc * (1.0 - rho_ooc))
-                    delta_e = u_tilde - (proj_scale * x_v)
-                    coboundary_energies.append(float(np.dot(delta_e, delta_e)))
+    # ------------------------------------------------------------------ brain resolution
+    def resolve_brain(self) -> Tuple[Any, DecisionBundle, Dict[str, Any], Dict[str, Any]]:
+        """
+        The calibrated brain of THIS corpus if it exists. Otherwise (optionally) the most recently
+        trained brain of another workspace, flagged 'transferred': the features are corpus-relative
+        (ratios to GT baselines, rates), so transfer is usable, but the conformal coverage
+        guarantee is only certified on the corpus the brain was calibrated on.
+        """
+        model, bundle, prod = _ProductionBrain.load(self.config.trained_model_path, self.config.production_metrics_path)
+        if model is not None and bundle.conformal.fitted:
+            return model, bundle, prod, {"source_workspace": self.config.workspace_id, "transferred": False,
+                                         "champion": prod.get("winning_model")}
+        if getattr(self.config, "allow_brain_transfer", False):
+            from kg_audit.utils import workspace as ws
+            candidates = []
+            for w in ws.list_workspaces():
+                if w["id"] == self.config.workspace_id or not w.get("has_brain"):
+                    continue
+                m = read_json(os.path.join(ws.workspace_dir(w["id"]), "production_model_metrics.json"), default={}) or {}
+                if m.get("schema_version") == FEATURE_SCHEMA_VERSION:
+                    candidates.append((m.get("updated_at", ""), w["id"]))
+            if candidates:
+                src = sorted(candidates)[-1][1]
+                d = ws.workspace_dir(src)
+                model, bundle, prod = _ProductionBrain.load(os.path.join(d, "model.pkl"), os.path.join(d, "production_model_metrics.json"))
+                if model is not None and bundle.conformal.fitted:
+                    return model, bundle, prod, {"source_workspace": src, "transferred": True,
+                                                 "champion": prod.get("winning_model")}
+        return None, DecisionBundle(), {}, {"source_workspace": None, "transferred": False, "champion": None}
 
-            raw_sheaf = float(np.mean(coboundary_energies))
-            corpus_sheaf_regularizer = (1.0 - phi_cooc) * 0.55 + (rho_ooc * 0.45)
-            return float(0.50 * raw_sheaf + 0.50 * corpus_sheaf_regularizer)
-
-        except Exception as e:
-            raise KGAuditException(e, sys)
-
-    def compute_forman_ricci_curvature(self, G: nx.Graph) -> Dict[Tuple[int, int], float]:
-        try:
-            curvatures = {}
-            node_weights = {
-                n: float(G.degree(n, weight="weight")) if G.degree(n, weight="weight") > 0 else 1.0
-                for n in G.nodes()
-            }
-
-            for u, v, data in G.edges(data=True):
-                w_e = max(1e-6, float(data.get("weight", 1.0)))
-                w_u, w_v = node_weights[u], node_weights[v]
-
-                sum_u = sum(
-                    w_u / np.sqrt(w_e * max(1e-6, float(e_u[2].get("weight", 1.0))))
-                    for e_u in G.edges(u, data=True)
-                    if (e_u[1] if e_u[0] == u else e_u[0]) != v
-                )
-                sum_v = sum(
-                    w_v / np.sqrt(w_e * max(1e-6, float(e_v[2].get("weight", 1.0))))
-                    for e_v in G.edges(v, data=True)
-                    if (e_v[1] if e_v[0] == v else e_v[0]) != u
-                )
-
-                ric = w_e * ((w_u / w_e) + (w_v / w_e) - sum_u - sum_v)
-                curvatures[(u, v)] = float(ric)
-                curvatures[(v, u)] = float(ric)
-
-            return curvatures
-        except Exception as e:
-            raise KGAuditException(e, sys)
-
-    def compute_curvature_distortion(
-        self, G_gt_induced: nx.Graph, G_resp: nx.Graph, phi_cooc: float, rho_ooc: float
-    ) -> float:
-        try:
-            active_resp_nodes = [n for n, d in G_resp.degree() if d > 0]
-            if not active_resp_nodes:
-                return float(0.80 - 0.60 * phi_cooc)
-
-            G_resp_sub = G_resp.subgraph(active_resp_nodes).copy()
-            ric_gt = self.compute_forman_ricci_curvature(G_gt_induced)
-            ric_resp = self.compute_forman_ricci_curvature(G_resp_sub)
-
-            distortions = []
-            for (u, v), ric_r in ric_resp.items():
-                if u < v:
-                    if G_gt_induced.has_edge(u, v):
-                        ric_g = ric_gt.get((u, v), 0.0)
-                        distortions.append(float(0.18 * np.tanh(abs(ric_g - ric_r) / 6.0)))
-                    else:
-                        bounded_pen = 1.0 / (1.0 + float(np.exp(np.clip(ric_r, -10.0, 10.0))))
-                        distortions.append(0.55 + 0.40 * bounded_pen + 0.30 * rho_ooc)
-
-            base_k = float(np.mean(distortions)) if distortions else 0.25
-            return float(0.60 * base_k + 0.40 * ((1.0 - phi_cooc) * 0.65 + rho_ooc * 0.55))
-        except Exception as e:
-            raise KGAuditException(e, sys)
-
-    def compute_spectral_laplacian_divergence(
-        self, G_gt_induced: nx.Graph, G_resp: nx.Graph
-    ) -> float:
-        try:
-            active_nodes = [n for n, d in G_resp.degree() if d > 0]
-            if len(active_nodes) < 2:
-                return 0.15
-
-            G_resp_sub = G_resp.subgraph(active_nodes).copy()
-            L_gt = nx.normalized_laplacian_matrix(G_gt_induced, nodelist=active_nodes).toarray()
-            L_resp = nx.normalized_laplacian_matrix(G_resp_sub, nodelist=active_nodes).toarray()
-
-            evals_gt = np.sort(np.linalg.eigvalsh(L_gt))
-            evals_resp = np.sort(np.linalg.eigvalsh(L_resp))
-
-            w1_dist = float(wasserstein_distance(evals_gt, evals_resp))
-            norm_frob = float(np.linalg.norm(L_gt - L_resp, ord="fro") / max(1.0, len(active_nodes)))
-
-            return float(0.40 * w1_dist + 0.25 * norm_frob)
-        except Exception as e:
-            raise KGAuditException(e, sys)
-
-    def compute_provenance_and_conflict_features(
-        self,
-        G_gt: nx.Graph,
-        G_resp: nx.Graph,
-        G_gt_induced: nx.Graph,
-        node_grounding: Dict[int, float],
-        edge_audit_details: List[Dict[str, Any]],
-        phi_cooc: float,
-        rho_ooc: float,
-        metadata: Optional[Dict[str, Any]] = None
-    ) -> Tuple[float, float, float, float, float]:
-        if metadata is None:
-            metadata = {}
-
-        total_resp_edges = max(1, len(edge_audit_details))
-        supported_edges = sum(1 for item in edge_audit_details if item["is_supported"])
-        edge_unverified_rate = (total_resp_edges - supported_edges) / total_resp_edges
-
-        corpus_conflict = float(np.clip((1.0 - phi_cooc) * 0.65 + (rho_ooc * 0.75), 0.0, 1.0))
-        conflict_ratio = float(np.clip(0.40 * edge_unverified_rate + 0.60 * corpus_conflict, 0.0, 1.0))
-
-        alpha_post = 1.0 + 12.0 * (phi_cooc * (1.0 - rho_ooc)) + 4.0 * (1.0 - edge_unverified_rate)
-        beta_post = 1.0 + 12.0 * conflict_ratio + 6.0 * rho_ooc
-        bayesian_trust = float(np.clip(alpha_post / (alpha_post + beta_post), 0.08, 0.98))
-
-        speculative_ratio = float(metadata.get("speculative_ratio", 0.0))
-        lambda_dyn = 0.03 + 0.22 * speculative_ratio + 0.25 * conflict_ratio
-        dt_effective = 0.40 + 0.80 * conflict_ratio
-        freshness = float(np.clip(np.exp(-lambda_dyn * dt_effective), 0.15, 0.98))
-
-        source_independence = float(
-            np.clip(0.20 + 0.75 * phi_cooc * (1.0 - 0.80 * rho_ooc), 0.12, 0.96)
-        )
-
-        llm_confidence = float(metadata.get("llm_extraction_confidence", 0.90))
-
-        return bayesian_trust, freshness, source_independence, conflict_ratio, llm_confidence
-
-    def _load_learned_parameters(self) -> Dict[str, Any]:
-        prod_path = getattr(
-            self.config, "production_metrics_path", os.path.join("final_model", "production_model_metrics.json")
-        )
-        if not os.path.exists(prod_path):
-            from kg_audit.entity.config_entity import KGAuditPipelineConfig, ModelTrainerConfig
-            from kg_audit.components.model_trainer import ModelTrainer
-            ModelTrainer(ModelTrainerConfig(KGAuditPipelineConfig())).initiate_model_trainer()
-
-        with open(prod_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return data["learned_scoring_parameters"]
-
+    # ------------------------------------------------------------------ full evaluation
     def evaluate_truth(
         self,
         retriever_artifact: GraphRetrieverArtifact,
         response_nodes: List[Dict[str, Any]],
         response_edges: List[Dict[str, Any]],
-        metadata: Optional[Dict[str, Any]] = None
+        metadata: Optional[Dict[str, Any]] = None,
     ) -> TruthEvaluatorArtifact:
         try:
-            if metadata is None:
-                metadata = {}
-            user_query = str(metadata.get("user_query", ""))
+            metadata = metadata or {}
+            out = self.extract_features(retriever_artifact, response_nodes, response_edges, metadata)
+            feats = out["features"]
+            x = [float(feats[k]) for k in FEATURE_KEYS]
 
-            G_gt, G_resp, id_to_name, grounded_gt_cids = self._build_aligned_graphs(
-                retriever_artifact.extracted_nodes,
-                retriever_artifact.extracted_edges,
-                response_nodes,
-                response_edges
-            )
+            kg_state = read_json(self.config.kg_fidelity_state_path, default={}) or {}
+            s_kg = float(kg_state.get("overall_kg_accuracy_score", 0.5))
+            s_kg_local = self.local_kg_fidelity(retriever_artifact.extracted_edges or [], s_kg)
 
-            phi_cooc, rho_ooc = self._compute_corpus_grounding_signals(
-                user_query, id_to_name, G_resp
-            )
-
-            G_gt_induced, node_grounding, edge_audit_details = self._build_induced_ground_truth_subgraph(
-                G_gt, G_resp, id_to_name, grounded_gt_cids, phi_cooc, rho_ooc
-            )
-
-            e_sheaf = self.compute_sheaf_laplacian_energy(
-                G_gt, G_resp, G_gt_induced, node_grounding, id_to_name, phi_cooc, rho_ooc
-            )
-            delta_k = self.compute_curvature_distortion(
-                G_gt_induced, G_resp, phi_cooc, rho_ooc
-            )
-            d_spec = self.compute_spectral_laplacian_divergence(G_gt_induced, G_resp)
-
-            bayesian_trust, freshness, independence, conflict_ratio, llm_conf = (
-                self.compute_provenance_and_conflict_features(
-                    G_gt, G_resp, G_gt_induced, node_grounding, edge_audit_details,
-                    phi_cooc, rho_ooc, metadata
-                )
-            )
-
-            feature_vector = [
-                e_sheaf,
-                delta_k,
-                d_spec,
-                bayesian_trust,
-                freshness,
-                independence,
-                conflict_ratio,
-                llm_conf
-            ]
-
-            learned = self._load_learned_parameters()
-            w_e = learned["energy_weights"]
-            w_p = learned["prior_weights"]
-            eta = float(learned["s_query_exponent_eta"])
-
-            energy_penalty = (
-                (w_e[0] * e_sheaf)
-                + (w_e[1] * delta_k)
-                + (w_e[2] * d_spec)
-                + (w_e[3] * conflict_ratio)
-            )
-            reliability_prior = (
-                (w_p[0] * bayesian_trust)
-                + (w_p[1] * freshness)
-                + (w_p[2] * independence)
-                + (w_p[3] * llm_conf * (1.0 - conflict_ratio))
-            )
-            boltzmann_score = float(np.clip(reliability_prior * np.exp(-energy_penalty), 0.0, 1.0))
-
-            # Query the trained production classifier (final_model/model.pkl) on the 8D feature vector X
-            ml_prob = boltzmann_score
-            if os.path.exists(self.config.trained_model_path):
-                try:
-                    with open(self.config.trained_model_path, "rb") as f:
-                        calibrated_model = pickle.load(f)
-                    X_arr = np.array([feature_vector], dtype=np.float64)
-                    ml_prob = float(calibrated_model.predict_proba(X_arr)[0, 1])
-                except Exception:
-                    ml_prob = boltzmann_score
-
-            corpus_support_score = float(
-                np.clip((phi_cooc * 1.18) - (0.62 * rho_ooc) + 0.18, 0.05, 0.96)
-            )
-            query_belief_score = float(
-                np.clip(0.25 * boltzmann_score + 0.20 * ml_prob + 0.55 * corpus_support_score, 0.05, 0.97)
-            )
-
-            if os.path.exists(self.config.kg_fidelity_state_path):
-                with open(self.config.kg_fidelity_state_path, "r", encoding="utf-8") as f:
-                    kg_state = json.load(f)
-                s_kg = float(kg_state.get("overall_kg_accuracy_score", 0.7943))
+            model, bundle, prod, brain = self.resolve_brain()
+            if model is not None and bundle.conformal.fitted:
+                X1, bag1 = np.asarray([x], dtype=np.float64), [np.asarray(out["claim_matrix"], dtype=np.float64)]
+                if hasattr(model, "predict_proba_bags"):          # champion may be the multiple-instance network
+                    s_query = float(model.predict_proba_bags(X1, bag1)[0, 1])
+                else:
+                    s_query = float(model.predict_proba(X1)[0, 1])
+                if hasattr(model, "claim_scores") and out["claim_matrix"]:
+                    for d, sc in zip(out["edge_details"], model.claim_scores(X1, bag1)[0]):
+                        d["learned_hallucination_score"] = round(float(sc), 4)   # claim-level localisation
+                s_final = float(bundle.pool(s_query, s_kg_local)) if bundle.pool.fitted else s_query
+                decision = bundle.conformal.decide(s_final)
+                pred_set = bundle.conformal.prediction_set(s_final)
             else:
-                s_kg = 0.7943
-
-            effective_s_kg = float(np.clip(s_kg / 0.75, 0.50, 1.0))
-            final_accuracy_score = float(
-                np.clip((query_belief_score ** eta) * (effective_s_kg ** (1.0 - eta)), 0.0, 1.0)
-            )
-
-            pass_thresh = float(np.clip(learned.get("optimal_pass_threshold", 0.575), 0.55, 0.60))
-            abstain_thresh = float(np.clip(learned.get("optimal_abstain_threshold", 0.250), 0.23, 0.30))
-
-            if final_accuracy_score >= pass_thresh and phi_cooc >= 0.435 and rho_ooc <= 0.16:
-                decision_status = "VERIFIED"
-                is_hallucinated = False
-            elif final_accuracy_score >= abstain_thresh and not (rho_ooc >= 0.22 and phi_cooc <= 0.21):
-                decision_status = "ABSTAIN"
-                is_hallucinated = False
-            else:
-                decision_status = "HALLUCINATED"
-                is_hallucinated = True
+                s_query, s_final, decision, pred_set = None, None, UNCALIBRATED, []
+            out["diagnostics"]["hallucination_probability"] = None if s_final is None else 1.0 - s_final
+            out["diagnostics"]["brain"] = brain
 
             report = {
-                "metrics": {
-                    "sheaf_laplacian_energy": e_sheaf,
-                    "forman_ricci_curvature_distortion": delta_k,
-                    "spectral_laplacian_divergence": d_spec,
-                    "bayesian_source_trust": bayesian_trust,
-                    "temporal_freshness": freshness,
-                    "source_independence": independence,
-                    "conflict_ratio": conflict_ratio,
-                    "llm_extraction_confidence": llm_conf,
-                    "pdf_chunk_cooccurrence_phi_cooc": phi_cooc,
-                    "out_of_corpus_ratio_rho_ooc": rho_ooc,
-                    "calibrated_ml_probability": ml_prob,
-                    "query_belief_score_S_Query": query_belief_score,
-                    "phase1_kg_fidelity_score_S_KG": s_kg,
-                    "final_compound_accuracy_score": final_accuracy_score
+                "schema_version": FEATURE_SCHEMA_VERSION,
+                "user_query": metadata.get("user_query", ""),
+                "feature_vector_X": dict(zip(FEATURE_KEYS, x)),
+                "scores": {
+                    "S_query": s_query, "S_final": s_final,
+                    "S_KG_global": s_kg, "S_KG_local": s_kg_local,
                 },
-                "learned_parameters_used": learned,
-                "feature_vector_X": feature_vector,
-                "edge_audit_details": edge_audit_details,
-                "verdict": {
-                    "decision_status": decision_status,
-                    "is_hallucinated": is_hallucinated,
-                    "pass_threshold": pass_thresh,
-                    "abstention_threshold": abstain_thresh
-                }
+                "decision": {
+                    "status": decision,
+                    "conformal_prediction_set": pred_set,
+                    "alpha": bundle.conformal.alpha,
+                    **bundle.conformal.implied_thresholds,
+                },
+                "champion_model": prod.get("winning_model"),
+                "brain": brain,
+                "pool": bundle.pool.to_dict(),
+                "diagnostics": out["diagnostics"],
+                "edge_audit_details": out["edge_details"],
+                "claim_matrix": {"features": CLAIM_FEATURES, "rows": out["claim_matrix"]},
             }
-
-            export_path = self.config.evaluation_report_file_path
-            os.makedirs(os.path.dirname(export_path), exist_ok=True)
-            with open(export_path, "w", encoding="utf-8") as f:
-                json.dump(report, f, indent=4)
+            write_json_atomic(self.config.evaluation_report_file_path, report, indent=4)
+            out["diagnostics"]["claim_matrix"] = out["claim_matrix"]
 
             return TruthEvaluatorArtifact(
-                semantic_entailment_score=e_sheaf,
-                triple_match_score=delta_k,
-                topological_similarity_score=d_spec,
-                bayesian_source_trust=bayesian_trust,
-                temporal_freshness=freshness,
-                source_independence=independence,
-                conflict_ratio=conflict_ratio,
-                llm_self_reported_accuracy=llm_conf,
-                query_belief_score=query_belief_score,
+                feature_vector=x,
+                feature_names=list(FEATURE_KEYS),
+                features=feats,
+                query_belief_score=s_query,
                 phase1_kg_fidelity_score=s_kg,
-                feature_vector=feature_vector,
-                final_accuracy_score=final_accuracy_score,
-                decision_status=decision_status,
-                is_hallucinated=is_hallucinated,
-                evaluation_report_path=export_path,
-                edge_audit_details=edge_audit_details
+                local_kg_fidelity_score=s_kg_local,
+                final_accuracy_score=s_final,
+                decision_status=decision,
+                is_hallucinated=(decision == "HALLUCINATED"),
+                conformal_prediction_set=pred_set,
+                evaluation_report_path=self.config.evaluation_report_file_path,
+                edge_audit_details=out["edge_details"],
+                diagnostics=out["diagnostics"],
             )
-
         except Exception as e:
             raise KGAuditException(e, sys)

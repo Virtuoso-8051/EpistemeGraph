@@ -16,6 +16,8 @@ class KGBuilderArtifact:
     kg_fidelity_state_path: str
     extracted_kg_file_path: str
     neo4j_cloud_pushed: bool
+    new_documents: List[str] = field(default_factory=list)
+    skipped_documents: List[str] = field(default_factory=list)
 
 
 @dataclass
@@ -26,6 +28,7 @@ class LLMInterceptorArtifact:
     llm_confidence_reasoning: str
     source_documents: List[str]
     captured_payload_path: str
+    mode: str = "closed_book"
 
 
 @dataclass
@@ -35,26 +38,24 @@ class GraphRetrieverArtifact:
     extracted_edges: List[Dict[str, Any]]
     subgraph_file_path: str
     retrieval_status: bool
+    seed_count: int = 0
 
 
 @dataclass
 class TruthEvaluatorArtifact:
-    semantic_entailment_score: float
-    triple_match_score: float
-    topological_similarity_score: float
-    bayesian_source_trust: float
-    temporal_freshness: float
-    source_independence: float
-    conflict_ratio: float
-    llm_self_reported_accuracy: float
-    query_belief_score: float
-    phase1_kg_fidelity_score: float
     feature_vector: List[float]
-    final_accuracy_score: float
-    decision_status: str
+    feature_names: List[str]
+    features: Dict[str, float]
+    query_belief_score: Optional[float]          # S_query  (None until a model is calibrated)
+    phase1_kg_fidelity_score: float              # global S_KG
+    local_kg_fidelity_score: float               # S_KG(q)
+    final_accuracy_score: Optional[float]        # S_final
+    decision_status: str                         # VERIFIED | ABSTAIN | HALLUCINATED | UNCALIBRATED
     is_hallucinated: bool
+    conformal_prediction_set: List[int]
     evaluation_report_path: str
-    edge_audit_details: Optional[List[Dict[str, Any]]] = field(default_factory=list)
+    edge_audit_details: List[Dict[str, Any]] = field(default_factory=list)
+    diagnostics: Dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -65,7 +66,10 @@ class ModelTrainerArtifact:
     f1_score: float
     brier_score: float
     expected_calibration_error: float
+    log_loss: float
     is_model_accepted: bool
-    learned_feature_weights: Optional[Dict[str, float]] = field(default_factory=dict)
-    optimal_pass_threshold: float = 0.72
-    optimal_abstain_threshold: float = 0.45
+    n_labelled_samples: int
+    conformal: Dict[str, Any] = field(default_factory=dict)
+    pool: Dict[str, Any] = field(default_factory=dict)
+    learned_feature_weights: Dict[str, float] = field(default_factory=dict)
+    test_metrics: Dict[str, Any] = field(default_factory=dict)

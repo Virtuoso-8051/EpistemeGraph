@@ -1,21 +1,37 @@
+"""
+Phase 3A - Query-focused ground-truth subgraph retrieval.
+
+1. Snapshot  : the KG is read ONCE (Neo4j AuraDB, or the local cumulative kg_store.json as an
+               offline fallback) and cached in memory for `snapshot_ttl_s` seconds. A 500-query
+               benchmark therefore costs one graph download instead of 500.
+2. Seeding   : response/query entities are matched to KG vertices by exact name/alias,
+               acronym<->expansion, or a distinctive (non-generic) token.
+3. Expansion : seeds + their 1-hop neighbourhood + every shortest path of length <= k+1 that
+               connects two seeds (k = max_hop_depth). This keeps the multi-hop context needed
+               by the 2-hop provenance feature without dragging in whole hub neighbourhoods.
+If nothing matches, the GT subgraph is EMPTY (no more "top-15 hub nodes" stand-in, which used
+to compare fully fabricated answers against unrelated reference nodes).
+"""
+from __future__ import annotations
+
 import os
 import re
 import sys
-import glob
-import json
-import networkx as nx
-from scipy import sparse
-from typing import List, Dict, Any, Tuple, Set
-from neo4j import GraphDatabase, Driver
+import threading
+import time
+from typing import Any, Dict, List, Set, Tuple
 
-from kg_audit.entity.config_entity import GraphRetrieverConfig
-from kg_audit.entity.artifact_entity import GraphRetrieverArtifact
+import networkx as nx
+from neo4j import GraphDatabase
+
 from kg_audit.components.kg_builder import KGBuilder
+from kg_audit.entity.artifact_entity import GraphRetrieverArtifact
+from kg_audit.entity.config_entity import GraphRetrieverConfig
 from kg_audit.exceptions.exception import KGAuditException
 from kg_audit.logging.logger import logging
+from kg_audit.utils.main_utils import fold_ascii, read_json, write_json_atomic
 
-
-# Generic domain-wide words that should NOT trigger broad single-word CONTAINS matches across all nodes
+# Generic domain words that must not seed a subgraph on their own
 _BROAD_DOMAIN_STOPWORDS = {
     "the", "and", "for", "with", "from", "that", "this", "into", "over", "how",
     "via", "using", "based", "used", "uses", "network", "networks", "graph", "graphs",
@@ -25,308 +41,168 @@ _BROAD_DOMAIN_STOPWORDS = {
     "representations", "information", "large", "scale", "low", "dimensional",
     "data", "dataset", "datasets", "optimization", "objective", "function",
     "sampling", "strategy", "strategies", "search", "walk", "walks", "structure",
-    "structural", "local", "global", "similarity", "neighborhood", "context"
+    "structural", "local", "global", "similarity", "neighborhood", "context",
 }
+
+CYPHER_SNAPSHOT_NODES = """
+MATCH (e:Entity) WHERE coalesce(e.kg_id, 'legacy') = $kg_id
+RETURN elementId(e) AS id, e.name AS name, coalesce(e.type, 'CONCEPT') AS type,
+       coalesce(e.aliases, []) AS aliases, coalesce(e.source_pdfs, []) AS source_pdfs
+"""
+CYPHER_SNAPSHOT_EDGES = """
+MATCH (u:Entity)-[r:RELATED_TO]->(v:Entity)
+WHERE coalesce(u.kg_id, 'legacy') = $kg_id AND coalesce(v.kg_id, 'legacy') = $kg_id
+RETURN elementId(u) AS source, elementId(v) AS target, coalesce(r.type, 'RELATED_TO') AS type,
+       coalesce(r.weight, 0.9) AS weight, coalesce(r.grounding_score, 0.0) AS grounding_score,
+       coalesce(r.evidence_quote, '') AS evidence_quote, coalesce(r.source_pdfs, []) AS source_pdfs,
+       coalesce(r.chunk_ids, []) AS chunk_ids, coalesce(r.support_count, 1) AS support_count,
+       coalesce(r.is_functional, false) AS is_functional
+"""
 
 
 class GraphRetriever:
+    _snapshots: Dict[Tuple[str, float], Dict[str, Any]] = {}
+    _snap_lock = threading.Lock()
+
     def __init__(self, config: GraphRetrieverConfig):
+        self.config = config
+
+    # ------------------------------------------------------------------ snapshot
+    def _snapshot_from_neo4j(self) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+        driver = GraphDatabase.driver(self.config.neo4j_uri, auth=(self.config.neo4j_user, self.config.neo4j_password))
         try:
-            self.config = config
-            self.driver: Driver = None
-        except Exception as e:
-            raise KGAuditException(e, sys)
-
-    def connect_neo4j(self):
-        try:
-            self.driver = GraphDatabase.driver(
-                self.config.neo4j_uri,
-                auth=(self.config.neo4j_user, self.config.neo4j_password)
-            )
-            self.driver.verify_connectivity()
-        except Exception as e:
-            raise KGAuditException(e, sys)
-
-    def close(self):
-        if self.driver:
-            try:
-                self.driver.close()
-            except Exception:
-                pass
-            self.driver = None
-
-    def _extract_search_terms(self, entities: List[str]) -> Tuple[List[str], List[str]]:
-        """
-        Separates entity queries into:
-        1. exact_phrases: full lowercase entity names and derived acronyms (e.g., 'large-scale information network embedding', 'line', 'node2vec', 'breadth-first search', 'bfs')
-        2. specific_tokens: distinctive non-generic tokens (e.g., 'node2vec', 'skip-gram', 'proximity', 'homophily', 'attention', 'convolutional')
-        """
-        exact_phrases: Set[str] = set()
-        specific_tokens: Set[str] = set()
-
-        for ent in entities:
-            clean = str(ent).strip()
-            if not clean:
-                continue
-            low = clean.lower()
-            exact_phrases.add(low)
-
-            init = KGBuilder._initials(clean)
-            if 2 <= len(init) <= 8:
-                exact_phrases.add(init.lower())
-                specific_tokens.add(init.lower())
-
-            if KGBuilder._is_short_token(clean):
-                acr = KGBuilder._strip_plural_acronym(clean).lower()
-                exact_phrases.add(acr)
-                specific_tokens.add(acr)
-
-            for token in re.sub(r"[^\w\s-]", " ", low).replace("-", " ").split():
-                if len(token) >= 3 and token not in _BROAD_DOMAIN_STOPWORDS:
-                    specific_tokens.add(token)
-
-        return sorted(exact_phrases), sorted(specific_tokens)
-
-    def _filter_k_hop_subgraph(
-        self,
-        all_nodes: List[Dict[str, Any]],
-        all_edges: List[Dict[str, Any]],
-        query_entities: List[str]
-    ) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
-        """
-        Finds the seed nodes in the KG that specifically match the query/response entities
-        (via exact name, alias, acronym, or specific technical token) and extracts the
-        induced k-hop neighborhood (k = config.max_hop_depth, default 2) so each query
-        gets its own focused Ground-Truth Subgraph instead of the entire database.
-        """
-        if not all_nodes:
-            return [], []
-
-        exact_phrases, specific_tokens = self._extract_search_terms(query_entities)
-        phrase_set = set(exact_phrases)
-        token_set = set(specific_tokens)
-
-        seed_node_ids: Set[Any] = set()
-        for node in all_nodes:
-            nid = node["id"]
-            n_name = str(node.get("name", "")).strip()
-            n_low = n_name.lower()
-            aliases = [str(a).strip() for a in node.get("aliases", []) if a]
-            all_names = [n_name] + aliases
-            all_low = [s.lower() for s in all_names]
-
-            # 1. Exact or Acronym Match against any query entity
-            matched = False
-            for cand_low in all_low:
-                if cand_low in phrase_set:
-                    matched = True
-                    break
-                for q_ent in query_entities:
-                    if KGBuilder._is_acronym_match(cand_low, str(q_ent)):
-                        matched = True
-                        break
-                if matched:
-                    break
-
-            # 2. Phrase containment (for phrases >= 4 chars) or specific technical token match
-            if not matched:
-                for cand_low in all_low:
-                    if any(len(p) >= 4 and (p in cand_low or cand_low in p) for p in phrase_set):
-                        matched = True
-                        break
-                    cand_tokens = set(re.sub(r"[^\w\s]", " ", cand_low).split())
-                    if cand_tokens & token_set:
-                        matched = True
-                        break
-
-            if matched:
-                seed_node_ids.add(nid)
-
-        # Build undirected graph for hop neighborhood traversal
-        G = nx.Graph()
-        for n in all_nodes:
-            G.add_node(n["id"])
-        for e in all_edges:
-            if e["source"] in G and e["target"] in G:
-                G.add_edge(e["source"], e["target"])
-
-        if not seed_node_ids:
-            # If no specific seed matched (e.g., 100% alien entities), return top high-degree core nodes as reference
-            deg_sorted = sorted(G.degree(), key=lambda x: x[1], reverse=True)
-            keep_ids = {nid for nid, _ in deg_sorted[:min(15, len(deg_sorted))]}
-        else:
-            keep_ids: Set[Any] = set(seed_node_ids)
-            max_hops = max(1, int(getattr(self.config, "max_hop_depth", 2)))
-            # Include 1-hop neighbors around seed nodes, plus 2-hop shortest paths connecting pairs of seed nodes
-            for sid in seed_node_ids:
-                if sid in G:
-                    keep_ids.update(nx.single_source_shortest_path_length(G, sid, cutoff=1).keys())
-
-            seed_list = [s for s in seed_node_ids if s in G]
-            if max_hops >= 2 and len(seed_list) > 1:
-                for i in range(len(seed_list)):
-                    for j in range(i + 1, len(seed_list)):
-                        u, v = seed_list[i], seed_list[j]
-                        if nx.has_path(G, u, v):
-                            sp = nx.shortest_path(G, u, v)
-                            if len(sp) - 1 <= max_hops + 1:
-                                keep_ids.update(sp)
-
-        filtered_nodes = [n for n in all_nodes if n["id"] in keep_ids]
-        filtered_edges = [
-            e for e in all_edges
-            if e["source"] in keep_ids and e["target"] in keep_ids
-        ]
-        return filtered_nodes, filtered_edges
-
-    def fetch_subgraph_cypher(self, entities: List[str]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
-        try:
-            if not self.driver:
-                self.connect_neo4j()
-
-            cypher_all = """
-            MATCH (u:Entity)-[r:RELATED_TO]->(v:Entity)
-            RETURN
-                collect(DISTINCT {
-                    id: elementId(u),
-                    name: u.name,
-                    type: coalesce(u.type, 'CONCEPT'),
-                    labels: labels(u),
-                    aliases: coalesce(u.aliases, []),
-                    source_pdfs: coalesce(u.source_pdfs, []),
-                    updated_at: coalesce(u.updated_at, '')
-                }) +
-                collect(DISTINCT {
-                    id: elementId(v),
-                    name: v.name,
-                    type: coalesce(v.type, 'CONCEPT'),
-                    labels: labels(v),
-                    aliases: coalesce(v.aliases, []),
-                    source_pdfs: coalesce(v.source_pdfs, []),
-                    updated_at: coalesce(v.updated_at, '')
-                }) AS nodes,
-                collect(DISTINCT {
-                    source: elementId(startNode(r)),
-                    target: elementId(endNode(r)),
-                    type: coalesce(r.type, type(r)),
-                    weight: coalesce(r.weight, 0.9),
-                    grounding_score: coalesce(r.grounding_score, 0.85),
-                    evidence_quote: coalesce(r.evidence_quote, ''),
-                    source_pdfs: coalesce(r.source_pdfs, []),
-                    document_ids: coalesce(r.document_ids, []),
-                    chunk_ids: coalesce(r.chunk_ids, []),
-                    support_count: coalesce(r.support_count, 1)
-                }) AS edges
-            """
-
-            with self.driver.session(database=self.config.neo4j_database) as session:
-                record = session.run(cypher_all).single()
-                if record and record["nodes"]:
-                    unique_nodes = list({n["id"]: n for n in record["nodes"]}.values())
-                    unique_edges = list({
-                        f"{e['source']}_{e['target']}_{e['type']}": e for e in record["edges"]
-                    }.values())
-                    sub_nodes, sub_edges = self._filter_k_hop_subgraph(
-                        unique_nodes, unique_edges, entities
-                    )
-                    logging.info(
-                        f"Retrieved query-focused Neo4j subgraph: {len(sub_nodes)}/{len(unique_nodes)} nodes, "
-                        f"{len(sub_edges)}/{len(unique_edges)} edges."
-                    )
-                    return sub_nodes, sub_edges
-
-            return self._load_local_fallback_kg(entities)
-
-        except Exception as e:
-            logging.warning(f"Neo4j query warning ({e}). Using local extracted KG fallback.")
-            return self._load_local_fallback_kg(entities)
-
-    def _load_local_fallback_kg(self, entities: List[str] = None) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
-        try:
-            pattern = os.path.join("Artifacts", "*", "kg_builder", "extracted_knowledge_graph.json")
-            files = sorted(glob.glob(pattern), key=os.path.getmtime, reverse=True)
-            if not files:
-                return [], []
-            with open(files[0], "r", encoding="utf-8") as f:
-                data = json.load(f)
-            nodes = data.get("nodes", [])
-            name_to_id = {n["name"]: n["id"] for n in nodes}
-            edges = []
-            for e in data.get("edges", []):
-                u_id = name_to_id.get(e.get("subject"))
-                v_id = name_to_id.get(e.get("object"))
-                if u_id is not None and v_id is not None:
-                    edges.append({
-                        "source": u_id,
-                        "target": v_id,
-                        "type": e.get("relation", "RELATED_TO"),
-                        "weight": float(e.get("extraction_confidence", 0.9)),
-                        "grounding_score": float(e.get("grounding_score", 0.85)),
-                        "evidence_quote": e.get("evidence_quote", ""),
-                        "source_pdfs": [e.get("source_name", "local_pdf")],
-                        "document_ids": [e.get("document_id", "DOC_001")],
-                        "chunk_ids": [e.get("chunk_id", "CH_001")],
-                        "support_count": 1
-                    })
-            if entities:
-                return self._filter_k_hop_subgraph(nodes, edges, entities)
+            driver.verify_connectivity()
+            with driver.session(database=self.config.neo4j_database) as s:
+                nodes = [dict(r) for r in s.run(CYPHER_SNAPSHOT_NODES, kg_id=self.config.kg_id)]
+                edges = [dict(r) for r in s.run(CYPHER_SNAPSHOT_EDGES, kg_id=self.config.kg_id)]
             return nodes, edges
-        except Exception:
+        finally:
+            driver.close()
+
+    def _snapshot_from_local(self) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+        store = read_json(self.config.kg_store_path, default=None)
+        if not store:
             return [], []
+        names = list(store.get("entities", {}).keys())
+        idx = {n: i for i, n in enumerate(names)}
+        nodes = [{"id": idx[n], "name": n, **store["entities"][n]} for n in names]
+        edges = []
+        for row in KGBuilder._aggregate_edges(store.get("claims", [])):
+            if row["subj"] in idx and row["obj"] in idx:
+                edges.append({"source": idx[row["subj"]], "target": idx[row["obj"]], "type": row["rel"],
+                              "weight": row["conf"], "grounding_score": row["grounding"],
+                              "evidence_quote": row["best_quote"], "source_pdfs": row["sources"],
+                              "chunk_ids": row["chunk_ids"], "support_count": len(row["chunk_ids"]),
+                              "is_functional": row["is_functional"]})
+        return nodes, edges
 
-    def build_sparse_matrices(self, nodes: List[Dict[str, Any]], edges: List[Dict[str, Any]]) -> Tuple[nx.Graph, sparse.csr_matrix]:
-        try:
-            G = nx.Graph()
-            node_id_map = {}
+    def snapshot(self, force: bool = False) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], str]:
+        """
+        One snapshot per (kg_id, version of the local store). A finished build rewrites
+        kg_store.json, which changes the key, so the next query sees the new graph immediately.
+        Neo4j is the primary source; the local mirror is the offline fallback.
+        """
+        store_v = os.path.getmtime(self.config.kg_store_path) if os.path.exists(self.config.kg_store_path) else 0.0
+        key = (self.config.kg_id, store_v)
+        with self._snap_lock:
+            snap = GraphRetriever._snapshots.get(key)
+            if not force and snap and time.time() - snap["t"] < self.config.snapshot_ttl_s:
+                return snap["nodes"], snap["edges"], snap["source"]
+            try:
+                nodes, edges = self._snapshot_from_neo4j()
+                source = "neo4j"
+                if not nodes:
+                    raise RuntimeError(f"no nodes for kg_id '{self.config.kg_id}' in Neo4j")
+            except Exception as e:
+                logging.warning(f"Neo4j snapshot unavailable ({e}); using local kg_store.json")
+                nodes, edges = self._snapshot_from_local()
+                source = "local_store"
+            GraphRetriever._snapshots = {k: v for k, v in GraphRetriever._snapshots.items() if k[0] != key[0]}
+            GraphRetriever._snapshots[key] = {"t": time.time(), "nodes": nodes, "edges": edges, "source": source}
+            return nodes, edges, source
 
-            for idx, node in enumerate(nodes):
-                G.add_node(idx, original_id=node["id"], name=node["name"], labels=node.get("labels", []))
-                node_id_map[node["id"]] = idx
+    @classmethod
+    def invalidate_snapshot(cls) -> None:
+        with cls._snap_lock:
+            cls._snapshots = {}
 
-            for edge in edges:
-                u = node_id_map.get(edge["source"])
-                v = node_id_map.get(edge["target"])
-                if u is not None and v is not None:
-                    weight = float(edge.get("weight", 1.0))
-                    G.add_edge(u, v, weight=weight, type=edge.get("type", "RELATED_TO"))
+    @classmethod
+    def preload(cls, kg_id: str, store_path: str, nodes, edges, source: str = "local_store") -> None:
+        """Test / offline helper: install a snapshot without touching Neo4j."""
+        v = os.path.getmtime(store_path) if os.path.exists(store_path) else 0.0
+        cls._snapshots[(kg_id, v)] = {"t": time.time(), "nodes": nodes, "edges": edges, "source": source}
+    # ------------------------------------------------------------------ seeding & expansion
+    @staticmethod
+    def _search_terms(entities: List[str]) -> Tuple[Set[str], Set[str]]:
+        phrases, tokens = set(), set()
+        for ent in entities:
+            low = fold_ascii(ent).strip()
+            if not low:
+                continue
+            phrases.add(low)
+            if KGBuilder._is_short_token(str(ent)):
+                phrases.add(KGBuilder._strip_plural_acronym(str(ent)).lower())
+            for t in re.sub(r"[^\w\s-]", " ", low).replace("-", " ").split():
+                if len(t) >= 4 and t not in _BROAD_DOMAIN_STOPWORDS:
+                    tokens.add(t)
+        return phrases, tokens
 
-            if G.number_of_nodes() == 0:
-                return G, sparse.csr_matrix((0, 0))
+    def filter_k_hop_subgraph(self, nodes, edges, entities) -> Tuple[List[Dict], List[Dict], int]:
+        if not nodes or not entities:
+            return [], [], 0
+        phrases, tokens = self._search_terms(entities)
+        seeds: Set[Any] = set()
+        for n in nodes:
+            forms = [fold_ascii(n.get("name", ""))] + [fold_ascii(a) for a in n.get("aliases", []) if len(str(a)) >= 2]
+            if any(f in phrases for f in forms):
+                seeds.add(n["id"])
+                continue
+            if any(KGBuilder._is_acronym_match(f, p) for f in forms for p in phrases):
+                seeds.add(n["id"])
+                continue
+            name_tokens = set(re.sub(r"[^\w\s]", " ", forms[0].replace("-", " ")).split())
+            if name_tokens & tokens:
+                seeds.add(n["id"])
 
-            adj_sparse = nx.adjacency_matrix(G, weight="weight")
-            return G, adj_sparse
+        if not seeds:
+            return [], [], 0
+        G = nx.Graph()
+        G.add_nodes_from(n["id"] for n in nodes)
+        G.add_edges_from((e["source"], e["target"]) for e in edges if e["source"] in G and e["target"] in G)
 
-        except Exception as e:
-            raise KGAuditException(e, sys)
+        keep: Set[Any] = set(seeds)
+        for s in seeds:
+            keep.update(G[s])
+        k = max(1, int(self.config.max_hop_depth))
+        seed_list = sorted(seeds, key=str)
+        for i, u in enumerate(seed_list):
+            _, paths = nx.single_source_dijkstra(G, u, cutoff=k + 1)
+            for v in seed_list[i + 1:]:
+                if v in paths:
+                    keep.update(paths[v])
+        if len(keep) > self.config.max_subgraph_nodes:  # keep seeds + highest-degree context
+            extra = sorted(keep - seeds, key=lambda x: G.degree(x), reverse=True)
+            keep = seeds | set(extra[: max(0, self.config.max_subgraph_nodes - len(seeds))])
 
+        sub_nodes = [n for n in nodes if n["id"] in keep]
+        sub_edges = [e for e in edges if e["source"] in keep and e["target"] in keep]
+        return sub_nodes, sub_edges, len(seeds)
+
+    # ------------------------------------------------------------------ entry point
     def initiate_graph_retrieval(self, query_entities: List[str]) -> GraphRetrieverArtifact:
         try:
-            nodes, edges = self.fetch_subgraph_cypher(query_entities)
-            G, _ = self.build_sparse_matrices(nodes, edges)
-
-            subgraph_payload = {
-                "query_entities": query_entities,
-                "node_count": G.number_of_nodes(),
-                "edge_count": G.number_of_edges(),
-                "nodes": nodes,
-                "edges": edges
-            }
-
-            export_path = self.config.subgraph_export_file_path
-            os.makedirs(os.path.dirname(export_path), exist_ok=True)
-            with open(export_path, "w", encoding="utf-8") as f:
-                json.dump(subgraph_payload, f, indent=4)
-
-            self.close()
-
+            nodes, edges, source = self.snapshot()
+            sub_nodes, sub_edges, n_seeds = self.filter_k_hop_subgraph(nodes, edges, query_entities)
+            write_json_atomic(self.config.subgraph_export_file_path, {
+                "query_entities": query_entities, "snapshot_source": source, "seed_count": n_seeds,
+                "node_count": len(sub_nodes), "edge_count": len(sub_edges),
+                "nodes": sub_nodes, "edges": sub_edges,
+            }, indent=2)
+            logging.info(f"GT subgraph [{source}]: {len(sub_nodes)}/{len(nodes)} nodes, {len(sub_edges)}/{len(edges)} edges, seeds={n_seeds}")
             return GraphRetrieverArtifact(
-                query_entities=query_entities,
-                extracted_nodes=nodes,
-                extracted_edges=edges,
-                subgraph_file_path=export_path,
-                retrieval_status=G.number_of_nodes() > 0
+                query_entities=query_entities, extracted_nodes=sub_nodes, extracted_edges=sub_edges,
+                subgraph_file_path=self.config.subgraph_export_file_path,
+                retrieval_status=bool(sub_nodes), seed_count=n_seeds,
             )
-
         except Exception as e:
-            self.close()
             raise KGAuditException(e, sys)
