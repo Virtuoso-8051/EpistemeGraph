@@ -7,7 +7,7 @@ venv/
 *.env
 
 # Python cache files
-**pycache**/
+__pycache__/
 *.py[cod]
 
 # Generated package metadata
@@ -32,3 +32,6 @@ lib/
 logs/
 mlruns/
 mlflow.db
+
+# user-uploaded corpora (may contain third-party PDFs); only the reference study is published
+final_model/workspaces/kg_2*/
