@@ -1,0 +1,232 @@
+% =============================================================================================
+%  EpistemeGraph -- 6-page conference version (IEEE).  The full version is extended.tex.
+%  Every quantitative result is a macro from generated/results.tex (scripts/export_paper_assets.py).
+%  Overleaf: upload paper/EpistemeGraph_overleaf.zip (New Project -> Upload Project) and press Recompile.
+% =============================================================================================
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+
+\newtheorem{proposition}{Proposition}
+\DeclareMathOperator{\logit}{logit}
+\DeclareMathOperator{\spec}{spec}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\SKGq}{S_{\mathrm{KG}}(q)}
+
+\IfFileExists{generated/results.tex}{\input{generated/results.tex}}{\input{generated/defaults.tex}}
+
+\begin{document}
+
+\title{EpistemeGraph: Auditing LLM Answers Against a Measured Knowledge Graph with Geometric Claim Evidence and Cross-Conformal Decisions}
+
+\author{\IEEEauthorblockN{Anurag Raj}
+\IEEEauthorblockA{\textit{Department of Computer Science and Engineering}\\
+\textit{Indian Institute of Technology Ropar}\\
+\texttt{rajanurag1508@gmail.com}\quad \url{https://github.com/Virtuoso-8051/EpistemeGraph}}}
+
+\maketitle
+
+\begin{abstract}
+Large language models answer questions about specialised literature fluently and confidently even when they
+misattribute results, invent details or accept a false premise. We present \emph{EpistemeGraph}, an auditor that
+decides whether an answer is supported by a document collection, with what probability, how much of it is unsupported
+and which claims are at fault. It builds a provenance-verified knowledge graph (KG) from the PDFs and measures its
+precision, extracts the answer's claim graph in a call decoupled from generation, and describes every claim with
+natural-language inference against source sentences and with graph geometry (sheaf energy, Forman--Ricci curvature of
+the grafted edge, spectral divergence). A ten-model tournament under a proper scoring rule, cross-fitted calibration
+and Mondrian cross-conformal prediction turn these measurements into \textsc{verified}, \textsc{abstain} or
+\textsc{hallucinated} decisions with no hand-set weight or threshold. On \NItems{} questions over the DeepWalk, LINE and
+node2vec papers, answered closed-book by \texttt{\AnswerModel}, the audit reaches AUROC \CVAUC{} in repeated
+cross-validation, against \CVAUCllm{} for the model's own confidence ($p=\CVPllm$), and \ConsensusAUC{} on the answers
+where two judges agree. Auditing the labels shows that judges agree only moderately ($\kappa=\KappaFull$) and that a
+judge from another model family applies a far more lenient notion of support ($\kappa=\GeminiKappa$), which bounds every
+metric. The study cost \$\CostRun{} in API calls; code and data are public.
+\end{abstract}
+
+\begin{IEEEkeywords}
+hallucination detection, knowledge graphs, sheaf Laplacian, Ricci curvature, conformal prediction, LLM-as-a-judge
+\end{IEEEkeywords}
+
+\section{Introduction}
+Hallucination, content that is fluent but unsupported by the relevant source, is the central obstacle to deploying LLMs
+in technical domains~\cite{ji2023survey,huang2025survey}. A model's verbalised confidence is a weak signal on specialised
+material~\cite{xiong2024uncertainty,kadavath2022know,tian2023just}, and text-to-text checkers cannot always separate a
+claim that \emph{uses} the corpus vocabulary from one that is \emph{supported} by it: ``node2vec optimises a genetic
+fitness function'' shares many tokens with the node2vec paper and is still false. Knowledge graphs offer a structured
+alternative~\cite{kim2023factkg,sansford2024grapheval}, but raise four questions we address: how accurate is an
+LLM-built reference graph, \emph{measured} rather than assumed; which quantities expose an unsupported claim; how can
+many signals become a decision with a stated error rate and no hand-tuned weight; and how reliable are the labels
+against which all of this is scored?
+
+\paragraph*{Contributions}
+(i)~A measured reference graph: provenance-verified KG construction, a fidelity index whose aggregation is derived
+(\cref{prop:gm}) and an extrinsic precision audit. (ii)~Claim-level evidence combining NLI with knowledge-sheaf
+residuals and grafted-edge curvature, and a permutation-invariant claim-set representation (\cref{prop:mi}).
+(iii)~A fully learned, cross-fitted decision layer in which reference reliability must pass two statistical checks
+(\cref{prop:pool}) and conformal verdicts never contradict their probability. (iv)~A label-audited evaluation with three
+judges, a length confound and repeated cross-validation, reporting negative results where they occur.
+
+\section{Related Work}
+Reference-free detectors use sampling consistency~\cite{manakul2023selfcheckgpt}, semantic
+entropy~\cite{farquhar2024semantic} or elicited confidence~\cite{kadavath2022know,tian2023just}; reference-based ones
+verify atomic facts against a source~\cite{min2023factscore}. RAGTruth~\cite{niu2024ragtruth} fixed the convention, which
+we follow, that a response is hallucinated if it contains any unsupported content. FactKG~\cite{kim2023factkg} and
+GraphEval~\cite{sansford2024grapheval} verify claims against a KG; we additionally measure the KG, use graph geometry and
+attach a distribution-free guarantee. The instruments are established: knowledge
+sheaves~\cite{hansen2019sheaves,gebhart2023knowledge} with TransE as a special case~\cite{bordes2013transe}, Forman
+curvature~\cite{forman2003bochner,samal2018comparative}, Laplacian spectra~\cite{chung1997spectral}, NLI
+consistency~\cite{laban2022summac}, multiple-instance learning~\cite{dietterich1997mil,ilse2018attention}, Deep
+Sets~\cite{zaheer2017deepsets}, proper scoring rules and calibration~\cite{gneiting2007scoring,platt1999probabilistic},
+and Mondrian and cross-conformal prediction~\cite{vovk2012conditional,vovk2015cross,barber2021jackknife,angelopoulos2023gentle}.
+LLM judges~\cite{zheng2023judging} show verbosity biases~\cite{dubois2024length}; we measure their agreement with Cohen's
+$\kappa$~\cite{cohen1960kappa,landis1977measurement}.
+
+\section{Method}
+An answer $a$ to query $q$ is \emph{supported} ($y=1$) if every claim it asserts is stated in or entailed by the
+documents (correctly rejecting a false premise is supported). The goal is a set $\Gamma\subseteq\{0,1\}$ with
+$\Pr(y\in\Gamma\mid y=c)\ge1-\alpha$ per class: $\{1\}\mapsto$\textsc{verified}, $\{0\}\mapsto$\textsc{hallucinated},
+otherwise \textsc{abstain}.
+
+\subsection{Phase 1: a measured reference graph}
+PDFs are split into sentence-aligned chunks; an LLM extracts entities and triples, each with a verbatim evidence
+sentence, and a triple is accepted only if the quote matches the chunk and both entities occur in it. Entities are
+resolved incrementally and each corpus lives in its own Neo4j namespace. Four pillars in $[0,1]$, provenance
+$\Phi_{\mathrm{prov}}$ (mean grounding of all extracted triples), coverage $\Phi_{\mathrm{cov}}$, connectivity
+$\Phi_{\mathrm{topo}}=1-\frac{\kappa(G)-1}{|V|-1}$ and consistency $\Phi_{\mathrm{cons}}$, give
+$S_{\mathrm{KG}}=(\Phi_{\mathrm{prov}}\Phi_{\mathrm{cov}}\Phi_{\mathrm{topo}}\Phi_{\mathrm{cons}})^{1/4}$.
+\begin{proposition}\label{prop:gm}
+Among symmetric power means $M_p=(\frac14\sum_j\Phi_j^{\,p})^{1/p}$ that vanish when a pillar vanishes, the geometric
+mean $M_0$ is the pointwise largest.
+\end{proposition}
+\begin{proof}
+For $p>0$, $M_p\ge(\frac14\Phi_j^{\,p})^{1/p}>0$ if some $\Phi_j>0$, so the veto fails; $M_p$ is non-decreasing in $p$,
+so $\sup_{p\le0}M_p=M_0$.
+\end{proof}
+Since $S_{\mathrm{KG}}$ is an index, precision is also \emph{measured}: an auditor checks a uniform random sample of
+triples against their source passages (Wilson intervals~\cite{wilson1927probable}; a model-assisted
+estimator~\cite{sarndal1992model} uses all triples).
+
+\subsection{Phases 2--3: claims and their evidence}
+The audited model answers as in deployment and states a confidence $c_{\mathrm{LLM}}$; a \emph{separate} call extracts
+the claim graph $G'$ with a polarity on every edge, so the model cannot choose which statements are audited. Claim
+entities are aligned to a retrieved KG subgraph $G$, and $E'_+$ denotes asserted claim edges. Thirteen answer features
+include: the energy of a translational knowledge sheaf, $(\delta x)_e=x_v-x_u-t_r$, relative to the KG's
+own~\cite{gebhart2023knowledge}; the curvature shift $\Delta\kappa=\log(1+W_1(\mu_G,\mu_{G\cup E'_+}))$ of the augmented
+Forman curvature $F(u,v)=4-d_u-d_v+3|\triangle(u,v)|$ when the claims are grafted onto the KG; a spectral divergence
+between normalised-Laplacian spectra; Bayesian provenance support; NLI consistency
+$\gamma(c)=\max_s[P_{\mathrm{ent}}(s\Rightarrow c)-P_{\mathrm{con}}(s\Rightarrow c)]$ against each claim's nearest source
+sentences (DeBERTa-v3, SummaC-ZS~\cite{laban2022summac}); out-of-corpus novelty; contradiction and alignment rates; and
+the model-side $c_{\mathrm{LLM}}$ and hedging ratio. $\Delta\kappa\ge0$, with equality whenever $E'_+\subseteq E$: an answer
+that adds nothing new distorts nothing. Every claim also receives $\bm z_i\in\R^{15}$ (provenance, support tier, conflict,
+polarity, alignment, NLI entailment/contradiction/consistency, similarity, novelty, sheaf residual, grafted curvature),
+and the bag is summarised by $\psi(Z)=[\mathrm{mean}_i\bm z_i,\min_i\bm z_i,\max_i\bm z_i]$, giving 58 inputs.
+\begin{proposition}\label{prop:mi}
+If an answer is supported iff $u(\bm z_i)>t$ for every claim, then $y=\mathbb 1[\min_iu(\bm z_i)>t]$ is a threshold on one
+coordinate of $\psi(Z)$, while no function of $\mathrm{mean}_iu(\bm z_i)$ represents the rule.
+\end{proposition}
+\begin{proof}
+$\min_iu>t\iff\forall i:u>t$; the bags $\{t{+}1,t{+}1\}$ and $\{t{-}1,t{+}3\}$ have equal means but different labels.
+\end{proof}
+
+\subsection{Phase 4: learned, cross-fitted decisions}
+Ten families (linear, monotone and standard boosting, random forests, extra trees, SVM, MLP, stacking, an attention
+ResNet and a gated-attention multiple-instance network~\cite{ilse2018attention} whose noisy-OR head scores individual
+claims) compete under nested cross-validation~\cite{cawley2010overfitting}; the champion minimises out-of-fold
+log-loss~\cite{gneiting2007scoring}. It is cross-fitted in five folds over training and calibration answers, and its
+out-of-fold logits feed Platt scaling ($S_{\mathrm{query}}$), the pool and the conformal quantiles. The pool
+$\logit S_{\mathrm{final}}=b_0+b_1\logit S_{\mathrm{query}}+b_2\logit\SKGq$ keeps the KG term only if a likelihood-ratio
+test rejects $b_2=0$ \emph{and} it lowers cross-validated log-loss.
+\begin{proposition}\label{prop:pool}
+(a)~The fixed pool $S_{\mathrm{query}}^{\eta}S_{\mathrm{KG}}^{1-\eta}$ is the case $b_0=0,b_1=\eta,b_2=1-\eta$. (b)~If the
+KG term is constant, $b_2$ is unidentifiable. (c)~Without it and with $b_1>0$, the pool cannot change AUROC.
+\end{proposition}
+\begin{proof}
+(a)~Normalising $\prod_ip_i^{w_i}$ gives $\logit p=\sum_iw_i\logit p_i$. (b)~The likelihood depends on $b_0+b_2\lambda$
+only. (c)~$\sigma$ and $\logit$ are increasing.
+\end{proof}
+With per-class quantiles $q_c$ of the out-of-fold non-conformity $1-\hat p_y$, $\Gamma(x)=\{c:1-\hat p_c(x)\le q_c\}$; a
+single class is committed only if it is also the more probable one, otherwise $\Gamma=\{0,1\}$. Enlarging sets only
+raises coverage, so the guarantee is kept (cross-conformal worst case $1-2\alpha$~\cite{vovk2015cross,barber2021jackknife}).
+
+\section{Experimental Setup}
+The corpus is DeepWalk~\cite{perozzi2014deepwalk}, LINE~\cite{tang2015line} and node2vec~\cite{grover2016node2vec}:
+\NChunks{} chunks, \NTriples{} of \NRawTriples{} extracted triples verified, \NEntities{} entities, $S_{\mathrm{KG}}=\SKG\%$.
+\NItems{} questions were generated with a verbatim gold evidence quote that must match its chunk: factual (30\%),
+cross-paper (10\%), unanswerable (20\%) and false-premise (40\%). \texttt{\AnswerModel} answers closed-book and extracts
+claims. The primary judge \texttt{\JudgeModel} sees the gold reference, the gold chunk, retrieved passages and the answer;
+\texttt{\CrossJudge} labels all answers as a second judge and \GeminiName{} independently labels a stratified sample of
+\CrossJudgeN{} with the three papers attached. The primary evaluation is \CVProtocol{} with paired DeLong
+tests~\cite{delong1988comparing}; the baselines are the same learner on the 13 answer features, a text-only NLI checker
+given the same pooled claim evidence, $c_{\mathrm{LLM}}$ and answer length.
+
+\section{Results}
+
+\paragraph*{Reference graph}
+On \KGAuditN{} random triples, strict precision is \KGPrec\% [\KGPrecLo, \KGPrecHi] and lenient precision \KGPrecLenient\%
+(\cref{tab:kgprec}): only \KGNIncorrect{} triples are wrong, while \KGNPartial{} have the right entities with an imprecise
+relation label. $S_{\mathrm{KG}}$ is therefore an index, not a precision, and moves by at most \SensMaxDev{} when any
+Phase-1 constant is perturbed.
+
+\TableKgprec
+
+\paragraph*{Labels}
+Only \SupportedRate\% of answers are fully supported; \NPartial{} are partially supported, typically long and mostly correct
+with one wrong detail. The two Claude judges agree on \AgreeFull\% of binary labels ($\kappa=\KappaFull$). The third judge
+is far more lenient, calling \GeminiSupp\% of the sample supported ($\kappa=\GeminiKappa$ with the primary judge), and all
+three agree on only \NUnanimous{} of \CrossJudgeN. Answer length alone predicts the primary label with AUROC \LenAUC.
+
+\paragraph*{Detection}
+EpistemeGraph reaches AUROC \CVAUC{} [\CVAUCLo, \CVAUCHi] with ECE \CVECE{} (\cref{tab:cv,fig:roc}); the model's own
+confidence reaches \CVAUCllm{} with ECE \CVECEllm{} ($p=\CVPllm$) and length \CVAUClen{} ($p=\CVPlen$). On the
+\ConsensusN{} answers where both Claude judges agree, AUROC is \ConsensusAUC{} (confidence: \ConsensusLLM) and
+\ConsensusMatched{} of \ConsensusN{} labels are matched; against the three-judge majority it is \MajorityAUC{} (confidence:
+\MajorityLLMAUC). Against the lenient judge alone the detector is at chance (\GeminiAUC): it learned the strict
+``every claim supported'' definition, which that judge does not apply. The text-only NLI checker is close (\CVAUCtext,
+$p=\CVPtext$) and the same learner without the claim-set representation is indistinguishable (\CVAUCvthree,
+$p=\CVPvthree$); after the verbalised confidence, the curvature shift $\Delta\kappa$ is the most important answer feature,
+but the geometric family does not significantly beat text NLI on this corpus. On unanswerable and cross-paper questions
+the verbalised confidence is \emph{inversely} related to support (AUROC \CatBorderLLM{} and \CatCrossLLM). Out of fold,
+\MatchN{} of \MatchTotal{} answers match the primary judge, against \MatchBase{} for a constant ``hallucinated''; raw
+accuracy is a poor yardstick under this imbalance and label noise.
+
+\TableCv
+
+\begin{figure}[t]\centering
+\IfFileExists{figures/roc_cv.pdf}{\includegraphics[width=0.82\columnwidth]{figures/roc_cv.pdf}}{}
+\caption{Out-of-fold ROC over all labelled answers.}\label{fig:roc}
+\end{figure}
+
+\paragraph*{Pool and decisions}
+The KG term passes both pool checks ($p=\PoolLRTp$; CV log-loss \PoolCVwith{} versus \PoolCVwithout) with a negative
+weight ($b_2=\PoolBkg$), which we read as the verbosity confound again. At $\alpha=0.10$ cross-conformal coverage is
+\CVCovTen\% with \CVAbsTen\% abstention and \CVSelTen\% selective accuracy (\cref{tab:conformal}); at $\alpha=0.20$
+abstention falls to \CVAbsTwenty\%. On the pre-specified test split ($n=\NTest$) the champion (\Champion) reaches
+AUROC \TestAUC{} with coverage \Coverage\%. The full study cost \$\CostRun.
+
+\TableConformal
+
+\section{Discussion and Conclusion}
+Label definition and noise set the ceiling: two judges of one family agree moderately and a judge of another family
+disagrees systematically, so every metric here should be read against judge agreement and the majority baseline. On a
+small KG, claim-level NLI and the model's confidence carry most of the signal; denser graphs are the natural test of
+whether geometry matters more. Three papers, one audited model and \NLabelled{} answers limit external validity, and
+the conformal guarantee assumes exchangeable calibration and use. EpistemeGraph treats hallucination auditing as
+calibrated measurement of a measured reference, and ranks answers far better than the audited model's own confidence.
+An extended version with all derivations, ablations and the tournament is in the repository.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
