@@ -1,28 +1,29 @@
 """
-Phase 3B - CASSE truth evaluator (schema casse-v2).
+Phase 3 - truth evaluator (schema casse-v4).
 
-Given the ground-truth (GT) subgraph retrieved from Neo4j and the response graph G'
-induced by the LLM answer, compute an 8-dimensional feature vector x in R^8:
+Given the ground-truth (GT) subgraph retrieved from the KG and the response graph G' extracted from the
+LLM answer, compute the 13-D answer vector x and one 15-D vector z_i per claim:
 
-  Topological (structure of G' relative to the GT knowledge graph)
-    x1  E_sheaf   translational knowledge-sheaf Dirichlet energy of G' (relative to GT baseline)
-    x2  Delta_K   Wasserstein shift of the Forman-Ricci curvature distribution when G' is grafted on GT
-    x3  D_spec    W1 distance between normalised-Laplacian spectra of G' and its GT 2-hop shadow
-
-  Evidential (provenance against the source PDFs)
-    x4  pi_prov   Beta-Bernoulli posterior that a claim is backed by a grounded GT path
-    x5  sigma_ent mean best-match semantic similarity of claims to corpus sentences
-    x6  nu_ooc    IDF-weighted out-of-corpus vocabulary rate of the asserted claims
-    x7  kappa_con contradiction rate (functional violations, polarity conflicts, direction inversions)
-
+  Topological (how the claim graph sits in the geometry of the KG)
+    e_sheaf     translational knowledge-sheaf energy of the claims, relative to the GT baseline
+    delta_k     Wasserstein shift of the Forman-Ricci curvature distribution when the claims are grafted on GT
+    d_spec      W1 distance between normalised-Laplacian spectra of G' and its GT 2-hop shadow
+  Evidential (what the source papers say)
+    pi_prov     Beta-Bernoulli posterior that a claim is backed by a grounded GT path
+    sigma_ent   mean best-match embedding similarity of claims to corpus sentences
+    nli_cons    mean SummaC-ZS NLI consistency of the claims against their 3 nearest corpus sentences
+    nli_worst   the least consistent claim's NLI consistency
+    nu_ooc      IDF-weighted out-of-corpus vocabulary rate of the asserted claims
+    kappa_con   contradiction rate (denied facts, functional violations, direction inversions)
+    align_rate  share of answer entities aligned to KG entities
   Model
-    x8  c_llm     the LLM's verbalised confidence (kept as a feature so the data can down-weight it)
+    c_llm       the LLM's verbalised confidence
+    u_nll       mean token negative log-likelihood (0 when the provider exposes no log-probabilities)
+    spec_ratio  share of hedged (speculative) claims
 
-Every feature is computed from the RESPONSE (its asserted claims), never from the query text,
-so the detector cannot "cheat" by recognising adversarial query templates.
-
-The mapping x -> S_query -> S_final -> {VERIFIED, ABSTAIN, HALLUCINATED} is entirely learned
-(see model_trainer.py and decision.py). There are no hand-set weights or score thresholds here.
+Every feature is computed from the RESPONSE (its claims), never from the query text, so the detector
+cannot "cheat" by recognising question templates. The mapping x -> S_query -> S_final ->
+{VERIFIED, ABSTAIN, HALLUCINATED} is entirely learned (model_trainer.py, decision.py).
 """
 from __future__ import annotations
 

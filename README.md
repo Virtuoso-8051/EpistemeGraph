@@ -108,7 +108,7 @@ second judge on a fixed stratified sample of 100. Target: *the answer is fully s
 |---|---|
 | Detector agrees with the judge | **330 / 400 (82.5%)** |
 | Always answering "hallucinated" | 322 / 400 (80.5%) |
-| Two Claude judges (Sonnet, Haiku) agree with *each other* (all 400) | **87.3%** (κ = 0.57) |
+| Two Claude judges (Sonnet, Haiku) agree with *each other* (all 400) | **87.2%** (κ = 0.57) |
 | On the 349 answers where both Claude judges agree: detector matches | **305 / 349 (87.4%)**, AUROC **0.762** |
 | Balanced accuracy | 62.9% |
 | Committed conformal decisions that are correct (α = 0.10) | **114 / 137 (83.2%)** |
@@ -367,7 +367,7 @@ so human confirmation is recommended.
 | False premise | 160 | 34 | 70 | 56 |
 | **All (Sonnet 5.5 judge)** | **400** | **78 (19.5%)** | **222** | **100** |
 
-* **Inter-judge agreement, all 400 answers** (Sonnet vs Haiku): 87.3% raw, κ = **0.57** ("moderate").
+* **Inter-judge agreement, all 400 answers** (Sonnet vs Haiku): 87.2% raw, κ = **0.57** ("moderate").
 * **On the stratified 100-answer sample** (which deliberately over-represents the hard categories): 80% raw,
   κ = 0.35 (supported vs rest); κ = 0.48 for unsupported vs rest; ordinal weighted κ = 0.41.
 * **Third judge from another family** (Gemini Pro, high reasoning, given the three PDFs, blind to the other verdicts,
@@ -473,7 +473,7 @@ that reads the actual answer against the gold evidence, which is the honest task
 
 1. *Imbalance:* 322 of 400 answers are not fully supported, so a constant "hallucinated" already scores 322/400. Raw
    accuracy hides almost everything; AUROC and balanced accuracy do not.
-2. *Label noise sets a ceiling:* two strong LLM judges agree on **87.3%** of binary labels over all 400 answers, and a
+2. *Label noise sets a ceiling:* two strong LLM judges agree on **87.2%** of binary labels over all 400 answers, and a
    judge from another family disagrees far more. Where the two Claude judges agree (349 answers), the detector matches
    **305 (87.4%)**, i.e. it agrees with clean labels as often as the judges agree with each other.
 3. *What does help:* `ABSTAIN`. On the 137 answers where it commits at α = 0.10, it is right on 114 (83%); at α = 0.25

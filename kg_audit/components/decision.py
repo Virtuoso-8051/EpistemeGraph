@@ -6,7 +6,7 @@ Replaces every hard-coded constant of the previous version:
     OLD   S_final = 0.2 * S_KG + 0.8 * S_query             (fixed weights)
           VERIFIED if S_final > 0.85, HALLUCINATED if <= 0.5 (fixed thresholds)
 
-    NEW   (1) S_query  = calibrated P(y=1 | x),  x in R^8   (learned by the tournament)
+    NEW   (1) S_query  = calibrated P(y=1 | x),  x in R^58  (13 answer features + 45 pooled claim statistics)
           (2) S_final  = learned log-linear opinion pool of S_query and the *local*
                          KG fidelity S_KG(q) of the retrieved subgraph:
                     logit S_final = b0 + b1 * logit S_query + b2 * logit S_KG(q)
@@ -14,8 +14,8 @@ Replaces every hard-coded constant of the previous version:
               b0 = 0, b1 = eta, b2 = 1 - eta, so the old formula is *nested* in the new one.
           (3) Decision = Mondrian (class-conditional) split-conformal prediction set
                     Gamma(x) = { c in {0,1} : 1 - p_c(x) <= q_c }
-              with q_c the ceil((n_c+1)(1-alpha))/n_c empirical quantile of calibration
-              non-conformity scores of class c.  |Gamma| = 1 -> commit, otherwise ABSTAIN.
+              with q_c the ceil((n_c+1)(1-alpha))-th smallest out-of-fold non-conformity score of
+              class c.  |Gamma| = 1 and its class is the more probable one -> commit, otherwise ABSTAIN.
               Guarantee (exchangeability): P(y in Gamma(x) | y = c) >= 1 - alpha for each c.
 
 The only user-facing knob is the risk level alpha (e.g. 0.10), which is a statistical
@@ -56,7 +56,7 @@ FEATURES: List[Dict[str, object]] = [
 FEATURE_KEYS: List[str] = [f["key"] for f in FEATURES]
 MONOTONE_SIGNS: List[int] = [int(f["sign"]) for f in FEATURES]
 
-# Claim-level vector z_i in R^14 for every claim of an answer. An answer is a BAG of claims; it is
+# Claim-level vector z_i in R^15 for every claim of an answer. An answer is a BAG of claims; it is
 # hallucinated iff at least one claim is unsupported (the standard multiple-instance assumption), so a
 # multiple-instance network can learn claim-level hallucination scores from answer-level labels only.
 CLAIM_FEATURES: List[str] = [

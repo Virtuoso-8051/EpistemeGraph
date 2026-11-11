@@ -6,7 +6,7 @@ Protocol (every weight and threshold is estimated from labelled data):
   0. Data      : <workspace>/labelled_features.csv - one row per (query, LLM answer) with the 13-D
                  answer vector, S_KG(q) and an ANSWER-level label y in {0,1} (1 = every asserted
                  claim is supported by the papers) + <workspace>/labelled_bags.jsonl - the bag of
-                 14-D claim vectors of each answer. No synthetic samples, no self-labelling.
+                 15-D claim vectors of each answer. No synthetic samples, no self-labelling.
   1. Split     : deterministic hash(query_id) -> train 60% / calibration 20% / test 20%; the test
                  split never changes between retrains (fair champion/challenger comparison).
   2. Tournament: 10 model families (+ optional TabPFN), hyper-parameters tuned by inner 3-fold CV,
@@ -225,7 +225,7 @@ class _MILModule(nn.Module):
 class AttentionMILClassifier(ClassifierMixin, BaseEstimator):
     """
     sklearn-compatible multiple-instance learner. X = [answer features | row index]; the row index points
-    into `bag_store` (list of (n_i, 14) claim matrices), so GridSearchCV / cross_val_predict can subset rows.
+    into `bag_store` (list of (n_i, 15) claim matrices), so GridSearchCV / cross_val_predict can subset rows.
     Loss = BCE(answer logit, y) + lam * BCE(noisy-OR, y), where the noisy-OR
         P(supported) = prod_i (1 - r_i)
     enforces the multiple-instance assumption "an answer is hallucinated iff some claim is unsupported",
